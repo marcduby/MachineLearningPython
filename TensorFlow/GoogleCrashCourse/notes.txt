@@ -1,0 +1,17 @@
+
+
+01 - reducing loss
+  - taking the derivative of the loss function gives us the gradient directio to move in
+  - this if gradient descent
+  - the learnign rate will determine the size of the steps (size of move) for each iteration
+    - small means lots of baby steps as far as modifying the weights and bias, but lots of computation
+    - big steps, big moves, can overshoot and even increase loss
+      - model van diverge; if so, reduce learning rate by order of magnitude
+  - how to compute gradient descent (over all samples too compute intensive)
+    - stochastic gradient descent: use one randam sample at a time -> more steps, but overall more efficient
+    - mini batch gradient descent -> use batches of 10-1000 samples
+
+
+
+
+

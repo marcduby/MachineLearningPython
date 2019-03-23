@@ -17,7 +17,7 @@ try:
         user = 'root',
         password = 'yoyoma',
         host = 'localhost',
-        database = 'workout_test')
+        database = 'workout')
 
     # log
     print("connected to database")
@@ -43,7 +43,8 @@ where workout.day_id = wday.day_id
     and wday.week_id = week.week_id
     and week.period_id = period.period_id
     and period.year_id = wyear.year_id
-    and activity.x_ski > 0 and period.name <= 6
+    and activity.x_ski > 0 
+    and (dayofyear(wday.date) <= dayofyear(sysdate()) or year(wday.date) < wyear.name)
 group by wyear.name_text
 order by wyear.name
     """
