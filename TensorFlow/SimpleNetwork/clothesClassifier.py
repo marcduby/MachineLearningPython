@@ -38,7 +38,8 @@ model.compile(optimizer = tf.train.AdamOptimizer(),
               )
 
 # train the model
-model.fit(train_images, train_labels, epochs = 30)
+# model.fit(train_images, train_labels, epochs = 30)
+model.fit(train_images, train_labels, epochs = 5)
 
 
 # test the model
