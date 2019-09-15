@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31383705-052a-45d3-9110-755b4dfe9c1e" name="Default Changelist" comment="" />
+    <list default="true" id="31383705-052a-45d3-9110-755b4dfe9c1e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson03/lesson03MinstFashion.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TensorFlow/GoogleCrashCourse/00intro/intro_to_pandas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TensorFlow/GoogleCrashCourse/00intro/intro_to_pandas.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson00/lesson00IntroPython.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson00/lesson00IntroPython.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson02/lesson02CelciusToF.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson02/lesson02aCelciusToF.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson02/lesson02bCelciusMultiLayer.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson02/lesson02bCelciusMultiLayer.ipynb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,14 +29,68 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TensorFlow/SimpleNetwork/clothesClassifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+            <state relative-caret-position="585">
+              <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
               <folding>
                 <element signature="e#75#98#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson02/lesson02aCelciusToF.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson03/lesson03MinstFashion.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TensorFlow/GoogleCrashCourse/00intro/intro_to_pandas.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Introductions/Pandas/KaggleIntroduction/lesson01Create.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Introductions/Socratica/so201recursion.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Introductions/Pandas/Books/pandasIntroBooks.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="0" />
             </state>
           </provider>
         </entry>
@@ -39,24 +100,38 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jupyter Notebook" />
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/TensorFlow/SimpleNetwork/fashionClassifier.py" />
+        <option value="$PROJECT_DIR$/SciKit/Introductory/dogClassifier.py" />
         <option value="$PROJECT_DIR$/TensorFlow/SimpleNetwork/clothesClassifier.py" />
+        <option value="$PROJECT_DIR$/TensorFlow/Books/TfWithApplications/tf01Beginning.ipynb" />
+        <option value="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson00/lesson00IntroPython.ipynb" />
+        <option value="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson00/lesson00bNumpy.ipynb" />
+        <option value="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson02/lesson02CelciusToF.ipynb" />
+        <option value="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson02/lesson02bCelciusMultiLayer.ipynb" />
+        <option value="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson02/lesson02aCelciusToF.ipynb" />
+        <option value="$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson03/lesson03MinstFashion.ipynb" />
+        <option value="$PROJECT_DIR$/Introductions/Socratica/so201recursion.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="173" />
-    <option name="y" value="47" />
-    <option name="width" value="1400" />
-    <option name="height" value="983" />
+    <option name="x" value="67" />
+    <option name="y" value="25" />
+    <option name="width" value="767" />
+    <option name="height" value="1175" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -72,13 +147,102 @@
             <path>
               <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="Introductions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="SciKit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="SciKit" type="462c0819:PsiDirectoryNode" />
+              <item name="Introductory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
               <item name="TensorFlow" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
               <item name="TensorFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="Books" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="TensorFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="Books" type="462c0819:PsiDirectoryNode" />
+              <item name="TfWithApplications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="TensorFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="GoogleCrashCourse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="TensorFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="GoogleCrashCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="00intro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="TensorFlow" type="462c0819:PsiDirectoryNode" />
               <item name="SimpleNetwork" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="TensorFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="UdacityCourse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="TensorFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="UdacityCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="Jupyter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="TensorFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="UdacityCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="MyScripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="TensorFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="UdacityCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="MyScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="Lesson00" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="TensorFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="UdacityCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="MyScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="Lesson02" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningPython" type="462c0819:PsiDirectoryNode" />
+              <item name="TensorFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="UdacityCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -88,8 +252,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../VirtualEnvs/MachineLearningPython/venv36TF" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../VirtualEnvs/MachineLearningPython/venv36TF2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -103,7 +268,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.clothesClassifier">
+  <component name="RunManager" selected="Python.lesson01Create">
+    <configuration name="MachineLearningPython" type="JupiterNotebook" factoryName="Jupyter Notebook">
+      <module name="MachineLearningPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="additionalOptions" value="" />
+      <option name="ipnbHost" value="127.0.0.1" />
+      <option name="ipnbPort" value="8888" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="MachineLearningPython" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,6 +328,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="dogClassifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MachineLearningPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TensorFlow/SimpleNetwork" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SciKit/Introductory/dogClassifier.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="fashionClassifier" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="MachineLearningPython" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,12 +370,38 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="lesson01Create" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MachineLearningPython" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TensorFlow/SimpleNetwork" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Introductions/Pandas/KaggleIntroduction/lesson01Create.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Jupyter Notebook.MachineLearningPython" />
       <item itemvalue="Python.fashionClassifier" />
       <item itemvalue="Python.clothesClassifier" />
+      <item itemvalue="Python.dogClassifier" />
+      <item itemvalue="Python.lesson01Create" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.lesson01Create" />
+        <item itemvalue="Python.dogClassifier" />
         <item itemvalue="Python.clothesClassifier" />
       </list>
     </recent_temporary>
@@ -191,22 +420,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1613" height="1025" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="25" width="1533" height="1175" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21825144" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16408877" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32962137" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49764627" weight="0.3288719" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49966374" weight="0.3298279" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5023537" side_tool="true" visible="true" weight="0.3288719" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -216,6 +444,52 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="2373" selection-start-line="2373" selection-end-line="2373" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///run/user/1000/jupyter/nbserver-4003-open.html" />
+    <entry file="file://$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson00/lesson00bNumpy.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson02/lesson02bCelciusMultiLayer.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TensorFlow/Books/TfWithApplications/tf01Beginning.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TensorFlow/GoogleCrashCourse/notes.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson00/lesson00IntroPython.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SciKit/Introductory/dogClassifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TensorFlow/SimpleNetwork/fashionClassifier.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -228,11 +502,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TensorFlow/SimpleNetwork/clothesClassifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+        <state relative-caret-position="585">
+          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
           <folding>
             <element signature="e#75#98#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson02/lesson02aCelciusToF.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TensorFlow/UdacityCourse/MyScripts/Lesson03/lesson03MinstFashion.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TensorFlow/GoogleCrashCourse/00intro/intro_to_pandas.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Introductions/Pandas/KaggleIntroduction/lesson01Create.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Introductions/Pandas/Books/pandasIntroBooks.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Introductions/Socratica/so201recursion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
