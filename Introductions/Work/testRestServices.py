@@ -42,7 +42,22 @@ if len(sys.argv) > 1 and bool(sys.argv[1]):
 # dictionary of rest paths to params
 rest_path_hash = {
     'getAggregatedDataSimple': {"phenotype": "T2D", "chrom": "3", "start": 12568817, "end": 12575905},
-    'graph/tissue/list/object': {}}
+    # GRAPH
+    'graph/tissue/list/object': {},
+    'graph/phenotype/list/object': {},
+    'graph/gregor/phenotype/object': {"phenotype": "BMI"},
+    'graph/region/variant/object': {"var_id": "8_118184783_C_T,1_713337_G_A", "method": "MACS"},
+    '/graph/meta/variant/object': {"var_id": "8_118184783_A_G", "limit": 5},
+    # V2F
+    'testcalls/depict/genepathway/object': {"gene": "SLC30A8", "phenotype": "T2D", "lt_value": 0.0005},
+    'testcalls/depict/region/object': {"gene": "SLC30A8", "phenotype": "T2D"},
+    'testcalls/depict/tissue/object': {"phenotype": "BMI"},
+    'testcalls/depict/pathway/object': {"phenotype": "T2D"},
+    'testcalls/ecaviar/colocalization_max/object': {"phenotype": "T2D", "gene": "SLC30A8"},
+    '/testcalls/knockout/object': {"gene": "SLC30A8"},
+    '/testcalls/ldscore/tissue/object': {"phenotype": "BMI"},
+    '/testcalls/magma/gene/object': {"phenotype": "BMI", "gene": "SLC30A8"}
+}
 
 # test with public KB
 public_kb = "http://public.type2diabeteskb.org/dccservices/getAggregatedDataSimple"
