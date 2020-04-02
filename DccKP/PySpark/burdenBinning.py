@@ -12,8 +12,11 @@ from pyspark.sql.functions import col, struct, explode, when, lit
 # outdir = 's3://dig-bio-index/burden/vepbinning'
 
 # test directories
-vep_srcdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/test*'
-outdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/Out'
+vep_srcdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/20200330/test*'
+outdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/20200330/Out'
+
+# print
+print("the input directory is: {}".format(vep_srcdir))
 
 
 # %%
@@ -80,17 +83,16 @@ spark = SparkSession.builder.appName('bioindex').getOrCreate()
 vep = spark.read.json(vep_srcdir)
 
 # print
-print("the loaded test data is:")
-format(vep.show())
+print("the loaded vep data count is: {}".format(vep.count()))
+# format(vep.show())
 
 
 # %%
 # create new data frame with only var id
-transcript_consequences = vep.select(vep.id, vep.transcript_consequences)     .withColumn('cqs', explode(col('transcript_consequences')))     .filter(col('cqs.pick') == 1)     .select(
+transcript_consequences = vep.select(vep.id, vep.transcript_consequences)     .withColumn('cqs', explode(col('transcript_consequences')))     .select(
         col('id').alias('varId'),
         col('cqs.gene_id').alias('geneEnsembleId'),
         col('cqs.' + filter_lof).alias(filter_lof),
-        col('cqs.' + filter_pick).alias(filter_pick),
         col('cqs.' + filter_impact).alias(filter_impact),
 
         col('cqs.' + filter_polyphen2_hdiv_pred).alias(filter_polyphen2_hdiv_pred),
@@ -107,17 +109,13 @@ transcript_consequences = vep.select(vep.id, vep.transcript_consequences)     .w
         col('cqs.' + filter_dann_rankscore).alias(filter_dann_rankscore),
         col('cqs.' + filter_vest3_rankscore).alias(filter_vest3_rankscore),
         col('cqs.' + filter_cadd_raw_rankscore).alias(filter_cadd_raw_rankscore),
-        col('cqs.' + filter_metasvm_pred).alias(filter_metasvm_pred),
+        col('cqs.' + filter_metasvm_pred).alias(filter_metasvm_pred)
     )
 
 
 # print
-print("the filtered test data is:")
-transcript_consequences.show()
-
-
-# %%
-transcript_consequences.lof
+print("the filtered transcript consequence data count is: {}".format(transcript_consequences.count()))
+# transcript_consequences.show()
 
 
 # %%
@@ -125,8 +123,8 @@ transcript_consequences.lof
 dataframe_lof = transcript_consequences.filter(transcript_consequences.lof == 'HC')
 
 # print
-print("the lof data frame is")
-dataframe_lof.show()
+print("the lof data frame count is: {}".format(dataframe_lof.count()))
+# dataframe_lof.show()
 
 
 # %%
@@ -254,6 +252,10 @@ print("the final bin 3 dataframe is: {}".format(final_bin3_data_frame.count()))
 
 
 # %%
+dataframe_bin3_level2_inclusion.show()
+
+
+# %%
 # BIN 2 of 7
 # bin consists of bin3 level 2 filter with some more added on filters
 dataframe_bin2_level2_inclusion = dataframe_bin3_level2_inclusion     .filter(dataframe_level2_exclusion.eigen_pc_raw_rankscore > 0.9)     .filter(dataframe_level2_exclusion.dann_rankscore > 0.9)     .filter(dataframe_level2_exclusion.cadd_raw_rankscore > 0.9)     .filter(dataframe_level2_exclusion.vest3_rankscore > 0.9)
@@ -284,6 +286,9 @@ print("the final agregated bin dataframe is: {}".format(output_data_frame.count(
 # %%
 # save out the output data frame to file
 output_data_frame     .write     .mode('overwrite')     .json('%s/burden' % outdir)
+
+# print
+print("Printed out {} records to bioindex".format(output_data_frame.count()))
 
 
 # %%
