@@ -1,0 +1,53 @@
+
+
+
+
+NN layers:
+----------
+
+
+Layer Types:
+------------
+- Embedding for nlp
+  - creates word vectors based on all the training data
+    - the first dimension should match the max_words of the word dictionary
+    - second parameter defines the dimensionality of the word vector space
+  - ie: model.add(keras.layers.Embedding(10000, 16))
+- Pooling
+  - reduce dimensionality for smaller footprint
+- Dense
+  - fully connected layer to the next layer
+  - ie: tf.keras.layers.Dense(128, activation='relu')
+ - Flatten
+   - takes multi dimensionsl data and flattens to 1D; provide dimensionality params for the data
+   - ie: tf.keras.layers.Flatten(input_shape=(28, 28))
+- Dropout
+
+
+Activation:
+-----------
+- reLu - fast
+- sigmoid - 0/1
+
+Hyper Parameters:
+-----------------
+- epochs
+- batch size - to avodi loading all data into memory
+
+
+Misc:
+-----
+- cross validation
+  - split train data into 5ths and rotate what segment is validation each round
+    - average efficiency afterwards
+  - pooling
+    - used to reduce data for better compute performance
+  
+- transfer learning
+  - repurpose model from similar problem, retrining last fully connected layer
+    
+
+Tips:
+-----
+- for first dense layer, take 20% size of previous layer
+
