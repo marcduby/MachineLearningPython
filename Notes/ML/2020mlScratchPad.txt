@@ -1,0 +1,38 @@
+
+
+20200426 - Hamburg PyData meetup - surrogate models
+import tensorflow as tf
+from tensorflow.keras.layers import Input, Dense, AlphaDropout
+
+num_features = 2
+num_categories = 3
+
+dropout = 0.4
+selu_dropout_model = tf.keras.Sequential()
+selu_dropout_model.add(Input(name='input', shape=(num_features,)))
+selu_dropout_model.add(Dense(name='hidden1', units=500, activation='selu'))
+selu_dropout_model.add(AlphaDropout(dropout))
+selu_dropout_model.add(Dense(name='hidden2', units=250, activation='selu', kernel_initializer=tf.initializers.lecun_normal(random_seed)))
+selu_dropout_model.add(AlphaDropout(dropout))
+selu_dropout_model.add(Dense(name='output', units=num_categories, activation='softmax'))
+
+selu_dropout_model.compile(loss='sparse_categorical_crossentropy',
+             optimizer=tf.keras.optimizers.Adam(),
+             metrics=['accuracy'])
+             
+- use surrogate model for explainability
+- steps
+  - use NN to train on training data
+  - fit the model
+  - then create rgularized data and predict
+  - use that result set to train a decision tree
+  - now can use decision tree to explain model, test parameters
+  
+- decision trees overfot but are good for explainability
+- NN models are generalized but black boxes
+
+- alphadropout layer -> keeps mean and variance of inputs to their original values
+  - best if used with selu activation on the debse layers
+  
+- selu -> scaled exponential linear units
+

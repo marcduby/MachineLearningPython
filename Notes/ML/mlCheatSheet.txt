@@ -22,19 +22,42 @@ Layer Types:
    - takes multi dimensionsl data and flattens to 1D; provide dimensionality params for the data
    - ie: tf.keras.layers.Flatten(input_shape=(28, 28))
 - Dropout
-
+  - layer randomly assigns outgoing edge of hidden layer to 0 for each training run, preventing ovefitting
+- AlphaDropout
 
 Activation:
 -----------
 - reLu - fast
+- selu - 
 - sigmoid - 0/1
+- softmax - distribution of probabilities that add to 1
 
 Hyper Parameters:
 -----------------
-- epochs
-- batch size - to avodi loading all data into memory
+- epochs - number times go through entire training set during training
+- iterations - how many times to get through traing set based on batch size
+- batch size: number of samples processed before model gradients are updated
+  - to avodi loading all data into memory
+  - compute gradient and take learning rate step towards gradient after one batch gone hrough training
+- validation split - how to split off training data for validation
+- shuffle - shuffle the validation/training mix after every epoch
 
+PreProcessing:
+--------------
+- normalizing data - normalize nmbers so that they range from 0 to 1
 
+Loss:
+-----
+- categorical_crossentropy - 
+
+Optimizer:
+----------
+- adam - 
+
+Metrics:
+--------
+ accuracy -
+ 
 Misc:
 -----
 - cross validation
@@ -51,3 +74,8 @@ Tips:
 -----
 - for first dense layer, take 20% size of previous layer
 
+
+Pandas:
+-------
+- df.samples(20)
+- df.value_counts().head()
