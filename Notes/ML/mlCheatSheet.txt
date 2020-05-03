@@ -6,15 +6,23 @@ NN layers:
 ----------
 
 
-Layer Types:
-------------
+NN Layer Types:
+---------------
+- Convolution 2D:
+  - filters that tease out features of the images that are then fed into the NN dense layers
+  - ie: tf.keras.layers.Conv2D(64, (3, 3), activation = 'relu', input_shape=(28, 28, 1))
 - Embedding for nlp
   - creates word vectors based on all the training data
-    - the first dimension should match the max_words of the word dictionary
+    - the first dimension should match the number of different words in the train/test data
     - second parameter defines the dimensionality of the word vector space
   - ie: model.add(keras.layers.Embedding(10000, 16))
 - Pooling
   - reduce dimensionality for smaller footprint
+- MaxPooling2D
+  - layer to reduce the given shape to the highest number in that matrix shape
+  - keeps features, can sometimes accentuate them and reduces data passed on
+  - used after convolution layer for image NN
+  - ie: tf.keras.MaxPooling2D(2, 2)
 - Dense
   - fully connected layer to the next layer
   - ie: tf.keras.layers.Dense(128, activation='relu')
@@ -79,3 +87,18 @@ Pandas:
 -------
 - df.samples(20)
 - df.value_counts().head()
+
+
+
+NN Examples:
+------------
+- convolution neural network
+  model = tf.keras.Sequential([
+    tf.keras.layers.Conv2D(64, (3, 3,), activation= 'relu', input_shape= (28, 28, 1),   # 64 filters of 3x3 size to go through the image
+    tf.keras.layers.MaxPooling2D(2, 2),                                                 # 2x2 pooling, so take max number in 2x2 matrix
+    tf.keras.layers.Conv2D(64, (3, 3,), activation= 'relu',
+    tf.keras.layers.MaxPooling2D(2, 2),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(128, activation= 'relu'),
+    tf.keras.layers.Dense(10, activation= 'softmax')
+  ])
