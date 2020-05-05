@@ -56,7 +56,10 @@ PreProcessing:
 
 Loss:
 -----
-- categorical_crossentropy - 
+- categorical_crossentropy - expects one hot matrix of what the labels are, not integer collection
+- sparse_categorical_crossentropy - can use input labels of multiple integer values
+- tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True) - same as above?
+- binary_crossentrop - use for y/n classification (sigmoind)
 
 Optimizer:
 ----------

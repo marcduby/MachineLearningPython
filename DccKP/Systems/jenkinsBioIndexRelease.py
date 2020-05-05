@@ -4,6 +4,7 @@ import time
 import datetime
 import json
 import time
+import sys
 
 import boto3
 import base64
@@ -40,8 +41,8 @@ s3client = boto3.client('s3')
 
 
 # log
-print("got initial schema name: {} and s3 index: {} and git directory {}".format(schema_name_dev, s3_bucket_dev, git_directory))
-print("the git clone command is: {}".format(git_clone_command))
+# print("got initial schema name: {} and s3 index: {} and git directory {}".format(schema_name_dev, s3_bucket_dev, git_directory))
+# print("the git clone command is: {}".format(git_clone_command))
 
 # methods
 # method to run an OS command and time it
@@ -121,9 +122,20 @@ def get_secret(secret_name, region_name):
 if __name__ == "__main__":
     # need passed in args:
     arg_if_test = True
-    arg_s3_bucket_dev = s3_bucket_dev
-    arg_secret_dev = "dig_bio_index"
-    header_print("passed in bucket is {} AWS dev secret {} and ifTest {}".format(arg_s3_bucket_dev, arg_secret_dev, arg_if_test))
+
+    # get the command line arguments
+    if (sys.argv) and len(sys.argv) > 3:
+        secret_name_dev = sys.argv[1]
+        s3_bucket_dev = sys.argv[2]
+        schema_name_dev = sys.argv[3]
+        if len(sys.argv) > 4:
+            arg_if_test = sys.argv[4]
+        print("usiing secret '{}' and s3 bucket '{}' and schema'{}' and isTest '{}'".format(secret_name_dev, s3_bucket_dev, schema_name_dev, arg_if_test))
+    else:
+        print("Usage: python3 jenkinsBioIndexRelease.py <secret> <s3_bucket> <schema_name> <dry_run>")
+        exit()
+
+    header_print("passed in bucket is {} AWS dev secret {} and ifTest {}".format(s3_bucket_dev, secret_name_dev, arg_if_test))
 
     # clone the code (not needed anymore since config.json not used for indexes)
     # log
