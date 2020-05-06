@@ -89,8 +89,8 @@ Tips:
 Pandas:
 -------
 - df.samples(20)
-- df.value_counts().head()
-
+- df['column'].value_counts().head()
+- df.sample(frac=1).reset_index(drop=True)                     # shuffle data
 
 
 NN Examples:
