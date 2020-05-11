@@ -36,6 +36,12 @@ secret_name_dev = "bioindex-dev"
 secret_name_new = "bioindex-" + timestamp
 region_name = "us-east-1"
 
+# keys for the environment file setting
+file_key_s3_bucket = "BIOINDEX_S3_BUCKET="
+file_key_secret = "BIOINDEX_RDS_INSTANCE="
+file_temp_directory = "/Users/mduby"
+file_name = ".bioindex"
+
 # get the aws client and session
 s3client = boto3.client('s3')
 
@@ -57,6 +63,21 @@ def run_system_command(os_command, input_message = "", if_test = True):
         exit_code = os.system(os_command)
     end = time.time()
     print("    Done in {}s with exit code {}".format(end - start, exit_code))
+
+def create_setting_file(s3_bucket, aws_secret, if_test = True):
+    '''
+    Method to create the bioindex settings file
+    '''
+    file_location = file_temp_directory + "/" + file_name
+    file_contents = "{}{}\n{}{}\n".format(file_key_s3_bucket, s3_bucket, file_key_secret, aws_secret)
+    print("the bioindex settings file contents are: \n{}".format(file_contents))
+    if if_test:
+        print("test creating bioindex settings file {}".format(file_location))
+
+    else :
+        text_file = open(file_location, "w")
+        text_file.write(file_contents)
+        print("created bioindex settings file {}".format(file_location))
 
 def header_print(message):
     print("\n==> {}".format(message))
@@ -124,15 +145,17 @@ if __name__ == "__main__":
     arg_if_test = True
 
     # get the command line arguments
-    if (sys.argv) and len(sys.argv) > 3:
+    if (sys.argv) and len(sys.argv) > 4:
         secret_name_dev = sys.argv[1]
         s3_bucket_dev = sys.argv[2]
         schema_name_dev = sys.argv[3]
-        if len(sys.argv) > 4:
-            arg_if_test = sys.argv[4]
+        file_temp_directory = sys.argv[4]
+        if len(sys.argv) > 5:
+            arg_if_test = not sys.argv[5] == 'False'
+            print("dry run of this script is: {}".format(arg_if_test))
         print("usiing secret '{}' and s3 bucket '{}' and schema'{}' and isTest '{}'".format(secret_name_dev, s3_bucket_dev, schema_name_dev, arg_if_test))
     else:
-        print("Usage: python3 jenkinsBioIndexRelease.py <secret> <s3_bucket> <schema_name> <dry_run>")
+        print("Usage: python3 jenkinsBioIndexRelease.py <secret> <s3_bucket> <schema_name> <temp_directory> <dry_run>")
         exit()
 
     header_print("passed in bucket is {} AWS dev secret {} and ifTest {}".format(s3_bucket_dev, secret_name_dev, arg_if_test))
@@ -232,6 +255,10 @@ if __name__ == "__main__":
         print("updated new secret {}".format(secret_name_new))
     else:
         print("test, so skipped updating new secret {}".format(secret_name_new))
+
+    # create the settings file
+    header_print("create the bioindex settings file")
+    create_setting_file(s3_bucket_new, secret_name_new, arg_if_test)
 
     # 
     # log done

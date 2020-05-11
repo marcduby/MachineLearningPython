@@ -1,0 +1,31 @@
+
+
+- time series have euqally spacwed data over time
+- univariate -> one value at each time slow
+  - multivariante has ultiple values at each step (multiple graphs)
+  - ie: birth rate and death rate over time; study as multvariate since they can be related on each otjer
+  - ie: co2 and temp over time
+
+- uses
+  - forecasting (stock prices)
+  - detect anomalies
+
+- patterns
+  - trends (up or down)
+  - seasonality (sales during holidays, temp drop at night)
+  - trend + seasonality
+  - noise
+  - ternd + seasonality + noise
+
+- split of data  
+  - whenn split into train/validate/test, make sure each split has a full wrap of seasonality
+  - when tuning, train on train dataset and evaluate st on the vaidation
+    - then when have model and hyperparameters, train on whole train + validation and evaluate on test dataset
+    - then before deoloyment, train one last time on whole train + validation + test data  
+      - want test sine most recent data usually has best information
+
+- roll forwarding partitioning
+  - use rolling window for training
+
+  
+
