@@ -9,6 +9,7 @@ import sys
 import boto3
 import base64
 from botocore.exceptions import ClientError
+import pymysql as mdb 
 
 
 # script variables
@@ -139,6 +140,23 @@ def get_secret(secret_name, region_name):
 
     return json.loads(secret)
 
+# method to take in secret and return tables
+def show_tables(secret):
+    '''returns the database table list from the database specified in the secret provided'''
+    db = mdb.connect(secret['host'], secret['username'], secret['password'], secret['dbname'])
+    sql = "show tables"
+    cursor = db.cursor()
+    table_list = []
+
+    # execute
+    cursor.execute(sql)
+
+    # fetch
+    for row in cursor:
+        table_list.append(row[0])
+
+    # return
+    return table_list
 
 if __name__ == "__main__":
     # need passed in args:
@@ -227,10 +245,12 @@ if __name__ == "__main__":
     # clone database
     # build the mysql schema cloning command
     header_print("copying data from schema {} to the new schema {}".format(schema_name_dev, schema_name_new))
-    mysql_command_dump = "mysqldump -u {} -p'{}' -h {} {}".format(mysql_user, mysql_password, mysql_host, schema_name_dev)
-    mysql_command_load = "mysql -u {} -p'{}' -h {} {}".format(mysql_user, mysql_password, mysql_host, schema_name_new)
-    mysql_command_combined = mysql_command_dump + " | " + mysql_command_load
-    run_system_command(mysql_command_combined, if_test = arg_if_test)
+    database_table_list = show_tables(bio_secret_dev)
+    for table in database_table_list:
+        mysql_command_dump = "mysqldump -u {} -p'{}' -h {} {} {}".format(mysql_user, mysql_password, mysql_host, schema_name_dev, table)
+        mysql_command_load = "mysql -u {} -p'{}' -h {} {}".format(mysql_user, mysql_password, mysql_host, schema_name_new)
+        mysql_command_combined = mysql_command_dump + " | " + mysql_command_load
+        run_system_command(mysql_command_combined, if_test = arg_if_test)
 
     # create the new secret and add in the parameters
     header_print("creating new AWS secret {}".format(secret_name_new))

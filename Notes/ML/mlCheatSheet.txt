@@ -92,6 +92,9 @@ Pandas:
 - df['column'].value_counts().head()
 - df.sample(frac=1).reset_index(drop=True)                     # shuffle data
 
+Python:
+-------
+- pip freeze > requirements.txt
 
 NN Examples:
 ------------
