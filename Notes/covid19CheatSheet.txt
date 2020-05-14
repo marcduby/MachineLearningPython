@@ -1,0 +1,5 @@
+
+
+20200514
+- ABT test has 30% false negative rate, so not good for quick point of work test
+- can use mass test, combine saliva of 50 people, if test positive, test 50 individually
