@@ -63,7 +63,7 @@ def run_system_command(os_command, input_message = "", if_test = True):
     if not if_test:
         exit_code = os.system(os_command)
     end = time.time()
-    print("    Done in {}s with exit code {}".format(end - start, exit_code))
+    print("    Done in {:0.2f}s with exit code {}".format(end - start, exit_code))
 
 def create_setting_file(s3_bucket, aws_secret, if_test = True):
     '''
@@ -227,7 +227,7 @@ if __name__ == "__main__":
     # copy the data
     for s3object in result.get('CommonPrefixes'):
         s3_subdirectory = s3object.get('Prefix')
-        s3_command = "aws s3 sync s3://{}/{} s3://{}/{}".format(s3_bucket_dev, s3_subdirectory, s3_bucket_new, s3_subdirectory)
+        s3_command = "aws s3 sync --no-progress s3://{}/{} s3://{}/{}".format(s3_bucket_dev, s3_subdirectory, s3_bucket_new, s3_subdirectory)
         run_system_command(s3_command, if_test = arg_if_test)
 
     # get the db parameters
