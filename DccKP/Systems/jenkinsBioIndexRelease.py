@@ -5,6 +5,7 @@ import datetime
 import json
 import time
 import sys
+import argparse
 
 import boto3
 import base64
@@ -20,8 +21,10 @@ timestamp = time.strftime(format)
 print("time stamp is: {}".format(timestamp))
 
 # DB settings
-schema_name_dev = "biodev"
-schema_name_new = 'bioindex_' + timestamp
+schema_bio_dev = "bio"
+schema_bio_new = 'bioindex_' + timestamp
+schema_portal_dev = "portal"
+schema_portal_new = 'portal_' + timestamp
 
 # s3 settings
 s3_bucket_new = 'dig-bio-index-' + timestamp
@@ -141,9 +144,9 @@ def get_secret(secret_name, region_name):
     return json.loads(secret)
 
 # method to take in secret and return tables
-def show_tables(secret):
+def show_tables(schema, username, password, host):
     '''returns the database table list from the database specified in the secret provided'''
-    db = mdb.connect(secret['host'], secret['username'], secret['password'], secret['dbname'])
+    db = mdb.connect(host, username, password, schema)
     sql = "show tables"
     cursor = db.cursor()
     table_list = []
@@ -158,24 +161,68 @@ def show_tables(secret):
     # return
     return table_list
 
+def clone_database(schema_dev, schema_new, aws_secret):
+    # get the secret data
+    mysql_user = aws_secret['username']
+    mysql_password = aws_secret['password']
+    mysql_host = aws_secret['host']
+
+    # create the new database
+    header_print("creating the new schema {}".format(schema_new))
+    mysql_command_create_schema = "mysql -u {} -p'{}' -h {} -e \"create database {}\"".format(mysql_user, mysql_password, mysql_host, schema_new)
+    run_system_command(mysql_command_create_schema, if_test = arg_if_test)
+
+    # clone database
+    # build the mysql schema cloning command
+    header_print("copying data from schema {} to the new schema {}".format(schema_dev, schema_new))
+    database_table_list = show_tables(schema_dev, mysql_user, mysql_password, mysql_host)
+    for table in database_table_list:
+        mysql_command_dump = "mysqldump -u {} -p'{}' -h {} {} {}".format(mysql_user, mysql_password, mysql_host, schema_dev, table)
+        mysql_command_load = "mysql -u {} -p'{}' -h {} {}".format(mysql_user, mysql_password, mysql_host, schema_new)
+        mysql_command_combined = mysql_command_dump + " | " + mysql_command_load
+        run_system_command(mysql_command_combined, if_test = arg_if_test)
+
+
+def print_args(arg_map):
+    for key in arg_map.keys():
+        print("   {} ===> {}".format(key, arg_map[key]))
+        
 if __name__ == "__main__":
+    # configure argparser
+    parser = argparse.ArgumentParser("script to clone the dev bioindex data to the prod machine")
+    # add the arguments
+    parser.add_argument('-s', '--secret', help='the secret for the bioindex', default='dig-bio-index', required=False)
+    parser.add_argument('-b', '--bucket', help='the s3 bucket to copy', default='dig-bio-index', required=False)
+    parser.add_argument('-k', '--bio', help='the bioindex schema to clone', default='bio', required=False)
+    parser.add_argument('-p', '--portal', help='the portal schema to clone', default='portal', required=False)
+    parser.add_argument('-d', '--directory', help='the temp directory to use', required=True)
+    parser.add_argument('-t', '--test', help='if this is a dryrun/test', default=True, required=False)
+    # get the args
+    args = vars(parser.parse_args())
+
+    # print the command line arguments
+    header_print("printing arguments used")
+    print_args(args)
+
     # need passed in args:
     arg_if_test = True
 
-    # get the command line arguments
-    if (sys.argv) and len(sys.argv) > 3:
-        secret_name_dev = sys.argv[1]
-        s3_bucket_dev = sys.argv[2]
-        file_temp_directory = sys.argv[3]
-        if len(sys.argv) > 4:
-            arg_if_test = not sys.argv[4] == 'False'
-            print("dry run of this script is: {}".format(arg_if_test))
-        print("usiing secret '{}' and s3 bucket '{}' and temp directory '{}' and isTest '{}'".format(secret_name_dev, s3_bucket_dev, file_temp_directory, arg_if_test))
-    else:
-        print("Usage: python3 jenkinsBioIndexRelease.py <secret> <s3_bucket> <temp_directory> <dry_run>")
-        exit()
+    # set the parameters
+    if args['secret'] is not None:
+        secret_name_dev = args['secret']
+    if args['bio'] is not None:
+        schema_bio_dev = args['bio']
+    if args['portal'] is not None:
+        schema_portal_dev = args['portal']
+    if args['bucket'] is not None:
+        s3_bucket_dev = args['bucket']
+    if args['directory'] is not None:
+        file_temp_directory = args['directory']
+    if args['test'] is not None:
+        file_temp_directory = args['test']
 
     header_print("passed in bucket is {} AWS dev secret {} and ifTest {}".format(s3_bucket_dev, secret_name_dev, arg_if_test))
+    header_print("using bioindex database {} and portal database {}".format(schema_bio_dev, schema_portal_dev))
 
     # clone the code (not needed anymore since config.json not used for indexes)
     # log
@@ -229,27 +276,32 @@ if __name__ == "__main__":
         s3_command = "aws s3 sync --no-progress s3://{}/{} s3://{}/{}".format(s3_bucket_dev, s3_subdirectory, s3_bucket_new, s3_subdirectory)
         run_system_command(s3_command, if_test = arg_if_test)
 
-    # get the db parameters
-    # build the mysql command
-    mysql_user = bio_secret_dev['username']
-    mysql_password = bio_secret_dev['password']
-    mysql_host = bio_secret_dev['host']
-    schema_name_dev = bio_secret_dev['dbname']
+    # clone the bioindex database
+    clone_database(schema_portal_dev, schema_portal_new, bio_secret_dev)
 
-    # build the create the database
-    header_print("creating the new schema {}".format(schema_name_new))
-    mysql_command_create_schema = "mysql -u {} -p'{}' -h {} -e \"create database {}\"".format(mysql_user, mysql_password, mysql_host, schema_name_new)
-    run_system_command(mysql_command_create_schema, if_test = arg_if_test)
+    # clone the bioindex database
+    clone_database(schema_bio_dev, schema_bio_new, bio_secret_dev)
 
-    # clone database
-    # build the mysql schema cloning command
-    header_print("copying data from schema {} to the new schema {}".format(schema_name_dev, schema_name_new))
-    database_table_list = show_tables(bio_secret_dev)
-    for table in database_table_list:
-        mysql_command_dump = "mysqldump -u {} -p'{}' -h {} {} {}".format(mysql_user, mysql_password, mysql_host, schema_name_dev, table)
-        mysql_command_load = "mysql -u {} -p'{}' -h {} {}".format(mysql_user, mysql_password, mysql_host, schema_name_new)
-        mysql_command_combined = mysql_command_dump + " | " + mysql_command_load
-        run_system_command(mysql_command_combined, if_test = arg_if_test)
+    # # get the db parameters
+    # # build the mysql command
+    # mysql_user = bio_secret_dev['username']
+    # mysql_password = bio_secret_dev['password']
+    # mysql_host = bio_secret_dev['host']
+
+    # # build the create the new bio database
+    # header_print("creating the new schema {}".format(schema_bio_new))
+    # mysql_command_create_schema = "mysql -u {} -p'{}' -h {} -e \"create database {}\"".format(mysql_user, mysql_password, mysql_host, schema_bio_new)
+    # run_system_command(mysql_command_create_schema, if_test = arg_if_test)
+
+    # # clone bio database
+    # # build the mysql schema cloning command
+    # header_print("copying data from schema {} to the new schema {}".format(schema_bio_dev, schema_bio_new))
+    # database_table_list = show_tables(bio_secret_dev)
+    # for table in database_table_list:
+    #     mysql_command_dump = "mysqldump -u {} -p'{}' -h {} {} {}".format(mysql_user, mysql_password, mysql_host, schema_bio_dev, table)
+    #     mysql_command_load = "mysql -u {} -p'{}' -h {} {}".format(mysql_user, mysql_password, mysql_host, schema_bio_new)
+    #     mysql_command_combined = mysql_command_dump + " | " + mysql_command_load
+    #     run_system_command(mysql_command_combined, if_test = arg_if_test)
 
     # create the new secret and add in the parameters
     header_print("creating new AWS secret {}".format(secret_name_new))
