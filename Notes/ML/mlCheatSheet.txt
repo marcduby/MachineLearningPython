@@ -96,6 +96,18 @@ Python:
 -------
 - pip freeze > requirements.txt
 
+Steps:
+------
+- load data
+- look for na data, remove or replace
+- one hot encode
+- shuffle
+- split into train/test
+- scale the data (fir the scaler on train, then apply to train and test)
+- build and compiler model
+- predict and measure accuracy (confusion matrix)
+
+
 NN Examples:
 ------------
 - convolution neural network

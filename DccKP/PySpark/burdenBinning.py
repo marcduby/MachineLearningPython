@@ -22,8 +22,8 @@ outdir = 's3://dig-bio-index/burden/variantgene'
 
 
 # %%
-# open spark session
-spark = SparkSession.builder.appName('bioindex').getOrCreate()
+        # open spark session
+        spark = SparkSession.builder.appName('bioindex').getOrCreate()
 
 
 # %%

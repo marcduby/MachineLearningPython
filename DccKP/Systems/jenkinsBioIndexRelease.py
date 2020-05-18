@@ -163,17 +163,16 @@ if __name__ == "__main__":
     arg_if_test = True
 
     # get the command line arguments
-    if (sys.argv) and len(sys.argv) > 4:
+    if (sys.argv) and len(sys.argv) > 3:
         secret_name_dev = sys.argv[1]
         s3_bucket_dev = sys.argv[2]
-        schema_name_dev = sys.argv[3]
-        file_temp_directory = sys.argv[4]
-        if len(sys.argv) > 5:
-            arg_if_test = not sys.argv[5] == 'False'
+        file_temp_directory = sys.argv[3]
+        if len(sys.argv) > 4:
+            arg_if_test = not sys.argv[4] == 'False'
             print("dry run of this script is: {}".format(arg_if_test))
-        print("usiing secret '{}' and s3 bucket '{}' and schema'{}' and isTest '{}'".format(secret_name_dev, s3_bucket_dev, schema_name_dev, arg_if_test))
+        print("usiing secret '{}' and s3 bucket '{}' and temp directory '{}' and isTest '{}'".format(secret_name_dev, s3_bucket_dev, file_temp_directory, arg_if_test))
     else:
-        print("Usage: python3 jenkinsBioIndexRelease.py <secret> <s3_bucket> <schema_name> <temp_directory> <dry_run>")
+        print("Usage: python3 jenkinsBioIndexRelease.py <secret> <s3_bucket> <temp_directory> <dry_run>")
         exit()
 
     header_print("passed in bucket is {} AWS dev secret {} and ifTest {}".format(s3_bucket_dev, secret_name_dev, arg_if_test))
