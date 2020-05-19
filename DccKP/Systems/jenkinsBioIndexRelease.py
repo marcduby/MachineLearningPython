@@ -41,8 +41,6 @@ secret_name_new = "bioindex-" + timestamp
 region_name = "us-east-1"
 
 # keys for the environment file setting
-file_key_s3_bucket = "BIOINDEX_S3_BUCKET="
-file_key_secret = "BIOINDEX_RDS_INSTANCE="
 file_temp_directory = "/Users/mduby"
 file_name = ".bioindex"
 
@@ -68,12 +66,15 @@ def run_system_command(os_command, input_message = "", if_test = True):
     end = time.time()
     print("    Done in {:0.2f}s with exit code {}".format(end - start, exit_code))
 
-def create_setting_file(s3_bucket, aws_secret, if_test = True):
+def create_setting_file(s3_bucket, aws_secret, bio_schema, portal_schema, temp_dir, bio_file, if_test = True):
     '''
     Method to create the bioindex settings file
     '''
-    file_location = file_temp_directory + "/" + file_name
-    file_contents = "{}{}\n{}{}\n".format(file_key_s3_bucket, s3_bucket, file_key_secret, aws_secret)
+    file_location = temp_dir + "/" + bio_file
+    file_contents = "{}={}\n{}={}\n{}={}\n{}={}\n".format('BIOINDEX_S3_BUCKET', s3_bucket, \
+        'BIOINDEX_RDS_INSTANCE', aws_secret, \
+        'BIOINDEX_BIO_SCHEMA', bio_schema, \
+        'BIOINDEX_PORTAL_SCHEMA', portal_schema)
     print("the bioindex settings file contents are: \n{}".format(file_contents))
     if if_test:
         print("test creating bioindex settings file {}".format(file_location))
@@ -217,9 +218,9 @@ if __name__ == "__main__":
     if args['bucket'] is not None:
         s3_bucket_dev = args['bucket']
     if args['directory'] is not None:
-        file_temp_directory = args['directory']
+        file_temp_directory = str(args['directory'])
     if args['test'] is not None:
-        file_temp_directory = args['test']
+        arg_if_test = not args['test'] == 'False'
 
     header_print("passed in bucket is {} AWS dev secret {} and ifTest {}".format(s3_bucket_dev, secret_name_dev, arg_if_test))
     header_print("using bioindex database {} and portal database {}".format(schema_bio_dev, schema_portal_dev))
@@ -282,54 +283,9 @@ if __name__ == "__main__":
     # clone the bioindex database
     clone_database(schema_bio_dev, schema_bio_new, bio_secret_dev)
 
-    # # get the db parameters
-    # # build the mysql command
-    # mysql_user = bio_secret_dev['username']
-    # mysql_password = bio_secret_dev['password']
-    # mysql_host = bio_secret_dev['host']
-
-    # # build the create the new bio database
-    # header_print("creating the new schema {}".format(schema_bio_new))
-    # mysql_command_create_schema = "mysql -u {} -p'{}' -h {} -e \"create database {}\"".format(mysql_user, mysql_password, mysql_host, schema_bio_new)
-    # run_system_command(mysql_command_create_schema, if_test = arg_if_test)
-
-    # # clone bio database
-    # # build the mysql schema cloning command
-    # header_print("copying data from schema {} to the new schema {}".format(schema_bio_dev, schema_bio_new))
-    # database_table_list = show_tables(bio_secret_dev)
-    # for table in database_table_list:
-    #     mysql_command_dump = "mysqldump -u {} -p'{}' -h {} {} {}".format(mysql_user, mysql_password, mysql_host, schema_bio_dev, table)
-    #     mysql_command_load = "mysql -u {} -p'{}' -h {} {}".format(mysql_user, mysql_password, mysql_host, schema_bio_new)
-    #     mysql_command_combined = mysql_command_dump + " | " + mysql_command_load
-    #     run_system_command(mysql_command_combined, if_test = arg_if_test)
-
-    # create the new secret and add in the parameters
-    header_print("creating new AWS secret {}".format(secret_name_new))
-    session = boto3.session.Session()
-    client = session.client(
-        service_name='secretsmanager',
-        region_name=region_name
-    )
-    if not arg_if_test:
-        client.create_secret(Name = secret_name_new)
-        print("created new secret {}".format(secret_name_new))
-    else:
-        print("test, so skipped creating new secret {}".format(secret_name_new))
-
-
-    # populate the secret with data
-    header_print("updating AWS secret {} with new dict values".format(secret_name_new))
-    new_secret_dict = {'username': mysql_user, 'password': mysql_password, 'host': mysql_host, \
-        'dbname': schema_name_new, 's3bucket': s3_bucket_new, 'engine': 'mysql', 'port': 3306}
-    if not arg_if_test:
-        client.put_secret_value(SecretId = secret_name_new, SecretString = json.dumps(new_secret_dict))
-        print("updated new secret {}".format(secret_name_new))
-    else:
-        print("test, so skipped updating new secret {}".format(secret_name_new))
-
     # create the settings file
     header_print("create the bioindex settings file")
-    create_setting_file(s3_bucket_new, secret_name_new, arg_if_test)
+    create_setting_file(s3_bucket_new, secret_name_dev, schema_bio_new, schema_portal_new, file_temp_directory, file_name, arg_if_test)
 
     # 
     # log done
