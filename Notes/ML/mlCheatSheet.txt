@@ -86,24 +86,36 @@ Tips:
 - for first dense layer, take 20% size of previous layer
 
 
+Numpy:
+------
+- np.diagonal()   - diagonal rows
+- np.sum()        - sum of all data
+- np.trace()      - sum of diagonal
+
 Pandas:
 -------
 - df.samples(20)
 - df['column'].value_counts().head()
 - df.sample(frac=1).reset_index(drop=True)                     # shuffle data
+- df.loc[-len(df)] = [name, accuracy]                         # append data
 
 Python:
 -------
-- pip freeze > requirements.txt
+- pip freeze > requirements.txt             # save pip libs
 
 Steps:
 ------
 - load data
+  - pd.read_csv()
 - look for na data, remove or replace
+  - df.dropna()
 - one hot encode
+  - pd.get_dummies()
 - shuffle
+  - sk.utils.shuffle()
 - split into train/test
-- scale the data (fir the scaler on train, then apply to train and test)
+  - sklearn.model_selection.train_test_split
+- scale the data (fit the scaler on train, then apply to train and test)
 - build and compiler model
 - predict and measure accuracy (confusion matrix)
 

@@ -1,0 +1,8 @@
+
+- missing age
+  - both train and test have missing age
+    - could use simple regression model on age using class, fare, etc
+
+
+    
+     

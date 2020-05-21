@@ -8,22 +8,22 @@ from pyspark.sql.functions import col, struct, explode, when, lit, array, udf
 
 # %%
 # load and output directory
-vep_srcdir = 's3://dig-analysis-data/out/varianteffect/effects/part-*'
-freq_srcdir = 's3://dig-analysis-data/out/frequencyanalysis/'
-outdir = 's3://dig-bio-index/burden/variantgene'
+# vep_srcdir = 's3://dig-analysis-data/out/varianteffect/effects/part-*'
+# freq_srcdir = 's3://dig-analysis-data/out/frequencyanalysis/'
+# outdir = 's3://dig-bio-index/burden/variantgene'
 
 # development localhost directories
-# vep_srcdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/20200330/test*'
-# freq_srcdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/Frequency'
-# outdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/20200330/Out13'
+vep_srcdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/20200330/test*'
+freq_srcdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/JsonFrequency'
+outdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/20200330/Out14'
 
 # print
 # print("the input directory is: {}".format(vep_srcdir))
 
 
 # %%
-        # open spark session
-        spark = SparkSession.builder.appName('bioindex').getOrCreate()
+# open spark session
+spark = SparkSession.builder.appName('bioindex').getOrCreate()
 
 
 # %%
@@ -153,9 +153,10 @@ frequency_schema = StructType(
 
 # functions
 # method to load the frequencies
+# method to load the frequencies
 def load_freq(ancestry_name, input_srcdir):
     return spark.read \
-        .csv('%s/%s/part-*' % (input_srcdir, ancestry_name), sep='\t', header=True, schema=frequency_schema) \
+        .json('%s/%s/part-*' % (input_srcdir, ancestry_name)) \
         .select(var_id_col, maf_col.alias(ancestry_name))
 
 # method to get the max of an array
@@ -173,7 +174,8 @@ max_array_udf = udf(max_array, DoubleType())
 
 # load and do the maf calculations
 # frequency outputs by ancestry
-ancestries = ['AA', 'AF', 'EA', 'EU', 'HS', 'SA']
+# ancestries = ['AA', 'AF', 'EA', 'EU', 'HS', 'SA']
+ancestries = ['AA', 'EA', 'EU', 'HS', 'SA']
 dataframe_freq = None
 
 # load frequencies by variant ID
@@ -190,8 +192,8 @@ dataframe_freq = dataframe_freq.select(dataframe_freq.varId, array(*ancestries).
 dataframe_freq = dataframe_freq.withColumn('maf', max_array_udf('frequency')).select(dataframe_freq.varId, 'maf')
 
 # print
-# print("the loaded frequency data frame has {} rows".format(dataframe_freq.count()))
-# dataframe_freq.show()
+print("the loaded frequency data frame has {} rows".format(dataframe_freq.count()))
+dataframe_freq.show()
 
 
 # %%
