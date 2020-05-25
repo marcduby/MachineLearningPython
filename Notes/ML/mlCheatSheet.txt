@@ -88,7 +88,7 @@ Tips:
 
 Numpy:
 ------
-- np.diagonal()   - diagonal rows
+- np.diagonal()   - diagonal rows as list
 - np.sum()        - sum of all data
 - np.trace()      - sum of diagonal
 
@@ -98,6 +98,9 @@ Pandas:
 - df['column'].value_counts().head()
 - df.sample(frac=1).reset_index(drop=True)                     # shuffle data
 - df.loc[-len(df)] = [name, accuracy]                         # append data
+- df = df.sort_values(by=['2'], ascending=False)            # sort
+- df['income'].fillna((df['income'].mean()), inplace=True)   # replace NA with mean
+- pd.concat([df1['c'], df2['c']], axis=1, keys=['df1', 'df2'])    # concatenate columns of 2 otjer dataframes
 
 Python:
 -------
@@ -109,6 +112,8 @@ Steps:
   - pd.read_csv()
 - look for na data, remove or replace
   - df.dropna()
+- split out the labels/features
+  - labels = features.pop("Survived")
 - one hot encode
   - pd.get_dummies()
 - shuffle
@@ -116,7 +121,7 @@ Steps:
 - split into train/test
   - sklearn.model_selection.train_test_split
 - scale the data (fit the scaler on train, then apply to train and test)
-- build and compiler model
+- build and compile model
 - predict and measure accuracy (confusion matrix)
 
 
