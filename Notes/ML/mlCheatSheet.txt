@@ -102,6 +102,11 @@ Pandas:
 - df['income'].fillna((df['income'].mean()), inplace=True)   # replace NA with mean
 - pd.concat([df1['c'], df2['c']], axis=1, keys=['df1', 'df2'])    # concatenate columns of 2 otjer dataframes
 
+SkLearn:
+--------
+- dimensionality reduction
+  - isomap for non linear data (lilke images)
+  
 Python:
 -------
 - pip freeze > requirements.txt             # save pip libs
