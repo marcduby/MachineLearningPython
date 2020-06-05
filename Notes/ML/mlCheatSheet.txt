@@ -95,6 +95,8 @@ Numpy:
 Pandas:
 -------
 - df.samples(20)
+- low_df = result_df.query('score < 2.4e-07')         # filter
+- low2_df = result_df.loc[result_df['score'] < 1.0e-07]         # filter
 - df['column'].value_counts().head()
 - df.sample(frac=1).reset_index(drop=True)                     # shuffle data
 - df.loc[-len(df)] = [name, accuracy]                         # append data
