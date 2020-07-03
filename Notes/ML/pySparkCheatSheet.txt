@@ -28,6 +28,14 @@
     df_export.write.mode('overwrite').option("delimiter", "\t").csv(out_dir)
 
 
+    srcdir = '%s/variants/*/%s' % (s3dir, args.phenotype)
+    outdir = '%s/out/metaanalysis/variants/%s' % (s3dir, args.phenotype)
 
 
+
+
+
+-- scratch
+    opts = argparse.ArgumentParser()
+    opts.add_argument('phenotype')
 

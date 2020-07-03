@@ -41,7 +41,7 @@ variant_schema = StructType(
 
 
 # %%
-# method to load the frequencies
+# load the variants
 df_load = spark.read         .csv(variant_srcdir, sep='\t', header=True, schema=variant_schema)         .select('varId', 'dbSNP')# method to load the frequencies
 
 # print

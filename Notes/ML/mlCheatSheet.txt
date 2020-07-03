@@ -30,7 +30,7 @@ NN Layer Types:
    - takes multi dimensionsl data and flattens to 1D; provide dimensionality params for the data
    - ie: tf.keras.layers.Flatten(input_shape=(28, 28))
 - Dropout
-  - layer randomly assigns outgoing edge of hidden layer to 0 for each training run, preventing ovefitting
+  - layer randomly assigns outgoing edge of hidden layer to 0 for each training run, preventing overfitting
 - AlphaDropout
 
 Activation:
@@ -134,7 +134,7 @@ Steps:
 
 NN Examples:
 ------------
-- convolution neural network
+- convolution neural network (for images, first 2d layer extracts features)
   model = tf.keras.Sequential([
     tf.keras.layers.Conv2D(64, (3, 3,), activation= 'relu', input_shape= (28, 28, 1),   # 64 filters of 3x3 size to go through the image
     tf.keras.layers.MaxPooling2D(2, 2),                                                 # 2x2 pooling, so take max number in 2x2 matrix
