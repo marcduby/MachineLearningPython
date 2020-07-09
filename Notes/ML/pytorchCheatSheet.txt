@@ -1,8 +1,13 @@
 
 
 - tensors
-  - a_transpose - torch.transpose(a, 0, 1)   # switch dimensions 0 and 1
-
+  - a_transpose = torch.transpose(a, 0, 1)   # switch dimensions 0 and 1
+  - two_tensor = torch.unsqueeze(torch.transpose(tensor, 1, 2), 3)      # add extra dimension at dim 3
+  - tensor_input = torch.unsqueeze(tensor, 3)                           # add extra dimension
+  - tensor_input = torch.transpose(tensor_input, 1, 2)                  # flip 2 dimensions
+  - tensor_input = tensor_input.to(torch.float)                         # cast to float32 type
+  - tensor.dtype            # what type of data the tensor is (has to be same throughout)
+  - tensor.shape
 
 - describe model
   - model.parameters()
