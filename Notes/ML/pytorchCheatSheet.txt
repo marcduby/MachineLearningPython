@@ -1,5 +1,8 @@
 
 
+- tensors
+  - a_transpose - torch.transpose(a, 0, 1)   # switch dimensions 0 and 1
+
 
 - describe model
   - model.parameters()
