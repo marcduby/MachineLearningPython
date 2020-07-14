@@ -21,7 +21,7 @@ print("got pytorch version of {}".format(torch.__version__))
 # %%
 # import relative libraries
 import sys
-sys.path.insert(0, '/home/javaprog/Code/PythonWorkspace/MachineLearningPython/DccKP/Basset/')
+sys.path.insert(0, '/Users/mduby/Code/WorkspacePython/MachineLearningPython/DccKP/Basset/')
 import dcc_basset_lib
 
 
@@ -83,7 +83,7 @@ print(pretrained_model_reloaded_th)
 # %%
 # load the weights
 # sd = torch.load('/home/javaprog/Data/Broad/Basset/Model/predictions.h5')
-sd = torch.load('/home/javaprog/Data/Broad/Basset/Model/pretrained_model_reloaded_th.pth')
+sd = torch.load('/Users/mduby/Data/Broad/Basset/Model/pretrained_model_reloaded_th.pth')
 pretrained_model_reloaded_th.load_state_dict(sd)
 
 
@@ -104,7 +104,7 @@ print(pretrained_model_reloaded_th)
 # %%
 # load the chromosome data
 # get the genome file
-hg19 = TwoBitFile('/home/javaprog/Data/Broad/Basset/TwoBitReader/hg19.2bit')
+hg19 = TwoBitFile('/Users/mduby/Data/Broad/Basset/TwoBitReader/hg19.2bit')
 
 print("two bit file of type {}".format(type(hg19)))
 
@@ -126,14 +126,17 @@ print("got alt sequence one hot of type {} and shape {}".format(type(alt_sequenc
 sequence_list = []
 # sequence_list.append(ref_sequence)
 sequence_list.append(ref_sequence)
-sequence_list.append(alt_sequence)
 # sequence_list.append(alt_sequence)
+sequence_list.append(alt_sequence)
+
+print(alt_sequence)
 
 # get the np array of right shape
 sequence_one_hot = dcc_basset_lib.get_one_hot_sequence_array(sequence_list)
 print("got sequence one hot of type {} and shape {}".format(type(sequence_one_hot), sequence_one_hot.shape))
 
 
+print(sequence_one_hot)
 
 # %%
 # create a pytorch tensor
@@ -144,21 +147,46 @@ print("got pytorch tensor with type {} and shape {} and data type \n{}".format(t
 
 # %%
 # add a dimension to the tensor and convert to float 32
+# FOR SINGLE ELEMENT LIST
+# tensor_input = torch.unsqueeze(tensor, 0)
+# tensor_input = torch.unsqueeze(tensor_input, 3)
+
+# FRO MULTI
 tensor_input = torch.unsqueeze(tensor, 3)
 tensor_input = torch.transpose(tensor_input, 1, 2)
 tensor_input = tensor_input.to(torch.float)
 
-print("got pytorch tensor with type {} and shape {} and data type \n{}".format(type(tensor_input), tensor_input.shape, tensor_input.dtype))
+print("got transposed pytorch tensor with type {} and shape {} and data type \n{}".format(type(tensor_input), tensor_input.shape, tensor_input.dtype))
 
 
 # %%
 # run the model predictions
-pretrained_model_reloaded_th.eval()
+# pretrained_model_reloaded_th.eval()
 predictions = pretrained_model_reloaded_th(tensor_input)
 
 print("got predictions of type {} and shape {} and result \n{}".format(type(predictions), predictions.shape, predictions))
 
 
-# %%
+print("got 0,1 prediction {}".format((predictions[0,2] - predictions[1,2]).item()))
+
+# get the absolute value of the difference
+tensor_abs = torch.abs(predictions[0] - predictions[1])
+
+print(tensor_abs)
+
+# open the label file
+with open('/Users/mduby/Data/Broad/Basset/Model/labels.txt') as f:
+    labels = [line.strip() for line in f.readlines()]
+
+print("the labels of type {} and length {} are \n{}".format(type(labels), len(labels), labels))
+
+result_map = {}
+for index in range(0, 164):
+    result_map[labels[index]] = tensor_abs[index].item()
+
+print("the result of type {} and length {} are \n{}".format(type(result_map), len(result_map), result_map))
+
+
+
 
 

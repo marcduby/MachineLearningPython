@@ -8,9 +8,15 @@
   - tensor_input = tensor_input.to(torch.float)                         # cast to float32 type
   - tensor.dtype            # what type of data the tensor is (has to be same throughout)
   - tensor.shape
+  - print("got 0,1 prediction {}".format(predictions[0,2].item()))
+
+- run model
+  - pretrained_model_reloaded_th.eval()
+
 
 - describe model
   - model.parameters()
+  - model_weights = pretrained_model_reloaded_th.state_dict()
   
   # Print model's state_dict
 print("Model's state_dict:")
