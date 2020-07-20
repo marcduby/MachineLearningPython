@@ -133,12 +133,61 @@ def load_basset_model(weights_file, should_log=True):
     # return
     return pretrained_model_reloaded_th
 
+def generate_input_tensor(variant_list, file_twobit):
+    # load the chromosome data
+    # get the genome file
+    hg19 = TwoBitFile(file_twobit)
+
+    # loop for through the variants
+    # for variant in variant_list:
+
+    # get the chrom
+    chromosome = hg19['chr11']
+    position = 95311422
+
+    # load the data
+    ref_sequence, alt_sequence = dcc_basset_lib.get_ref_alt_sequences(position, 300, chromosome, 'C')
+
+    print("got ref sequence one hot of type {} and shape {}".format(type(ref_sequence), len(ref_sequence)))
+    print("got alt sequence one hot of type {} and shape {}".format(type(alt_sequence), len(alt_sequence)))
+
+    # build list and transform into input
+    sequence_list = []
+    # sequence_list.append(ref_sequence)
+    sequence_list.append(ref_sequence)
+    # sequence_list.append(alt_sequence)
+    sequence_list.append(alt_sequence)
+
+    print(alt_sequence)
+
+    # get the np array of right shape
+    sequence_one_hot = dcc_basset_lib.get_one_hot_sequence_array(sequence_list)
+    print("got sequence one hot of type {} and shape {}".format(type(sequence_one_hot), sequence_one_hot.shape))
+    # print(sequence_one_hot)
+
+    # create a pytorch tensor
+    tensor = torch.from_numpy(sequence_one_hot)
+
+    print("got pytorch tensor with type {} and shape {} and data type \n{}".format(type(tensor), tensor.shape, tensor.dtype))
+
+    # build the input tensor
+    tensor_initial = torch.unsqueeze(tensor, 3)
+    tensor_input = tensor_initial.permute(0, 2, 1, 3)
+    tensor_input = tensor_input.to(torch.float)
+
+def split_variant(variant):
+    pieces = variant.split(":")
+    return 
+
+
+
 
 if __name__ == '__main__':
     # set the data dir
     dir_data = "/Users/mduby/Data/Broad/"
     file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
-    file_model_weights = dir_data + 'Basset/Model/pretrained_model_reloaded_th.pth'
+#    file_model_weights = dir_data + 'Basset/Model/pretrained_model_reloaded_th.pth'
+    file_model_weights = dir_data + 'Basset/Nasa/ampt2d_cnn_900_check.th'
     file_twobit = dir_data + 'Basset/TwoBitReader/hg19.2bit'
 
 
@@ -196,3 +245,9 @@ if __name__ == '__main__':
 
     # better summary of the model
     print(pretrained_model_reloaded_th)
+
+    # split a variant
+    variant_id = "1:65359821:G:A"
+    variant_pieces = split_variant(variant_id)
+    print("got variant pieces: {}".format(variant_pieces))
+
