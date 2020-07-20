@@ -40,6 +40,7 @@ model.eval()
 
   
 - lua torch
+  - from torch.utils.serialization import load_lua
   - model = load_lua('/Users/mduby/Data/Broad/Basset/Nasa/ampt2d_cnn_900_check.th', unknown_classes=True, long_size=8)
-  
+
     
