@@ -38,5 +38,8 @@ model.load_state_dict(torch.load(PATH))
 model.eval()
 
 
-    
+  
+- lua torch
+  - model = load_lua('/Users/mduby/Data/Broad/Basset/Nasa/ampt2d_cnn_900_check.th', unknown_classes=True, long_size=8)
+  
     
