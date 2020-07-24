@@ -95,6 +95,24 @@ def get_variant_list(file):
     return variants
 
 def load_basset_model(weights_file, should_log=True):
+    # load the weights
+    state_dict = torch.load(weights_file)
+    print("dude \n{}\n\n".format(state_dict))
+    pretrained_model_reloaded_th = load_basset_model_from_state_dict(state_dict, should_log)
+
+    # return
+    return pretrained_model_reloaded_th
+
+def load_nasa_model(weights_file, should_log=True):
+    # load the weights
+    state_dict = torch.load(weights_file)
+    print("dude \n{}\n\n".format(state_dict))
+    pretrained_model_reloaded_th = load_nasa_model_from_state_dict(state_dict, should_log)
+
+    # return
+    return pretrained_model_reloaded_th
+
+def load_basset_model_from_state_dict(state_dict, should_log=True):
     # load the Basset model
     pretrained_model_reloaded_th = nn.Sequential( # Sequential,
             nn.Conv2d(4,300,(19, 1)),
@@ -127,8 +145,49 @@ def load_basset_model(weights_file, should_log=True):
         print("got model of type {}".format(type(pretrained_model_reloaded_th)))
 
     # load the weights
-    sd = torch.load(weights_file)
-    pretrained_model_reloaded_th.load_state_dict(sd)
+    pretrained_model_reloaded_th.load_state_dict(state_dict)
+
+    # return
+    return pretrained_model_reloaded_th
+
+def load_nasa_model_from_state_dict(state_dict, should_log=True):
+    # load the Basset model
+    pretrained_model_reloaded_th = nn.Sequential( # Sequential,
+            nn.Conv2d(4,400,(21, 1)),
+            nn.BatchNorm2d(400),
+            nn.ReLU(),
+            nn.MaxPool2d((3, 1),(3, 1)),
+            nn.Conv2d(400,300,(11, 1)),
+            nn.BatchNorm2d(300),
+            nn.ReLU(),
+            nn.MaxPool2d((4, 1),(4, 1)),
+            nn.Conv2d(300,300,(7, 1)),
+            nn.BatchNorm2d(300),
+            nn.ReLU(),
+            nn.MaxPool2d((4, 1),(4, 1)),
+            nn.Conv2d(300,300,(5, 1)),
+            nn.BatchNorm2d(200),
+            nn.ReLU(),
+            nn.MaxPool2d((4, 1),(4, 1)),
+            Lambda(lambda x: x.view(x.size(0),-1)), # Reshape,
+            nn.Sequential(Lambda(lambda x: x.view(1,-1) if 1==len(x.size()) else x ),nn.Linear(1500,1024)), # Linear,
+            nn.BatchNorm1d(1024,1e-05,0.1,True),#BatchNorm1d,
+            nn.ReLU(),
+            nn.Dropout(0.3),
+            nn.Sequential(Lambda(lambda x: x.view(1,-1) if 1==len(x.size()) else x ),nn.Linear(1024,512)), # Linear,
+            nn.BatchNorm1d(1000,1e-05,0.1,True),#BatchNorm1d,
+            nn.ReLU(),
+            nn.Dropout(0.3),
+            nn.Sequential(Lambda(lambda x: x.view(1,-1) if 1==len(x.size()) else x ),nn.Linear(512,167)), # Linear,
+            nn.Sigmoid(),
+        )
+
+    # print
+    if should_log:
+        print("got model of type {}".format(type(pretrained_model_reloaded_th)))
+
+    # load the weights
+    pretrained_model_reloaded_th.load_state_dict(state_dict)
 
     # return
     return pretrained_model_reloaded_th

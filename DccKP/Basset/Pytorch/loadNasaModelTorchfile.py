@@ -7,11 +7,10 @@
 # see paper at
 # http://kipoi.org/models/Basset/
 
-
-# %%
 # imports
 import torch
 from torch import nn
+import torchfile
 import twobitreader
 from twobitreader import TwoBitFile
 
@@ -30,17 +29,16 @@ import dcc_basset_lib
 
 # file input
 file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
-file_model_weights = dir_data + 'Basset/Model/dude_model.pth'
-# file_model_weights = dir_data + 'Basset/Model/pretrained_model_reloaded_th.pth'
+file_model_weights = dir_data + 'Basset/Model/ampt2d_cnn_900_best_cpu.th'
 file_twobit = dir_data + 'Basset/TwoBitReader/hg19.2bit'
 
 # LOAD THE MODEL
 # load the weights
-# pretrained_model_reloaded_th = dcc_basset_lib.load_basset_model(file_model_weights)
-pretrained_model_reloaded_th = dcc_basset_lib.load_nasa_model(file_model_weights)
+torch_dict = torchfile.load(file_model_weights)
+pretrained_model_reloaded_th = dcc_basset_lib.load_nasa_model_from_state_dict(torch_dict.model)
 
 # make the model eval
-pretrained_model_reloaded_th.eval()
+# pretrained_model_reloaded_th.eval()
 
 # better summary
 print(pretrained_model_reloaded_th)
@@ -106,7 +104,6 @@ print("got transposed pytorch tensor with type {} and shape {} and data type \n{
 predictions = pretrained_model_reloaded_th(tensor_input)
 
 print("got predictions of type {} and shape {} and result \n".format(type(predictions), predictions.shape))
-print(predictions[1])
 # print("got 0,1 prediction {}".format((predictions[0,2] - predictions[1,2]).item()))
 
 # get the absolute value of the difference
