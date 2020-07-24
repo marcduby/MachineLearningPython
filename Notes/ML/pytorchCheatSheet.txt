@@ -38,6 +38,10 @@ model.load_state_dict(torch.load(PATH))
 model.eval()
 
 
+- Basset lessons
+  - torchfile module provides torchfile.hashable_uniq_dict, with <>.model as torchfile.TorchObject
+  - load_lua loads as torch.legacy.nn.Sequential; can save as *.pth, but unable to reload into pytorch 1.5.1
+  
   
 - lua torch
   - from torch.utils.serialization import load_lua
