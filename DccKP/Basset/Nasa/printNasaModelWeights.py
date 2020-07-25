@@ -46,5 +46,5 @@ pretrained_model_reloaded_th = dcc_basset_lib.load_nasa_model_from_state_dict(No
 # print(pretrained_model_reloaded_th)
 
 for name, params in pretrained_model_reloaded_th.named_parameters():
-    print(name, "\t\t\t", params.shape)
+    print(name, "\t\t", params.shape)
 

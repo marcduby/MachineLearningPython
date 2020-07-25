@@ -17,7 +17,18 @@ lists:
   - chunks = [data[x:x+100] for x in range(0, len(data), 100)]      # split list into sublists of size
 
 
+objects:
+--------
+  - __init__(self)
+  - __repl__(self)
+  - __str__(self)
 
-
+debug:
+------
+  - help(<object>)
+  - print(<object>)
   
+
+
+
 

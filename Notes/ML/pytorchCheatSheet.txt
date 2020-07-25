@@ -41,7 +41,9 @@ model.eval()
 - Basset lessons
   - torchfile module provides torchfile.hashable_uniq_dict, with <>.model as torchfile.TorchObject
   - load_lua loads as torch.legacy.nn.Sequential; can save as *.pth, but unable to reload into pytorch 1.5.1
-  
+    - unclear how to call inference on legacy nn (get dimension issue)
+  - convert_pytorch script
+    - creates a model file; can run nference with 900bp 
   
 - lua torch
   - from torch.utils.serialization import load_lua

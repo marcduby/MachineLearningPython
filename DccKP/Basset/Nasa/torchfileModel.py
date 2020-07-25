@@ -35,5 +35,5 @@ test = list(state_dict.keys())
 print(test)
 # print("the model is \n{}".format(state_dict.model))
 
-module = state_dict.modules[0]
+module = state_dict.modules[0].modules[0]
 print("for module {} have name {} and shape {}".format(0, module.name, module['weight'].shape))
