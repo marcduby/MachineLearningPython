@@ -9,6 +9,8 @@ dir_code = "/Users/mduby/Code/WorkspacePython/"
 dir_data = "/Users/mduby/Data/Broad/"
 # dir_code = "/home/javaprog/Code/PythonWorkspace/"
 # dir_data = "/home/javaprog/Data/Broad/"
+file_test = "Basset/Marc/Test/test_save.pth"
+file_test2 = "Basset/Marc/Test/test_save2.pth"
 
 # import relative libraries
 import sys
@@ -29,35 +31,30 @@ for index in [0, 1, 4, 5, 8, 9, 12, 13, 18, 22]:
     print("the {} layer {} bias shape is {}.".format(index, pretrained_model_reloaded_th[index], pretrained_model_reloaded_th[index].bias.shape))
 print("the layer shape is {}.".format(pretrained_model_reloaded_th[25][1].weight.shape))
 
+# print the layer
+index = 13
+print("layer {} has shape {} and data \n{}".format(index, pretrained_model_reloaded_th[index].weight.shape, pretrained_model_reloaded_th[index].weight))
 
-# build network by class
-class SequentialGenetic(nn.Sequential):
-    def __init__(self):
-        super(SequentialGenetic, self).__init__()
-        self.conv01 = nn.Conv2d(4,400,(21, 1),(1, 1),(10, 0))
-        self.batchnorm01 = nn.BatchNorm2d(400)
-        self.relu01 = nn.ReLU()
-        self.maxpool01 = nn.MaxPool2d((3, 1),(3, 1),(0, 0),ceil_mode=True)
-        self.conv02 = nn.Conv2d(400,300,(11, 1),(1, 1),(5, 0))
-        self.batchnorm02 = nn.BatchNorm2d(300)
-        self.relu02 = nn.ReLU()
-        self.maxpool02 = nn.MaxPool2d((4, 1),(4, 1),(0, 0),ceil_mode=True)
+# set a layer weight to ones
+# ones = torch.ones(300, 300, 5, 1)
+ones = torch.zeros(300)
+pretrained_model_reloaded_th[index].weight = nn.Parameter(ones)
 
-    def forward(self, t):
-        return t
+# print the layer
+print("layer {} has shape {} and data \n{}".format(index, pretrained_model_reloaded_th[index].weight.shape, pretrained_model_reloaded_th[index].weight))
 
-# create new model and print
-seq_model = SequentialGenetic()
-print(seq_model)
+# save the network
+model_save_file = dir_data + file_test
+pretrained_model_reloaded_th.eval()
+print("saving to file {}".format(model_save_file))
+torch.save(pretrained_model_reloaded_th.state_dict(), model_save_file)
 
-# print a layer of the network
-layer = seq_model.conv02
-print(layer)
+# reload the network and look at the layer
+model_load_file = dir_data + file_test
+print("loading from file {}".format(model_load_file))
+file_load = model_load_file
+new_model = dcc_basset_lib.load_nasa_model(file_load)
 
-# print the layer weight
-print("the layer weights shape is {}".format(layer.weight.shape))
-print("the layer bias shape is {}".format(layer.bias.shape))
-
-
-
+# print the weights for the index network
+print("layer {} has shape {} and data \n{}".format(index, new_model[index].weight.shape, new_model[index].weight))
 
