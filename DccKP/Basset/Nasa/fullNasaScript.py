@@ -16,10 +16,10 @@ from twobitreader import TwoBitFile
 print("got pytorch version of {}".format(torch.__version__))
 
 # set the code and data directories
-dir_code = "/Users/mduby/Code/WorkspacePython/"
-dir_data = "/Users/mduby/Data/Broad/"
-# dir_code = "/home/javaprog/Code/PythonWorkspace/"
-# dir_data = "/home/javaprog/Data/Broad/"
+# dir_code = "/Users/mduby/Code/WorkspacePython/"
+# dir_data = "/Users/mduby/Data/Broad/"
+dir_code = "/home/javaprog/Code/PythonWorkspace/"
+dir_data = "/home/javaprog/Data/Broad/"
 
 # import relative libraries
 import sys

@@ -32,6 +32,8 @@ NN Layer Types:
 - Dropout
   - layer randomly assigns outgoing edge of hidden layer to 0 for each training run, preventing overfitting
 - AlphaDropout
+- Sigmoid
+  - S shaped layer that gives prob between 0 to 1 for ending layer
 
 Activation:
 -----------

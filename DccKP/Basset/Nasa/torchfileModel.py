@@ -8,10 +8,10 @@ from twobitreader import TwoBitFile
 print("got pytorch version of {}".format(torch.__version__))
 
 # set the code and data directories
-dir_code = "/Users/mduby/Code/WorkspacePython/"
-dir_data = "/Users/mduby/Data/Broad/"
-# dir_code = "/home/javaprog/Code/PythonWorkspace/"
-# dir_data = "/home/javaprog/Data/Broad/"
+# dir_code = "/Users/mduby/Code/WorkspacePython/"
+# dir_data = "/Users/mduby/Data/Broad/"
+dir_code = "/home/javaprog/Code/PythonWorkspace/"
+dir_data = "/home/javaprog/Data/Broad/"
 
 # import relative libraries
 import sys
@@ -35,5 +35,6 @@ test = list(state_dict.keys())
 print(test)
 # print("the model is \n{}".format(state_dict.model))
 
-module = state_dict.modules[0].modules[0]
+# module = state_dict.modules[0].modules[0]
+module = state_dict.modules[0]
 print("for module {} have name {} and shape {}".format(0, module.name, module['weight'].shape))
