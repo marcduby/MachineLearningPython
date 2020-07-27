@@ -50,11 +50,35 @@ nasa_model = dcc_basset_lib.load_nasa_model_from_state_dict(None)
 # module.bias = nn.Parameter(model.modules[index].bias)
 # print("layer {} has shape {} and weights {}".format(index, module.weight.shape, module.weight))
 
-for index in (0, 1, 4, 5, 8, 9, 12, 13, 18, 22):
-    module = nasa_model[index]
-    print("setting params for layer {} has name {} and weights {}".format(index, module, module.weight.shape))
-    module.weight = nn.Parameter(lua_model.modules[index].weight)
-    module.bias = nn.Parameter(lua_model.modules[index].bias)
+# need to transpose dimensions 2 and 3 for the con2d layers
+for index in (0, 4, 8, 12):
+    old_module = lua_model.modules[index]
+    # print("({}) model name {} and type {} and weights {}".format(index, old_module, type(old_module), old_module.weight.shape))
+    nasa_module = nasa_model[index]
+    print("({}) setting params for layer name {} has type {} and weights {}".format(index, nasa_module, type(nasa_module), nasa_module.weight.shape))
+    with torch.no_grad():
+        nasa_module.weight = nn.Parameter(torch.transpose(lua_model.modules[index].weight, 2, 3))
+        nasa_module.bias = nn.Parameter(lua_model.modules[index].bias)
+
+# layer that do not need transposition
+for index in (1, 5, 9, 13, 18, 22):
+    old_module = lua_model.modules[index]
+    # print("({}) model name {} and type {} and weights {}".format(index, old_module, type(old_module), old_module.weight.shape))
+    nasa_module = nasa_model[index]
+    print("({}) setting params for layer name {} has type {} and weights {}".format(index, nasa_module, type(nasa_module), nasa_module.weight.shape))
+    with torch.no_grad():
+        nasa_module.weight = nn.Parameter(lua_model.modules[index].weight)
+        nasa_module.bias = nn.Parameter(lua_model.modules[index].bias)
+
+# linear sub layers
+for index in (17, 21, 25):
+    old_module = lua_model.modules[index]
+    # print("({}) model name {} and type {} and weights {}".format(index, old_module, type(old_module), old_module.weight.shape))
+    nasa_module = nasa_model[index][1]
+    print("({}) setting params for layer name {} has type {} and weights {}".format(index, nasa_module, type(nasa_module), nasa_module.weight.shape))
+    with torch.no_grad():
+        nasa_module.weight = nn.Parameter(lua_model.modules[index].weight)
+        nasa_module.bias = nn.Parameter(lua_model.modules[index].bias)
 
 # save the network
 nasa_model.eval()

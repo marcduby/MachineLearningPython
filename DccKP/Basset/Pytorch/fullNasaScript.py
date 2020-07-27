@@ -16,10 +16,10 @@ from twobitreader import TwoBitFile
 print("got pytorch version of {}".format(torch.__version__))
 
 # set the code and data directories
-dir_code = "/Users/mduby/Code/WorkspacePython/"
-dir_data = "/Users/mduby/Data/Broad/"
-# dir_code = "/home/javaprog/Code/PythonWorkspace/"
-# dir_data = "/home/javaprog/Data/Broad/"
+# dir_code = "/Users/mduby/Code/WorkspacePython/"
+# dir_data = "/Users/mduby/Data/Broad/"
+dir_code = "/home/javaprog/Code/PythonWorkspace/"
+dir_data = "/home/javaprog/Data/Broad/"
 
 # import relative libraries
 import sys
@@ -28,13 +28,14 @@ import dcc_basset_lib
 
 # file input
 file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
-file_model_weights = dir_data + 'Basset/Marc/Test/ampt2d_cnn_900_best_p041.pth'
+# file_model_weights = dir_data + 'Basset/Marc/Test/ampt2d_cnn_900_best_p041.pth'
+file_model_weights = dir_data + 'Basset/Marc/Test/untrained_nasa_model01.pth'
+
 file_twobit = dir_data + 'Basset/TwoBitReader/hg19.2bit'
 
 # LOAD THE MODEL
 # load the weights
-# state_dict = load_lua(file_model_weights)
-# pretrained_model_reloaded_th = dcc_basset_lib.load_nasa_model_from_state_dict(state_dict.model)
+# pretrained_model_reloaded_th = dcc_basset_lib.load_nasa_model_from_state_dict(None)
 pretrained_model_reloaded_th = dcc_basset_lib.load_nasa_model(file_model_weights)
 
 # make the model eval
@@ -64,8 +65,10 @@ hg19 = TwoBitFile(file_twobit)
 print("two bit file of type {}".format(type(hg19)))
 
 # get the chrom
-chromosome = hg19['chr11']
-position = 95311422
+# chromosome = hg19['chr11']
+# position = 95311422
+chromosome = hg19['chr17']
+position = 65867911
 
 # load the data
 ref_sequence, alt_sequence = dcc_basset_lib.get_ref_alt_sequences(position, 450, chromosome, 'C')
@@ -103,11 +106,12 @@ print("got transposed pytorch tensor with type {} and shape {} and data type \n{
 # pretrained_model_reloaded_th.eval()
 predictions = pretrained_model_reloaded_th(tensor_input)
 
-print("got predictions of type {} and shape {} and result \n".format(type(predictions), predictions.shape))
+print("got predictions of type {} and shape {} and result \n{}".format(type(predictions), predictions.shape, predictions))
 # print("got 0,1 prediction {}".format((predictions[0,2] - predictions[1,2]).item()))
 
 # get the absolute value of the difference
-tensor_abs = torch.abs(predictions[0] - predictions[1])
+# tensor_abs = torch.abs(predictions[0] - predictions[1])
+tensor_abs = torch.abs(predictions[0])
 print(tensor_abs)
 
 # open the label file
