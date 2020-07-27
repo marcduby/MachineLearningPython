@@ -51,3 +51,20 @@ model.eval()
   - model = load_lua('ampt2d_cnn_900_check.th', unknown_classes=True, long_size=8)
 
   - th convert_checkpoint_gpu_to_cpu.lua -model ampt2d_cnn_900_best.th
+
+
+Convert Nasa model:
+-------------------
+- used https://github.com/kipoi/models/blob/master/Basset/convert_Basset_to_pytorch.py to convert_Basset_to_pytorch  usign .th file
+  - got error for dict conversion, but at least got model.py file for model architecture
+
+- ran new model successfully with initial random model_weights
+
+- use load_lua for weights extraction from .th file
+print("model.modules is of type {}".format(type(model.modules)))
+  for module in model.modules:
+      print("({}) model name {} and type {} and weights {}".format(count, module, type(module), module))
+      count = count + 1
+
+
+

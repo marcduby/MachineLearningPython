@@ -31,7 +31,7 @@ print("the state_dict type is \n{}".format(type(state_dict)))
 print("the model type is \n{}".format(type(state_dict.model)))
 dict_keys = list(state_dict.keys())
 
-print("load lua aboject keys \n{}".format(dict_keys))
+print("load lua object keys \n{}".format(dict_keys))
 # print("the model is \n{}".format(state_dict.model))
 
 print("object \n{}".format(state_dict.model))

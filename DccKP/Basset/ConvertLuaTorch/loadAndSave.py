@@ -8,10 +8,10 @@ from torch.utils.serialization import load_lua
 print("got pytorch version of {}".format(torch.__version__))
 
 # set the code and data directories
-dir_code = "/Users/mduby/Code/WorkspacePython/"
-dir_data = "/Users/mduby/Data/Broad/"
-# dir_code = "/home/javaprog/Code/PythonWorkspace/"
-# dir_data = "/home/javaprog/Data/Broad/"
+# dir_code = "/Users/mduby/Code/WorkspacePython/"
+# dir_data = "/Users/mduby/Data/Broad/"
+dir_code = "/home/javaprog/Code/PythonWorkspace/"
+dir_data = "/home/javaprog/Data/Broad/"
 
 # import relative libraries
 import sys
@@ -31,21 +31,37 @@ print(state_dict.__class__)
 print(state_dict)
 print(state_dict.model)
 print(type(state_dict.model))
-print(help(state_dict.model))
+# print(help(state_dict.model))
 print(state_dict.model.__class__)
 
 model = state_dict.model
+# model.evaluate()
 
 # SUCCESS - print the model weights
-print(len(state_dict.model.parameters()[0]))
+for i in (0, 1):
+    print("matrix structure {} has length {} and shape {}".format(i, len(state_dict.model.parameters()[i]), type(state_dict.model.parameters()[i])))
+# print(len(state_dict.model.parameters()[0]))
+# print(type(state_dict.model.parameters()[0]))
 # print(state_dict.model.parameters()[0])
-print(type(state_dict.model.parameters()[0]))
 
-# array item 1 is weights, array item 1 is bias
+# array item 0 is weights, array item 1 is bias
 for item in state_dict.model.parameters()[1]:
-    print("item shape: {}".format(item.shape))
+    print("item type {} and shape: {}".format(type(item), item.shape))
 
-print(state_dict.model.state_dict())
+# major_index = 1
+for major_index in (0, 1):
+    minor_index = 25
+    tensor = state_dict.model.parameters()[major_index][minor_index]
+    print("tensor {}-{} has shape {} and values {}".format(major_index, minor_index, tensor.shape, tensor))
+
+count = 0
+print("model.modules is of type {}".format(type(model.modules)))
+for module in model.modules:
+    print("({}) model name {} and type {} and weights {}".format(count, module, type(module), module.bias.shape))
+    count = count + 1
+# print(model.layer[0])
+# print(help(state_dict.model))
+# print(state_dict.model.state_dict())
 # model.evaluate()
 # new_dict = model.state_dict()
 
