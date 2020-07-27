@@ -50,11 +50,11 @@ print("saving to file {}".format(model_save_file))
 torch.save(pretrained_model_reloaded_th.state_dict(), model_save_file)
 
 # reload the network and look at the layer
-model_load_file = dir_data + file_test
-print("loading from file {}".format(model_load_file))
-file_load = model_load_file
-new_model = dcc_basset_lib.load_nasa_model(file_load)
+# model_load_file = dir_data + file_test
+# print("loading from file {}".format(model_load_file))
+# file_load = model_load_file
+# new_model = dcc_basset_lib.load_nasa_model(file_load)
 
-# print the weights for the index network
-print("layer {} has shape {} and data \n{}".format(index, new_model[index].weight.shape, new_model[index].weight))
+# # print the weights for the index network
+# print("layer {} has shape {} and data \n{}".format(index, new_model[index].weight.shape, new_model[index].weight))
 

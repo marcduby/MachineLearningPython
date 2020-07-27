@@ -29,6 +29,7 @@ import dcc_basset_lib
 # file input
 file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
 # file_model_weights = dir_data + 'Basset/Nasa/ampt2d_cnn_900_best_cpu.th'
+# file_model_weights = dir_data + 'Basset/Marc/LoadLua/nasa_model_not_trained.pth'
 file_model_weights = dir_data + 'Basset/Marc/LoadLua/dude_model.pth'
 file_twobit = dir_data + 'Basset/TwoBitReader/hg19.2bit'
 
