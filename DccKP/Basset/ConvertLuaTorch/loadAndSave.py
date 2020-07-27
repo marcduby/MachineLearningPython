@@ -57,7 +57,7 @@ for major_index in (0, 1):
 count = 0
 print("model.modules is of type {}".format(type(model.modules)))
 for module in model.modules:
-    print("({}) model name {} and type {} and weights {}".format(count, module, type(module), module))
+    print("({}) model name {} and type {} and weights {}".format(count, module, type(module), module.bias.shape))
     count = count + 1
 # print(model.layer[0])
 # print(help(state_dict.model))
