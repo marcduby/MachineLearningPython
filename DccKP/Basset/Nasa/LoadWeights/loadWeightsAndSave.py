@@ -21,7 +21,7 @@ import dcc_basset_lib
 # file input
 file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
 file_model_weights = dir_data + 'Basset/Nasa/ampt2d_cnn_900_best_cpu.th'
-new_nasa_model_weights = dir_data + 'Basset/Marc/Test/ampt2d_cnn_900_best_p041.pth'
+new_nasa_model_weights = dir_data + 'Basset/Marc/Trouble/ampt2d_cnn_900_best_p041.pth'
 file_twobit = dir_data + 'Basset/TwoBitReader/hg19.2bit'
 
 # LOAD THE MODEL
@@ -57,8 +57,8 @@ for index in (0, 4, 8, 12):
     nasa_module = nasa_model[index]
     print("({}) setting params for layer name {} has type {} and weights {}".format(index, nasa_module, type(nasa_module), nasa_module.weight.shape))
     with torch.no_grad():
-        nasa_module.weight = nn.Parameter(torch.transpose(lua_model.modules[index].weight, 2, 3))
-        nasa_module.bias = nn.Parameter(lua_model.modules[index].bias)
+        nasa_module.weight = nn.Parameter(torch.transpose(lua_model.modules[index].weight.type(torch.FloatTensor), 2, 3))
+        nasa_module.bias = nn.Parameter(lua_model.modules[index].bias.type(torch.FloatTensor))
 
 # layer that do not need transposition
 for index in (1, 5, 9, 13, 18, 22):
@@ -67,8 +67,8 @@ for index in (1, 5, 9, 13, 18, 22):
     nasa_module = nasa_model[index]
     print("({}) setting params for layer name {} has type {} and weights {}".format(index, nasa_module, type(nasa_module), nasa_module.weight.shape))
     with torch.no_grad():
-        nasa_module.weight = nn.Parameter(lua_model.modules[index].weight)
-        nasa_module.bias = nn.Parameter(lua_model.modules[index].bias)
+        nasa_module.weight = nn.Parameter(lua_model.modules[index].weight.type(torch.FloatTensor))
+        nasa_module.bias = nn.Parameter(lua_model.modules[index].bias.type(torch.FloatTensor))
 
 # linear sub layers
 for index in (17, 21, 25):
@@ -77,10 +77,19 @@ for index in (17, 21, 25):
     nasa_module = nasa_model[index][1]
     print("({}) setting params for layer name {} has type {} and weights {}".format(index, nasa_module, type(nasa_module), nasa_module.weight.shape))
     with torch.no_grad():
-        nasa_module.weight = nn.Parameter(lua_model.modules[index].weight)
-        nasa_module.bias = nn.Parameter(lua_model.modules[index].bias)
+        nasa_module.weight = nn.Parameter(lua_model.modules[index].weight.type(torch.FloatTensor))
+        nasa_module.bias = nn.Parameter(lua_model.modules[index].bias.type(torch.FloatTensor))
+
+# set the running mean and running var for the batchnorm layers
+for index in (1, 5, 9, 13, 18, 22):
+    old_module = lua_model.modules[index]
+    # print("({}) model name {} and type {} and weights {}".format(index, old_module, type(old_module), old_module.weight.shape))
+    nasa_module = nasa_model[index]
+    print("({}) setting running_mean for layer name {} has type {} and weights {}".format(index, nasa_module, type(nasa_module), nasa_module.running_mean.shape))
+    nasa_module.running_mean = nn.Parameter(lua_model.modules[index].running_mean.type(torch.FloatTensor))
+    nasa_module.running_var = nn.Parameter(lua_model.modules[index].running_var.type(torch.FloatTensor))
 
 # save the network
-nasa_model.eval()
+# nasa_model.eval()
 print("saving to file {}".format(new_nasa_model_weights))
 torch.save(nasa_model.state_dict(), new_nasa_model_weights)

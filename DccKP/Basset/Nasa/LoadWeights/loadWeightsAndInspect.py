@@ -47,3 +47,9 @@ for i in (0, 1, 4, 5, 8, 9, 12, 13, 17, 18, 21, 22, 25):
 #     module = lua_model.modules[i]
 #     print("({}) model name {} and type {} and weights {}".format(i, module, type(module), module.weight.shape))
 #     print("({}) model name {} and type {} and bias {}".format(i, module, type(module), module.bias.shape))
+
+for i in (1, 5, 9, 13, 18, 22):
+    module = lua_model.modules[i]
+    print("({}) model name {} and type {} and mean {}".format(i, module, type(module), module.running_mean.shape))
+
+

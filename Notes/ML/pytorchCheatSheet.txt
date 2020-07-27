@@ -66,5 +66,10 @@ print("model.modules is of type {}".format(type(model.modules)))
       print("({}) model name {} and type {} and weights {}".format(count, module, type(module), module))
       count = count + 1
 
+- issues run into  
+  - cast imported tensors to float (were double)
+  - modules access 041 is [index], 151 is [index][1]
+  - copied weights/biases for Conv2d, batchNorm2d, BatchNorm1d and Linear layers
+  - copied running mean/var for BatchNorm2d and BatchNorm1d layers
 
 
