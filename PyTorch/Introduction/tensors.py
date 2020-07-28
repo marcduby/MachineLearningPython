@@ -20,3 +20,8 @@ result = weight_matrix.matmul(in_features)
 print("the result is {}".format(result))
 print("the result has shape {}".format(result.shape))
 
+
+# print the row numbers
+print("the row size of the weight matrix is {}".format(weight_matrix.shape[0]))
+print("the column size of the weight matrix is {}".format(weight_matrix.shape[1]))
+

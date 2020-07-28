@@ -274,15 +274,51 @@ def split_variant(variant):
     pieces = variant.split(":")
     return 
 
+def get_result_map(variant_list, result_tensor, label_list, debug = False):
+    '''method to take a variant list, labels list and ML model result tensor
+    and create a list of maps of the result for each variant'''
 
+    # check that the dimensions match
+    # should have tensor 2x as big as variant list (one result for ref, one for alt)
+    if 2 * len(variant_list) != result_tensor.shape[0]:
+        raise Exception("the result tensor should have 2x as many rows as the variant list (not {} and {})".format(result_tensor.shape[0], len(variant_list)))
+    # the tensor results columns should match the size of the labels
+    if len(label_list) != result_tensor.shape[1]:
+        raise Exception("the result tensor should have as many columns as the label list (not {} and {})".format(result_tensor.shape[0]), len(label_list))
+
+    # build the result list
+    result_list = []
+
+    # loop through the variants and add the resulting aggregated value in for each tissue
+    for index, variant in enumerate(variant_list):
+        result_map = {'var_id': variant}
+
+        # calculate the aggregated result value
+        # get the absolute value of the difference
+        tensor_abs = torch.abs(result_tensor[index * 2] - result_tensor[index * 2 + 1])
+
+        if debug:
+            print("for variant {} got aggregated tensor \n{}".format(variant, tensor_abs))
+
+        # add in the result for each tissue
+        for index in range(0, len(label_list)):
+            result_map[label_list[index]] = tensor_abs[index].item()
+
+        # add the result to the list
+        result_list.append(result_map)
+
+    # return
+    return result_list
 
 
 if __name__ == '__main__':
     # set the data dir
-    dir_data = "/Users/mduby/Data/Broad/"
+    # dir_data = "/Users/mduby/Data/Broad/"
+    dir_data = "/home/javaprog/Data/Broad/"
+
+    # file locations
     file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
-#    file_model_weights = dir_data + 'Basset/Model/pretrained_model_reloaded_th.pth'
-    file_model_weights = dir_data + 'Basset/Nasa/ampt2d_cnn_900_check.th'
+    file_model_weights = dir_data + 'Basset/Model/pretrained_model_reloaded_th.pth'
     file_twobit = dir_data + 'Basset/TwoBitReader/hg19.2bit'
 
 
@@ -346,3 +382,10 @@ if __name__ == '__main__':
     variant_pieces = split_variant(variant_id)
     print("got variant pieces: {}".format(variant_pieces))
 
+
+    # test the reuls aggregating
+    label_list = ['red', 'green', 'blue', 'yellow']
+    variant_list = ['var1', 'var2', 'var3']
+    result_tensor = torch.ones(6, 4)
+    test_list = get_result_map(variant_list, result_tensor, label_list, True)
+    print("for result aggregation test got: {}".format(test_list))
