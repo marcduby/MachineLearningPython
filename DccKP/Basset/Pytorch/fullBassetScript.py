@@ -31,8 +31,10 @@ import dcc_basset_lib
 # file input
 file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
 # file_model_weights = dir_data + 'Basset/Model/dude_model.pth'
-file_model_weights = dir_data + 'Basset/Model/pretrained_model_reloaded_th.pth'
+# file_model_weights = dir_data + 'Basset/Model/pretrained_model_reloaded_th.pth'
+file_model_weights = dir_data + 'Basset/Production/basset_pretrained_model_reloaded.pth'
 file_twobit = dir_data + 'Basset/TwoBitReader/hg19.2bit'
+labels_file = dir_data + '/Basset/Production/basset_labels.txt'
 
 # LOAD THE MODEL
 # load the weights
@@ -114,13 +116,13 @@ tensor_abs = torch.abs(predictions[0] - predictions[1])
 print(tensor_abs)
 
 # open the label file
-with open(dir_data + '/Basset/Model/labels.txt') as f:
+with open(labels_file) as f:
     labels = [line.strip() for line in f.readlines()]
 
 # print("the labels of type {} and length {} are \n{}".format(type(labels), len(labels), labels))
 
 result_map = {}
-for index in range(0, 164):
+for index in range(0, len(labels)):
     result_map[labels[index]] = tensor_abs[index].item()
 
 print("the result of type {} and length {} are \n{}".format(type(result_map), len(result_map), result_map))
