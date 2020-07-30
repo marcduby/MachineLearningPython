@@ -272,7 +272,7 @@ def generate_input_tensor(variant_list, file_twobit):
 
 def split_variant(variant):
     pieces = variant.split(":")
-    return 
+    return pieces
 
 def get_result_map(variant_list, result_tensor, label_list, debug = False):
     '''method to take a variant list, labels list and ML model result tensor
@@ -310,6 +310,66 @@ def get_result_map(variant_list, result_tensor, label_list, debug = False):
     # return
     return result_list
 
+def get_input_tensor_from_variant_list(variant_list, genome_lookup, region_size, debug = False):
+    '''
+    method to return the ML model input vectorcorresponding to the variant list
+    '''
+
+    # list used to build the tensor
+    sequence_list = []
+
+    # loop through the variants
+    for variant in variant_list:
+        # split the variant
+        variant_pieces = split_variant(variant)
+        chrom = variant_pieces[0]
+        position = int(variant_pieces[1])
+        alt_allele = variant_pieces[3]
+
+        # get the chrom
+        chromosome_lookup = genome_lookup['chr' + chrom]
+
+        # load the data
+        ref_sequence, alt_sequence = get_ref_alt_sequences(position, int(region_size/2), chromosome_lookup, alt_allele)
+
+        # debug
+        if debug:
+            if len(alt_sequence) > region_size:
+                print("Got long sequence for variant {}".format(variant))
+            print("got ref sequence one hot of type {} and shape {}".format(type(ref_sequence), len(ref_sequence)))
+            print("got alt sequence one hot of type {} and shape {}".format(type(alt_sequence), len(alt_sequence)))
+
+        # append the two new regions to the sequence list
+        sequence_list.append(ref_sequence)
+        sequence_list.append(alt_sequence)
+
+    # debug
+    if debug:
+        for index, seq in enumerate(sequence_list):
+            print("({}) has size {}".format(index, len(seq)))
+    
+    # get the np array of right shape once all the variants have been added in
+    sequence_one_hot = get_one_hot_sequence_array(sequence_list)
+    if debug:
+        print("got sequence one hot of type {} and shape {}".format(type(sequence_one_hot), sequence_one_hot.shape))
+        # print(sequence_one_hot)
+
+    # create a pytorch tensor
+    tensor = torch.from_numpy(sequence_one_hot)
+
+    if debug:
+        print("got pytorch tensor with type {} and shape {} and data type \n{}".format(type(tensor), tensor.shape, tensor.dtype))
+
+    # build the input tensor
+    tensor_initial = torch.unsqueeze(tensor, 3)
+    tensor_input = tensor_initial.permute(0, 2, 1, 3)
+    tensor_input = tensor_input.to(torch.float)
+
+    if debug:
+        print("got transposed pytorch tensor with type {} and shape {} and data type \n{}".format(type(tensor_input), tensor_input.shape, tensor_input.dtype))
+
+    # return
+    return tensor_input
 
 if __name__ == '__main__':
     # set the data dir
@@ -370,12 +430,12 @@ if __name__ == '__main__':
     for index in range(1, 10):
         print("got variant: {}".format(variant_list[index]))
 
-    # load the pytorch model
-    pretrained_model_reloaded_th = load_basset_model(file_model_weights)
-    pretrained_model_reloaded_th.eval()
+    # # load the pytorch model
+    # pretrained_model_reloaded_th = load_basset_model(file_model_weights)
+    # pretrained_model_reloaded_th.eval()
 
-    # better summary of the model
-    print(pretrained_model_reloaded_th)
+    # # better summary of the model
+    # print(pretrained_model_reloaded_th)
 
     # split a variant
     variant_id = "1:65359821:G:A"
@@ -389,3 +449,8 @@ if __name__ == '__main__':
     result_tensor = torch.ones(6, 4)
     test_list = get_result_map(variant_list, result_tensor, label_list, True)
     print("for result aggregation test got: {}".format(test_list))
+
+    # test the input tensor creation
+    variant_list = ['1:65359821:G:A', '3:7359821:G:C', '8:3359821:G:T']
+    sequence_results = get_input_tensor_from_variant_list(variant_list, hg19, 20, True)
+    print("got input tensor of type {} and shape {} and data \n{}".format(type(sequence_results), sequence_results.shape, sequence_results))

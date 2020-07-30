@@ -114,7 +114,7 @@ print("got predictions of type {} and shape {} and result \n{}".format(type(pred
 
 # get the absolute value of the difference
 tensor_abs = torch.abs(predictions[0] - predictions[1])
-print(tensor_abs)
+print("result tensor of shape {} is {}".format(tensor_abs.shape, tensor_abs)
 
 # open the label file
 with open(file_labels) as f:
