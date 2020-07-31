@@ -8,12 +8,12 @@
 # http://kipoi.org/models/Basset/
 
 
-# %%
 # imports
 import torch
 from torch import nn
 import twobitreader
 from twobitreader import TwoBitFile
+import time
 
 print("got pytorch version of {}".format(torch.__version__))
 
@@ -36,6 +36,15 @@ file_model_weights = dir_data + 'Basset/Production/basset_pretrained_model_reloa
 file_twobit = dir_data + 'Basset/TwoBitReader/hg19.2bit'
 labels_file = dir_data + '/Basset/Production/basset_labels.txt'
 
+# open the label file
+with open(labels_file) as f:
+    labels_list = [line.strip() for line in f.readlines()]
+
+# load the chromosome data
+# get the genome file
+hg19 = TwoBitFile(file_twobit)
+print("two bit file of type {}".format(type(hg19)))
+
 # LOAD THE MODEL
 # load the weights
 pretrained_model_reloaded_th = dcc_basset_lib.load_basset_model(file_model_weights)
@@ -47,7 +56,6 @@ pretrained_model_reloaded_th.eval()
 # better summary
 print(pretrained_model_reloaded_th)
 
-
 # LOAD THE INPUTS
 # load the list of variants
 variant_list = dcc_basset_lib.get_variant_list(file_input)
@@ -55,70 +63,45 @@ variant_list = dcc_basset_lib.get_variant_list(file_input)
 print("got variant list of size {}".format(len(variant_list)))
 
 # split into chunks
-chunk_size = 100
+chunk_size = 1000 # 20s, 153 chunks - so 50 mins per file, 200 x 50 = 10,000 mins on PC
+# chunk_size = 2000
 chunks = [variant_list[x:x+chunk_size] for x in range(0, len(variant_list), chunk_size)]
 print("got chunk list of size {} and type {}".format(len(chunks), type(chunks)))
 
 print("got chunks data {}".format(chunks[0][0]))
 
-# load the chromosome data
-# get the genome file
-hg19 = TwoBitFile(file_twobit)
-print("two bit file of type {}".format(type(hg19)))
+# get start time
+start_time = time.perf_counter()
 
 # get the sequence input for the first chunk
-print(chunks[0][1:10])
-tensor_input = dcc_basset_lib.get_input_tensor_from_variant_list(chunks[0], hg19, 300, True)
+variant_list = chunks[0]
+tensor_input = dcc_basset_lib.get_input_tensor_from_variant_list(variant_list, hg19, 600, False)
 
-# # get the chrom
-# chromosome = hg19['chr11']
-# position = 95311422
+# get end time
+end_time = time.perf_counter()
+print("generated input tensor of shape {} in {:0.4}s".format(tensor_input.shape, end_time - start_time))
 
-# # load the data
-# ref_sequence, alt_sequence = dcc_basset_lib.get_ref_alt_sequences(position, 300, chromosome, 'C')
-
-# print("got ref sequence one hot of type {} and shape {}".format(type(ref_sequence), len(ref_sequence)))
-# print("got alt sequence one hot of type {} and shape {}".format(type(alt_sequence), len(alt_sequence)))
-
-# # build list and transform into input
-# sequence_list = []
-# # sequence_list.append(ref_sequence)
-# sequence_list.append(ref_sequence)
-# # sequence_list.append(alt_sequence)
-# sequence_list.append(alt_sequence)
-
-# print(alt_sequence)
-
-# # get the np array of right shape
-# sequence_one_hot = dcc_basset_lib.get_one_hot_sequence_array(sequence_list)
-# print("got sequence one hot of type {} and shape {}".format(type(sequence_one_hot), sequence_one_hot.shape))
-# # print(sequence_one_hot)
-
-# # create a pytorch tensor
-# tensor = torch.from_numpy(sequence_one_hot)
-
-# print("got pytorch tensor with type {} and shape {} and data type \n{}".format(type(tensor), tensor.shape, tensor.dtype))
-
-# # build the input tensor
-# tensor_initial = torch.unsqueeze(tensor, 3)
-# tensor_input = tensor_initial.permute(0, 2, 1, 3)
-# tensor_input = tensor_input.to(torch.float)
-
-# print("got transposed pytorch tensor with type {} and shape {} and data type \n{}".format(type(tensor_input), tensor_input.shape, tensor_input.dtype))
+# get start time
+start_time = time.perf_counter()
 
 # run the model predictions
-# pretrained_model_reloaded_th.eval()
+pretrained_model_reloaded_th.eval()
 predictions = pretrained_model_reloaded_th(tensor_input)
 
-# open the label file
-with open(labels_file) as f:
-    labels_list = [line.strip() for line in f.readlines()]
+# get end time
+end_time = time.perf_counter()
+print("generated predictions tensor of shape {} in {:0.4}s".format(predictions.shape, end_time - start_time))
+
+# get start time
+start_time = time.perf_counter()
 
 # get the result map
-variant_list = ['11:95311422:T:C']
 result_list = dcc_basset_lib.get_result_map(variant_list, predictions, labels_list)
-print("got result {}".format(result_list))
+# print("got result list {}".format(result_list))
 
+# get end time
+end_time = time.perf_counter()
+print("got result list of size {} in time {:0.4f}s".format(len(result_list), end_time - start_time))
 
 
 

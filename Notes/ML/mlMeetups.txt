@@ -1,0 +1,26 @@
+
+20200730 - ml at AWS
+- aws labeling services
+  - manual labeling  
+    - outside 250k people (mechanical turk)
+    - or your staff (security)
+  - after 1k pieces labeled, auto labeling gets triggered
+- deep composer
+  - GANs
+    - airbus for plane parts
+
+- supervised
+  - every training example has a corresponding labeling
+- unsupervised
+  - no lables for the data; cluter based on 
+-
+  - learn from consequences of your actiopns
+  
+
+
+- todo
+    - expectation maximization by Dawid and Skeen
+    - look for paper
+
+
+

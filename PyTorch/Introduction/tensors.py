@@ -25,3 +25,16 @@ print("the result has shape {}".format(result.shape))
 print("the row size of the weight matrix is {}".format(weight_matrix.shape[0]))
 print("the column size of the weight matrix is {}".format(weight_matrix.shape[1]))
 
+
+# print the information on tensors
+print("the weight tensor is of dtype {}".format(weight_matrix.dtype))
+print("the weight tensor is of device {}".format(weight_matrix.device))
+print("the weight tensor is of layout {}".format(weight_matrix.layout))
+
+# get random tensor
+rand_tensor = torch.rand(3, 5)
+print("the random tensor is {}".format(rand_tensor))
+
+# get the identity matrix
+eye_tensor = torch.eye(4)
+print("the identity tensor is {}".format(eye_tensor))

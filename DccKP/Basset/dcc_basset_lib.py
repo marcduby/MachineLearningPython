@@ -34,6 +34,10 @@ def get_genomic_sequence(position, offset, chromosome, alt_allele=None):
     else:
         sequence = chromosome[position - offset: position + offset]
 
+    # trim to size
+    if len(sequence) > offset * 2:
+        sequence = sequence[:offset * 2]
+
     # return
     return sequence.upper()
 
@@ -281,10 +285,10 @@ def get_result_map(variant_list, result_tensor, label_list, debug = False):
     # check that the dimensions match
     # should have tensor 2x as big as variant list (one result for ref, one for alt)
     if 2 * len(variant_list) != result_tensor.shape[0]:
-        raise Exception("the result tensor should have 2x as many rows as the variant list (not {} and {})".format(result_tensor.shape[0], len(variant_list)))
+        raise Exception("the result tensor should have 2x as many rows as the variant list (not {} tensor and {} variants)".format(result_tensor.shape[0], len(variant_list)))
     # the tensor results columns should match the size of the labels
     if len(label_list) != result_tensor.shape[1]:
-        raise Exception("the result tensor should have as many columns as the label list (not {} and {})".format(result_tensor.shape[0]), len(label_list))
+        raise Exception("the result tensor should have as many columns as the label list (not {} tensor and {} labels)".format(result_tensor.shape[0]), len(label_list))
 
     # build the result list
     result_list = []
