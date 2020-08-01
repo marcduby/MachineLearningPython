@@ -6,6 +6,7 @@ import torch
 from torch import nn
 from sklearn.preprocessing import OneHotEncoder
 import csv
+import re
 
 print("have pytorch version {}".format(torch.__version__))
 print("have numpy version {}".format(np.__version__))
@@ -69,7 +70,10 @@ def get_one_hot_sequence_array(sequence_list):
     sequence_np[sequence_np == 'T'] = 3
 
     # convert to ints
-    sequence_np = sequence_np.astype(np.int)
+    try:
+        sequence_np = sequence_np.astype(np.int)
+    except:
+        raise ValueError("got error for sequence \n{}".format(sequence_np))
 
     # one hot the sequence
     number_classes = 4
@@ -98,10 +102,17 @@ def get_variant_list(file):
     # return
     return variants
 
+def load_beluga_model(weights_file, should_log=True):
+    # load the weights
+    state_dict = torch.load(weights_file)
+    pretrained_model_reloaded_th = load_beluga_model_from_state_dict(state_dict, should_log)
+
+    # return
+    return pretrained_model_reloaded_th
+
 def load_basset_model(weights_file, should_log=True):
     # load the weights
     state_dict = torch.load(weights_file)
-    print("dude \n{}\n\n".format(state_dict))
     pretrained_model_reloaded_th = load_basset_model_from_state_dict(state_dict, should_log)
 
     # return
@@ -110,11 +121,51 @@ def load_basset_model(weights_file, should_log=True):
 def load_nasa_model(weights_file, should_log=True):
     # load the weights
     state_dict = torch.load(weights_file)
-    print("dude \n{}\n\n".format(state_dict))
     pretrained_model_reloaded_th = load_nasa_model_from_state_dict(state_dict, should_log)
 
     # return
     return pretrained_model_reloaded_th
+
+def load_beluga_model_from_state_dict(state_dict, should_log=True):
+    # load the DeepSEA Beluga model
+    pretrained_model = nn.Sequential(
+            nn.Sequential(
+                nn.Conv2d(4, 320, (1, 8)),
+                nn.ReLU(),
+                nn.Conv2d(320, 320, (1, 8)),
+                nn.ReLU(),
+                nn.Dropout(0.2),
+                nn.MaxPool2d((1, 4), (1, 4)),
+                nn.Conv2d(320, 480, (1, 8)),
+                nn.ReLU(),
+                nn.Conv2d(480, 480, (1, 8)),
+                nn.ReLU(),
+                nn.Dropout(0.2),
+                nn.MaxPool2d((1, 4), (1, 4)),
+                nn.Conv2d(480, 640, (1, 8)),
+                nn.ReLU(),
+                nn.Conv2d(640, 640, (1, 8)),
+                nn.ReLU(),
+            ),
+            nn.Sequential(
+                nn.Dropout(0.5),
+                Lambda(lambda x: x.view(x.size(0), -1)),
+                nn.Sequential(Lambda(lambda x: x.view(1, -1) if 1 == len(x.size()) else x), nn.Linear(67840, 2003)),
+                nn.ReLU(),
+                nn.Sequential(Lambda(lambda x: x.view(1, -1) if 1 == len(x.size()) else x), nn.Linear(2003, 2002)),
+            ),
+            nn.Sigmoid(),
+        )
+
+    # print
+    if should_log:
+        print("got DeepSEA Beluga model of type {}".format(type(pretrained_model)))
+
+    # load the weights
+    pretrained_model.load_state_dict(state_dict)
+
+    # return
+    return pretrained_model
 
 def load_basset_model_from_state_dict(state_dict, should_log=True):
     # load the Basset model
@@ -146,7 +197,7 @@ def load_basset_model_from_state_dict(state_dict, should_log=True):
 
     # print
     if should_log:
-        print("got model of type {}".format(type(pretrained_model_reloaded_th)))
+        print("got Basset model of type {}".format(type(pretrained_model_reloaded_th)))
 
     # load the weights
     pretrained_model_reloaded_th.load_state_dict(state_dict)
@@ -223,7 +274,7 @@ def load_nasa_model_from_state_dict(state_dict, should_log=True):
 
     # print
     if should_log:
-        print("got model of type {}".format(type(pretrained_model_reloaded_th)))
+        print("got Nasa SA model of type {}".format(type(pretrained_model_reloaded_th)))
 
     # load the weights
     if state_dict is not None:
@@ -319,6 +370,9 @@ def get_input_tensor_from_variant_list(variant_list, genome_lookup, region_size,
     method to return the ML model input vectorcorresponding to the variant list
     '''
 
+    # keep track of variants that return odd sequences
+    variants_to_remove_list = []
+
     # list used to build the tensor
     sequence_list = []
 
@@ -335,6 +389,21 @@ def get_input_tensor_from_variant_list(variant_list, genome_lookup, region_size,
 
         # load the data
         ref_sequence, alt_sequence = get_ref_alt_sequences(position, int(region_size/2), chromosome_lookup, alt_allele)
+
+        # verify the letters in the sequence
+        try:
+            for test_sequence in (ref_sequence, alt_allele):
+                if not re.match("^[ACGT]*$", test_sequence):
+                    # get letter N for unseuqnced regions; throw them out
+                    # if re.match("[N].", test_sequence):
+                    if debug:
+                        print("for variant {} got incorrect letter in sequence \n{}".format(variant, test_sequence))
+                    raise ValueError()
+        except:
+            variants_to_remove_list.append(variant)
+            continue
+            # else: 
+            #     raise ValueError("for variant {} got incorrect letter in sequence \n{}".format(variant, test_sequence))
 
         # debug
         if debug:
@@ -372,8 +441,11 @@ def get_input_tensor_from_variant_list(variant_list, genome_lookup, region_size,
     if debug:
         print("got transposed pytorch tensor with type {} and shape {} and data type \n{}".format(type(tensor_input), tensor_input.shape, tensor_input.dtype))
 
+    # create updated list to return
+    updated_variant_list = [variant for variant in variant_list if variant not in variants_to_remove_list]
+
     # return
-    return tensor_input
+    return updated_variant_list, tensor_input
 
 if __name__ == '__main__':
     # set the data dir
@@ -456,5 +528,9 @@ if __name__ == '__main__':
 
     # test the input tensor creation
     variant_list = ['1:65359821:G:A', '3:7359821:G:C', '8:3359821:G:T']
-    sequence_results = get_input_tensor_from_variant_list(variant_list, hg19, 20, True)
+    variant_list, sequence_results = get_input_tensor_from_variant_list(variant_list, hg19, 20, True)
     print("got input tensor of type {} and shape {} and data \n{}".format(type(sequence_results), sequence_results.shape, sequence_results))
+
+    # test for letter Ns
+    variant_list.append("20:26319418:A:G")    
+    variant_list, test_results = get_input_tensor_from_variant_list(variant_list, hg19, 600, False)
