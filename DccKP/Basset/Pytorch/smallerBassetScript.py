@@ -14,6 +14,7 @@ from torch import nn
 import twobitreader
 from twobitreader import TwoBitFile
 import time
+import argparse
 
 print("got pytorch version of {}".format(torch.__version__))
 
@@ -35,6 +36,17 @@ file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99dee
 file_model_weights = dir_data + 'Basset/Production/basset_pretrained_model_reloaded.pth'
 file_twobit = dir_data + 'Basset/Production/hg19.2bit'
 labels_file = dir_data + '/Basset/Production/basset_labels.txt'
+
+# read in the passed in file if any
+# configure argparser
+parser = argparse.ArgumentParser("script to clone the dev bioindex data to the prod machine")
+# add the arguments
+parser.add_argument('-f', '--file', help='the file to process', default=file_input, required=False)
+# get the args
+args = vars(parser.parse_args())
+if args['file'] is not None:
+    file_input = args['file']
+print("using variant file {}".format(file_input))
 
 # open the label file
 with open(labels_file) as f:
