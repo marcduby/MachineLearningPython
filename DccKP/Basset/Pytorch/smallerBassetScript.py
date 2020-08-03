@@ -33,7 +33,7 @@ file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99dee
 # file_model_weights = dir_data + 'Basset/Model/dude_model.pth'
 # file_model_weights = dir_data + 'Basset/Model/pretrained_model_reloaded_th.pth'
 file_model_weights = dir_data + 'Basset/Production/basset_pretrained_model_reloaded.pth'
-file_twobit = dir_data + 'Basset/TwoBitReader/hg19.2bit'
+file_twobit = dir_data + 'Basset/Production/hg19.2bit'
 labels_file = dir_data + '/Basset/Production/basset_labels.txt'
 
 # open the label file
@@ -69,6 +69,7 @@ chunks = [variant_list[x:x+chunk_size] for x in range(0, len(variant_list), chun
 print("got chunk list of size {} and type {}".format(len(chunks), type(chunks)))
 
 # loop through chunks
+main_start_time = time.perf_counter()
 final_results = []
 for chunk_index in range(0, len(chunks)):
 # for chunk_index in range(6, 7):
@@ -109,7 +110,8 @@ for chunk_index in range(0, len(chunks)):
     print("got result list of size {} in time {:0.4f}s".format(len(result_list), end_time - start_time))
 
 # end
-print("got final results of size {}".format(len(final_results)))
+main_end_time = time.perf_counter()
+print("got final results of size {} in time {:0.4f}".format(len(final_results), main_end_time - main_start_time))
 
 
 
