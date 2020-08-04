@@ -277,7 +277,7 @@ if __name__ == "__main__":
         s3_command = "aws s3 sync --no-progress s3://{}/{} s3://{}/{}".format(s3_bucket_dev, s3_subdirectory, s3_bucket_new, s3_subdirectory)
         run_system_command(s3_command, if_test = arg_if_test)
 
-    # clone the bioindex database
+    # clone the dig-dug portal database
     clone_database(schema_portal_dev, schema_portal_new, bio_secret_dev)
 
     # clone the bioindex database

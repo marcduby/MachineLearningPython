@@ -37,16 +37,22 @@ file_model_weights = dir_data + 'Basset/Production/basset_pretrained_model_reloa
 file_twobit = dir_data + 'Basset/Production/hg19.2bit'
 labels_file = dir_data + '/Basset/Production/basset_labels.txt'
 
+# chunk_size = 1000 # 20s, 153 chunks - so 50 mins per file, 200 x 50 = 10,000 mins on PC
+batch_size = 20
+
 # read in the passed in file if any
 # configure argparser
 parser = argparse.ArgumentParser("script to clone the dev bioindex data to the prod machine")
 # add the arguments
 parser.add_argument('-f', '--file', help='the file to process', default=file_input, required=False)
+parser.add_argument('-b', '--batch', help='the batch size to process', default=batch_size, required=False)
 # get the args
 args = vars(parser.parse_args())
 if args['file'] is not None:
     file_input = args['file']
-print("using variant file {}".format(file_input))
+if args['batch'] is not None:
+    batch_size = int(args['batch'])
+print("using variant file {} with batch size {}".format(file_input, batch_size))
 
 # open the label file
 with open(labels_file) as f:
@@ -75,9 +81,8 @@ variant_list = dcc_basset_lib.get_variant_list(file_input)
 print("got variant list of size {}".format(len(variant_list)))
 
 # split into chunks
-chunk_size = 1000 # 20s, 153 chunks - so 50 mins per file, 200 x 50 = 10,000 mins on PC
 # chunk_size = 2000
-chunks = [variant_list[x:x+chunk_size] for x in range(0, len(variant_list), chunk_size)]
+chunks = [variant_list[x : x+batch_size] for x in range(0, len(variant_list), batch_size)]
 print("got chunk list of size {} and type {}".format(len(chunks), type(chunks)))
 
 # loop through chunks
