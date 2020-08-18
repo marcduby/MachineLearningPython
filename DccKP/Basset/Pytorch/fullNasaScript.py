@@ -1,6 +1,3 @@
-# To add a new cell, type '# %%'
-# To add a new markdown cell, type '# %% [markdown]'
-
 # copied from github below for use in my project at work
 # https://github.com/kipoi/models/blob/master/Basset/pretrained_model_reloaded_th.py
 # see paper at
@@ -11,15 +8,16 @@ import torch
 from torch import nn
 import twobitreader
 from twobitreader import TwoBitFile
-# from torch.utils.serialization import load_lua
+import time
+import argparse
 
 print("got pytorch version of {}".format(torch.__version__))
 
 # set the code and data directories
-dir_code = "/Users/mduby/Code/WorkspacePython/"
-dir_data = "/Users/mduby/Data/Broad/"
-# dir_code = "/home/javaprog/Code/PythonWorkspace/"
-# dir_data = "/home/javaprog/Data/Broad/"
+# dir_code = "/Users/mduby/Code/WorkspacePython/"
+# dir_data = "/Users/mduby/Data/Broad/"
+dir_code = "/home/javaprog/Code/PythonWorkspace/"
+dir_data = "/home/javaprog/Data/Broad/"
 
 # import relative libraries
 import sys
@@ -28,15 +26,45 @@ import dcc_basset_lib
 
 # file input
 file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
-# file_model_weights = dir_data + 'Basset/Marc/Trouble/ampt2d_cnn_900_best_p041.pth'
+file_output = dir_data + "Basset/Out/nasa_part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
+file_twobit = dir_data + 'Basset/Production/hg19.2bit'
+# file_model_weights = dir_data + 'Basset/Production/basset_pretrained_model_reloaded.pth'
+# labels_file = dir_data + '/Basset/Production/basset_labels.txt'
 file_model_weights = dir_data + 'Basset/Production/nasa_ampt2d_cnn_900_best_p041.pth'
-# file_model_weights = dir_data + 'Basset/Marc/Test/untrained_nasa_model01.pth'
-file_labels = dir_data + '/Basset/Production/nasa_labels.txt'
-file_twobit = dir_data + 'Basset/TwoBitReader/hg19.2bit'
+labels_file = dir_data + '/Basset/Production/nasa_labels.txt'
+
+# set the region size
+region_size = 900
+
+# chunk_size = 1000 # 20s, 153 chunks - so 50 mins per file, 200 x 50 = 10,000 mins on PC
+batch_size = 20
+
+# read in the passed in file if any
+# configure argparser
+parser = argparse.ArgumentParser("script to clone the dev bioindex data to the prod machine")
+# add the arguments
+parser.add_argument('-f', '--file', help='the file to process', default=file_input, required=False)
+parser.add_argument('-b', '--batch', help='the batch size to process', default=batch_size, required=False)
+# get the args
+args = vars(parser.parse_args())
+if args['file'] is not None:
+    file_input = args['file']
+if args['batch'] is not None:
+    batch_size = int(args['batch'])
+print("using variant file {} with batch size {}".format(file_input, batch_size))
+
+# open the label file
+with open(labels_file) as f:
+    labels_list = [line.strip() for line in f.readlines()]
+
+# load the chromosome data
+# get the genome file
+hg19 = TwoBitFile(file_twobit)
+print("two bit file of type {}".format(type(hg19)))
 
 # LOAD THE MODEL
 # load the weights
-# pretrained_model_reloaded_th = dcc_basset_lib.load_nasa_model_from_state_dict(None)
+# pretrained_model_reloaded_th = dcc_basset_lib.load_basset_model(file_model_weights)
 pretrained_model_reloaded_th = dcc_basset_lib.load_nasa_model(file_model_weights)
 
 # make the model eval
@@ -45,7 +73,6 @@ pretrained_model_reloaded_th.eval()
 # better summary
 print(pretrained_model_reloaded_th)
 
-
 # LOAD THE INPUTS
 # load the list of variants
 variant_list = dcc_basset_lib.get_variant_list(file_input)
@@ -53,82 +80,54 @@ variant_list = dcc_basset_lib.get_variant_list(file_input)
 print("got variant list of size {}".format(len(variant_list)))
 
 # split into chunks
-chunk_size = 100
-chunks = [variant_list[x:x+chunk_size] for x in range(0, len(variant_list), chunk_size)]
+# chunk_size = 2000
+chunks = [variant_list[x : x+batch_size] for x in range(0, len(variant_list), batch_size)]
 print("got chunk list of size {} and type {}".format(len(chunks), type(chunks)))
 
-print("got chunks data {}".format(chunks[0][0]))
+# loop through chunks
+main_start_time = time.perf_counter()
+final_results = []
+# for chunk_index in range(0, len(chunks)):
+for chunk_index in range(6, 9):
+    variant_list = chunks[chunk_index]
 
-# load the chromosome data
-# get the genome file
-hg19 = TwoBitFile(file_twobit)
+    # get start time
+    start_time = time.perf_counter()
 
-print("two bit file of type {}".format(type(hg19)))
+    # get the sequence input for the first chunk
+    # variant_list = chunks[0]
+    variant_list, tensor_input = dcc_basset_lib.get_input_tensor_from_variant_list(variant_list, hg19, region_size, False)
 
-# get the chrom
-# chromosome = hg19['chr11']
-# position = 95311422
-# chromosome = hg19['chr17']
-# position = 65867911
-chromosome = hg19['chr8']
-position = 124708820
+    # get end time
+    end_time = time.perf_counter()
+    print("({}) generated input tensor of shape {} in {:0.4}s".format(chunk_index, tensor_input.shape, end_time - start_time))
 
-# load the data
-ref_sequence, alt_sequence = dcc_basset_lib.get_ref_alt_sequences(position, 450, chromosome, 'C')
+    # get start time
+    start_time = time.perf_counter()
 
-print("got ref sequence one hot of type {} and shape {}".format(type(ref_sequence), len(ref_sequence)))
-print("got alt sequence one hot of type {} and shape {}".format(type(alt_sequence), len(alt_sequence)))
+    # run the model predictions
+    pretrained_model_reloaded_th.eval()
+    predictions = pretrained_model_reloaded_th(tensor_input)
 
-# build list and transform into input
-sequence_list = []
-# sequence_list.append(ref_sequence)
-sequence_list.append(ref_sequence)
-# sequence_list.append(alt_sequence)
-sequence_list.append(alt_sequence)
+    # get end time
+    end_time = time.perf_counter()
+    print("generated predictions tensor of shape {} in {:0.4}s".format(predictions.shape, end_time - start_time))
 
-print(alt_sequence)
+    # get start time
+    start_time = time.perf_counter()
 
-# get the np array of right shape
-sequence_one_hot = dcc_basset_lib.get_one_hot_sequence_array(sequence_list)
-print("got sequence one hot of type {} and shape {}".format(type(sequence_one_hot), sequence_one_hot.shape))
-# print(sequence_one_hot)
+    # get the result map
+    result_list = dcc_basset_lib.get_result_map(variant_list, predictions, labels_list)
+    final_results.extend(result_list)
+    # print("got result list {}".format(result_list))
 
-# create a pytorch tensor
-tensor = torch.from_numpy(sequence_one_hot)
+    # get end time
+    end_time = time.perf_counter()
+    print("got result list of size {} in time {:0.4f}s".format(len(result_list), end_time - start_time))
 
-print("got pytorch tensor with type {} and shape {} and data type \n{}".format(type(tensor), tensor.shape, tensor.dtype))
-
-# build the input tensor
-tensor_initial = torch.unsqueeze(tensor, 3)
-tensor_input = tensor_initial.permute(0, 2, 1, 3)
-tensor_input = tensor_input.to(torch.float)
-
-print("got transposed pytorch tensor with type {} and shape {} and data type \n{}".format(type(tensor_input), tensor_input.shape, tensor_input.dtype))
-
-# run the model predictions
-# pretrained_model_reloaded_th.eval()
-predictions = pretrained_model_reloaded_th(tensor_input)
-
-print("got predictions of type {} and shape {} and result \n{}".format(type(predictions), predictions.shape, predictions))
-# print("got 0,1 prediction {}".format((predictions[0,2] - predictions[1,2]).item()))
-
-# get the absolute value of the difference
-tensor_abs = torch.abs(predictions[0] - predictions[1])
-print("result tensor of shape {} is {}".format(tensor_abs.shape, tensor_abs)
-
-# open the label file
-with open(file_labels) as f:
-    labels = [line.strip() for line in f.readlines()]
-
-# print("the labels of type {} and length {} are \n{}".format(type(labels), len(labels), labels))
-
-result_map = {}
-for index in range(0, len(labels)):
-    result_map[labels[index]] = tensor_abs[index].item()
-
-print("the result of type {} and length {} are \n{}".format(type(result_map), len(result_map), result_map))
-
-
+# end
+main_end_time = time.perf_counter()
+print("got final results of size {} in time {:0.4f}".format(len(final_results), main_end_time - main_start_time))
 
 
 
