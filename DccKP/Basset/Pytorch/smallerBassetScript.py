@@ -19,10 +19,10 @@ import argparse
 print("got pytorch version of {}".format(torch.__version__))
 
 # set the code and data directories
-# dir_code = "/Users/mduby/Code/WorkspacePython/"
-# dir_data = "/Users/mduby/Data/Broad/"
-dir_code = "/home/javaprog/Code/PythonWorkspace/"
-dir_data = "/home/javaprog/Data/Broad/"
+dir_code = "/Users/mduby/Code/WorkspacePython/"
+dir_data = "/Users/mduby/Data/Broad/"
+# dir_code = "/home/javaprog/Code/PythonWorkspace/"
+# dir_data = "/home/javaprog/Data/Broad/"
 
 # import relative libraries
 import sys
@@ -88,8 +88,8 @@ print("got chunk list of size {} and type {}".format(len(chunks), type(chunks)))
 # loop through chunks
 main_start_time = time.perf_counter()
 final_results = []
-for chunk_index in range(0, len(chunks)):
-# for chunk_index in range(6, 7):
+# for chunk_index in range(0, len(chunks)):
+for chunk_index in range(5, 6):
     variant_list = chunks[chunk_index]
 
     # get start time
@@ -129,6 +129,9 @@ for chunk_index in range(0, len(chunks)):
 # end
 main_end_time = time.perf_counter()
 print("got final results of size {} in time {:0.4f}".format(len(final_results), main_end_time - main_start_time))
+
+# print
+print(final_results)
 
 
 
