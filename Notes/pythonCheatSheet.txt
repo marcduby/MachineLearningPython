@@ -29,6 +29,12 @@ debug:
   - print(<object>)
   
 
+notes:
+------
+I'm not familiar with green. Looks like it could be useful for running tests. I'm not sure if it'd run our most common scenario which is "pytest -d --tx '6*popen//python=python'"
+Which runs all tests spread across 6 cores.
+
+
 
 
 
