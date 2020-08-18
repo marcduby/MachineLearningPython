@@ -10,6 +10,7 @@ import twobitreader
 from twobitreader import TwoBitFile
 import time
 import argparse
+import json
 
 print("got pytorch version of {}".format(torch.__version__))
 
@@ -26,10 +27,11 @@ import dcc_basset_lib
 
 # file input
 file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
-file_output = dir_data + "Basset/Out/nasa_part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
 file_twobit = dir_data + 'Basset/Production/hg19.2bit'
+# file_output = dir_data + "Basset/Out/basset_part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
 # file_model_weights = dir_data + 'Basset/Production/basset_pretrained_model_reloaded.pth'
 # labels_file = dir_data + '/Basset/Production/basset_labels.txt'
+file_output = dir_data + "Basset/Out/nasa_part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
 file_model_weights = dir_data + 'Basset/Production/nasa_ampt2d_cnn_900_best_p041.pth'
 labels_file = dir_data + '/Basset/Production/nasa_labels.txt'
 
@@ -129,5 +131,10 @@ for chunk_index in range(6, 9):
 main_end_time = time.perf_counter()
 print("got final results of size {} in time {:0.4f}".format(len(final_results), main_end_time - main_start_time))
 
+# write out the output
+with open(file_output, 'w') as out_file:
+    out = json.dumps(final_results)
+    out_file.write(out)
+    print("got final results file {}".format(file_output))
 
 
