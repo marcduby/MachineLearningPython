@@ -43,17 +43,20 @@ batch_size = 20
 
 # read in the passed in file if any
 # configure argparser
-parser = argparse.ArgumentParser("script to clone the dev bioindex data to the prod machine")
+parser = argparse.ArgumentParser("script to run the Basset PyTorch model on DCC a variants file")
 # add the arguments
-parser.add_argument('-f', '--file', help='the file to process', default=file_input, required=False)
+parser.add_argument('-i', '--input_file', help='the file to process', default=file_input, required=True)
+parser.add_argument('-o', '--output_file', help='the file to save the results to', default=file_output, required=True)
 parser.add_argument('-b', '--batch', help='the batch size to process', default=batch_size, required=False)
 # get the args
 args = vars(parser.parse_args())
-if args['file'] is not None:
-    file_input = args['file']
+if args['input_file'] is not None:
+    file_input = args['input_file']
+if args['output_file'] is not None:
+    file_output = args['output_file']
 if args['batch'] is not None:
     batch_size = int(args['batch'])
-print("using variant file {} with batch size {}".format(file_input, batch_size))
+print("using variant input file {} and resule output file {} with batch size {}".format(file_input, file_output, batch_size))
 
 # open the label file
 with open(labels_file) as f:
@@ -78,7 +81,6 @@ print(pretrained_model_reloaded_th)
 # LOAD THE INPUTS
 # load the list of variants
 variant_list = dcc_basset_lib.get_variant_list(file_input)
-
 print("got variant list of size {}".format(len(variant_list)))
 
 # split into chunks

@@ -96,8 +96,8 @@ def get_variant_list(file):
 
 
     # print the first 10 variants
-    for index in range(1, 10):
-        print("got variant: {}".format(variants[index]))
+    # for index in range(1, 10):
+    #     print("got variant: {}".format(variants[index]))
 
     # return
     return variants
