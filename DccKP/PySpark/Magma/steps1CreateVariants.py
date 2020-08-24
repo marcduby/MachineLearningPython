@@ -9,8 +9,12 @@ from pyspark.sql.functions import col, struct, explode, when, lit, array_max, ar
 # outdir = 's3:/dig-analysis-data/out/magma/step1'
 
 # development localhost directories
-variant_srcdir = '/Users/mduby/Data/Broad/Magma/Common/part*'
-out_dir = '/Users/mduby/Data/Broad/Magma/Out/Step1'
+# variant_srcdir = '/Users/mduby/Data/Broad/Magma/Snp/'
+# out_dir = '/Users/mduby/Data/Broad/Magma/Out/Step1'
+
+# localhost development localhost directories
+variant_srcdir = '/home/javaprog/Data/Broad/Magma/Snp/'
+out_dir = '/home/javaprog/Data/Broad/Magma/Out/Step1'
 
 # print
 print("the variant input directory is: {}".format(variant_srcdir))
@@ -20,29 +24,18 @@ print("the output directory is: {}".format(out_dir))
 spark = SparkSession.builder.appName('magma01').getOrCreate()
 print("got Spark session of type {}".format(type(spark)))
 
-# this is the schema for the common variant file
-variant_schema = StructType(
-    [
-        StructField('varId', StringType(), nullable=False),
-        StructField('dbSNP', StringType(), nullable=False),
-        StructField('consequence', StringType(), nullable=False),
-        StructField('gene', StringType(), nullable=False),
-        StructField('transcript', StringType(), nullable=False),
-        StructField('impact', StringType(), nullable=False),
-    ]
-)
-
-
-# load the variants
-df_load = spark.read \
-    .csv(variant_srcdir, sep='\t', header=True, schema=variant_schema) \
-    .select('varId', 'dbSNP')# method to load the rdIds
+# method to load the variants
+def load_rsids(input_srcdir):
+    # load the variants
+    return spark.read \
+        .csv('%s/part-*' % (input_srcdir), sep='\t', header=True) \
+        .select('varId', 'dbSNP')# method to load the rdIds
 
 # print
+df_load = load_rsids(variant_srcdir)
 print("the loaded variant data frame has {} rows".format(df_load.count()))
 df_load.show()
         
-
 # keep only the rows with non null dbSNP ids
 df_nonnull_load = df_load.filter(col("dbSNP").isNotNull())
 
@@ -50,9 +43,9 @@ df_nonnull_load = df_load.filter(col("dbSNP").isNotNull())
 print("the non null RS id dataframe has {} rows".format(df_nonnull_load.count()))
 df_nonnull_load.show()
 
-# print
-df_nonnull_load = df_nonnull_load.filter(df_nonnull_load.dbSNP.isNotNull()).select(df_nonnull_load.dbSNP).distinct()
-print("the non null RS id dataframe has {} rows".format(df_nonnull_load.count()))
+# print out distincts - /snp directory is only common variants, so less than /Common aggregate
+# df_distinct = df_nonnull_load.filter(df_nonnull_load.dbSNP.isNotNull()).select(df_nonnull_load.dbSNP).distinct()
+# print("the non null dsitinct RS id dataframe has {} rows".format(df_distinct.count()))
 
 # decompose first field and get chrom/pos
 split_col = split(df_nonnull_load['varId'], ':')
@@ -85,7 +78,10 @@ df_export = df_export.filter(col("chromosome") != 'MT')
 df_export.groupBy("chromosome").count().orderBy("chromosome").show(25, False)
 
 # write out the tab delimited file
-df_export.write.mode('overwrite').option("delimiter", "\t").csv(out_dir)
+df_export.coalesce(1).write.mode('overwrite').option("delimiter", "\t").csv(out_dir)
+
+# stop spark
+spark.stop()
 
 # write by chromosome - not needed for 64gig mem VM
 # chrom_list = list(range(1, 23))

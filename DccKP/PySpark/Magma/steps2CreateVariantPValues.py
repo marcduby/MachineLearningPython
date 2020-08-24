@@ -21,18 +21,6 @@ out_dir = '/home/javaprog/Data/Broad/Magma/Out/Step2'
 # common variables
 phenotype = 'BMI'
 
-# this is the schema for the common variant file
-variant_schema = StructType(
-    [
-        StructField('varId', StringType(), nullable=False),
-        StructField('dbSNP', StringType(), nullable=False),
-        StructField('consequence', StringType(), nullable=False),
-        StructField('gene', StringType(), nullable=False),
-        StructField('transcript', StringType(), nullable=False),
-        StructField('impact', StringType(), nullable=False),
-    ]
-)
-
 # print
 print("the variant pValues input directory is: {}".format(pvalue_srcdir))
 print("the output directory is: {}".format(out_dir))
@@ -52,7 +40,7 @@ def load_rsids(input_srcdir):
 
 
 # open spark session
-spark = SparkSession.builder.appName('bioindex').getOrCreate()
+spark = SparkSession.builder.appName('magma02').getOrCreate()
 print("got Spark session of type {}".format(type(spark)))
 
 # load the variants pValues
