@@ -64,7 +64,7 @@ print("the loaded variant joined data frame has {} rows".format(df_export.count(
 df_export.show()
 
 # write out the one tab delimited file
-df_export.coalesce(1).write.mode('overwrite').option("delimiter", "\t").csv(out_dir)
+df_export.coalesce(1).write.mode('overwrite').option("delimiter", "\t").csv(out_dir, header='true')
 print("wrote out the loaded variant data frame to directory {}".format(out_dir))
 
 # stop spark
