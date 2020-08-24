@@ -14,7 +14,7 @@ from pyspark.sql.functions import col, struct, explode, when, lit, array_max, ar
 # out_dir = '/Users/mduby/Data/Broad/Magma/Out/Step2'
 
 # development localhost directories
-variant_srcdir = '/home/javaprog/Data/Broad/Magma/Common/'
+variant_srcdir = '/home/javaprog/Data/Broad/Magma/Snp/'
 pvalue_srcdir = '/home/javaprog/Data/Broad/Magma/Phenotype/'
 out_dir = '/home/javaprog/Data/Broad/Magma/Out/Step2'
 
@@ -42,12 +42,12 @@ print("the output directory is: {}".format(out_dir))
 def load_pvalues(pehnotype, input_srcdir):
     return spark.read \
         .json('%s/%s/part-*' % (input_srcdir, phenotype)) \
-        .select('varId', 'chromosome', 'n', 'pValue', 'position')
+        .select('varId', 'n', 'pValue')
 
 def load_rsids(input_srcdir):
     # load the variants
     return spark.read \
-        .csv('%s/part-*' % (input_srcdir), sep='\t', header=True, schema=variant_schema) \
+        .csv('%s/part-*' % (input_srcdir), sep='\t', header=True) \
         .select('varId', 'dbSNP')# method to load the rdIds
 
 
@@ -56,11 +56,11 @@ spark = SparkSession.builder.appName('bioindex').getOrCreate()
 print("got Spark session of type {}".format(type(spark)))
 
 # load the variants pValues
-df_load = load_pvalues(phenotype, pvalue_srcdir)
+df_pvalue_load = load_pvalues(phenotype, pvalue_srcdir)
 
 # print
-print("the loaded variant pValue data frame has {} rows".format(df_load.count()))
-df_load.show()
+print("the loaded variant pValue data frame has {} rows".format(df_pvalue_load.count()))
+df_pvalue_load.show()
         
 # load the variants pValues
 df_variant_load = load_rsids(variant_srcdir)
@@ -69,6 +69,13 @@ df_variant_load = load_rsids(variant_srcdir)
 print("the loaded variant data frame has {} rows".format(df_variant_load.count()))
 df_variant_load.show()
 
+# join the two dataframes and add in rsIDs
+df_rsid = df_pvalue_load.join(df_variant_load, on='varId', how='inner')
+df_rsid = df_rsid.select('dbSNP', 'pValue', 'n').withColumnRenamed('n', 'subjects')
+print("the loaded variant joined data frame has {} rows".format(df_rsid.count()))
+df_rsid.show()
+
+# export to tab delimited file with header
 
 # # keep only the rows with non null dbSNP ids
 # df_nonnull_load = df_load.filter(col("dbSNP").isNotNull())

@@ -34,7 +34,9 @@ variant_schema = StructType(
 
 
 # load the variants
-df_load = spark.read         .csv(variant_srcdir, sep='\t', header=True, schema=variant_schema)         .select('varId', 'dbSNP')# method to load the frequencies
+df_load = spark.read \
+    .csv(variant_srcdir, sep='\t', header=True, schema=variant_schema) \
+    .select('varId', 'dbSNP')# method to load the rdIds
 
 # print
 print("the loaded variant data frame has {} rows".format(df_load.count()))
@@ -48,6 +50,9 @@ df_nonnull_load = df_load.filter(col("dbSNP").isNotNull())
 print("the non null RS id dataframe has {} rows".format(df_nonnull_load.count()))
 df_nonnull_load.show()
 
+# print
+df_nonnull_load = df_nonnull_load.filter(df_nonnull_load.dbSNP.isNotNull()).select(df_nonnull_load.dbSNP).distinct()
+print("the non null RS id dataframe has {} rows".format(df_nonnull_load.count()))
 
 # decompose first field and get chrom/pos
 split_col = split(df_nonnull_load['varId'], ':')
@@ -76,28 +81,27 @@ df_export.printSchema()
 df_export.groupBy("chromosome").count().orderBy("chromosome").show(25, False)
 df_export = df_export.filter(col("chromosome") != 'MT')
 
-
 # show the counts
 df_export.groupBy("chromosome").count().orderBy("chromosome").show(25, False)
 
+# write out the tab delimited file
+df_export.write.mode('overwrite').option("delimiter", "\t").csv(out_dir)
 
-# write by chromosome
-chrom_list = list(range(1, 23))
-chrom_list.append('X')
-chrom_list.append('Y')
-for chrom in chrom_list:
-    df_write = df_export.filter(col('chromosome') == chrom)
-    # write out the tab delimited file
-    print("chrom {} has size {}".format(chrom, df_write.count()))
-    df_write.write.mode('overwrite').option("delimiter", "\t").csv(out_dir + "/" + str(chrom))
+# write by chromosome - not needed for 64gig mem VM
+# chrom_list = list(range(1, 23))
+# chrom_list.append('X')
+# chrom_list.append('Y')
+# for chrom in chrom_list:
+#     df_write = df_export.filter(col('chromosome') == chrom)
+#     # write out the tab delimited file
+#     print("chrom {} has size {}".format(chrom, df_write.count()))
+#     df_write.write.mode('overwrite').option("delimiter", "\t").csv(out_dir + "/" + str(chrom))
 
 
 # write out by chrom
 # df_export.write.mode('overwrite').option("delimiter", "\t").partitionBy("chromosome").saveAsTable(out_dir)
 
 
-# write out the tab delimited file
-# df_export.write.mode('overwrite').option("delimiter", "\t").csv(out_dir)
 
 
 # example
