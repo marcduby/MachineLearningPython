@@ -70,100 +70,16 @@ print("the loaded variant data frame has {} rows".format(df_variant_load.count()
 df_variant_load.show()
 
 # join the two dataframes and add in rsIDs
-df_rsid = df_pvalue_load.join(df_variant_load, on='varId', how='inner')
-df_rsid = df_rsid.select('dbSNP', 'pValue', 'n').withColumnRenamed('n', 'subjects')
-print("the loaded variant joined data frame has {} rows".format(df_rsid.count()))
-df_rsid.show()
+df_export = df_pvalue_load.join(df_variant_load, on='varId', how='inner')
+df_export = df_export.select('dbSNP', 'pValue', 'n').withColumnRenamed('n', 'subjects')
+print("the loaded variant joined data frame has {} rows".format(df_export.count()))
+df_export.show()
 
-# export to tab delimited file with header
+# write out the one tab delimited file
+df_export.coalesce(1).write.mode('overwrite').option("delimiter", "\t").csv(out_dir)
+print("wrote out the loaded variant data frame to directory {}".format(out_dir))
 
-# # keep only the rows with non null dbSNP ids
-# df_nonnull_load = df_load.filter(col("dbSNP").isNotNull())
+# stop spark
+spark.stop()
 
-# # print
-# print("the non null RS id dataframe has {} rows".format(df_nonnull_load.count()))
-
-
-# # %%
-# df_nonnull_load.show()
-
-
-# # %%
-# # decompose first field and get chrom/pos
-# split_col = split(df_nonnull_load['varId'], ':')
-
-# # add the first two columns back in
-# df_nonnull_load = df_nonnull_load.withColumn('chromosome', split_col.getItem(0))
-# df_nonnull_load = df_nonnull_load.withColumn('position', split_col.getItem(1))
-
-
-# # %%
-# df_nonnull_load.show()
-
-
-# # %%
-# # build out data frame and save magma variant input file
-# df_export = df_nonnull_load.select("dbSnp", 'chromosome', 'position')
-
-
-# # %%
-# df_export.count()
-
-
-# # %%
-# # replace the X/Y chromosome values with 23/24
-# df_export = df_export.withColumn('chromosome', regexp_replace('chromosome', 'X', '23'))
-# df_export = df_export.withColumn('chromosome', regexp_replace('chromosome', 'Y', '24'))
-
-
-# # %%
-# df_export.count()
-
-
-# # %%
-# df_export.printSchema()
-
-
-# # %%
-# # show the counts
-# df_export.groupBy("chromosome").count().orderBy("chromosome").show(25, False)
-
-
-# # %%
-# df_export = df_export.filter(col("chromosome") != 'MT')
-
-
-# # %%
-# # show the counts
-# df_export.groupBy("chromosome").count().orderBy("chromosome").show(25, False)
-
-
-# # %%
-# # write by chromosome
-# for chrom in range(1, 3):
-#     df_write = df_export.filter(col('chromosome') == chrom)
-#     # write out the tab delimited file
-#     print("chrom {} has size {}".format(chrom, df_write.count()))
-#     df_write.write.mode('overwrite').option("delimiter", "\t").csv(out_dir + "/" + str(chrom))
-
-
-# # %%
-# # write out by chrom
-# df_export.write.mode('overwrite').option("delimiter", "\t").partitionBy("chromosome").saveAsTable(out_dir)
-
-
-# # %%
-# # write out the tab delimited file
-# df_export.write.mode('overwrite').option("delimiter", "\t").csv(out_dir)
-
-
-# # %%
-
-# # example
-
-# #    by_phenotype.drop(['rank', 'top']) \
-# #         .orderBy(['phenotype', 'pValue']) \
-# #         .write \
-# #         .mode('overwrite') \
-# #         .json('%s/phenotype' % outdir)
 
