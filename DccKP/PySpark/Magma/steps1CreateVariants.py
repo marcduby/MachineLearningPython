@@ -5,16 +5,16 @@ from pyspark.sql.types import StructType, StructField, StringType, BooleanType, 
 from pyspark.sql.functions import col, struct, explode, when, lit, array_max, array, split, regexp_replace
 
 # EC2 development localhost directories
-# variant_srcdir = 's3://dig-analysis-data/out/varianteffect/common/part-*'
+# variant_srcdir = 's3://dig-analysis-data/out/varianteffect/snp/'
 # outdir = 's3:/dig-analysis-data/out/magma/step1'
 
 # development localhost directories
-# variant_srcdir = '/Users/mduby/Data/Broad/Magma/Snp/'
-# out_dir = '/Users/mduby/Data/Broad/Magma/Out/Step1'
+variant_srcdir = '/Users/mduby/Data/Broad/Magma/Snp/'
+out_dir = '/Users/mduby/Data/Broad/Magma/Out/Step1'
 
 # localhost development localhost directories
-variant_srcdir = '/home/javaprog/Data/Broad/Magma/Snp/'
-out_dir = '/home/javaprog/Data/Broad/Magma/Out/Step1'
+# variant_srcdir = '/home/javaprog/Data/Broad/Magma/Snp/'
+# out_dir = '/home/javaprog/Data/Broad/Magma/Out/Step1'
 
 # print
 print("the variant input directory is: {}".format(variant_srcdir))
@@ -79,6 +79,7 @@ df_export.groupBy("chromosome").count().orderBy("chromosome").show(25, False)
 
 # write out the tab delimited file
 df_export.coalesce(1).write.mode('overwrite').option("delimiter", "\t").csv(out_dir)
+print("wrote out {} record to file {}".format(df_export.count(), out_dir))
 
 # stop spark
 spark.stop()
