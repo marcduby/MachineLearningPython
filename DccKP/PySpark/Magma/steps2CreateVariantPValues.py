@@ -10,14 +10,14 @@ from pyspark.sql.functions import col, struct, explode, when, lit, array_max, ar
 # outdir = 's3:/dig-analysis-data/out/varianteffect/magma/step2'
 
 # development localhost directories
-variant_srcdir = '/Users/mduby/Data/Broad/Magma/Snp'
-pvalue_srcdir = '/Users/mduby/Data/Broad/Magma/Phenotype/'
-out_dir = '/Users/mduby/Data/Broad/Magma/Out/Step2'
+# variant_srcdir = '/Users/mduby/Data/Broad/Magma/Snp'
+# pvalue_srcdir = '/Users/mduby/Data/Broad/Magma/Phenotype/'
+# out_dir = '/Users/mduby/Data/Broad/Magma/Out/Step2'
 
 # localhost development localhost directories
-# variant_srcdir = '/home/javaprog/Data/Broad/Magma/Snp/'
-# pvalue_srcdir = '/home/javaprog/Data/Broad/Magma/Phenotype/'
-# out_dir = '/home/javaprog/Data/Broad/Magma/Out/Step2'
+variant_srcdir = '/home/javaprog/Data/Broad/Magma/Snp/'
+pvalue_srcdir = '/home/javaprog/Data/Broad/Magma/Phenotype/'
+out_dir = '/home/javaprog/Data/Broad/Magma/Out/Step2'
 
 # common variables
 phenotype = 'BMI'
@@ -61,7 +61,7 @@ df_variant_load.show()
 # join the two dataframes and add in rsIDs
 df_export = df_pvalue_load.join(df_variant_load, on='varId', how='inner')
 df_export = df_export.select('dbSNP', 'pValue', 'n').withColumnRenamed('n', 'subjects')
-df_export = df.export.withColumn("subjects", df_export["subjects"].cast(IntegerType()))
+df_export = df_export.withColumn("subjects", df_export["subjects"].cast(IntegerType()))
 print("the loaded variant joined data frame has {} rows".format(df_export.count()))
 df_export.show()
 
