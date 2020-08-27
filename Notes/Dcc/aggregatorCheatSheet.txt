@@ -1,0 +1,26 @@
+
+
+
+worker setup
+------------
+- make dir and copy to /mnt/var/$JOB_METHOD/
+  - aws s3 cp ..... <dest_dir>
+
+- for resouyrces specified in stage class; they will be copied on deploy to ${JOB_BUCKET}/resources/${JOB_METHOD} bucket
+  - aws s3 cp ${JOB_BUCKET}/resources/${JOB_METHOD}/fullBassetScript.py .
+
+  - override def additionalResources = Seq(
+        "fullBassetScript.py"
+    )
+
+
+how to run
+-----------
+- to test reprocess (no run due to no --yes)
+  - sbt> run -c ../config.json --reprocess --only basset --clusters 10
+  
+- to include/exclude outputs
+  - sbt> run -c ../config..json --reprocess -- stage BassetStage --only T2D* --exclude *BMI
+
+- to run in production, setting DRYRUN to true (basset only one stage, so fine)
+  - sbt> run -c ../config.json --test --yes

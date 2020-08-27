@@ -73,3 +73,18 @@ print("model.modules is of type {}".format(type(model.modules)))
   - copied running mean/var for BatchNorm2d and BatchNorm1d layers
 
 
+
+- from python engineer youtube
+- video 11
+  - for classification 
+    - using nn.CrossEntropyLoss() on multi class classifcation, output layer should be Linear  
+      - the CEL applies softmax within it
+    - for binary class classification, use sigmoid output layer and nn.BCELoss()
+- video 12
+  - use activation funcions to turn sequence of linear layers from linear regresion to more complicated non linear regressions
+    - so apply activation function after each layer
+    - sigmoid: outputs prob between 0/1, usually used in last layer of binary claszification problem
+    - relu: if don't know what to use for hidden layers, use relu; f(x) = max(0, x)
+    - leaky relu: like relu but goes negative at small rate .01; helps with managing vanishing gradient problem
+    - tanh: a scaled sigmoid function, -1 to 1; good for hidden layers
+    - softmax: squash the inputs to be outputs between 0/1; good choice in last layer of multi class classification

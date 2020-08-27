@@ -7,6 +7,7 @@ from torch import nn
 from sklearn.preprocessing import OneHotEncoder
 import csv
 import re
+import json
 
 print("have pytorch version {}".format(torch.__version__))
 print("have numpy version {}".format(np.__version__))
@@ -85,14 +86,12 @@ def get_one_hot_sequence_array(sequence_list):
 def get_variant_list(file):
     variants = []
     with open(file, 'r') as variant_file:
-        cvsreader = csv.reader(variant_file)
-
-        # skip the header
-        next(cvsreader)
 
         # read all the next rows
-        for row in cvsreader:
-            variants.append(row[0].rstrip().split('\t')[0])
+        for line in variant_file:
+            row = json.loads(line)
+            # print(row)
+            variants.append(row['varId'])
 
 
     # print the first 10 variants
@@ -501,7 +500,8 @@ if __name__ == '__main__':
     print()
 
     # read the variant file
-    variant_file = dir_data + 'Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv'
+    # variant_file = dir_data + 'Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv'
+    variant_file = dir_data + 'dig-analysis-data/out/varianteffect/common/part-00000-24063efa-89ff-412d-9134-8cd90f09380b-c000.json'
     variant_list = get_variant_list(variant_file)
     for index in range(1, 10):
         print("got variant: {}".format(variant_list[index]))
