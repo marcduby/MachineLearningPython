@@ -71,13 +71,19 @@ print("the score for the logistic regression model is {}\n".format(lr_score))
 
 # build the ensemble estimator
 estimators = [('knn', knn_best), ('rf', rf_best), ('lr', lr_best)]
-ensemble_max_voting = VotingClassifier(estimators, voting = 'soft')
-ensemble_max_voting.fit(X_train, y_train)
-ensemble_score = ensemble_max_voting.score(X_test, y_test)
-print("the score for the knn model is {}\n".format(knn_score))
-print("the score for the random forest model is {}\n".format(rf_score))
-print("the score for the logistic regression model is {}\n".format(lr_score))
-print("the score for the ensemble max voting model is {}\n".format(ensemble_score))
+ensemble_hard_voting = VotingClassifier(estimators, voting = 'hard')
+ensemble_hard_voting.fit(X_train, y_train)
+ensemble_hard_score = ensemble_hard_voting.score(X_test, y_test)
+ensemble_soft_voting = VotingClassifier(estimators, voting = 'soft')
+ensemble_soft_voting.fit(X_train, y_train)
+ensemble_soft_score = ensemble_soft_voting.score(X_test, y_test)
+
+# print the results
+print("the score for the knn model is {}".format(knn_score))
+print("the score for the random forest model is {}".format(rf_score))
+print("the score for the logistic regression model is {}".format(lr_score))
+print("the score for the ensemble hard voting model is {}".format(ensemble_hard_score))
+print("the score for the ensemble soft voting model is {}".format(ensemble_soft_score))
 
 
 
