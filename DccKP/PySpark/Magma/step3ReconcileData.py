@@ -30,15 +30,7 @@ ncbi_schema = StructType([
 # this is the schema written out by the frequency analysis processor
 gene_pvalue_schema = StructType(
     [
-        # StructField('gene', IntegerType(), nullable=False),
-        StructField('chromosome', StringType(), nullable=False),
-        # StructField('start', IntegerType(), nullable=False),
-        # StructField('stop', IntegerType(), nullable=False),
-        # StructField('nsnps', IntegerType(), nullable=False),
-        # StructField('nParam', IntegerType(), nullable=False),
-        # StructField('subjects', IntegerType(), nullable=False),
-        # StructField('zStat', DoubleType(), nullable=False),
-        # StructField('pValue', DoubleType(), nullable=False),
+        StructField('generic', StringType(), nullable=False),
     ]
 )
 
@@ -70,7 +62,7 @@ def load_gene_pvalues(input_dir, phenotype):
     df_load = spark.read.csv('%s/%s/genePValues.txt' % (input_dir, phenotype), schema=gene_pvalue_schema, header=True)
 
     # now split the columns
-    split_col = split(df_load.chromosome, '\\s+',)
+    split_col = split(df_load.generic, '\\s+',)
     df = df_load.withColumn("geneId", split_col.getItem(0))\
         .withColumn("nParam", split_col.getItem(5))\
         .withColumn("subjects", split_col.getItem(6))\
@@ -85,24 +77,23 @@ df_ncbi = load_ncbi_lookup(ncbi_srcdir)
 df_ncbi.show()
 
 # load the gene pvalue file
-# rdd_pValue = load_gene_pvalues(gene_pvalues_srcdir, 'BMI')
-# print("loaded rdd")
-# df_pValue = spark.createDataFrame(rdd).toDF(schema=gene_pvalue_schema)
-
-# load the gene pvalue file
 phenotype = 'BMI'
 df_pvalue = load_gene_pvalues(gene_pvalues_srcdir, phenotype)
 df_pvalue.show()
 
 # join the two dataframes and add in rsIDs
 df_export = df_pvalue.join(df_ncbi, on='geneId', how='inner')
-df_export = df_export.select('geneId', 'nParam', 'subjects', 'zStat', 'pValue', 'gene').withColumn('phenotype', lit(phenotype))
+df_export = df_export.select('gene', 'geneId', 'nParam', 'subjects', 'zStat', 'pValue')\
+    .withColumn('geneId', df_export['geneId'].cast(IntegerType()))\
+    .withColumn('phenotype', lit(phenotype))\
+    .withColumn('zStat', df_export['zStat'].cast(DoubleType()))\
+    .withColumn('subjects', df_export['subjects'].cast(IntegerType()))\
+    .withColumn('nParam', df_export['nParam'].cast(IntegerType()))\
+    .withColumn('pValue', df_export['pValue'].cast(DoubleType()))
 print("the loaded variant joined data frame has {} rows".format(df_export.count()))
 df_export.show()
 
 # write out the one tab delimited file
-# df_export.coalesce(1).write.mode('overwrite').option("delimiter", "\t").csv('%s/%s' % (out_dir, phenotype), header='true')
-# print("wrote out the loaded variant data frame to directory {}".format(out_dir))
 df_export \
         .orderBy(df_export.gene) \
         .write \
