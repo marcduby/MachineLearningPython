@@ -1,0 +1,112 @@
+
+
+
+
+
+20200903 - docker workshop
+- download and run date command
+  - docker run docker.io/busybox:latest date  (returns automatically because date exits)
+  - docker run --rm busybox date       (will automatically delete container after done) 
+  - docker run --rm -d --name dude http -p 80:80 busybox httpd -f -w 
+    (run web server with named container; http -p exposes port 80; http -f means freground runnnmg of http, -vv verbose looggin)
+    - docker stop --time 2 http 
+
+
+- start shell
+  - docker run -it busybox sh  (need th4e -it flag; causes terminal allocated and stdin kept open)
+    - ps (lists only processes started within the context of the container)
+    - docker ps   (lists the containers running)
+  - docker exec <id>  sh (reattach to running docker container and start shell)
+    - docker exec `dosker ps -ql` sh   (attach to last docker created)
+
+- list shut down dockers
+  - docker ps -a  (lists all dead containers)
+  - docker logs <id>
+    - docker logs `docker ps -ql`
+  - docker ps -aq     (just IDs of all docker containers)
+
+- remove stopped images  
+  - docker rm <id>
+    - docker rm $(docker ps -aq)    (deletes all stopped docker containers)
+
+- list images 
+  - docker images
+  - docker pull (pulls image down but no run)
+  - 
+
+- logging
+  - docker logs -f <name>    
+
+- build and modify containers
+  - docker cp goodbye <id or name>:/goodbye   (copy file goodbye to container)
+  - create image from exited container state and runs /hello script
+    - docker commit --changes=`CMD ["/hello"]` session greeting
+    - docker run greeting
+    - docker run greeting /goodbye
+  - list history of docker layer changes
+    - docker history <name>
+    - docker inspect <name>
+  - build container image from Dockerfile 
+    - docker build -t <namwe> .
+    - docker run <name> /<command>
+    - docker run --rm <name> /<command>
+  - run image and start interactive shell
+    - docker rin -it --rm <name> /bin/bash
+    
+
+
+
+
+[~/exercises/greeting-v1] $ cd ~/exercises/greeting-v2
+[~/exercises/greeting-v2] $ cat Dockerfile
+FROM fedora:30
+
+COPY hello goodbye /
+
+CMD [ "/hello" ]
+[~/exercises/greeting-v2] $ docker build -t greeting .
+Sending build context to Docker daemon  4.096kB
+Step 1/3 : FROM fedora:30
+30: Pulling from library/fedora
+401909e6e2aa: Pull complete 
+Digest: sha256:3a0c8c86d8ac2d1bbcfd08d40d3b757337f7916fb14f40efcb1d1137a4edef45
+Status: Downloaded newer image for fedora:30
+ ---> 177d5adf0c6c
+Step 2/3 : COPY hello goodbye /
+ ---> a121e98accc3
+Step 3/3 : CMD [ "/hello" ]
+ ---> Running in f021a97dc464
+Removing intermediate container f021a97dc464
+ ---> d5b656ecd7f0
+Successfully built d5b656ecd7f0
+Successfully tagged greeting:latest
+[~/exercises/greeting-v2] $ 
+
+
+
+
+
+
+[~/exercises] $ docker run --rm -d --name wazzup -p 80:80 busybox httpd -f -vv
+2942939e71f8e0c67a2f0b6114813aba5e8eea70a996939d50d3ca549c774d42
+docker: Error response from daemon: driver failed programming external connectivity on endpoint wazzup (d5fb26fa46583392ff5830c35172273fffd98e89e885903f12470aba5d53f352): Bind for 0.0.0.0:80 failed: port is already allocated.
+[~/exercises] $ docker run --rm -d --name wazzup -p 80:90 busybox httpd -f -vv
+4d963f184864214098358371249500877bf17743f9cc36e2d2d34176823ad01f
+docker: Error response from daemon: driver failed programming external connectivity on endpoint wazzup (bbcf2c0734ecdfc4e932852717483731f9ecb591c50c4ebb20665dc59196e859): Bind for 0.0.0.0:80 failed: port is already allocated.
+[~/exercises] $ docker run --rm -d --name wazzup -p 90:80 busybox httpd -f -vv
+2c3c6acb8be2945032f7acd681a5ccff0c15b4b57f3fa1288cbf193c29704251
+[~/exercises] $ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                NAMES
+2c3c6acb8be2        busybox             "httpd -f -vv"      4 seconds ago       Up 2 seconds        0.0.0.0:90->80/tcp   wazzup
+437e0985a7f5        busybox             "httpd -f -vv"      44 seconds ago      Up 43 seconds       0.0.0.0:80->80/tcp   httpd
+[~/exercises] $
+
+
+[~/exercises] $ 
+[~/exercises] $ docker logs -f httpd
+[::ffff:172.17.0.1]:45662: url:/
+[::ffff:172.17.0.1]:45662: response:404
+[::ffff:172.17.0.1]:45696: url:/
+
+
+

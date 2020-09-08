@@ -1,5 +1,23 @@
 
 
+architecture
+------------
+Method
+    Stages (serial)
+        Outputs/Job (parallel)
+            Steps (can be parallel, usually serial)
+
+create method 
+-------------
+- 
+
+
+emr tips
+--------
+- copy bootstrap lookup files to 
+  - WORK_DIR="/mnt/var/${JOB_METHOD}"
+
+
 
 worker setup
 ------------
@@ -20,7 +38,17 @@ how to run
   - sbt> run -c ../config.json --reprocess --only basset --clusters 10
   
 - to include/exclude outputs
-  - sbt> run -c ../config..json --reprocess -- stage BassetStage --only T2D* --exclude *BMI
+  - sbt> run -c ../config..json --reprocess --stage BassetStage --only T2D* --exclude *BMI
 
 - to run in production, setting DRYRUN to true (basset only one stage, so fine)
   - sbt> run -c ../config.json --test --yes
+
+
+troubleshooting
+---------------
+- pyspark errors
+  -> containers
+    -> applications
+      -> stdout
+
+
