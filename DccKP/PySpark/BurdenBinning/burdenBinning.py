@@ -1,32 +1,24 @@
-# To add a new cell, type '# %%'
-# To add a new markdown cell, type '# %% [markdown]'
-# %%
+# imports
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, StringType, BooleanType, DoubleType, IntegerType
 from pyspark.sql.functions import col, struct, explode, when, lit, array, udf
 
-
-# %%
 # load and output directory
 # vep_srcdir = 's3://dig-analysis-data/out/varianteffect/effects/part-*'
 # freq_srcdir = 's3://dig-analysis-data/out/frequencyanalysis/'
 # outdir = 's3://dig-bio-index/burden/variantgene'
 
 # development localhost directories
-vep_srcdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/20200330/test*'
-freq_srcdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/JsonFrequency'
-outdir = '/Users/mduby/Data/Broad/Aggregator/BurdenBinning/20200330/Out14'
+vep_srcdir = '/home/javaprog/Data/Broad/dig-analysis/out/varianteffect/effects/part-*'
+freq_srcdir = '/home/javaprog/Data/Broad/out/frequencyanalysis/'
+outdir = '/Users/mduby/Data/Broad/dig-analysis/out/burdenbinning/result'
 
 # print
 # print("the input directory is: {}".format(vep_srcdir))
 
-
-# %%
 # open spark session
 spark = SparkSession.builder.appName('bioindex').getOrCreate()
 
-
-# %%
 # constants for filters
 # there are 3 levels of filters (lof, impact + maf, and combined predictions)
 # the 7 bins will combine variantions of these three OR conditions
@@ -91,8 +83,6 @@ filter_vest3_rankscore_col = col("vest3_rankscore")
 filter_cadd_raw_rankscore_col = col("cadd_raw_rankscore")
 filter_metasvm_pred_col = col("metasvm_pred")
 
-
-# %%
 # variables for filters conditions
 condition_lof_hc = filter_lof_col == 'HC'
 condition_impact_moderate = (filter_impact_col == 'MODERATE') & (maf_col < 0.01)
