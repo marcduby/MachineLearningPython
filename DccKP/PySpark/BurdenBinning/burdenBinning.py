@@ -9,15 +9,15 @@ from pyspark.sql.functions import col, struct, explode, when, lit, array, udf
 # outdir = 's3://dig-bio-index/burden/variantgene'
 
 # development localhost directories
-vep_srcdir = '/home/javaprog/Data/Broad/dig-analysis/out/varianteffect/effects/part-*'
-freq_srcdir = '/home/javaprog/Data/Broad/out/frequencyanalysis/'
-outdir = '/Users/mduby/Data/Broad/dig-analysis/out/burdenbinning/result'
+vep_srcdir = '/home/javaprog/Data/Broad/dig-analysis-data/out/varianteffect/effects/part-*'
+freq_srcdir = '/home/javaprog/Data/Broad/dig-analysis-data/out/frequencyanalysis/'
+outdir = '/home/javaprog/Data/Broad/dig-analysis-data/out/burdenbinning/results'
 
 # print
 # print("the input directory is: {}".format(vep_srcdir))
 
 # open spark session
-spark = SparkSession.builder.appName('bioindex').getOrCreate()
+spark = SparkSession.builder.appName('burdenbinning').getOrCreate()
 
 # constants for filters
 # there are 3 levels of filters (lof, impact + maf, and combined predictions)
@@ -185,8 +185,6 @@ dataframe_freq = dataframe_freq.withColumn('maf', max_array_udf('frequency')).se
 print("the loaded frequency data frame has {} rows".format(dataframe_freq.count()))
 dataframe_freq.show()
 
-
-# %%
 # load the transcript json data
 vep = spark.read.json(vep_srcdir)
 
@@ -194,8 +192,6 @@ vep = spark.read.json(vep_srcdir)
 # print("the loaded vep data count is: {}".format(vep.count()))
 # format(vep.show())
 
-
-# %%
 # create new data frame with only var id
 transcript_consequences = vep.select(vep.id, vep.transcript_consequences)     .withColumn('cqs', explode(col('transcript_consequences')))     .select(
         col('id').alias('varId'),
@@ -222,46 +218,31 @@ transcript_consequences = vep.select(vep.id, vep.transcript_consequences)     .w
 
 
 # print
-# print("the filtered test data count is: {}".format(transcript_consequences.count()))
-# transcript_consequences.show()
+print("the filtered test data count is: {}".format(transcript_consequences.count()))
+transcript_consequences.show()
 
 # join the transcripts dataframe with the maf dataframe
 transcript_consequences = transcript_consequences.join(dataframe_freq, var_id, how='left')
+print("the filtered transcript with frequency data count is: {}".format(transcript_consequences.count()))
+transcript_consequences.show()
 
-# print
-# print("the filtered transcript with frequency data count is: {}".format(transcript_consequences.count()))
-# transcript_consequences.show()
-
-# %%
 # get the lof level 1 data frame
 dataframe_lof = transcript_consequences.filter(condition_lof_hc).select(var_id_col, gene_ensemble_id_col)
+print("the lof data frame count is: {}".format(dataframe_lof.count()))
+dataframe_lof.show()
 
-# print
-# print("the lof data frame count is: {}".format(dataframe_lof.count()))
-# dataframe_lof.show()
-
-
-# %%
 # get the level 3 dataframe
 dataframe_impact_moderate = transcript_consequences.filter(condition_impact_moderate).select(var_id_col, gene_ensemble_id_col)
 dataframe_impact_high = transcript_consequences.filter(condition_impact_high).select(var_id_col, gene_ensemble_id_col)
+print("the moderate impact dataframe is {}".format(dataframe_impact_moderate.count()))
+print("the high impact dataframe is {}".format(dataframe_impact_high.count()))
 
-# print
-# print("the moderate impact dataframe is {}".format(dataframe_impact_moderate.count()))
-# print("the high impact dataframe is {}".format(dataframe_impact_high.count()))
-
-
-# %%
 # BIN 1 of 7
 # create the final_1 df, just lof = HC
 final_bin1_data_frame = dataframe_lof.withColumn(burden_bin_id, lit('bin1_7'))
-
-# print
-# print("the final bin 1 dataframe is: {}".format(final_bin1_data_frame.count()))
+print("the final bin 1 dataframe is: {}".format(final_bin1_data_frame.count()))
 # final_bin1_data_frame.show()
 
-
-# %%
 # BIN 7 of 7
 # get the initial level 2 dataframe
 dataframe_level2 = transcript_consequences.filter(condition_level2_bin7).select(var_id_col, gene_ensemble_id_col)
@@ -269,13 +250,9 @@ dataframe_level2 = transcript_consequences.filter(condition_level2_bin7).select(
 # create the final_7 df, lof = HC, impact moderate, add in level 2 filters
 final_bin7_data_frame = dataframe_lof.union(dataframe_impact_moderate).union(dataframe_level2).distinct()
 final_bin7_data_frame = final_bin7_data_frame.withColumn(burden_bin_id, lit('bin7_7'))
-
-# print
-# print("the final bin 7 dataframe is: {}".format(final_bin7_data_frame.count()))
+print("the final bin 7 dataframe is: {}".format(final_bin7_data_frame.count()))
 # final_bin7_data_frame.show()
 
-
-# %%
 # BIN 6 of 7
 # get the exclusion level 2 data frame
 dataframe_level2_exclusion = transcript_consequences.filter(~condition_level2_inclusion_bin5).select(var_id_col, gene_ensemble_id_col)
@@ -284,13 +261,9 @@ dataframe_level2_inclusion = transcript_consequences.filter(condition_level2_inc
 # create the final_6 df, lof = HC, impact moderate, add in level 2 filters
 final_bin6_data_frame = dataframe_level2_exclusion.union(dataframe_level2_inclusion)     .union(dataframe_lof).union(dataframe_impact_moderate)     .union(dataframe_level2_inclusion)     .distinct()
 final_bin6_data_frame = final_bin6_data_frame.withColumn(burden_bin_id, lit('bin6_7'))
-
-# print
-# print("the final bin 6 dataframe is: {}".format(final_bin6_data_frame.count()))
+print("the final bin 6 dataframe is: {}".format(final_bin6_data_frame.count()))
 # final_bin6_data_frame.show()
 
-
-# %%
 # BIN 5 of 7
 # already have the inclusion level 2 data frame 
 dataframe_level2_inclusion_bin5 = transcript_consequences.filter(condition_level2_inclusion_bin5).select(var_id_col, gene_ensemble_id_col)
@@ -298,26 +271,18 @@ dataframe_level2_inclusion_bin5 = transcript_consequences.filter(condition_level
 # create the final_5 df, lof = HC, impact moderate, add in level 2 filters
 final_bin5_data_frame = dataframe_lof.union(dataframe_level2_inclusion_bin5).union(dataframe_impact_high).distinct()
 final_bin5_data_frame = final_bin5_data_frame.withColumn(burden_bin_id, lit('bin5_7'))
-
-# print
-# print("the final bin 5 dataframe is: {}".format(final_bin5_data_frame.count()))
+print("the final bin 5 dataframe is: {}".format(final_bin5_data_frame.count()))
 # final_bin5_data_frame.show()
 
-
-# %%
 # BIN 4 of 7
 # already have the inclusion level 2 data frame (exclusion from the previous bin 6 of 7)
 
 # create the final_4 df, lof = HC, impact moderate, add in level 2 filters
 final_bin4_data_frame = dataframe_lof.union(dataframe_level2_inclusion_bin5).distinct()
 final_bin4_data_frame = final_bin4_data_frame.withColumn(burden_bin_id, lit('bin4_7'))
-
-# print
-# print("the final bin 4 dataframe is: {}".format(final_bin4_data_frame.count()))
+print("the final bin 4 dataframe is: {}".format(final_bin4_data_frame.count()))
 # final_bin4_data_frame.show()
 
-
-# %%
 # BIN 3 of 7
 # bin consists of bin4 level 2 filter with some added on filters
 dataframe_bin3_level2_inclusion = transcript_consequences.filter(condition_level2_inclusion_bin3).select(var_id_col, gene_ensemble_id_col)
@@ -325,11 +290,8 @@ dataframe_bin3_level2_inclusion = transcript_consequences.filter(condition_level
 # create the final_3 df, lof = HC, add in level 2 filters
 final_bin3_data_frame = dataframe_lof.union(dataframe_bin3_level2_inclusion).distinct()
 final_bin3_data_frame = final_bin3_data_frame.withColumn(burden_bin_id, lit('bin3_7'))
-
-# print
-# print("the final bin 3 dataframe is: {}".format(final_bin3_data_frame.count()))
+print("the final bin 3 dataframe is: {}".format(final_bin3_data_frame.count()))
 # final_bin7_data_frame.show()
-
 
 # BIN 2 of 7
 # bin consists of bin3 level 2 filter with some more added on filters
@@ -338,13 +300,9 @@ dataframe_bin2_level2_inclusion = transcript_consequences.filter(condition_level
 # create the final_2 df, lof = HC, add in level 2 filters
 final_bin2_data_frame = dataframe_lof.union(dataframe_bin2_level2_inclusion).distinct()
 final_bin2_data_frame = final_bin2_data_frame.withColumn(burden_bin_id, lit('bin2_7'))
-
-# print
-# print("the final bin 3 dataframe is: {}".format(final_bin3_data_frame.count()))
+print("the final bin 2 dataframe is: {}".format(final_bin3_data_frame.count()))
 # final_bin2_data_frame.show()
 
-
-# %%
 # combine all the bins into one dataframe
 output_data_frame = final_bin1_data_frame \
         .union(final_bin2_data_frame) \
@@ -357,18 +315,12 @@ output_data_frame = final_bin1_data_frame \
     # .orderBy(var_id, gene_ensemble_id, burden_bin_id)
 
 # print
-# print("the final agregated bin dataframe is: {}".format(output_data_frame.count()))
+print("the final agregated bin dataframe is: {}".format(output_data_frame.count()))
 
-
-# %%
 # only select the relevant columns
 output_data_frame = output_data_frame.select(col(var_id), col(gene_ensemble_id), col(burden_bin_id))
+print("the final agregated bin with selected columns dataframe is: {}".format(output_data_frame.count()))
 
-# print
-# print("the final agregated bin with selected columns dataframe is: {}".format(output_data_frame.count()))
-
-
-# %%
 # save out the output data frame to file
 output_data_frame \
         .orderBy(gene_ensemble_id_col, burden_bin_id_col) \
@@ -377,31 +329,8 @@ output_data_frame \
         .json('%s' % outdir)
 
 # print
-# print("Printed out {} records to bioindex".format(output_data_frame.count()))
+print("Printed out {} records to {}".format(output_data_frame.count(), outdir))
 
-
-# %%
 # done
-spark.stop()
-
-
-# %%
-# filter_polyphen2_hdiv_pred = "polyphen2_hdiv_pred"
-# filter_polyphen2_hvar_pred = "polyphen2_hvar_pred"
-# filter_sift_red = "sift_pred"
-# filter_mutationtaster_pred = "mutationtaster_pred"
-# filter_lrt_pred = "lrt_pred"
-# filter_metalr_pred = "metalr_pred"
-# filter_provean_pred = "provean_pred"
-# filter_fathmm_pred = "fathmm_pred"
-# filter_fathmm_mkl_coding_pred = "fathmm_mkl_coding_pred"
-# filter_eigen_pc_raw_rankscore = "eigen_pc_raw_rankscore"
-# filter_dann_rankscore = "dann_rankscore"
-# filter_vest3_rankscore = "vest3_rankscore"
-# filter_cadd_raw_rankscore = "cadd_raw_rankscore"
-# filter_metasvm_pred = "metasvm_pred"
-
-# aliases w/o -
-# filter_fathmm_mkl_coding_pred_alias = "fathmm_mkl_coding_pred"
-# filter_eigen_pc_raw_rankscore_alias = "eigen_pc-raw_rankscore"
+# spark.stop()
 
