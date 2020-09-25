@@ -1,175 +1,376 @@
-[{
-    "input": "10\t100160008\t100160008\tC/T\t+\t10:100160008:C:T",
-    "assembly_name": "GRCh37",
-    "end": 100160008,
-    "seq_region_name": "10",
-    "nearest": [
-        "PYROXD2"
-    ],
-    "transcript_consequences": [
-        {
-            "vest3_rankscore": 0.89367,
-            "siphy_29way_pi": "0.0:1.0:0.0:0.0",
-            "provean_converted_rankscore": 0.9541,
-            "provean_score": -7.63,
-            "lrt_omega": 0,
-            "phylop100way_vertebrate": 7.303,
-            "sift_converted_rankscore": 0.72092,
-            "polyphen2_hdiv_pred": "D",
-            "metasvm_pred": "D",
-            "protein_end": 108,
-            "hgnc_id": 23517,
-            "mutationassessor_variant": "G108R",
-            "dann_score": 0.999337316727409,
-            "cds_start": 322,
-            "polyphen_prediction": "probably_damaging",
-            "phastcons100way_vertebrate": 1,
-            "metasvm_rankscore": 0.85711,
-            "gerp++_nr": 5.4,
-            "transcript_var_vest3": "G108R",
-            "phastcons20way_mammalian_rankscore": 0.60354,
-            "phylop20way_mammalian": 0.935,
-            "fathmm_converted_rankscore": 0.61701,
-            "mutationassessor_score": 3.565,
-            "phastcons20way_mammalian": 0.995,
-            "mutationassessor_pred": "H",
-            "integrated_fitcons_score_rankscore": 0.37169,
-            "integrated_confidence_value": 0,
-            "genocanyon_score": 0.999999999226993,
-            "polyphen2_hvar_pred": "D",
-            "transcript_id_vest3": "NM_032709.2",
-            "phylop20way_mammalian_rankscore": 0.48983,
-            "eigen-phred": 10.24018,
-            "lrt_score": 0,
-            "gm12878_confidence_value": 0,
-            "fathmm-mkl_coding_rankscore": 0.87042,
-            "strand": -1,
-            "gene_symbol": "PYROXD2",
-            "cadd_phred": 30,
-            "siphy_29way_logodds": 17.9565,
-            "transcript_id": "ENST00000370575",
-            "gene_id": "ENSG00000119943",
-            "metasvm_score": 0.1879,
-            "polyphen2_hdiv_rankscore": 0.89865,
-            "mutationassessor_uniprotid": "PYRD2_HUMAN",
-            "biotype": "protein_coding",
-            "domains": [
-                {
-                    "db": "hmmpanther",
-                    "name": "PTHR10668"
-                },
-                {
-                    "db": "hmmpanther",
-                    "name": "PTHR10668"
-                },
-                {
-                    "db": "Gene3D",
-                    "name": 3
-                },
-                {
-                    "db": "Superfamily_domains",
-                    "name": "SSF51905"
-                }
-            ],
-            "consequence_terms": [
-                "missense_variant"
-            ],
-            "metalr_rankscore": 0.81442,
-            "ccds": "CCDS7474.1",
-            "fathmm-mkl_coding_score": 0.98809,
-            "eigen-pc-raw_rankscore": 0.87988,
-            "mutationtaster_converted_rankscore": 0.81033,
-            "mutationtaster_model": "simple_aae",
-            "huvec_fitcons_score": 0.655142,
-            "variant_allele": "T",
-            "cadd_raw_rankscore": 0.89289,
-            "h1-hesc_fitcons_score": 0.658983,
-            "polyphen_score": 0.999,
-            "genocanyon_score_rankscore": 0.74713,
-            "polyphen2_hvar_rankscore": 0.91584,
-            "cdna_end": 371,
-            "amino_acids": "G/R",
-            "gerp++_rs_rankscore": 0.77872,
-            "cdna_start": 371,
-            "provean_pred": "D",
-            "interpro_domain": "FAD/NAD(P)-binding domain",
-            "siphy_29way_logodds_rankscore": 0.8894,
-            "huvec_confidence_value": 0,
-            "reliability_index": 10,
-            "pick": 1,
-            "protein_start": 108,
-            "eigen-pc-raw": 0.778994071343286,
-            "lrt_pred": "D",
-            "sift_pred": "D",
-            "h1-hesc_fitcons_score_rankscore": 0.55576,
-            "fathmm_pred": "T",
-            "mutationtaster_score": 1,
-            "impact": "MODERATE",
-            "cadd_raw": 6.474901,
-            "metalr_pred": "D",
-            "fathmm-mkl_coding_group": "AEFBI",
-            "mutationtaster_aae": "G108R",
-            "mutationtaster_pred": "D",
-            "vest3_score": 0.904,
-            "codons": "Ggg/Agg",
-            "fathmm-mkl_coding_pred": "D",
-            "eigen-raw": 0.867318936793821,
-            "huvec_fitcons_score_rankscore": 0.61628,
-            "dann_rankscore": 0.99483,
-            "metalr_score": 0.5068,
-            "integrated_fitcons_score": 0.615465,
-            "polyphen2_hdiv_score": 1,
-            "sift_prediction": "deleterious",
-            "phastcons100way_vertebrate_rankscore": 0.71511,
-            "gerp++_rs": 5.4,
-            "gm12878_fitcons_score_rankscore": 0.40457,
-            "gene_symbol_source": "HGNC",
-            "sift_score": 0,
-            "cds_end": 322,
-            "mutationassessor_score_rankscore": 0.93557,
-            "gm12878_fitcons_score": 0.588066,
-            "fathmm_score": 0.07,
-            "lrt_converted_rankscore": 0.84324,
-            "phylop100way_vertebrate_rankscore": 0.78026,
-            "h1-hesc_confidence_value": 0,
-            "polyphen2_hvar_score": 0.999
-        },
-        {
-            "gene_id": "ENSG00000221419",
-            "variant_allele": "T",
-            "distance": 4944,
-            "biotype": "miRNA",
-            "gene_symbol_source": "HGNC",
-            "consequence_terms": [
-                "upstream_gene_variant"
-            ],
-            "hgnc_id": 35280,
-            "strand": -1,
-            "gene_symbol": "MIR1287",
-            "transcript_id": "ENST00000408492",
-            "impact": "MODIFIER"
-        },
-        {
-            "gene_id": "ENSG00000119943",
-            "variant_allele": "T",
-            "cdna_end": 1224,
-            "biotype": "processed_transcript",
-            "gene_symbol_source": "HGNC",
-            "consequence_terms": [
-                "non_coding_transcript_exon_variant"
-            ],
-            "hgnc_id": 23517,
-            "strand": -1,
-            "gene_symbol": "PYROXD2",
-            "transcript_id": "ENST00000483923",
-            "cdna_start": 1224,
-            "impact": "MODIFIER"
-        }
-    ],
-    "strand": 1,
-    "id": "10: 100160008:C:T",
-    "most_severe_consequence": "missense_variant",
-    "allele_string": "C/T",
-    "start": 100160008
-},
-{"input":"10\t11791527\t11791527\tT/TA\t+\t10:11791527:T:TA","assembly_name":"GRCh37","end":11791527,"seq_region_name":"10","nearest":["ECHDC3"],"transcript_consequences":[{"lof":"HC","variant_allele":"TA","cdna_end":537,"lof_info":"POSITION:0.357456140350877","codons":"tTa/tTAa","lof_filter":"","protein_end":109,"amino_acids":"L/LX","hgnc_id":23489,"strand":1,"lof_flags":"","gene_symbol":"ECHDC3","transcript_id":"ENST00000379215","cdna_start":537,"gene_id":"ENSG00000134463","cds_start":326,"pick":1,"protein_start":109,"biotype":"protein_coding","gene_symbol_source":"HGNC","cds_end":326,"domains":[{"db":"hmmpanther","name":"PTHR11941"},{"db":"hmmpanther","name":"PTHR11941"},{"db":"Pfam_domain","name":"PF00378"},{"db":"Gene3D","name":3},{"db":"Superfamily_domains","name":"SSF52096"}],"consequence_terms":["frameshift_variant"],"ccds":"CCDS7084.1","impact":"HIGH"},{"lof":"HC","variant_allele":"TA","cdna_end":616,"lof_info":"POSITION:0.670816044260028","codons":"tTa/tTAa","lof_filter":"","protein_end":162,"amino_acids":"L/LX","hgnc_id":23489,"strand":1,"lof_flags":"","gene_symbol":"ECHDC3","transcript_id":"ENST00000420401","cdna_start":616,"gene_id":"ENSG00000134463","cds_start":485,"flags":["cds_end_NF"],"protein_start":162,"biotype":"protein_coding","gene_symbol_source":"HGNC","cds_end":485,"domains":[{"db":"Gene3D","name":3},{"db":"Pfam_domain","name":"PF00378"},{"db":"hmmpanther","name":"PTHR11941"},{"db":"hmmpanther","name":"PTHR11941"},{"db":"Superfamily_domains","name":"SSF52096"}],"consequence_terms":["frameshift_variant"],"impact":"HIGH"},{"lof":"HC","variant_allele":"TA","cdna_end":230,"lof_info":"POSITION:0.214","codons":"tTa/tTAa","lof_filter":"","protein_end":36,"amino_acids":"L/LX","hgnc_id":23489,"strand":1,"lof_flags":"","gene_symbol":"ECHDC3","transcript_id":"ENST00000422887","cdna_start":230,"gene_id":"ENSG00000134463","cds_start":107,"flags":["cds_end_NF"],"protein_start":36,"biotype":"protein_coding","gene_symbol_source":"HGNC","cds_end":107,"domains":[{"db":"hmmpanther","name":"PTHR11941"},{"db":"hmmpanther","name":"PTHR11941"},{"db":"Pfam_domain","name":"PF00378"},{"db":"Gene3D","name":3},{"db":"Superfamily_domains","name":"SSF52096"}],"consequence_terms":["frameshift_variant"],"impact":"HIGH"},{"gene_id":"ENSG00000134463","variant_allele":"TA","cdna_end":55,"biotype":"processed_transcript","gene_symbol_source":"HGNC","consequence_terms":["non_coding_transcript_exon_variant"],"hgnc_id":23489,"strand":1,"gene_symbol":"ECHDC3","transcript_id":"ENST00000495787","cdna_start":55,"impact":"MODIFIER"},{"gene_id":"ENSG00000134463","variant_allele":"TA","cdna_end":537,"biotype":"processed_transcript","gene_symbol_source":"HGNC","consequence_terms":["non_coding_transcript_exon_variant"],"hgnc_id":23489,"strand":1,"gene_symbol":"ECHDC3","transcript_id":"ENST00000496136","cdna_start":537,"impact":"MODIFIER"}],"strand":1,"id":"10:11791527:T:TA","most_severe_consequence":"frameshift_variant","allele_string":"T/TA","start":11791527}]
+[
+    {
+        "input": "10\t100160008\t100160008\tC/T\t+\t10:100160008:C:T",
+        "assembly_name": "GRCh37",
+        "end": 100160008,
+        "seq_region_name": "10",
+        "nearest": [
+            "PYROXD2"
+        ],
+        "transcript_consequences": [
+            {
+                "vest3_rankscore": 0.89367,
+                "siphy_29way_pi": "0.0:1.0:0.0:0.0",
+                "provean_converted_rankscore": 0.9541,
+                "provean_score": -7.63,
+                "lrt_omega": 0,
+                "phylop100way_vertebrate": 7.303,
+                "sift_converted_rankscore": 0.72092,
+                "polyphen2_hdiv_pred": "D",
+                "metasvm_pred": "D",
+                "protein_end": 108,
+                "hgnc_id": 23517,
+                "mutationassessor_variant": "G108R",
+                "dann_score": 0.999337316727409,
+                "cds_start": 322,
+                "polyphen_prediction": "probably_damaging",
+                "phastcons100way_vertebrate": 1,
+                "metasvm_rankscore": 0.85711,
+                "gerp++_nr": 5.4,
+                "transcript_var_vest3": "G108R",
+                "phastcons20way_mammalian_rankscore": 0.60354,
+                "phylop20way_mammalian": 0.935,
+                "fathmm_converted_rankscore": 0.61701,
+                "mutationassessor_score": 3.565,
+                "phastcons20way_mammalian": 0.995,
+                "mutationassessor_pred": "H",
+                "integrated_fitcons_score_rankscore": 0.37169,
+                "integrated_confidence_value": 0,
+                "genocanyon_score": 0.999999999226993,
+                "polyphen2_hvar_pred": "D",
+                "transcript_id_vest3": "NM_032709.2",
+                "phylop20way_mammalian_rankscore": 0.48983,
+                "eigen-phred": 10.24018,
+                "lrt_score": 0,
+                "gm12878_confidence_value": 0,
+                "fathmm-mkl_coding_rankscore": 0.87042,
+                "strand": -1,
+                "gene_symbol": "PYROXD2",
+                "cadd_phred": 30,
+                "siphy_29way_logodds": 17.9565,
+                "transcript_id": "ENST00000370575",
+                "gene_id": "ENSG00000119943",
+                "metasvm_score": 0.1879,
+                "polyphen2_hdiv_rankscore": 0.89865,
+                "mutationassessor_uniprotid": "PYRD2_HUMAN",
+                "biotype": "protein_coding",
+                "domains": [
+                    {
+                        "db": "hmmpanther",
+                        "name": "PTHR10668"
+                    },
+                    {
+                        "db": "hmmpanther",
+                        "name": "PTHR10668"
+                    },
+                    {
+                        "db": "Gene3D",
+                        "name": 3
+                    },
+                    {
+                        "db": "Superfamily_domains",
+                        "name": "SSF51905"
+                    }
+                ],
+                "consequence_terms": [
+                    "missense_variant"
+                ],
+                "metalr_rankscore": 0.81442,
+                "ccds": "CCDS7474.1",
+                "fathmm-mkl_coding_score": 0.98809,
+                "eigen-pc-raw_rankscore": 0.87988,
+                "mutationtaster_converted_rankscore": 0.81033,
+                "mutationtaster_model": "simple_aae",
+                "huvec_fitcons_score": 0.655142,
+                "variant_allele": "T",
+                "cadd_raw_rankscore": 0.89289,
+                "h1-hesc_fitcons_score": 0.658983,
+                "polyphen_score": 0.999,
+                "genocanyon_score_rankscore": 0.74713,
+                "polyphen2_hvar_rankscore": 0.91584,
+                "cdna_end": 371,
+                "amino_acids": "G/R",
+                "gerp++_rs_rankscore": 0.77872,
+                "cdna_start": 371,
+                "provean_pred": "D",
+                "interpro_domain": "FAD/NAD(P)-binding domain",
+                "siphy_29way_logodds_rankscore": 0.8894,
+                "huvec_confidence_value": 0,
+                "reliability_index": 10,
+                "pick": 1,
+                "protein_start": 108,
+                "eigen-pc-raw": 0.778994071343286,
+                "lrt_pred": "D",
+                "sift_pred": "D",
+                "h1-hesc_fitcons_score_rankscore": 0.55576,
+                "fathmm_pred": "T",
+                "mutationtaster_score": 1,
+                "impact": "MODERATE",
+                "cadd_raw": 6.474901,
+                "metalr_pred": "D",
+                "fathmm-mkl_coding_group": "AEFBI",
+                "mutationtaster_aae": "G108R",
+                "mutationtaster_pred": "D",
+                "vest3_score": 0.904,
+                "codons": "Ggg/Agg",
+                "fathmm-mkl_coding_pred": "D",
+                "eigen-raw": 0.867318936793821,
+                "huvec_fitcons_score_rankscore": 0.61628,
+                "dann_rankscore": 0.99483,
+                "metalr_score": 0.5068,
+                "integrated_fitcons_score": 0.615465,
+                "polyphen2_hdiv_score": 1,
+                "sift_prediction": "deleterious",
+                "phastcons100way_vertebrate_rankscore": 0.71511,
+                "gerp++_rs": 5.4,
+                "gm12878_fitcons_score_rankscore": 0.40457,
+                "gene_symbol_source": "HGNC",
+                "sift_score": 0,
+                "cds_end": 322,
+                "mutationassessor_score_rankscore": 0.93557,
+                "gm12878_fitcons_score": 0.588066,
+                "fathmm_score": 0.07,
+                "lrt_converted_rankscore": 0.84324,
+                "phylop100way_vertebrate_rankscore": 0.78026,
+                "h1-hesc_confidence_value": 0,
+                "polyphen2_hvar_score": 0.999
+            },
+            {
+                "gene_id": "ENSG00000221419",
+                "variant_allele": "T",
+                "distance": 4944,
+                "biotype": "miRNA",
+                "gene_symbol_source": "HGNC",
+                "consequence_terms": [
+                    "upstream_gene_variant"
+                ],
+                "hgnc_id": 35280,
+                "strand": -1,
+                "gene_symbol": "MIR1287",
+                "transcript_id": "ENST00000408492",
+                "impact": "MODIFIER"
+            },
+            {
+                "gene_id": "ENSG00000119943",
+                "variant_allele": "T",
+                "cdna_end": 1224,
+                "biotype": "processed_transcript",
+                "gene_symbol_source": "HGNC",
+                "consequence_terms": [
+                    "non_coding_transcript_exon_variant"
+                ],
+                "hgnc_id": 23517,
+                "strand": -1,
+                "gene_symbol": "PYROXD2",
+                "transcript_id": "ENST00000483923",
+                "cdna_start": 1224,
+                "impact": "MODIFIER"
+            }
+        ],
+        "strand": 1,
+        "id": "10:100160008:C:T",
+        "most_severe_consequence": "missense_variant",
+        "allele_string": "C/T",
+        "start": 100160008
+    },
+    {
+        "input": "10\t11791527\t11791527\tT/TA\t+\t10:11791527:T:TA",
+        "assembly_name": "GRCh37",
+        "end": 11791527,
+        "seq_region_name": "10",
+        "nearest": [
+            "ECHDC3"
+        ],
+        "transcript_consequences": [
+            {
+                "lof": "HC",
+                "variant_allele": "TA",
+                "cdna_end": 537,
+                "lof_info": "POSITION:0.357456140350877",
+                "codons": "tTa/tTAa",
+                "lof_filter": "",
+                "protein_end": 109,
+                "amino_acids": "L/LX",
+                "hgnc_id": 23489,
+                "strand": 1,
+                "lof_flags": "",
+                "gene_symbol": "ECHDC3",
+                "transcript_id": "ENST00000379215",
+                "cdna_start": 537,
+                "gene_id": "ENSG00000134463",
+                "cds_start": 326,
+                "pick": 1,
+                "protein_start": 109,
+                "biotype": "protein_coding",
+                "gene_symbol_source": "HGNC",
+                "cds_end": 326,
+                "domains": [
+                    {
+                        "db": "hmmpanther",
+                        "name": "PTHR11941"
+                    },
+                    {
+                        "db": "hmmpanther",
+                        "name": "PTHR11941"
+                    },
+                    {
+                        "db": "Pfam_domain",
+                        "name": "PF00378"
+                    },
+                    {
+                        "db": "Gene3D",
+                        "name": 3
+                    },
+                    {
+                        "db": "Superfamily_domains",
+                        "name": "SSF52096"
+                    }
+                ],
+                "consequence_terms": [
+                    "frameshift_variant"
+                ],
+                "ccds": "CCDS7084.1",
+                "impact": "HIGH"
+            },
+            {
+                "lof": "HC",
+                "variant_allele": "TA",
+                "cdna_end": 616,
+                "lof_info": "POSITION:0.670816044260028",
+                "codons": "tTa/tTAa",
+                "lof_filter": "",
+                "protein_end": 162,
+                "amino_acids": "L/LX",
+                "hgnc_id": 23489,
+                "strand": 1,
+                "lof_flags": "",
+                "gene_symbol": "ECHDC3",
+                "transcript_id": "ENST00000420401",
+                "cdna_start": 616,
+                "gene_id": "ENSG00000134463",
+                "cds_start": 485,
+                "flags": [
+                    "cds_end_NF"
+                ],
+                "protein_start": 162,
+                "biotype": "protein_coding",
+                "gene_symbol_source": "HGNC",
+                "cds_end": 485,
+                "domains": [
+                    {
+                        "db": "Gene3D",
+                        "name": 3
+                    },
+                    {
+                        "db": "Pfam_domain",
+                        "name": "PF00378"
+                    },
+                    {
+                        "db": "hmmpanther",
+                        "name": "PTHR11941"
+                    },
+                    {
+                        "db": "hmmpanther",
+                        "name": "PTHR11941"
+                    },
+                    {
+                        "db": "Superfamily_domains",
+                        "name": "SSF52096"
+                    }
+                ],
+                "consequence_terms": [
+                    "frameshift_variant"
+                ],
+                "impact": "HIGH"
+            },
+            {
+                "lof": "HC",
+                "variant_allele": "TA",
+                "cdna_end": 230,
+                "lof_info": "POSITION:0.214",
+                "codons": "tTa/tTAa",
+                "lof_filter": "",
+                "protein_end": 36,
+                "amino_acids": "L/LX",
+                "hgnc_id": 23489,
+                "strand": 1,
+                "lof_flags": "",
+                "gene_symbol": "ECHDC3",
+                "transcript_id": "ENST00000422887",
+                "cdna_start": 230,
+                "gene_id": "ENSG00000134463",
+                "cds_start": 107,
+                "flags": [
+                    "cds_end_NF"
+                ],
+                "protein_start": 36,
+                "biotype": "protein_coding",
+                "gene_symbol_source": "HGNC",
+                "cds_end": 107,
+                "domains": [
+                    {
+                        "db": "hmmpanther",
+                        "name": "PTHR11941"
+                    },
+                    {
+                        "db": "hmmpanther",
+                        "name": "PTHR11941"
+                    },
+                    {
+                        "db": "Pfam_domain",
+                        "name": "PF00378"
+                    },
+                    {
+                        "db": "Gene3D",
+                        "name": 3
+                    },
+                    {
+                        "db": "Superfamily_domains",
+                        "name": "SSF52096"
+                    }
+                ],
+                "consequence_terms": [
+                    "frameshift_variant"
+                ],
+                "impact": "HIGH"
+            },
+            {
+                "gene_id": "ENSG00000134463",
+                "variant_allele": "TA",
+                "cdna_end": 55,
+                "biotype": "processed_transcript",
+                "gene_symbol_source": "HGNC",
+                "consequence_terms": [
+                    "non_coding_transcript_exon_variant"
+                ],
+                "hgnc_id": 23489,
+                "strand": 1,
+                "gene_symbol": "ECHDC3",
+                "transcript_id": "ENST00000495787",
+                "cdna_start": 55,
+                "impact": "MODIFIER"
+            },
+            {
+                "gene_id": "ENSG00000134463",
+                "variant_allele": "TA",
+                "cdna_end": 537,
+                "biotype": "processed_transcript",
+                "gene_symbol_source": "HGNC",
+                "consequence_terms": [
+                    "non_coding_transcript_exon_variant"
+                ],
+                "hgnc_id": 23489,
+                "strand": 1,
+                "gene_symbol": "ECHDC3",
+                "transcript_id": "ENST00000496136",
+                "cdna_start": 537,
+                "impact": "MODIFIER"
+            }
+        ],
+        "strand": 1,
+        "id": "10:11791527:T:TA",
+        "most_severe_consequence": "frameshift_variant",
+        "allele_string": "T/TA",
+        "start": 11791527
+    }
+]

@@ -108,6 +108,14 @@ def get_variant_list(file):
     # return
     return variants
 
+def load_deepsea_varianteffect_model(weights_file, should_log=True):
+    # load the weights
+    state_dict = torch.load(weights_file)
+    pretrained_model_reloaded_th = load_deepsea_varianteffect_model_from_state_dict(state_dict, should_log)
+
+    # return
+    return pretrained_model_reloaded_th
+
 def load_beluga_model(weights_file, should_log=True):
     # load the weights
     state_dict = torch.load(weights_file)
@@ -172,6 +180,36 @@ def load_beluga_model_from_state_dict(state_dict, should_log=True):
 
     # return
     return pretrained_model
+
+def load_deepsea_varianteffect_model_from_state_dict(state_dict, should_log=True):
+    # load the DeepSEA variant effect model
+    deepsea_cpu_model = nn.Sequential( # Sequential,
+        nn.Conv2d(4,320,(1, 8),(1, 1)),
+        nn.Threshold(0, 1e-06),
+        nn.MaxPool2d((1, 4),(1, 4)),
+        nn.Dropout(0.2),
+        nn.Conv2d(320,480,(1, 8),(1, 1)),
+        nn.Threshold(0, 1e-06),
+        nn.MaxPool2d((1, 4),(1, 4)),
+        nn.Dropout(0.2),
+        nn.Conv2d(480,960,(1, 8),(1, 1)),
+        nn.Threshold(0, 1e-06),
+        nn.Dropout(0.5),
+        Lambda(lambda x: x.view(x.size(0),-1)), # Reshape,
+        nn.Sequential(Lambda(lambda x: x.view(1,-1) if 1==len(x.size()) else x ),nn.Linear(50880,925)), # Linear,
+        nn.Threshold(0, 1e-06),
+        nn.Sequential(Lambda(lambda x: x.view(1,-1) if 1==len(x.size()) else x ),nn.Linear(925,919)), # Linear,
+        nn.Sigmoid(),
+    )
+    # print
+    if should_log:
+        print("got DeepSEA variant effect model of type {}".format(type(deepsea_cpu_model)))
+
+    # load the weights
+    deepsea_cpu_model.load_state_dict(state_dict)
+
+    # return
+    return deepsea_cpu_model
 
 def load_basset_model_from_state_dict(state_dict, should_log=True):
     # load the Basset model

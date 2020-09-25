@@ -6,7 +6,7 @@ from pyspark.sql.functions import col, struct, explode, when, lit, array, udf
 # load and output directory
 # vep_srcdir = 's3://dig-analysis-data/out/varianteffect/effects/part-*'
 # freq_srcdir = 's3://dig-analysis-data/out/frequencyanalysis/'
-# outdir = 's3://dig-bio-index/burden/variantgene'
+# outdir = 's3://dig-analysis-data/out/burdenbinning/results'
 
 # development localhost directories
 vep_srcdir = '/home/javaprog/Data/Broad/dig-analysis-data/out/varianteffect/effects/part-*'
@@ -90,36 +90,36 @@ condition_impact_high = (filter_impact_col == 'HIGH') & (filter_lof_col == 'LC')
 # condition_impact_moderate = filter_impact_col == 'MODERATE'
 # condition_impact_high = filter_impact_col == 'HIGH'
 
-# level 2 condition for bin 7
+# bin7 - level 2 condition for bin 7
 condition_level2_bin7 = (~filter_polyphen2_hdiv_pred_col.contains('D')) & \
         (~filter_polyphen2_hvar_pred_col.contains('D')) & \
         (~filter_sift_pred_col.contains('D')) &  \
         (~filter_lrt_pred_col.contains('D')) & \
         (~(filter_mutationtaster_pred_col.contains('A') & filter_mutationtaster_pred_col.contains('D')))
 
-# level 2 exclusion condition for bin 6
+# bin6 - level 2 exclusion condition for bin 6
 condition_level2_inclusion_bin6 = (filter_polyphen2_hdiv_pred_col.contains('D')) | \
         (filter_polyphen2_hvar_pred_col.contains('D')) | \
         (filter_sift_pred_col.contains('D')) | \
         (filter_lrt_pred_col.contains('D')) | \
         (filter_mutationtaster_pred_col.isin(['A', 'D']))
 
-# level 2 exclusion condition for bin 5
+# bin5 - level 2 exclusion condition for bin 5
 condition_level2_inclusion_bin5 = (filter_polyphen2_hdiv_pred_col.contains('D')) & \
         (filter_polyphen2_hvar_pred_col.contains('D')) & \
         (filter_sift_pred_col.contains('D')) & \
         (filter_lrt_pred_col.contains('D')) & \
         (filter_mutationtaster_pred_col.isin(['A', 'D']))
 
-# level 2 exclusion condition for bin 3
+# bin3 - level 2 inclusion condition for bin 3
 condition_level2_inclusion_bin3 = condition_level2_inclusion_bin5 & \
-        (filter_metalr_pred_col == 'D') & \
-        (filter_metasvm_pred_col == 'D') &  \
-        (filter_provean_pred_col == 'D') & \
-        (filter_fathmm_mkl_coding_pred_col == 'D') & \
-        (filter_fathmm_pred_col == 'D')
+        (filter_metalr_pred_col.contains('D')) & \
+        (filter_metasvm_pred_col.contains('D')) &  \
+        (filter_provean_pred_col.contains('D')) & \
+        (filter_fathmm_mkl_coding_pred_col.contains('D')) & \
+        (filter_fathmm_pred_col.contains('D'))
 
-# level 2 exclusion condition for bin 2
+# bin2 - level 2 exclusion condition for bin 2
 condition_level2_inclusion_bin2 = condition_level2_inclusion_bin3 & \
         (filter_eigen_pc_raw_rankscore_col > 0.9) & \
         (filter_dann_rankscore_col > 0.9) & \
@@ -183,7 +183,7 @@ dataframe_freq = dataframe_freq.withColumn('maf', max_array_udf('frequency')).se
 
 # print
 print("the loaded frequency data frame has {} rows".format(dataframe_freq.count()))
-dataframe_freq.show()
+# dataframe_freq.show()
 
 # load the transcript json data
 vep = spark.read.json(vep_srcdir)
@@ -219,18 +219,18 @@ transcript_consequences = vep.select(vep.id, vep.transcript_consequences)     .w
 
 
 # print
-print("the filtered test data count is: {}".format(transcript_consequences.count()))
-transcript_consequences.show()
+print("the vep variant data count is: {}".format(transcript_consequences.count()))
+# transcript_consequences.show()
 
 # join the transcripts dataframe with the maf dataframe
 transcript_consequences = transcript_consequences.join(dataframe_freq, var_id, how='left')
-print("the filtered transcript with frequency data count is: {}".format(transcript_consequences.count()))
+print("the vep transcript with frequency data count is: {}".format(transcript_consequences.count()))
 transcript_consequences.show()
 
 # get the lof level 1 data frame
 dataframe_lof = transcript_consequences.filter(condition_lof_hc)
 print("the lof data frame count is: {}".format(dataframe_lof.count()))
-dataframe_lof.show()
+# dataframe_lof.show()
 
 # get the level 3 dataframe
 dataframe_impact_moderate = transcript_consequences.filter(condition_impact_moderate)
@@ -321,10 +321,6 @@ output_data_frame = final_bin1_data_frame \
 
 # print
 print("the final agregated bin dataframe is: {}".format(output_data_frame.count()))
-
-# only select the relevant columns
-output_data_frame = output_data_frame.select(col(var_id), col(gene_ensemble_id), col(burden_bin_id))
-print("the final agregated bin with selected columns dataframe is: {}".format(output_data_frame.count()))
 
 # save out the output data frame to file
 output_data_frame \
