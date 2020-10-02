@@ -1,0 +1,24 @@
+
+
+
+- Chapter 5
+20200923 - data normilzation
+- hyper pearameters
+- data normilzation
+  - want data -1 to 1 due to better gradient descnet process
+    - don't want gradients of loss to be too different per parameters    
+
+20200925 - tensor autograd
+- tensor autograd enables tensors to remember where they came from 
+  - they can then automatically provide the chain of derivatives for the gradient descent calculation
+
+- new_tensor = torch.tensor([1.0, 0.0], requires_grad = True)
+- if new_tensor.grad is None:
+  --> True, will be false after back propagation
+
+- adam optimizer
+  - modifies the learning rate as needed, so better than SGD for optimizing
+    - can also handle non normalized inputs
+
+    
+
