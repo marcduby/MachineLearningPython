@@ -38,3 +38,12 @@ print("the random tensor is {}".format(rand_tensor))
 # get the identity matrix
 eye_tensor = torch.eye(4)
 print("the identity tensor is {}".format(eye_tensor))
+
+# create a new tensor and rearrange usign view
+x = torch.tensor([[1, 2, 3], [2, 3, 4], [4, 5, 6], [6, 7, 8]])
+print("the tensor is of shape {}".format(x.shape))
+x_reshape = x.view(6, 2)
+print("the reshaped 6/2 tensor is of shape {}".format(x_reshape.shape))
+x_reshape_minus = x.view(2, -1)
+print("the reshaped 2/-1 tensor is of shape {}".format(x_reshape_minus.shape))
+

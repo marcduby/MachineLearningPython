@@ -27,7 +27,8 @@ debug:
 ------
   - help(<object>)
   - print(<object>)
-  
+  - type(cifar10).__mro__   # returns the class hierarchy
+  - dir(package)            # get the listing of the functions in the package
 
 notes:
 ------

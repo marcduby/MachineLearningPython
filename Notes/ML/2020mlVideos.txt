@@ -1,0 +1,15 @@
+
+
+20201007 - ML careers
+- 5 types of roles
+  - data scientist
+    - design ML models, know ML frameworks
+  - ML engineer
+    - put together production ready pipelines and ML processes, know big data tools (spark)
+    - write maintainable code
+  - data analyst
+    - study data, how to pull data for input 
+  - data engineer  
+    - handles data to go into model and handles data coming out
+  - ML manager
+    - can understand and manage ML projects, know fundamentals 
