@@ -15,10 +15,8 @@ import json
 print("got pytorch version of {}".format(torch.__version__))
 
 # set the code and data directories
-# dir_code = "/Users/mduby/Code/WorkspacePython/"
-# dir_data = "/Users/mduby/Data/Broad/"
-dir_code = "/home/javaprog/Code/PythonWorkspace/"
-dir_data = "/home/javaprog/Data/Broad/"
+dir_code = ""
+dir_data = ""
 
 # import relative libraries
 import sys
@@ -27,13 +25,10 @@ import dcc_basset_lib
 
 # file input
 file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
-file_twobit = dir_data + 'Basset/Production/hg19.2bit'
+file_twobit = dir_data + 'hg19.2bit'
 file_output = dir_data + "Basset/Out/basset_part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
-file_model_weights = dir_data + 'Basset/Production/basset_pretrained_model_reloaded.pth'
-labels_file = dir_data + '/Basset/Production/basset_labels.txt'
-# file_output = dir_data + "Basset/Out/nasa_part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
-# file_model_weights = dir_data + 'Basset/Production/nasa_ampt2d_cnn_900_best_p041.pth'
-# labels_file = dir_data + '/Basset/Production/nasa_labels.txt'
+file_model_weights = dir_data + 'basset_pretrained_model_reloaded.pth'
+labels_file = dir_data + 'basset_labels.txt'
 
 # set the region size
 region_size = 600       # basset
@@ -92,8 +87,8 @@ print("got chunk list of size {} and type {}".format(len(chunks), type(chunks)))
 # loop through chunks
 main_start_time = time.perf_counter()
 final_results = []
-# for chunk_index in range(0, len(chunks)):
-for chunk_index in range(6, 9):
+for chunk_index in range(0, len(chunks)):
+# for chunk_index in range(6, 9):
     variant_list = chunks[chunk_index]
 
     # get start time

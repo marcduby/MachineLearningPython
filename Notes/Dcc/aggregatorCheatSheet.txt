@@ -9,7 +9,7 @@ Method
 
 create method 
 -------------
-- 
+- sbt new broadinstitute/dig-aggregator-method.g8
 
 
 emr tips

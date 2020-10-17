@@ -107,6 +107,10 @@ for chunk_index in range(6, 9):
     # get start time
     start_time = time.perf_counter()
 
+    # NOTE: permute the tensor for the deepsea vs variant inputs
+    # tensor input is (batch, 4 nucleotides, 1 channel, 1000bp region size)
+    tensor_input = tensor_input.permute(0, 1, 3, 2)
+
     # run the model predictions
     pretrained_model_reloaded_th.eval()
     predictions = pretrained_model_reloaded_th(tensor_input)

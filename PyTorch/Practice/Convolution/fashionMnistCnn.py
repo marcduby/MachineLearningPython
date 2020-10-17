@@ -58,8 +58,8 @@ class CNN(nn.Module):
         self.conv_01_input = nn.Sequential (
             nn.Conv2d(
                 in_channels=1,   # the one grayscale channel
-                out_channels=16,  # will output 6 channels
-                kernel_size=5,   # the size of the moving filter
+                out_channels=16,  # will output 16 channels
+                kernel_size=5,   # the size of the moving filter 5x5
                 stride=1,        # how much the filter moves by step
                 padding=2
             ),                   # output will be (16, 28, 28)
