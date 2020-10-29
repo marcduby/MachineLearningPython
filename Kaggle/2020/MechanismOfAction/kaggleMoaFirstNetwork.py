@@ -11,9 +11,17 @@ print("the torch version is {}".format(torch.__version__))
 # data location
 file_features = "/home/javaprog/Data/Personal/Kaggle/MechanismOfAction/train_features.csv"
 file_labels = "/home/javaprog/Data/Personal/Kaggle/MechanismOfAction/train_targets_scored.csv"
+file_test = "/home/javaprog/Data/Personal/Kaggle/MechanismOfAction/test_features.csv"
+
+# /kaggle/input/lish-moa/test_features.csv
+# /kaggle/input/lish-moa/train_features.csv
+# /kaggle/input/lish-moa/train_targets_scored.csv
+# /kaggle/input/lish-moa/train_targets_nonscored.csv
+# /kaggle/input/lish-moa/sample_submission.csv
+
 batch_size = 32
 larning_rate = 1e-2
-number_epochs = 30
+number_epochs = 200
 
 # create the dataset class
 class MoaDataset(data.Dataset):
@@ -106,4 +114,21 @@ for epoch in range(1, number_epochs):
         training_loss = loss_train / len(train_loader)
         print("{} Epoch {}, training loss {}".format(now_date, epoch, training_loss))
 
-    print(outputs)
+    # print(outputs)
+
+# get the test data
+df_test = pd.read_csv(file_test)
+df_input = df_test.drop(columns=['sig_id', 'cp_type', 'cp_dose'])
+test_input = torch.tensor(df_input.values)
+
+# get the test outputs
+moa_model.eval()
+test_output = moa_model(test_input.float())
+
+# turn the test outputs into 1/0
+test_output_10 = (test_output > 0.5).float()
+
+print(test_output_10[15])
+print(test_output_10[16])
+print(test_output_10[17])
+print(test_output_10[18])
