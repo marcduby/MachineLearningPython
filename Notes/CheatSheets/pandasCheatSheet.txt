@@ -1,0 +1,9 @@
+
+
+dataframe info
+--------------
+  - df.name.unique()
+
+dataframe manipulation:
+-----------------------
+  - df.drop(['a', 'b'], axis=1)
