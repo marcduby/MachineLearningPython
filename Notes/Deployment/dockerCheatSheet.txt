@@ -1,0 +1,59 @@
+
+- basic
+-------
+  - docker help
+  - docker help <command>
+
+  - docker build
+  - docker pull- docker run- docker exec
+
+
+
+- get info on image
+-------------------
+  - docker image inspect <image_name>
+  - docker info
+  - docker image ls             # what is persisted
+  - docker ps                   # what is running    
+  - docker ps -a                # what is and was running    
+
+- running an image
+------------------
+  - docker run -p 8080:80 <image_name>
+  - docker stop <container_id>
+  - docker kill <container_id>
+
+
+- pulling images
+----------------
+  - docker pull broad-private.registry:1337/<image_name>
+  - docker pull nginx:<version>
+  - docker rm <container_id>
+
+- docker compose
+----------------
+  - docker-compose up -d
+  - docker-compose -f md_docker-compose.yml up
+  - docker-compose run -u root <docker compose service> bash
+  - docker-compose exec -u root ldserver bash
+
+  - docker-compose stop     # stop the container 
+  - docker-compose down     # tear down the containers 
+  - docker-compose start    # restart the containers
+  - docker-compose up       # bring up the containers 
+  - docker-compose logs
+  - docker-compose logs --tail=10
+
+
+ld server work:
+---------------
+  - docker-compose up -d              # bring up
+  - docker-compose down               # bring down and remove
+  - docker ps -a                      # see what is running
+  - docker exec -it <name> /bin/bash  # ssh into running container
+  
+
+
+
+  
+

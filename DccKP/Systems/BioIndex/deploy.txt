@@ -1,0 +1,4 @@
+cd ~/bioindex
+# git checkout master
+# git pull
+screen -dmS server bash ./run-server.sh

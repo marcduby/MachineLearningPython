@@ -11,6 +11,9 @@ json:
     json_data.close()
     pprint(d)
     
+virtual env:
+------------
+  - python3 -m venv tutorial-env
 
 lists:
 ------
@@ -37,5 +40,27 @@ Which runs all tests spread across 6 cores.
 
 
 
+scala code:
+-----------
+- cluster definitions
+  /** Simple cluster with more memory. */
+  override val cluster: ClusterDef = super.cluster.copy(
+    masterInstanceType = Strategy.generalPurpose(mem = 64.gb),
+    slaveInstanceType = Strategy.generalPurpose(mem = 32.gb),
+    instances = 4             # 4 VMs for each cluster (one master, other slaves)
+    applications = Seq.empty  # if only sh/python script, this will avoid having hadoop installed -> faster startup
+    stepsConcurency = 3       # if only sh/python script, if > 1, then will run scripts in parallel on master node (where all non pyspark processes run)
+  )
 
+- copying dependent code to s3 resources directory
+  /** Additional resources to upload. */
+  override def additionalResources: Seq[String] = Seq(
+    "runMETAL.sh",
+    "getmerge-strip-headers.sh"
+  )
+
+- to merge csv files and strip headers except first one; this way can use pyspark to create files to merge in parallel 
+aws s3 cp s3://.../getmerge-strip-headers.sh .
+chmod +x getmerge-strip-headers.sh
+./getmerge-strip-headers.sh s3://dig-analysis-data/out/magma/step1GatherVariants/part-* ./variants.csv
 

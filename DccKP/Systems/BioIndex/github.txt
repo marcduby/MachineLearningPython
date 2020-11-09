@@ -1,0 +1,5 @@
+cd ~/bioindex
+# screen -dmS server bash ls
+# screen -dmS update bash git pull
+git checkout master
+git pull

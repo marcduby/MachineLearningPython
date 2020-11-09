@@ -54,14 +54,14 @@ Hyper Parameters:
 
 PreProcessing:
 --------------
-- normalizing data - normalize nmbers so that they range from 0 to 1
+- normalizing data - normalize numbers so that they range from 0 to 1
 
 Loss:
 -----
 - categorical_crossentropy - expects one hot matrix of what the labels are, not integer collection
 - sparse_categorical_crossentropy - can use input labels of multiple integer values
 - tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True) - same as above?
-- binary_crossentrop - use for y/n classification (sigmoind)
+- binary_crossentrop - use for y/n classification (sigmoid)
 
 Optimizer:
 ----------

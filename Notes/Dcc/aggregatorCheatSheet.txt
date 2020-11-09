@@ -11,6 +11,9 @@ create method
 -------------
 - sbt new broadinstitute/dig-aggregator-method.g8
 
+build aws/core
+--------------
+- sbt publishLocal
 
 emr tips
 --------
