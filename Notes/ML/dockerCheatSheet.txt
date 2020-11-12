@@ -55,6 +55,47 @@
     
 
 
+- UM work
+  - gunzip -c topmed.HS.chr8.score.assoc.gz | head
+  -     1  cd var/
+    2  ls -la
+    3  gunzip -c topmed.HS.chr8.score.assoc.gz | head
+    4  cd ../rest/raremetal/
+    5  vi api.py 
+    6  cat api.py 
+    7  pico api.py 
+    8  nano api.py 
+    9  vim api.py 
+   10  ls
+   11  cd ..
+   12  ls
+   13  var/topmed.HS.chr8.cov.assoc.gz
+   14  cd raremetal/
+   15  slqlite3 sql.db 
+   16  cd ../..
+   17  ls
+   18  cd var/
+   19  gunzip -c topmed.HS.chr8.score.assoc.gz | head
+   20  history
+
+  - :Z on mount
+  - changed config.yml "var//..."
+  - sudo docker-compose exec -u ldserver raremetal bash
+
+  - gunzip -c topmed.HS.chr8.cov.assoc.gz | head -n 25 | cut -f 1-3
+  - gunzip -c topmed.HS.chr8.score.assoc.gz | head
+
+  - docker config change
+    - command: /bin/bash -c "flask add-yaml $$RAREMETAL_CONFIG_DATA && gunicorn --access-logfile - --error-logfile - --log-level debug -b 0.0.0.0:$$RAREMETAL_PORT -w $$RAREMETAL_WORKERS -k gevent --pythonpath rest 'raremetal:create_app()'"
+
+- to do 
+  - burden binning masks
+  - ld server install
+  - deepsea ML
+  - 52k phenotypes to jm and mc 
+  - burden binning MAF; if none, then make 0
+  - category/type for nodes, predicate/type for edges. subject/object for query
+
 
 
 [~/exercises/greeting-v1] $ cd ~/exercises/greeting-v2

@@ -7,3 +7,5 @@ dataframe info
 dataframe manipulation:
 -----------------------
   - df.drop(['a', 'b'], axis=1)
+
+  
