@@ -3,9 +3,21 @@
 dataframe info
 --------------
   - df.name.unique()
+  - df.dtypes
+
 
 dataframe manipulation:
 -----------------------
   - df.drop(['a', 'b'], axis=1)
+  - df.convert_dtypes()           # addd pd.NA NAType in pandas 1.0
+    - still works with df.fillna(), df.isna(), df.notna() and df.dropna()
+  - df.sum(skpina=False)
 
-  
+
+sql inerface:
+-------------
+  - pd.read_sql("select * from table", <sqlalchemy con/sqllite3 con>)
+  - pd.to_sql("select * from table", <sqlalchemy con/sqllite3 con>)
+    - if_exists=<fail/replace/append>
+
+
