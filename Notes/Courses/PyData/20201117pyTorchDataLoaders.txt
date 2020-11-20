@@ -1,0 +1,28 @@
+
+
+20201117 - loading data into pytorch
+- mantra
+  - all data needs to be preprocessed 
+
+- training of NN
+  - foward pass - provide inputs and outputs are generated
+  - backward pass - loss calculated, and the weights are updated to minimize this loss (opposite direction if gradient -> gradient descent)
+  - repeat n number of epochs or until certain loss 
+  - data needs
+    - shuffle the data when training
+    - put the data into batches (all batches processed per epoch)
+    - sampling wih r without replacements
+    - could possibly use data augmentation whene needed
+
+- ie:
+  for epoch in range(NUM_EPOCHS):
+    for batch in iter(dataset, no_replacement, shuffle=True):
+      X, y = batch
+      optimizer.zero_grad()                 # zero out previous gradients
+      y_train = model(X)                    # compute output
+      loss = criterion(y_train, y)          # calculate loss
+      loss.backward()                       # backward pass
+      optimizer.step()                      # optimize weights
+
+
+

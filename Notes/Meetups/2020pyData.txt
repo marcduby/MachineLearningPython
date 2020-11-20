@@ -1,0 +1,95 @@
+
+20201118 - pydata boston 
+explaibale ML (XML)
+- libraries used
+  - lale for pipelines
+  - use Hyperopt as opposed to GridSearch
+
+BCI (brain computer interface)
+
+
+
+20201115 - pydata global 2020 post mortem 
+=========================================
+- talks to review
+  - day 5, building one multi task model to rul them all
+    - moving models to production
+  - day 5, coiled hosting dask
+    - download coiled, test
+  - day 5 - what lies in word embeddings 
+
+- to do 
+  - download coiled - coiled.io, dask.org
+  - look at 
+
+
+
+20201115 - pydata global 2020 day 5
+===================================
+1145 - building one multi task model
+====================================
+- for cobining fashion model for color and patterns
+  - train on random batches of color or patterns
+    - but only compute loss for that type of batches
+- how to mve a jupyter model to production
+
+- issues
+  - when adding zseason feature to color/patterns
+  - possible solutions
+    - 3 models, one each for 
+    - 2 models, one per task group 
+    - one resnet per task but shared bert model 
+    - one resent per task group, but shared bert model (chosen)
+
+- open source library
+  - github.com/ShopRunner/octopod
+  - pypi.org/project/octopod 
+
+1230 - hosting dask, challenges and opportunities
+=================================================
+
+1315 - what lies in word embeddings 
+===================================
+- ass opposed to embeddings words, do 3 letter embeddings 
+  - so for university, do uni/niv/ive/ver/ers/rsi/sit/ity instead
+  - helps with mispellings
+
+- tools used
+  - fasttext
+  - bytepair
+  - spacylanguage
+  - huggingface
+  - whatlies
+
+20201114 - pydate global 2020
+=============================
+- look into 
+  - prophet  model for time series
+
+  
+
+20201113 - pydata global 2020
+=============================
+1330 - parallel data processing
+===============================
+- 3 tools
+  - spark, ray and dask
+
+- look into
+  - look at eric dill talk, 'is spark still relevant'
+    - keith kraus 'high performance with rapids'
+  - koalas (could use in spark)
+  - mark garcia talk on dataframes (miami nyc meetup)
+  - wrapping model.predict() in udd/udf block for spark
+
+1700 - what's new in pandas
+===========================
+  - data.rolling(10).mean()
+  - def udf(x):
+    return x.mean()
+    data.rolling(10).apply(udf, raw=True)
+    data.rolling(10).apply(udf, raw=True, engine='numba')               # numba JIT compiler
+
+
+
+    
