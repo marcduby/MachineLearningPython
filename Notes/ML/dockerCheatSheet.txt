@@ -55,7 +55,15 @@
     
 
 
-- UM work
+- UM work commands
+  - sudo docker-compose up
+  - sudo docker-compose down 
+  - sudo docker ps -a 
+  - sudo docker exec -it ldserver_raremetal_1 /bin/bash
+  
+
+
+- UM notes
   - gunzip -c topmed.HS.chr8.score.assoc.gz | head
   -     1  cd var/
     2  ls -la
