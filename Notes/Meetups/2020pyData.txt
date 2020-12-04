@@ -1,4 +1,47 @@
 
+
+20201121 - pydata RI meetup - PySpark
+- bryan cafferky
+- hadoop
+  yarn: yet another resource coordinator
+- spark is complete rethink and architecture of hadoop (100x performance improvement)
+  - 4 parts (sq, mllib, streaming, graphx)
+  - python no tpre built in 
+    - PySpark package wraps sprk API
+  - spark wants everyhting in memory as much as possible, then it will work on it
+  - graph frames api replacing graphx 
+  - databricks is a wrapper around spark 
+-  RDD - resilient distributed dataset 
+- spark api
+  - load data for use by spark 
+  - read manipulate data in spark
+  - push processing to cluster nodes 
+  - do work on head node 
+- databricks deom
+  - sc for spark context
+  - spark - more for sql (hive)
+  - sqlContext (for hive)
+
+- df methods
+  - collect() -> force execution on all worker nodes and return data to head node 
+  - printSchema() -> prints the schema 
+  - describe()
+  - head()
+  - sample() 
+  - toPandas()
+  - groupBy()
+  - agg()
+  - plot() (might be only databricks)
+  - 
+
+- tiers for data work
+  - 100 MB -> pandas and local VM
+  - up to 30 TB -> sql db should be fine
+  - 1 PB -> then spark, but see if you need all that data 
+
+
+
+
 20201118 - pydata boston 
 explaibale ML (XML)
 - libraries used

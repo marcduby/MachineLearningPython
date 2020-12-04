@@ -5,6 +5,8 @@ dataframe info
   - df.name.unique()
   - df.dtypes
 
+  - for index, row in df.iterrows():
+      print(row['c1'], row['c2'])
 
 dataframe manipulation:
 -----------------------
@@ -20,4 +22,11 @@ sql inerface:
   - pd.to_sql("select * from table", <sqlalchemy con/sqllite3 con>)
     - if_exists=<fail/replace/append>
 
+  engine = create_engine('mysql+mysqldb://root:this is no password@localhost:3306/richards_gene', echo = False)
+  df.to_sql(name = 'gene_ncbi', con = engine, if_exists = 'replace', index = False)
 
+
+
+read:
+-----
+  - Cov = pd.read_csv("path/to/file.txt", sep='\t', names=["Sequence", "Start", "End", "Coverage"])

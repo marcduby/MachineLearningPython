@@ -5,14 +5,14 @@
   - all data needs to be preprocessed 
 
 - training of NN
-  - foward pass - provide inputs and outputs are generated
+  - forward pass - provide inputs and outputs are generated
   - backward pass - loss calculated, and the weights are updated to minimize this loss (opposite direction if gradient -> gradient descent)
   - repeat n number of epochs or until certain loss 
   - data needs
     - shuffle the data when training
     - put the data into batches (all batches processed per epoch)
     - sampling wih r without replacements
-    - could possibly use data augmentation whene needed
+    - could possibly use data augmentation when needed
 
 - ie:
   for epoch in range(NUM_EPOCHS):
@@ -23,6 +23,12 @@
       loss = criterion(y_train, y)          # calculate loss
       loss.backward()                       # backward pass
       optimizer.step()                      # optimize weights
+
+- when analyzing categorical classificatuion data, make sure the data is spread out evenly in the categories
+  - also make sure it is equally distributed in the categories within the test/train segments
+
+- dataloader
+  - collate_fn -> function that is called when data loader has to get the next batch
 
 
 

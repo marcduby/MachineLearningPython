@@ -7,9 +7,14 @@
 json:
 -----
   - with open('strings.json') as json_data:
-    d = json.loads(json_data)
-    json_data.close()
-    pprint(d)
+      d = json.loads(json_data)
+      json_data.close()
+      pprint(d)
+
+  - import json
+    with open('strings.json') as f:
+      d = json.load(f)
+      print(d)
     
 virtual env:
 ------------
@@ -18,7 +23,24 @@ virtual env:
 lists:
 ------
   - chunks = [data[x:x+100] for x in range(0, len(data), 100)]      # split list into sublists of size
+  - chunks.append(element)
 
+dict:
+-----
+  - dict.get('key')     # null safe way of getting element
+  - if 'key' in dict:
+  - dict.keys()
+  - dict.values()
+
+os:
+---
+  - to get list of regexp files
+    import glob
+    print(glob.glob("/home/adam/*.txt"))
+
+misc:
+-----
+  - if x is not None:
 
 objects:
 --------

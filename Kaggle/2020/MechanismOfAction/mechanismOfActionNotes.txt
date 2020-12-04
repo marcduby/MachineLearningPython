@@ -1,0 +1,13 @@
+
+# approach 20201119
+- create torch dataset wrapping dataset
+  - have one dataset per label (207)
+  - since data is sparse, weight the positives so have even split
+
+- use random forest to start
+  - predict each label
+  - concatenate into fields
+  - save and evaluate
+
+
+
