@@ -19,7 +19,7 @@ gene = 'PPARG'
 print("gene {} has row \n{}".format(gene, gene_df[gene_df.Symbol == gene]))
 
 # create connection
-conn = mdb.connect(host='localhost', user='root', password='yoyoma', charset='utf8', db='genetics_lookup')
+conn = mdb.connect(host='localhost', user='root', password='this aint no password', charset='utf8', db='genetics_lookup')
 cur = conn.cursor()
 
 sql = """insert into `gene_ncbi_load` (ncbi_id_int, ncbi_id, gene)
