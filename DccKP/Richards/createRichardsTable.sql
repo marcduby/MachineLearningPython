@@ -31,10 +31,18 @@ update gene_phenotype set phenotype_efo = 'EFO_0004705' where phenotype = 'lowts
 create table gene_ncbi (
   id                        int not null auto_increment primary key,
   gene                      varchar(100) not null,
-  ncbi_id                   varchar(100)
+  ncbi_id                   varchar(100),
+  ncbi_id_int               int(9)
 );
 
+create table gene_ncbi_small as 
+select min(ncbi_id) as gene_id, gene from gene_ncbi group by gene;
 
+create table gene_ncbi_load (
+  id                        int not null auto_increment primary key,
+  gene                      varchar(100) not null,
+  ncbi_id                   int(9)
+);
 
 -- mysql> select distinct phenotype, phenotype_efo from gene_phenotype;
 -- +------------+---------------+

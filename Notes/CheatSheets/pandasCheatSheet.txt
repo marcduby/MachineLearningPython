@@ -11,10 +11,13 @@ dataframe info
 dataframe manipulation:
 -----------------------
   - df.drop(['a', 'b'], axis=1)
+  - new = old.filter(['A','B','D'], axis=1)
   - df.convert_dtypes()           # addd pd.NA NAType in pandas 1.0
     - still works with df.fillna(), df.isna(), df.notna() and df.dropna()
   - df.sum(skpina=False)
-
+  - df = gene_df[gene_df.Symbol == gene]
+  - df = df[df['S'] != df['T']]
+  - gapminder_2002 = gapminder[gapminder.year.eq(2002)]
 
 sql inerface:
 -------------
