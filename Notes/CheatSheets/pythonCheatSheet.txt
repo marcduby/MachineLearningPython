@@ -42,6 +42,12 @@ misc:
 -----
   - if x is not None:
 
+databases:
+----------
+  db = pymysql.connect(host='localhost', port=3306, user='root')
+  cur = db.cursor()  
+  cur.execute(sql).fetchall()/fetchone()
+
 objects:
 --------
   - __init__(self)

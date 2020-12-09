@@ -1,0 +1,37 @@
+
+
+20201205 - gdg silicon valley devfest 2020
+1330 - firebase with kyle paul
+
+
+1415 - SRE
+- make system maintenance a software project 
+- what is SRE  
+  - system most importanmt is reliability
+  - measure reliability
+    - cpu, icmp response, disk latency, 
+  - meetings reliability goals requires well engineered software 
+    - also support from business and operations
+    - need priciped way to argue about desire reliability of a service
+
+- critical user journeys
+  - like a user story
+- deliverables
+  - SLO: service level objective
+  - 
+
+- avoid toils (kind of work that tends to be...)
+  - mnaual mangement (ssh into maachine)
+  - repetitive
+  - automatable
+  - tactical
+  - no endurign value
+  - scales linearly with service growth
+
+- 6 statements to evaluate team
+  - see slides
+
+  
+
+
+

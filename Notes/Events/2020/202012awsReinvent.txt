@@ -1,0 +1,72 @@
+
+
+to watch:
+---------
+- astra zeneca big data
+- what's new in redshift
+- virtualized trials
+- novartis manufacturing
+- healthcare accelerating transformation
+- intelligent document processing
+- bristol myers
+- lake house redshift
+- transform reseach env
+- explore quantum computing
+- ventilator production
+- erickson covid
+- superfans viewing experience
+- smart vison industrial
+- space in the cloud
+- deepracer analysis tool
+- amazon enhance customer experience 
+- corrosion detection
+- aws deepcomposer
+- code breaking in the cloud
+- smart recycle
+- ai for email insights
+- add image recognition to web app
+- connected vehicle repair
+- drone zone
+- robo van gogh
+- intelligent sleep assistant
+- industrial predictive quality
+- wind farm maintenence
+- monetize machine learning
+- mise en production sagemaker
+- serverless ml inference
+- jupyter notebooks in sagemaker
+- bmw serverless analytics 
+- choosing right instance for inference 
+- mcdonald's customer surveys
+- mlops sagemaker implementing
+- strategies machine learnign at scale 
+- data transformation resrvoir
+- nfl computer vision
+- 
+
+
+
+watched:
+--------
+20201209 - roche data liquidity for personalized medicine
+- based on data and analytics
+- techniques
+  - nlp, descriptive stats, ML, inferential stats, causal inference, pharmaco epidemiology
+  - data lake
+
+- results
+  - can do faster trials with peronalized focus
+- people
+  - data scientists
+
+
+20201208 - train DL model in large scale distributed mode 
+- solve issue with model too big to load in one VM
+  - get OOM errors (out of memory)
+
+
+20201208 - aws life sciences use cases
+
+
+20201208 - ML keynote
+
