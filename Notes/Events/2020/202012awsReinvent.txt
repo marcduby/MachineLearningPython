@@ -42,12 +42,123 @@ to watch:
 - strategies machine learnign at scale 
 - data transformation resrvoir
 - nfl computer vision
+- deep dive graviton 2
+- high throughput ad tech
+- corrosion detection
+- codebreaking machine vision'
+- making healthcare personal 
+- medical imaging machine learning
+- serverless data lake
+- train and tune ml sagemaker
+- vw industrial cloud
+dec 08
+- billion parameter models
+- inventory planning solutions forecast
+dec 09
+- sagemaker debugger
+- sagemaker jumpstart
+- near linear scaling dataparallel
+- amazon forecast inventory planning
+- amazon personalize fans
+- capitol one health of applications
+- smart vision for preventative industrial
+- future space in the cloud
+- large scale distributed training
+- pge customer operational
+- ai for cliniocal workflows
+- roi of iot 
+dec 10
+- explainability machine learning
+- serverless data preparation
+- cloud observability career
+- chosse right algorithm
+- wildfire with 
+- end workflows kubeflow
+dec 11
 - 
 
 
 
 watched:
 --------
+20201210 - picking ML algorithms with sagemaker
+- 17 algorithms available
+  - text
+    - discovering topics in text docs or clustering docs
+      - lda (latent dir allocation), ntm (neural topic modeling)
+    - text classification
+      - blazing text
+    - text embedding
+      - object embeddings
+    - machine translation, audio tokens
+      - sequence to sequence
+  - images (computer vision)
+    - image classification, object detection (bounding boxes), semantic segmentation (which pixel belongs to what object type)
+  - numbers
+    - classification/regression
+      - linear learner (linear classification for linearly seperable classes), 
+      - knn (recover unstructured partitions of the space), 
+      - xgboost, factorization machines 
+    - dimensionality reduction, used in pre processing 
+      - pca
+    - identify structure in data (clustering)
+      - k-means
+    - C
+      - xgboost, 
+    - aws improvement on isolation forest algo, used in anomaly detection 
+      - random cut forest
+    - time series
+      - deepAR, 
+    - anomaly detection using ipv4 addresses
+      - IP insights
+    - recommendations
+      - object2vec, factorization machines
+- supports tf2, pytorch, mxnet, sklearn
+
+- xgboost
+  - trees created sequentially (so one after upon the results of the other)
+  - for each tree the residual with respect t the actual target is computed and becomes the new tree's target
+    - so next tree fits on the residuals 
+    - can also fit on fiunction of the residuals to optimize for different metrics
+  - each tree learns to improve on the previous trees' classification/regression mistakes
+  - predictive performance increases over forests
+  - scales well over dozens of cores 
+
+- gradient boosting
+  - use the residuals for the next model targets 
+
+- random forests
+  - do sub sampling of rows and columns for each tree
+  - then average out results of all trees on inference 
+
+- sagemaker can also use your own training/inference docker containers
+  - will manage the lifecycle 
+  
+- tips 
+  - use float16 for backward/foprward pass, but keep model weights at float32
+    - faster but don't lose much accuracy
+  - file streaming 
+    with open(image_file. 'rb) as f:
+      post_payload = bytearray(f.read())
+  - for unbalanced dataset, use scale positive weight 
+
+
+
+
+
+
+
+
+20201210 - novartis manufactiruing
+- use ML to apply to vendor product catalogs
+  - comaring beaker prices
+  - ML model extracts property features from the text of the catalogs
+  - display prominently to the lab purchaser
+
+- auto replnishment for supplies using ML 
+  - data lake and amazon forecast 
+
+
 20201209 - roche data liquidity for personalized medicine
 - based on data and analytics
 - techniques
