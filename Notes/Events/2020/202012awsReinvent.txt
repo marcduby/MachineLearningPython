@@ -81,6 +81,74 @@ dec 11
 
 watched:
 --------
+20201220 - ML applications architectures
+- steps for ml applications
+  - data ingestion
+  - data preparation
+  - feature engineering
+  - model training
+  - model evaluation and tunjing
+  - model deployment
+  - model inference
+  - model monitoring and retraining
+- well architected framework
+  - operational excellence
+    - version ml inputs and model artifacts/weights 
+    - autimated model deployment pipeline
+    - continuously monitor and measure ML workloads
+    - establish model retaining straegy
+  - securoty
+    - use api gateway to black list IPs, throttle service for scale
+  - reliability
+    - train once and deoloy to distributed env (api, app) or (dev, test and prod)
+    - manage changes to model inputs through automation
+  - performance efficiency
+    - deploy and monitor model and system performance 
+      - use sagemaker for model monitoring 
+    - optimize compute for ML workloads
+    - define latency and network bandwidth performance requirements
+  - cost optimization
+    - use managed services to reduce costs 
+    - experment with small datasets
+    - right size training and inference VMs
+
+- links
+  - https://d1.awsstatic.com/whitepapers/architecture/wellarchitected-Machine-Learning-Lens.pdf?did=wp_card&trk=wp_card
+  - https://wellarchitectedlabs.com/
+  - https://aws.amazon.com/architecture/
+  - https://aws.amazon.com/solutions/
+  
+
+
+20201218 - detect ML model drift in production
+- aws sagemaker
+- what is the issue
+  - sata drift 
+    - could have divergence of data
+    - get data drift and accuracy drift metrics
+  - model could degrade over time 
+    - need to retrain the model every so often
+- data drift metrics
+  - get mean and std dev for training data
+    - when incoming data comes in, compare to data metrics
+  - also keep eye out for missing values, bad categorical values
+- model drift 
+  - compare predictions to ground truth of what happened
+  - metrics: precision, recall, accuracy 
+    - can chart metics against baseline
+
+- actions 
+  - retrain model wih new training data
+  - update model 
+
+- demo 
+  - data: grouplens.org/datasets/movielens/
+  - xgboost model
+  
+
+
+
+
 20201210 - picking ML algorithms with sagemaker
 - 17 algorithms available
   - text

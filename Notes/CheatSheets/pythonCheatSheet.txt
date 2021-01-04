@@ -61,6 +61,11 @@ debug:
   - type(cifar10).__mro__   # returns the class hierarchy
   - dir(package)            # get the listing of the functions in the package
 
+to test:
+--------
+- formatting json
+  - print(json.dumps(json.loads(file.split('\n')[0]), indent=2))
+
 notes:
 ------
 I'm not familiar with green. Looks like it could be useful for running tests. I'm not sure if it'd run our most common scenario which is "pytest -d --tx '6*popen//python=python'"

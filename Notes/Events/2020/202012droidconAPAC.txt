@@ -1,0 +1,41 @@
+
+
+202012142310 - ML in android
+- why on device ML
+  - keep power consumption down
+  - faster inference time
+  - don't rely on network availability
+  - better data privacy
+
+- ML model biding plugin
+  - for TF lite models
+  - can enable hardware accel;eration
+  - faster development
+
+- use android studio 4.1
+  - have import for tf lite model
+  - can enable gpu support
+
+- ML kit
+  - no longer need to creat a firebase project to use ML kit
+
+- demo github
+  - bit.ly/dc-apac
+  - https://github.com/Rishit-dagli/ML-with-Android-11
+
+
+202012142310 - TDD with spek
+- look into
+
+202012142150 - UI with jetpack compose
+- look into, good slides
+- do codelab
+
+
+202012142100 - code reviews
+- keep pull requests to single function changes
+  - 64 files changed is too big
+  - if pull request takes more than an hour to review, too big
+
+
+
