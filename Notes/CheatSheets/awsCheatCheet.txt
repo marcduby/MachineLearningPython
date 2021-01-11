@@ -1,5 +1,6 @@
 
-
+Mounts:
+-------
 - adding new volume to existing VM  (can mount volume to more than one)
   - ec2 page, Volumes menu, create new volume  
     - shoul be same availabbity zone as ec2 vm 
@@ -8,5 +9,11 @@
   - sudo mkfs -t ext4 /dev/nvme2n1
   - sudo mount /dev/nvme2n1 TopMed/
   - sudo chown -R ec2-user:ec2-user .
+
+
+AWS CLI:
+--------
+  - aws s3 cp ~/this_directory s3://bucketname/this_directory --recursive
+  
 
 

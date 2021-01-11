@@ -1,13 +1,51 @@
 
+20201217 - pydate boston talks
+- 20201217b - ML in cyber security
+
+- 20201217a - pseudo label talk
+  - data labeling is expensive
+  - data is time consuming, but need it now
+  - large diversity
+
+- example: use image net, transfer learn, get pseuco labels, then use pseudo labels to retrain
+  - to pretrain image net
+
+- k fold cross validation
+  - split into 5 sets, hold one back for validation
+  - do this k times (hence the name)
+
+- can use ensemble models to generate pseudo labels
+
+- can try randomly flipping labels in the training (similar to dropout layer in NN for preventing overtraining)
+
+- kaggle competition story
+  - joined only 2 weeks before end
+  - training data was from canada, private test data to judge model was from japan
+    - so issues with overtrained data
+  - added TTA (rotate, change brighteness) for images
+    - multiple images per output
+  - best is first trained on pseudo, then fine tuned on train data
+    - so generate pseudo data
+    - then start training from scratch on pseudo
+    - then fine tune with smaller step size on train data 
+
+- where not to use pseudo labeling
+  - pseudo labeling accentuates a class imbalance (more of one class than another)
+  - won't see much improvement where train and test similar
+
+- sample kaggle notebook
+  - https://www.kaggle.com/stanleyjzheng/exploring-pseudolabelling-schemes-pydata#
+
+
 
 20201121 - pydata RI meetup - PySpark
 - bryan cafferky
 - hadoop
-  yarn: yet another resource coordinator
+  - yarn: yet another resource coordinator
 - spark is complete rethink and architecture of hadoop (100x performance improvement)
-  - 4 parts (sq, mllib, streaming, graphx)
-  - python no tpre built in 
-    - PySpark package wraps sprk API
+  - 4 parts (sql, mllib, streaming, graphx)
+  - python not pre built in spark
+    - community PySpark package wraps spark API
   - spark wants everyhting in memory as much as possible, then it will work on it
   - graph frames api replacing graphx 
   - databricks is a wrapper around spark 
@@ -17,9 +55,10 @@
   - read manipulate data in spark
   - push processing to cluster nodes 
   - do work on head node 
-- databricks deom
+- databricks demo
   - sc for spark context
-  - spark - more for sql (hive)
+  - spark 
+  - more for sql (hive)
   - sqlContext (for hive)
 
 - df methods

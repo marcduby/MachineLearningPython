@@ -1,5 +1,131 @@
 
 
+20201227 - ensemble learners
+https://www.youtube.com/watch?v=WtWxOhhZWX0&t=540s
+- learn several simple models and combne outputs to produce final decision
+- 2 groups
+  - sequential ensembl;e methods
+    - label previous mislabeeld examples with higher weights
+    - boosting
+  - parrallel ensemble nmetjhods
+    - ie: random forest
+    - averaging results
+      - can alseo due weighted avg (sum weghts = 1); give higher weight to model expected to perform better
+- 2 metrics
+  - robustness: takes in precitions of all the ensemble models
+  - accuracy: improved performance due to lessening of bias/overfitting
+- bagging
+  - also called bootstrap aggregation
+  - reduce variance by taking mean of mutiple estimates
+  - process  
+    - create randomly sampled datasets from original datasets
+    - build and fit several classiiers to each
+    - then take avg
+- random forests
+  - create random subsets of features
+  - create decorrelated decision trees
+- boosting 
+  - the errors of the previous model are corrected by the subsequent model
+    - for each step, give more weight to the incorrectly classified points from the previous step
+    - then combine the N learners for final classification 
+      - give higher weight to more accurate classifier
+    - alpha factor of adaboost
+      - alpha_t = (1/2) * ln((1 - Et)/Et)
+      - where error of step t is (correct -N )/N
+  - can use weak learners
+  - ie: each new tree is a fity on a modified version of the original datasets
+
+  - gradient boosting (GBM)
+    - each new model minimizes the loss function usign the gradient descent method
+      - new learner that is associated with the maximum minimizing of the loss function
+
+  - xgboost (extreme gradient boosting)
+    - library for developing fast and high performance gradient boosting tree models
+      - good at not overfitting
+      - tree based algorithm for classification, regression and ranking with custom loss functions
+      - more regularized model to reduce overfitting over gradient boost approach
+    - features
+      - tree construction in parallel using all cores while training
+      - can train in distributed cluster of machines for lareg models
+      - handles sparse data (missing values)
+      - can boost already fitted model on new data 
+    - parameters
+      - general
+        - number of threads
+          - if not entered, will auto detect number cores
+        - booster
+          - gbtree: tree based model (faster than linear)
+          - gblinear: linear function
+        - silent (0 will print msessages)
+      - task 
+        - objective
+          - reg:linear
+            - default rmse evaluation metric
+          - binary:lofistic: log regression for binary classification
+            - error for class metric 
+          - multi:softmax: multi class (specify num_class)
+            - mean avg precision for wevaluation metric 
+        - evaluation metrics
+      - bosster params 
+        - step size
+        - regularization
+        - for gbtree 
+          - eta for step size shrinkage
+          - gamma
+          - max_depth
+        - for gblinear 
+          - lambda: higher is more conservative
+
+
+
+
+
+
+
+
+
+
+
+20201222 - sklearn pipelines for production - pydata 2016
+- pipelines are containers of steps
+  - transformer
+    - 2 methods - transform and fit (rarely used)
+  - estimator
+    - fit() and predict() methods 
+  - pipelines- featureUnion
+- use pipleines to package workflow and fit model into single object
+- FeatureUnion joins the results of two pipleine outputs
+- why pipleines
+  - transformations written out once
+  - easy to swap out pieces
+  - readability
+  - keep all intermediate steps together
+  - support GridSearch
+  - can back up models in version control (code and pkl file)
+  - peers can check out and test models 
+- a pipeline is a set of transformers with an estimator at the bottom
+  - for transform() call, calls fit() and transform() on each contained object
+  - for predict() call, call transform() on each step then predict() on the last one
+- FeatureUnion is a horizontal pipeline
+  - feeds the results of the parrallel pipelines into a single merged output 
+
+- steps in model development
+  - feature engineering
+  - model selection
+  - hyperparameter optimization
+  - cross validation
+  - publish
+- saving pipeline to disk 
+  - joblib.dump(pipeline, './fit_pipeline.pkl')
+  - saved_pipeline = joblib.load('./fit_pipeline.pkl')
+- predict process 
+  - load model
+  - load input data 
+  - model.predict(data)
+  - write putput to db 
+
+
+
 20201203 - neo4j model ml 
 - notes
   - node embeddings of a graph

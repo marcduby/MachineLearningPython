@@ -8,13 +8,9 @@ from pyspark.sql.functions import col, struct, explode, when, lit, array_max, ar
 # variant_srcdir = 's3://dig-analysis-data/out/varianteffect/snp/'
 # out_dir = 's3:/dig-analysis-data/out/magma/step1'
 
-# development localhost directories
-# variant_srcdir = '/Users/mduby/Data/Broad/Magma/Snp/'
-# out_dir = '/Users/mduby/Data/Broad/Magma/Out/Step1'
-
 # localhost development localhost directories
-variant_srcdir = '/home/javaprog/Data/Broad/Magma/Snp/'
-out_dir = '/home/javaprog/Data/Broad/Magma/Out/Step1'
+variant_srcdir = '/home/javaprog/Data/Broad/dig-analysis-data/out/varianteffect/snp/'
+out_dir = '/home/javaprog/Data/Broad/dig-analysis-data/out/magma/step1'
 
 # print
 print("the variant input directory is: {}".format(variant_srcdir))

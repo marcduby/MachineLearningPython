@@ -1,0 +1,23 @@
+
+
+tagging:
+--------
+  - git tag -a v1.4 -m "my version 1.4"
+  - git tag                         # lists the tags
+  - git push origin v0.92_generate
+
+
+merging changes from another branch:
+------------------------------------
+  - git checkout from_branch
+  - git pull
+  - git checkout to_branch
+  - git pull
+  - git merge from_branch
+  - git push
+
+new branch:
+-----------
+  - git checkout -b <branch_name>
+  - git push -u origin ky_code_documentation
+

@@ -1,5 +1,18 @@
 
 
+20201223 - pipeline work
+- wrote test pipeline script using CA housing data
+  - standard scalar didn't help with R2 score 
+  - pca useless as well, best R2 score with full features
+  - there is a way to modify pipelines with 
+    - new_pipeline = Pipeline(old_pipeline.steps[1..2])
+    - new_pipeline = Pipeline(old_pipeline.steps[1] + old_pipeline.stape[3])
+
+- todo
+  - try pca with correlated features
+    - script correlation, then determine best dim for pca
+
+    
 20200426 - Hamburg PyData meetup - surrogate models
 import tensorflow as tf
 from tensorflow.keras.layers import Input, Dense, AlphaDropout

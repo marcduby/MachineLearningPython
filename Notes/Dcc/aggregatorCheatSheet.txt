@@ -61,3 +61,22 @@ troubleshooting
       -> stdout
 
 
+
+scratch:
+--------
+
+20200825 - cheatsheet
+- sbt new broadinstitute/dig-aggregator-method.g8
+- run --yes --only BioIndex/burden BioIndexProcessor
+
+- aggregator tips
+  - sbt> run --yes --only BioIndex/burden BioIndexProcessor
+
+- setup
+  - if have issues dig-aws
+    - checkout dig-aws alongside aggregator
+    - run 'sbt publishLocal' from that directory -> go to ivy
+  - scala rebel console to play with
+    - can start it from sbt, better to have your jars from the project in the classpath
+
+    

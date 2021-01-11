@@ -1,0 +1,27 @@
+
+
+
+
+Lesson02
+- classification
+  - w1 x1 + w2 x2 + b = 0
+    - if < 0, then refjected; if >= 0, accepted
+
+- for n dimensions, the seperation line is an n-1 hyperplane
+- step function of perceptron
+  - 1 if > 0, 0 otherwise
+
+- biological network
+  - neuron from brain takes in input from dendrites and outputs to axon an electrical impulse after applying a gating function
+
+- error functions
+  - cannot be discrete, must be continuous
+    - for correctly classified points, only add small error
+    - for incorrectly classified points, add laregr error proportional to distance to boundary line
+  - must be differentible
+  - gradient descent
+
+- non linear regions
+  - 
+
+

@@ -1,0 +1,8 @@
+
+
+model_selection:
+----------------
+  - KFold - for cross validation
+  - StratifiedKFold - takes group information into account for balanced folds for classification
+  - train_test_split() - train/test splitting
+
