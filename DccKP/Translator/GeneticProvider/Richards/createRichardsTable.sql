@@ -12,7 +12,7 @@ alter table gene_phenotype add gene_ncbi varchar(50);
 alter table gene_phenotype add index gene_idx (gene)
 
 -- data 
-update gene_phenotype set phenotype_efo = 'EFO_0004570' where phenotype = 'dbilirubin';
+update gene_phenotype set phenotype_efo = 'EFO:0004570' where phenotype = 'dbilirubin';
 
 update gene_phenotype set phenotype_efo = 'EFO:0004611' where phenotype = 'ldl';
 update gene_phenotype set phenotype_efo = 'EFO:0009270' where phenotype = 'ebmd';
@@ -122,6 +122,7 @@ update richards_gene rc join category_lookup cat on rc.phenotype = cat.disease
 set rc.category = cat.category;
 
 
+update richards_gene set phenotype = 'EFO:0004570' where phenotype_name = 'dbilirubin';
 update richards_gene set phenotype = 'EFO:0004611' where phenotype_name = 'ldl';
 update richards_gene set phenotype = 'EFO:0009270' where phenotype_name = 'ebmd';
 update richards_gene set phenotype = 'EFO:0004468' where phenotype_name = 'glucose';
@@ -138,3 +139,7 @@ select distinct rc.phenotype from richards_gene rc, category_lookup cat where ca
 
 create table category_lookup as 
 select distinct category, disease from MAGMA_GENES;
+
+
+-- data fixes
+

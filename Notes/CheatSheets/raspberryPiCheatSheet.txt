@@ -1,0 +1,6 @@
+
+
+
+new usb os:
+-----------
+  - dd bs=4M if=2020-12-02-raspios-buster-armhf.img of=/dev/sdX status=progress conv=fsync

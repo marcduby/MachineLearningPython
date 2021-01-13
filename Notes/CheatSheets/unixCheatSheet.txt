@@ -1,0 +1,10 @@
+
+
+screen:
+-------
+- script /dev/null
+
+
+http:
+-----
+- wget -S -X GET --content-on-error --header=Content-Type:application/json http://localhost:7001/trapi/predicates
