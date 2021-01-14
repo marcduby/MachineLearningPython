@@ -2,7 +2,7 @@
 
 exporting data:
 ---------------
-  - mysql mydb -e "select * from mytable" -B > mytable.tsv 
+  - mysql -u root -p tran_genepro -e "select * from gene_lookup" -B > gene.tsv 
 
   - mysqlimport --ignore-lines=1 --fields-terminated-by='\t' --local -u root -p Database TableName.csv
   - mysql -e "load data infile 'filename' into table TBL_NAME" dbname

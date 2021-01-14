@@ -1,0 +1,8 @@
+
+read in data:
+-------------
+  - df = spark.read.csv(path, sep=r'\t', header=True).select('col1','col2')
+
+write out data:
+---------------
+  - csvDf.write.option("delimiter", "\t").csv(output_path)
