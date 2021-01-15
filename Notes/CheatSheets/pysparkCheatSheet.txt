@@ -5,4 +5,12 @@ read in data:
 
 write out data:
 ---------------
-  - csvDf.write.option("delimiter", "\t").csv(output_path)
+  - csvDf.write.option("delimiter", "\t").csv(output_path, header='true')
+  - df.coalesce(1).write.format('json').save('myfile.json')                     # as one file
+
+manipulate data:
+----------------
+  - df.withColumn("day_type",when(col("data").isin(holydays), "HOLIDAY").otherwise(col("day_type"))).show()
+  
+    
+
