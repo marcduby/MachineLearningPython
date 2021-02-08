@@ -1,0 +1,31 @@
+
+
+
+20210125 - automated tests for python web apps
+- talk
+  - sqlalchemy will abstract out the DB type
+    - can be mysql, sqllite, etc
+  - libraries used
+    - flask
+    - flask_sqlalchemy
+    - pytest
+      - run by 'pytest -vv'
+
+
+- api/person/py
+  from flask inport Blueprint
+
+  person_bp = Blueprint('person', __name)
+
+  @person_bp.route("/person', methods=['POST])
+  def create_person():
+    return
+
+  @person_bp.route('/person/<int:id>', methods=['GET])
+  def get_person_id(id):
+    return
+
+
+- lookup
+  - why __init__.py in all dirs
+

@@ -1,0 +1,17 @@
+
+
+Models:
+  - classification
+    - SGDClassifer
+      - use scaling helps
+    - LinearDiscriminantAnalysis
+      - scaling does not helps
+    - Multinomial NB
+      - multinomial model good for classifying discrete gfeatures like work counts 
+      - use TfidVectorizer on data first
+      
+
+- page 72 chapter 3
+    - Multinomial NB
+      - multinomial model good for classifying discrete gfeatures like work counts 
+

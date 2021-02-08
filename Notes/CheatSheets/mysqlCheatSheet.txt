@@ -8,11 +8,23 @@ exporting data:
   - mysqlimport --ignore-lines=1 --fields-terminated-by='\t' --local -u root -p Database TableName.csv
   - mysql -e "load data infile 'filename' into table TBL_NAME" dbname
 
+  - mysqldump dbname `cat tables.txt` > dump_file.sql
 
 
+misc:
+-----
   - SELECT CONCAT(first_name, " ", last_name) AS Name FROM test.student  
 
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new-password';
+
+table size: 
+-----------
+
+SELECT 
+    table_name AS `Table`, 
+    round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB` 
+FROM information_schema.TABLES 
+WHERE table_schema = "digkb"
+    AND table_name = "common_dv23";
 
 
 new install:
@@ -28,4 +40,11 @@ mysql> FLUSH PRIVILEGES;
 mysql> exit;
 
 $ sudo service mysql restart
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new-password';
+
+
+%s/utf8mb4_0900_ai_ci/utf8mb4_unicode_ci/g
+
+
 

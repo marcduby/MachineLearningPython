@@ -1,0 +1,17 @@
+
+
+
+
+
+old KB metadata structure migration:
+------------------------------------
+
+select distinct dataset.TBL from META_MDV mdv, META_DATASET dataset where mdv.ver = 'mdv60' and mdv.DATASET = dataset.DATASET
+
+select distinct dataset.TBL from META_MDV mdv, META_DATASET_PH dataset where mdv.ver = 'mdv60' and mdv.DATASET = dataset.DATASET
+
+
+
+select distinct dataset.TBL from GEN_META_MDV mdv, GEN_META_DATASET dataset where mdv.ver = 'mdv60' and mdv.DATASET = dataset.DATASET
+
+

@@ -102,3 +102,10 @@ aws s3 cp s3://.../getmerge-strip-headers.sh .
 chmod +x getmerge-strip-headers.sh
 ./getmerge-strip-headers.sh s3://dig-analysis-data/out/magma/step1GatherVariants/part-* ./variants.csv
 
+
+vs code:
+--------
+- interactive python
+  - # %%
+
+  
