@@ -27,7 +27,14 @@ for param_tensor in model.state_dict():
 print("Optimizer's state_dict:")
 for var_name in optimizer.state_dict():
     print(var_name, "\t", optimizer.state_dict()[var_name])
-    
+
+
+Layers:
+-------
+- nn.Embedding
+  - used for NLP, first layer
+  - simplifies giving vector of len(num_words) with indices as opposed to large 1 hot matrix
+
     
     
 torch.save(model.state_dict(), PATH)
@@ -36,6 +43,11 @@ Load:
 model = TheModelClass(*args, **kwargs)
 model.load_state_dict(torch.load(PATH))
 model.eval()
+
+
+
+
+
 
 
 - Basset lessons

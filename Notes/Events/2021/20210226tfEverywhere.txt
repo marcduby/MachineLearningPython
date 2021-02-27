@@ -1,0 +1,45 @@
+
+
+202102261300 - josh gordon, intro to deep learning
+
+- DL used for projects with lots of features
+- add non linear sctivation function (ie: relu) on each layer 
+  - the non linearity allows each layer to learn different types of features 
+- width of network (# of cells per layer) determines the features you cabn model on each layer
+  - depth of network (# of layers) determined depth of the features types
+- with relu, the gradient never valishes
+
+
+202102261345 - RNNs
+- LSTM 
+  - 2 type sif gates, forget gate and outoput gate
+    - reduces the vanishing gradient problem
+    
+  - example
+    - use 5 previous data for predicting next target 
+
+202102261430 - NLP
+
+202102261510 - ML best practices 
+- export often data for training so use almost real time data for the model 
+  - avoid data drift as real world adapts to the model
+- experiment on model in notebooks 
+  - once productionaized, put into pipelines 
+- if starting from scratch, look at tf validation
+
+
+Look into
+- TF transform
+  - a way to take a transformation pipeline thast gets saved as a transformation graph 
+    - better to pass onto production so model can take in raw data, first processed by transformation graph
+- tf community groups
+- the qwiklabs offer, expires 03/06/21
+  - goo.gle/tfeverywhere-qwiklabs
+
+
+Bookes to look at:
+- deep leaning with pyhon, chollet (manning)
+  - good book for TF tutorial
+- hand-on ML wirth scikit and TF (oreilly)
+- deep learning
+  - free 

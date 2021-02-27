@@ -77,6 +77,11 @@ flask:
 ------
   - __main__.py has the port setting
   
+helpful libs:
+-------------
+- PyPDF2 - read PDFs
+- nltk - word vectorizing
+
 
 scala code:
 -----------

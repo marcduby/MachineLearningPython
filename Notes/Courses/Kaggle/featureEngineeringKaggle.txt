@@ -1,0 +1,35 @@
+
+
+- why feture engineering
+  - make the feature better amenable to the model
+    - if the model is linear, best to have linear features
+  - reduce domain space
+  - want features that has relationship to the target (y)
+  - whatever the model can't learn, you can provide through transformations of features
+
+- mutual information
+  - measures the relatio0nship between a feature and the target
+    - as one changes, it will tell you more about the other
+  - above 2.0 is good for the feature' 0 means independence
+  - helps you select you fetures
+  - only works with one feature; cannot determine if a feature works well with another to determine target
+  - feature only useful if your model can tease out the relationship with the target
+  
+
+
+
+
+
+code snippets:
+---------------
+X = df.copy()
+y = X.pop('target')
+
+
+# Train and score model on dataset with additional ratio features
+model = RandomForestRegressor(criterion="mae", random_state=0)
+score = cross_val_score(
+    model, X, y, cv=5, scoring="neg_mean_absolute_error"
+)
+score = -1 * score.mean()
+

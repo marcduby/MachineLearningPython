@@ -1,5 +1,12 @@
 
 
+df select:
+----------
+- X = df.copy()
+- y = X.pop('target')
+- list_columns = X.select_dtype('object')
+
+
 dataframe info
 --------------
   - df.name.unique()
