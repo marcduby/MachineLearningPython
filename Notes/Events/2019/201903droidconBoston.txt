@@ -1,0 +1,9 @@
+
+
+20190409 - droidcon boston 2019
+- auto ml
+  - to generate photos, can take youtube cip and use tool to break down into individual photos
+  - https://github.com/apkelly/DroidCon-Boston-2019
+
+
+

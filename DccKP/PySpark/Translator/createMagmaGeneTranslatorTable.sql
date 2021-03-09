@@ -23,6 +23,7 @@ alter table magma_gene_phenotype add index mgp_ncbi_id_idx (ncbi_id);
 alter table magma_gene_phenotype add index mgp_p_value_idx (p_value);
 alter table magma_gene_phenotype add index mgp_category_idx (biolink_category);
 
+select * from magma_gene_phenotype;
 
 -- load the data to mysql
 -- cp results/part-00000-9f731952-6cc0-4651-bf58-a57d73c672b8-c000.csv magma_gene_phenotype.tsv

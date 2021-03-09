@@ -11,21 +11,28 @@ print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('
 
 # constants
 list_size = 20
-number_epochs = 5
+number_epochs = 500
 
 # create data
-X = [x for x in range(list_size)]
-y = [2 * x - 1 for x in range(list_size)]
+z = range(-3, 6, 2)
+X = [float(x) for x in z]
+y = [float(2 * x - 1) for x in z]
 print("got features {}".format(X))
 print("got target {}".format(y))
 
 # create numpy features
 X = np.array(X, dtype=float)
 y = np.array(y, dtype=float)
+
+# debug
+# X = np.array([-1.0, 0.0, 1.0, 2.0, 3.0, 4.0], dtype=float)
+# y = np.array([-3.0, -1.0, 1.0, 3.0, 5.0, 7.0], dtype=float)
+print("got features {}".format(X))
+print("got target {}".format(y))
 print("got features shape {}".format(X.shape))
 
 # build the network
-layer0 = Dense(units=1, input_shape=[1], activation=tf.nn.relu)
+layer0 = Dense(units=1, input_shape=[1])
 model = Sequential([layer0])
 model.compile(optimizer='sgd', loss='mean_squared_error')
 

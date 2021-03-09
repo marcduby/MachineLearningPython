@@ -1,0 +1,40 @@
+
+
+20190401 - tech books, points
+- best
+  - deep leranign with applications using python
+    - python
+    - low level TF (tensors, activation, loss, optimization)
+    -
+
+  - apploied deep learning
+    - python, TF, jupyter
+    
+
+- ok
+  - practical aritifcial intelligence
+    - c#, ok model building
+    
+    
+- to sort
+  - deep learning for natural language processing
+    - python
+    - numpy, pandas, scipy
+
+  - deep erning wih azure
+    - covers the different network architectures
+
+  - deep learning with python
+    - theano
+    - intro to tf and pytorch at the end
+    
+  - intro to DL business apps for devs
+    - covers various netwoks, plus biz cases and how to solve
+    
+  - intro to DL using R
+    - dicuses various models,
+    
+  - ML in R
+    - R implmentations, practical
+
+

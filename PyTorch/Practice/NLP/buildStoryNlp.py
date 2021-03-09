@@ -5,6 +5,8 @@ import PyPDF2 as pypdf
 import nltk
 from nltk.tokenize import word_tokenize
 import string
+import torch
+from torch import autograd, nn, optim
 
 # file locations
 pdf_file = '/home/javaprog/Data/Personal/PyTorch/NLP/Coraline.pdf'
@@ -33,3 +35,35 @@ pdf_words = word_tokenize(pdf_text)
 pdf_word_set = set(pdf_words)
 print("got {} words in the document, wit unique count of {}".format(len(pdf_words), len(pdf_word_set)))
 print("tokenized words are: {}".format(pdf_words[1:temp_size]))
+
+
+
+# define the nlp network
+class Nlp(nn.Module):
+    '''
+    use nn.Relu in case switch to activation layer with memory
+    '''
+    def __init__(self, vocabulary_size, embedding_vector_size):
+        super().__init__();
+        self.embedding01 = nn.Embedding(vocabulary_size, embedding_vector_size)
+        self.linear01 = nn.Linear(embedding_vector_size, 128)
+        self.activation01 = nn.ReLU()
+        self.linear02 = nn.Linear(128, 512)
+        self.activation02 = nn.ReLU()
+        self.linear03 = nn.Linear(512, vocabulary_size)
+        self.activation03 = nn.log_softmax()
+
+
+    def forward(self, inputs):
+        output = self.embedding01(inputs)
+        output = self.activation01(self.linear01(output))
+        output = self.activation02(self.linear02(output))
+        output = self.activation03(self.linear03(output))
+
+        return output
+
+
+
+
+
+

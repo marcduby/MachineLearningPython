@@ -1,0 +1,22 @@
+
+
+20191116 - pycon video notes
+- rtatman presentation, non nn models
+  - nn can cost $56k to train from scratch
+  - other classes
+    - regression tehniques, families of them (linear, mixed effect)
+    - tree (random forests popular kaggle)
+      - to avoid overfitting, people will delete leaves or level above after training
+    - distance (nearest neighbor, gaussian mixture models, support vector machines)
+    
+
+
+20191115 - pydata video notes
+- notes
+  - read google's rules on ML
+  - MRR used for ranking algorithm metric
+  - for logistic regression, use log loss function
+  - tf estimator api, can use tree and linear models easily
+  - tf used to be able to serialize models from python and load them in go
+
+

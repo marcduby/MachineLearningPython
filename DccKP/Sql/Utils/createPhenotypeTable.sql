@@ -46,3 +46,7 @@ alter table phenotype_id_lookup add index p2look_tran_code_idx (phenotype_code);
 alter table phenotype_id_lookup add index p2look_tran_lookup_id_idx (tran_lookup_id);
 
 
+
+-- 20210115 - 220 phenotypes on 01/15/21 before fix to avoid dup names
+-- 20210115 - 210 after dup names taken out and reloaded
+

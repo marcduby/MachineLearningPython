@@ -3,6 +3,11 @@
 #       mysql -u root -p tran_genepro -e "select * from gene_lookup" -B > gene.tsv
 # to generate efo/mondo file: 
 #       mysql -u root -p tran_genepro -e "select * from phenotype_id_lookup" -B > phenotype_efo_mondo.tsv
+# 
+# to load the generated file
+#       SET GLOBAL local_infile=1;
+#       mysqlimport --ignore-lines=1 --fields-terminated-by='\t' --local -u root -p tran_genepro magma_gene_phenotype.tsv
+#
 
 
 # imports

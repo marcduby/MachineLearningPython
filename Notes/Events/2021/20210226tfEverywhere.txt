@@ -28,6 +28,57 @@
 - if starting from scratch, look at tf validation
 
 
+202102271220 - transfer learning
+- playground.tensorflow.org
+  - the width of the lines in the model are the size of the weights 
+- teachable machine link on browser
+  - https://teachablemachine.withgoogle.com/
+
+
+202102271300 - TF js 
+- rewatch again for all the examples
+  - height/size estimator
+  - laser eyes in web 
+  - face mesh 
+  - tf playgorund 
+  - bounding box models 
+
+- look into tf js converter codelab
+
+
+202102271345 - from zero to hero 
+- maxpooling layer 
+  - way to compress the image as you build up the features
+  - conv2d(16, (3, 3)) -> creates 16 new images with 16 filters
+    - so use max pool to compress the 16 new images you created from the input image 
+  - conv2d(32, (3, 3)) for next layer creates 32 new images from each of the 16 images created from the previous layer 
+- RMSprop
+  - root mean square propagation
+- use Adam optimizer to start when optimizing 
+  - it can tweak itself
+- use relu on all layers except the last one 
+
+
+202102271420 - TF on the edge
+- precision 
+  - expression of true pos i relation to fal pool
+- recall 
+  - exp of tru pos in rel to false neg 
+
+
+202102271500 - TF on JS 
+- for transfer learning on image based net, freeze after the last con2d/maxpool layer combo
+  - then add new flatten and linear/dense layers 
+  - then train 
+
+
+202102271540 - becoming an ML engineer 
+- academics for ugrads
+  - math, stats, cs 
+  - take grad level courses
+  - take non tech electives in fields with quantitative research
+- stopped at 4:05
+
 Look into
 - TF transform
   - a way to take a transformation pipeline thast gets saved as a transformation graph 
@@ -35,7 +86,14 @@ Look into
 - tf community groups
 - the qwiklabs offer, expires 03/06/21
   - goo.gle/tfeverywhere-qwiklabs
+- teachable machine link on browser
+  - https://teachablemachine.withgoogle.com/
 
+
+
+goo.gle/tfeverywhere-survey2
+
+https://docs.google.com/forms/d/e/1FAIpQLSdF0eNhyfYwTegeuUEaSzC6VLp-FMp_JHhyHJckyEVN9wYSIA/formResponse
 
 Bookes to look at:
 - deep leaning with pyhon, chollet (manning)
@@ -43,3 +101,4 @@ Bookes to look at:
 - hand-on ML wirth scikit and TF (oreilly)
 - deep learning
   - free 
+- deep learning with javascript (manning)

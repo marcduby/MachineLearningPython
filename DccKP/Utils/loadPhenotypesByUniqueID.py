@@ -9,23 +9,25 @@ import numpy as np
 file_location = "/home/javaprog/Data/Broad/Shared/phenoOntology.tsv"
 
 # method to build map
-def get_ontology_map(df, ontology_key, name_key, input_id_map, input_code_map, add_duplicate_phenotypes=False):
+def get_ontology_map(df, ontology_key, name_key, input_id_map, input_code_map, input_phenotype_name_map, add_duplicate_phenotypes=False):
     """will take in a df and populate the map based on the key given"""
 
     # loop
     for index, row in df.iterrows():
         key = row[ontology_key]
         code = row['PH']
+        phenotype_name = row[name_key]
 
         # if key not yet in map
-        if key not in input_id_map:
-            if add_duplicate_phenotypes or code not in input_code_map:
+        if key not in input_id_map and key is not None:
+            if add_duplicate_phenotypes or (code not in input_code_map and phenotype_name not in input_phenotype_name_map):
                 temp_map = {'id': key, 'code': code, 'type': ontology_key, 'name': row[name_key], 'dichotomous': row['Dichotomous'], 'category': row['Category'], 'group': row['Group']}
                 input_id_map[key] = temp_map
                 input_code_map[code] = temp_map
+                input_phenotype_name_map[phenotype_name] = temp_map
 
     # return
-    return input_id_map, input_code_map
+    return input_id_map, input_code_map, input_phenotype_name_map
 
 # load the file and inspect
 phenotype_df = pd.read_csv (file_location, sep = '\t')
@@ -39,27 +41,29 @@ load_pheno_df = phenotype_df.replace({np.nan: None})
 # build map with only unique ontology IDs
 ontology_map = {}
 code_map = {}
+phennotype_name_map = {}
 
 # load efo exact
-ontology_map, code_map = get_ontology_map(load_pheno_df, 'EFO ID exact', 'EFO term exact', ontology_map, code_map)
+ontology_map, code_map, phennotype_name_map = get_ontology_map(load_pheno_df, 'EFO ID exact', 'EFO term exact', ontology_map, code_map, phennotype_name_map)
 print("got efo exact ontology length of: {} and code length of: {}".format(len(ontology_map), len(code_map)))
 
 # load mondo exact
 # ontology_map, code_map = get_ontology_map(load_pheno_df, 'MONDO ID exact', 'MONDO term exact', ontology_map, code_map, True)
-ontology_map, code_map = get_ontology_map(load_pheno_df, 'MONDO ID exact', 'MONDO term exact', ontology_map, code_map)
+ontology_map, code_map,phennotype_name_map = get_ontology_map(load_pheno_df, 'MONDO ID exact', 'MONDO term exact', ontology_map, code_map, phennotype_name_map)
 print("got mondo exact ontology length of: {} and code length of: {}".format(len(ontology_map), len(code_map)))
 
 # load efo closest
-ontology_map, code_map = get_ontology_map(load_pheno_df, 'EFO ID closest parent', 'EFO term closest parent', ontology_map, code_map)
+ontology_map, code_map, phennotype_name_map = get_ontology_map(load_pheno_df, 'EFO ID closest parent', 'EFO term closest parent', ontology_map, code_map,phennotype_name_map)
 print("got efo closest ontology length of: {} and code length of: {}".format(len(ontology_map), len(code_map)))
 
 # load mondo exact
-ontology_map, code_map = get_ontology_map(load_pheno_df, 'MONDO ID closest parent', 'MONDO term closest parent', ontology_map, code_map)
+ontology_map, code_map, phennotype_name_map = get_ontology_map(load_pheno_df, 'MONDO ID closest parent', 'MONDO term closest parent', ontology_map, code_map, phennotype_name_map)
 print("got mondo closest ontology length of: {} and code length of: {}".format(len(ontology_map), len(code_map)))
 
 
 # save to database
-# conn = mdb.connect(host='localhost', user='root', password='this aint no password', charset='utf8', db='genetics_lookup')
+# conn = mdb.connect(host='localhost', user='root', password='this aint no password', charset='utf8', db='tran_genepro')
+conn = mdb.connect(host='localhost', user='root', password='yoyoma', charset='utf8', db='tran_genepro')
 cur = conn.cursor()
 
 sql = """insert into `phenotype_id_lookup` (phenotype_code, ontology_name, dichotomous, 
