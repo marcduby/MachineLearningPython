@@ -6,9 +6,11 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.metrics import f1_score, accuracy_score
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.naive_bayes import MultinomialNB, GaussianNB, BernoulliNB
-from sklearn.linear_model import RidgeClassifier, LogisticRegression, LogisticRegressionCV
+from sklearn.linear_model import RidgeClassifier, LogisticRegression, LogisticRegressionCV, PassiveAggressiveClassifier, SGDClassifier, Perceptron
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.gaussian_process import GaussianProcessClassifier
+from sklearn.neighbors import NearestCentroid, KNeighborsClassifier
+from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 import time
 
 print("got pandas version {}".format(pd.__version__))
@@ -59,11 +61,24 @@ def one_hot(X_train, X_test):
 
 # constants
 timestr = time.strftime("%Y%m%d-%H%M%S")
-train_file = "/home/javaprog/Data/Personal/Kaggle/202103tabularPlayground/train.csv"
-train_file = "/Users/mduby/Data/Kaggle/202103tabularPlayground/train.csv"
-test_file = "/Users/mduby/Data/Kaggle/202103tabularPlayground/test.csv"
-submission_file = "/Users/mduby/Data/Kaggle/202103tabularPlayground/Submissions/" + timestr + "-{}-{}-submit.csv"
+home_dir = "/Users/mduby/Data"
+home_dir = "/home/javaprog/Data/Personal"
+train_file = home_dir + "/Kaggle/202103tabularPlayground/train.csv"
+train_file = home_dir + "/Kaggle/202103tabularPlayground/train.csv"
+test_file = home_dir + "/Kaggle/202103tabularPlayground/test.csv"
+submission_file = home_dir + "/Kaggle/202103tabularPlayground/Submissions/" + timestr + "-{}-{}-submit.csv"
 random_state = 23
+
+# set of classiffiers
+model_set = {
+    # "knn": KNeighborsClassifier(2),
+    # "QDA": QuadraticDiscriminantAnalysis(), 
+    # "ncentroid": NearestCentroid(),
+    # "passiveAgressive": PassiveAggressiveClassifier(),
+    # "perceptron": Perceptron(),
+    "sgd": SGDClassifier(alpha=0.0001, penalty='elasticnet'),
+    # "bernoulli": BernoulliNB(alpha=0.1)
+}
 
 # read the data
 df_train = pd.read_csv(train_file)
@@ -94,28 +109,30 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=random_st
 print("got train features {} with target {}".format(X_train.shape, y_train.shape))
 print("got test features {} with target {}".format(X_test.shape, y_test.shape))
 
-# train a bayes classifier
-model = LogisticRegressionCV()
-model.fit(X_train, y_train)
+# loop through all models
+for name, model in model_set.items():
+    # train a bayes classifier
+    print("\nfitting model: {} - {}".format(name, model.__class__.__name__))
+    model.fit(X_train, y_train)
 
-# get the scores
-f1_score = get_f1_score(model, X_test, y_test)
-get_accuracy_scores(model, X_train, y_train, X_test, y_test)
-# cv_score = get_cross(model, X, y)
-# print("got CV score {}".format(cv_score))
+    # get the scores
+    f1_score = get_f1_score(model, X_test, y_test)
+    get_accuracy_scores(model, X_train, y_train, X_test, y_test)
+    # cv_score = get_cross(model, X, y)
+    # print("got CV score {}".format(cv_score))
 
-# fit the data on all data
-model.fit(X, y)
+    # fit the data on all data
+    model.fit(X, y)
 
-# read in the test set and predict
-print("predict test file {}".format(test_file))
-submit_series = X_submit['id']
-X_submit = X_submit.drop(['id'], axis=1)
-y_submit = model.predict(X_submit)
-submit_df = pd.concat([submit_series, pd.Series(y_submit, name='target')], axis=1)
-print("results dataframe type {} \n{}".format(type(submit_df), submit_df.head(5)))
+    # read in the test set and predict
+    print("predict test file {}".format(test_file))
+    submit_series = X_submit['id']
+    X_submit = X_submit.drop(['id'], axis=1)
+    y_submit = model.predict(X_submit)
+    submit_df = pd.concat([submit_series, pd.Series(y_submit, name='target')], axis=1)
+    print("results dataframe type {} \n{}".format(type(submit_df), submit_df.head(5)))
 
-# write out submission file
-submission_file = submission_file.format(model.__class__.__name__, str(f1_score))
-submit_df.to_csv(submission_file, index=False)
-print("write submission file {}".format(submission_file))
+    # write out submission file
+    submission_file = submission_file.format(model.__class__.__name__, str(f1_score))
+    submit_df.to_csv(submission_file, index=False)
+    print("write submission file {}".format(submission_file))

@@ -45,10 +45,12 @@ def one_hot(X_train, X_test):
 
 # constants
 timestr = time.strftime("%Y%m%d-%H%M%S")
-train_file = "/home/javaprog/Data/Personal/Kaggle/202103tabularPlayground/train.csv"
-train_file = "/Users/mduby/Data/Kaggle/202103tabularPlayground/train.csv"
-test_file = "/Users/mduby/Data/Kaggle/202103tabularPlayground/test.csv"
-submission_file = "/Users/mduby/Data/Kaggle/202103tabularPlayground/" + timestr + "-submit.csv"
+home_dir = "/Users/mduby/Data"
+home_dir = "/home/javaprog/Data/Personal"
+train_file = home_dir + "/Kaggle/202103tabularPlayground/train.csv"
+train_file = home_dir + "/Kaggle/202103tabularPlayground/train.csv"
+test_file = home_dir + "/Kaggle/202103tabularPlayground/test.csv"
+submission_file = home_dir + "/Kaggle/202103tabularPlayground/" + timestr + "-submit.csv"
 random_state = 23
 
 # read the data

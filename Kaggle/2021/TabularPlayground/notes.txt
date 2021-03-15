@@ -1,0 +1,6 @@
+
+20210315 - todo
+- try abeled neural net
+- try embedded neural net
+- try voting ensemble 
+- try splitting cat/cont into seperate algos
