@@ -26,6 +26,9 @@ for col in columns:
         unique = df[col].unique()
         print("col {} got {} values: {}".format(col, len(unique), unique))
 
+# categorical columns
+categorical = [cat for cat in columns if 'cat' in cat]
+print("categorical columns {}".format(categorical))
 
 # df = pd.get_dummies(df, prefix=columns)
 # df = pd.get_dummies(df, prefix=['cat12'])
