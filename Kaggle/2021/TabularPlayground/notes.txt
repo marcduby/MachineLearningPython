@@ -1,6 +1,21 @@
 
+
+20210317 - process notes
+- dataset imbaalnced
+  - was always getting 83% accuacy in training, but less om kaggle
+  - try upscaling the minoroty dataset
+- tried dummies, but create sprase matrix
+  - bernoulli worked well with sparse
+  - used bnary encodser instead, got better results
+- ensemble methods also better results
+
+
+
 20210315 - todo
 - try abeled neural net
 - try embedded neural net
 - try voting ensemble 
 - try splitting cat/cont into seperate algos
+
+
+

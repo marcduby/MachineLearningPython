@@ -34,5 +34,10 @@ print("categorical columns {}".format(categorical))
 # df = pd.get_dummies(df, prefix=['cat12'])
 X = df.drop(['id', 'target'], axis=1)
 y = df['target']
-X = pd.get_dummies(X)
 X.info()
+
+# look at the distribution of targets
+counts = df['target'].value_counts()
+print("got type {} value counts \n{}".format(type(counts), counts))
+
+
