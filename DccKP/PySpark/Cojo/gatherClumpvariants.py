@@ -20,6 +20,8 @@ def main():
     # input and output directories
     dir_s3 = f's3://dig-analysis-data/out'
     dir_s3 = f'/home/javaprog/Data/Broad/dig-analysis-data/out'
+    dir_s3 = f'/Users/mduby/Data/Broad/dig-analysis-data/out'
+    dir_snp = f'{dir_s3}/varianteffect/snp'
     dir_common = f'{dir_s3}/metaanalysis/trans-ethnic/{args.phenotype}'
     dir_clump = f'{dir_s3}/metaanalysis/clumped/{args.phenotype}'
     dir_out = f'{dir_s3}/finemapping/{args.phenotype}'
@@ -27,12 +29,16 @@ def main():
     # start spark
     spark = SparkSession.builder.appName('cojo').getOrCreate()
 
-    # load variants and phenotype associations
-    df_common = spark.read.json(f'{dir_common}/part-*')
-    df_common.show()
+    # load the snps
+    df_snp = spark.read.csv(f'{dir_snp}/*.csv', sep='\t', header=True)
+    print("got snps df of size {}".format(df_snp.count()))
 
-    df_clump = spark.read.json(f'{dir_clump}/part-*')
-    df_clump.show()
+    # load variants and phenotype associations
+    # df_common = spark.read.json(f'{dir_common}/part-*')
+    # df_common.show()
+
+    # df_clump = spark.read.json(f'{dir_clump}/part-*')
+    # df_clump.show()
 
     # first join on rsID
     # # drop variants with no dbSNP and join
