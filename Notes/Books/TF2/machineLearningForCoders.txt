@@ -3,8 +3,10 @@
 Chapter 1:
 ----------
 - Model below will not converge of y = 2x - 1 for x >= 0
+  - switching to range with at least 1 X below 0 fixed it
 layer0 = Dense(units=1, input_shape=[1])
 model = Sequential([layer0])
 model.compile(optimizer='sgd', loss='mean_squared_error')
+
 
 

@@ -1,4 +1,11 @@
 
+# TODO
+# - add callback array (https://stackoverflow.com/questions/62630291/callback-claim-that-val-loss-did-not-improve-while-it-clearly-show-that-it-did)
+# - add semi supervised
+# - add dropout
+# - read overfitting (https://www.tensorflow.org/tutorials/keras/overfit_and_underfit)
+
+
 # imports
 import pandas as pd 
 import tensorflow as tf
@@ -13,14 +20,15 @@ print("got tensorflow version {}".format(tf.__version__))
 
 import sys
 dir_code = "/Users/mduby/Code/WorkspacePython/"
+dir_code = "/home/javaprog/Code/PythonWorkspace/"
 sys.path.insert(0, dir_code + 'MachineLearningPython/Libraries')
 from preprocessLib import resample_dataset
 
 # constants
-num_epochs = 25
+num_epochs = 50
 timestr = time.strftime("%Y%m%d-%H%M%S")
-home_dir = "/home/javaprog/Data/Personal"
 home_dir = "/Users/mduby/Data"
+home_dir = "/home/javaprog/Data/Personal"
 train_file = home_dir + "/Kaggle/202103tabularPlayground/train.csv"
 train_file = home_dir + "/Kaggle/202103tabularPlayground/train.csv"
 test_file = home_dir + "/Kaggle/202103tabularPlayground/test.csv"
@@ -31,8 +39,10 @@ random_state = 23
 def get_model():
     # build model
     model = tf.keras.Sequential([
-        tf.keras.layers.Dense(20, activation='relu'),
-        tf.keras.layers.Dense(10, activation='relu'),
+        tf.keras.layers.Dense(50, activation='relu'),
+        tf.keras.layers.Dropout(0.1),
+        tf.keras.layers.Dense(50, activation='relu'),
+        tf.keras.layers.Dropout(0.5),
         tf.keras.layers.Dense(1, activation='sigmoid'),
     ])
 

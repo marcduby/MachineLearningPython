@@ -5,7 +5,7 @@ import argparse
 
 from pyspark.sql import SparkSession
 from pyspark.sql.types import IntegerType
-
+from pyspark.sql.functions import col, input_file_name, regexp_extract
 
 def main():
     """
@@ -35,7 +35,9 @@ def main():
     # df_snp.show()
 
     # load variants and phenotype associations
-    df_meta = spark.read.json(f'{dir_meta}/part-*')
+    df_meta = spark.read.json(f'{dir_meta}/part-*') \
+        .withColumn('filename', input_file_name()) \
+        .withColumn('ancestry', regexp_extract('filename', r'/ancestry=([^/]+)/', 1))    
     print("got metaanalysis df of size {}".format(df_meta.count()))
     # df_meta.show()
 
@@ -50,6 +52,7 @@ def main():
                     df_meta.beta,
                     df_meta.n, 
                     df_meta.chromosome, 
+                    df_meta.ancestry, 
                 )
     print("got joined metaanalysis df of size {}".format(df_meta.count()))
     # df_meta.show()
@@ -91,7 +94,7 @@ def main():
                     df_meta.reference, 
                     df_meta.eaf, 
                     df_meta.beta,
-                    df_meta.beta,
+                    df_meta.stdErr, 
                     df_meta.pValue, 
                     df_meta.n, 
                 ) \
@@ -99,7 +102,9 @@ def main():
                 .filter(df_meta.ancestry == ancestry)
 
             # write out the file
-            df_write.write \
+            df_write \
+                .coalesce(1) \
+                .write \
                 .mode('overwrite') \
                 .csv(file_out, sep='\t', header='true')
 
@@ -113,11 +118,6 @@ def main():
     # - se - standard error
     # - p - p-value 
     # - N - sample size
-
-    # output results
-    # df.write \
-    #     .mode('overwrite') \
-    #     .csv(dir_out, sep='\t', header='true')
 
     # done
     spark.stop()

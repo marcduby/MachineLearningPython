@@ -1,4 +1,12 @@
 
+20210318 - aiqc talk 
+- look at 
+  - docs.peewee-orm.com
+  - flow forecast deep learning 
+    - time series forecasting 
+- https://github.com/AIStream-Peelout/flow-forecast
+
+
 20201217 - pydate boston talks
 - 20201217b - ML in cyber security
 

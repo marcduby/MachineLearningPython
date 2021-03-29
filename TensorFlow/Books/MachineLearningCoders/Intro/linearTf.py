@@ -41,3 +41,8 @@ model.fit(X, y, epochs=number_epochs)
 
 # print the weights
 print("got the dense layer weights of: {}".format(layer0.get_weights()))
+
+# predict
+X_test = np.array([20.0, 11.0], dtype=float)
+y_predict = model.predict(X_test)
+print("got predict of type {} and data {}".format(type(y_predict), y_predict))
