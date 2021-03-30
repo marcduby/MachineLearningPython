@@ -122,6 +122,8 @@ Steps:
   - pd.read_csv()
 - look for na data, remove or replace
   - df.dropna()
+- look for correlation between features
+- if categorization, balnce out the data
 - split out the labels/features
   - labels = features.pop("Survived")
 - one hot encode

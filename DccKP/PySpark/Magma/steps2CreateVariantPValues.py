@@ -10,14 +10,14 @@ from pyspark.sql.functions import col, struct, explode, when, lit, array_max, ar
 # outdir = 's3:/dig-analysis-data/out/varianteffect/magma/step2'
 
 # development localhost directories
-# variant_srcdir = '/Users/mduby/Data/Broad/Magma/Snp'
-# pvalue_srcdir = '/Users/mduby/Data/Broad/Magma/Phenotype/'
-# out_dir = '/Users/mduby/Data/Broad/Magma/Out/Step2'
+variant_srcdir = '/Users/mduby/Data/Broad/Magma/Snp'
+pvalue_srcdir = '/Users/mduby/Data/Broad/Magma/Phenotype/'
+out_dir = '/Users/mduby/Data/Broad/Magma/Out/Step2'
 
 # localhost development localhost directories
-variant_srcdir = '/home/javaprog/Data/Broad/Magma/Snp/'
-pvalue_srcdir = '/home/javaprog/Data/Broad/Magma/Phenotype/'
-out_dir = '/home/javaprog/Data/Broad/Magma/Out/Step2'
+# variant_srcdir = '/home/javaprog/Data/Broad/Magma/Snp/'
+# pvalue_srcdir = '/home/javaprog/Data/Broad/Magma/Phenotype/'
+# out_dir = '/home/javaprog/Data/Broad/Magma/Out/Step2'
 
 # common variables
 phenotype = 'BMI'

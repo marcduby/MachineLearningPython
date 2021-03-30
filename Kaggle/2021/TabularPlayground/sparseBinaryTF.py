@@ -19,16 +19,17 @@ print("got pandas version {}".format(pd.__version__))
 print("got tensorflow version {}".format(tf.__version__))
 
 import sys
-dir_code = "/Users/mduby/Code/WorkspacePython/"
 dir_code = "/home/javaprog/Code/PythonWorkspace/"
+dir_code = "/Users/mduby/Code/WorkspacePython/"
 sys.path.insert(0, dir_code + 'MachineLearningPython/Libraries')
 from preprocessLib import resample_dataset
+from tfModelLib import tf_pseudo_sample_fit
 
 # constants
 num_epochs = 50
 timestr = time.strftime("%Y%m%d-%H%M%S")
-home_dir = "/Users/mduby/Data"
 home_dir = "/home/javaprog/Data/Personal"
+home_dir = "/Users/mduby/Data"
 train_file = home_dir + "/Kaggle/202103tabularPlayground/train.csv"
 train_file = home_dir + "/Kaggle/202103tabularPlayground/train.csv"
 test_file = home_dir + "/Kaggle/202103tabularPlayground/test.csv"
@@ -91,15 +92,16 @@ X_submit = encoder.transform(X_submit)
 print("after encoding, got train feature shape {}/{} and submit feature shape {}".format(X.shape, y.shape, X_submit.shape))
 
 # convert to numpy arrays
-X = X.to_numpy()
-y = y.to_numpy()
+# X = X.to_numpy()
+# y = y.to_numpy()
 # convert to tensors
 # dataset_train = tf.data.Dataset.from_tensor_slices((X.values, y.values))
 
 # fit the model
 model = get_model()
 # model.fit(dataset_train, epochs=num_epochs)
-model.fit(X, y, epochs=num_epochs)
+# model.fit(X, y, epochs=num_epochs)
+model = tf_pseudo_sample_fit(get_model, X, y, X_submit, 2, False)
 
 # get the scores
 # y_test = model.predict(X)

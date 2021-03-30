@@ -20,7 +20,7 @@ from category_encoders import BinaryEncoder
 import sys
 dir_code = "/Users/mduby/Code/WorkspacePython/"
 sys.path.insert(0, dir_code + 'MachineLearningPython/Libraries')
-from preprocessLib import resample_dataset
+from preprocessLib import resample_dataset, pseudo_sample_fit
 
 
 print("got pandas version {}".format(pd.__version__))
@@ -49,31 +49,6 @@ def get_model_score(model, X_test, y_test):
 def get_cross(model, data, target, groups=10):
     return cross_val_score(model, data, target, cv=groups)
 
-def one_hot(X_train, X_test):
-    ''' combines the train and test DF and one hots the combined df '''
-    # add column to dataframes
-    X_train['split'] = 'train'
-    X_test['split'] = 'test'
-
-    # combine data frames
-    X_combined = pd.concat([X_train, X_test], axis=0)
-
-    # get categorical column list
-    categorical = [cat for cat in columns if 'cat' in cat]
-
-    # one hot
-    X_combined = pd.get_dummies(X_combined, columns=categorical)
-
-    # split data frames
-    X_rtrain = X_combined[X_combined['split'] == 'train']
-    X_rtest = X_combined[X_combined['split'] == 'test']
-
-    # drop extra column
-    X_rtrain = X_rtrain.drop(['split'], axis=1)
-    X_rtest = X_rtest.drop(['split'], axis=1)
-
-    # return
-    return X_rtrain, X_rtest
 
 # constants
 timestr = time.strftime("%Y%m%d-%H%M%S")
@@ -139,7 +114,10 @@ pipeline = Pipeline([
     ('binary_enc', BinaryEncoder(cols=categorical)),
     ('model', model)
 ])
-pipeline.fit(X_train, y_train)
+# pipeline.fit(X_train, y_train)
+
+# pseudo label train the model
+model = pseudo_sample_fit(pipeline, X, y, X_submit)
 
 # get the scores
 # f1_score = get_f1_score(model, X_test, y_test)
@@ -161,3 +139,5 @@ print("results dataframe type {} \n{}".format(type(submit_df), submit_df.head(5)
 submission_file = submission_file.format(model.__class__.__name__, str(model_score))
 submit_df.to_csv(submission_file, index=False)
 print("write submission file {}".format(submission_file))
+
+
