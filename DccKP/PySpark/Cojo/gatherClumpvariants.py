@@ -23,7 +23,8 @@ def main():
     dir_s3 = f'/home/javaprog/Data/Broad/dig-analysis-data/out'
     dir_snp = f'{dir_s3}/varianteffect/snp'
     dir_meta = f'{dir_s3}/metaanalysis/ancestry-specific/{args.phenotype}/*'
-    dir_frequency = f'{dir_s3}/frequencyanalysis/*'
+    # dir_frequency = f'{dir_s3}/frequencyanalysis/*'
+    dir_frequency = f'{dir_s3}/finemapping/variant-freqeuncies'
     dir_out = f'{dir_s3}/finemapping/variant-associations/{args.phenotype}'
 
     # start spark
@@ -63,49 +64,41 @@ def main():
     # df_frequency.show()
 
     # join pValue and snps; filter columns
-    df_meta = df_meta.join(df_frequency, on=['varId', 'ancestry'], how='inner')
-    df_meta = df_meta.select(df_meta.varId, 
-                    df_meta.dbSNP, 
-                    df_meta.alt, 
-                    df_meta.reference, 
-                    df_meta.stdErr, 
-                    df_meta.pValue, 
-                    df_meta.beta,
-                    df_meta.n, 
-                    df_meta.chromosome, 
-                    df_meta.eaf, 
-                    df_meta.ancestry, 
-                )
-    print("got joined frequency df of size {}".format(df_meta.count()))
-    df_meta.show()
-
-    # split into ancestry, then chromosome
-    list_ancestry = [x.ancestry for x in df_meta.select('ancestry').distinct().collect()]
-    list_chromosome = [x.chromosome for x in df_meta.select('chromosome').distinct().collect()]
-    print("got ancestry list {} and chromosome list {}".format(list_ancestry, list_chromosome))
-
-    # write out the file
-    df_write = df_meta.select(
+    df_meta = df_meta.join(df_frequency, on=['varId'], how='inner')
+    df_meta = df_meta.select(
             df_meta.dbSNP, 
             df_meta.alt, 
             df_meta.reference, 
-            df_meta.eaf, 
+            df_meta.maf, 
             df_meta.beta,
             df_meta.stdErr, 
             df_meta.pValue, 
             df_meta.n, 
             df_meta.ancestry, 
         )
-        #  \
-        # .filter(df_meta.chromosome == chrom) \
-        # .filter(df_meta.ancestry == ancestry)
+    print("got joined frequency df of size {}".format(df_meta.count()))
+    df_meta.show()
+
+    # # write out the file
+    # df_write = df_meta.select(
+    #         df_meta.dbSNP, 
+    #         df_meta.alt, 
+    #         df_meta.reference, 
+    #         df_meta.maf, 
+    #         df_meta.beta,
+    #         df_meta.stdErr, 
+    #         df_meta.pValue, 
+    #         df_meta.n, 
+    #         df_meta.ancestry, 
+    #     )
 
     # write out the file
-    df_write \
+    df_meta \
         .write \
         .mode('overwrite') \
         .partitionBy('ancestry') \
         .csv(dir_out, sep='\t', header='true')
+    print("wrote out data to directory {}".format(dir_out))
 
 
     # columns for COJO are:

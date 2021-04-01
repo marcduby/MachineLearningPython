@@ -20,7 +20,13 @@ emr tips
 - copy bootstrap lookup files to 
   - WORK_DIR="/mnt/var/${JOB_METHOD}"
 
-
+copy part files into one:
+-------------------------
+# download a common script for use
+aws s3 cp "${JOB_BUCKET}/resources/scripts/getmerge-strip-headers.sh" .
+chmod +x getmerge-strip-headers.sh
+# download associations for this phenotype locally
+./getmerge-strip-headers.sh "${OUT_DIR}/variant-associations/${PHENOTYPE}/part-*" ./associations.csv
 
 worker setup
 ------------
