@@ -24,7 +24,7 @@ def main():
     dir_snp = f'{dir_s3}/varianteffect/snp'
     dir_meta = f'{dir_s3}/metaanalysis/ancestry-specific/{args.phenotype}/*'
     dir_frequency = f'{dir_s3}/frequencyanalysis/*'
-    dir_out = f'{dir_s3}/finemapping/{args.phenotype}'
+    dir_out = f'{dir_s3}/finemapping/variant-associations/{args.phenotype}'
 
     # start spark
     spark = SparkSession.builder.appName('cojo').getOrCreate()
@@ -84,29 +84,28 @@ def main():
     list_chromosome = [x.chromosome for x in df_meta.select('chromosome').distinct().collect()]
     print("got ancestry list {} and chromosome list {}".format(list_ancestry, list_chromosome))
 
-    for ancestry in list_ancestry:
-        for chrom in list_chromosome:
-            # build the file
-            file_out = f'{dir_out}/chr_{chrom}.{ancestry}.ma'
-            df_write = df_meta.select(
-                    df_meta.dbSNP, 
-                    df_meta.alt, 
-                    df_meta.reference, 
-                    df_meta.eaf, 
-                    df_meta.beta,
-                    df_meta.stdErr, 
-                    df_meta.pValue, 
-                    df_meta.n, 
-                ) \
-                .filter(df_meta.chromosome == chrom) \
-                .filter(df_meta.ancestry == ancestry)
+    # write out the file
+    df_write = df_meta.select(
+            df_meta.dbSNP, 
+            df_meta.alt, 
+            df_meta.reference, 
+            df_meta.eaf, 
+            df_meta.beta,
+            df_meta.stdErr, 
+            df_meta.pValue, 
+            df_meta.n, 
+            df_meta.ancestry, 
+        )
+        #  \
+        # .filter(df_meta.chromosome == chrom) \
+        # .filter(df_meta.ancestry == ancestry)
 
-            # write out the file
-            df_write \
-                .coalesce(1) \
-                .write \
-                .mode('overwrite') \
-                .csv(file_out, sep='\t', header='true')
+    # write out the file
+    df_write \
+        .write \
+        .mode('overwrite') \
+        .partitionBy('ancestry') \
+        .csv(dir_out, sep='\t', header='true')
 
 
     # columns for COJO are:

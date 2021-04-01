@@ -1,4 +1,22 @@
 
+20210330 - time series tutorial, pydata LA 2018
+- https://www.youtube.com/watch?v=JntA9XaTebs
+- https://github.com/tklouie/PyData_LA_2018
+
+- models
+  - ARIMA
+  - facebook prophet
+  - LSTM
+
+- look at staionarity
+    - most time series assume underlying time series data is stationary
+    - this shows certain stats properrties and allows us to use some forecasting models
+
+- split time series data into:
+  - trend
+  - seasnality
+  - residual
+
 
 20201007 - ML careers
 - 5 types of roles

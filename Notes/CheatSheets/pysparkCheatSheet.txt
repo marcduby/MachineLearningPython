@@ -12,5 +12,8 @@ manipulate data:
 ----------------
   - df.withColumn("day_type",when(col("data").isin(holydays), "HOLIDAY").otherwise(col("day_type"))).show()
   
-    
+filter:
+-------
+    df = df.filter(df.maf.isNotNull() & (df.ancestry == args.ancestry))
+
 
