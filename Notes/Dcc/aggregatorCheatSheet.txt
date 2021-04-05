@@ -52,7 +52,7 @@ how to run
 - to run in production, setting DRYRUN to true (basset only one stage, so fine)
   - sbt> run -c ../config.json --test --yes
 
-- examples
+- to run only one stage
   - run -c ../config.json --yes --stage MagmaCombineNcbiGenePValuesStage --reprocess
 
 - GIVES ERROR:

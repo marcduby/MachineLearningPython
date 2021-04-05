@@ -1,0 +1,5 @@
+SRCDIR="/home/javaprog/Data/Broad/dig-analysis-data/out/finemapping/variant-associations"
+
+# get all the part files for this phenotype
+PARTS=($(ls -C "${SRCDIR}/*/*/part-*")) || PARTS=()
+echo $PARTS

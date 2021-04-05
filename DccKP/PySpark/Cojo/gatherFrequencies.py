@@ -8,7 +8,7 @@ def main():
     dir_s3 = f'/Users/mduby/Data/Broad/dig-analysis-data/out'
     dir_s3 = f'/home/javaprog/Data/Broad/dig-analysis-data/out'
     dir_frequency = f'{dir_s3}/varianteffect/common'
-    dir_out = f'{dir_s3}/finemapping/variant-freqeuncies'
+    dir_out = f'{dir_s3}/finemapping/variant-frequencies'
 
     # start spark
     spark = SparkSession.builder.appName('cojo').getOrCreate()

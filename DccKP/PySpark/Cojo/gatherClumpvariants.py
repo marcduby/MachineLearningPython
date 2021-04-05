@@ -24,7 +24,7 @@ def main():
     dir_snp = f'{dir_s3}/varianteffect/snp'
     dir_meta = f'{dir_s3}/metaanalysis/ancestry-specific/{args.phenotype}/*'
     # dir_frequency = f'{dir_s3}/frequencyanalysis/*'
-    dir_frequency = f'{dir_s3}/finemapping/variant-freqeuncies'
+    dir_frequency = f'{dir_s3}/finemapping/variant-frequencies'
     dir_out = f'{dir_s3}/finemapping/variant-associations/{args.phenotype}'
 
     # start spark
@@ -78,19 +78,6 @@ def main():
         )
     print("got joined frequency df of size {}".format(df_meta.count()))
     df_meta.show()
-
-    # # write out the file
-    # df_write = df_meta.select(
-    #         df_meta.dbSNP, 
-    #         df_meta.alt, 
-    #         df_meta.reference, 
-    #         df_meta.maf, 
-    #         df_meta.beta,
-    #         df_meta.stdErr, 
-    #         df_meta.pValue, 
-    #         df_meta.n, 
-    #         df_meta.ancestry, 
-    #     )
 
     # write out the file
     df_meta \
