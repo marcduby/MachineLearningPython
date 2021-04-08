@@ -78,7 +78,7 @@ def main():
                 file_g1000 = f'{dir_cojo}/g1000_{map_ancestry.get(ancestry)}'
                 file_output = f'{dir_cojo}/output/out_{phenotype}_{ancestry}_{chromosome}'
                 # cojo_command = f'{dir_cojo}/gcta_1.93.2beta/gcta64 --bfile {file_g1000} --maf 0.01 --cojo-file {file_input} --cojo-wind 500 --threads 8 --cojo-slct --out {file_output}'
-                cojo_command = f'{dir_cojo}/gcta_1.93.2beta/gcta64 --bfile {file_g1000} --maf 0.005 --chrom {chromosome} --cojo-file {file_input} --cojo-wind 500 --threads 10 --cojo-slct --out {file_output}'
+                cojo_command = f'{dir_cojo}/gcta_1.93.2beta/gcta64 --bfile {file_g1000} --maf 0.005 --chr {chromosome} --cojo-file {file_input} --cojo-wind 500 --threads 10 --cojo-slct --out {file_output}'
                 run_system_command(cojo_command, if_test = arg_if_test)
 
                 # copy results to s3 new directory

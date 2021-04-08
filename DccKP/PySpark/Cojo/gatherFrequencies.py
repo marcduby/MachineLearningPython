@@ -23,6 +23,9 @@ def main():
             df_frequency.maf,
         )
     print("got null filtered frequency df of size {}".format(df_frequency.count()))
+    df_frequency = df_frequency \
+        .filter(df_frequency.maf > 0.005)
+    print("got maf > 0.01 filtered frequency df of size {}".format(df_frequency.count()))
     df_frequency.show()
 
 

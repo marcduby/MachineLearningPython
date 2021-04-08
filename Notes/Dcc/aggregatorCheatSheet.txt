@@ -66,6 +66,9 @@ troubleshooting
     -> applications
       -> stdout
 
+monitoring:
+-----------
+- sudo yum install -y htop
 
 
 scratch:

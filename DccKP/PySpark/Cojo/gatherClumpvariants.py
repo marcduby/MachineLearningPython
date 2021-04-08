@@ -77,6 +77,9 @@ def main():
             df_meta.ancestry, 
         )
     print("got joined frequency df of size {}".format(df_meta.count()))
+    p_value_limit = 0.01
+    df_meta = df_meta.filter(df_meta.pValue < p_value_limit)
+    print("got {} pValue joined frequency df of size {}".format(p_value_limit, df_meta.count()))
     df_meta.show()
 
     # write out the file
