@@ -23,7 +23,7 @@ def main():
     # input and output directories
     dir_s3 = f's3://dig-analysis-data/out'
     dir_s3 = f'/Users/mduby/Data/Broad/dig-analysis-data/out'
-    dir_s3 = f'/home/javaprog/Data/Broad/dig-analysis-data/out'
+    # dir_s3 = f'/home/javaprog/Data/Broad/dig-analysis-data/out'
     dir_results = f'{dir_s3}/finemapping/cojo-results'
     dir_out = f'{dir_s3}/finemapping/variant-results'
 
@@ -67,15 +67,37 @@ def main():
     df_all_snp.groupBy('ancestry').count().show(70)
 
     # rename the columns
-    # df = df.select(
-    #     df.dbSNP.alias('SNP'),
-    #     df.pValue.alias('P'),
-    #     df.n.cast(IntegerType()).alias('subjects'),
-    # )
+    df_all_snp = df_all_snp.select(
+        df_all_snp.SNP.alias('SNP'),
+        df_all_snp.Chr.alias('chromosome'),
+        df_all_snp.bp.alias('position'),
+        df_all_snp.refA.alias('alt'),
+        df_all_snp.freq.alias('maf'),
+        df_all_snp.n,
+        df_all_snp.b.alias('beta'),
+        df_all_snp.se.alias('stdErr'),
+        df_all_snp.p.alias('pValue'),
+        df_all_snp.freq_geno.alias('mafGenotype'),
+        df_all_snp.bJ.alias('betaJoint'),
+        df_all_snp.bJ_se.alias('stdErrJoint'),
+        df_all_snp.pJ.alias('pValueJoint'),
+        df_all_snp.bC.alias('betaConditioned'),
+        df_all_snp.bC_se.alias('stdErrConditioned'),
+        df_all_snp.pC.alias('pValueConditioned'),
+        df_all_snp.ancestry
+     )
+    df_all_snp.show(4)
 
+# cojo headers
 # +---+-----------+---------+----+------+---------+---------+-----------+-------+---------+---------+---------+------------+-----------+--------------------+--------+---------+---------+-----------+
 # |Chr|        SNP|       bp|refA|  freq|        b|       se|          p|      n|freq_geno|       bJ|    bJ_se|          pJ|       LD_r|            filename|ancestry|       bC|    bC_se|         pC|
 # +---+-----------+---------+----+------+---------+---------+-----------+-------+---------+---------+---------+------------+-----------+--------------------+--------+---------+---------+-----------+
+
+    # write out the file
+    df_all_snp \
+        .write.mode('overwrite') \
+        .json(dir_out)
+    print("wrote out data to directory {}".format(dir_out))
 
 
     # done
