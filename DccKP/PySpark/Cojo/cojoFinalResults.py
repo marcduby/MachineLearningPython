@@ -10,15 +10,15 @@ def unionAll(dfs):
     return functools.reduce(lambda df1,df2: df1.union(df2.select(df1.columns)), dfs)
 
 def main():
-    """
-    Arguments: phenotype
-    """
-    opts = argparse.ArgumentParser()
-    opts.add_argument('phenotype')
+    # """
+    # Arguments: phenotype
+    # """
+    # opts = argparse.ArgumentParser()
+    # opts.add_argument('phenotype')
 
-    # parse command line
-    args = opts.parse_args()
-    phenotype = args.phenotype
+    # # parse command line
+    # args = opts.parse_args()
+    # phenotype = args.phenotype
 
     # input and output directories
     dir_s3 = f's3://dig-analysis-data/out'
@@ -31,7 +31,7 @@ def main():
     spark = SparkSession.builder.appName('cojo').getOrCreate()
 
     # load the lead snps
-    df_lead_snp = spark.read.csv(f'{dir_results}/{phenotype}/*/*.jma.cojo', sep='\t', header=True) \
+    df_lead_snp = spark.read.csv(f'{dir_results}/*/*/*.jma.cojo', sep='\t', header=True) \
         .withColumn('filename', input_file_name()) \
         .withColumn('ancestry', regexp_extract('filename', r'/ancestry=([^/]+)/', 1)) \
         .withColumn('pheno', regexp_extract('filename', r'/([^/]+)/ancestry=', 1))
@@ -46,7 +46,7 @@ def main():
     print("have column types \n{}".format(df_lead_snp.dtypes))
 
     # load the conditioned snps
-    df_conditioned_snp = spark.read.csv(f'{dir_results}/{phenotype}/*/*.cma.cojo', sep='\t', header=True) \
+    df_conditioned_snp = spark.read.csv(f'{dir_results}/*/*/*.cma.cojo', sep='\t', header=True) \
         .withColumn('filename', input_file_name()) \
         .withColumn('ancestry', regexp_extract('filename', r'/ancestry=([^/]+)/', 1)) \
         .withColumn('pheno', regexp_extract('filename', r'/([^/]+)/ancestry=', 1))
@@ -66,7 +66,7 @@ def main():
     df_all_snp = unionAll([df_lead_snp, df_conditioned_snp])
     print("got all snp df of size {}".format(df_all_snp.count()))
     df_all_snp.show(40)
-    df_all_snp.groupBy('ancestry').count().show(70)
+    df_all_snp.groupBy(['pheno', 'ancestry']).count().show(70)
 
     # rename the columns
     df_all_snp = df_all_snp.select(
