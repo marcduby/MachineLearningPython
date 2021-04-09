@@ -71,6 +71,13 @@ monitoring:
 - sudo yum install -y htop
 
 
+VM options:
+-----------
+  - Strategy.computeOptimized(vCPUs = 32) -> c5.9xlarge, 32 cpu, 72 gig
+  - Strategy.memoryOptimized(mem = 128.gb) -> r5.4xlarge - 16 cpu, 128 gig
+  - Ec2.Strategy.generalPurpose(mem = 64.gb) -> 
+
+
 scratch:
 --------
 

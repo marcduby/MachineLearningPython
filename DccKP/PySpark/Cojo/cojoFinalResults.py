@@ -22,10 +22,10 @@ def main():
 
     # input and output directories
     dir_s3 = f's3://dig-analysis-data/out'
-    dir_s3 = f'/home/javaprog/Data/Broad/dig-analysis-data/out'
     dir_s3 = f'/Users/mduby/Data/Broad/dig-analysis-data/out'
+    dir_s3 = f'/home/javaprog/Data/Broad/dig-analysis-data/out'
     dir_results = f'{dir_s3}/finemapping/cojo-results'
-    dir_out = f'{dir_s3}/finemapping/variant-frequencies'
+    dir_out = f'{dir_s3}/finemapping/variant-results'
 
     # start spark
     spark = SparkSession.builder.appName('cojo').getOrCreate()
@@ -65,6 +65,18 @@ def main():
     print("got all snp df of size {}".format(df_all_snp.count()))
     df_all_snp.show(40)
     df_all_snp.groupBy('ancestry').count().show(70)
+
+    # rename the columns
+    # df = df.select(
+    #     df.dbSNP.alias('SNP'),
+    #     df.pValue.alias('P'),
+    #     df.n.cast(IntegerType()).alias('subjects'),
+    # )
+
+# +---+-----------+---------+----+------+---------+---------+-----------+-------+---------+---------+---------+------------+-----------+--------------------+--------+---------+---------+-----------+
+# |Chr|        SNP|       bp|refA|  freq|        b|       se|          p|      n|freq_geno|       bJ|    bJ_se|          pJ|       LD_r|            filename|ancestry|       bC|    bC_se|         pC|
+# +---+-----------+---------+----+------+---------+---------+-----------+-------+---------+---------+---------+------------+-----------+--------------------+--------+---------+---------+-----------+
+
 
     # done
     spark.stop()
