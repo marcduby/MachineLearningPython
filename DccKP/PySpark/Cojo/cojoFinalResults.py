@@ -23,7 +23,7 @@ def main():
     # input and output directories
     dir_s3 = f's3://dig-analysis-data/out'
     dir_s3 = f'/Users/mduby/Data/Broad/dig-analysis-data/out'
-    # dir_s3 = f'/home/javaprog/Data/Broad/dig-analysis-data/out'
+    dir_s3 = f'/home/javaprog/Data/Broad/dig-analysis-data/out'
     dir_results = f'{dir_s3}/finemapping/cojo-results'
     dir_out = f'{dir_s3}/finemapping/variant-results'
 
@@ -33,7 +33,8 @@ def main():
     # load the lead snps
     df_lead_snp = spark.read.csv(f'{dir_results}/{phenotype}/*/*.jma.cojo', sep='\t', header=True) \
         .withColumn('filename', input_file_name()) \
-        .withColumn('ancestry', regexp_extract('filename', r'/ancestry=([^/]+)/', 1))
+        .withColumn('ancestry', regexp_extract('filename', r'/ancestry=([^/]+)/', 1)) \
+        .withColumn('pheno', regexp_extract('filename', r'/([^/]+)/ancestry=', 1))
     print("got lead snp df of size {}".format(df_lead_snp.count()))
     df_lead_snp.groupBy('ancestry').count().show(70)
 
@@ -47,7 +48,8 @@ def main():
     # load the conditioned snps
     df_conditioned_snp = spark.read.csv(f'{dir_results}/{phenotype}/*/*.cma.cojo', sep='\t', header=True) \
         .withColumn('filename', input_file_name()) \
-        .withColumn('ancestry', regexp_extract('filename', r'/ancestry=([^/]+)/', 1))
+        .withColumn('ancestry', regexp_extract('filename', r'/ancestry=([^/]+)/', 1)) \
+        .withColumn('pheno', regexp_extract('filename', r'/([^/]+)/ancestry=', 1))
     print("got conditioned snp df of size {}".format(df_conditioned_snp.count()))
     df_conditioned_snp.groupBy('ancestry').count().show(20)
 
@@ -84,6 +86,7 @@ def main():
         df_all_snp.bC.alias('betaConditioned'),
         df_all_snp.bC_se.alias('stdErrConditioned'),
         df_all_snp.pC.alias('pValueConditioned'),
+        df_all_snp.pheno.alias('phenotype'),
         df_all_snp.ancestry
      )
     df_all_snp.show(4)

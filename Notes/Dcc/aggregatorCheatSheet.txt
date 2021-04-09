@@ -55,6 +55,9 @@ how to run
 - to run only one stage
   - run -c ../config.json --yes --stage MagmaCombineNcbiGenePValuesStage --reprocess
 
+- update that these phenotypes ran (update aggregator db)
+  - ./run.sh finemapping --stage RunCojoStage --insert-runs --only `cat /home/javaprog/Data/Broad/dig-analysis-data/out/finemapping/cojo.txt` --yes
+  
 - GIVES ERROR:
   - run -c ../config..json --reprocess --stage BurdenbinningStage
 
@@ -68,8 +71,11 @@ troubleshooting
 
 monitoring:
 -----------
-- sudo yum install -y htop
-
+- install htop
+  - sudo yum install -y htop
+- track steps that ran
+  - aws s3 ls s3://dig-analysis-data/out/finemapping/cojo-results/ --recursive | awk -F '/' '{print $4}' | sort | uniq | xargs echo -n | sed -e "s/ /,/g" > cojo.txt
+- run the steps and 
 
 VM options:
 -----------
