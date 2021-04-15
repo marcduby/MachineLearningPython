@@ -1,0 +1,11 @@
+
+
+20210414 - mit alphafold 2 talk
+
+- history
+  - 2013 is when ML really started helping with the protein folding problem
+  - based on casp meetings 
+
+- notes
+  - transformers tend to be data hungry 
+  - model predicts distance matrices that then are crunched into 3d structure 

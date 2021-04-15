@@ -1,0 +1,38 @@
+
+
+20210414 - day02
+
+1425 - ml for large scale genomics 
+
+
+1450 - pharmacogenetic
+- how to change drug dosages by individual genetics 
+- https://www.pharmgkb.org/
+
+
+
+20210413 - day 01
+
+1200 - panel on ml in genomics (scripps, vanedrbilt)
+- scripps - use of poligenic risk scores on how to treat patients with heart disease
+  - pushback from the clinical community
+  - foot dragging for health insurers, cost issue
+- are there any fda approved algos for disease treatments 
+
+- scripps digital twin effrts
+  - simple nearest neighbor analysis using outcomes for old patients on new patients 
+    - use similar symptoms/genomics, then look at successful treatments 
+
+- vanderbilt training of ml 
+  - use local hardware to test/develop, then use paid cloud to train once at the end 
+
+- imputation/synthetic data 
+  - still work in progress, but huge need for imputation
+  - wouldn't need synthetic data if had annotated data for billions of people across the ancestries 
+
+- getting into thwe field
+  - it's one thing to be knowledgeable, it's another to be a tool builder
+  - t52 program focused on genomic medicine 
+  
+
+

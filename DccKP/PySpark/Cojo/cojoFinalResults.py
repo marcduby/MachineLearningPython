@@ -70,7 +70,7 @@ def main():
 
     # rename the columns
     df_all_snp = df_all_snp.select(
-        df_all_snp.SNP.alias('SNP'),
+        df_all_snp.SNP.alias('dbSNP'),
         df_all_snp.Chr.alias('chromosome'),
         df_all_snp.bp.alias('position'),
         df_all_snp.refA.alias('alt'),
