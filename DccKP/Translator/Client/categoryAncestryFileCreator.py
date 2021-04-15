@@ -5,10 +5,14 @@ import requests
 from contextlib import closing
 
 # constants
+file_prepend = "/home/javaprog"
+file_prepend = "/Users/mduby"
 url_node_normalizer = "https://bl-lookup-sri.renci.org/bl/{}/ancestors?version={}"
 url_molepro_predicates = 'https://translator.broadinstitute.org/molepro/trapi/v1.0/predicates'
-file_molepro = '/home/javaprog/Data/Broad/Translator/Molepro/biolinkAncestry.json'
-file_genepro = '/home/javaprog/Data/Broad/Translator/Genepro/biolinkAncestry.json'
+file_molepro = file_prepend + '/Data/Broad/Translator/Molepro/biolinkAncestry.json'
+file_genepro = file_prepend + '/Data/Broad/Translator/Genepro/biolinkAncestry.json'
+file_query = file_prepend + '/Data/Broad/Translator/Client/afibGeneRelated.json'
+file_chem_query = file_prepend + '/Data/Broad/Translator/Client/chemGeneRelated.json'
 
 
 def get_biolink_ancestors(entity_name, api_version='latest'):
@@ -117,6 +121,97 @@ def create_predicate_query_list(predicate_json):
     # return
     return query_list
 
+def build_query_descendant_list(descendant_map, subject_type, object_type, predicate):
+    ''' returns all the possible descendant queries '''
+    query_list = []
+
+    # check the inputs
+    if subject_type is None or len(subject_type) < 1:
+        subject_type = ['all']
+    if object_type is None or len(object_type) < 1:
+        object_type = ['all']
+    if predicate is None or len(predicate) < 1:
+        predicate = ['all']
+    
+    # make arrays
+    subject_type = make_into_array(subject_type)
+    object_type = make_into_array(object_type)
+    predicate = make_into_array(predicate)
+
+    # loop
+    for sub in subject_type:
+        if descendant_map.get(sub):
+            for dsub in descendant_map.get(sub):
+                for pred in predicate:
+                    if descendant_map.get(pred):
+                        for dpred in descendant_map.get(pred):
+                            for obj in object_type:
+                                if descendant_map.get(obj):
+                                    for dobj in descendant_map.get(obj):
+                                        query_list.append(dsub + " " + dpred + " " + dobj)
+
+    # return
+    return query_list
+
+def get_query_parts(query_json):
+    ''' returns subject/object/predicate of the json query '''
+    sub = ['all']
+    obj = ['all']
+    pred = ['all']
+    subject_key = None
+    object_key = None
+
+    # get the objects
+    qg = query_json.get('message').get('query_graph')
+    # print("got {}".format(qg))
+    if len(qg.get('edges').keys()) > 0:
+        for key in list(qg.get('edges').keys()):
+            if qg.get('edges').get(key).get('predicate'):
+                pred = qg.get('edges').get(key).get('predicate')
+                subject_key = qg.get('edges').get(key).get('subject')
+                object_key = qg.get('edges').get(key).get('object')
+    if subject_key:
+        if qg.get('nodes').get(subject_key).get('category'):
+            sub = qg.get('nodes').get(subject_key).get('category')
+    if object_key:
+        if qg.get('nodes').get(object_key).get('category'):
+            obj = qg.get('nodes').get(object_key).get('category')
+
+    # return
+    return sub, obj, pred 
+
+def get_all_overap_queries(ancestor_map, predicate_json, query_json):
+    ''' returns the intersection of the predicates and expanded query list '''
+    predicate_list =  create_predicate_query_list(predicate_json)
+    print("predicate {}".format(len(predicate_list)))
+    sub, obj, pred = get_query_parts(query_json)
+    # sub = make_into_array(sub)
+    # obj = make_into_array(obj)
+    # pred = make_into_array(pred)
+    print("got query result {}".format(get_query_parts(query_json)))
+    query_list = build_query_descendant_list(ancestor_map, sub, obj, pred)
+    print("query {}".format(len(query_list)))
+
+    # get the intersection
+    result = list(set(predicate_list) & set(query_list))
+    print("result {}".format(len(result)))
+
+    # return
+    return result
+
+def make_into_array(temp):
+    ''' turns input into array if not already '''
+    result = temp
+
+    # checks
+    if temp is None:
+        result = []
+    if type(temp) != type([]):
+         result = [temp]
+
+    # return
+    return result
+
 if __name__ == "__main__":
     # get the gene ancestors
     gene_list = get_biolink_ancestors('Gene')
@@ -126,6 +221,7 @@ if __name__ == "__main__":
     print()
 
     # get the molepro predicate objects
+    print("testing entity list from predicate")
     entity_list = get_entities_from_predicates(url_molepro_predicates)
     for item in entity_list:
         print("got entity: {}".format(item))
@@ -133,12 +229,13 @@ if __name__ == "__main__":
     print()
 
     # get the map of ancestors for molepro
+    print("testing ancestor map from predicate")
     ancestor_map = build_ancestry_map(url_molepro_predicates)
     for key in list(ancestor_map.keys()):
         print("for ancestor {} got list {}".format(key, ancestor_map.get(key)))
-    with open(file_molepro, 'w') as json_file:
-        json.dump(ancestor_map, json_file, indent=4, separators=(',', ': '))
-    print("wrote out dict to file {}".format(file_molepro))
+    # with open(file_molepro, 'w') as json_file:
+    #     json.dump(ancestor_map, json_file, indent=4, separators=(',', ': '))
+    # print("wrote out dict to file {}".format(file_molepro))
 
     print()
 
@@ -151,8 +248,47 @@ if __name__ == "__main__":
     print()
 
     # test get all query strings
+    print("testing getting predicate queries")
     with closing(requests.get(url_molepro_predicates)) as response_obj:
         response = response_obj.json()
         query_string_list = create_predicate_query_list(response)
         for item in query_string_list:
-            print("query {}".format(item))
+            print("query '{}'".format(item))
+
+
+    print()
+
+    # test query ancestry
+    print("testing possible ancestry queries")
+    query_list = build_query_descendant_list(ancestor_map, ["biolink:BiologicalEntity"], ["biolink:Gene"], ["biolink:correlated_with"])
+    for query in query_list:
+        print("got query '{}'".format(query))
+
+    print()
+
+    # test making arrays
+    temp = None
+    print("for {} got array {} with type {}".format(temp, make_into_array(temp), type(make_into_array(temp))))
+    temp = "mustard"
+    print("for {} got array {} with type {}".format(temp, make_into_array(temp), type(make_into_array(temp))))
+    temp = ['ketchup']
+    print("for {} got array {} with type {}".format(temp, make_into_array(temp), type(make_into_array(temp))))
+
+    print()
+
+    # test getting parts to query
+    with open(file_query) as f:
+        query_json = json.load(f)
+        print("got query result {}".format(get_query_parts(query_json)))
+
+    print()
+
+    # test get all query strings
+    print("testing query and ancestor overlap queries")
+    with closing(requests.get(url_molepro_predicates)) as response_obj:
+        predicate_json = response_obj.json()
+        with open(file_chem_query) as f:
+            query_json = json.load(f)
+            overlap_list = get_all_overap_queries(ancestor_map, predicate_json, query_json)
+            for item in overlap_list:
+                print("got overlap query {}".format(item))

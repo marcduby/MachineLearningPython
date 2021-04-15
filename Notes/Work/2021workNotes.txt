@@ -1,0 +1,21 @@
+
+
+- translator project
+  - molepro
+  - 
+
+20200412 week 
+- transaltor work
+  - genepro
+    - deploy genepro
+    - handle arrays
+  - molepro  
+    - config to file for restart
+    - test for two fixes
+    - script to create ancestry tree for types, predicates, categories
+    - write module to take predicate and ancestry config file and return queries
+      - pytest
+- cojo
+  - filter out non ancestry phenotypes in variant associations step
+
+
