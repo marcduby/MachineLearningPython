@@ -13,6 +13,7 @@ file_molepro = file_prepend + '/Data/Broad/Translator/Molepro/biolinkAncestry.js
 file_genepro = file_prepend + '/Data/Broad/Translator/Genepro/biolinkAncestry.json'
 file_query = file_prepend + '/Data/Broad/Translator/Client/afibGeneRelated.json'
 file_chem_query = file_prepend + '/Data/Broad/Translator/Client/chemGeneRelated.json'
+file_blank_query = file_prepend + '/Data/Broad/Translator/Client/blankGeneRelated.json'
 
 
 def get_biolink_ancestors(entity_name, api_version='latest'):
@@ -182,19 +183,25 @@ def get_query_parts(query_json):
 
 def get_all_overap_queries(ancestor_map, predicate_json, query_json):
     ''' returns the intersection of the predicates and expanded query list '''
-    predicate_list =  create_predicate_query_list(predicate_json)
-    print("predicate {}".format(len(predicate_list)))
+    # get the parts of the query
     sub, obj, pred = get_query_parts(query_json)
-    # sub = make_into_array(sub)
-    # obj = make_into_array(obj)
-    # pred = make_into_array(pred)
-    print("got query result {}".format(get_query_parts(query_json)))
-    query_list = build_query_descendant_list(ancestor_map, sub, obj, pred)
-    print("query {}".format(len(query_list)))
+
+    # get the intersection
+    result = get_all_overap_queries_for_parts(ancestor_map, predicate_json, sub, obj, pred)
+
+    # return
+    return result
+
+def get_all_overap_queries_for_parts(ancestor_map, predicate_json, subject_type, object_type, predicate):
+    ''' returns the intersection of the predicates and expanded parts from query '''
+    predicate_list =  create_predicate_query_list(predicate_json)
+    # print("predicate {}".format(len(predicate_list)))
+    query_list = build_query_descendant_list(ancestor_map, subject_type, object_type, predicate)
+    # print("query {}".format(len(query_list)))
 
     # get the intersection
     result = list(set(predicate_list) & set(query_list))
-    print("result {}".format(len(result)))
+    # print("result {}".format(len(result)))
 
     # return
     return result
@@ -292,6 +299,16 @@ if __name__ == "__main__":
             overlap_list = get_all_overap_queries(ancestor_map, predicate_json, query_json)
             for item in overlap_list:
                 print("got overlap query '{}'".format(item))
+        print()
+        with open(file_blank_query) as f:
+            query_json = json.load(f)
+            overlap_list = get_all_overap_queries(ancestor_map, predicate_json, query_json)
+            for item in overlap_list:
+                print("got overlap query '{}'".format(item))
+        print()
+        overlap_list = get_all_overap_queries_for_parts(ancestor_map, predicate_json, None, None, 'biolink:correlated_with')
+        for item in overlap_list:
+            print("got overlap query '{}'".format(item))
 
 
 
