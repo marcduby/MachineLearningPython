@@ -5,8 +5,8 @@ import requests
 from contextlib import closing
 
 # constants
-file_prepend = "/home/javaprog"
 file_prepend = "/Users/mduby"
+file_prepend = "/home/javaprog"
 url_node_normalizer = "https://bl-lookup-sri.renci.org/bl/{}/ancestors?version={}"
 url_molepro_predicates = 'https://translator.broadinstitute.org/molepro/trapi/v1.0/predicates'
 file_molepro = file_prepend + '/Data/Broad/Translator/Molepro/biolinkAncestry.json'
@@ -148,7 +148,7 @@ def build_query_descendant_list(descendant_map, subject_type, object_type, predi
                             for obj in object_type:
                                 if descendant_map.get(obj):
                                     for dobj in descendant_map.get(obj):
-                                        query_list.append(dsub + " " + dpred + " " + dobj)
+                                        query_list.append(create_query_string(dsub, dobj, dpred))
 
     # return
     return query_list
@@ -291,4 +291,7 @@ if __name__ == "__main__":
             query_json = json.load(f)
             overlap_list = get_all_overap_queries(ancestor_map, predicate_json, query_json)
             for item in overlap_list:
-                print("got overlap query {}".format(item))
+                print("got overlap query '{}'".format(item))
+
+
+
