@@ -53,5 +53,11 @@ poses:
 - tree pose 
 
 
-
+good flows:
+-----------
+- flow from high lunge to knee to chest, then back 
+- from from one leg mountain to t pose and back
+- on back, swin straight legs side to side
+- on back, swing straight legs down, then back up
+- warrior 2, reverse, then elbow on knee forward, then triangle
 

@@ -1,0 +1,67 @@
+
+
+20210419 - SDDC 2021
+1200 - invest in drug discovery
+- investment
+  - question: invest in people or platform
+  - novo focuses on target, but platforms are taking center stage
+    - look at new ML platform, $5 billion
+  - beyer
+    - invest in the horde or the jockey
+    - oean more to invest in tech and into
+    - also look at agriculture and sustainability
+    - don't look at profits at start, just focus on technology first 
+  - new enterprise associates (asia)
+    - data is key 
+  - host:
+    - the most competitive market for talent 
+    - also new integration of data science, programming 
+
+
+1430 - manufactiruing 
+- gilead 
+  - different producing small molecules in thousand gallon drums
+    - vs cell therapy which is individual to the customer, measured in vein to vein time 
+  - 3 pandemics last decade
+    - aids  1980s
+      - 38 million living with hiv, over 90% in developing world 
+    - h1n1 2009
+    - covid19, 2020, 2.4 million death toll after 14 months from initial outbreak 
+- ionis 
+- novo nordisk 
+  - moved most of discovery from norway to cambridge ma 
+- gsk, using functional genomics and ML for drug discovery 
+  - 90% of medicines that enter 3 phase study fail (usually fail in phase 2)
+  - mouse models have lmited value 
+  - gwas studies are like randomizd trials 
+    - can predict effect bp lowering effect of a variant 
+    = can then predict if that lower bp helped with lower cvd 
+  - can also use phewas 
+    - assoc of phenotypes acorss genome with one genetic variant 
+  - we only what to do with 15% of variants identified in gwas 
+    - whoever cracks challenge of functional genomics will crack lots of diseases 
+    - ex: rs12916, hdl 
+      - 
+    - use ML and functional genomics to look at gene/gene interactions 
+  - crispr functional studies 
+    - can do knockouts in gene by gene array for all 20k genes at once 
+      - measure cell viability and fitness
+      - can see if 2 genes knocked out today have bigger signal than barely alone
+  - take high dimensional data from genomics + other omics and use ML to unravel betst possible targets 
+
+- genentech 
+  - cosinder 20% of 20k genes are druggable
+    - 1k drugged so far 
+  - how AI makes medicines faster 
+    - needed for drug design 
+    - depends on placing the right bets 
+  - sees beginning of new era in drug discovery and healthcare 
+  - for students 
+    - chemists and biologists need to speak samde knowledge 
+      - need data 
+  - boom in tech helps in sorting more compounds on harder targets, make higher quality medicines
+    
+
+
+
+

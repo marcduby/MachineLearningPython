@@ -9,8 +9,9 @@ file_prepend = "/Users/mduby"
 file_prepend = "/home/javaprog"
 url_node_normalizer = "https://bl-lookup-sri.renci.org/bl/{}/ancestors?version={}"
 url_molepro_predicates = 'https://translator.broadinstitute.org/molepro/trapi/v1.0/predicates'
+url_genepro_predicates = 'https://translator.broadinstitute.org/genetics_provider/trapi/v1.0/predicates'
 file_molepro = file_prepend + '/Data/Broad/Translator/Molepro/biolinkAncestry.json'
-file_genepro = file_prepend + '/Data/Broad/Translator/Genepro/biolinkAncestry.json'
+file_genepro = file_prepend + '/Data/Broad/Translator/GeneticsPro/biolinkAncestry.json'
 file_query = file_prepend + '/Data/Broad/Translator/Client/afibGeneRelated.json'
 file_chem_query = file_prepend + '/Data/Broad/Translator/Client/chemGeneRelated.json'
 file_blank_query = file_prepend + '/Data/Broad/Translator/Client/blankGeneRelated.json'
@@ -123,7 +124,7 @@ def create_predicate_query_list(predicate_json):
     return query_list
 
 def build_query_descendant_list(descendant_map, subject_type, object_type, predicate):
-    ''' returns all the possible descendant queries '''
+    ''' returns all the possible descendant queries in string format '''
     query_list = []
 
     # check the inputs
@@ -237,12 +238,17 @@ if __name__ == "__main__":
 
     # get the map of ancestors for molepro
     print("testing ancestor map from predicate")
-    ancestor_map = build_ancestry_map(url_molepro_predicates)
+    # ancestor_map = build_ancestry_map(url_molepro_predicates)
+    # for key in list(ancestor_map.keys()):
+    #     print("for ancestor {} got list {}".format(key, ancestor_map.get(key)))
+    ancestor_map = build_ancestry_map(url_genepro_predicates)
     for key in list(ancestor_map.keys()):
         print("for ancestor {} got list {}".format(key, ancestor_map.get(key)))
-    # with open(file_molepro, 'w') as json_file:
-    #     json.dump(ancestor_map, json_file, indent=4, separators=(',', ': '))
-    # print("wrote out dict to file {}".format(file_molepro))
+    # file_to_write = file_molepro
+    file_to_write = file_genepro
+    with open(file_to_write, 'w') as json_file:
+        json.dump(ancestor_map, json_file, indent=4, separators=(',', ': '))
+    print("wrote out dict to file {}".format(file_molepro))
 
     print()
 

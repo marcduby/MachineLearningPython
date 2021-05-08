@@ -494,7 +494,7 @@ def get_input_tensor_from_variant_list(variant_list, genome_lookup, region_size,
 if __name__ == '__main__':
     # set the data dir
     # dir_data = "/Users/mduby/Data/Broad/"
-    dir_data = "/home/javaprog/Data/Broad/"
+    dir_data = "/home/javaprog/Data/OldNUC/Broad/"
 
     # file locations
     file_input = dir_data + "Magma/Common/part-00011-6a21a67f-59b3-4792-b9b2-7f99deea6b5a-c000.csv"
@@ -537,6 +537,7 @@ if __name__ == '__main__':
     print()
 
     sequence_numpy = get_input_np_array(sequence_list)
+    print("=============testing get_input_np_array")
     print("got sequence input of type {} and shape {} of\n{}".format(type(sequence_numpy), sequence_numpy.shape, sequence_numpy))
     print()
 
@@ -579,3 +580,12 @@ if __name__ == '__main__':
     # test for letter Ns
     variant_list.append("20:26319418:A:G")    
     variant_list, test_results = get_input_tensor_from_variant_list(variant_list, hg19, 600, False)
+
+    # test error
+    with open('/home/javaprog/Data/Broad/dig-analysis-data/out/varianteffect/variants/variants.csv') as f:
+        variant_list = f.read().splitlines()
+    chunks = [variant_list[x : x+64] for x in range(0, len(variant_list), 200)]
+    for chunk_index in range(0, len(chunks)):
+            variant_list, test_results = get_input_tensor_from_variant_list(chunks[chunk_index], hg19, 600, False)
+            print("done {} with shape {}".format(chunk_index, test_results.shape))
+
