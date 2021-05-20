@@ -1,4 +1,46 @@
 
+
+20210518 - zscore and its applications
+
+
+20210517 - multi output sklearn regression
+
+
+20210516 - multi output tf2 with functional api 
+
+
+20210515 - tf2 model subclassing with keras 
+
+
+
+
+20210515 - testing ML models, PyCon 2021
+- issues
+  - how to run tests on a jupyter notebook
+- test suite tools for ML
+  - use the estimator and transformer classes
+    - overload the predict(), fit() and transform() methods
+  - also look at the Pipeline and FeatureUnions
+
+- tools
+  - use black for code formatting
+  - ci/cd with jenkins
+  - yellow brick project (best of sklearn and matplotlib)
+    - helps with model selection and tuning 
+- tips
+  - set your random state for reproducibility 
+  - use pytest.parameterize 
+  - use pytest.approx function
+  - precision vs recall vs f1 score 
+
+- tips for m in general
+  - wrap open soucre code, like yb to produce result + visual
+  - use pipelines for consistency 
+  - use parameterization where possible 
+  - team wide conde consistency 
+  - use ci/cd 
+
+
 20210330 - time series tutorial, pydata LA 2018
 - https://www.youtube.com/watch?v=JntA9XaTebs
 - https://github.com/tklouie/PyData_LA_2018

@@ -1,0 +1,1629 @@
+list size 460
+for UMLS:C0348754 - Toxic liver disease, using category biolink:Disease
+for UMLS:C0348754 - Toxic liver disease, using category biolink:PhenotypicFeature
+for MONDO:0029000 - poisoning, using category biolink:Disease
+for MONDO:0029000 - poisoning, using category biolink:PhenotypicFeature
+for HP:0001399 - Hepatic failure, using category biolink:Disease
+for HP:0001399 - Hepatic failure, using category biolink:PhenotypicFeature
+for MONDO:0002251 - hepatitis, using category biolink:Disease
+for MONDO:0002251 - hepatitis, using category biolink:PhenotypicFeature
+for UMLS:C0851744 - Hepatocellular damage and hepatitis NEC, using category biolink:Disease
+for UMLS:C0851744 - Hepatocellular damage and hepatitis NEC, using category biolink:PhenotypicFeature
+for NCIT:C122516 - Abnormal Liver Function Test, using category biolink:Disease
+for NCIT:C122516 - Abnormal Liver Function Test, using category biolink:PhenotypicFeature
+for MONDO:0002405 - hepatic vascular disease, using category biolink:Disease
+for MONDO:0002405 - hepatic vascular disease, using category biolink:PhenotypicFeature
+for UMLS:C0851508 - None, using category biolink:Disease
+for UMLS:C0851508 - None, using category biolink:PhenotypicFeature
+for UMLS:C0438258 - Blood chemistry abnormal, using category biolink:Disease
+for UMLS:C0438258 - Blood chemistry abnormal, using category biolink:PhenotypicFeature
+for UMLS:C0494791 - Hepatic fibrosis and cirrhosis, using category biolink:Disease
+for UMLS:C0494791 - Hepatic fibrosis and cirrhosis, using category biolink:PhenotypicFeature
+for UMLS:C0577053 - Lesion of liver, using category biolink:Disease
+for UMLS:C0577053 - Lesion of liver, using category biolink:PhenotypicFeature
+for UMLS:C0426686 - Liver finding, using category biolink:Disease
+for UMLS:C0426686 - Liver finding, using category biolink:PhenotypicFeature
+for UMLS:C0851731 - Hepatic and hepatobiliary disorders NEC, using category biolink:Disease
+for UMLS:C0851731 - Hepatic and hepatobiliary disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0947848 - Poisoning and toxicity, using category biolink:Disease
+for UMLS:C0947848 - Poisoning and toxicity, using category biolink:PhenotypicFeature
+for MONDO:0005154 - liver disease, using category biolink:Disease
+for MONDO:0005154 - liver disease, using category biolink:PhenotypicFeature
+for UMLS:C3266955 - Exposures, chemical injuries and poisoning, using category biolink:Disease
+for UMLS:C3266955 - Exposures, chemical injuries and poisoning, using category biolink:PhenotypicFeature
+for MONDO:0002332 - splenic disease, using category biolink:Disease
+for MONDO:0002332 - splenic disease, using category biolink:PhenotypicFeature
+for MONDO:0005080 - portal hypertension, using category biolink:Disease
+for MONDO:0005080 - portal hypertension, using category biolink:PhenotypicFeature
+for HP:0001395 - Hepatic fibrosis, using category biolink:Disease
+for HP:0001395 - Hepatic fibrosis, using category biolink:PhenotypicFeature
+for UMLS:C0947747 - Hepatic and hepatobiliary disorders, using category biolink:Disease
+for UMLS:C0947747 - Hepatic and hepatobiliary disorders, using category biolink:PhenotypicFeature
+for MONDO:0018835 - nodular regenerative hyperplasia of the liver, using category biolink:Disease
+for MONDO:0018835 - nodular regenerative hyperplasia of the liver, using category biolink:PhenotypicFeature
+for UMLS:C0852342 - Platelet disorders NEC, using category biolink:Disease
+for UMLS:C0852342 - Platelet disorders NEC, using category biolink:PhenotypicFeature
+for HP:0002240 - Hepatomegaly, using category biolink:Disease
+for HP:0002240 - Hepatomegaly, using category biolink:PhenotypicFeature
+for HP:0001541 - Ascites, using category biolink:Disease
+for HP:0001541 - Ascites, using category biolink:PhenotypicFeature
+for UMLS:C0851414 - Haemolyses and related conditions, using category biolink:Disease
+for UMLS:C0851414 - Haemolyses and related conditions, using category biolink:PhenotypicFeature
+for HP:0200123 - Chronic hepatitis, using category biolink:Disease
+for HP:0200123 - Chronic hepatitis, using category biolink:PhenotypicFeature
+for MONDO:0002515 - hepatobiliary disease, using category biolink:Disease
+for MONDO:0002515 - hepatobiliary disease, using category biolink:PhenotypicFeature
+for UMLS:C4075263 - Abdominal organomegaly, using category biolink:Disease
+for UMLS:C4075263 - Abdominal organomegaly, using category biolink:PhenotypicFeature
+for UMLS:C0947897 - Potassium imbalance, using category biolink:Disease
+for UMLS:C0947897 - Potassium imbalance, using category biolink:PhenotypicFeature
+for MONDO:0001531 - blood coagulation disease, using category biolink:Disease
+for MONDO:0001531 - blood coagulation disease, using category biolink:PhenotypicFeature
+for UMLS:C0585130 - Disorder of portal venous system, using category biolink:Disease
+for UMLS:C0585130 - Disorder of portal venous system, using category biolink:PhenotypicFeature
+for NCIT:C113609 - Chronic Liver Disease, using category biolink:Disease
+for NCIT:C113609 - Chronic Liver Disease, using category biolink:PhenotypicFeature
+for UMLS:C1536063 - Coagulopathies and bleeding diatheses (excl thrombocytopenic), using category biolink:Disease
+for UMLS:C1536063 - Coagulopathies and bleeding diatheses (excl thrombocytopenic), using category biolink:PhenotypicFeature
+for UMLS:C0852577 - None, using category biolink:Disease
+for UMLS:C0852577 - None, using category biolink:PhenotypicFeature
+for MONDO:0002049 - thrombocytopenia, using category biolink:Disease
+for MONDO:0002049 - thrombocytopenia, using category biolink:PhenotypicFeature
+for MONDO:0008559 - thrombophilia due to thrombin defect, using category biolink:Disease
+	 biolink:condition_associated_with_gene - NCBIGene:2147 - F2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:2162 - F13A1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:2162 - F13A1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:2147 - F2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:2147 - F2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:3026 - HABP2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:3026 - HABP2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:4524 - MTHFR - None
+	 biolink:condition_associated_with_gene - NCBIGene:4524 - MTHFR - None
+	 biolink:condition_associated_with_gene - NCBIGene:2153 - F5 - None
+	 biolink:condition_associated_with_gene - NCBIGene:2153 - F5 - None
+	 biolink:condition_associated_with_gene - NCBIGene:5624 - PROC - None
+	 biolink:condition_associated_with_gene - NCBIGene:5624 - PROC - None
+	 biolink:condition_associated_with_gene - NCBIGene:5627 - PROS1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:5627 - PROS1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:462 - SERPINC1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:462 - SERPINC1 - None
+for MONDO:0008559 - thrombophilia due to thrombin defect, using category biolink:PhenotypicFeature
+for MONDO:0004805 - leukocyte disease, using category biolink:Disease
+for MONDO:0004805 - leukocyte disease, using category biolink:PhenotypicFeature
+for UMLS:C0851618 - Structural and other bile duct disorders, using category biolink:Disease
+for UMLS:C0851618 - Structural and other bile duct disorders, using category biolink:PhenotypicFeature
+for UMLS:C1290390 - Vascular disease of abdomen, using category biolink:Disease
+for UMLS:C1290390 - Vascular disease of abdomen, using category biolink:PhenotypicFeature
+for UMLS:C0268734 - Acute nephropathy, using category biolink:Disease
+for UMLS:C0268734 - Acute nephropathy, using category biolink:PhenotypicFeature
+for MONDO:0001371 - protein-energy malnutrition, using category biolink:Disease
+for MONDO:0001371 - protein-energy malnutrition, using category biolink:PhenotypicFeature
+for MONDO:0002245 - blood platelet disease, using category biolink:Disease
+for MONDO:0002245 - blood platelet disease, using category biolink:PhenotypicFeature
+for HP:0003256 - Abnormality of the coagulation cascade, using category biolink:Disease
+for HP:0003256 - Abnormality of the coagulation cascade, using category biolink:PhenotypicFeature
+for HP:0003111 - Abnormal blood ion concentration, using category biolink:Disease
+for HP:0003111 - Abnormal blood ion concentration, using category biolink:PhenotypicFeature
+for UMLS:C0851922 - Peritoneal and retroperitoneal disorders, using category biolink:Disease
+for UMLS:C0851922 - Peritoneal and retroperitoneal disorders, using category biolink:PhenotypicFeature
+for UMLS:C0949019 - White blood cell abnormal findings NEC, using category biolink:Disease
+for UMLS:C0949019 - White blood cell abnormal findings NEC, using category biolink:PhenotypicFeature
+for MONDO:0002887 - bile duct disease, using category biolink:Disease
+for MONDO:0002887 - bile duct disease, using category biolink:PhenotypicFeature
+for UMLS:C0851734 - Hepatic metabolic disorders, using category biolink:Disease
+for UMLS:C0851734 - Hepatic metabolic disorders, using category biolink:PhenotypicFeature
+for MONDO:0021113 - respiratory failure, using category biolink:Disease
+for MONDO:0021113 - respiratory failure, using category biolink:PhenotypicFeature
+for HP:0003256 - Abnormality of the coagulation cascade, using category biolink:Disease
+for HP:0003256 - Abnormality of the coagulation cascade, using category biolink:PhenotypicFeature
+for UMLS:C0577939 - Pleura finding, using category biolink:Disease
+for UMLS:C0577939 - Pleura finding, using category biolink:PhenotypicFeature
+for UMLS:C0851758 - Hepatobiliary signs and symptoms, using category biolink:Disease
+for UMLS:C0851758 - Hepatobiliary signs and symptoms, using category biolink:PhenotypicFeature
+for MONDO:0004868 - biliary tract disease, using category biolink:Disease
+for MONDO:0004868 - biliary tract disease, using category biolink:PhenotypicFeature
+for MONDO:0002492 - acute kidney failure, using category biolink:Disease
+for MONDO:0002492 - acute kidney failure, using category biolink:PhenotypicFeature
+for MONDO:0004805 - leukocyte disease, using category biolink:Disease
+for MONDO:0004805 - leukocyte disease, using category biolink:PhenotypicFeature
+for UMLS:C0852037 - Gastrointestinal varicosities and haemorrhoids, using category biolink:Disease
+for UMLS:C0852037 - Gastrointestinal varicosities and haemorrhoids, using category biolink:PhenotypicFeature
+for UMLS:C3251826 - Malnutrition (calorie), using category biolink:Disease
+for UMLS:C3251826 - Malnutrition (calorie), using category biolink:PhenotypicFeature
+for UMLS:C0555075 - Gallbladder finding, using category biolink:Disease
+for UMLS:C0555075 - Gallbladder finding, using category biolink:PhenotypicFeature
+for UMLS:C1302710 - Disorder of body cavity, using category biolink:Disease
+for UMLS:C1302710 - Disorder of body cavity, using category biolink:PhenotypicFeature
+for UMLS:C1565662 - Acute Kidney Insufficiency, using category biolink:Disease
+for UMLS:C1565662 - Acute Kidney Insufficiency, using category biolink:PhenotypicFeature
+for HP:0012378 - Fatigue, using category biolink:Disease
+for HP:0012378 - Fatigue, using category biolink:PhenotypicFeature
+for MONDO:0004242 - active peptic ulcer disease, using category biolink:Disease
+for MONDO:0004242 - active peptic ulcer disease, using category biolink:PhenotypicFeature
+for MONDO:0001106 - kidney failure, using category biolink:Disease
+for MONDO:0001106 - kidney failure, using category biolink:PhenotypicFeature
+for HP:0002093 - Respiratory insufficiency, using category biolink:Disease
+for HP:0002093 - Respiratory insufficiency, using category biolink:PhenotypicFeature
+for UMLS:C1532235 - Disorder of hematopoietic structure, using category biolink:Disease
+for UMLS:C1532235 - Disorder of hematopoietic structure, using category biolink:PhenotypicFeature
+for UMLS:C1290611 - Chronic digestive system disorder, using category biolink:Disease
+for UMLS:C1290611 - Chronic digestive system disorder, using category biolink:PhenotypicFeature
+for UMLS:C0852207 - Total fluid volume decreased, using category biolink:Disease
+for UMLS:C0852207 - Total fluid volume decreased, using category biolink:PhenotypicFeature
+for UMLS:C0851466 - Peritoneal and retroperitoneal conditions, using category biolink:Disease
+for UMLS:C0851466 - Peritoneal and retroperitoneal conditions, using category biolink:PhenotypicFeature
+for UMLS:C0013373 - Dysfunctions associated with sleep stages or arousal from sleep, using category biolink:Disease
+for UMLS:C0013373 - Dysfunctions associated with sleep stages or arousal from sleep, using category biolink:PhenotypicFeature
+for MONDO:0005281 - gallbladder disease, using category biolink:Disease
+for MONDO:0005281 - gallbladder disease, using category biolink:PhenotypicFeature
+for NCIT:C60925 - Oral Cavity Finding, using category biolink:Disease
+for NCIT:C60925 - Oral Cavity Finding, using category biolink:PhenotypicFeature
+for MONDO:0005046 - immune system disease, using category biolink:Disease
+for MONDO:0005046 - immune system disease, using category biolink:PhenotypicFeature
+for MONDO:0002492 - acute kidney failure, using category biolink:Disease
+for MONDO:0002492 - acute kidney failure, using category biolink:PhenotypicFeature
+for UMLS:C1269840 - Disorder of blood vessels of thorax, using category biolink:Disease
+for UMLS:C1269840 - Disorder of blood vessels of thorax, using category biolink:PhenotypicFeature
+for UMLS:C1536731 - Disorder of pleura and pleural cavity, using category biolink:Disease
+for UMLS:C1536731 - Disorder of pleura and pleural cavity, using category biolink:PhenotypicFeature
+for UMLS:C0948987 - Gastrointestinal haemorrhages NEC, using category biolink:Disease
+for UMLS:C0948987 - Gastrointestinal haemorrhages NEC, using category biolink:PhenotypicFeature
+for HP:0410019 - Epigastric pain, using category biolink:Disease
+for HP:0410019 - Epigastric pain, using category biolink:PhenotypicFeature
+for UMLS:C0851981 - Gastrointestinal infections, site unspecified, using category biolink:Disease
+for UMLS:C0851981 - Gastrointestinal infections, site unspecified, using category biolink:PhenotypicFeature
+for MONDO:0000831 - thrombotic disease, using category biolink:Disease
+for MONDO:0000831 - thrombotic disease, using category biolink:PhenotypicFeature
+for MONDO:0021678 - gram-negative bacterial infections, using category biolink:Disease
+for MONDO:0021678 - gram-negative bacterial infections, using category biolink:PhenotypicFeature
+for MONDO:0005570 - hematologic disease, using category biolink:Disease
+for MONDO:0005570 - hematologic disease, using category biolink:PhenotypicFeature
+for UMLS:C0851638 - Heart failure signs and symptoms, using category biolink:Disease
+for UMLS:C0851638 - Heart failure signs and symptoms, using category biolink:PhenotypicFeature
+for HP:0005972 - Respiratory acidosis, using category biolink:Disease
+for HP:0005972 - Respiratory acidosis, using category biolink:PhenotypicFeature
+for UMLS:C0852212 - Mineral related disorders NEC, using category biolink:Disease
+for UMLS:C0852212 - Mineral related disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0852895 - Respiratory failures (excl neonatal), using category biolink:Disease
+for UMLS:C0852895 - Respiratory failures (excl neonatal), using category biolink:PhenotypicFeature
+for UMLS:C0577061 - Finding of biliary tract, using category biolink:Disease
+for UMLS:C0577061 - Finding of biliary tract, using category biolink:PhenotypicFeature
+for UMLS:C0267994 - Disorder of fluid AND/OR electrolyte, using category biolink:Disease
+for UMLS:C0267994 - Disorder of fluid AND/OR electrolyte, using category biolink:PhenotypicFeature
+for UMLS:C0851957 - Gastrointestinal dyskinetic disorders, using category biolink:Disease
+for UMLS:C0851957 - Gastrointestinal dyskinetic disorders, using category biolink:PhenotypicFeature
+for UMLS:C0577802 - Finding of heart rate, using category biolink:Disease
+for UMLS:C0577802 - Finding of heart rate, using category biolink:PhenotypicFeature
+for OMIM:MTHU062185 - Lung consolidation, using category biolink:Disease
+for OMIM:MTHU062185 - Lung consolidation, using category biolink:PhenotypicFeature
+for UMLS:C0851973 - Non-site specific gastrointestinal haemorrhages, using category biolink:Disease
+for UMLS:C0851973 - Non-site specific gastrointestinal haemorrhages, using category biolink:PhenotypicFeature
+for HP:0410019 - Epigastric pain, using category biolink:Disease
+for HP:0410019 - Epigastric pain, using category biolink:PhenotypicFeature
+for UMLS:C0947889 - Pneumothorax and pleural effusions NEC, using category biolink:Disease
+for UMLS:C0947889 - Pneumothorax and pleural effusions NEC, using category biolink:PhenotypicFeature
+for UMLS:C1290919 - General problem AND/OR complaint, using category biolink:Disease
+for UMLS:C1290919 - General problem AND/OR complaint, using category biolink:PhenotypicFeature
+for MONDO:0006873 - nutritional deficiency disease, using category biolink:Disease
+for MONDO:0006873 - nutritional deficiency disease, using category biolink:PhenotypicFeature
+for UMLS:C0851279 - Anaemias NEC, using category biolink:Disease
+for UMLS:C0851279 - Anaemias NEC, using category biolink:PhenotypicFeature
+for UMLS:C0577095 - Finding of defecation, using category biolink:Disease
+for UMLS:C0577095 - Finding of defecation, using category biolink:PhenotypicFeature
+for UMLS:C1287782 - Finding of bowel action, using category biolink:Disease
+for UMLS:C1287782 - Finding of bowel action, using category biolink:PhenotypicFeature
+for UMLS:C1112209 - Abdominal Infection, using category biolink:Disease
+for UMLS:C1112209 - Abdominal Infection, using category biolink:PhenotypicFeature
+for NCIT:C114397 - Vascular Thrombosis, using category biolink:Disease
+for NCIT:C114397 - Vascular Thrombosis, using category biolink:PhenotypicFeature
+for MONDO:0007179 - autoimmune disease, using category biolink:Disease
+for MONDO:0007179 - autoimmune disease, using category biolink:PhenotypicFeature
+for UMLS:C0851471 - Gastrointestinal vascular conditions, using category biolink:Disease
+for UMLS:C0851471 - Gastrointestinal vascular conditions, using category biolink:PhenotypicFeature
+for UMLS:C0851985 - Lower respiratory tract inflammatory and immunologic conditions, using category biolink:Disease
+for UMLS:C0851985 - Lower respiratory tract inflammatory and immunologic conditions, using category biolink:PhenotypicFeature
+for HP:0002202 - Pleural effusion, using category biolink:Disease
+for HP:0002202 - Pleural effusion, using category biolink:PhenotypicFeature
+for UMLS:C0851474 - None, using category biolink:Disease
+for UMLS:C0851474 - None, using category biolink:PhenotypicFeature
+for UMLS:C0026997 - Leukaemias myeloid NEC in MDR, using category biolink:Disease
+for UMLS:C0026997 - Leukaemias myeloid NEC in MDR, using category biolink:PhenotypicFeature
+for MONDO:0043905 - pneumonitis, using category biolink:Disease
+for MONDO:0043905 - pneumonitis, using category biolink:PhenotypicFeature
+for UMLS:C0851400 - None, using category biolink:Disease
+for UMLS:C0851400 - None, using category biolink:PhenotypicFeature
+for UMLS:C0852198 - Electrolyte imbalance NEC, using category biolink:Disease
+for UMLS:C0852198 - Electrolyte imbalance NEC, using category biolink:PhenotypicFeature
+for SNOMEDCT:313413008 - None, using category biolink:Disease
+for SNOMEDCT:313413008 - None, using category biolink:PhenotypicFeature
+for UMLS:C2711908 - Measurement finding outside reference range, using category biolink:Disease
+for UMLS:C2711908 - Measurement finding outside reference range, using category biolink:PhenotypicFeature
+for UMLS:C0852427 - Spánkové poruchy NEC in MDRCZE22_0, using category biolink:Disease
+for UMLS:C0852427 - Spánkové poruchy NEC in MDRCZE22_0, using category biolink:PhenotypicFeature
+for HP:0002027 - Abdominal pain, using category biolink:Disease
+for HP:0002027 - Abdominal pain, using category biolink:PhenotypicFeature
+for UMLS:C0577916 - Lesion of lung, using category biolink:Disease
+for UMLS:C0577916 - Lesion of lung, using category biolink:PhenotypicFeature
+for UMLS:C0424831 - Distention of artery, using category biolink:Disease
+for UMLS:C0424831 - Distention of artery, using category biolink:PhenotypicFeature
+for MONDO:0005281 - gallbladder disease, using category biolink:Disease
+for MONDO:0005281 - gallbladder disease, using category biolink:PhenotypicFeature
+for UMLS:C0851986 - Inflammatory disorders following infection, using category biolink:Disease
+for UMLS:C0851986 - Inflammatory disorders following infection, using category biolink:PhenotypicFeature
+for MONDO:0044986 - lymphoid system disease, using category biolink:Disease
+for MONDO:0044986 - lymphoid system disease, using category biolink:PhenotypicFeature
+for MONDO:0002041 - fungal infectious disease, using category biolink:Disease
+for MONDO:0002041 - fungal infectious disease, using category biolink:PhenotypicFeature
+for MONDO:0005249 - pneumonia, using category biolink:Disease
+for MONDO:0005249 - pneumonia, using category biolink:PhenotypicFeature
+for UMLS:C3164177 - Abnormality of systemic vein, using category biolink:Disease
+for UMLS:C3164177 - Abnormality of systemic vein, using category biolink:PhenotypicFeature
+for MONDO:0002280 - anemia (disease), using category biolink:Disease
+for MONDO:0002280 - anemia (disease), using category biolink:PhenotypicFeature
+for UMLS:C0851445 - Haematopoietic neoplasms (excl leukaemias and lymphomas), using category biolink:Disease
+for UMLS:C0851445 - Haematopoietic neoplasms (excl leukaemias and lymphomas), using category biolink:PhenotypicFeature
+for UMLS:C1298758 - Inflammatory disorder of digestive system, using category biolink:Disease
+for UMLS:C1298758 - Inflammatory disorder of digestive system, using category biolink:PhenotypicFeature
+for MONDO:0004634 - vein disease, using category biolink:Disease
+for MONDO:0004634 - vein disease, using category biolink:PhenotypicFeature
+for HP:0011032 - Abnormality of fluid regulation, using category biolink:Disease
+for HP:0011032 - Abnormality of fluid regulation, using category biolink:PhenotypicFeature
+for UMLS:C0740265 - Acid-base disorders, using category biolink:Disease
+for UMLS:C0740265 - Acid-base disorders, using category biolink:PhenotypicFeature
+for UMLS:C0495786 - Abnormal findings on diagnostic imaging of lung, using category biolink:Disease
+for UMLS:C0495786 - Abnormal findings on diagnostic imaging of lung, using category biolink:PhenotypicFeature
+for UMLS:C0947873 - Diarrhoea (excl infective), using category biolink:Disease
+for UMLS:C0947873 - Diarrhoea (excl infective), using category biolink:PhenotypicFeature
+for UMLS:C0729555 - Infection of digestive system, using category biolink:Disease
+for UMLS:C0729555 - Infection of digestive system, using category biolink:PhenotypicFeature
+for MONDO:0004992 - cancer, using category biolink:Disease
+for MONDO:0004992 - cancer, using category biolink:PhenotypicFeature
+for MONDO:0005570 - hematologic disease, using category biolink:Disease
+for MONDO:0005570 - hematologic disease, using category biolink:PhenotypicFeature
+for HP:0004395 - Malnutrition, using category biolink:Disease
+for HP:0004395 - Malnutrition, using category biolink:PhenotypicFeature
+for UMLS:C0851578 - Sleep Disorders, using category biolink:Disease
+for UMLS:C0851578 - Sleep Disorders, using category biolink:PhenotypicFeature
+for UMLS:C1290915 - Measurement finding, using category biolink:Disease
+for UMLS:C1290915 - Measurement finding, using category biolink:PhenotypicFeature
+for NCIT:C3399 - Swelling, using category biolink:Disease
+for NCIT:C3399 - Swelling, using category biolink:PhenotypicFeature
+for MONDO:0043839 - ulcer disease, using category biolink:Disease
+for MONDO:0043839 - ulcer disease, using category biolink:PhenotypicFeature
+for MONDO:0005300 - chronic kidney disease, using category biolink:Disease
+	 biolink:condition_associated_with_gene - NCBIGene:6582 - SLC22A2 - [(None, 1.9483e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:340260 - UNCX - [(None, 1.3781e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:51422 - PRKAG2 - [(None, 2.8702e-15, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8395 - PIP5K1B - [(None, 3.5407e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:51322 - WAC - [(None, 1.7883e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:399909 - PCNXL3 - [(None, 3.87e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6494 - SIPA1 - [(None, 8.0571e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5970 - RELA - [(None, 1.3753e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10524 - KAT5 - [(None, 1.1305e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:91056 - AP5B1 - [(None, 1.7879e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9153 - SLC28A2 - [(None, 4.5848e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2628 - GATM - [(None, 1.4283e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79029 - SPATA5L1 - [(None, 1.228e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84419 - C15orf48 - [(None, 3.9455e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:256764 - WDR72 - [(None, 1.2844e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7369 - UMOD - [(None, 1.558e-44, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:204474 - PDILT - [(None, 2.6923e-28, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79893 - GGNBP2 - [(None, 5.4032e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79154 - DHRS11 - [(None, 5.5297e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9859 - CEP170 - [(None, 1.3019e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10806 - SDCCAG8 - [(None, 7.149e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7840 - ALMS1 - [(None, 7.9017e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:29842 - TFCP2L1 - [(None, 2.6796e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3236 - HOXD10 - [(None, 1.8453e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6599 - SMARCC1 - [(None, 2.4065e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:22907 - DHX30 - [(None, 8.908e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:26084 - ARHGEF26 - [(None, 1.2379e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2119 - ETV5 - [(None, 1.9217e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:100129583 - FAM47E - [(None, 3.6615e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:100631383 - FAM47E-STBD1 - [(None, 7.9395e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8987 - STBD1 - [(None, 6.7221e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:339965 - CCDC158 - [(None, 2.1815e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:57619 - SHROOM3 - [(None, 4.9112e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:134549 - SHROOM1 - [(None, 5.4908e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:27125 - AFF4 - [(None, 6.9794e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3308 - HSPA4 - [(None, 1.2439e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10960 - LMAN2 - [(None, 8.5212e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10636 - RGS14 - [(None, 5.2846e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6569 - SLC34A1 - [(None, 1.3695e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7916 - PRRC2A - [(None, 1.4208e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4439 - MSH5 - [(None, 1.5473e-06, None)]
+for MONDO:0005300 - chronic kidney disease, using category biolink:PhenotypicFeature
+for MONDO:0021679 - gram-positive bacterial infections, using category biolink:Disease
+for MONDO:0021679 - gram-positive bacterial infections, using category biolink:PhenotypicFeature
+for MONDO:0005240 - kidney disease, using category biolink:Disease
+for MONDO:0005240 - kidney disease, using category biolink:PhenotypicFeature
+for UMLS:C1532238 - Disorder of immune structure, using category biolink:Disease
+for UMLS:C1532238 - Disorder of immune structure, using category biolink:PhenotypicFeature
+for UMLS:C0851749 - Haematologic neoplasms NEC, using category biolink:Disease
+for UMLS:C0851749 - Haematologic neoplasms NEC, using category biolink:PhenotypicFeature
+for UMLS:C1869097 - Sepsis, bacteraemia, viraemia and fungaemia NEC, using category biolink:Disease
+for UMLS:C1869097 - Sepsis, bacteraemia, viraemia and fungaemia NEC, using category biolink:PhenotypicFeature
+for UMLS:C1167649 - Lymphatic system disorders NEC, using category biolink:Disease
+for UMLS:C1167649 - Lymphatic system disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0852192 - Asthenic conditions, using category biolink:Disease
+for UMLS:C0852192 - Asthenic conditions, using category biolink:PhenotypicFeature
+for UMLS:C0851480 - Electrolyte and fluid balance conditions, using category biolink:Disease
+for UMLS:C0851480 - Electrolyte and fluid balance conditions, using category biolink:PhenotypicFeature
+for HP:0001907 - Thromboembolism, using category biolink:Disease
+for HP:0001907 - Thromboembolism, using category biolink:PhenotypicFeature
+for UMLS:C0947893 - Myocardial disorders NEC, using category biolink:Disease
+for UMLS:C0947893 - Myocardial disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0851573 - Lower respiratory tract disorders (excl obstruction and infection), using category biolink:Disease
+for UMLS:C0851573 - Lower respiratory tract disorders (excl obstruction and infection), using category biolink:PhenotypicFeature
+for HP:0001649 - Tachycardia, using category biolink:Disease
+for HP:0001649 - Tachycardia, using category biolink:PhenotypicFeature
+for UMLS:C0851879 - Nervous system infections NEC, using category biolink:Disease
+for UMLS:C0851879 - Nervous system infections NEC, using category biolink:PhenotypicFeature
+for UMLS:C0851412 - Central nervous system infections and inflammations, using category biolink:Disease
+for UMLS:C0851412 - Central nervous system infections and inflammations, using category biolink:PhenotypicFeature
+for UMLS:C0278008 - Altered bowel function, using category biolink:Disease
+for UMLS:C0278008 - Altered bowel function, using category biolink:PhenotypicFeature
+for UMLS:C1291739 - Finding related to sleep, using category biolink:Disease
+for UMLS:C1291739 - Finding related to sleep, using category biolink:PhenotypicFeature
+for MONDO:0001106 - kidney failure, using category biolink:Disease
+for MONDO:0001106 - kidney failure, using category biolink:PhenotypicFeature
+for UMLS:C1290981 - Abnormal body temperature, using category biolink:Disease
+for UMLS:C1290981 - Abnormal body temperature, using category biolink:PhenotypicFeature
+for UMLS:C0011573 - Endogenous depression, using category biolink:Disease
+for UMLS:C0011573 - Endogenous depression, using category biolink:PhenotypicFeature
+for UMLS:C1112138 - Vascular hypotensive disorders, using category biolink:Disease
+for UMLS:C1112138 - Vascular hypotensive disorders, using category biolink:PhenotypicFeature
+for HP:0001945 - Fever, using category biolink:Disease
+for HP:0001945 - Fever, using category biolink:PhenotypicFeature
+for UMLS:C1282984 - Energy and stamina finding, using category biolink:Disease
+for UMLS:C1282984 - Energy and stamina finding, using category biolink:PhenotypicFeature
+for UMLS:C1263743 - Chronic disease of genitourinary system, using category biolink:Disease
+for UMLS:C1263743 - Chronic disease of genitourinary system, using category biolink:PhenotypicFeature
+for UMLS:C0852215 - General nutritional disorders NEC, using category biolink:Disease
+for UMLS:C0852215 - General nutritional disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0947743 - Haematological disorders NEC, using category biolink:Disease
+for UMLS:C0947743 - Haematological disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0851377 - Gastrointestinal inflammatory conditions, using category biolink:Disease
+for UMLS:C0851377 - Gastrointestinal inflammatory conditions, using category biolink:PhenotypicFeature
+for MONDO:0008638 - varicose disease, using category biolink:Disease
+for MONDO:0008638 - varicose disease, using category biolink:PhenotypicFeature
+for UMLS:C0438195 - Cardiovascular measurement - finding, using category biolink:Disease
+for UMLS:C0438195 - Cardiovascular measurement - finding, using category biolink:PhenotypicFeature
+for UMLS:C4087113 - Varicose veins NEC, using category biolink:Disease
+for UMLS:C4087113 - Varicose veins NEC, using category biolink:PhenotypicFeature
+for UMLS:C0158252 - Intervertebral disc disorder, using category biolink:Disease
+for UMLS:C0158252 - Intervertebral disc disorder, using category biolink:PhenotypicFeature
+for UMLS:C1278753 - Acute genitourinary disorder, using category biolink:Disease
+for UMLS:C1278753 - Acute genitourinary disorder, using category biolink:PhenotypicFeature
+for UMLS:C1290383 - Disorder of cardiac function, using category biolink:Disease
+for UMLS:C1290383 - Disorder of cardiac function, using category biolink:PhenotypicFeature
+for HP:0002018 - Nausea, using category biolink:Disease
+for HP:0002018 - Nausea, using category biolink:PhenotypicFeature
+for UMLS:C0852163 - Renal failure and impairment, using category biolink:Disease
+for UMLS:C0852163 - Renal failure and impairment, using category biolink:PhenotypicFeature
+for MONDO:0006026 - urinary bladder disease, using category biolink:Disease
+for MONDO:0006026 - urinary bladder disease, using category biolink:PhenotypicFeature
+for UMLS:C0427194 - Muscle finding, using category biolink:Disease
+for UMLS:C0427194 - Muscle finding, using category biolink:PhenotypicFeature
+for UMLS:C0852161 - Nephropathies and tubular disorders NEC, using category biolink:Disease
+for UMLS:C0852161 - Nephropathies and tubular disorders NEC, using category biolink:PhenotypicFeature
+for HP:0020060 - Decreased red blood cell count, using category biolink:Disease
+for HP:0020060 - Decreased red blood cell count, using category biolink:PhenotypicFeature
+for SNOMEDCT:365799007 - None, using category biolink:Disease
+for SNOMEDCT:365799007 - None, using category biolink:PhenotypicFeature
+for UMLS:C0851589 - Non-site specific embolism and thrombosis, using category biolink:Disease
+for UMLS:C0851589 - Non-site specific embolism and thrombosis, using category biolink:PhenotypicFeature
+for NCIT:C36289 - Hematopoietic System Finding, using category biolink:Disease
+for NCIT:C36289 - Hematopoietic System Finding, using category biolink:PhenotypicFeature
+for UMLS:C0424829 - Distention of blood vessel, using category biolink:Disease
+for UMLS:C0424829 - Distention of blood vessel, using category biolink:PhenotypicFeature
+for UMLS:C0274281 - Injury due to exposure to external cause, using category biolink:Disease
+for UMLS:C0274281 - Injury due to exposure to external cause, using category biolink:PhenotypicFeature
+for UMLS:C0851816 - Autoimmune disorders NEC, using category biolink:Disease
+for UMLS:C0851816 - Autoimmune disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C2711682 - Hemoglobin level outside reference range, using category biolink:Disease
+for UMLS:C2711682 - Hemoglobin level outside reference range, using category biolink:PhenotypicFeature
+for UMLS:C0577078 - Functional finding of gastrointestinal tract, using category biolink:Disease
+for UMLS:C0577078 - Functional finding of gastrointestinal tract, using category biolink:PhenotypicFeature
+for UMLS:C1112783 - Site specific vascular disorders NEC, using category biolink:Disease
+for UMLS:C1112783 - Site specific vascular disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0947881 - Lower respiratory tract and lung infections, using category biolink:Disease
+for UMLS:C0947881 - Lower respiratory tract and lung infections, using category biolink:PhenotypicFeature
+for UMLS:C1167648 - Abdominal and gastrointestinal infections, using category biolink:Disease
+for UMLS:C1167648 - Abdominal and gastrointestinal infections, using category biolink:PhenotypicFeature
+for HP:0002094 - Dyspnea, using category biolink:Disease
+for HP:0002094 - Dyspnea, using category biolink:PhenotypicFeature
+for UMLS:C0851478 - Spleen, lymphatic and reticuloendothelial system disorders, using category biolink:Disease
+for UMLS:C0851478 - Spleen, lymphatic and reticuloendothelial system disorders, using category biolink:PhenotypicFeature
+for UMLS:C0851368 - Anaemias nonhaemolytic and marrow depression, using category biolink:Disease
+for UMLS:C0851368 - Anaemias nonhaemolytic and marrow depression, using category biolink:PhenotypicFeature
+for HP:0100649 - Neoplasm of the oral cavity, using category biolink:Disease
+for HP:0100649 - Neoplasm of the oral cavity, using category biolink:PhenotypicFeature
+for NCIT:C7941 - Body Temperature Associated Symptom, using category biolink:Disease
+for NCIT:C7941 - Body Temperature Associated Symptom, using category biolink:PhenotypicFeature
+for UMLS:C0851485 - None, using category biolink:Disease
+for UMLS:C0851485 - None, using category biolink:PhenotypicFeature
+for UMLS:C0426708 - Bladder finding, using category biolink:Disease
+for UMLS:C0426708 - Bladder finding, using category biolink:PhenotypicFeature
+for UMLS:C0577788 - Heart valve finding, using category biolink:Disease
+for UMLS:C0577788 - Heart valve finding, using category biolink:PhenotypicFeature
+for SNOMEDCT:105723007 - None, using category biolink:Disease
+for SNOMEDCT:105723007 - None, using category biolink:PhenotypicFeature
+for UMLS:C0947871 - Gastritis (excl infective), using category biolink:Disease
+for UMLS:C0947871 - Gastritis (excl infective), using category biolink:PhenotypicFeature
+for UMLS:C0852019 - Cerebrovascular and spinal necrosis and vascular insufficiency, using category biolink:Disease
+for UMLS:C0852019 - Cerebrovascular and spinal necrosis and vascular insufficiency, using category biolink:PhenotypicFeature
+for UMLS:C0729529 - Viral infection by site, using category biolink:Disease
+for UMLS:C0729529 - Viral infection by site, using category biolink:PhenotypicFeature
+for UMLS:C0869086 - Haemorrhages NEC, using category biolink:Disease
+for UMLS:C0869086 - Haemorrhages NEC, using category biolink:PhenotypicFeature
+for UMLS:C0851503 - Iron and trace metal metabolism disorders, using category biolink:Disease
+for UMLS:C0851503 - Iron and trace metal metabolism disorders, using category biolink:PhenotypicFeature
+for UMLS:C1281528 - Finding of colon, using category biolink:Disease
+for UMLS:C1281528 - Finding of colon, using category biolink:PhenotypicFeature
+for MONDO:0006547 - exanthem (disease), using category biolink:Disease
+for MONDO:0006547 - exanthem (disease), using category biolink:PhenotypicFeature
+for MONDO:0005275 - lung disease, using category biolink:Disease
+for MONDO:0005275 - lung disease, using category biolink:PhenotypicFeature
+for UMLS:C0430247 - None, using category biolink:Disease
+for UMLS:C0430247 - None, using category biolink:PhenotypicFeature
+for NCIT:C34808 - Mass, using category biolink:Disease
+for NCIT:C34808 - Mass, using category biolink:PhenotypicFeature
+for MONDO:0003406 - sleep-wake disorder, using category biolink:Disease
+for MONDO:0003406 - sleep-wake disorder, using category biolink:PhenotypicFeature
+for UMLS:C1264607 - Acute digestive system disorder, using category biolink:Disease
+for UMLS:C1264607 - Acute digestive system disorder, using category biolink:PhenotypicFeature
+for UMLS:C0949113 - Bacterial infections NEC, using category biolink:Disease
+for UMLS:C0949113 - Bacterial infections NEC, using category biolink:PhenotypicFeature
+for MONDO:0003409 - colonic disease, using category biolink:Disease
+for MONDO:0003409 - colonic disease, using category biolink:PhenotypicFeature
+for MONDO:0005240 - kidney disease, using category biolink:Disease
+for MONDO:0005240 - kidney disease, using category biolink:PhenotypicFeature
+for HP:0002013 - Vomiting, using category biolink:Disease
+for HP:0002013 - Vomiting, using category biolink:PhenotypicFeature
+for UMLS:C0425685 - Venous finding, using category biolink:Disease
+for UMLS:C0425685 - Venous finding, using category biolink:PhenotypicFeature
+for MONDO:0002869 - heart valve disease, using category biolink:Disease
+for MONDO:0002869 - heart valve disease, using category biolink:PhenotypicFeature
+for MONDO:0010789 - MELAS syndrome, using category biolink:Disease
+for MONDO:0010789 - MELAS syndrome, using category biolink:PhenotypicFeature
+for UMLS:C0947868 - Oesophageal disorders NEC, using category biolink:Disease
+for UMLS:C0947868 - Oesophageal disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0851590 - Renal disorders NEC, using category biolink:Disease
+for UMLS:C0851590 - Renal disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0851460 - Decreased and nonspecific blood pressure disorders and shock, using category biolink:Disease
+for UMLS:C0851460 - Decreased and nonspecific blood pressure disorders and shock, using category biolink:PhenotypicFeature
+for MONDO:0037792 - carbohydrate metabolism disease, using category biolink:Disease
+for MONDO:0037792 - carbohydrate metabolism disease, using category biolink:PhenotypicFeature
+for MONDO:0004298 - stomach disease, using category biolink:Disease
+for MONDO:0004298 - stomach disease, using category biolink:PhenotypicFeature
+for UMLS:C0426703 - Kidney finding, using category biolink:Disease
+for UMLS:C0426703 - Kidney finding, using category biolink:PhenotypicFeature
+for UMLS:C0016807 - Functional disorder of intestine, using category biolink:Disease
+for UMLS:C0016807 - Functional disorder of intestine, using category biolink:PhenotypicFeature
+for UMLS:C0852564 - Sleep disorders NEC, using category biolink:Disease
+for UMLS:C0852564 - Sleep disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C1290982 - Vital signs finding, using category biolink:Disease
+for UMLS:C1290982 - Vital signs finding, using category biolink:PhenotypicFeature
+for HP:0001903 - Anemia, using category biolink:Disease
+for HP:0001903 - Anemia, using category biolink:PhenotypicFeature
+for UMLS:C0266805 - Disorder of lower gastrointestinal tract, using category biolink:Disease
+for UMLS:C0266805 - Disorder of lower gastrointestinal tract, using category biolink:PhenotypicFeature
+for MONDO:0004994 - cardiomyopathy, using category biolink:Disease
+	 biolink:condition_associated_with_gene - NCBIGene:10060 - ABCC9 - None
+	 biolink:condition_associated_with_gene - NCBIGene:10060 - ABCC9 - None
+	 biolink:condition_associated_with_gene - NCBIGene:70 - ACTC1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:70 - ACTC1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:70 - ACTC1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:88 - ACTN2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:88 - ACTN2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:88 - ACTN2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:27063 - ANKRD1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:9531 - BAG3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:9531 - BAG3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:859 - CAV3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:1410 - CRYAB - None
+	 biolink:condition_associated_with_gene - NCBIGene:8048 - CSRP3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:8048 - CSRP3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:8048 - CSRP3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:1674 - DES - None
+	 biolink:condition_associated_with_gene - NCBIGene:1674 - DES - None
+	 biolink:condition_associated_with_gene - NCBIGene:1674 - DES - None
+	 biolink:condition_associated_with_gene - NCBIGene:1824 - DSC2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:1824 - DSC2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:1829 - DSG2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:1829 - DSG2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:1829 - DSG2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:1829 - DSG2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:1832 - DSP - None
+	 biolink:condition_associated_with_gene - NCBIGene:1832 - DSP - None
+	 biolink:condition_associated_with_gene - NCBIGene:2070 - EYA4 - None
+	 biolink:condition_associated_with_gene - NCBIGene:2070 - EYA4 - None
+	 biolink:condition_associated_with_gene - NCBIGene:2218 - FKTN - None
+	 biolink:condition_associated_with_gene - NCBIGene:2218 - FKTN - None
+	 biolink:condition_associated_with_gene - NCBIGene:57158 - JPH2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:3728 - JUP - None
+	 biolink:condition_associated_with_gene - NCBIGene:3728 - JUP - None
+	 biolink:condition_associated_with_gene - NCBIGene:3910 - LAMA4 - None
+	 biolink:condition_associated_with_gene - NCBIGene:11155 - LDB3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:11155 - LDB3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:4000 - LMNA - None
+	 biolink:condition_associated_with_gene - NCBIGene:4000 - LMNA - None
+	 biolink:condition_associated_with_gene - NCBIGene:4607 - MYBPC3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:4607 - MYBPC3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:4624 - MYH6 - None
+	 biolink:condition_associated_with_gene - NCBIGene:4624 - MYH6 - None
+	 biolink:condition_associated_with_gene - NCBIGene:4624 - MYH6 - None
+	 biolink:condition_associated_with_gene - NCBIGene:4624 - MYH6 - None
+	 biolink:condition_associated_with_gene - NCBIGene:4625 - MYH7 - None
+	 biolink:condition_associated_with_gene - NCBIGene:4625 - MYH7 - None
+	 biolink:condition_associated_with_gene - NCBIGene:4633 - MYL2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:4634 - MYL3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:85366 - MYLK2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:51778 - MYOZ2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:91624 - NEXN - None
+	 biolink:condition_associated_with_gene - NCBIGene:91624 - NEXN - None
+	 biolink:condition_associated_with_gene - NCBIGene:91624 - NEXN - None
+	 biolink:condition_associated_with_gene - NCBIGene:5318 - PKP2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:5318 - PKP2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:5350 - PLN - None
+	 biolink:condition_associated_with_gene - NCBIGene:5350 - PLN - None
+	 biolink:condition_associated_with_gene - NCBIGene:5350 - PLN - None
+	 biolink:condition_associated_with_gene - NCBIGene:51422 - PRKAG2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:5663 - PSEN1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:5664 - PSEN2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:5664 - PSEN2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:282996 - RBM20 - None
+	 biolink:condition_associated_with_gene - NCBIGene:282996 - RBM20 - None
+	 biolink:condition_associated_with_gene - NCBIGene:6262 - RYR2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:6331 - SCN5A - None
+	 biolink:condition_associated_with_gene - NCBIGene:6389 - SDHA - None
+	 biolink:condition_associated_with_gene - NCBIGene:6444 - SGCD - None
+	 biolink:condition_associated_with_gene - NCBIGene:6444 - SGCD - None
+	 biolink:condition_associated_with_gene - NCBIGene:8557 - TCAP - None
+	 biolink:condition_associated_with_gene - NCBIGene:8557 - TCAP - None
+	 biolink:condition_associated_with_gene - NCBIGene:8557 - TCAP - None
+	 biolink:condition_associated_with_gene - NCBIGene:7043 - TGFB3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:79188 - TMEM43 - None
+	 biolink:condition_associated_with_gene - NCBIGene:79188 - TMEM43 - None
+	 biolink:condition_associated_with_gene - NCBIGene:7112 - TMPO - None
+	 biolink:condition_associated_with_gene - NCBIGene:7134 - TNNC1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:7134 - TNNC1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:7137 - TNNI3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:7137 - TNNI3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:7137 - TNNI3 - None
+	 biolink:condition_associated_with_gene - NCBIGene:7139 - TNNT2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:7139 - TNNT2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:7139 - TNNT2 - None
+	 biolink:condition_associated_with_gene - NCBIGene:7168 - TPM1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:7168 - TPM1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:7168 - TPM1 - None
+	 biolink:condition_associated_with_gene - NCBIGene:7273 - TTN - None
+	 biolink:condition_associated_with_gene - NCBIGene:7273 - TTN - None
+	 biolink:condition_associated_with_gene - NCBIGene:7273 - TTN - None
+	 biolink:condition_associated_with_gene - NCBIGene:7414 - VCL - None
+	 biolink:condition_associated_with_gene - NCBIGene:7414 - VCL - None
+	 biolink:condition_associated_with_gene - NCBIGene:7414 - VCL - None
+for MONDO:0004994 - cardiomyopathy, using category biolink:PhenotypicFeature
+for MONDO:0005137 - nutritional disorder, using category biolink:Disease
+for MONDO:0005137 - nutritional disorder, using category biolink:PhenotypicFeature
+for UMLS:C0576488 - Neurological lesion, using category biolink:Disease
+for UMLS:C0576488 - Neurological lesion, using category biolink:PhenotypicFeature
+for MONDO:0019052 - inborn errors of metabolism, using category biolink:Disease
+for MONDO:0019052 - inborn errors of metabolism, using category biolink:PhenotypicFeature
+for MONDO:0002203 - constipation disorder, using category biolink:Disease
+for MONDO:0002203 - constipation disorder, using category biolink:PhenotypicFeature
+for UMLS:C0268657 - None, using category biolink:Disease
+for UMLS:C0268657 - None, using category biolink:PhenotypicFeature
+for MONDO:0005113 - bacterial infectious disease, using category biolink:Disease
+for MONDO:0005113 - bacterial infectious disease, using category biolink:PhenotypicFeature
+for UMLS:C0851436 - Bone, calcium, magnesium and phosphorus metabolism disorders, using category biolink:Disease
+for UMLS:C0851436 - Bone, calcium, magnesium and phosphorus metabolism disorders, using category biolink:PhenotypicFeature
+for UMLS:C0851631 - Lower respiratory tract infections NEC, using category biolink:Disease
+for UMLS:C0851631 - Lower respiratory tract infections NEC, using category biolink:PhenotypicFeature
+for NCIT:C36279 - Digestive System Finding, using category biolink:Disease
+for NCIT:C36279 - Digestive System Finding, using category biolink:PhenotypicFeature
+for UMLS:C1971734 - Disorder of kidney and/or ureter, using category biolink:Disease
+for UMLS:C1971734 - Disorder of kidney and/or ureter, using category biolink:PhenotypicFeature
+for UMLS:C3662261 - Necrosis of anatomical site, using category biolink:Disease
+for UMLS:C3662261 - Necrosis of anatomical site, using category biolink:PhenotypicFeature
+for UMLS:C2711838 - Measurement finding below reference range, using category biolink:Disease
+for UMLS:C2711838 - Measurement finding below reference range, using category biolink:PhenotypicFeature
+for UMLS:C0852177 - Endocrine disorders NEC in MDR, using category biolink:Disease
+for UMLS:C0852177 - Endocrine disorders NEC in MDR, using category biolink:PhenotypicFeature
+for HP:0001945 - Fever, using category biolink:Disease
+for HP:0001945 - Fever, using category biolink:PhenotypicFeature
+for UMLS:C0851464 - Urethral disorders (excl calculi), using category biolink:Disease
+for UMLS:C0851464 - Urethral disorders (excl calculi), using category biolink:PhenotypicFeature
+for UMLS:C0852051 - Cerebrovascular and spinal vascular disorders NEC, using category biolink:Disease
+for UMLS:C0852051 - Cerebrovascular and spinal vascular disorders NEC, using category biolink:PhenotypicFeature
+for MONDO:0000270 - lower respiratory tract disease, using category biolink:Disease
+for MONDO:0000270 - lower respiratory tract disease, using category biolink:PhenotypicFeature
+for MONDO:0002118 - urinary system disease, using category biolink:Disease
+for MONDO:0002118 - urinary system disease, using category biolink:PhenotypicFeature
+for MONDO:0005244 - peripheral neuropathy, using category biolink:Disease
+for MONDO:0005244 - peripheral neuropathy, using category biolink:PhenotypicFeature
+for UMLS:C0266806 - Disorder of digestive organ, using category biolink:Disease
+for UMLS:C0266806 - Disorder of digestive organ, using category biolink:PhenotypicFeature
+for OMIM:MTHU035381 - Disorder characterized by fever, using category biolink:Disease
+for OMIM:MTHU035381 - Disorder characterized by fever, using category biolink:PhenotypicFeature
+for UMLS:C1290886 - Chronic inflammatory disorder, using category biolink:Disease
+for UMLS:C1290886 - Chronic inflammatory disorder, using category biolink:PhenotypicFeature
+for MONDO:0005371 - mood disorder, using category biolink:Disease
+for MONDO:0005371 - mood disorder, using category biolink:PhenotypicFeature
+for UMLS:C0851547 - Gastrointestinal motility and defaecation conditions, using category biolink:Disease
+for UMLS:C0851547 - Gastrointestinal motility and defaecation conditions, using category biolink:PhenotypicFeature
+for UMLS:C0851431 - Glucose metabolism disorders (incl diabetes mellitus), using category biolink:Disease
+for UMLS:C0851431 - Glucose metabolism disorders (incl diabetes mellitus), using category biolink:PhenotypicFeature
+for UMLS:C0263888 - Back disorder, using category biolink:Disease
+for UMLS:C0263888 - Back disorder, using category biolink:PhenotypicFeature
+for UMLS:C0949004 - Protein and amino acid metabolism disorders NEC, using category biolink:Disease
+for UMLS:C0949004 - Protein and amino acid metabolism disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0852009 - Immune and associated conditions NEC, using category biolink:Disease
+for UMLS:C0852009 - Immune and associated conditions NEC, using category biolink:PhenotypicFeature
+for HP:0002094 - Dyspnea, using category biolink:Disease
+for HP:0002094 - Dyspnea, using category biolink:PhenotypicFeature
+for UMLS:C0852208 - Total fluid volume increased, using category biolink:Disease
+for UMLS:C0852208 - Total fluid volume increased, using category biolink:PhenotypicFeature
+for UMLS:C0436485 - Radiology result abnormal, using category biolink:Disease
+for UMLS:C0436485 - Radiology result abnormal, using category biolink:PhenotypicFeature
+for HP:0000969 - Edema, using category biolink:Disease
+for HP:0000969 - Edema, using category biolink:PhenotypicFeature
+for UMLS:C0851462 - Renal disorders (excl nephropathies), using category biolink:Disease
+for UMLS:C0851462 - Renal disorders (excl nephropathies), using category biolink:PhenotypicFeature
+for MONDO:0005247 - urinary tract infection (disease), using category biolink:Disease
+for MONDO:0005247 - urinary tract infection (disease), using category biolink:PhenotypicFeature
+for UMLS:C0947846 - Gastrointestinal disorders NEC, using category biolink:Disease
+for UMLS:C0947846 - Gastrointestinal disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C1291662 - Lower urinary tract finding, using category biolink:Disease
+for UMLS:C1291662 - Lower urinary tract finding, using category biolink:PhenotypicFeature
+for UMLS:C0948998 - Viral infectious disorders, using category biolink:Disease
+for UMLS:C0948998 - Viral infectious disorders, using category biolink:PhenotypicFeature
+for UMLS:C0577914 - Lung finding, using category biolink:Disease
+for UMLS:C0577914 - Lung finding, using category biolink:PhenotypicFeature
+for UMLS:C0947733 - Inj&P, using category biolink:Disease
+for UMLS:C0947733 - Inj&P, using category biolink:PhenotypicFeature
+for UMLS:C0851473 - None, using category biolink:Disease
+for UMLS:C0851473 - None, using category biolink:PhenotypicFeature
+for MONDO:0020595 - disease of retroperitoneum, using category biolink:Disease
+for MONDO:0020595 - disease of retroperitoneum, using category biolink:PhenotypicFeature
+for UMLS:C0577969 - Observation of respiration, using category biolink:Disease
+for UMLS:C0577969 - Observation of respiration, using category biolink:PhenotypicFeature
+for HP:0100750 - Atelectasis, using category biolink:Disease
+for HP:0100750 - Atelectasis, using category biolink:PhenotypicFeature
+for SNOMEDCT:365853002 - None, using category biolink:Disease
+for SNOMEDCT:365853002 - None, using category biolink:PhenotypicFeature
+for UMLS:C0455811 - Stomach finding, using category biolink:Disease
+for UMLS:C0455811 - Stomach finding, using category biolink:PhenotypicFeature
+for HP:0004950 - Peripheral arterial stenosis, using category biolink:Disease
+for HP:0004950 - Peripheral arterial stenosis, using category biolink:PhenotypicFeature
+for MONDO:0004335 - digestive system disease, using category biolink:Disease
+for MONDO:0004335 - digestive system disease, using category biolink:PhenotypicFeature
+for UMLS:C0852393 - Central nervous system haemorrhages and cerebrovascular accidents, using category biolink:Disease
+for UMLS:C0852393 - Central nervous system haemorrhages and cerebrovascular accidents, using category biolink:PhenotypicFeature
+for UMLS:C0162044 - Thyroid disorders NEC, using category biolink:Disease
+for UMLS:C0162044 - Thyroid disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0947945 - Rashes, eruptions and exanthems NEC, using category biolink:Disease
+for UMLS:C0947945 - Rashes, eruptions and exanthems NEC, using category biolink:PhenotypicFeature
+for UMLS:C0851563 - Vascular hemorrhagic disorders, using category biolink:Disease
+for UMLS:C0851563 - Vascular hemorrhagic disorders, using category biolink:PhenotypicFeature
+for UMLS:C0851606 - Gastrointestinal atonic and hypomotility disorders NEC, using category biolink:Disease
+for UMLS:C0851606 - Gastrointestinal atonic and hypomotility disorders NEC, using category biolink:PhenotypicFeature
+for MONDO:0002050 - depressive disorder, using category biolink:Disease
+for MONDO:0002050 - depressive disorder, using category biolink:PhenotypicFeature
+for NCIT:C26791 - Hemorrhage, using category biolink:Disease
+for NCIT:C26791 - Hemorrhage, using category biolink:PhenotypicFeature
+for UMLS:C0853004 - Peripheral neuropathies NEC, using category biolink:Disease
+for UMLS:C0853004 - Peripheral neuropathies NEC, using category biolink:PhenotypicFeature
+for UMLS:C0852559 - None, using category biolink:Disease
+for UMLS:C0852559 - None, using category biolink:PhenotypicFeature
+for UMLS:C3661990 - Disorder of perineum, using category biolink:Disease
+for UMLS:C3661990 - Disorder of perineum, using category biolink:PhenotypicFeature
+for MONDO:0005020 - intestinal disease, using category biolink:Disease
+for MONDO:0005020 - intestinal disease, using category biolink:PhenotypicFeature
+for MONDO:0000812 - vertebral column disease, using category biolink:Disease
+for MONDO:0000812 - vertebral column disease, using category biolink:PhenotypicFeature
+for HP:0012735 - Cough, using category biolink:Disease
+for HP:0012735 - Cough, using category biolink:PhenotypicFeature
+for UMLS:C0947788 - Rate and rhythm disorders NEC, using category biolink:Disease
+for UMLS:C0947788 - Rate and rhythm disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C1319348 - Imaging result abnormal, using category biolink:Disease
+for UMLS:C1319348 - Imaging result abnormal, using category biolink:PhenotypicFeature
+for UMLS:C0575174 - Lesion of neck, using category biolink:Disease
+for UMLS:C0575174 - Lesion of neck, using category biolink:PhenotypicFeature
+for NCIT:C35869 - Radiologic Finding, using category biolink:Disease
+for NCIT:C35869 - Radiologic Finding, using category biolink:PhenotypicFeature
+for UMLS:C0426480 - Mouth and/or pharynx finding, using category biolink:Disease
+for UMLS:C0426480 - Mouth and/or pharynx finding, using category biolink:PhenotypicFeature
+for MONDO:0044965 - abdominal and pelvic region disorder, using category biolink:Disease
+for MONDO:0044965 - abdominal and pelvic region disorder, using category biolink:PhenotypicFeature
+for MONDO:0003620 - peripheral nervous system disease, using category biolink:Disease
+for MONDO:0003620 - peripheral nervous system disease, using category biolink:PhenotypicFeature
+for UMLS:C0947761 - Gastrointestinal conditions NEC, using category biolink:Disease
+for UMLS:C0947761 - Gastrointestinal conditions NEC, using category biolink:PhenotypicFeature
+for UMLS:C1287669 - Ease of respiration - finding, using category biolink:Disease
+for UMLS:C1287669 - Ease of respiration - finding, using category biolink:PhenotypicFeature
+for UMLS:C0264220 - Chronic disease of respiratory system, using category biolink:Disease
+for UMLS:C0264220 - Chronic disease of respiratory system, using category biolink:PhenotypicFeature
+for UMLS:C0575155 - Finding of neck region, using category biolink:Disease
+for UMLS:C0575155 - Finding of neck region, using category biolink:PhenotypicFeature
+for UMLS:C2711906 - Evaluation finding, using category biolink:Disease
+for UMLS:C2711906 - Evaluation finding, using category biolink:PhenotypicFeature
+for UMLS:C0851521 - Metabolic and nutritional disorders congenital, using category biolink:Disease
+for UMLS:C0851521 - Metabolic and nutritional disorders congenital, using category biolink:PhenotypicFeature
+for UMLS:C0852586 - None, using category biolink:Disease
+for UMLS:C0852586 - None, using category biolink:PhenotypicFeature
+for UMLS:C0430681 - None, using category biolink:Disease
+for UMLS:C0430681 - None, using category biolink:PhenotypicFeature
+for UMLS:C0947760 - Immune disorders NEC, using category biolink:Disease
+for UMLS:C0947760 - Immune disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0423587 - Finding of sensation of abdomen, using category biolink:Disease
+for UMLS:C0423587 - Finding of sensation of abdomen, using category biolink:PhenotypicFeature
+for MONDO:0003749 - esophageal disease, using category biolink:Disease
+for MONDO:0003749 - esophageal disease, using category biolink:PhenotypicFeature
+for UMLS:C1290890 - Inflammatory disorder of lower respiratory tract, using category biolink:Disease
+for UMLS:C1290890 - Inflammatory disorder of lower respiratory tract, using category biolink:PhenotypicFeature
+for UMLS:C0278060 - Mental state, using category biolink:Disease
+for UMLS:C0278060 - Mental state, using category biolink:PhenotypicFeature
+for UMLS:C0426505 - Pharyngeal finding, using category biolink:Disease
+for UMLS:C0426505 - Pharyngeal finding, using category biolink:PhenotypicFeature
+for UMLS:C0422878 - Central nervous system finding, using category biolink:Disease
+for UMLS:C0422878 - Central nervous system finding, using category biolink:PhenotypicFeature
+for UMLS:C0851426 - Appetite and general nutritional disorders, using category biolink:Disease
+for UMLS:C0851426 - Appetite and general nutritional disorders, using category biolink:PhenotypicFeature
+for UMLS:C3661974 - Finding of abdomen, using category biolink:Disease
+for UMLS:C3661974 - Finding of abdomen, using category biolink:PhenotypicFeature
+for UMLS:C0852026 - Circulatory collapse and shock, using category biolink:Disease
+for UMLS:C0852026 - Circulatory collapse and shock, using category biolink:PhenotypicFeature
+for UMLS:C0851529 - Musculoskeletal and connective tissue deformities (incl intervertebral disc disorders), using category biolink:Disease
+for UMLS:C0851529 - Musculoskeletal and connective tissue deformities (incl intervertebral disc disorders), using category biolink:PhenotypicFeature
+for HP:0002027 - Abdominal pain, using category biolink:Disease
+for HP:0002027 - Abdominal pain, using category biolink:PhenotypicFeature
+for MONDO:0005010 - coronary artery disease, using category biolink:Disease
+	 biolink:condition_associated_with_gene - NCBIGene:6497 - SKI - [(None, 3.9652e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:63976 - PRDM16 - [(None, 5.3779e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54897 - CASZ1 - [(None, 2.407e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84196 - USP48 - [(None, 8.8123e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7802 - DNALI1 - [(None, 3.6457e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3633 - INPP5B - [(None, 3.2852e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2275 - FHL3 - [(None, 1.5548e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84217 - ZMYND12 - [(None, 5.7005e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:255738 - PCSK9 - [(None, 6.6322e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8613 - PPAP2B - [(None, 7.2173e-23, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6301 - SARS - [(None, 2.7401e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1952 - CELSR2 - [(None, 1.8299e-29, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84722 - PSRC1 - [(None, 8.4578e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:343263 - MYBPHL - [(None, 5.9125e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:127002 - ATXN7L2 - [(None, 3.4203e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2948 - GSTM4 - [(None, 2.5627e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:440603 - BCL2L15 - [(None, 7.6533e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10717 - AP4B1 - [(None, 3.6905e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:64858 - DCLRE1B - [(None, 9.1848e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2029 - ENSA - [(None, 6.8027e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55204 - GOLPH3L - [(None, 1.4463e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84072 - HORMAD1 - [(None, 1.3157e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:405 - ARNT - [(None, 4.0683e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9869 - SETDB1 - [(None, 2.508e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:29956 - CERS2 - [(None, 2.7891e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:284485 - RIIAD1 - [(None, 2.4909e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:51686 - OAZ3 - [(None, 6.185e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6097 - RORC - [(None, 6.6141e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3570 - IL6R - [(None, 1.8305e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8407 - TAGLN2 - [(None, 2.2053e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:481 - ATP1B1 - [(None, 5.5361e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:29922 - NME7 - [(None, 3.3757e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9674 - KIAA0040 - [(None, 1.2219e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:163486 - DENND1B - [(None, 3.114e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55705 - IPO9 - [(None, 6.1006e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:149345 - SHISA4 - [(None, 6.5888e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:25802 - LMOD1 - [(None, 7.8936e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55733 - HHAT - [(None, 3.2252e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9015 - TAF1A - [(None, 6.7051e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:375056 - MIA3 - [(None, 2.2746e-22, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:64853 - AIDA - [(None, 1.208e-16, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:148362 - BROX - [(None, 1.1297e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:400823 - FAM177B - [(None, 5.0741e-18, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2590 - GALNT2 - [(None, 5.5394e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:183 - AGT - [(None, 3.9405e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7173 - TPO - [(None, 5.4158e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:338 - APOB - [(None, 7.5098e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54454 - ATAD2B - [(None, 4.6925e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:165324 - UBXN2A - [(None, 5.2999e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:80304 - C2orf44 - [(None, 2.9464e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1788 - DNMT3A - [(None, 2.65e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:165082 - ADGRF3 - [(None, 4.0863e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:85465 - EPT1 - [(None, 5.6404e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9577 - BRE - [(None, 4.1626e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54497 - HEATR5B - [(None, 1.0383e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55471 - NDUFAF7 - [(None, 1.8579e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:678 - ZFP36L2 - [(None, 8.1206e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:63892 - THADA - [(None, 6.843e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:64241 - ABCG8 - [(None, 7.3089e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:53335 - BCL11A - [(None, 1.1243e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23301 - EHBP1 - [(None, 3.7141e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10097 - ACTR2 - [(None, 2.2846e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9938 - ARHGAP25 - [(None, 8.1982e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84168 - ANTXR1 - [(None, 2.0224e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:27332 - ZNF638 - [(None, 5.463e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4144 - MAT2A - [(None, 3.2619e-24, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2677 - GGCX - [(None, 1.0301e-17, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8673 - VAMP8 - [(None, 1.8821e-18, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10791 - VAMP5 - [(None, 1.4361e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:129303 - TMEM150A - [(None, 1.0484e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10713 - USP39 - [(None, 5.5513e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6439 - SFTPB - [(None, 1.7856e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:25885 - POLR1A - [(None, 1.2149e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55037 - PTCD3 - [(None, 4.0841e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55843 - ARHGAP15 - [(None, 1.2198e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9839 - ZEB2 - [(None, 6.351e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7456 - WIPF1 - [(None, 3.7316e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5136 - PDE1A - [(None, 3.6314e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10203 - CALCRL - [(None, 3.4534e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7035 - TFPI - [(None, 9.9632e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:150864 - FAM117B - [(None, 8.5131e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:130026 - ICA1L - [(None, 6.1462e-37, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55759 - WDR12 - [(None, 6.6221e-42, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79800 - CARF - [(None, 8.4911e-35, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:65065 - NBEAL1 - [(None, 9.9633e-22, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:57404 - CYP20A1 - [(None, 5.1926e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10152 - ABI2 - [(None, 4.62e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:65059 - RAPH1 - [(None, 1.6069e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2335 - FN1 - [(None, 1.1021e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7145 - TNS1 - [(None, 8.3331e-18, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:80309 - SPHKAP - [(None, 1.6986e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55022 - PID1 - [(None, 4.5387e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:26058 - GIGYF2 - [(None, 1.5024e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3769 - KCNJ13 - [(None, 2.8087e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:152273 - FGD5 - [(None, 1.211e-16, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:993 - CDC25A - [(None, 1.2415e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:51385 - ZNF589 - [(None, 2.1722e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55152 - DALRD3 - [(None, 7.0953e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3913 - LAMB2 - [(None, 1.8827e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2876 - GPX1 - [(None, 6.2881e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:387 - RHOA - [(None, 3.3211e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6988 - TCTA - [(None, 2.6215e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:275 - AMT - [(None, 1.0478e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84276 - NICN1 - [(None, 5.5745e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1605 - DAG1 - [(None, 2.8034e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8927 - BSN - [(None, 5.4093e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:327 - APEH - [(None, 2.5952e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4485 - MST1 - [(None, 7.8193e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:63891 - RNF123 - [(None, 3.071e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9807 - IP6K1 - [(None, 9.7181e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:389118 - CDHR4 - [(None, 7.272e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10293 - TRAIP - [(None, 2.9567e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79012 - CAMKV - [(None, 2.2133e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84315 - MON1A - [(None, 2.6594e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10181 - RBM5 - [(None, 1.4797e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23132 - RAD54L2 - [(None, 1.0205e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6314 - ATXN7 - [(None, 1.7381e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4286 - MITF - [(None, 1.1126e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:27086 - FOXP1 - [(None, 7.6449e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8997 - KALRN - [(None, 6.1038e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5523 - PPP2R3A - [(None, 5.6186e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55167 - MSL2 - [(None, 1.174e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5096 - PCCB - [(None, 2.5067e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10274 - STAG1 - [(None, 7.1255e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:347736 - NME9 - [(None, 2.1224e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:22808 - MRAS - [(None, 9.327e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:83850 - ESYT3 - [(None, 2.0777e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:80321 - CEP70 - [(None, 1.6062e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55179 - FAIM - [(None, 6.114e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:26084 - ARHGEF26 - [(None, 3.522e-15, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:170506 - DHX36 - [(None, 3.9428e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:344758 - GPR149 - [(None, 1.2991e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:64778 - FNDC3B - [(None, 1.4295e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:285489 - DOK7 - [(None, 1.6488e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9575 - CLOCK - [(None, 3.8417e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5978 - REST - [(None, 5.9751e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84273 - NOA1 - [(None, 2.7022e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2250 - FGF5 - [(None, 7.879e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:171024 - SYNPO2 - [(None, 9.4552e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:51778 - MYOZ2 - [(None, 1.8469e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54532 - USP53 - [(None, 8.1804e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:401152 - C4orf3 - [(None, 8.9976e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2169 - FABP2 - [(None, 2.7495e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8654 - PDE5A - [(None, 1.3427e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4085 - MAD2L1 - [(None, 2.6722e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:152485 - ZNF827 - [(None, 3.8446e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1909 - EDNRA - [(None, 3.8561e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2982 - GUCY1A3 - [(None, 2.3707e-15, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2983 - GUCY1B3 - [(None, 5.4614e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:11044 - PAPD7 - [(None, 1.2942e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54622 - ARL15 - [(None, 9.0057e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3156 - HMGCR - [(None, 1.3292e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4012 - LNPEP - [(None, 1.55e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4015 - LOX - [(None, 2.4534e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1456 - CSNK1G3 - [(None, 9.2478e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1436 - CSF1R - [(None, 7.5047e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8728 - ADAM19 - [(None, 2.8971e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:348938 - NIPAL4 - [(None, 2.1191e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:662 - BNIP1 - [(None, 2.7973e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9260 - PDLIM7 - [(None, 1.6919e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2762 - GMDS - [(None, 1.8147e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4739 - NEDD9 - [(None, 3.4792e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:221692 - PHACTR1 - [(None, 2.4293e-51, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:154150 - HDGFL1 - [(None, 7.8015e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6941 - TCF19 - [(None, 4.2295e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:401250 - MCCD1 - [(None, 1.713e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7919 - DDX39B - [(None, 1.0905e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7916 - PRRC2A - [(None, 3.2516e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7917 - BAG6 - [(None, 1.1348e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3305 - HSPA1L - [(None, 2.0046e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:80736 - SLC44A4 - [(None, 5.8844e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10919 - EHMT2 - [(None, 1.923e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:717 - C2 - [(None, 4.5953e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:629 - CFB - [(None, 1.6221e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6499 - SKIV2L - [(None, 1.8501e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7148 - TNXB - [(None, 6.6641e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1388 - ATF6B - [(None, 1.5818e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9374 - PPT2 - [(None, 2.5735e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:177 - AGER - [(None, 4.3273e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3112 - HLA-DOB - [(None, 2.2494e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6891 - TAP2 - [(None, 3.4116e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:64771 - C6orf106 - [(None, 2.3415e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6631 - SNRPC - [(None, 1.5314e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54887 - UHRF1BP1 - [(None, 4.736e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7005 - TEAD3 - [(None, 6.776e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7287 - TULP1 - [(None, 4.6533e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1026 - CDKN1A - [(None, 1.9867e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8645 - KCNK5 - [(None, 6.3145e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55603 - FAM46A - [(None, 6.2652e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23376 - UFL1 - [(None, 1.2772e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9457 - FHL5 - [(None, 3.2193e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:387103 - CENPW - [(None, 5.6297e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6943 - TCF21 - [(None, 1.0264e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3097 - HIVEP2 - [(None, 9.9237e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23328 - SASH1 - [(None, 1.3514e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23118 - TAB2 - [(None, 1.9281e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84624 - FNDC1 - [(None, 5.8729e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3482 - IGF2R - [(None, 4.0222e-15, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6580 - SLC22A1 - [(None, 4.383e-16, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6582 - SLC22A2 - [(None, 8.8232e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6581 - SLC22A3 - [(None, 2.217e-25, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4018 - LPA - [(None, 1.1472e-22, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5340 - PLG - [(None, 5.6483e-17, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:56895 - AGPAT4 - [(None, 1.0586e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:222962 - SLC29A4 - [(None, 1.1102e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:221955 - DAGLB - [(None, 3.7298e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:56913 - C1GALT1 - [(None, 7.0856e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54664 - TMEM106B - [(None, 1.0386e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:57057 - TBX20 - [(None, 4.3836e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:349149 - GJC3 - [(None, 1.0093e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:563 - AZGP1 - [(None, 1.2705e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7586 - ZKSCAN1 - [(None, 1.5433e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:245812 - CNPY4 - [(None, 1.76e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:26959 - HBP1 - [(None, 9.396e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10466 - COG5 - [(None, 7.1403e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2845 - GPR22 - [(None, 8.7346e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:11062 - DUS4L - [(None, 1.3828e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55973 - BCAP29 - [(None, 3.9322e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7472 - WNT2 - [(None, 2.144e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1080 - CFTR - [(None, 1.1395e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:64761 - PARP12 - [(None, 2.9554e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4846 - NOS3 - [(None, 1.3906e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4023 - LPL - [(None, 2.0447e-20, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:649 - BMP1 - [(None, 1.0077e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:665 - BNIP3L - [(None, 1.3965e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:137682 - NDUFAF6 - [(None, 3.3754e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:83988 - NCALD - [(None, 3.6381e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23414 - ZFPM2 - [(None, 5.6587e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10221 - TRIB1 - [(None, 1.8962e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4781 - NFIB - [(None, 7.707e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4507 - MTAP - [(None, 4.237e-15, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1029 - CDKN2A - [(None, 4.342e-19, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1030 - CDKN2B - [(None, 3.4589e-31, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:80036 - TRPM3 - [(None, 4.0323e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:19 - ABCA1 - [(None, 3.6619e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23245 - ASTN2 - [(None, 2.3845e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:727 - C5 - [(None, 6.0271e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:153090 - DAB2IP - [(None, 4.893e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2022 - ENG - [(None, 1.5164e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:28 - ABO - [(None, 3.7546e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8872 - CDC123 - [(None, 1.0322e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:783 - CACNB2 - [(None, 1.2657e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:57608 - KIAA1462 - [(None, 1.1342e-15, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:101929256 - LOC101929256 - [(None, 9.6364e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8829 - NRP1 - [(None, 1.8079e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84159 - ARID5B - [(None, 5.5343e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:170392 - OIT3 - [(None, 9.0582e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23053 - ZSWIM8 - [(None, 1.2737e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8509 - NDST2 - [(None, 1.2577e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:83938 - C10orf11 - [(None, 1.6634e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4143 - MAT1A - [(None, 7.0118e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:143241 - DYDC1 - [(None, 1.6367e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84332 - DYDC2 - [(None, 8.5187e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:81619 - TSPAN14 - [(None, 2.7596e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3988 - LIPA - [(None, 8.6524e-26, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:51196 - PLCE1 - [(None, 1.802e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84171 - LOXL4 - [(None, 1.4857e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1586 - CYP17A1 - [(None, 4.8542e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:119032 - C10orf32 - [(None, 2.3032e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:57412 - AS3MT - [(None, 8.842e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54805 - CNNM2 - [(None, 1.6266e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:22978 - NT5C2 - [(None, 1.7636e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79991 - OBFC1 - [(None, 2.8275e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:118663 - BTBD16 - [(None, 1.582e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5654 - HTRA1 - [(None, 6.0354e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:60626 - RIC8A - [(None, 2.1435e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23075 - SWAP70 - [(None, 2.9505e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:81846 - SBF2 - [(None, 1.1183e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:406 - ARNTL - [(None, 2.3844e-15, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:144100 - PLEKHA7 - [(None, 1.6694e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:627 - BDNF - [(None, 3.9424e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:51144 - HSD17B12 - [(None, 2.677e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:114971 - PTPMT1 - [(None, 9.2464e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5795 - PTPRJ - [(None, 4.0923e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:219469 - OR8H1 - [(None, 2.7408e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:254102 - EHBP1L1 - [(None, 1.7836e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:399909 - PCNXL3 - [(None, 9.0043e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6494 - SIPA1 - [(None, 8.6286e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5970 - RELA - [(None, 2.497e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5017 - OVOL1 - [(None, 5.1186e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8500 - PPFIA1 - [(None, 9.8771e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2017 - CTTN - [(None, 2.451e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6188 - RPS3 - [(None, 1.9945e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:81544 - GDPD5 - [(None, 1.5166e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:871 - SERPINH1 - [(None, 2.0708e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:143872 - ARHGAP42 - [(None, 4.9058e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:143903 - LAYN - [(None, 9.3914e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84811 - BUD13 - [(None, 4.496e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8882 - ZPR1 - [(None, 3.5936e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:116519 - APOA5 - [(None, 2.8365e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55823 - VPS11 - [(None, 2.32e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6484 - ST3GAL4 - [(None, 5.5968e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10867 - TSPAN9 - [(None, 6.9029e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:716 - C1S - [(None, 1.2829e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6660 - SOX5 - [(None, 1.857e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:283373 - ANKRD52 - [(None, 4.3674e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1431 - CS - [(None, 1.451e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9924 - PAN2 - [(None, 8.23e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:282809 - POC1B - [(None, 2.6572e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8693 - GALNT4 - [(None, 9.4099e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:100528030 - POC1B-GALNT4 - [(None, 6.7965e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:490 - ATP2B1 - [(None, 2.9566e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7181 - NR2C1 - [(None, 5.8378e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55785 - FGD6 - [(None, 9.7214e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23316 - CUX2 - [(None, 1.1745e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:144717 - FAM109A - [(None, 4.2947e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10019 - SH2B3 - [(None, 5.4458e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6311 - ATXN2 - [(None, 1.5028e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8315 - BRAP - [(None, 4.4448e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:80724 - ACAD10 - [(None, 1.2223e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:217 - ALDH2 - [(None, 6.4034e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8550 - MAPKAPK5 - [(None, 7.2308e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:89894 - TMEM116 - [(None, 4.4245e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10961 - ERP29 - [(None, 9.7273e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:80018 - NAA25 - [(None, 3.0589e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10906 - TRAFD1 - [(None, 5.0713e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:283450 - HECTD4 - [(None, 3.5068e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6128 - RPL6 - [(None, 1.0133e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5781 - PTPN11 - [(None, 2.1676e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6927 - HNF1A - [(None, 1.1377e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:64897 - C12orf43 - [(None, 2.0985e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8638 - OASL - [(None, 3.0501e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:80212 - CCDC92 - [(None, 4.7441e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:144348 - ZNF664 - [(None, 3.8194e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:100533183 - ZNF664-FAM101A - [(None, 2.4012e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:949 - SCARB1 - [(None, 1.5398e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2321 - FLT1 - [(None, 9.8123e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10443 - N4BP2L2 - [(None, 4.232e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23047 - PDS5B - [(None, 1.593e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4093 - SMAD9 - [(None, 9.8132e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:341640 - FREM2 - [(None, 9.8446e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23143 - LRCH1 - [(None, 4.6552e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1282 - COL4A1 - [(None, 5.1249e-30, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1284 - COL4A2 - [(None, 8.1625e-19, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3621 - ING1 - [(None, 5.3475e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5684 - PSMA3 - [(None, 8.0733e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5926 - ARID4A - [(None, 5.9776e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:87 - ACTN1 - [(None, 2.777e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8892 - EIF2B2 - [(None, 1.9109e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:27030 - MLH3 - [(None, 2.8128e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:97 - ACYP1 - [(None, 7.3798e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79696 - ZC2HC1C - [(None, 3.0542e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:91754 - NEK9 - [(None, 3.1526e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10972 - TMED10 - [(None, 2.0392e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84439 - HHIPL1 - [(None, 2.0715e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10858 - CYP46A1 - [(None, 3.3247e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:11261 - CHP1 - [(None, 1.32e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:283659 - PRTG - [(None, 2.1694e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:348093 - RBPMS2 - [(None, 2.9561e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4088 - SMAD3 - [(None, 8.664e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:11173 - ADAMTS7 - [(None, 3.5057e-24, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10933 - MORF4L1 - [(None, 2.2886e-18, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5045 - FURIN - [(None, 5.6941e-21, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2242 - FES - [(None, 2.0566e-28, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79652 - TMEM204 - [(None, 2.1056e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4629 - MYH11 - [(None, 2.3137e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79068 - FTO - [(None, 1.5031e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1071 - CETP - [(None, 8.727e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1728 - NQO1 - [(None, 1.9709e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:28987 - NOB1 - [(None, 1.1728e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:11060 - WWP2 - [(None, 2.2993e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:342372 - PKD1L3 - [(None, 3.3488e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1723 - DHODH - [(None, 1.6525e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3240 - HP - [(None, 3.1619e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3250 - HPR - [(None, 4.4565e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54957 - TXNL4B - [(None, 8.2748e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9785 - DHX38 - [(None, 1.3925e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:440387 - CTRB2 - [(None, 3.8176e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9564 - BCAR1 - [(None, 1.5212e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10428 - CFDP1 - [(None, 2.2316e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:124491 - TMEM170A - [(None, 8.2353e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4166 - CHST6 - [(None, 3.574e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:80790 - CMIP - [(None, 4.1882e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5336 - PLCG2 - [(None, 7.3562e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1012 - CDH13 - [(None, 1.4143e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1801 - DPH1 - [(None, 2.7571e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3090 - HIC1 - [(None, 2.469e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23293 - SMG6 - [(None, 1.2109e-18, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:63826 - SRR - [(None, 7.9403e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5048 - PAFAH1B1 - [(None, 5.9285e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10743 - RAI1 - [(None, 1.5939e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6720 - SREBF1 - [(None, 2.4991e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:146691 - TOM1L2 - [(None, 2.5869e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:83450 - LRRC48 - [(None, 2.4103e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:91647 - ATPAF2 - [(None, 1.6616e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79018 - GID4 - [(None, 5.1191e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1819 - DRG2 - [(None, 2.3513e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:51168 - MYO15A - [(None, 2.7964e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9618 - TRAF4 - [(None, 1.0166e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:28964 - GIT1 - [(None, 4.206e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:124930 - ANKRD13B - [(None, 6.7406e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:84940 - CORO6 - [(None, 6.317e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:85464 - SSH2 - [(None, 1.0415e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6532 - SLC6A4 - [(None, 3.1368e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79132 - DHX58 - [(None, 5.5389e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2648 - KAT2A - [(None, 2.6427e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:94086 - HSPB9 - [(None, 6.8097e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5878 - RAB5C - [(None, 1.7544e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:284119 - PTRF - [(None, 3.6338e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:535 - ATP6V0A1 - [(None, 3.2599e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4669 - NAGLU - [(None, 5.7818e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6945 - MLX - [(None, 7.3903e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79990 - PLEKHH3 - [(None, 8.8873e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2118 - ETV4 - [(None, 1.6289e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9570 - GOSR2 - [(None, 1.4155e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:284076 - TTLL6 - [(None, 5.7985e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:516 - ATP5G1 - [(None, 1.3276e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:65264 - UBE2Z - [(None, 4.1913e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:11267 - SNF8 - [(None, 3.4794e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2695 - GIP - [(None, 2.9616e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10642 - IGF2BP1 - [(None, 2.4007e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2793 - GNGT2 - [(None, 3.3133e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:22834 - ZNF652 - [(None, 7.8021e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5245 - PHB - [(None, 2.9436e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54828 - BCAS3 - [(None, 3.0359e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5175 - PECAM1 - [(None, 7.9033e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55062 - WIPI1 - [(None, 7.7738e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:201294 - UNC13D - [(None, 1.6686e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:201292 - TRIM65 - [(None, 2.2792e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:64978 - MRPL38 - [(None, 5.8535e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:85302 - FBF1 - [(None, 2.7402e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:268 - AMH - [(None, 9.4181e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:29128 - UHRF1 - [(None, 2.6729e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:51129 - ANGPTL4 - [(None, 2.7305e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:57153 - SLC44A2 - [(None, 4.7086e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3609 - ILF3 - [(None, 4.1727e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1785 - DNM2 - [(None, 3.8194e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:11018 - TMED1 - [(None, 1.2442e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:255809 - C19orf38 - [(None, 4.8684e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10498 - CARM1 - [(None, 3.6455e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:78992 - YIPF2 - [(None, 1.544e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6597 - SMARCA4 - [(None, 1.6682e-16, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3949 - LDLR - [(None, 1.5156e-16, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:25959 - KANK2 - [(None, 3.3373e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2057 - EPOR - [(None, 1.1076e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4650 - MYO9B - [(None, 4.7686e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55201 - MAP1S - [(None, 5.4426e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23149 - FCHO1 - [(None, 6.4064e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:163115 - ZNF781 - [(None, 6.376e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:558 - AXL - [(None, 2.7436e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:11100 - HNRNPUL1 - [(None, 1.2573e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:90324 - CCDC97 - [(None, 1.1791e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7040 - TGFB1 - [(None, 1.686e-19, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:641649 - TMEM91 - [(None, 4.7503e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:80776 - B9D2 - [(None, 4.8681e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:56915 - EXOSC5 - [(None, 4.1908e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:593 - BCKDHA - [(None, 6.5238e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:374907 - B3GNT8 - [(None, 7.0744e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55101 - ATP5SL - [(None, 1.7992e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:602 - BCL3 - [(None, 1.7975e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4059 - BCAM - [(None, 1.3886e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5819 - PVRL2 - [(None, 8.0194e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10452 - TOMM40 - [(None, 4.5967e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:348 - APOE - [(None, 6.6932e-27, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:341 - APOC1 - [(None, 1.03e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:346 - APOC4 - [(None, 7.8315e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:57787 - MARK4 - [(None, 4.3946e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2696 - GIPR - [(None, 2.8968e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54814 - QPCTL - [(None, 2.095e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23403 - FBXO46 - [(None, 8.1785e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:147912 - SIX5 - [(None, 2.0803e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1760 - DMPK - [(None, 4.9998e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1762 - DMWD - [(None, 3.2517e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:81492 - RSPH6A - [(None, 1.8777e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3171 - FOXA3 - [(None, 8.3757e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:25865 - PRKD2 - [(None, 7.3108e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79147 - FKRP - [(None, 8.145e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6238 - RRBP1 - [(None, 1.2229e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:57419 - SLC24A3 - [(None, 1.796e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:58476 - TP53INP2 - [(None, 4.242e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23054 - NCOA6 - [(None, 8.29e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2686 - GGT7 - [(None, 1.0232e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:57644 - MYH7B - [(None, 1.9732e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:26133 - TRPC4AP - [(None, 4.9595e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:55741 - EDEM2 - [(None, 1.1362e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2036 - EPB41L1 - [(None, 1.0519e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:25980 - AAR2 - [(None, 2.2159e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7150 - TOP1 - [(None, 4.9262e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5335 - PLCG1 - [(None, 1.8729e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23051 - ZHX3 - [(None, 3.7799e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:57580 - PREX1 - [(None, 1.3151e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:128611 - ZNF831 - [(None, 1.0165e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10287 - RGS19 - [(None, 4.9855e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10600 - USP16 - [(None, 4.3726e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:56911 - MAP3K7CL - [(None, 1.0281e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:11077 - HSF2BP - [(None, 5.0724e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23076 - RRP1B - [(None, 7.3163e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7290 - HIRA - [(None, 8.1539e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7122 - CLDN5 - [(None, 1.7401e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:56241 - SUSD2 - [(None, 7.4849e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23384 - SPECC1L - [(None, 1.3907e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:135 - ADORA2A - [(None, 7.5416e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4744 - NEFH - [(None, 8.9758e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8563 - THOC5 - [(None, 4.9178e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8508 - NIPSNAP1 - [(None, 1.5171e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:83874 - TBC1D10A - [(None, 1.7455e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10291 - SF3A1 - [(None, 1.1042e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:550631 - CCDC157 - [(None, 6.958e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8224 - SYN3 - [(None, 7.8943e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7078 - TIMP3 - [(None, 1.4854e-06, None)]
+for MONDO:0005010 - coronary artery disease, using category biolink:PhenotypicFeature
+for MONDO:0044991 - upper digestive tract disease, using category biolink:Disease
+for MONDO:0044991 - upper digestive tract disease, using category biolink:PhenotypicFeature
+for EFO:0009641 - malaise, using category biolink:Disease
+for EFO:0009641 - malaise, using category biolink:PhenotypicFeature
+for MONDO:0005084 - mental disorder, using category biolink:Disease
+for MONDO:0005084 - mental disorder, using category biolink:PhenotypicFeature
+for UMLS:C0852123 - Coughing and associated symptoms, using category biolink:Disease
+for UMLS:C0852123 - Coughing and associated symptoms, using category biolink:PhenotypicFeature
+for UMLS:C1112140 - Nervous system disorders NEC, using category biolink:Disease
+for UMLS:C1112140 - Nervous system disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0851352 - Cong, using category biolink:Disease
+for UMLS:C0851352 - Cong, using category biolink:PhenotypicFeature
+for UMLS:C0851815 - Peripheral vascular disorders NEC, using category biolink:Disease
+for UMLS:C0851815 - Peripheral vascular disorders NEC, using category biolink:PhenotypicFeature
+for MONDO:0007186 - gastroesophageal reflux disease, using category biolink:Disease
+for MONDO:0007186 - gastroesophageal reflux disease, using category biolink:PhenotypicFeature
+for UMLS:C0577917 - Functional finding of respiratory tract, using category biolink:Disease
+for UMLS:C0577917 - Functional finding of respiratory tract, using category biolink:PhenotypicFeature
+for UMLS:C0851813 - Gastrointestinal signs and symptoms NEC, using category biolink:Disease
+for UMLS:C0851813 - Gastrointestinal signs and symptoms NEC, using category biolink:PhenotypicFeature
+for HP:0020058 - Abnormal red blood cell count, using category biolink:Disease
+for HP:0020058 - Abnormal red blood cell count, using category biolink:PhenotypicFeature
+for MONDO:0002050 - depressive disorder, using category biolink:Disease
+for MONDO:0002050 - depressive disorder, using category biolink:PhenotypicFeature
+for UMLS:C0459149 - Disorder of soft tissue of head, using category biolink:Disease
+for UMLS:C0459149 - Disorder of soft tissue of head, using category biolink:PhenotypicFeature
+for MONDO:0005569 - cartilage disease, using category biolink:Disease
+for MONDO:0005569 - cartilage disease, using category biolink:PhenotypicFeature
+for UMLS:C1444784 - Disorder of spinal region, using category biolink:Disease
+for UMLS:C1444784 - Disorder of spinal region, using category biolink:PhenotypicFeature
+for UMLS:C0576471 - Finding of brain, using category biolink:Disease
+for UMLS:C0576471 - Finding of brain, using category biolink:PhenotypicFeature
+for UMLS:C0949002 - Endocrine and glandular disorders NEC, using category biolink:Disease
+for UMLS:C0949002 - Endocrine and glandular disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C1290864 - Disorder of abdomen, using category biolink:Disease
+for UMLS:C1290864 - Disorder of abdomen, using category biolink:PhenotypicFeature
+for UMLS:C0851300 - Oedema NEC, using category biolink:Disease
+for UMLS:C0851300 - Oedema NEC, using category biolink:PhenotypicFeature
+for UMLS:C0558385 - Disorder of neck, using category biolink:Disease
+for UMLS:C0558385 - Disorder of neck, using category biolink:PhenotypicFeature
+for UMLS:C0577987 - Mediastinal finding, using category biolink:Disease
+for UMLS:C0577987 - Mediastinal finding, using category biolink:PhenotypicFeature
+for UMLS:C1272788 - Mental state, behavior and/or psychosocial function finding, using category biolink:Disease
+for UMLS:C1272788 - Mental state, behavior and/or psychosocial function finding, using category biolink:PhenotypicFeature
+for MONDO:0000473 - arterial disorder, using category biolink:Disease
+for MONDO:0000473 - arterial disorder, using category biolink:PhenotypicFeature
+for UMLS:C0425654 - Blood vessel finding, using category biolink:Disease
+for UMLS:C0425654 - Blood vessel finding, using category biolink:PhenotypicFeature
+for UMLS:C3661978 - Finding of abdominal segment of trunk, using category biolink:Disease
+for UMLS:C3661978 - Finding of abdominal segment of trunk, using category biolink:PhenotypicFeature
+for UMLS:C0426683 - Abdominal organ finding, using category biolink:Disease
+for UMLS:C0426683 - Abdominal organ finding, using category biolink:PhenotypicFeature
+for UMLS:C0851977 - Gastrointestinal and abdominal pains (excl oral and throat), using category biolink:Disease
+for UMLS:C0851977 - Gastrointestinal and abdominal pains (excl oral and throat), using category biolink:PhenotypicFeature
+for OMIM:MTHU027819 - Chronic disease, using category biolink:Disease
+for OMIM:MTHU027819 - Chronic disease, using category biolink:PhenotypicFeature
+for NCIT:C36286 - Urinary System Finding, using category biolink:Disease
+for NCIT:C36286 - Urinary System Finding, using category biolink:PhenotypicFeature
+for MONDO:0024634 - large intestine disease, using category biolink:Disease
+for MONDO:0024634 - large intestine disease, using category biolink:PhenotypicFeature
+for UMLS:C1286942 - General well-being finding, using category biolink:Disease
+for UMLS:C1286942 - General well-being finding, using category biolink:PhenotypicFeature
+for UMLS:C0947736 - Upper respiratory tract disorders (excl infections), using category biolink:Disease
+for UMLS:C0947736 - Upper respiratory tract disorders (excl infections), using category biolink:PhenotypicFeature
+for UMLS:C1261141 - Gastrointestinal tract finding, using category biolink:Disease
+for UMLS:C1261141 - Gastrointestinal tract finding, using category biolink:PhenotypicFeature
+for UMLS:C1699535 - Coronary necrosis and vascular insufficiency, using category biolink:Disease
+for UMLS:C1699535 - Coronary necrosis and vascular insufficiency, using category biolink:PhenotypicFeature
+for UMLS:C0574125 - Functional finding, using category biolink:Disease
+for UMLS:C0574125 - Functional finding, using category biolink:PhenotypicFeature
+for UMLS:C1298758 - Inflammatory disorder of digestive system, using category biolink:Disease
+for UMLS:C1298758 - Inflammatory disorder of digestive system, using category biolink:PhenotypicFeature
+for UMLS:C0577029 - Finding of large intestine, using category biolink:Disease
+for UMLS:C0577029 - Finding of large intestine, using category biolink:PhenotypicFeature
+for UMLS:C0851353 - Blood and lymphatic system disorders, using category biolink:Disease
+for UMLS:C0851353 - Blood and lymphatic system disorders, using category biolink:PhenotypicFeature
+for MONDO:0005560 - brain disease, using category biolink:Disease
+for MONDO:0005560 - brain disease, using category biolink:PhenotypicFeature
+for MONDO:0002277 - arteriosclerosis disorder, using category biolink:Disease
+for MONDO:0002277 - arteriosclerosis disorder, using category biolink:PhenotypicFeature
+for UMLS:C0852401 - Encephalopathies NEC in MDR, using category biolink:Disease
+for UMLS:C0852401 - Encephalopathies NEC in MDR, using category biolink:PhenotypicFeature
+for UMLS:C0455931 - Ear and auditory finding, using category biolink:Disease
+for UMLS:C0455931 - Ear and auditory finding, using category biolink:PhenotypicFeature
+for UMLS:C1290866 - Disorder of pelvis, using category biolink:Disease
+for UMLS:C1290866 - Disorder of pelvis, using category biolink:PhenotypicFeature
+for MONDO:0007263 - cardiac rhythm disease, using category biolink:Disease
+for MONDO:0007263 - cardiac rhythm disease, using category biolink:PhenotypicFeature
+for MONDO:0000651 - thoracic disease, using category biolink:Disease
+for MONDO:0000651 - thoracic disease, using category biolink:PhenotypicFeature
+for UMLS:C0577910 - Lower respiratory tract finding, using category biolink:Disease
+for UMLS:C0577910 - Lower respiratory tract finding, using category biolink:PhenotypicFeature
+for UMLS:C0578491 - Infection by site, using category biolink:Disease
+for UMLS:C0578491 - Infection by site, using category biolink:PhenotypicFeature
+for UMLS:C0877706 - Metabolic disorders NEC, using category biolink:Disease
+for UMLS:C0877706 - Metabolic disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0426684 - Bowel finding, using category biolink:Disease
+for UMLS:C0426684 - Bowel finding, using category biolink:PhenotypicFeature
+for MONDO:0005108 - viral infectious disease, using category biolink:Disease
+for MONDO:0005108 - viral infectious disease, using category biolink:PhenotypicFeature
+for MONDO:0005071 - nervous system disorder, using category biolink:Disease
+for MONDO:0005071 - nervous system disorder, using category biolink:PhenotypicFeature
+for UMLS:C0268195 - Disorder of lipoprotein AND/OR lipid metabolism, using category biolink:Disease
+for UMLS:C0268195 - Disorder of lipoprotein AND/OR lipid metabolism, using category biolink:PhenotypicFeature
+for UMLS:C1320355 - Viscus structure finding, using category biolink:Disease
+for UMLS:C1320355 - Viscus structure finding, using category biolink:PhenotypicFeature
+for MONDO:0005267 - heart disease, using category biolink:Disease
+for MONDO:0005267 - heart disease, using category biolink:PhenotypicFeature
+for UMLS:C0852428 - Spinal cord and nerve root disorders NEC, using category biolink:Disease
+for UMLS:C0852428 - Spinal cord and nerve root disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0425674 - Arterial finding, using category biolink:Disease
+for UMLS:C0425674 - Arterial finding, using category biolink:PhenotypicFeature
+for MONDO:0005151 - endocrine system disease, using category biolink:Disease
+for MONDO:0005151 - endocrine system disease, using category biolink:PhenotypicFeature
+for UMLS:C0477474 - Dermatitis and eczema, using category biolink:Disease
+for UMLS:C0477474 - Dermatitis and eczema, using category biolink:PhenotypicFeature
+for MONDO:0002525 - inherited lipid metabolism disorder, using category biolink:Disease
+for MONDO:0002525 - inherited lipid metabolism disorder, using category biolink:PhenotypicFeature
+for UMLS:C0947766 - Metabolism disorders NEC, using category biolink:Disease
+for UMLS:C0947766 - Metabolism disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0947879 - Infections NEC, using category biolink:Disease
+for UMLS:C0947879 - Infections NEC, using category biolink:PhenotypicFeature
+for MONDO:0005328 - eye disease, using category biolink:Disease
+for MONDO:0005328 - eye disease, using category biolink:PhenotypicFeature
+for UMLS:C0021502 - Injuries NEC, using category biolink:Disease
+for UMLS:C0021502 - Injuries NEC, using category biolink:PhenotypicFeature
+for UMLS:C0575479 - Finding of region of thorax, using category biolink:Disease
+for UMLS:C0575479 - Finding of region of thorax, using category biolink:PhenotypicFeature
+for UMLS:C0851413 - Bone disorders (excl congenital and fractures), using category biolink:Disease
+for UMLS:C0851413 - Bone disorders (excl congenital and fractures), using category biolink:PhenotypicFeature
+for UMLS:C0851475 - Spinal cord and nerve root disorders, using category biolink:Disease
+for UMLS:C0851475 - Spinal cord and nerve root disorders, using category biolink:PhenotypicFeature
+for UMLS:C0947764 - Tendon, ligament and cartilage disorders, using category biolink:Disease
+for UMLS:C0947764 - Tendon, ligament and cartilage disorders, using category biolink:PhenotypicFeature
+for UMLS:C1290384 - Structural disorder of heart, using category biolink:Disease
+for UMLS:C1290384 - Structural disorder of heart, using category biolink:PhenotypicFeature
+for UMLS:C0851518 - Protein metabolism disorders NEC, using category biolink:Disease
+for UMLS:C0851518 - Protein metabolism disorders NEC, using category biolink:PhenotypicFeature
+for MONDO:0005087 - respiratory system disease, using category biolink:Disease
+for MONDO:0005087 - respiratory system disease, using category biolink:PhenotypicFeature
+for MONDO:0005550 - infectious disease, using category biolink:Disease
+for MONDO:0005550 - infectious disease, using category biolink:PhenotypicFeature
+for MONDO:0024355 - respiratory tract infectious disease, using category biolink:Disease
+for MONDO:0024355 - respiratory tract infectious disease, using category biolink:PhenotypicFeature
+for UMLS:C1285333 - Inflammation of specific body systems, using category biolink:Disease
+for UMLS:C1285333 - Inflammation of specific body systems, using category biolink:PhenotypicFeature
+for MONDO:0005151 - endocrine system disease, using category biolink:Disease
+for MONDO:0005151 - endocrine system disease, using category biolink:PhenotypicFeature
+for MONDO:0002602 - central nervous system disease, using category biolink:Disease
+for MONDO:0002602 - central nervous system disease, using category biolink:PhenotypicFeature
+for UMLS:C0947842 - Cardiac disorders NEC, using category biolink:Disease
+for UMLS:C0947842 - Cardiac disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0851366 - reproductive system and breast disorders, using category biolink:Disease
+for UMLS:C0851366 - reproductive system and breast disorders, using category biolink:PhenotypicFeature
+for UMLS:C0852125 - Respiratory signs and symptoms NEC, using category biolink:Disease
+for UMLS:C0852125 - Respiratory signs and symptoms NEC, using category biolink:PhenotypicFeature
+for UMLS:C3661983 - Finding of pelvis, using category biolink:Disease
+for UMLS:C3661983 - Finding of pelvis, using category biolink:PhenotypicFeature
+for UMLS:C0851572 - Thoracic disorders (excl lung and pleura), using category biolink:Disease
+for UMLS:C0851572 - Thoracic disorders (excl lung and pleura), using category biolink:PhenotypicFeature
+for MONDO:0004992 - cancer, using category biolink:Disease
+for MONDO:0004992 - cancer, using category biolink:PhenotypicFeature
+for MONDO:0020683 - acute disease, using category biolink:Disease
+for MONDO:0020683 - acute disease, using category biolink:PhenotypicFeature
+for UMLS:C0851358 - Metabolism and nutrition disorders, using category biolink:Disease
+for UMLS:C0851358 - Metabolism and nutrition disorders, using category biolink:PhenotypicFeature
+for UMLS:C1112139 - Respiratory tract disorders NEC, using category biolink:Disease
+for UMLS:C1112139 - Respiratory tract disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C1112108 - Neurological disorders NEC, using category biolink:Disease
+for UMLS:C1112108 - Neurological disorders NEC, using category biolink:PhenotypicFeature
+for MONDO:0000651 - thoracic disease, using category biolink:Disease
+for MONDO:0000651 - thoracic disease, using category biolink:PhenotypicFeature
+for UMLS:C0851576 - Psychiatric disorders NEC, using category biolink:Disease
+for UMLS:C0851576 - Psychiatric disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0852022 - Non-site specific necrosis and vascular insufficiency NEC, using category biolink:Disease
+for UMLS:C0852022 - Non-site specific necrosis and vascular insufficiency NEC, using category biolink:PhenotypicFeature
+for UMLS:C0852479 - Neoplasms malignant site unspecified NEC, using category biolink:Disease
+for UMLS:C0852479 - Neoplasms malignant site unspecified NEC, using category biolink:PhenotypicFeature
+for MONDO:0021166 - inflammatory disease, using category biolink:Disease
+for MONDO:0021166 - inflammatory disease, using category biolink:PhenotypicFeature
+for UMLS:C1531969 - Finding of back, using category biolink:Disease
+for UMLS:C1531969 - Finding of back, using category biolink:PhenotypicFeature
+for NCIT:C35552 - Cardiovascular System Finding, using category biolink:Disease
+for NCIT:C35552 - Cardiovascular System Finding, using category biolink:PhenotypicFeature
+for UMLS:C1112113 - None, using category biolink:Disease
+for UMLS:C1112113 - None, using category biolink:PhenotypicFeature
+for UMLS:C1285332 - Inflammation of specific body structures or tissue, using category biolink:Disease
+for UMLS:C1285332 - Inflammation of specific body structures or tissue, using category biolink:PhenotypicFeature
+for MONDO:0001134 - essential hypertension, using category biolink:Disease
+for MONDO:0001134 - essential hypertension, using category biolink:PhenotypicFeature
+for HP:0011024 - Abnormality of the gastrointestinal tract, using category biolink:Disease
+for HP:0011024 - Abnormality of the gastrointestinal tract, using category biolink:PhenotypicFeature
+for MONDO:0005385 - vascular disease, using category biolink:Disease
+for MONDO:0005385 - vascular disease, using category biolink:PhenotypicFeature
+for UMLS:C0852191 - Hyperlipidaemias NEC, using category biolink:Disease
+for UMLS:C0852191 - Hyperlipidaemias NEC, using category biolink:PhenotypicFeature
+for UMLS:C0266804 - Disorder of upper digestive tract, using category biolink:Disease
+for UMLS:C0266804 - Disorder of upper digestive tract, using category biolink:PhenotypicFeature
+for UMLS:C0427191 - Bone finding, using category biolink:Disease
+for UMLS:C0427191 - Bone finding, using category biolink:PhenotypicFeature
+for MONDO:0003900 - connective tissue disease, using category biolink:Disease
+for MONDO:0003900 - connective tissue disease, using category biolink:PhenotypicFeature
+for UMLS:C0577165 - Urogenital finding, using category biolink:Disease
+for UMLS:C0577165 - Urogenital finding, using category biolink:PhenotypicFeature
+for UMLS:C0852316 - Reproductive tract disorders NEC (excl neoplasms), using category biolink:Disease
+for UMLS:C0852316 - Reproductive tract disorders NEC (excl neoplasms), using category biolink:PhenotypicFeature
+for UMLS:C3661977 - Disorder of pelvic region of trunk, using category biolink:Disease
+for UMLS:C3661977 - Disorder of pelvic region of trunk, using category biolink:PhenotypicFeature
+for UMLS:C0424449 - General finding of observation of patient, using category biolink:Disease
+for UMLS:C0424449 - General finding of observation of patient, using category biolink:PhenotypicFeature
+for UMLS:C2711516 - Abnormal finding on evaluation procedure, using category biolink:Disease
+for UMLS:C2711516 - Abnormal finding on evaluation procedure, using category biolink:PhenotypicFeature
+for UMLS:C0851459 - Arteriosclerosis, stenosis, vascular insufficiency and necrosis, using category biolink:Disease
+for UMLS:C0851459 - Arteriosclerosis, stenosis, vascular insufficiency and necrosis, using category biolink:PhenotypicFeature
+for UMLS:C2700612 - Disorder of digestive tract, using category biolink:Disease
+for UMLS:C2700612 - Disorder of digestive tract, using category biolink:PhenotypicFeature
+for UMLS:C0851717 - Non-site specific injuries NEC, using category biolink:Disease
+for UMLS:C0851717 - Non-site specific injuries NEC, using category biolink:PhenotypicFeature
+for HP:0002094 - Dyspnea, using category biolink:Disease
+for HP:0002094 - Dyspnea, using category biolink:PhenotypicFeature
+for UMLS:C0578056 - Pain of truncal structure, using category biolink:Disease
+for UMLS:C0578056 - Pain of truncal structure, using category biolink:PhenotypicFeature
+for UMLS:C1285162 - Degenerative disorder, using category biolink:Disease
+for UMLS:C1285162 - Degenerative disorder, using category biolink:PhenotypicFeature
+for MONDO:0006816 - arthropathy, using category biolink:Disease
+for MONDO:0006816 - arthropathy, using category biolink:PhenotypicFeature
+for MONDO:0043707 - mediastinal disease, using category biolink:Disease
+for MONDO:0043707 - mediastinal disease, using category biolink:PhenotypicFeature
+for UMLS:C0851494 - Connective tissue disorders (excl congenital), using category biolink:Disease
+for UMLS:C0851494 - Connective tissue disorders (excl congenital), using category biolink:PhenotypicFeature
+for UMLS:C3263722 - Traumatic AND/OR non-traumatic injury, using category biolink:Disease
+for UMLS:C3263722 - Traumatic AND/OR non-traumatic injury, using category biolink:PhenotypicFeature
+for UMLS:C1290837 - Disorder of trunk, using category biolink:Disease
+for UMLS:C1290837 - Disorder of trunk, using category biolink:PhenotypicFeature
+for MONDO:0005044 - hypertensive disorder, using category biolink:Disease
+	 biolink:condition_associated_with_gene - NCBIGene:93166 - PRDM6 - [(None, 1.07e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2201 - FBN2 - [(None, 7.9332e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4855 - NOTCH4 - [(None, 2.325e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:28969 - BZW2 - [(None, 8.1044e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4846 - NOS3 - [(None, 6.2087e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:65986 - ZBTB10 - [(None, 1.2286e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:783 - CACNB2 - [(None, 4.3367e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8028 - MLLT10 - [(None, 1.011e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:51196 - PLCE1 - [(None, 1.6373e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54805 - CNNM2 - [(None, 1.0309e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:22978 - NT5C2 - [(None, 8.49e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:81846 - SBF2 - [(None, 7.0371e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:91012 - CERS5 - [(None, 3.1454e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:51474 - LIMA1 - [(None, 2.4078e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:466 - ATF1 - [(None, 7.4531e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3221 - HOXC4 - [(None, 3.7441e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3223 - HOXC6 - [(None, 2.8565e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3222 - HOXC5 - [(None, 8.4718e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:490 - ATP2B1 - [(None, 1.816e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23316 - CUX2 - [(None, 3.934e-09, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:144717 - FAM109A - [(None, 4.3184e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6541 - SLC7A1 - [(None, 2.2846e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8881 - CDC16 - [(None, 3.3251e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:58489 - ABHD17C - [(None, 1.8874e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:5045 - FURIN - [(None, 8.6908e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2242 - FES - [(None, 2.4165e-13, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:79068 - FTO - [(None, 5.4195e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:80790 - CMIP - [(None, 1.6402e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:23293 - SMG6 - [(None, 7.8614e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1856 - DVL2 - [(None, 1.6994e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9570 - GOSR2 - [(None, 4.9308e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4635 - MYL4 - [(None, 1.2297e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:6909 - TBX2 - [(None, 9.2754e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:388407 - C17orf82 - [(None, 1.6889e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:57158 - JPH2 - [(None, 2.3373e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:128611 - ZNF831 - [(None, 7.6139e-15, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54897 - CASZ1 - [(None, 1.6281e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:284498 - C1orf167 - [(None, 1.9553e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4524 - MTHFR - [(None, 1.8306e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:1185 - CLCN6 - [(None, 1.591e-12, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:101928728 - LOC101928728 - [(None, 1.0557e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8289 - ARID1A - [(None, 1.0951e-06, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:10726 - NUDC - [(None, 9.5621e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:126695 - KDF1 - [(None, 2.7737e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:7482 - WNT2B - [(None, 2.1144e-11, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:54879 - ST7L - [(None, 2.3552e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:4343 - MOV10 - [(None, 4.0755e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:183 - AGT - [(None, 7.6884e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:3777 - KCNK3 - [(None, 1.0199e-14, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:9497 - SLC4A7 - [(None, 2.7603e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:776 - CACNA1D - [(None, 2.7026e-08, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2250 - FGF5 - [(None, 2.1448e-10, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:8633 - UNC5C - [(None, 6.7666e-07, None)]
+	 biolink:condition_associated_with_gene - NCBIGene:2982 - GUCY1A3 - [(None, 1.2251e-10, None)]
+for MONDO:0005044 - hypertensive disorder, using category biolink:PhenotypicFeature
+for UMLS:C0851428 - Vascular disorders NEC, using category biolink:Disease
+for UMLS:C0851428 - Vascular disorders NEC, using category biolink:PhenotypicFeature
+for MONDO:0005066 - metabolic disease, using category biolink:Disease
+for MONDO:0005066 - metabolic disease, using category biolink:PhenotypicFeature
+for UMLS:C0579140 - Finding of trunk structure, using category biolink:Disease
+for UMLS:C0579140 - Finding of trunk structure, using category biolink:PhenotypicFeature
+for MONDO:0004995 - cardiovascular disease, using category biolink:Disease
+for MONDO:0004995 - cardiovascular disease, using category biolink:PhenotypicFeature
+for UMLS:C1285331 - Inflammation of specific body organs, using category biolink:Disease
+for UMLS:C1285331 - Inflammation of specific body organs, using category biolink:PhenotypicFeature
+for UMLS:C0575142 - Finding of head region, using category biolink:Disease
+for UMLS:C0575142 - Finding of head region, using category biolink:PhenotypicFeature
+for UMLS:C0577785 - Cardiac finding, using category biolink:Disease
+for UMLS:C0577785 - Cardiac finding, using category biolink:PhenotypicFeature
+for UMLS:C0851444 - Allergic condition, using category biolink:Disease
+for UMLS:C0851444 - Allergic condition, using category biolink:PhenotypicFeature
+for UMLS:C0851429 - Genitourinary tract disorders NEC, using category biolink:Disease
+for UMLS:C0851429 - Genitourinary tract disorders NEC, using category biolink:PhenotypicFeature
+for MONDO:0021145 - disease of genitourinary system, using category biolink:Disease
+for MONDO:0021145 - disease of genitourinary system, using category biolink:PhenotypicFeature
+for NCIT:C45233 - Respiratory System Finding, using category biolink:Disease
+for NCIT:C45233 - Respiratory System Finding, using category biolink:PhenotypicFeature
+for UMLS:C1264235 - Traumatic and/or non-traumatic injury of anatomical site, using category biolink:Disease
+for UMLS:C1264235 - Traumatic and/or non-traumatic injury of anatomical site, using category biolink:PhenotypicFeature
+for NCIT:C3368 - Digestive System Signs and Symptoms, using category biolink:Disease
+for NCIT:C3368 - Digestive System Signs and Symptoms, using category biolink:PhenotypicFeature
+for UMLS:C1320354 - Head finding, using category biolink:Disease
+for UMLS:C1320354 - Head finding, using category biolink:PhenotypicFeature
+for UMLS:C0458087 - Pain finding at anatomical site, using category biolink:Disease
+for UMLS:C0458087 - Pain finding at anatomical site, using category biolink:PhenotypicFeature
+for UMLS:C0852043 - Non-site specific vascular disorders NEC, using category biolink:Disease
+for UMLS:C0852043 - Non-site specific vascular disorders NEC, using category biolink:PhenotypicFeature
+for UMLS:C0851355 - Respiratory, thoracic and mediastinal disorders, using category biolink:Disease
+for UMLS:C0851355 - Respiratory, thoracic and mediastinal disorders, using category biolink:PhenotypicFeature
+for UMLS:C3661989 - Finding of upper trunk, using category biolink:Disease
+for UMLS:C3661989 - Finding of upper trunk, using category biolink:PhenotypicFeature
+for UMLS:C0851439 - Infections - pathogen unspecified, using category biolink:Disease
+for UMLS:C0851439 - Infections - pathogen unspecified, using category biolink:PhenotypicFeature
+for UMLS:C0851389 - None, using category biolink:Disease
+for UMLS:C0851389 - None, using category biolink:PhenotypicFeature
+for UMLS:C0579141 - Finding of limb structure, using category biolink:Disease
+for UMLS:C0579141 - Finding of limb structure, using category biolink:PhenotypicFeature
+for NCIT:C36282 - Head and Neck Finding, using category biolink:Disease
+for NCIT:C36282 - Head and Neck Finding, using category biolink:PhenotypicFeature
+for UMLS:C0947780 - Respiratory disorders NEC, using category biolink:Disease
+for UMLS:C0947780 - Respiratory disorders NEC, using category biolink:PhenotypicFeature
+for MONDO:0021668 - disorder involving pain, using category biolink:Disease
+for MONDO:0021668 - disorder involving pain, using category biolink:PhenotypicFeature
+for NCIT:C36280 - Nervous System Finding, using category biolink:Disease
+for NCIT:C36280 - Nervous System Finding, using category biolink:PhenotypicFeature
+for UMLS:C0852199 - General signs and symptoms NEC, using category biolink:Disease
+for UMLS:C0852199 - General signs and symptoms NEC, using category biolink:PhenotypicFeature
+for UMLS:C0947768 - General system disorders NEC, using category biolink:Disease
+for UMLS:C0947768 - General system disorders NEC, using category biolink:PhenotypicFeature
+gene list of size620 and data
+: ['NCBIGene:85464', 'NCBIGene:88', 'NCBIGene:649', 'NCBIGene:10466', 'NCBIGene:100533183', 'NCBIGene:124491', 'NCBIGene:11062', 'NCBIGene:4650', 'NCBIGene:60626', 'NCBIGene:2118', 'NCBIGene:4286', 'NCBIGene:152485', 'NCBIGene:401250', 'NCBIGene:7472', 'NCBIGene:57580', 'NCBIGene:84811', 'NCBIGene:23054', 'NCBIGene:7456', 'NCBIGene:662', 'NCBIGene:10524', 'NCBIGene:5136', 'NCBIGene:9839', 'NCBIGene:55785', 'NCBIGene:5245', 'NCBIGene:8407', 'NCBIGene:23047', 'NCBIGene:374907', 'NCBIGene:3913', 'NCBIGene:7134', 'NCBIGene:56241', 'NCBIGene:4166', 'NCBIGene:10713', 'NCBIGene:221955', 'NCBIGene:80212', 'NCBIGene:79029', 'NCBIGene:9531', 'NCBIGene:348093', 'NCBIGene:128611', 'NCBIGene:81544', 'NCBIGene:84273', 'NCBIGene:6494', 'NCBIGene:51422', 'NCBIGene:993', 'NCBIGene:387103', 'NCBIGene:28987', 'NCBIGene:5335', 'NCBIGene:29956', 'NCBIGene:143241', 'NCBIGene:7112', 'NCBIGene:593', 'NCBIGene:10291', 'NCBIGene:8315', 'NCBIGene:116519', 'NCBIGene:1824', 'NCBIGene:4669', 'NCBIGene:4635', 'NCBIGene:9618', 'NCBIGene:8557', 'NCBIGene:11261', 'NCBIGene:8997', 'NCBIGene:22978', 'NCBIGene:80304', 'NCBIGene:7273', 'NCBIGene:2242', 'NCBIGene:8645', 'NCBIGene:3305', 'NCBIGene:54805', 'NCBIGene:85366', 'NCBIGene:10203', 'NCBIGene:19', 'NCBIGene:3949', 'NCBIGene:79652', 'NCBIGene:5819', 'NCBIGene:144717', 'NCBIGene:8509', 'NCBIGene:23075', 'NCBIGene:57787', 'NCBIGene:7168', 'NCBIGene:170392', 'NCBIGene:4000', 'NCBIGene:11173', 'NCBIGene:4485', 'NCBIGene:135', 'NCBIGene:3609', 'NCBIGene:101928728', 'NCBIGene:1284', 'NCBIGene:1801', 'NCBIGene:55167', 'NCBIGene:871', 'NCBIGene:2119', 'NCBIGene:2983', 'NCBIGene:3222', 'NCBIGene:10452', 'NCBIGene:2590', 'NCBIGene:84940', 'NCBIGene:8048', 'NCBIGene:10906', 'NCBIGene:3988', 'NCBIGene:5663', 'NCBIGene:91012', 'NCBIGene:401152', 'NCBIGene:26058', 'NCBIGene:84276', 'NCBIGene:7137', 'NCBIGene:79991', 'NCBIGene:6262', 'NCBIGene:6188', 'NCBIGene:6927', 'NCBIGene:5045', 'NCBIGene:245812', 'NCBIGene:1909', 'NCBIGene:134549', 'NCBIGene:57608', 'NCBIGene:2036', 'NCBIGene:550631', 'NCBIGene:22834', 'NCBIGene:8673', 'NCBIGene:3482', 'NCBIGene:1762', 'NCBIGene:8693', 'NCBIGene:2696', 'NCBIGene:10717', 'NCBIGene:7139', 'NCBIGene:8395', 'NCBIGene:64897', 'NCBIGene:10642', 'NCBIGene:1856', 'NCBIGene:6497', 'NCBIGene:859', 'NCBIGene:1012', 'NCBIGene:10726', 'NCBIGene:2057', 'NCBIGene:4855', 'NCBIGene:183', 'NCBIGene:100528030', 'NCBIGene:57419', 'NCBIGene:1030', 'NCBIGene:54887', 'NCBIGene:171024', 'NCBIGene:949', 'NCBIGene:8633', 'NCBIGene:2218', 'NCBIGene:55201', 'NCBIGene:6444', 'NCBIGene:7369', 'NCBIGene:2169', 'NCBIGene:2022', 'NCBIGene:3308', 'NCBIGene:563', 'NCBIGene:7035', 'NCBIGene:5096', 'NCBIGene:8829', 'NCBIGene:64771', 'NCBIGene:84439', 'NCBIGene:9785', 'NCBIGene:7917', 'NCBIGene:80036', 'NCBIGene:9457', 'NCBIGene:1282', 'NCBIGene:2335', 'NCBIGene:5336', 'NCBIGene:57158', 'NCBIGene:129303', 'NCBIGene:375056', 'NCBIGene:55759', 'NCBIGene:23316', 'NCBIGene:1431', 'NCBIGene:3621', 'NCBIGene:130026', 'NCBIGene:7173', 'NCBIGene:23293', 'NCBIGene:10221', 'NCBIGene:27030', 'NCBIGene:285489', 'NCBIGene:3223', 'NCBIGene:23143', 'NCBIGene:64778', 'NCBIGene:80724', 'NCBIGene:7040', 'NCBIGene:79800', 'NCBIGene:341', 'NCBIGene:481', 'NCBIGene:6499', 'NCBIGene:118663', 'NCBIGene:4624', 'NCBIGene:6660', 'NCBIGene:57644', 'NCBIGene:10919', 'NCBIGene:3910', 'NCBIGene:6439', 'NCBIGene:23403', 'NCBIGene:3236', 'NCBIGene:55062', 'NCBIGene:55022', 'NCBIGene:58489', 'NCBIGene:25959', 'NCBIGene:10960', 'NCBIGene:348938', 'NCBIGene:5970', 'NCBIGene:90324', 'NCBIGene:9674', 'NCBIGene:83450', 'NCBIGene:255738', 'NCBIGene:2147', 'NCBIGene:2070', 'NCBIGene:1819', 'NCBIGene:8881', 'NCBIGene:143872', 'NCBIGene:9374', 'NCBIGene:10858', 'NCBIGene:10806', 'NCBIGene:51144', 'NCBIGene:4634', 'NCBIGene:7148', 'NCBIGene:89894', 'NCBIGene:4343', 'NCBIGene:23328', 'NCBIGene:6945', 'NCBIGene:516', 'NCBIGene:7145', 'NCBIGene:440387', 'NCBIGene:341640', 'NCBIGene:84722', 'NCBIGene:28', 'NCBIGene:3171', 'NCBIGene:1723', 'NCBIGene:80309', 'NCBIGene:65264', 'NCBIGene:349149', 'NCBIGene:56915', 'NCBIGene:3777', 'NCBIGene:2793', 'NCBIGene:6941', 'NCBIGene:81846', 'NCBIGene:80321', 'NCBIGene:126695', 'NCBIGene:4085', 'NCBIGene:221692', 'NCBIGene:4023', 'NCBIGene:10019', 'NCBIGene:84171', 'NCBIGene:26133', 'NCBIGene:7122', 'NCBIGene:1388', 'NCBIGene:346', 'NCBIGene:6331', 'NCBIGene:165324', 'NCBIGene:7043', 'NCBIGene:339965', 'NCBIGene:54957', 'NCBIGene:22907', 'NCBIGene:6720', 'NCBIGene:54454', 'NCBIGene:7414', 'NCBIGene:5664', 'NCBIGene:8613', 'NCBIGene:29128', 'NCBIGene:55823', 'NCBIGene:10961', 'NCBIGene:4439', 'NCBIGene:9015', 'NCBIGene:7916', 'NCBIGene:70', 'NCBIGene:9497', 'NCBIGene:3250', 'NCBIGene:55204', 'NCBIGene:55973', 'NCBIGene:327', 'NCBIGene:5017', 'NCBIGene:57404', 'NCBIGene:79068', 'NCBIGene:5781', 'NCBIGene:400823', 'NCBIGene:28969', 'NCBIGene:3570', 'NCBIGene:165082', 'NCBIGene:8508', 'NCBIGene:28964', 'NCBIGene:1586', 'NCBIGene:2162', 'NCBIGene:342372', 'NCBIGene:5878', 'NCBIGene:57057', 'NCBIGene:10152', 'NCBIGene:2628', 'NCBIGene:219469', 'NCBIGene:602', 'NCBIGene:51686', 'NCBIGene:10636', 'NCBIGene:170506', 'NCBIGene:54664', 'NCBIGene:54828', 'NCBIGene:27086', 'NCBIGene:79893', 'NCBIGene:5926', 'NCBIGene:4524', 'NCBIGene:55471', 'NCBIGene:3097', 'NCBIGene:2982', 'NCBIGene:1728', 'NCBIGene:282996', 'NCBIGene:22808', 'NCBIGene:1071', 'NCBIGene:275', 'NCBIGene:100631383', 'NCBIGene:7078', 'NCBIGene:100129583', 'NCBIGene:7150', 'NCBIGene:26959', 'NCBIGene:63892', 'NCBIGene:84419', 'NCBIGene:5795', 'NCBIGene:776', 'NCBIGene:51196', 'NCBIGene:254102', 'NCBIGene:535', 'NCBIGene:641649', 'NCBIGene:4629', 'NCBIGene:146691', 'NCBIGene:144348', 'NCBIGene:3769', 'NCBIGene:340260', 'NCBIGene:201292', 'NCBIGene:6484', 'NCBIGene:55037', 'NCBIGene:717', 'NCBIGene:6943', 'NCBIGene:2876', 'NCBIGene:4015', 'NCBIGene:84624', 'NCBIGene:5654', 'NCBIGene:6599', 'NCBIGene:79188', 'NCBIGene:91056', 'NCBIGene:10287', 'NCBIGene:7287', 'NCBIGene:10867', 'NCBIGene:54897', 'NCBIGene:284498', 'NCBIGene:79154', 'NCBIGene:55733', 'NCBIGene:57412', 'NCBIGene:4093', 'NCBIGene:6301', 'NCBIGene:9570', 'NCBIGene:1605', 'NCBIGene:54532', 'NCBIGene:6311', 'NCBIGene:8289', 'NCBIGene:11044', 'NCBIGene:55741', 'NCBIGene:405', 'NCBIGene:85465', 'NCBIGene:84196', 'NCBIGene:127002', 'NCBIGene:204474', 'NCBIGene:25865', 'NCBIGene:83988', 'NCBIGene:558', 'NCBIGene:9859', 'NCBIGene:3240', 'NCBIGene:163115', 'NCBIGene:51474', 'NCBIGene:97', 'NCBIGene:10060', 'NCBIGene:147912', 'NCBIGene:8987', 'NCBIGene:283373', 'NCBIGene:11100', 'NCBIGene:23051', 'NCBIGene:11077', 'NCBIGene:388407', 'NCBIGene:23376', 'NCBIGene:6541', 'NCBIGene:80790', 'NCBIGene:84072', 'NCBIGene:4012', 'NCBIGene:79696', 'NCBIGene:5350', 'NCBIGene:91647', 'NCBIGene:6581', 'NCBIGene:8500', 'NCBIGene:348', 'NCBIGene:5624', 'NCBIGene:347736', 'NCBIGene:3026', 'NCBIGene:5318', 'NCBIGene:54814', 'NCBIGene:124930', 'NCBIGene:27063', 'NCBIGene:1436', 'NCBIGene:55843', 'NCBIGene:9924', 'NCBIGene:25885', 'NCBIGene:64978', 'NCBIGene:6238', 'NCBIGene:51778', 'NCBIGene:83874', 'NCBIGene:55705', 'NCBIGene:65986', 'NCBIGene:283450', 'NCBIGene:8728', 'NCBIGene:79990', 'NCBIGene:25802', 'NCBIGene:29922', 'NCBIGene:87', 'NCBIGene:6314', 'NCBIGene:150864', 'NCBIGene:2029', 'NCBIGene:78992', 'NCBIGene:177', 'NCBIGene:26084', 'NCBIGene:284076', 'NCBIGene:7290', 'NCBIGene:6580', 'NCBIGene:4507', 'NCBIGene:1410', 'NCBIGene:4625', 'NCBIGene:10181', 'NCBIGene:2250', 'NCBIGene:9938', 'NCBIGene:8550', 'NCBIGene:79132', 'NCBIGene:9807', 'NCBIGene:11155', 'NCBIGene:6097', 'NCBIGene:201294', 'NCBIGene:64241', 'NCBIGene:6128', 'NCBIGene:57153', 'NCBIGene:4059', 'NCBIGene:4744', 'NCBIGene:94086', 'NCBIGene:91624', 'NCBIGene:8872', 'NCBIGene:84332', 'NCBIGene:79018', 'NCBIGene:343263', 'NCBIGene:57619', 'NCBIGene:29842', 'NCBIGene:79012', 'NCBIGene:10428', 'NCBIGene:5048', 'NCBIGene:490', 'NCBIGene:678', 'NCBIGene:2017', 'NCBIGene:9564', 'NCBIGene:217', 'NCBIGene:10933', 'NCBIGene:144100', 'NCBIGene:7586', 'NCBIGene:7005', 'NCBIGene:2845', 'NCBIGene:222962', 'NCBIGene:282809', 'NCBIGene:11018', 'NCBIGene:10274', 'NCBIGene:389118', 'NCBIGene:8638', 'NCBIGene:23053', 'NCBIGene:81619', 'NCBIGene:1788', 'NCBIGene:23149', 'NCBIGene:101929256', 'NCBIGene:284119', 'NCBIGene:783', 'NCBIGene:2648', 'NCBIGene:2948', 'NCBIGene:3090', 'NCBIGene:1829', 'NCBIGene:143903', 'NCBIGene:83938', 'NCBIGene:4633', 'NCBIGene:268', 'NCBIGene:440603', 'NCBIGene:255809', 'NCBIGene:64858', 'NCBIGene:84315', 'NCBIGene:65065', 'NCBIGene:137682', 'NCBIGene:2275', 'NCBIGene:163486', 'NCBIGene:56913', 'NCBIGene:153090', 'NCBIGene:5684', 'NCBIGene:7919', 'NCBIGene:10972', 'NCBIGene:91754', 'NCBIGene:627', 'NCBIGene:4088', 'NCBIGene:3112', 'NCBIGene:114971', 'NCBIGene:1185', 'NCBIGene:84159', 'NCBIGene:119032', 'NCBIGene:284485', 'NCBIGene:406', 'NCBIGene:63976', 'NCBIGene:84168', 'NCBIGene:55152', 'NCBIGene:10600', 'NCBIGene:2677', 'NCBIGene:10791', 'NCBIGene:283659', 'NCBIGene:10097', 'NCBIGene:63891', 'NCBIGene:1674', 'NCBIGene:1832', 'NCBIGene:7482', 'NCBIGene:148362', 'NCBIGene:2695', 'NCBIGene:93166', 'NCBIGene:6582', 'NCBIGene:1080', 'NCBIGene:149345', 'NCBIGene:2321', 'NCBIGene:2762', 'NCBIGene:8563', 'NCBIGene:399909', 'NCBIGene:5175', 'NCBIGene:1785', 'NCBIGene:466', 'NCBIGene:3221', 'NCBIGene:81492', 'NCBIGene:5340', 'NCBIGene:7802', 'NCBIGene:4607', 'NCBIGene:6988', 'NCBIGene:6389', 'NCBIGene:11060', 'NCBIGene:54497', 'NCBIGene:727', 'NCBIGene:3156', 'NCBIGene:4018', 'NCBIGene:8892', 'NCBIGene:6597', 'NCBIGene:51168', 'NCBIGene:8224', 'NCBIGene:4144', 'NCBIGene:2201', 'NCBIGene:716', 'NCBIGene:387', 'NCBIGene:51322', 'NCBIGene:23245', 'NCBIGene:6569', 'NCBIGene:9869', 'NCBIGene:8927', 'NCBIGene:64853', 'NCBIGene:27125', 'NCBIGene:1760', 'NCBIGene:152273', 'NCBIGene:23414', 'NCBIGene:58476', 'NCBIGene:4143', 'NCBIGene:51385', 'NCBIGene:25980', 'NCBIGene:85302', 'NCBIGene:23301', 'NCBIGene:80776', 'NCBIGene:5523', 'NCBIGene:462', 'NCBIGene:6891', 'NCBIGene:84217', 'NCBIGene:55179', 'NCBIGene:10743', 'NCBIGene:27332', 'NCBIGene:338', 'NCBIGene:53335', 'NCBIGene:665', 'NCBIGene:23132', 'NCBIGene:344758', 'NCBIGene:629', 'NCBIGene:6532', 'NCBIGene:79147', 'NCBIGene:2686', 'NCBIGene:154150', 'NCBIGene:23076', 'NCBIGene:2153', 'NCBIGene:6631', 'NCBIGene:10443', 'NCBIGene:6909', 'NCBIGene:9153', 'NCBIGene:55603', 'NCBIGene:7181', 'NCBIGene:7840', 'NCBIGene:5627', 'NCBIGene:256764', 'NCBIGene:10293', 'NCBIGene:1026', 'NCBIGene:11267', 'NCBIGene:4739', 'NCBIGene:3728', 'NCBIGene:80736', 'NCBIGene:51129', 'NCBIGene:80018', 'NCBIGene:83850', 'NCBIGene:23118', 'NCBIGene:63826', 'NCBIGene:1029', 'NCBIGene:1952', 'NCBIGene:8028', 'NCBIGene:9260', 'NCBIGene:56911', 'NCBIGene:65059', 'NCBIGene:55101', 'NCBIGene:10498', 'NCBIGene:4781', 'NCBIGene:54879', 'NCBIGene:3633', 'NCBIGene:56895', 'NCBIGene:4846', 'NCBIGene:5978', 'NCBIGene:8882', 'NCBIGene:23384', 'NCBIGene:8654', 'NCBIGene:1456', 'NCBIGene:9577', 'NCBIGene:54622', 'NCBIGene:9575', 'NCBIGene:64761']
