@@ -2,6 +2,7 @@
 # imports
 import requests
 import pymysql as mdb
+from datetime import datetime
 
 # constants
 url_query_aggregator = "https://bioindex-dev.hugeamp.org/api/bio/query"
@@ -142,6 +143,40 @@ def get_phenotype_values(input_json):
     # rerurn
     return result
 
+def insert_or_update_gene_data(conn, association_list):
+    ''' will update or insert data for the gene/phenotype association '''
+    edge_id = "magma_gene_" + datetime.today().strftime('%Y%m%d')
+    sql_select = "select count(id) from comb_node_edge where source_code = %s and target_code = %s and source_type_id = 2 and target_type_id in (1, 3, 12)"
+    sql_insert_front = """insert into comb_node_edge (edge_id, edge_type_id, source_code, source_type_id, target_code, target_type_id, score, score_type_id, study_id) 
+        values(%s, 5, %s, 2, %s, (select node_type_id from comb_node_ontology where node_code = %s and node_type_id in (1, 3, 12)), %s, 8, 1)"""
+    sql_insert_back = """insert into comb_node_edge (edge_id, edge_type_id, target_code, target_type_id, source_code, source_type_id, score, score_type_id, study_id)
+        values(%s, 10, %s, 2, %s, (select node_type_id from comb_node_ontology where node_code = %s and node_type_id in (1, 3, 12)), %s, 8, 1)"""
+    sql_update = """update comb_node_edge set score = %s 
+        where (source_code = %s and target_code = %s and source_type_id = 2 and target_type_id in (1, 3, 12))
+        or (target_code = %s and source_code = %s and target_type_id = 2 and source_type_id in (1, 3, 12))
+    """
+    cursor = conn.cursor()
+
+    # loop
+    for gene, phenotype, p_value in association_list:
+        print("{} - {} - {}".format(gene, phenotype, p_value))
+
+        # find out if there is an entry
+        cursor.execute(sql_select, (gene, phenotype))
+        db_results = cursor.fetchall()
+
+        # get the data
+        if db_results:
+            if db_results[0][0] > 0:
+                # update
+                cursor.execute(sql_update, (p_value, gene, phenotype, gene, phenotype))
+
+            else:
+                # insert
+                cursor.execute(sql_insert_front, (edge_id, gene, phenotype, phenotype, p_value))
+                cursor.execute(sql_insert_back, (edge_id, gene, phenotype, phenotype, p_value))
+
+    conn.commit()
 
 if __name__ == "__main__":
     # get the db connection
@@ -167,6 +202,10 @@ if __name__ == "__main__":
     phenotype_list = get_phenotype_values(result_json)
     print("for {} got new gene associations of size {}".format(gene_list[0], len(phenotype_list)))
     
+    # update the associations
+    insert_or_update_gene_data(conn, phenotype_list)
+
+    # log
+    print_num_phenotypes_for_gene_in_db(conn, gene_list[0])
 
 
-    
