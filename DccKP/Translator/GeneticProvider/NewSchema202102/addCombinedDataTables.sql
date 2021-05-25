@@ -19,6 +19,7 @@ create table comb_node_edge (
   study_id                  int(3) not null
 );
 
+ALTER TABLE comb_node_edge add date_created datetime DEFAULT CURRENT_TIMESTAMP;
 
 -- add in table to link node codes (PPARG/BMI) to onltology ids returned to API queries
 drop table if exists comb_node_ontology;
@@ -96,6 +97,8 @@ insert into comb_ontology_type (ontology_id, ontology_name) values(1, 'NCBI Gene
 insert into comb_ontology_type (ontology_id, ontology_name) values(2, 'MONDO disease/phenotype');
 insert into comb_ontology_type (ontology_id, ontology_name) values(3, 'EFO disease/phenotype');
 insert into comb_ontology_type (ontology_id, ontology_name) values(4, 'GO pathway');
+insert into comb_ontology_type (ontology_id, ontology_name) values(5, 'UMLS disease/phenotype');
+insert into comb_ontology_type (ontology_id, ontology_name) values(6, 'HP disease/phenotype');
 
 
 
@@ -304,4 +307,110 @@ and ed.edge_id = 67587;
 -- | height      |
 -- +-------------+
 -- 12 rows in set (0.02 sec)
+
+
+
+-- scratch queries
+select count(id) from comb_node_edge where source_code = 'PPARG' and target_code = 'BMI' and source_type_id = 2 and target_type_id in (1, 3, 12);
+
+insert into comb_node_edge (edge_id, edge_type_id, source_code, source_type_id, target_code, target_type_id, score, score_type_id, study_id)
+values('test', 5, 'PPARG', 2, 'BreakfastSkipping', 12, 12.0, 8, 1);
+
+insert into comb_node_edge (edge_id, edge_type_id, target_code, target_type_id, source_code, source_type_id, score, score_type_id, study_id)
+values('test', 10, 'PPARG', 2, 'BreakfastSkipping', (select node_type_id from comb_node_ontology where node_code = 'BreakfastSkipping' and node_type_id in (1, 3, 12)), 12.0, 8, 1);
+
+update comb_node_edge set score = 20.0 
+where (source_code = 'PPARG' and target_code = 'BreakfastSkipping' and source_type_id = 2 and target_type_id in (1, 3, 12))
+or (target_code = 'PPARG' and source_code = 'BreakfastSkipping' and target_type_id = 2 and source_type_id in (1, 3, 12))
+
+
+-- select for gene
+select ed.source_code, ed.target_code, ed.score, ot.node_name, ot.ontology_id, ot.node_type_id
+from comb_node_edge ed, comb_node_ontology ot
+where ed.source_code = 'A2M' and ed.source_type_id = 2 and ed.target_type_id in (1, 3, 12) and ed.score_type_id = 8 
+and ed.target_code = ot.node_code and ed.target_type_id = ot.node_type_id;
+and ed.score < 0.0000025;
+
+
+
+-- updates for disease/phenotypes
+update comb_node_ontology set node_type_id = 3, ontology_id = 'EFO:0004308', ontology_type_id = 3 where node_code = 'WBC' and node_type_id = 12;
+update comb_node_edge set source_type_id = 3 where source_code = 'WBC' and source_type_id = 12;
+update comb_node_edge set target_type_id = 3 where target_code = 'WBC' and target_type_id = 12;
+
+select * from comb_node_ontology where ontology_id is null and node_type_id in (1, 3, 12) order by node_code;
+
+update comb_node_ontology set node_type_id = 3, ontology_id = 'EFO:0010934', ontology_type_id = 3 where id = 44500;
+update comb_node_ontology set node_type_id = 3, ontology_id = 'EFO:0004842', ontology_type_id = 3 where id = 44495;
+update comb_node_ontology set node_type_id = 3, ontology_id = 'UMLS:C0556228', ontology_type_id = 5 where id = 44458;
+
+update comb_node_ontology set node_type_id = 3, ontology_id = 'HP:0025267', ontology_type_id = 6 where id = 44329;
+update comb_node_ontology set node_type_id = 3, ontology_id = 'MONDO:0008638', ontology_type_id = 2 where id = 44320;
+update comb_node_ontology set node_type_id = 3, ontology_id = 'EFO:0009884', ontology_type_id = 3 where id = 44464;
+update comb_node_ontology set node_type_id = 3, ontology_id = 'EFO:0009883', ontology_type_id = 3 where id = 44465;
+update comb_node_ontology set node_type_id = 3, ontology_id = 'EFO:0009882', ontology_type_id = 3 where id = 44466;
+update comb_node_ontology set node_type_id = 1, ontology_id = 'MONDO:0005098', ontology_type_id = 2 where id = 44405;
+update comb_node_ontology set node_type_id = 1, ontology_id = 'MONDO:0020671', ontology_type_id = 2 where id = 44404;
+
+
+update comb_node_ontology set node_type_id = 1, ontology_id = 'MONDO:0002025', ontology_type_id = 2 where id = 44318;
+update comb_node_ontology set node_type_id = 3, ontology_id = 'EFO:0003923', ontology_type_id = 3 where id = 44467;
+update comb_node_ontology set node_type_id = 1, ontology_id = 'MONDO:0002525', ontology_type_id = 2 where id = 44311;
+update comb_node_ontology set node_type_id = 1, ontology_id = 'MONDO:0004678', ontology_type_id = 2 where id = 44310;
+update comb_node_ontology set node_type_id = 3, ontology_id = 'EFO:0004348', ontology_type_id = 3 where id = 44485;
+update comb_node_ontology set node_type_id = 1, ontology_id = 'MONDO:0004872', ontology_type_id = 2 where id = 44312;
+update comb_node_ontology set node_type_id = 3, ontology_id = 'UMLS:C3150710', ontology_type_id = 5 where id = 44360;
+update comb_node_ontology set node_type_id = 1, ontology_id = 'MONDO:0011786', ontology_type_id = 2 where id = 44312;
+
+
+
+update comb_node_ontology set node_type_id = 3, ontology_id = 'EFO:0009883', ontology_type_id = 3 where id = 44465;
+update comb_node_ontology set node_type_id = 3, ontology_id = 'EFO:0009883', ontology_type_id = 3 where id = 44465;
+
+
+-- NOTTES
+-- add ontology type
+-- add data to edge
+-- add ontology_id for diseases
+
+-- deleting extra disease nodes
+select a.id, b.id, a.node_code, b.node_code, a.ontology_id, b.ontology_id from comb_node_ontology a, comb_node_ontology b 
+where b.node_code = a .node_code and b.id != a.id and b.node_type_id = a.node_type_id and a.ontology_type_id = 3;
+
+delete from comb_node_ontology where id in 
+(
+32832
+, 32833
+, 32834
+, 32835
+, 32836
+, 32837
+, 32838
+, 32839
+, 32840
+, 32841
+, 32842
+, 32843
+, 32844
+, 32845
+, 32846
+, 32847
+, 32849
+, 32850
+, 32852
+, 32853
+, 32854
+, 32855
+, 32856
+, 32857
+, 32858
+, 32859
+, 32860
+, 32861
+, 32862
+, 32863
+, 32864
+, 32865
+, 32895
+)
 

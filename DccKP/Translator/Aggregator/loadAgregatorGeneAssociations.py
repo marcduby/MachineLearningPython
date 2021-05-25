@@ -6,6 +6,7 @@ from datetime import datetime
 
 # constants
 url_query_aggregator = "https://bioindex-dev.hugeamp.org/api/bio/query"
+p_value_limit = 0.0025
 
 def get_gene_list(conn):
     ''' will return all the gene codes that are in the translator DB '''
@@ -96,7 +97,7 @@ def print_num_phenotypes_in_db(conn):
 def print_num_phenotypes_for_gene_in_db(conn, gene):
     ''' will query and print the count of phenotypes for the gene in the db '''
     sql = """
-    select count(id) from comb_node_edge where source_code = %s and source_type_id = 2
+    select count(id) from comb_node_edge where source_code = %s and source_type_id = 2 and target_type_id in (1, 3, 12) and study_id = 1
     """
     cursor = conn.cursor()
     count = 0
@@ -129,7 +130,7 @@ def query_gene_assocations_service(input_gene, url):
     # return
     return response
 
-def get_phenotype_values(input_json):
+def get_phenotype_values(input_json, p_value_limit):
     ''' will parse the graphql output and generate phenotype/pValue tupes list '''
     query_key = 'GeneAssociations'
     data = input_json.get('data').get(query_key)
@@ -137,13 +138,13 @@ def get_phenotype_values(input_json):
 
     # loop
     if data is not None:
-        result = [(item.get('gene'), item.get('phenotype'), item.get('pValue')) for item in data]
-        # result = [(item.get('phenotype'), item.get('pValue')) for item in data if item.get('pValue') <  0.000025]
+        # result = [(item.get('gene'), item.get('phenotype'), item.get('pValue')) for item in data]
+        result = [(item.get('gene'), item.get('phenotype'), item.get('pValue')) for item in data if item.get('pValue') <  p_value_limit]
 
     # rerurn
     return result
 
-def insert_or_update_gene_data(conn, association_list):
+def insert_or_update_gene_data(conn, association_list, gene, log=False):
     ''' will update or insert data for the gene/phenotype association '''
     edge_id = "magma_gene_" + datetime.today().strftime('%Y%m%d')
     sql_select = "select count(id) from comb_node_edge where source_code = %s and target_code = %s and source_type_id = 2 and target_type_id in (1, 3, 12)"
@@ -155,29 +156,58 @@ def insert_or_update_gene_data(conn, association_list):
         where (source_code = %s and target_code = %s and source_type_id = 2 and target_type_id in (1, 3, 12))
         or (target_code = %s and source_code = %s and target_type_id = 2 and source_type_id in (1, 3, 12))
     """
+    sql_delete = """delete from comb_node_edge where study_id = 1 and
+        ((source_code = %s and source_type_id = 2 and target_type_id in (1, 3, 12))
+        or (target_code = %s and target_type_id = 2 and source_type_id in (1, 3, 12)))
+    """
     cursor = conn.cursor()
 
-    # loop
-    for gene, phenotype, p_value in association_list:
-        print("{} - {} - {}".format(gene, phenotype, p_value))
+    # TODO - first delete thwe rows for that gene if the date is more than a week old
+    if True:
+        # delete the rows
+        cursor.execute(sql_delete, (gene, gene))
 
-        # find out if there is an entry
-        cursor.execute(sql_select, (gene, phenotype))
-        db_results = cursor.fetchall()
+        # loop
+        for gene, phenotype, p_value in association_list:
+            if log:
+                print("{} - {} - {}".format(gene, phenotype, p_value))
+            # insert
+            cursor.execute(sql_insert_front, (edge_id, gene, phenotype, phenotype, p_value))
+            cursor.execute(sql_insert_back, (edge_id, gene, phenotype, phenotype, p_value))
 
-        # get the data
-        if db_results:
-            if db_results[0][0] > 0:
-                # update
-                cursor.execute(sql_update, (p_value, gene, phenotype, gene, phenotype))
+        conn.commit()
+        if log:
+            print("committing gene {} data".format(gene))
 
-            else:
-                # insert
-                cursor.execute(sql_insert_front, (edge_id, gene, phenotype, phenotype, p_value))
-                cursor.execute(sql_insert_back, (edge_id, gene, phenotype, phenotype, p_value))
+def insert_all_gene_aggregator_data(conn, log=False):
+    ''' will query the aggregator for all disease/phentype gene magma association data for all genes in the translator DB '''
+    cursor = conn.cursor()
+    sql_select = "select node_code from comb_node_ontology where node_type_id = 2 order by node_code"
 
-    conn.commit()
+    # get the list of genes
+    cursor.execute(sql_select)
+    db_results = cursor.fetchall()
 
+    # loop for each gene
+    for item in db_results:
+        gene = item[0]
+
+        # get the aggregator data
+        result_json = query_gene_assocations_service(gene, url_query_aggregator)
+        phenotype_list = get_phenotype_values(result_json, p_value_limit)
+
+        # log
+        if log:
+            print("for {} got new gene associations of size {}".format(gene, len(phenotype_list)))
+            print_num_phenotypes_for_gene_in_db(conn, gene)
+
+        # insert into the db
+        insert_or_update_gene_data(conn, phenotype_list, gene)
+
+        # log
+        if log:
+            print_num_phenotypes_for_gene_in_db(conn, gene)
+            
 if __name__ == "__main__":
     # get the db connection
     conn = get_connection()
@@ -199,13 +229,15 @@ if __name__ == "__main__":
 
     # get the phenotypes pvalues for the gene from the bioindex
     result_json = query_gene_assocations_service(gene_list[0], url_query_aggregator)
-    phenotype_list = get_phenotype_values(result_json)
+    phenotype_list = get_phenotype_values(result_json, p_value_limit)
     print("for {} got new gene associations of size {}".format(gene_list[0], len(phenotype_list)))
     
-    # update the associations
-    insert_or_update_gene_data(conn, phenotype_list)
+    # # update the associations
+    # insert_or_update_gene_data(conn, phenotype_list, gene_list[0])
 
-    # log
-    print_num_phenotypes_for_gene_in_db(conn, gene_list[0])
+    # # log
+    # print_num_phenotypes_for_gene_in_db(conn, gene_list[0])
 
+    # run the whole list
+    insert_all_gene_aggregator_data(conn, log=True)
 

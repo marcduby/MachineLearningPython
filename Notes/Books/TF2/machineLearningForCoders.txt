@@ -10,3 +10,27 @@ model.compile(optimizer='sgd', loss='mean_squared_error')
 
 
 
+Chapter 5 - NLP
+- tokenizing text
+  import tensorflow as tf 
+  from tensorflow import keras
+  from tensorflow.keras.preprocessing import Tokenizer
+
+  # fit tokenizer
+  tokenizer = Tukenizer(num_words = 100, oov_token='<OOV>')
+  tokenizer.fit_on_text(sentences_list)           # fit, will remove [punctuation]
+
+  word_index = tokenizer.word_index
+
+  # create token array from sentences
+  num_sequences_list = tokenizer.text_to_sequences(sentences_list)   # creates new list of number sequences
+
+  # pad as needed, specify max length
+  num_sequences_padded_list = pad_sequences(num_sequences_list, padding='post', maxlen=50)
+
+- steps
+  - fit the tonekizer, pick vocabulary size and select out of vocabulary symbol (will be index 0)
+  - text to sequence (tokenize) the senetences
+  - pad as needed, pre default, post have to specify
+
+
