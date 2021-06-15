@@ -1,5 +1,24 @@
 
 
+re20210601 - text embeddings in pytorch
+- https://www.youtube.com/watch?v=mzbJd0NhW2A
+
+
+re20210528 - google io 2021 Modern Keras design patterns | Session
+- https://www.youtube.com/watch?v=FCz9m4T0DI0
+
+
+re20210527 - Top 10 AI and ML developer updates from Google I/O 2021
+
+
+re20210527 - Google IO 2021 - Building with TensorFlow Lite for microcontrollers | Workshop
+https://www.youtube.com/watch?v=jqVCR2MUJEs
+
+
+re20210527 - Gogle IO 2021 - Decision forests in TensorFlow | Session
+https://www.youtube.com/watch?v=5qgk9QJ4rdQ
+
+
 20210518 - zscore and its applications
 
 

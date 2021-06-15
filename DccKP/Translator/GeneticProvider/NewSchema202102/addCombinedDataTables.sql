@@ -99,6 +99,7 @@ insert into comb_ontology_type (ontology_id, ontology_name) values(3, 'EFO disea
 insert into comb_ontology_type (ontology_id, ontology_name) values(4, 'GO pathway');
 insert into comb_ontology_type (ontology_id, ontology_name) values(5, 'UMLS disease/phenotype');
 insert into comb_ontology_type (ontology_id, ontology_name) values(6, 'HP disease/phenotype');
+insert into comb_ontology_type (ontology_id, ontology_name) values(7, 'NCIT disease/phenotype');
 
 
 

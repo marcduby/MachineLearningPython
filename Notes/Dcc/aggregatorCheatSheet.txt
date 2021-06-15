@@ -14,6 +14,8 @@ create method
 build aws/core
 --------------
 - sbt publishLocal
+  - start with dig-aws, then do dig-aggregator-core
+
 
 emr tips
 --------
@@ -100,5 +102,10 @@ scratch:
     - run 'sbt publishLocal' from that directory -> go to ivy
   - scala rebel console to play with
     - can start it from sbt, better to have your jars from the project in the classpath
+
+
+Notes:
+------
+20210602 - the config.json has changed elements; use old one for now
 
     

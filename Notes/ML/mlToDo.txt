@@ -1,0 +1,7 @@
+
+
+20210601 - from TF2 discrepancy detection
+- build TF2 model and test
+  - build same model in pytorch
+
+  
