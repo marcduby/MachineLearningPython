@@ -1,6 +1,6 @@
-from pyspark.sql import SparkSession
+from pyspark.sql import SparkSession, Row
 from pyspark.sql.types import IntegerType, StringType
-from pyspark.sql.functions import col, input_file_name, regexp_extract
+from pyspark.sql.functions import col, input_file_name, regexp_extract, concat
 from pyspark.sql.functions import lit
 import argparse
 import functools
@@ -49,20 +49,62 @@ def main():
     print("have column types \n{}".format(df_lead_snp.dtypes))
     print(df_lead_snp.show(20))
 
-    df_lead_snp = df_lead_snp.filter(df_lead_snp.bp < 2885636).filter(df_lead_snp.bp > 2808400).filter(df_lead_snp.Chr.isin(11)).filter(df_lead_snp.pheno.isin('T2D'))
-    df_lead_snp.groupBy('ancestry', 'pheno').count().show(70)
-    df_lead_snp = df_lead_snp.select(
-    df_lead_snp.SNP.alias('dbSNP'),
-    df_lead_snp.Chr.alias('chromosome'),
-    df_lead_snp.bp.alias('position'),
-    df_lead_snp.refA.alias('alt'),
-    df_lead_snp.freq.alias('maf'),
-    df_lead_snp.ancestry,
-    df_lead_snp.pheno,
-    df_lead_snp.p.alias('pValue'),
-    ).sort(df_lead_snp.bp)
 
-    print(df_lead_snp.show(20))
+    # df_lead_snp = df_lead_snp.filter(df_lead_snp.bp < 2885636).filter(df_lead_snp.bp > 2808400).filter(df_lead_snp.Chr.isin(11)).filter(df_lead_snp.pheno.isin('T2D'))
+    # df_lead_snp.groupBy('ancestry', 'pheno').count().show(70)
+
+    
+    df_lead_snp = df_lead_snp.select(
+        df_lead_snp.SNP.alias('dbSNP'),
+        df_lead_snp.Chr.alias('chromosome'),
+        df_lead_snp.bp,
+        df_lead_snp.bp.alias('position').cast(IntegerType()),
+        df_lead_snp.refA.alias('ref'),
+        df_lead_snp.freq.alias('maf'),
+        df_lead_snp.ancestry,
+        df_lead_snp.pheno,
+        df_lead_snp.p.alias('pValue'),
+    ).sort(df_lead_snp.bp)
+    print("got lead snp df of size {}".format(df_lead_snp.count()))
+    print(df_lead_snp.printSchema())
+
+    # add column of lead snp
+    # print(df_lead_snp.show(20))
+
+
+    # sort by pValue, build distinct snp array and dataframe 
+    variants = df_lead_snp.orderBy(['pValue']).collect()   # actually run plan
+    topVariants = []
+    bottomVariants = []
+    count = 0
+    while variants:
+        best = variants[0]
+        temp = best.asDict()
+        temp['lead_snp'] = best['chromosome'] + "_" + best['bp'] + "_" + best['pheno']
+        topVariants.append(Row(**temp))
+
+        # remove all variants around best and put them into the other array
+        tempArray = [v for v in variants if (abs(v['position'] - best['position']) <= 10000000) and (v['position'] != best['position']) and (v['chromosome'] == best['chromosome']) and (v['pheno'] == best['pheno'])]
+        for row in tempArray:
+            temp = row.asDict()
+            temp['lead_snp'] = best['chromosome'] + "_" + best['bp'] + "_"+ best['pheno']
+            newRow = Row(**temp)
+            bottomVariants.append(newRow)
+
+        # bottomVariants += tempArray
+        # if count == 0:
+        #     print("bottom {}".format(bottomVariants))
+        count += count
+        variants = [v for v in variants if (abs(v['position'] - best['position']) > 10000000) or (v['chromosome'] != best['chromosome']) or (v['pheno'] != best['pheno'])]
+
+    # make a new dataframe with the resulting top variants
+    df_new_lead_snp = spark.createDataFrame(topVariants)
+    df_not_lead_snp = spark.createDataFrame(bottomVariants)
+    print("got lead snp df of size {} and non lead snp of size {}".format(df_new_lead_snp.count(), df_not_lead_snp.count()))
+    print(df_new_lead_snp.show(20))
+
+
+    # join with the conditioned snps
 
     # # load the conditioned snps
     # df_conditioned_snp = spark.read.csv(f'{dir_results}/*/*/*.cma.cojo', sep='\t', header=True) \
