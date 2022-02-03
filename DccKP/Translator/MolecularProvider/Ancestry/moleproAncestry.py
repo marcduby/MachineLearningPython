@@ -139,3 +139,8 @@ if __name__ == "__main__":
     test_ancestry_map = get_ancestry_map(query_url, list_ids, True)
     for key in test_ancestry_map.keys():
         print("for {} got child list of size {}".format(key, len(test_ancestry_map.get(key))))
+
+
+# notes: 
+# add query id into it's own list
+# only call disease/phenotype - know by prefix
