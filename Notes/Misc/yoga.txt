@@ -12,6 +12,7 @@ balance poses:
 --------------
   - dancer's pose, same side hand and leg 
   - dancer's pose opposite sides 
+  - dancer pose with strap, leg above head 
   - tree pose, one foot on other knee, all in one plane
   - T pose 
   - T pose, but with hands on supporting ankle 
@@ -56,8 +57,15 @@ poses:
 good flows:
 -----------
 - flow from high lunge to knee to chest, then back 
+  - can do on block 
 - from from one leg mountain to t pose and back
+  - can do on block 
 - on back, swin straight legs side to side
 - on back, swing straight legs down, then back up
 - warrior 2, reverse, then elbow on knee forward, then triangle
+
+balance flows:
+--------------
+- T (warrior 3) to knee into chest, balancing opn one leg 
+- banzai tree pose, to leg in front extended 
 

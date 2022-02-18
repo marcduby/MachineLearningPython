@@ -1,0 +1,893 @@
+
+
+
+
+
+
+
+
+
+
+
+20210730 - determing new variants for any new aggregator run
+    variants = spark.read.csv('out/varianteffect/variants/')
+    variants = df.select('varId')
+    datasets = get_all_datasets_from_s3_search()
+    for dataset in datasets:
+        df = spark.read.json(f'{dataset}/part-*')
+        df = df.select('varId')
+        variants = variants.union(df).distinct()
+    variants.write...
+
+
+20210715 - recursive grab best vartiants until none left 
+    df = df.withColumn('groupPos', df.position // 20000)
+
+    clumps = spark.read.json('s3://dig-analysis-data/out/metaanalysis/clumping/T2D/*.json')
+
+    for col in ['pos', 'pos2']:
+        df = df.withColumn(col + 'Grouped', df[col] // 20000)
+
+
+    variants = df.orderBy(['pValue']).collect()   # actually run plan
+    topVariants = []
+    while variants:
+        best = variants[0]
+        topVariants.append(best)
+        # remove all variants around best
+        variants = [v for v in variants if abs(v['position'] - best['position']) > 200000]
+    # make a new dataframe with the resulting top variants
+    df = spark.createDataFrame(topVariants)
+    df.write...
+
+
+20210519 - graphql
+    response = requests.post(url, json={'query': query_string})         # BAD?
+    resp = requests.post(url, data=query_string)                        # GOOD?
+
+
+
+
+20210503 - aggregator run 
+    sbt:burdenbinning> run -c ../config.json --yes --stage BurdenbinningStage --reprocess
+    [info] Writing version info to /home/ec2-user/MarcWorkspace/BurdenBinning/burdenbinning/target/scala-2.13/resource_managed/main/version.properties...
+    [info] running org.broadinstitute.dig.aggregator.methods.burdenbinning.Burdenbinning -c ../config.json --yes --stage BurdenbinningStage --reprocess
+    2020-11-09 04:16:00,814 INFO [o.b.d.a.m.b.Burdenbinning$] Initializing stages...
+    2020-11-09 04:16:01,387 INFO [o.b.d.a.m.b.Burdenbinning$] Connecting to dig-analysis-state...
+    2020-11-09 04:16:02,898 WARN [o.b.d.a.m.b.Burdenbinning$] The reprocess flag was passed. All inputs to BurdenbinningStage
+    2020-11-09 04:16:02,899 WARN [o.b.d.a.m.b.Burdenbinning$] will be treated as new and updated; are you sure?
+    [y/N]: y
+    2020-11-09 04:16:04,416 INFO [o.b.d.a.m.b.BurdenbinningStage] Running stage BurdenbinningStage...
+    2020-11-09 04:16:04,416 INFO [o.b.d.a.m.b.BurdenbinningStage] Finding all inputs for BurdenbinningStage...
+    2020-11-09 04:16:05,776 INFO [o.b.d.a.Emr$] Creating 1 clusters for 1 jobs...
+    2020-11-09 04:16:07,423 INFO [o.b.d.a.Emr$] Clusters launched.
+    2020-11-09 04:21:07,565 INFO [o.b.d.a.Emr$] Job queue progress: 0/1 steps (0%)
+    2020-11-09 16:31:16,522 INFO [o.b.d.a.Emr$] Job queue progress: 1/1 steps (100%)
+    2020-11-09 16:31:16,663 INFO [o.b.d.a.Emr$] Clusters terminated.
+    2020-11-09 16:31:16,665 INFO [o.b.d.a.m.b.BurdenbinningStage] Updating output BurdenBinning for BurdenbinningStage (1 inputs)...
+    2020-11-09 16:31:16,725 INFO [o.b.d.a.m.b.Burdenbinning$] Done
+    [success] Total time: 44118 s (12:15:18), completed Nov 9, 2020 4:31:17 PM
+    sbt:burdenbinning> 
+
+
+20210509 - cojo question
+
+what you'll need to do is get the list of all phenotypes successfully processed and then pass them to the aggregator with a special flag. I usually do it like this:
+$ aws s3 ls s3://dig-analysis-data/out/finemapping/cojo-results/ --recursive | awk -F '/' '{print $4}' | sort | uniq | xargs echo -n | sed -e "s/ /,/g"
+
+This will list all the files in that output directory, extract just the phenotype name, get the unique list of them, output them (without newlines) and 
+the comma-separate them. You probably want to write this to a file (e.g. > phenotypes.txt) for safe keeping, but you can just copy the output as well.
+
+This will list all the files in that output directory, extract just the phenotype name, get the unique list of them, output them (without newlines) and the comma-separate them. You probably want to write this to a file (e.g. > phenotypes.txt) for safe keeping, but you can just copy the output as well.
+
+$ ./run.sh finemapping --stage CojoStage --only "<paste output of above shell script here with all the completed phenotype outputs>" --insert-runs
+*(Don't forget the "'s around the comma-separated list of output names.)*
+The --insert-runs command will just insert into the database that the output has already been successfully processed and won't attempt to actually run the method again on it.
+NOTE: the above will just show you what it would do; don't forget to add --yes after the dry-run to *actually* do it. (edited) 
+
+
+$ ./run.sh finemapping --stage CojoStage
+
+$ ./run.sh finemapping --stage CojoStage --only "$(cat phenotypes.txt)" --insert-runs
+
+9:24
+Once that's done, you should be able to just run it again as normal and only see the set of phenotypes that haven't yet been processed:
+
+
+
+
+
+
+9:23
+Then you want to run the aggregator again like so (guessing method name):
+$ ./run.sh finemapping --stage CojoStage --only "<paste output of above shell script here with all the completed phenotype outputs>" --insert-runs
+*(Don't forget the "'s around the comma-separated list of output names.)*
+The --insert-runs command will just insert into the database that the output has already been successfully processed and won't attempt to actually run the method again on it.
+NOTE: the above will just show you what it would do; don't forget to add --yes after the dry-run to *actually* do it. (edited) 
+9:24
+Once that's done, you should be able to just run it again as normal and only see the set of phenotypes that haven't yet been processed:
+$ ./run.sh finemapping --stage CojoStage
+9:29
+If you're on a n*x system (like OS X), you may be pass the contents of the file as the list of outputs instead of trying to copy/paste them like so:
+$ ./run.sh finemapping --stage CojoStage --only "$(cat phenotypes.txt)" --insert-runs
+I've never tried that myself since I'm on windows, but I'm pretty sure that would work.
+
+
+
+9:23
+Then you want to run the aggregator again like so (guessing method name):
+$ ./run.sh finemapping --stage CojoStage --only "<paste output of above shell script here with all the completed phenotype outputs>" --insert-runs
+*(Don't forget the "'s around the comma-separated list of output names.)*
+The --insert-runs command will just insert into the database that the output has already been successfully processed and won't attempt to actually run the method again on it.
+NOTE: the above will just show you what it would do; don't forget to add --yes after the dry-run to *actually* do it. (edited) 
+9:24
+Once that's done, you should be able to just run it again as normal and only see the set of phenotypes that haven't yet been processed:
+$ ./run.sh finemapping --stage CojoStage
+9:29
+If you're on a n*x system (like OS X), you may be pass the contents of the file as the list of outputs instead of trying to copy/paste them like so:
+$ ./run.sh finemapping --stage CojoStage --only "$(cat phenotypes.txt)" --insert-runs
+
+
+1:38
+I think Jason is still trying to figure out how to combine ancestry specific results for magma and cojo
+
+jmassung  2:38 PM
+adding stepConcurrency=3 cut the total runtime by ~20-30 minutes for the stage. Not tons, but something. Some of that might be the polling changes, too, but i doubt it. (edited) 
+2:39
+FYI, it's possible to add that because there's no bootstrap steps and the jobs are all 1 step each (no dependencies), so they can all be run in parallel
+2:39
+as long as the cluster has memory and CPU, it's all good
+
+Marc (he/him)  2:39 PM
+so I should also do htop on the pyspark jobs as well to determine the best step concurrency?
+2:40
+Or does spark handle all that?
+
+jmassung  2:40 PM
+As an example, you did your concurrency for run-cojo in the python code (totally fine). For GREGOR, I did it at the cluster level... see: https://github.com/broadinstitute/dig-aggregator-methods/blob/master/gregor/src/main/scala/GlobalEnrichmentStage.scala
+2:41
+I split up all the phenotype/ancestry stuff in the scala code, and then just did stepConcurrency=5 to let them run in parallel
+2:41
+both essentially amount to the same thing.
+
+Marc (he/him)  2:42 PM
+are the stepconcurrency and cluster bounded, or can we go as high as we want?
+
+jmassung  2:43 PM
+so I should also do htop on the pyspark jobs as well to determine the best step concurrency?
+Honestly, w/ Spark I don't really know. There's a lot more going on there. There's the JVM memory, executor memory, driver memory, etc. It's really hard to know what it's going to do (to me so far).
+I usually try and just do the step concurrency when i know the work being done is really trivial, not tons of data, etc.
+2:45
+step concurrency can technically be quite high, i think, but i've never gone > 5. The aggregator code limits each cluster to a maximum of 10 steps at once, so > 10 wouldn't have any effect
+
+Marc (he/him)  2:46 PM
+cool, thanks
+
+jmassung  2:47 PM
+the 10 step limit is there to help w/ polling rate limiting, too
+
+
+
+
+20210421 - spark concurrency
+
+Marc (he/him)  12:33 PM
+md_finemapping is the branch name
+I still need to clean up some of the comments/debug pritn statements
+
+jmassung  1:35 PM
+adding some step concurrency to your stage didnt really improve performance very much, but it's been a great test of the new polling, which appears to be working great! :slightly_smiling_face:
+
+Marc (he/him)  1:35 PM
+sweet; I really enjoyed doing the cojo work
+
+jmassung  1:36 PM
+i dont know what else is on your plate, would you want to take over the LD score regression method later this sprint? I've got it to the half-way mark, just needs the final part done
+1:37
+i basically got all the partitioning, region stuff, munging summary stats, etc. all done.
+
+Marc (he/him)  1:37 PM
+sure; after the early May translator hackathon, I'll have more time
+also, magma should be ancestry specific as well, so that will have to be modified
+
+
+20210406 - htop
+if you use spark, then, yes, it needs to be a Job.PySpark. If you just want to run a generic python script, just use Job.Script.
+
+Noticed your (test?) job running. Because it's a single phenotype and a simple script that's running, I wanted to note - in case you didn't know - that when you go to run this "for real" across all the phenotypes you should do the following:
+In the cluster definition of the step, add stepConcurrency=5 to it, so 5 phenotypes can be processed at the same time. Usually what I do for stuff like this is:
+1. SSH into the master node of the cluster while it's running the script.
+2. Install htop with sudo yum install -y htop
+3. Run htop and see how much CPU/memory is being used for the one job.
+Then just divide w/ what's available to see how many you can run in parallel before maxing out the machine.
+Finally, because it's just a single machine being provisioned, pass --clusters 10 on the command line when running the aggregator, so you can get 10 of them.
+With those two changes, processing 350 phenotypes can then do ~50 at once instead of only 5 the default ways (no step concurrency and only 5 clusters). Since your current test is at 1.5 hours right now, assuming it takes 2 hours, that's the difference between the whole thing taking 14 hrs and 140 hours.
+That said, obviously if the performance can be improved per phenotype, that would be ideal as well.
+
+
+20210402 - ancestry filtering
+{"varId":"1:749707:A:G","consequence":"intron_variant","nearest":["AL669831.1"],"dbSNP":"rs528695989","maf":0.0577,"af":{"EU":0.0368,"HS":0.0519,"AA":0.115,"EA":0.0258,"SA":0.0389}}
+
+ancestry_maf = af < 0.5 ? af : 1 - af;
+
+Hey, saw you were running your new method spark jobs. Cool to see more aggregator stuff just happening. Wanted to ask something about it...
+I noticed that there's an output that is basically just {"varId"..., "maf"} and wondered why even have it (assuming it's literally just a 100% copy of the common VEP output)?
+If it's not a aggregation of other data (e.g.a max maf across ancestries) and you aren't writing it out in a different format for a script (e.g. TSV with only those two columns), 
+isn't it just duplicating information with no benefit? I assume you're going to use it later, you could just load the common output from VEP and either .select(df.varId, df.maf) 
+only those fields, .filter(df.maf.isNotNull()) or .join(common, on='varId', how='inner') on it to get MAF without needing a whole other copy. Unless I'm missing something?
+
+
+20210330 - coalesce 
+    srcdir = 's3://dig-analysis-data/variants/*/*/*'
+    outdir = 's3://dig-analysis-data/out/frequencyanalysis'
+    # load all datasets
+    df = spark.read.json(f'{srcdir}/part-*')
+    df = df.select(df.varId, df.ancestry, df.eaf, df.maf) \
+        .filter(df.maf.isNotNull())
+    # use window functions to get distinct variants on the same partitions
+    window = Window.partitionBy(['varId', 'ancestry']) \
+        .orderBy([df.varId, df.maf.desc()])
+    # add the rank column and then only keep the max
+    df = df.withColumn('rank', rank().over(window))
+    df = df.filter(df.rank == 1)
+    df = df.drop('rank')
+    # write it out
+    df.write...
+
+note the Window.partitionBy..., which should get all varId/ancestry pairs onto the same node so that it won't need to copy data around between nodes
+you're right (on max/mean), that was just an example of the transfer of the data
+
+that i dont know. I know that there are certain commands that are "sync points". For example, the most common one is write.
+Basically what happens is you can consider the dataframe to be a "plan" of what will happen.
+spark.read will not actually read everything. instead it basically finds the list of everything to read (and their sizes) and likely "heads" each file to infer the schema of the data unless you provide the schema.
+It then takes the files and sizes and partitions them, deciding which nodes will get which initial sets of the data to load (when run).
+The rest of things like df = df.filter... join... sort... select ... withColumn, etc basically just add to the "plan" that each node will execute on its set of data that it loaded.
+The sync points (like write) that require the plan to actually be executed, tells each partition to do whatever the plan is on its set of the data. That's why you end up with N part files (each file == 1 partition, which is a plan executed).
+Some things, like sort can be quite concerning because if you aren't careful (this part I'm still learning), each partition will sort its own data, but the data - as a whole - may not be sorted. Read: part-00000 is sorted within itself, and so is part-00001, but part-00000 may NOT come before part-00001 if you were to compare the two.
+I'm pretty confident that sort does do it correctly, but there are other operations that do not. For example, if you did this:
+
+df = df.orderBy(['varId', 'pValue']).dropDuplicates(['varId'])
+
+df = df.orderBy(['pValue'])
+df = df.head(1000)
+df = df.coalesce(1).write...
+
+
+
+20210326 - ancestry parsing
+    df = spark.read.csv(srcdir, sep='\t', header=True) \
+        .withColumn('filename', input_file_name()) \
+        .withColumn('ancestry', regexp_extract('filename', r'/ancestry=([^/]+)/', 1))
+
+
+
+
+20210129 - BioIndex
+s3://dig-analysis-data/out/magma/staging/genes/2hrG/associations.genes.raw
+
+mysql> use bioindex_20210128160628;
+Database changed
+mysql> 
+mysql> 
+mysql> 
+mysql> 
+mysql> show tables;
++-----------------------------------+
+| Tables_in_bioindex_20210128160628 |
++-----------------------------------+
+| AnnotatedRegions                  |
+| Associations                      |
+| Burden                            |
+| CredibleRegions                   |
+| CredibleSets                      |
+| CredibleVariants                  |
+| DatasetAssociations               |
+| EffectorGenes                     |
+| Gene                              |
+| GeneAssociations                  |
+| GeneAssociations52k               |
+| GeneFinder                        |
+| GeneVariants                      |
+| Genes                             |
+| GlobalAssociations                |
+| GlobalEnrichment                  |
+| PhewasAssociations                |
+| Regions                           |
+| TopAssociations                   |
+| TranscriptConsequences            |
+| TranscriptionFactors              |
+| Variant                           |
++-----------------------------------+
+22 rows in set (0.03 sec)
+mysql> 
+
+
+
+20201020 - script
+
+Step 1. Don't coalesce
+Step 2. Just a single-step job, shell script, use `hadoop fs -getmerge` before running magma
+Step 3. Don't coalesce
+Step 4. Just a single-step job, given path to S3, use `hadoop fs -getmerge` before running magma
+See bottom-line/src/main/resources/getmerge-strip-headers.sh
+  /** Additional resources to upload. */
+  override def additionalResources: Seq[String] = Seq(
+    "runMETAL.sh",
+    "getmerge-strip-headers.sh"
+  )
+#!/bin/bash
+aws s3 cp s3://.../getmerge-strip-headers.sh .
+chmod +x getmerge-strip-headers.sh
+./getmerge-strip-headers.sh s3://dig-analysis-data/out/magma/step1GatherVariants/part-* ./variants.csv
+
+hey, i forgot something else to mention wrt your stages
+
+if you have a stage that's pure Job.Script steps that don't need spark, etc., then in your ClusterDef, you can add this line:
+applications = Seq.empty
+This will make it so that Spark, yarn, hue, etc. won't be installed on the cluster. This helps with startup times (taking a minute or 2 to create the cluster instead of 7 or 8. Hadoop will always be installed, so you can still use the hadoop CLI (e.g. hadoop fs -getmerge) and the getmerge-strip-headers shell script if needed.
+
+Just something that might help a bit
+
+not necessary tho
+
+totally, very minor optimization
+
+
+20200908 - s3 errors
+Marc (he/him)  10:23 AM
+hey Jeff, this code in my last magma step doesn't seem to be running:
+  /** On success, write the _SUCCESS file in the output directory.
+    */
+  override def success(output: String): Unit = {
+    val phenotype = output
+    context.s3.touch("out/magma/step4GenePValues/${phenotype}/_SUCCESS")
+    ()
+  }
+
+
+jmassung  10:24 AM
+context.s3.touch("out/magma/step4GenePValues/${phenotype}/_SUCCESS")
+It's wrong
+10:24
+should be s"... you're making a directory called ${phenotype}
+
+Marc (he/him)  10:25 AM
+so
+context.s3.touch(s"out/magma/step4GenePValues/${phenotype}/_SUCCESS")
+
+jmassung  10:26 AM
+yeah
+
+
+i just looked at a random file and see this:
+GENE       CHR      START       STOP  NSNPS  NPARAM       N        ZSTAT            P
+7499         X    2670069    2734541     89      17   92162     -0.62837      0.73512
+8908         X    2746863    2800861    194      25  101713     -0.16387      0.56508
+414          X    2822011    2847416     62      11   79665      0.15924      0.43674
+
+
+20200901 - bioindex_20210128160628
+I've made some changes to BioIndex. This is mainly to make it easier to use, so it uses python's setuptools. The README is updated to show usage, but you'll need to update your jenkins jobs for the production portal.
+Basically, after you get the latest BioIndex code, you'll need to add this to Jenkins:
+$ sudo python3 ./setup.py install
+And then, to run the bioindex, you can - from then on - use the bioindex command on the CLI instead of having to use python3 -m main...
+$ bioindex serve --env-file .bioindex
+$ bioindex create <name> <prefix> <schema>
+$ bioindex index <name>
+$ bioindex query <name> <query...>
+etc.
+
+df = df.select(
+    df.GENE.alias('gene'),
+    df.CHR.alias('chromosome'),
+    df.START.alias('start'),
+    df.STOP.alias('end'),
+    df.NSNPS.alias('SNPs'),
+    df.NPARAM.alias('nParam'),
+    df.N.alias('n'),
+    df.ZSTAT.alias('zStat'),
+    df.P.alias('pValue'),
+)
+df.write.json(f'out/magma/results/{phenotype}')
+
+
+20200828 - spark permissio NSNPSmight as well try copy it up
+11:46
+it would help with the vpn timeout
+11:47
+or any network hickup
+11:49
+was able to copy a file to s3 from qa kb, so I assume the permission is an emr issue
+11:51
+2020-08-28 15:50:31,141 INFO [o.b.d.a.Emr$] Creating 5 clusters for 1 jobs... 
+2020-08-28 15:50:31,820 ERROR [o.b.d.a.m.b.Basset$] software.amazon.awssdk.services.ec2.model.Ec2Exception: You are not authorized to perform this operation. (Service: 
+Ec2, Status Code: 403, Request ID: ba0c6591-a5a8-4246-b992-fdd1dce85aa9, Extended Request ID: null) 
+software.amazon.awssdk.services.ec2.model.Ec2Exception: You are not authorized to perform this operation. (Service: Ec2, Status Code: 403, Request ID: ba0c6591-a5a8-424
+6-b992-fdd1dce85aa9, Extended Request ID: null)
+
+
+20200828 - EMR 
+Hey, was just taking a look at the EMR clusters. nice to see you have stuff running successfully!
+Wanted to note that whatever the Claussnitzerlab steps are, they run crazy fast (~20 sec), which means it'll chew threw steps much faster than the 5 min ping/queue more steps time.
+You may want to consider coding it up so that each steps gets 10 part files or something instead of 1 at a time. For example (scala):
+val partGroups = parts.sliding(10, 10).toList
+// partGroups is now a list of lists, each with 10 or fewer items
+val steps = partGroups.map { parts => Job.Script(script, parts: _*) }
+// each step gets up to 10 command line arguments
+new Job(steps)
+Then in your shell script, you can just iterate over $* and process each. I always have to look up how to do bash for loops, but you could even just make it a perl script that does it, executing the bash:
+#!/usr/bin/perl
+foreach my $part (@ARGV) {
+  exec("bash ./shell-script.sh $part")
+}
+(edited)
+
+
+
+
+
+11:01
+Everything will end up running much faster overall in this case.
+11:03
+The perl script can even run them all in parallel...
+foreach my $part (@ARGV) {
+  my $pid = fork();
+  if (not $pid) {
+    exec("bash ./shell-script.sh $part")
+  }
+}
+# wait for all forked processes to finish
+while ((my $pid = wait()) >= 0) {
+  die "$pid failed with status: $?" if $? != 0;
+}
+11:04
+Note: this is all assuming that your stuff is "working" now and the 18s isn't a bug. Either way, wanted to  just let you know this is the kind of stuff I've had to constantly try to improve each release based on how the stages run, try and optimize them given the data, etc.
+
+
+
+20200826 - spark architecture
+
+Method
+    Stages (serial)
+        Outputs/Job (parallel)
+            Steps (can be parallel, usually serial)
+
+no
+1:07
+it's 1 config shared by all
+1:07
+you have 2 choices for running:
+1:07
+1. From within sbt in your method directory, you'd do run -c ../config.json <other args here>
+
+1:08
+2. From within the root methods directory, use the run script: $ run <method name> <other args here>
+
+
+
+20200824 - distinct varids
+
+still get 59 million for the distinct
+looked at vep/.. snp.py; the data being pulled is not from the out/varianteffect/common/*
+    # load the dbSNP database for GRCh37
+    df = spark.read.csv(
+        's3://dig-analysis-data/raw/dbSNP_common_GRCh37.vcf.gz',
+        sep='\t',
+        header=False,
+        comment='#',
+    )
+
+common.filter(common.dbSNP.isNotNull()).select(common.dbSNP).distinct().count()
+
+noticed that the snp file has 44 million rows, but the one I had generated from the /out/varianteffect/common/part* looking for non null rsIDs had 59 million rows
+the code I used I assumed was correct:
+# keep only the rows with non null dbSNP ids
+df_nonnull_load = df_load.filter(col("dbSNP").isNotNull())
+
+So, the dbSNP IDs aren't available (joined) until the BioIndex. But, you can do that join yourself if needed.
+You may need to also have the following input source: Input.Source.Success("out/varianteffect/snp/"), but that will almost never update (only when we download a new dbSNP database of variants).
+From the console, here's what that data looks like (it's CSV, but simple):
+$ aws s3 cp s3://dig-analysis-data/out/varianteffect/snp/part-00000-18701f30-a780-426f-b9d8-fb20a4f01e47-c000.csv - | head
+dbSNP   varId
+rs367896724     1:10177:A:AC
+rs555500075     1:10352:T:TA
+rs376342519     1:10616:CCGCCGTTGCAAAGGCGCGCCG:C
+rs544419019     1:11012:C:G
+rs561109771     1:11063:T:G
+rs540538026     1:13110:G:A
+rs62635286      1:13116:T:G
+rs62028691      1:13118:A:G
+rs531730856     1:13273:G:C
+So, you should be able to add this to your code easily:
+df = ...  # assuming this is already the bottom-line loaded
+rsIDs = spark.read.csv('s3://dig-analysis-data/out/varianteffect/snp/part-*', sep='\t', header=True)
+# add the dbSNP column
+df = df.join(rsIDs, on='varId', how='left_outer')
+Note: unless the rsID is required for the method to run, though, I wouldn't do any of the above. Instead, wait until later, and when you make the BioIndex stage that sorts/loads the output of your data into s3://dig-bio-index, join then. In fact, if you wait until then, you can join with other data that gives both the rsID and additional variant data that we show on the portal.
+
+
+
+
+
+11:50
+Basically, I try to save all the "joining" that needs to be done until the very, very end when we put the data into the bio index bucket, so we can join everything together at once after we're sure all the other methods have run and all the data is 100% up to date.
+11:54
+As an example: https://github.com/broadinstitute/dig-aggregator-methods/blob/master/bioindex/src/main/resources/associations.py
+11:55
+this line in particular: https://github.com/broadinstitute/dig-aggregator-methods/blob/master/bioindex/src/main/resources/associations.py#L31 joins each bottom-line result with "common" variant data: dbSNP, most severe consequence, type (e.g. intron/exon), etc.
+11:56
+Does all the above help?
+
+
+20200811 - scala help
+xs.map {
+  x => print(x)
+}
+
+  /** Map inputs to outputs. */
+  override val rules: PartialFunction[Input, Outputs] = {
+    case variants() => Outputs.Named("VEP")
+  }
+  /** The results are ignored, as all the variants are refreshed and everything
+    * needs to be run through VEP again.
+    */
+  override def make(output: String): Job = {
+    val runScript = resourceUri("runVEP.sh")
+    // get all the variant part files to process, use only the part filename
+    val objects = context.s3.ls(s"out/varianteffect/variants/")
+    val parts   = objects.map(_.key.split('/').last).filter(_.startsWith("part-"))
+    // add a step for each part file
+    new Job(parts.map(Job.Script(runScript, _)), isParallel = true)
+  }
+  /** Before the jobs actually run, perform this operation.
+    */
+  override def prepareJob(output: String): Unit = {
+    context.s3.rm("out/varianteffect/effects/")
+  }
+  /** On success, write the _SUCCESS file in the output directory.
+    */
+  override def success(output: String): Unit = {
+    context.s3.touch("out/varianteffect/effects/_SUCCESS")
+    ()
+  }
+
+
+20200522 - start method 
+
+sbt new broadinstitute/dig-aggregator-method.g8
+
+20200515 - bioindex config
+            s3_bucket = secret.get('BIOINDEX_S3_BUCKET', s3_bucket)
+            rds_instance = secret.get('BIOINDEX_RDS_INSTANCE', rds_instance)
+            response_limit = secret.get('BIOINDEX_RESPONSE_LIMIT', response_limit)
+            match_limit = secret.get('BIOINDEX_MATCH_LIMIT', match_limit)
+            bio_schema = secret.get('BIOINDEX_BIO_SCHEMA', bio_schema)
+            portal_schema = secret.get('BIOINDEX_PORTAL_SCHEMA', portal_schema)
+
+  #!/bin/bash
+if [[ ! $# -eq 1 ]]; then
+  echo "Usage: run-server.sh <dev | prod>"
+  exit 1
+fi
+# fetch the site
+SITE=$1
+PROCESS="${SITE}-server"
+# app is run as root, so get HOME files now
+NODE="${HOME}/nodejs/bin/node"
+APP="${HOME}/.jenkins/workspace/Server/app.js"
+CONFIG="${HOME}/config-${SITE}.yml"
+# stop any existing server running first
+echo "Stopping ${SITE} server..."
+sudo pkill -f $PROCESS > /dev/null 2>&1
+# start the server
+echo "Starting ${SITE} portal..."
+screen -S $PROCESS -dm bash -c "exec -a ${PROCESS} sudo ${NODE} ${APP} -c ${CONFIG}"
+
+
+
+20200422 - aws
+aws secretsmanager get-secret-value --secret-id $1 | jq -r ".SecretString"
+
+have you ever used jq before?
+
+
+fyi, I'm going to create a new database on the bioindex mysql (edited) 
+
+
+
+
+
+1:12
+approach I'm thinking of taking is having a jenkins job
+create new timestamp name (bioindex-2020041511251100)
+creating a new db with empty index table (name above)
+new s3 bucket, copying all the data from the dig-bio-index bucket (name above)
+running the indexes once data copied
+copying new config to a bioindex install
+bouncing the bioindex install
+I'm going to try all this manually on a local bioindex install first
+Let me know if I'm missing anything
+
+
+
+9:26
+https://stedolan.github.io/jq/
+9:27
+For example:
+$ aws secretsmanager get-secret-value --secret-id dig-bio-index | jq -r ".SecretString | fromjson | map_values(tostring) | to_entries | map(.key + \"=\" + .value) | @sh"
+'username=diguser' 'password=type2diabetes' 'engine=mysql' 'host=dig-bio-index.cxrzznxifeib.us-east-1.rds.amazonaws.com' 'port=3306' 'dbInstanceIdentifier=dig-bio-index' 'dbname=bio'
+9:31
+I think something like this should work (bash):
+# Usage: ./secret-2-ini.sh <secret-id>
+# read secret
+SECRET=($(aws secretsmanager get-secret-value --secret-id $1 | jq -r ".SecretString | fromjson | map_values(tostring) | to_entries | map(.key + \"=\" + .value) | @sh"))
+# write all key/value pairs in the secret to the output file
+for KV_PAIR in "${SECRET[@]}"; do
+  echo KV_PAIR
+done
+9:33
+almost works...
+$ ./secret-2-ini.sh dig-bio-index
+'username=diguser'
+'password=type2diabetes'
+'engine=mysql'
+'host=dig-bio-index.cxrzznxifeib.us-east-1.rds.amazonaws.com'
+'port=3306'
+'dbInstanceIdentifier=dig-bio-index'
+'dbname=bio'
+9:34
+need to strip quotes
+9:39
+This appears to work:
+SECRET=($(aws secretsmanager get-secret-value --secret-id $1 | jq -r ".SecretString | fromjson | map_values(tostring) | to_entries | map(.key + \"=\" + .value) | @sh"))
+# write all key/value pairs in the secret to the output file
+for KV_PAIR in "${SECRET[@]}"; do
+  echo "${KV_PAIR//\'/}"
+done
+9:39
+if that was a script, you could then - from jenkins - do something like:
+secret-to-env dig-bio-index-prod > .bioindex-prod
+
+
+it's certainly possible. just curious what the difference in work would be?
+For deploy, not sure the difference between
+$ aws secrets-manager update key "{...}"
+and
+$ echo "BIOINDEX_S3_BUCKET=...\nBIOINDEX_RDS_BUCKET=..." > .bioindex
+But, if we need to add more stuff in the future, I can certainly see how the secret allows us to store more options.
+Or is it that the dev/prod bio index run in separate folders, perhaps on separate machines even, and so then reading where the go to from a central place is preferred?
+
+
+
+
+
+9:04
+How about this?
+* There's a secret (one per environment like you say) with the bucket/rds instance + whatever future data we need
+* The bio index CLI and server still use the CLI and an environment file, defaulted to .bioindex, but can be overridden
+* There is a shell script that Jenkins can run, which reads a secret from AWS and writes an environment file.
+This way, Jenkins can do its thing easily (for you), but the Bio Index isn't dependent on AWS secrets (since future work will need to allow for google cloud storage, file system, basically non-AWS hosting)?
+
+
+
+20200415 - spark 
+anyway, it all sounds reasonable for now... what could possibly go wrong, right? :stuck_out_tongue:
+
+
+
+
+
+1:37
+Something to mull in the back of your mind (not sure how to do it):
+* I'd love to somehow have the aggregator be able to have a --test-run a processor such that when it runs, the python code can do something like:
+df = spark.read.json('path/part-00000*')
+instead of
+df = spark.read.json('path/part-*')
+So that it loads only a fraction of the data to run with (this is a trick I do sometimes to test on real data and not have it take too long). But I can't think of a way to get it to work w/o modifying all python scripts, or have it magically work w/ non spark jobs
+1:39
+i even thought about making a dig-aggregator-test-data bucket that's a copy of all part-00000* files in the real thing, so the same jobs can run w/ just a fraction of the data
+
+
+
+From testing, it seems like the aws s3 sync command will sync from the source s3 bucket to the destination one but not the other way around
+It also has a --dryrun option, which is cool
+aws s3 sync --dryrun s3://dig-bio-index/genes s3://dig-bio-index-dev/genes
+also nice that it outputs what it does, like a unix cp command, so we should be able to catch that for troubleshooting
+
+
+
+
+
+11:44
+so my preliminary approach would be to use one bucket to always load the bioindex data in, then sync to another bucket for release (new or existing)
+
+
+My hope is that there's something that can be added to the jenkins task/project so that it can early out if it doesn't need to do anything (e.g. someone accidentally clicks it and then we're boned)
+
+
+
+
+
+3:12
+that might be built into the s3 sync code tho
+3:12
+¯\_(ツ)_/¯
+
+
+20200407 - burden binning 
+bioIndex/variants.py
+
+
+
+
+
+10:55
+# this is the schema written out by the frequency analysis processor
+frequency_schema = StructType(
+    [
+        StructField('varId', StringType(), nullable=False),
+        StructField('chromosome', StringType(), nullable=False),
+        StructField('position', IntegerType(), nullable=False),
+        StructField('reference', StringType(), nullable=False),
+        StructField('alt', StringType(), nullable=False),
+        StructField('eaf', DoubleType(), nullable=False),
+        StructField('maf', DoubleType(), nullable=False),
+        StructField('ancestry', StringType(), nullable=False),
+    ]
+)
+def load_freq(ancestry_name):
+    return spark.read \
+        .csv('%s/%s/part-*' % (freq_srcdir, ancestry_name), sep='\t', header=True, schema=frequency_schema) \
+        .select(col('varId'), struct('eaf', 'maf').alias(ancestry_name))
+    # frequency outputs by ancestry
+    ancestries = ['AA', 'AF', 'EA', 'EU', 'HS', 'SA']
+    freq = None
+    # load frequencies by variant ID
+    for ancestry in ancestries:
+        df = load_freq(ancestry)
+        # final, joined frequencies
+        freq = df if freq is None else freq.join(df, 'varId', how='outer')
+    # pull all the frequencies together into a single map
+    freq = freq.select(freq.varId, struct(*ancestries).alias('frequency'))
+
+
+
+output_data_frame \
+        .orderBy(var_id_col, gene_ensemble_id_col, burden_bin_id_col) \
+        .write \
+        .mode('overwrite') \
+        .json('%s' % outdir)
+
+
+it's important to remember that, too. things like .orderBy(['chromosome', 'position']) will be sorted within a given process but not globally (all the stuff in part-00000 will not be necessarily < the stuff in part-00001)
+
+
+
+
+
+2:00
+I am trying to load and write local, but no error or output dir
+Why? Just run it on S3 and write it somewhere in the dig-bio-index bucket
+2:00
+if you really want to run it locally, you need to write it out locally, too
+
+
+
+20200401 - javaprog
+        if (Gene.count()) {
+            log.info( "Genes already loaded. Total operational number = ${Gene.count()}" )
+        } else {
+            String fileLocation = grailsApplication.mainContext.getResource("/WEB-INF/resources/genes.tsv").file.toString()
+            log.info( "Actively loading genes from file = ${fileLocation}")
+            File file = new File(fileLocation)
+            int counter = 1
+            boolean headerLine = true
+            file.eachLine {
+                if (headerLine){
+                    headerLine = false
+                }  else {
+                    String rawLine = it
+                    String[] columnData =  rawLine.split(",")
+                    Long addrStart = Long.parseLong(columnData[3],10)
+                    Long addrEnd = Long.parseLong(columnData[4],10)
+                    new Gene (
+                            name1:columnData[0],
+                            name2:columnData[1],
+                            chromosome:columnData[2],
+                            addrStart :addrStart,
+                            addrEnd:addrEnd ).save(failOnError: true)
+                }
+                counter++
+            }
+            log.info( "Genes successfully loaded: ${counter}" )
+        }
+
+
+20200331 - burden binning
+if you did:
+filter_eigen_pc_raw_rankscore = col("eigen-pc-raw_rankscore")
+Then you can do:
+df = df.filter(filter_eigen_pc_raw_rankscore > 0)
+
+
+
+
+
+1:09
+you will still need to do something like this tho:
+col('cqs.' + filter_eigen_pc_raw_rankscore.name).alias(filter_eigen_pc_raw_rankscore.name)
+(I'm guessing that the .name tho)
+1:09
+Ideally, tho, you would just do:
+filter_eigen_pc_raw_rankscore = col("cqs.eigen-pc-raw_rankscore")
+1:09
+note the cqs.
+1:10
+then you don't need to alias and can just use it as-is from the explode, which is fine since you don't keep it in the final output anyway
+1:10
+then your initial select is just select(col('id').alias('varId'), filter_eigen_pc_raw_rankscore, ...)
+1:11
+Also, the scala code change is simple and appears fine
+
+Thing like this:
+var_id = "varId"
+gene_ensemble_id = "geneEnsembleId"
+burden_bin_id = "burden_bin_id"
+Unless you need them as strings, given how they are used in the code, are probably better off as columns:
+burden_bin_id = col('burden_bin_id')
+That way you are able to filter, use Spark functions, etc. off them more easily.
+
+
+no. The aggregator takes care of it. We can try it later tho (it would require some scala changes) (edited) 
+
+output_data_frame = output_data_frame.select(col(var_id), col(gene_ensemble_id), col(burden_bin_id))
+output_data_frame \
+     .write \
+     .mode('overwrite') \
+     .json('%s' % outdir)
+
+It's unclear to me whether or not each bin can be done in parallel (in a separate cluster) more efficiently. Given that this is the bio index processor, that's not as easy right now, but I can easily see it being a huge win to do this:
+jobs = Seq(
+    Seq(JobStep.PySpark(burdenScript, '1')),
+    Seq(JobStep.PySpark(burdenScript, '2')),
+    Seq(JobStep.PySpark(burdenScript, '3')),
+    // ...
+)
+And making a cluster per bin and letting all the bins build in parallel.
+
+
+
+20200331 - lanbda 
+There's only 1 transcript consequence, tho, per variant, so only 1 gene should exist
+
+You can key by a tuple, too. rdd.keyBy(lambda r: (r.varId, r.binId))
+12:39
+output_data_frame = output_data_frame.select(col(var_id), col(gene_ensemble_id), col(burden_bin_id))
+Without looking more closely, it looks like the final output is very little data. The sooner you can select and get rid of everything else not needed from the records the better. Maybe you are already. Just noting that the transfer of data around the cluster - and how much can be done at one time - will be gated by how much data there is per record. So the sooner you can drop unnecessary columns, the better.
+12:41
+Thing like this:
+var_id = "varId"
+gene_ensemble_id = "geneEnsembleId"
+burden_bin_id = "burden_bin_id"
+Unless you need them as strings, given how they are used in the code, are probably better off as columns:
+burden_bin_id = col('burden_bin_id')
+That way you are able to filter, use Spark functions, etc. off them more easily.
+12:42
+For a first pass at your frist jump into Spark, not bad. :slightly_smiling_face:
+12:46
+I'd - personally - factor the code so it can be parallelized as much as possible. For example, you do every single bin together in a single job (maybe out of necessity) and tend to duplicate a lot of code. Or at least it appears that way at a high level. Why not do:
+def filter_bin(name, test):
+    return transcript_consequences.filter(test).withColumn(burden_bin_id, lit(name))
+bin_filters = [
+    ('bin1', bin1_test),
+    ('bin2', bin2_test),
+    ...
+]
+bin_dfs = [filter_bin(*bin) for bin in bin_filters]
+# ...do unioning, etc. here...
+
+
+
+
+
+

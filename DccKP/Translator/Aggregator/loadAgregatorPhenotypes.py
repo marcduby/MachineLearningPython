@@ -29,7 +29,7 @@ def get_phenotype_values(input_json):
 
 def get_connection():
     ''' get the db connection '''
-    conn = mdb.connect(host='localhost', user='root', password='yoyoma', charset='utf8', db='tran_test2')
+    conn = mdb.connect(host='localhost', user='root', password='yoyoma', charset='utf8', db='tran_test_202108')
 
     # return
     return conn 

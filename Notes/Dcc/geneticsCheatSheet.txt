@@ -1,0 +1,17 @@
+
+
+enhancers vs promoters:
+-----------------------
+An enhancer is a sequence of DNA that functions to enhance transcription. A promoter is a sequence of DNA 
+that initiates the process of transcription. A promoter has to be close to the gene that is being transcribed 
+while an enhancer does not need to be close to the gene of interest.
+
+chromatin accessability:
+------------------------
+Transcriptional activation throughout the eukaryotic lineage has been tightly linked with disruption of nucleosome organization at promoters, enhancers, silencers, insulators and locus control regions due to transcription factor binding.
+
+
+In eukaryotes, the tight or loose packaging of the genes in chromatin (DNA plus specific proteins) can control whether the genes can be expressed to form their encoded product. The gene expression effect of histone modification placements is called the histone code.
+
+
+

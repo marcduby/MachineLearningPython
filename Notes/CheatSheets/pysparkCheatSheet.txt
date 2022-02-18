@@ -1,19 +1,52 @@
 
 read in data:
 -------------
-  - df = spark.read.csv(path, sep=r'\t', header=True).select('col1','col2')
+- df = spark.read.csv(path, sep=r'\t', header=True).select('col1','col2')
+- df = spark.read.csv(path, sep=r'\t', header=True, inferSchema=True).select('col1','col2')   # infers data types from the data 
 
 write out data:
 ---------------
-  - csvDf.write.option("delimiter", "\t").csv(output_path, header='true')
-  - df.coalesce(1).write.format('json').save('myfile.json')                     # as one file
+- csvDf.write.option("delimiter", "\t").csv(output_path, header='true')
+- df.coalesce(1).write.format('json').save('myfile.json')                     # as one file
 
 manipulate data:
 ----------------
-  - df.withColumn("day_type",when(col("data").isin(holydays), "HOLIDAY").otherwise(col("day_type"))).show()
-  
+- df.withColumn("day_type",when(col("data").isin(holydays), "HOLIDAY").otherwise(col("day_type"))).show()
+- targetDf = df.withColumn("timestamp1", when(df["session"] == 0, 999).otherwise(df["timestamp1"]))  
+
 filter:
 -------
-    df = df.filter(df.maf.isNotNull() & (df.ancestry == args.ancestry))
+- df = df.filter(df.maf.isNotNull() & (df.ancestry == args.ancestry))
+- df.where((df.Age > 25) & (df.height > 6))
+- df.filter((df.Age > 25) & (df.height > 6)).agg({'Age': 'avg'})
 
+aggregated:
+-----------
+- df.agg({'Age': 'avg})
+- df.groupBy('class').agg({'Age': 'avg'}).orderBy('class', ascending=False)
+
+show data:
+----------
+- df.tak(5)     # doesn't collect data 
+- df.prtintSchema()
+- df.limit(5)
+
+map:
+----
+df.rdd.map(lambda x: x ** 2)
+
+sql:
+----
+df.createOrReplaceTempView('table_name')
+spark.select("select * from table_name')
+
+udf:
+----
+from pyspark.sql.types inport IntegerType 
+from pyspark.sql.functions import udf 
+def round_down(x):
+  return int(x)
+
+round_down_udf = udf(round_down, IntegerType())   # 2nd arg is type returned
+df.select(round_down_udf('fare').alias('int_fare'))
 

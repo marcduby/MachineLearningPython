@@ -4,6 +4,7 @@ tagging:
 --------
   - git tag -a v1.4 -m "my version 1.4"
   - git tag                         # lists the tags
+    - git push --tags
   - git push origin v0.92_generate
 
 

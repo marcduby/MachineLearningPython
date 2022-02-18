@@ -1,0 +1,60 @@
+{ "message": {
+    "knowledge_graph": {
+      "edges": {},
+      "nodes": {}
+    },
+    "query_graph": {
+      "edges": {
+        "e01": {
+          "object": "n1",
+          "predicates": [
+            "biolink:related_to"
+          ],
+          "subject": "n0"
+        },
+        "e02": {
+          "object": "n2",
+          "predicates": [
+            "biolink:related_to"
+          ],
+          "subject": "n0"
+        },
+        "e03": {
+          "object": "n3",
+          "predicates": [
+            "biolink:related_to"
+          ],
+          "subject": "n0"
+        }
+      },
+      "nodes": {
+        "n0": {
+          "categories": [
+            "biolink:Gene"
+          ]
+        },
+        "n1": {
+          "categories": [
+            "biolink:ChemicalSubstance"
+          ],
+          "ids": [
+            "CHEBI:45783"
+          ]
+        },
+        "n2": {
+          "categories": [
+            "biolink:Disease"
+          ],
+          "ids": [
+            "MONDO:0005301"
+          ]
+        },
+        "n3": {
+          "categories": [
+            "biolink:ChemicalSubstance"
+          ]
+        }
+      }
+    }
+  }
+}

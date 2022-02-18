@@ -1,4 +1,7 @@
 
+- environment
+  - PYTHONPATH
+  
 - pip 
   - pip freeze > requirements.txt
   - pip install -r requirements.txt
@@ -24,6 +27,10 @@ lists:
 ------
   - chunks = [data[x:x+100] for x in range(0, len(data), 100)]      # split list into sublists of size
   - chunks.append(element)
+  - list_diseases = list(set(list_diseases))                        # get unique elements in the list
+  - newlist = [word for word in words if len(word) == 9]
+  - if isinstance(input_object, list)                               # one list enterily in another list
+
 
 dict:
 -----
@@ -65,6 +72,8 @@ to test:
 --------
 - formatting json
   - print(json.dumps(json.loads(file.split('\n')[0]), indent=2))
+- python -m pytest -vv
+  - adds curent directory to pytest 
 
 notes:
 ------

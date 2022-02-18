@@ -5,7 +5,9 @@
   - docker help <command>
 
   - docker build
-  - docker pull- docker run- docker exec
+  - docker pull
+  - docker run
+  - docker exec
 
 
 
@@ -30,6 +32,18 @@
   - docker pull nginx:<version>
   - docker rm <container_id>
 
+
+
+- translator docker
+-------------------
+  - sudo docker run -it --rm 1405fc1c7390 /bin/bash     # to start an interactive shell
+  - sudo docker run --rm -p 8090:8090 64956f98039f      # to start running flask server
+  - sudo docker exec -it <container name> /bin/bash     # to get into running container
+  
+  - sudo docker run --rm -p 8090:8090 --mount ~/Code/TranslatorWorkspace/Logs:/home/CodeTest/GeneticsPro/logs 64956f98039f      # to start running flask server
+  - sudo docker run --rm -p 8090:8090 -v /home/javaprog/Code/TranslatorWorkspace/GeneticsProv1.2/logs:/home/CodeTest/GeneticsPro/python-flask-server/logs 1afbc78e61eb
+
+  
 - docker compose
 ----------------
   - docker-compose up -d

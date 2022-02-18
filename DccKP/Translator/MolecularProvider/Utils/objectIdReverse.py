@@ -9,6 +9,7 @@ dir_data = "/Users/mduby/Code/WorkspacePython/MachineLearningPython/DccKP/Transl
 file_object_id = dir_data + "objectIdQuery.json"
 file_subject_id = dir_data + "subjectIdQuery.json"
 MESSAGE = "message"
+KNOWLEDGE_GRAPH = "knowledge_graph"
 QUERY_GRAPH = "query_graph"
 EDGES = "edges"
 SUBJECT = "subject"
@@ -17,22 +18,42 @@ PREDICATES = "predicates"
 NODES = "nodes"
 IDS = "ids"
 CATEGORIES = "categories"
-map_predicate = {"biolink:affected_by": "biolink:affects"}
+map_predicate = {"biolink:affected_by": "biolink:affects", 
+    "biolink:condition_associated_with_gene": "biolink:gene_associated_with_condition",
+    "biolink:gene_associated_with_condition": "biolink:condition_associated_with_gene"}
 
 # methods
 def reverse_response(response, map_predicate, debug=False):
     ''' will reverse the response data '''
-    #initialize
-    result = None
+    # TODO - flip the edge subject, object and predicates
+    # TODO - replace the query graph with the original
+    # initialize
+    result = copy.deepcopy(response)
     subject = None
     object = None
     query_graph = None
     edge_id = None
     predicates = None
 
+    # get the data
+    if response.get(MESSAGE).get(KNOWLEDGE_GRAPH):
+        knowledge_graph = response.get(MESSAGE).get(KNOWLEDGE_GRAPH)
+        if knowledge_graph.get(EDGES):
+            edges = knowledge_graph.get(EDGES)
+            for key, value in edges.items():
+                edge_id = key
+                subject = value.get(SUBJECT)
+                object = value.get(OBJECT)
+                predicates = value.get(PREDICATES)
+
+                # flip the response
+                result[MESSAGE][KNOWLEDGE_GRAPH][EDGES][key][SUBJECT] = object
+                result[MESSAGE][KNOWLEDGE_GRAPH][EDGES][key][OBJECT] = subject
+
+
 def reverse_query(query, map_predicate, debug=False):
     ''' will check to see if query has id on object id only, then flips it if applicable; do nothing if not '''
-    #initialize
+    # initialize
     result = None
     subject = None
     object = None
@@ -45,7 +66,7 @@ def reverse_query(query, map_predicate, debug=False):
     if query.get(MESSAGE).get(QUERY_GRAPH):
         query_graph = query.get(MESSAGE).get(QUERY_GRAPH)
         if query_graph.get(EDGES):
-            edges = query.get(MESSAGE).get(QUERY_GRAPH).get(EDGES)
+            edges = query_graph.get(EDGES)
             if len(edges) == 1:
                 for key, value in edges.items():
                     edge_id = key

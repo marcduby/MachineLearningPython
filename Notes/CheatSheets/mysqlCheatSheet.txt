@@ -29,6 +29,7 @@ WHERE table_schema = "digkb"
 
 new install:
 ------------
+sudo apt-get update
 sudo apt install mysql-server
 sudo mysql_secure_installation
 

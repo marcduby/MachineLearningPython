@@ -3,8 +3,24 @@
 screen:
 -------
 - script /dev/null
+- screen -R <name>
+- screen -r <name>
+- screen -rD <attached_name>
 
 
 http:
 -----
 - wget -S -X GET --content-on-error --header=Content-Type:application/json http://localhost:7001/trapi/predicates
+
+ngnix:
+------
+- sudo service nginx restart
+
+space:
+------
+- df -k
+- du -cshm * 
+- df -Th 
+
+
+

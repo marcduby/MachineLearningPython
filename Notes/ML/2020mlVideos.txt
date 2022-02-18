@@ -1,4 +1,8 @@
 
+re20220207 - catboost vs xgboost comparison
+- https://www.youtube.com/watch?v=dvZLk7LxGzc&t=312s
+- todo
+  - code up
 
 re20210601 - text embeddings in pytorch
 - https://www.youtube.com/watch?v=mzbJd0NhW2A

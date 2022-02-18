@@ -31,7 +31,7 @@ def get_gene_list(conn):
 
 def get_connection():
     ''' get the db connection '''
-    conn = mdb.connect(host='localhost', user='root', password='yoyoma', charset='utf8', db='tran_test2')
+    conn = mdb.connect(host='localhost', user='root', password='yoyoma', charset='utf8', db='tran_test_202108')
 
     # return
     return conn 
@@ -111,7 +111,7 @@ def print_num_phenotypes_for_gene_in_db(conn, gene, gene_id):
         count = db_results[0][0]
 
     # print
-    print("for {} the are {} phenotypes/diseases in the translator db".format(gene, count))
+    print("for gene {} the are {} phenotypes/diseases in the translator db".format(gene, count))
 
 def query_gene_assocations_service(input_gene, url):
     ''' queries the service for disease/chem relationships '''
@@ -223,6 +223,8 @@ def insert_or_update_gene_data(conn, association_list, gene, gene_id, map_phenot
 def insert_all_gene_aggregator_data(conn, map_phenotype,  log=False):
     ''' will query the aggregator for all disease/phentype gene magma association data for all genes in the translator DB '''
     cursor = conn.cursor()
+
+    # sql to get all the genes in the translator DB
     sql_select = "select id, node_code from comb_node_ontology where node_type_id = 2 order by node_code"
     count = 0
 

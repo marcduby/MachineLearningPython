@@ -1,0 +1,83 @@
+{
+  "message": {
+      "knowledge_graph": {
+          "edges": {
+              "magma_gene_20210525MONDO:0100096NCBIGene:23037": {
+                  "attributes": [
+                      {
+                          "attribute_type_id": "biolink:p_value",
+                          "original_attribute_name": "pValue",
+                          "value": 8.6043e-9
+                      }
+                  ],
+                  "object": "ENSEMBL:ENSG00000133401",
+                  "predicate": "biolink:condition_associated_with_gene",
+                  "subject": "MONDO:0100096"
+              }
+          },
+          "nodes": {
+              "ENSEMBL:ENSG00000133401": {
+                  "categories": [
+                      "biolink:Gene"
+                  ],
+                  "name": "PDZD2"
+              },
+              "MONDO:0100096": {
+                  "categories": [
+                      "biolink:Disease"
+                  ],
+                  "name": "Predicted COVID-19 vs predicted COVID-19 negative"
+              }
+          }
+      },
+      "query_graph": {
+          "edges": {
+              "e00": {
+                  "object": "n00",
+                  "predicates": [
+                      "biolink:condition_associated_with_gene"
+                  ],
+                  "subject": "n01"
+              }
+          },
+          "nodes": {
+              "n00": {
+                  "categories": [
+                      "biolink:Gene"
+                  ],
+                  "ids": [
+                      "ENSEMBL:ENSG00000133401"
+                  ]
+              },
+              "n01": {
+                  "categories": [
+                      "biolink:Disease"
+                  ]
+              }
+          }
+      },
+      "results": [
+          {
+              "edge_bindings": {
+                  "e00": [
+                      {
+                          "id": "magma_gene_20210525MONDO:0100096NCBIGene:23037"
+                      }
+                  ]
+              },
+              "node_bindings": {
+                  "n00": [
+                      {
+                          "id": "ENSEMBL:ENSG00000133401"
+                      }
+                  ],
+                  "n01": [
+                      {
+                          "id": "MONDO:0100096"
+                      }
+                  ]
+              }
+          }
+      ]
+  }
+}

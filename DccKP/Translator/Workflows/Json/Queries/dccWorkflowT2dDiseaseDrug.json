@@ -1,0 +1,36 @@
+{
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "n0": {
+                     "ids": ["MONDO:0005148"],
+                     "categories": ["biolink:Disease"]
+                },
+                "n2": {
+                    "categories": ["biolink:Gene"]
+                },
+                "n3": {
+                    "categories": ["biolink:ChemicalEntity"]
+                },
+                "n4": {
+                    "ids": ["GO:000000001"],
+                    "categories": ["biolink:Pathway"]
+                }
+            },
+            "edges": {
+                "e01": {
+                    "subject": "n0",
+                    "object": "n2"
+                },
+                "e02": {
+                    "subject": "n2",
+                    "object": "n3"
+                },
+                "e03": {
+                    "subject": "n2",
+                    "object": "n4"
+                }
+            }
+        }
+    }
+}

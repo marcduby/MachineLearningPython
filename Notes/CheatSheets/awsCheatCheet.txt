@@ -15,5 +15,7 @@ AWS CLI:
 --------
   - aws s3 cp ~/this_directory s3://bucketname/this_directory --recursive
   - aws s3 cp --recursive s3://bucketname/this_directory . 
+  - wildcard 'metadata' files
+    - aws s3 cp s3://bucketname/variants/ . --recursive --exclude "*" --include "*/metadata"
 
 

@@ -8,16 +8,18 @@ from contextlib import closing
 file_prepend = "/Users/mduby"
 file_prepend = "/home/javaprog"
 url_node_normalizer = "https://bl-lookup-sri.renci.org/bl/{}/ancestors?version={}"
-url_molepro_predicates = 'https://translator.broadinstitute.org/molepro/trapi/v1.0/predicates'
+# url_molepro_predicates = 'https://translator.broadinstitute.org/molepro/trapi/v1.0/predicates'
+url_molepro_predicates = 'http://localhost:9221/molepro/trapi/v1.1/predicates'
 url_genepro_predicates = 'https://translator.broadinstitute.org/genetics_provider/trapi/v1.0/predicates'
+url_molepro_meta_knowledge_graph = "http://translator.broadinstitute.org/molepro/trapi/v1.2/meta_knowledge_graph"
 file_molepro = file_prepend + '/Data/Broad/Translator/Molepro/biolinkAncestry.json'
 file_genepro = file_prepend + '/Data/Broad/Translator/GeneticsPro/biolinkAncestry.json'
 file_query = file_prepend + '/Data/Broad/Translator/Client/afibGeneRelated.json'
 file_chem_query = file_prepend + '/Data/Broad/Translator/Client/chemGeneRelated.json'
 file_blank_query = file_prepend + '/Data/Broad/Translator/Client/blankGeneRelated.json'
+VERSION = "2.1.0"
 
-
-def get_biolink_ancestors(entity_name, api_version='latest'):
+def get_biolink_ancestors(entity_name, api_version=VERSION):
     ''' retrieve the ancestors of a entity type '''
     ancestors = []
 
@@ -55,6 +57,24 @@ def get_entities_from_predicates(predicate_url):
             # get all the predicates
             for category in category_list:
                 entity_set.update(response.get(item).get(category))
+
+    # rerturn
+    return list(entity_set)
+
+def get_entities_from_knowledge_graph(kg_url):
+    ''' returns a list of objects defined in a meta knowledgre graph (entities, categories, predicates) '''
+    entity_set = set()
+    response = None
+
+    # query the url
+    with closing(requests.get(kg_url)) as response_obj:
+        response = response_obj.json()
+
+    if response is not None and response.get('edges') is not None:
+        for item in response.get('edges'):
+            entity_set.update(item.get('object'))
+            entity_set.update(item.get('subject'))
+            entity_set.update(item.get('predicate'))
 
     # rerturn
     return list(entity_set)
@@ -241,14 +261,15 @@ if __name__ == "__main__":
     # ancestor_map = build_ancestry_map(url_molepro_predicates)
     # for key in list(ancestor_map.keys()):
     #     print("for ancestor {} got list {}".format(key, ancestor_map.get(key)))
-    ancestor_map = build_ancestry_map(url_genepro_predicates)
+    # ancestor_map = build_ancestry_map(url_genepro_predicates)
+    ancestor_map = build_ancestry_map(url_molepro_predicates)
     for key in list(ancestor_map.keys()):
         print("for ancestor {} got list {}".format(key, ancestor_map.get(key)))
-    # file_to_write = file_molepro
-    file_to_write = file_genepro
+    file_to_write = file_molepro
+    # file_to_write = file_genepro
     with open(file_to_write, 'w') as json_file:
         json.dump(ancestor_map, json_file, indent=4, separators=(',', ': '))
-    print("wrote out dict to file {}".format(file_molepro))
+    print("wrote out dict to file {}".format(file_to_write))
 
     print()
 

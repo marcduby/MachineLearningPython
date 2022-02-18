@@ -1,5 +1,51 @@
 
 
+20211025 - NN in cell types (sara mostafavi)
+  Sara Mostafavi
+  Associate Professor, Paul Allen School of Computer Science and Engineering, University of Washington
+  Gherman Novakovsky, PhD Student
+  “Meaningful interpretations of deep neural networks to learn immune cell differentiation"
+- 100 types of immune cell types 
+- for each region
+  - is ths a regulatory region?
+  - which cell type is the region active in
+- ML model 
+  - input is sequence 
+  - trains on activity across cell types 
+    - use continuous data for relatory expression
+  - goal is not to predict, but to understand
+    - data is mostly complete 
+  - why NN?
+    - complex non linear models do well 
+  - results is that most cell types have lots pof shared sequences, 
+    but only a few distinct regions
+    - so use loss function that focuses on these defferentiated regions so not get lost in model 
+  - trainedx on mouse data, but then ran human sequences and got ok results 
+    - make 10% accurate predictions 
+  - for training, should you give each cell type equal weight
+    - some lineages underrepresented
+    - could equal weight by lineage
+
+- so what did the NN learn?
+  - can remove feature from the data, retrian and see how influencial that feature was to predictions 
+  - for each region, how many motifs are needed to make a prediction?
+
+- cam (conv additive moidel) 
+  - each model has one conv filter and one fully connected layer
+  - then added together 
+  - use this for better explainability
+    - can easily null out layer 
+
+- challenges for prediction on newly seen sequences
+  - not 5 motifs working together on hundreds of sites 
+    - actually 5 motifs working together on a handful of sites
+  - sparsity of data a problem for training 
+  - if predicting subtle differences, harder 
+
+- 
+
+
+
 20210419 - SDDC 2021
 1200 - invest in drug discovery
 - investment

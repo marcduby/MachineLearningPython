@@ -49,7 +49,7 @@ how to run
   - sbt> run -c ../config.json --reprocess --only basset --clusters 10
   
 - to include/exclude outputs
-  - sbt> run -c ../config..json --reprocess --stage BassetStage --only T2D* --exclude *BMI
+  - sbt> run -c ../config.json --reprocess --stage BassetStage --only T2D* --exclude *BMI
 
 - to run in production, setting DRYRUN to true (basset only one stage, so fine)
   - sbt> run -c ../config.json --test --yes
@@ -109,3 +109,64 @@ Notes:
 20210602 - the config.json has changed elements; use old one for now
 
     
+Phenotype list:
+---------------
+https://bioindex-dev.hugeamp.org/api/portal/phenotypes
+
+GraphQL queries:
+----------------
+query {
+    GeneAssociations(gene: "PPARG") {
+        phenotype, gene, pValue
+    }
+}
+
+query {
+    GlobalAssociations(phenotype: "T2D") {
+        phenotype, gene, pValue
+    }
+}
+
+query {
+  GeneFinder(phenotype: "MultipleSclerosis") {
+        phenotype, gene, pValue
+  }
+}
+
+
+Notes from clint:
+-----------------
+- questions 
+  - how does db work, where contacted
+  - how to start aggregator
+  - 
+
+- answers
+  - regions data:
+    - out/ldsc/regions/merged/
+    - process part of bottom line; cg used to be own aggregator method, but got m,erged into bottomline 
+  - removed methods:
+    - https://github.com/broadinstitute/dig-aggregator-methods/tree/preserving-ldsc
+  - database
+    - keeps track of the what has been successfully run for what inmputs 
+  - git repos:
+    - aws: emr type code 
+    - methods: methods 
+    - aggregator core: application logic, franework 
+  - serverless:
+    - bioindex has option of indexing using aws lambda
+    - node app that pushes code up serverless 
+      - only publish if changes needed
+    - bioindex can communicate with lambda on its won afterwards (server not needed)
+      - run with 30 workers 
+  - bioindex 
+    - rebuilding 
+      - 
+
+- interview resources
+  - https://leetcode.com/
+  - https://www.hackerrank.com/
+  - https://www.levels.fyi/?compare=Google,Facebook,Microsoft&track=Software%20Engineer#contribute-home
+  - blind 
+  - system ddesgin 
+  - 

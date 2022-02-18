@@ -1,0 +1,30 @@
+{
+    "message": {
+      "query_graph": {
+        "edges": {
+          "e00": {
+            "subject": "n00",
+            "object": "n01",
+            "predicates": ["biolink:gene_associated_with_condition"]
+          },
+          "e01": {
+            "subject": "n02",
+            "object": "n00",
+            "predicates": ["biolink:has_real_world_evidence_of_association_with"]
+          }
+        },
+        "nodes": {
+          "n00": {
+            "categories": ["biolink:Gene"]
+          },
+          "n01": {
+            "ids": ["MONDO:0100039"],
+            "categories": ["biolink:Disease"]
+          },
+            "n02": {
+            "categories": ["biolink:Drug"]
+          }
+        }
+      }
+    }
+  }
