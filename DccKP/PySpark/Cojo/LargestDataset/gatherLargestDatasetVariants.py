@@ -12,10 +12,8 @@ def main():
     dir_s3 = f'/Users/mduby/Data/Broad/dig-analysis-data/out'
     dir_s3 = f'/home/javaprog/Data/Broad/dig-analysis-data/out'
     dir_snp = f'{dir_s3}/varianteffect/snp'
-    # dir_meta = f'{dir_s3}/metaanalysis/ancestry-specific/{args.phenotype}/*'
-    # dir_frequency = f'{dir_s3}/frequencyanalysis/*'
     dir_largest_datasets = f'{dir_s3}/finemapping/largest-datasets'
-    dir_frequency = f'{dir_s3}/finemapping/variant-frequencies'
+    # dir_frequency = f'{dir_s3}/finemapping/variant-frequencies'
     dir_out = "{}/finemapping/variant-associations-largest-datasets/{}"
 
     # start spark
@@ -27,9 +25,9 @@ def main():
     df_snp.show(5)
 
     # load the frequencies
-    df_frequency = spark.read.json(f'{dir_frequency}/part-*')
-    print("got frequency df of size {}".format(df_frequency.count()))
-    df_frequency.show(5)
+    # df_frequency = spark.read.json(f'{dir_frequency}/part-*')
+    # print("got frequency df of size {}".format(df_frequency.count()))
+    # df_frequency.show(5)
 
     # load the phenotype/ancestry dataset list data
     df_largest_dataset = spark.read.json(f'{dir_largest_datasets}/part-*')
@@ -67,23 +65,23 @@ def main():
                         df_meta.ancestry, 
                     )
         print("got joined metaanalysis df of size {}".format(df_meta.count()))
-        # df_meta.show()
+        df_meta.show(5)
 
 
         # join pValue and snps; filter columns
-        df_meta = df_meta.join(df_frequency, on=['varId'], how='inner')
-        df_meta = df_meta.select(
-                df_meta.dbSNP, 
-                df_meta.alt, 
-                df_meta.reference, 
-                df_meta.maf, 
-                df_meta.beta,
-                df_meta.stdErr, 
-                df_meta.pValue, 
-                df_meta.n, 
-                df_meta.ancestry, 
-            )
-        print("got joined frequency df of size {}".format(df_meta.count()))
+        # df_meta = df_meta.join(df_frequency, on=['varId'], how='inner')
+        # df_meta = df_meta.select(
+        #         df_meta.dbSNP, 
+        #         df_meta.alt, 
+        #         df_meta.reference, 
+        #         df_meta.maf, 
+        #         df_meta.beta,
+        #         df_meta.stdErr, 
+        #         df_meta.pValue, 
+        #         df_meta.n, 
+        #         df_meta.ancestry, 
+        #     )
+        # print("got joined frequency df of size {}".format(df_meta.count()))
 
         # filter for pvalue threshold
         p_value_limit = 0.01
