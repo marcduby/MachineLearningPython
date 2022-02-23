@@ -53,7 +53,7 @@ def main():
 
         # join pValue and snps; filter columns
         df_meta = df_meta.join(df_snp, on=['varId'], how='inner')
-        df_meta = df_meta.select(df_meta.varId, 
+        df_meta = df_meta.select(
                         df_meta.dbSNP, 
                         df_meta.alt, 
                         df_meta.reference, 
