@@ -37,8 +37,11 @@ def main():
     # df_largest_dataset.show()
 
     # TODO - for each row where the count of datasets is greater than 1, use the largest dataset to get phenotype association stats
-    df_largest_dataset_more_than_one_dataset = df_largest_dataset.filter(col("count") > 1).collect()
-    print("got dataset more than 1 df of size {}".format(len(df_largest_dataset_more_than_one_dataset)))
+    # df_largest_dataset_more_than_one_dataset = df_largest_dataset.filter(col("count") > 1).collect()
+    # print("got dataset more than 1 df of size {}".format(len(df_largest_dataset_more_than_one_dataset)))
+
+    # collect for loop; will not filter for datasets more than one since collecting fifferent MAF values than for bottom line
+    df_largest_dataset_more_than_one_dataset = df_largest_dataset.collect()
     for row in df_largest_dataset_more_than_one_dataset:
         phenotype = row['phenotype']
         ancestry = row['ancestry']
