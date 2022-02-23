@@ -19,7 +19,7 @@ def main():
     spark = SparkSession.builder.appName('cojo').getOrCreate()
 
     # load variants and phenotype associations
-    df_meta = spark.read.json(f'{dir_meta}/metadata').withColumn("filename", input_file_name())
+    df_meta = spark.read.json(f'{dir_meta}/metadata').withColumn("directory", input_file_name())
     print("got metaanalysis df of size {}".format(df_meta.count()))
     df_meta.show()
     print("dataframe of type: {}".format(type(df_meta)))
@@ -49,7 +49,8 @@ def main():
 
     # for count > 1, identify the largest dataset and store in field for that row
     df_max_subjects = df_max_subjects.join(df_meta, on=["phenotype", "ancestry", "subjects"], how="inner")
-    df_max_subjects = df_max_subjects.select("phenotype", "ancestry", "subjects", "filename")
+    df_max_subjects = df_max_subjects.select("phenotype", "ancestry", "subjects", "directory")
+    df_max_subjects = df_max_subjects.withColumn("directory", regexp_replace(col("directory"), "metadata", ""))
     # (df_max_subjects.phenotype == df_meta.phenotype) & \
     #     (df_max_subjects.ancestry == df_meta.ancestry) & (df_max_subjects.max_subjects == df_meta.subjects), "inner") 
         # .select("ancestry", "phenotype", "subjects", "sources")
@@ -62,14 +63,12 @@ def main():
     print("got {} rows of pheno/ancestry combinations".format(df_max_subjects.count()))
     df_toss = df_max_subjects.filter(col("count") > 1)
     print("got {} rows of pheno/ancestry combinations over 1".format(df_toss.count()))
-    # df_toss = df_max_subjects.filter(lambda x : x.count > 1)
-    # print("got {} rows of pheno/ancestry combinations over 1".format(df_toss.count()))
 
     # test for one phenotype/ancestry combination
     # df_fg = df_meta.filter(col("phenotype") == 'HBA1C').filter(col("ancestry") == 'SA')
     # df_fg.show()
 
-    # write out the file
+    # write out the file for tracking purposes
     df_max_subjects \
         .coalesce(1) \
         .write \
@@ -81,7 +80,6 @@ def main():
 
     # done
     spark.stop()
-
 
 if __name__ == '__main__':
     main()
