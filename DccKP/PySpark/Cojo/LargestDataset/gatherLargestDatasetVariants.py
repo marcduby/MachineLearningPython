@@ -41,7 +41,8 @@ def main():
     # print("got dataset more than 1 df of size {}".format(len(df_largest_dataset_more_than_one_dataset)))
 
     # collect for loop; will not filter for datasets more than one since collecting fifferent MAF values than for bottom line
-    df_largest_dataset_more_than_one_dataset = df_largest_dataset.collect()
+    # df_largest_dataset_more_than_one_dataset = df_largest_dataset.collect()
+    df_largest_dataset_more_than_one_dataset = df_largest_dataset
     for row in df_largest_dataset_more_than_one_dataset:
         phenotype = row['phenotype']
         ancestry = row['ancestry']
