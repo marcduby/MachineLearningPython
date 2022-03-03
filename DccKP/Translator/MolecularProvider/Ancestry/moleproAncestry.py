@@ -3,7 +3,10 @@
 # imports
 import requests
 
+# constants
+ANCESTRY_PREFIX = ['MONDO']
 
+# methods
 def make_node_producer_payload(list_ids, debug=False):
     '''
     method to make a payload for the node producer translator post call
@@ -103,18 +106,51 @@ def get_node_ancestry_from_url(query_url, debug=False):
 def get_ancestry_map(query_url, list_ids, debug=False):
     '''
     get the ancestry map from molepro given an input list
+    key is an item in the list
+    value is the list of ancestors/translated IDs
     '''
+    # make sure IDs are unique
+    list_ids = list(set(list_ids))
+
+    # split based on prefix of ID
+    list_temp = []
+    map_skipped = {}
+    for item in list_ids:
+        if item.split(":")[0] in ANCESTRY_PREFIX:
+            list_temp.append(item)
+        else:
+            map_skipped[item] = item
+
+    # log
+    if debug:
+        print("got skipped map: {}".format(map_skipped))
+
     # get the collection id
-    collection_id = get_node_producer_collection_id(query_url, list_ids, debug)
+    collection_id = get_node_producer_collection_id(query_url, list_temp, debug)
 
     # get the query get url
-    get_url = get_node_ancestry_url(query_url, test_collection_id, debug)
+    get_url = get_node_ancestry_url(query_url, collection_id, debug)
 
     # get the ancestry map
-    ancestry_map = get_node_ancestry_from_url(test_url, debug)
+    map_ancestry = get_node_ancestry_from_url(get_url, debug)
+
+    # log
+    if debug:
+        print("got skipped map: {}".format(map_skipped))
+        print("got searched map: {}".format(map_ancestry))
+
+    # combine the skipped items with the searched items
+    if len(map_skipped) > 0:
+        if debug:
+            print("merging maps")
+        map_ancestry = dict(map_ancestry, **map_skipped)
+        
+    # log
+    if debug:
+        print("got result map: {}".format(map_ancestry))
 
     # return
-    return ancestry_map
+    return map_ancestry
 
 if __name__ == "__main__":
     # test payload creation
@@ -135,11 +171,17 @@ if __name__ == "__main__":
         print("for {} got child list of size {}".format(key, len(test_ancestry_map.get(key))))
 
     # test getting the ancestry map in one call
-    print("_______________________________")
+    print("\n\n_______________________________\n\n")
     test_ancestry_map = get_ancestry_map(query_url, list_ids, True)
     for key in test_ancestry_map.keys():
         print("for {} got child list of size {}".format(key, len(test_ancestry_map.get(key))))
 
+    # test skipping
+    print("\n\n_______________________________\n\n")
+    list_ids = ['MONDO:0014488', 'GENE:0005']
+    test_ancestry_map = get_ancestry_map(query_url, list_ids, True)
+    for key in test_ancestry_map.keys():
+        print("for {} got child list of size {}".format(key, len(test_ancestry_map.get(key))))
 
 # notes: 
 # add query id into it's own list
