@@ -19,17 +19,24 @@ def main():
     # load variants and phenotype associations
     df_meta = spark.read.json(f'{dir_meta}/metadata').withColumn("directory", input_file_name())
     print("got metaanalysis df of size {}".format(df_meta.count()))
+    print("with null phenotype, got metaanalysis df of size {}".format(df_meta.filter(df_meta.phenotype.isNull()).count()))
     df_meta.show()
     print("dataframe of type: {}".format(type(df_meta)))
 
     # get distinct phenotypes
     print("got {} distinct phenotypes".format(df_meta.select("phenotype").distinct().count()))
+    # df_meta.sort('phenotype').show(1500)
 
     # get the distinct ancestries
     df_meta.groupBy("ancestry").count().show()
 
     # replace AA with AF
     df_meta = df_meta.withColumn('ancestry', regexp_replace('ancestry', 'AA', 'AF'))
+
+    # cast subjects to integer 
+    df_meta = df_meta.withColumn('subjects', df_meta.subjects.cast(IntegerType()))
+    df_meta = df_meta.filter(col("phenotype") == 'Parkinsons')
+    df_meta.show(20)
 
     # remove Mixed
     df_meta = df_meta.where(col("ancestry").isin("EA", "AF", "EU", "SA", "HS"))
