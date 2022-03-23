@@ -67,9 +67,12 @@ how to run
 troubleshooting
 ---------------
 - pyspark errors
-  -> containers
-    -> applications
-      -> stdout
+  -> click process link
+    -> summary
+      -> look for folder icon
+        -> containers
+          -> applications
+            -> stdout
 
 monitoring:
 -----------

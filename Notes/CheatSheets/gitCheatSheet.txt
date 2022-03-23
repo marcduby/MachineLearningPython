@@ -23,3 +23,61 @@ new branch:
   - git push -u origin ky_code_documentation
 
 
+
+
+- git stash
+  - git stash pop (to apply to code and delete stashed changes)
+  
+- remove file from add
+  - git reset filename.txt
+
+- remove DS_store files
+  - find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+
+- update branch from master
+  - git checkout <branch>
+  - git merge origin/master
+  
+- reset file
+  - git reset foo/bar.txt
+  - git checkout foo/bar.txt
+  
+- git flow
+  - during rebase step, command is 'pick <hash>'. with hash being collapsed commit of all branch commits
+  
+- git tag (2 steps)
+  - git tag <tag>
+  - git push origin <tag>
+  
+- Starting a new feature as a branch:
+  - git checkout -b <branch_name>
+    - ie: git checkout ky_code_documentation
+  - git add <new files, if any>
+  - git commit -av
+  - git push -u origin <branch_name>
+    - e.g. git push -u origin ky_code_documentation
+  
+- authentication
+  - for information -> checks that key is installed correctly for that VM
+    - ssh -T git@github.com
+  - for adding read-only user for repository checkout
+    - ssh-keygen -t rsa -b 4096 -C "dude@company.org"
+      - then type in pass pharse (pass phrase will be linked to key that is given to github account, not linked to individual repositories)
+    - for mac
+      - eval "$(ssh-agent -s)"
+      - ssh-add ~/.ssh/id_rsa_dude (name of file created in first step)
+      - cat ~/.ssh/id_rsa_dude.pub (public key to provide github)
+    - for linux
+      - copy .ssh/id_rsa.pub to mac, then pbcopy < <copied file>
+      - add to github account under settings/ssh keys
+      
+- switch repo so use ssh (for 2FA)
+  - git remote set-url origin git@github.com:company/dig-services-permissions.git
+  
+- add command line repo
+  echo "# dig-genome-services" >> README.md
+  git init
+  git add README.md
+  git commit -m "first commit"
+  git remote add origin https://github.com/broadinstitute/dig-genome-services.git
+  git push -u origin master

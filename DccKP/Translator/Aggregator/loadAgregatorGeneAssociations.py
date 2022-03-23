@@ -221,7 +221,11 @@ def insert_or_update_gene_data(conn, association_list, gene, gene_id, map_phenot
             print("committing gene {} data".format(gene))
 
 def insert_all_gene_aggregator_data(conn, map_phenotype,  log=False):
-    ''' will query the aggregator for all disease/phentype gene magma association data for all genes in the translator DB '''
+    ''' 
+    will query the aggregator for all disease/phentype gene magma association data for all genes in the translator DB 
+    '''
+
+    # initialize
     cursor = conn.cursor()
 
     # sql to get all the genes in the translator DB

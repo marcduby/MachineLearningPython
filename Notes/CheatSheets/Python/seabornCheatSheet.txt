@@ -1,0 +1,25 @@
+
+
+
+
+From ML beginners:
+------------------
+- bar plot
+  - sns.countplot(data=df, x='origin')
+
+- scatter plot
+  - sns.relplot(x='horsepower', y='accelaration', data=df, kind='scatter', hue='origin')
+
+- boxplot
+  - sns.boxplot(data=df, y='horsepower', x='origin')
+
+- histogram 
+  - sns.distplot(data=df, x='horsepower)
+  - sns.distplot(data=df, x='horsepower, kind='kde')
+  - sns.distplot(data=df, x='horsepower, kind='ecdf')   # cummulative
+  - sns.distplot(data=df, x='horsepower, y='mpg', hue='origin', kind='kde')
+  - sns.distplot(data=df, x='horsepower, y='mpg', hue='origin')
+
+
+
+

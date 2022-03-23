@@ -40,3 +40,45 @@ sql inerface:
 read:
 -----
   - Cov = pd.read_csv("path/to/file.txt", sep='\t', names=["Sequence", "Start", "End", "Coverage"])
+
+
+Frpm ML for beginners:
+----------------------
+- recommendations 
+  - use df['mpg] vs df.mpg
+
+- df 
+  - create random dataframe 
+    - data = np.random.randint(10, 110, size=[10, 12])
+    - rand_df = pd.DataFrame(data)
+  - info()
+  - head()
+  - df.value_counts()
+  - filter
+    - usa_df = df[df['origin'] == 'usa']
+  - arrange/sort
+    - df.sort_values('by = 'weight').head(5)
+  - mutate/change 
+    - df['weight/mpg'] = df['weight'] / df['mpg']
+  - summarize 
+    - origin_df = df.groupby['origin']
+    - origin_df['mpg'].mean()
+    - df.mean(axis=1)
+  - find based on position
+    - df.iloc[1, 2]   - cell in row 1, column 2
+    - df.iloc[3]        # all columns in row 3
+    - df.iloc[2:5, 1:4]
+  - find by label based 
+    - df.loc['Japan': 'Uruguay', 'Feb':'Apr']
+    - df.loc[['Japan', 'France', 'Uruguay'], ['Feb', 'Apr']]
+  - boolean 
+    - df['Aug'] > 60
+    - df[df['Aug'] > 60]
+    - df[df['Aug'] > 60 & df['Oct'] < 90]
+  - add column 
+    - df['meantemp'] = df.mean(axis=1).astype(int)
+
+
+
+
+

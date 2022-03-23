@@ -38,7 +38,13 @@ dict:
   - if 'key' in dict:
   - dict.keys()
   - dict.values()
+  - list(dict.keys())
+  - list(dict.values())
+  - del dict['key']
+  - for key in dict:
+    -- get key 
 
+    
 os:
 ---
   - to get list of regexp files

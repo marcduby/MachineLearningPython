@@ -16,11 +16,27 @@ ngnix:
 ------
 - sudo service nginx restart
 
+- to enable new sites
+  sudo vi ../sites-available/test.company.com.conf 
+  # make sure to use full path for ln -s command
+  sudo ln -s /etc/nginx/sites-available/test.company.com.conf /etc/nginx/sites-enabled/test.company.com.conf 
+  # test configuration
+  sudo nginx -t
+  # restart server
+  sudo systemctl restart nginx
+
+nginx gotchas:
+--------------
+- tomcat context
+  - need second block for the context so that css and js files get served properly
+
+
 space:
 ------
 - df -k
 - du -cshm * 
 - df -Th 
+
 
 
 

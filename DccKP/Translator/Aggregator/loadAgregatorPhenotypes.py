@@ -52,7 +52,11 @@ def load_phenotypes_reference(conn, phenotype_list):
     conn.commit()
 
 def load_phenotypes_to_translator(conn, phenotype_list):
-    ''' add phenotypes to the translator  mysql phenotype table '''
+    ''' 
+    add phenotypes to the translator  mysql phenotype table 
+    '''
+    
+    # initialize
     sql = """insert into comb_node_ontology (node_code, node_type_id, node_name)
             values (%s, 12, %s) 
         """
@@ -73,7 +77,11 @@ def load_phenotypes_to_translator(conn, phenotype_list):
     conn.commit()
 
 def check_phenotype(conn, phenotype_id):
-    ''' method to query DB and see if the phenoptype is already loaded '''
+    ''' 
+    method to query DB and see if the phenoptype is already loaded 
+    '''
+    
+    # initialize
     sql = """
     select * from comb_node_ontology where node_code = %s and node_type_id in (1, 3, 12)
     """
@@ -92,7 +100,11 @@ def check_phenotype(conn, phenotype_id):
     return result
 
 def print_num_phenotypes_in_db(conn):
-    ''' will query and print the count of phenotypes in the db '''
+    ''' 
+    will query and print the count of phenotypes in the db 
+    '''
+    
+    # initialize
     sql = """
     select count(*) from comb_node_ontology where node_type_id in (1, 3, 12)
     """
@@ -120,21 +132,21 @@ if __name__ == "__main__":
     data = get_phenotype_values(resp)
     print(f'got data size of {len(data)}')
 
-    # get the db connection
-    conn = get_connection()
+    # # get the db connection
+    # conn = get_connection()
 
-    # log
-    print_num_phenotypes_in_db(conn)
+    # # log
+    # print_num_phenotypes_in_db(conn)
     
-    # load the data
-    load_phenotypes_to_translator(conn, data)
+    # # load the data
+    # load_phenotypes_to_translator(conn, data)
 
-    # test the check_phenotype method
-    assert check_phenotype(conn, 'BMI') == True
-    assert check_phenotype(conn, 'testasif') == False
+    # # test the check_phenotype method
+    # assert check_phenotype(conn, 'BMI') == True
+    # assert check_phenotype(conn, 'testasif') == False
 
-    # log
-    print_num_phenotypes_in_db(conn)
+    # # log
+    # print_num_phenotypes_in_db(conn)
     
 
 

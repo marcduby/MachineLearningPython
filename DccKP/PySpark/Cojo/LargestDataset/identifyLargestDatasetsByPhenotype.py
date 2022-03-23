@@ -3,33 +3,37 @@
 # from pyspark.sql.functions import col, struct, explode, when, lit, array_max, array, split, regexp_replace
 from pyspark.sql import SparkSession
 from pyspark.sql.types import IntegerType
-from pyspark.sql.functions import col, input_file_name, regexp_extract, max, input_file_name, regexp_replace, udf
-import re
+from pyspark.sql.functions import col, input_file_name, regexp_extract, max, input_file_name, regexp_replace, udf, lit
+import argparse
 
 def main():
+    # arguments
+    opts = argparse.ArgumentParser()
+    opts.add_argument('phenotype')
+
+    # parse cli
+    args = opts.parse_args()
+    phenotype = args.phenotype
+    print("got input phenotype: {}".format(phenotype))
+
     # input and output directories
     # dir_s3 = f'/Users/mduby/Data/Broad/dig-analysis-data'
     dir_s3 = f'/home/javaprog/Data/Broad/dig-analysis-data'
     # dir_s3 = f's3://dig-analysis-data'
-    dir_meta = f'{dir_s3}/variants/*/*/*'
+    dir_meta = f'{dir_s3}/variants/*/*/{phenotype}'
     dir_out = f'{dir_s3}/out/finemapping/largest-datasets'
-    src_re = r'/variants/([^/]+)/([^/]+)/([^/]+)/'
 
     # start spark
     spark = SparkSession.builder.appName('cojo').getOrCreate()
 
-    # udf functions (NOTE: tissue needs to remove underscores used!)
-    phenotype_of_source = udf(lambda s: s and re.search(src_re, s).group(3))
-
     # load variants and phenotype associations
     df_meta = spark.read.json(f'{dir_meta}/metadata') \
         .withColumn("directory", input_file_name())
-    df_meta = df_meta.withColumn('phenotype', phenotype_of_source( df_meta.directory))
+    df_meta = df_meta.withColumn('phenotype', lit(phenotype))
 
     print("got metaanalysis df of size {}".format(df_meta.count()))
-    print("got metaanalysis with null phenotype df of size {}".format(df_meta.filter(df_meta.phenotype.isNull()).count()))
     df_meta.show()
-    print("dataframe of type: {}".format(type(df_meta)))
+    # print("dataframe of type: {}".format(type(df_meta)))
 
     # get distinct phenotypes
     print("got {} distinct phenotypes".format(df_meta.select("phenotype").distinct().count()))
@@ -42,7 +46,17 @@ def main():
     df_meta = df_meta.withColumn('ancestry', regexp_replace('ancestry', 'AA', 'AF'))
 
     # cast subjects to integer 
-    df_meta = df_meta.withColumn('subjects', df_meta.subjects.cast(IntegerType()))
+    # if no subjects columns, see if can add cases and controls
+    if not set(['subjects']).issubset(df_meta.columns):
+        if set(['cases', 'controls']).issubset(df_meta.columns):
+            df_meta = df_meta.withColumn('cases', df_meta.cases.cast(IntegerType()))
+            df_meta = df_meta.withColumn('controls', df_meta.controls.cast(IntegerType()))
+            df_meta = df_meta.withColumn('subjects', df_meta['cases'] + df_meta['controls'])
+        else:
+            df_meta = df_meta.withColumn('subjects', lit(None))
+
+    else:
+        df_meta = df_meta.withColumn('subjects', df_meta.subjects.cast(IntegerType()))
 
     # filter by 1 phenotype for test
     # df_meta = df_meta.filter(col("phenotype") == 'Parkinsons')
@@ -66,9 +80,6 @@ def main():
     df_max_subjects = df_max_subjects.join(df_meta, on=["phenotype", "ancestry", "subjects"], how="inner")
     df_max_subjects = df_max_subjects.select("phenotype", "ancestry", "subjects", "directory")
     df_max_subjects = df_max_subjects.withColumn("directory", regexp_replace(col("directory"), "metadata", ""))
-    # (df_max_subjects.phenotype == df_meta.phenotype) & \
-    #     (df_max_subjects.ancestry == df_meta.ancestry) & (df_max_subjects.max_subjects == df_meta.subjects), "inner") 
-        # .select("ancestry", "phenotype", "subjects", "sources")
     df_max_subjects.show()
 
     # add the count for each pheno/ancestry combo 
@@ -81,26 +92,14 @@ def main():
     # df_fg = df_meta.filter(col("phenotype") == 'HBA1C').filter(col("ancestry") == 'SA')
     # df_fg.show()
 
-    # get distinct phenotypes
-    df_phenotypes = df_max_subjects.select('phenotype').distinct().collect()
-    # print("got phenotypes of type {} and values {}".format(type(df_phenotypes), df_phenotypes))
-
-    # loop and save per phenotype
-    # NOTE: this is to solve issue with _SUCCESS files not being written to the partitioned directories
-    for row in df_phenotypes:
-        phenotype_value = row['phenotype']
-
-        # get the dataframe with only the phenotype
-        df_specific_phenotype = df_max_subjects.filter(df_max_subjects.phenotype == phenotype_value)
-
-        # write out
-        dir_phenotype_out = "{}/{}".format(dir_out, phenotype_value)
-        df_specific_phenotype \
-            .coalesce(1) \
-            .write \
-            .mode('overwrite') \
-            .json(dir_phenotype_out)
-        print("wrote out data to directory {}".format(dir_phenotype_out))
+    # write out
+    dir_phenotype_out = "{}/{}".format(dir_out, phenotype)
+    df_max_subjects \
+        .coalesce(1) \
+        .write \
+        .mode('overwrite') \
+        .json(dir_phenotype_out)
+    print("wrote out data to directory {}".format(dir_phenotype_out))
 
 
     # NOTE - old way to save
