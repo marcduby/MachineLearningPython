@@ -34,7 +34,7 @@
       },
       "pathway": {
         "categories": [
-          "biolink:BiologicalProcess"
+          "biolink:Pathway"
         ],
         "constraints": [],
         "is_set": false
