@@ -1,0 +1,3678 @@
+{
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "disease": {
+                    "ids": [
+                        "MONDO:0005148"
+                    ],
+                    "categories": [
+                        "biolink:Disease"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                },
+                "gene": {
+                    "ids": [
+                        "NCBIGene:5468"
+                    ],
+                    "categories": [
+                        "biolink:Gene"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                },
+                "pathway": {
+                    "ids": null,
+                    "categories": [
+                        "biolink:Pathway"
+                    ],
+                    "is_set": false,
+                    "constraints": []
+                }
+            },
+            "edges": {
+                "e01": {
+                    "subject": "gene",
+                    "object": "pathway",
+                    "predicates": null,
+                    "constraints": []
+                },
+                "e02": {
+                    "subject": "pathway",
+                    "object": "disease",
+                    "predicates": null,
+                    "constraints": []
+                }
+            }
+        },
+        "knowledge_graph": {
+            "nodes": {
+                "MONDO:0005148": {
+                    "categories": [
+                        "biolink:Disease"
+                    ],
+                    "name": "Type 2 diabetes",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 198095,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "omnicorp_article_count",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        }
+                    ]
+                },
+                "GO:0043401": {
+                    "categories": [
+                        "biolink:BiologicalProcessOrActivity",
+                        "biolink:NamedThing",
+                        "biolink:Entity",
+                        "biolink:PhysicalEssenceOrOccurrent",
+                        "biolink:BiologicalEntity",
+                        "biolink:Occurrent",
+                        "biolink:Pathway",
+                        "biolink:BiologicalProcess",
+                        "biolink:OntologyClass"
+                    ],
+                    "name": "steroid hormone mediated signaling pathway",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:same_as",
+                            "value": [
+                                "GO:0043401"
+                            ],
+                            "value_type_id": "metatype:uriorcurie",
+                            "original_attribute_name": "equivalent_identifiers",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 2,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "omnicorp_article_count",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        }
+                    ]
+                },
+                "NCBIGene:5468": {
+                    "categories": [
+                        "biolink:NamedThing",
+                        "biolink:Entity",
+                        "biolink:Gene",
+                        "biolink:BiologicalEntity",
+                        "biolink:MacromolecularMachineMixin",
+                        "biolink:GeneOrGeneProduct"
+                    ],
+                    "name": "PPARG",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:same_as",
+                            "value": [
+                                "NCBIGene:5468",
+                                "ENSEMBL:ENSG00000132170",
+                                "HGNC:9236",
+                                "OMIM:601487",
+                                "UMLS:C1335238"
+                            ],
+                            "value_type_id": "metatype:uriorcurie",
+                            "original_attribute_name": "equivalent_identifiers",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 1865,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "omnicorp_article_count",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        }
+                    ]
+                },
+                "GO:0009755": {
+                    "categories": [
+                        "biolink:BiologicalProcessOrActivity",
+                        "biolink:NamedThing",
+                        "biolink:Entity",
+                        "biolink:PhysicalEssenceOrOccurrent",
+                        "biolink:BiologicalEntity",
+                        "biolink:Occurrent",
+                        "biolink:Pathway",
+                        "biolink:BiologicalProcess",
+                        "biolink:OntologyClass"
+                    ],
+                    "name": "hormone-mediated signaling pathway",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:same_as",
+                            "value": [
+                                "GO:0009755"
+                            ],
+                            "value_type_id": "metatype:uriorcurie",
+                            "original_attribute_name": "equivalent_identifiers",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 20,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "omnicorp_article_count",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        }
+                    ]
+                },
+                "GO:0035357": {
+                    "categories": [
+                        "biolink:BiologicalProcessOrActivity",
+                        "biolink:NamedThing",
+                        "biolink:Entity",
+                        "biolink:PhysicalEssenceOrOccurrent",
+                        "biolink:BiologicalEntity",
+                        "biolink:Occurrent",
+                        "biolink:Pathway",
+                        "biolink:BiologicalProcess",
+                        "biolink:OntologyClass"
+                    ],
+                    "name": "peroxisome proliferator activated receptor signaling pathway",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:same_as",
+                            "value": [
+                                "GO:0035357"
+                            ],
+                            "value_type_id": "metatype:uriorcurie",
+                            "original_attribute_name": "equivalent_identifiers",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 429,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "omnicorp_article_count",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        }
+                    ]
+                },
+                "GO:0030522": {
+                    "categories": [
+                        "biolink:BiologicalProcessOrActivity",
+                        "biolink:NamedThing",
+                        "biolink:Entity",
+                        "biolink:PhysicalEssenceOrOccurrent",
+                        "biolink:BiologicalEntity",
+                        "biolink:Occurrent",
+                        "biolink:Pathway",
+                        "biolink:BiologicalProcess",
+                        "biolink:OntologyClass"
+                    ],
+                    "name": "intracellular receptor signaling pathway",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:same_as",
+                            "value": [
+                                "GO:0030522"
+                            ],
+                            "value_type_id": "metatype:uriorcurie",
+                            "original_attribute_name": "equivalent_identifiers",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 9,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "omnicorp_article_count",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        }
+                    ]
+                },
+                "NCBIGene:6256": {
+                    "categories": [
+                        "biolink:Gene",
+                        "biolink:GeneOrGeneProduct",
+                        "biolink:BiologicalEntity",
+                        "biolink:NamedThing",
+                        "biolink:Entity",
+                        "biolink:MacromolecularMachineMixin"
+                    ],
+                    "name": "RXRA",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 302,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "omnicorp_article_count",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        }
+                    ]
+                },
+                "NCBIGene:10062": {
+                    "categories": [
+                        "biolink:Gene",
+                        "biolink:GeneOrGeneProduct",
+                        "biolink:BiologicalEntity",
+                        "biolink:NamedThing",
+                        "biolink:Entity",
+                        "biolink:MacromolecularMachineMixin"
+                    ],
+                    "name": "NR1H3",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 1119,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "omnicorp_article_count",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        }
+                    ]
+                },
+                "NCBIGene:190": {
+                    "categories": [
+                        "biolink:Gene",
+                        "biolink:GeneOrGeneProduct",
+                        "biolink:BiologicalEntity",
+                        "biolink:NamedThing",
+                        "biolink:Entity",
+                        "biolink:MacromolecularMachineMixin"
+                    ],
+                    "name": "NR0B1",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 563,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "omnicorp_article_count",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        }
+                    ]
+                },
+                "NCBIGene:2063": {
+                    "categories": [
+                        "biolink:Gene",
+                        "biolink:GeneOrGeneProduct",
+                        "biolink:BiologicalEntity",
+                        "biolink:NamedThing",
+                        "biolink:Entity",
+                        "biolink:MacromolecularMachineMixin"
+                    ],
+                    "name": "NR2F6",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 61,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "omnicorp_article_count",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        }
+                    ]
+                }
+            },
+            "edges": {
+                "4e9df6c33b66": {
+                    "subject": "GO:0043401",
+                    "object": "MONDO:0005148",
+                    "predicate": "biolink:genetic_association",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:genetics-data-provider",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": "https://translator.broadinstitute.org/genetics_provider/trapi/v1.1",
+                            "attribute_source": "infores:genetics-data-provider",
+                            "description": "The Genetics Data Provider KP from NCATS Translator",
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:p_value",
+                            "value": 0.55973,
+                            "value_type_id": null,
+                            "original_attribute_name": "pValue",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "775fd11e1983": {
+                    "subject": "GO:0043401",
+                    "object": "NCBIGene:5468",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:primary_knowledge_source",
+                            "value": [
+                                "infores:hetio"
+                            ],
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": "biolink:primary_knowledge_source",
+                            "value_url": null,
+                            "attribute_source": "infores:automat-hetio",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:Attribute",
+                            "value": [
+                                "NCBI gene2go"
+                            ],
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "hetio_source",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:relation",
+                            "value": "RO:0002007",
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "relation",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": [
+                                "infores:automat-hetio"
+                            ],
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": "biolink:aggregator_knowledge_source",
+                            "value_url": null,
+                            "attribute_source": "infores:automat-hetio",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "0665a17ef66b": {
+                    "subject": "GO:0009755",
+                    "object": "MONDO:0005148",
+                    "predicate": "biolink:genetic_association",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:genetics-data-provider",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": "https://translator.broadinstitute.org/genetics_provider/trapi/v1.1",
+                            "attribute_source": "infores:genetics-data-provider",
+                            "description": "The Genetics Data Provider KP from NCATS Translator",
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:p_value",
+                            "value": 0.64508,
+                            "value_type_id": null,
+                            "original_attribute_name": "pValue",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "6018af39c3bb": {
+                    "subject": "GO:0009755",
+                    "object": "NCBIGene:5468",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:primary_knowledge_source",
+                            "value": [
+                                "infores:hetio"
+                            ],
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": "biolink:primary_knowledge_source",
+                            "value_url": null,
+                            "attribute_source": "infores:automat-hetio",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:Attribute",
+                            "value": [
+                                "NCBI gene2go"
+                            ],
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "hetio_source",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:relation",
+                            "value": "RO:0002007",
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "relation",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": [
+                                "infores:automat-hetio"
+                            ],
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": "biolink:aggregator_knowledge_source",
+                            "value_url": null,
+                            "attribute_source": "infores:automat-hetio",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "e4652dbb70a7": {
+                    "subject": "GO:0035357",
+                    "object": "MONDO:0005148",
+                    "predicate": "biolink:genetic_association",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:genetics-data-provider",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": "https://translator.broadinstitute.org/genetics_provider/trapi/v1.1",
+                            "attribute_source": "infores:genetics-data-provider",
+                            "description": "The Genetics Data Provider KP from NCATS Translator",
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:p_value",
+                            "value": 0.052573,
+                            "value_type_id": null,
+                            "original_attribute_name": "pValue",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "f3e2048efa51": {
+                    "subject": "GO:0035357",
+                    "object": "NCBIGene:5468",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:primary_knowledge_source",
+                            "value": [
+                                "infores:hetio"
+                            ],
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": "biolink:primary_knowledge_source",
+                            "value_url": null,
+                            "attribute_source": "infores:automat-hetio",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:Attribute",
+                            "value": [
+                                "NCBI gene2go"
+                            ],
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "hetio_source",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:relation",
+                            "value": "RO:0002007",
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "relation",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": [
+                                "infores:automat-hetio"
+                            ],
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": "biolink:aggregator_knowledge_source",
+                            "value_url": null,
+                            "attribute_source": "infores:automat-hetio",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "b71e23eab37e": {
+                    "subject": "GO:0030522",
+                    "object": "MONDO:0005148",
+                    "predicate": "biolink:genetic_association",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:p_value",
+                            "value": 0.57695,
+                            "value_type_id": null,
+                            "original_attribute_name": "pValue",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:genetics-data-provider",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": "https://translator.broadinstitute.org/genetics_provider/trapi/v1.1",
+                            "attribute_source": "infores:genetics-data-provider",
+                            "description": "The Genetics Data Provider KP from NCATS Translator",
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "aedbdc53e2c6": {
+                    "subject": "GO:0030522",
+                    "object": "NCBIGene:5468",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:primary_knowledge_source",
+                            "value": [
+                                "infores:hetio"
+                            ],
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": "biolink:primary_knowledge_source",
+                            "value_url": null,
+                            "attribute_source": "infores:automat-hetio",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:Attribute",
+                            "value": [
+                                "NCBI gene2go"
+                            ],
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "hetio_source",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:relation",
+                            "value": "RO:0002007",
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "relation",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": [
+                                "infores:automat-hetio"
+                            ],
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": "biolink:aggregator_knowledge_source",
+                            "value_url": null,
+                            "attribute_source": "infores:automat-hetio",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "-513699474614235": {
+                    "subject": "GO:0030522",
+                    "object": "NCBIGene:6256",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "1791781574865774542": {
+                    "subject": "GO:0009755",
+                    "object": "NCBIGene:6256",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "7028129877190231399": {
+                    "subject": "GO:0043401",
+                    "object": "NCBIGene:6256",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "4296354716781930888": {
+                    "subject": "GO:0035357",
+                    "object": "NCBIGene:6256",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "8427020318690348550": {
+                    "subject": "GO:0030522",
+                    "object": "NCBIGene:10062",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "8640979353519933024": {
+                    "subject": "GO:0043401",
+                    "object": "NCBIGene:10062",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "-491601235064877779": {
+                    "subject": "GO:0009755",
+                    "object": "NCBIGene:10062",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "-3650757961114169230": {
+                    "subject": "GO:0030522",
+                    "object": "NCBIGene:190",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "4426476569104748724": {
+                    "subject": "GO:0043401",
+                    "object": "NCBIGene:190",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "1788147831567046529": {
+                    "subject": "GO:0009755",
+                    "object": "NCBIGene:190",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "2105594049961850184": {
+                    "subject": "GO:0030522",
+                    "object": "NCBIGene:2063",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "7161406234019762974": {
+                    "subject": "GO:0043401",
+                    "object": "NCBIGene:2063",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "-1175165143615318345": {
+                    "subject": "GO:0009755",
+                    "object": "NCBIGene:2063",
+                    "predicate": "biolink:has_part",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:aragorn",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:aggregator_knowledge_source",
+                            "value": "infores:automat-robokop",
+                            "value_type_id": null,
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "f3f1522c-2c2d-43c3-988b-d4208fec0b1d": {
+                    "subject": "MONDO:0005148",
+                    "object": "NCBIGene:5468",
+                    "predicate": "biolink:occurs_together_in_literature_with",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 304,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "num_publications",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:original_knowledge_source",
+                            "value": "infores:aragorn-ranker-ara",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": "infores:aragorn-ranker-ara",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "8696b4eb-fdc0-49f2-bec1-3cc84d484039": {
+                    "subject": "NCBIGene:5468",
+                    "object": "NCBIGene:5468",
+                    "predicate": "biolink:occurs_together_in_literature_with",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 1865,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "num_publications",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:original_knowledge_source",
+                            "value": "infores:aragorn-ranker-ara",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": "infores:aragorn-ranker-ara",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "d8938f10-f8d8-435c-88f4-0f507c359480": {
+                    "subject": "MONDO:0005148",
+                    "object": "NCBIGene:6256",
+                    "predicate": "biolink:occurs_together_in_literature_with",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 20,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "num_publications",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:original_knowledge_source",
+                            "value": "infores:aragorn-ranker-ara",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": "infores:aragorn-ranker-ara",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "f0aef707-aecb-47e1-8dc7-1eada310ebd4": {
+                    "subject": "NCBIGene:5468",
+                    "object": "NCBIGene:6256",
+                    "predicate": "biolink:occurs_together_in_literature_with",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 33,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "num_publications",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:original_knowledge_source",
+                            "value": "infores:aragorn-ranker-ara",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": "infores:aragorn-ranker-ara",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "b0f75348-7c65-49e1-9009-4f8b59df2e99": {
+                    "subject": "MONDO:0005148",
+                    "object": "NCBIGene:10062",
+                    "predicate": "biolink:occurs_together_in_literature_with",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 47,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "num_publications",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:original_knowledge_source",
+                            "value": "infores:aragorn-ranker-ara",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": "infores:aragorn-ranker-ara",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "e6c3e16b-dc25-4ef2-b625-99277e673320": {
+                    "subject": "NCBIGene:10062",
+                    "object": "NCBIGene:5468",
+                    "predicate": "biolink:occurs_together_in_literature_with",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 19,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "num_publications",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:original_knowledge_source",
+                            "value": "infores:aragorn-ranker-ara",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": "infores:aragorn-ranker-ara",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "82bd9bf6-575d-4f35-aa1b-f944065f463e": {
+                    "subject": "MONDO:0005148",
+                    "object": "NCBIGene:190",
+                    "predicate": "biolink:occurs_together_in_literature_with",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "num_publications",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:original_knowledge_source",
+                            "value": "infores:aragorn-ranker-ara",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": "infores:aragorn-ranker-ara",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "03db2774-4b0d-4bf5-983e-01c5b1bd8691": {
+                    "subject": "NCBIGene:190",
+                    "object": "NCBIGene:5468",
+                    "predicate": "biolink:occurs_together_in_literature_with",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "num_publications",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:original_knowledge_source",
+                            "value": "infores:aragorn-ranker-ara",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": "infores:aragorn-ranker-ara",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "89fbf2e1-7ab5-43bf-b038-14e7c2554cfc": {
+                    "subject": "GO:0035357",
+                    "object": "MONDO:0005148",
+                    "predicate": "biolink:occurs_together_in_literature_with",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 16,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "num_publications",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:original_knowledge_source",
+                            "value": "infores:aragorn-ranker-ara",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": "infores:aragorn-ranker-ara",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                },
+                "2ac7c455-3d5c-4618-b632-b4c9ee3fef0f": {
+                    "subject": "GO:0035357",
+                    "object": "NCBIGene:5468",
+                    "predicate": "biolink:occurs_together_in_literature_with",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:has_count",
+                            "value": 18,
+                            "value_type_id": "EDAM:data_0006",
+                            "original_attribute_name": "num_publications",
+                            "value_url": null,
+                            "attribute_source": null,
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "attribute_type_id": "biolink:original_knowledge_source",
+                            "value": "infores:aragorn-ranker-ara",
+                            "value_type_id": "biolink:InformationResource",
+                            "original_attribute_name": null,
+                            "value_url": null,
+                            "attribute_source": "infores:aragorn-ranker-ara",
+                            "description": null,
+                            "attributes": null
+                        },
+                        {
+                            "original_attribute_name": "weight",
+                            "attribute_type_id": "biolink:has_numeric_value",
+                            "value": 1,
+                            "value_type_id": "EDAM:data_1669",
+                            "value_url": null,
+                            "attribute_source": null
+                        }
+                    ]
+                }
+            }
+        },
+        "results": [
+            {
+                "node_bindings": {
+                    "disease": [
+                        {
+                            "id": "MONDO:0005148"
+                        }
+                    ],
+                    "pathway": [
+                        {
+                            "id": "GO:0043401"
+                        },
+                        {
+                            "id": "GO:0030522"
+                        },
+                        {
+                            "id": "GO:0035357"
+                        },
+                        {
+                            "id": "GO:0009755"
+                        }
+                    ],
+                    "gene": [
+                        {
+                            "id": "NCBIGene:5468"
+                        }
+                    ]
+                },
+                "edge_bindings": {
+                    "e02": [
+                        {
+                            "id": "b71e23eab37e",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4e9df6c33b66",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e4652dbb70a7",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0665a17ef66b",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "e01": [
+                        {
+                            "id": "f3e2048efa51",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "775fd11e1983",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "aedbdc53e2c6",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6018af39c3bb",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s2": [
+                        {
+                            "id": "f3f1522c-2c2d-43c3-988b-d4208fec0b1d",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.19701438657240256,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "score": 0.732912771434648
+            },
+            {
+                "node_bindings": {
+                    "disease": [
+                        {
+                            "id": "MONDO:0005148"
+                        }
+                    ],
+                    "pathway": [
+                        {
+                            "id": "GO:0043401",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 2.946065190483245e-15,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:5468"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GO:0030522",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 2.946065190483245e-15,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:5468"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GO:0035357",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 2.946065190483245e-15,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:5468"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GO:0009755",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 2.946065190483245e-15,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:5468"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        }
+                    ],
+                    "gene": [
+                        {
+                            "id": "NCBIGene:5468"
+                        }
+                    ],
+                    "_n_ac_2_0": [
+                        {
+                            "id": "NCBIGene:5468"
+                        }
+                    ]
+                },
+                "edge_bindings": {
+                    "e02": [
+                        {
+                            "id": "b71e23eab37e",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4e9df6c33b66",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e4652dbb70a7",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0665a17ef66b",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "e01": [
+                        {
+                            "id": "f3e2048efa51",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "775fd11e1983",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "aedbdc53e2c6",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6018af39c3bb",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "_e_ac_2_0": [
+                        {
+                            "id": "f3e2048efa51",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6018af39c3bb",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "aedbdc53e2c6",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "775fd11e1983",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s2": [
+                        {
+                            "id": "f3f1522c-2c2d-43c3-988b-d4208fec0b1d",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.19701438657240256,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s3": [
+                        {
+                            "id": "8696b4eb-fdc0-49f2-bec1-3cc84d484039",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.8566138594570054,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "score": 0.4402307155975099
+            },
+            {
+                "node_bindings": {
+                    "disease": [
+                        {
+                            "id": "MONDO:0005148"
+                        }
+                    ],
+                    "pathway": [
+                        {
+                            "id": "GO:0043401",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 7.191800163883844e-15,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:6256"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GO:0030522",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 7.191800163883844e-15,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:6256"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GO:0035357",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 7.191800163883844e-15,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:6256"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GO:0009755",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 7.191800163883844e-15,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:6256"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        }
+                    ],
+                    "gene": [
+                        {
+                            "id": "NCBIGene:5468"
+                        }
+                    ],
+                    "_n_ac_3_0": [
+                        {
+                            "id": "NCBIGene:6256"
+                        }
+                    ]
+                },
+                "edge_bindings": {
+                    "e02": [
+                        {
+                            "id": "b71e23eab37e",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4e9df6c33b66",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e4652dbb70a7",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0665a17ef66b",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "e01": [
+                        {
+                            "id": "f3e2048efa51",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "775fd11e1983",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "aedbdc53e2c6",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6018af39c3bb",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "_e_ac_3_0": [
+                        {
+                            "id": "1791781574865774542",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4296354716781930888",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "-513699474614235",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "7028129877190231399",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s2": [
+                        {
+                            "id": "f3f1522c-2c2d-43c3-988b-d4208fec0b1d",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.19701438657240256,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s5": [
+                        {
+                            "id": "d8938f10-f8d8-435c-88f4-0f507c359480",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.012256551766350432,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s6": [
+                        {
+                            "id": "f0aef707-aecb-47e1-8dc7-1eada310ebd4",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.02264111725869644,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "score": 0.2131524056536247
+            },
+            {
+                "node_bindings": {
+                    "disease": [
+                        {
+                            "id": "MONDO:0005148"
+                        }
+                    ],
+                    "pathway": [
+                        {
+                            "id": "GO:0030522",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 9.641200943004742e-12,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:10062"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GO:0043401",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 9.641200943004742e-12,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:10062"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GO:0009755",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 9.641200943004742e-12,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:10062"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        }
+                    ],
+                    "gene": [
+                        {
+                            "id": "NCBIGene:5468"
+                        }
+                    ],
+                    "_n_ac_4_0": [
+                        {
+                            "id": "NCBIGene:10062"
+                        }
+                    ]
+                },
+                "edge_bindings": {
+                    "e02": [
+                        {
+                            "id": "b71e23eab37e",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4e9df6c33b66",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0665a17ef66b",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "e01": [
+                        {
+                            "id": "775fd11e1983",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "aedbdc53e2c6",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6018af39c3bb",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "_e_ac_4_0": [
+                        {
+                            "id": "8427020318690348550",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "-491601235064877779",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "8640979353519933024",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s2": [
+                        {
+                            "id": "f3f1522c-2c2d-43c3-988b-d4208fec0b1d",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.19701438657240256,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s10": [
+                        {
+                            "id": "b0f75348-7c65-49e1-9009-4f8b59df2e99",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.026798195300908212,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s11": [
+                        {
+                            "id": "e6c3e16b-dc25-4ef2-b625-99277e673320",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.012993818380334643,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "score": 0.16839520830407886
+            },
+            {
+                "node_bindings": {
+                    "disease": [
+                        {
+                            "id": "MONDO:0005148"
+                        }
+                    ],
+                    "pathway": [
+                        {
+                            "id": "GO:0030522",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 9.641200943004742e-12,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:190"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GO:0043401",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 9.641200943004742e-12,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:190"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GO:0009755",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 9.641200943004742e-12,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:190"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        }
+                    ],
+                    "gene": [
+                        {
+                            "id": "NCBIGene:5468"
+                        }
+                    ],
+                    "_n_ac_5_0": [
+                        {
+                            "id": "NCBIGene:190"
+                        }
+                    ]
+                },
+                "edge_bindings": {
+                    "e02": [
+                        {
+                            "id": "b71e23eab37e",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4e9df6c33b66",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0665a17ef66b",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "e01": [
+                        {
+                            "id": "775fd11e1983",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "aedbdc53e2c6",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6018af39c3bb",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "_e_ac_5_0": [
+                        {
+                            "id": "1788147831567046529",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4426476569104748724",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "-3650757961114169230",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s2": [
+                        {
+                            "id": "f3f1522c-2c2d-43c3-988b-d4208fec0b1d",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.19701438657240256,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s13": [
+                        {
+                            "id": "82bd9bf6-575d-4f35-aa1b-f944065f463e",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.0,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s14": [
+                        {
+                            "id": "03db2774-4b0d-4bf5-983e-01c5b1bd8691",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.0006607360008854535,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "score": 0.16048276420926033
+            },
+            {
+                "node_bindings": {
+                    "disease": [
+                        {
+                            "id": "MONDO:0005148"
+                        }
+                    ],
+                    "pathway": [
+                        {
+                            "id": "GO:0030522",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 9.641200943004742e-12,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:2063"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GO:0043401",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 9.641200943004742e-12,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:2063"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GO:0009755",
+                            "attributes": [
+                                {
+                                    "original_attribute_name": "coalescence_method",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": "graph_enrichment",
+                                    "value_type_id": "EDAM:operation_0004"
+                                },
+                                {
+                                    "original_attribute_name": "p_value",
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 9.641200943004742e-12,
+                                    "value_type_id": "EDAM:data_1669"
+                                },
+                                {
+                                    "original_attribute_name": "enriched_nodes",
+                                    "attribute_type_id": "biolink:has_attribute",
+                                    "value": [
+                                        "NCBIGene:2063"
+                                    ],
+                                    "value_type_id": "EDAM:data_0006"
+                                }
+                            ]
+                        }
+                    ],
+                    "gene": [
+                        {
+                            "id": "NCBIGene:5468"
+                        }
+                    ],
+                    "_n_ac_6_0": [
+                        {
+                            "id": "NCBIGene:2063"
+                        }
+                    ]
+                },
+                "edge_bindings": {
+                    "e02": [
+                        {
+                            "id": "b71e23eab37e",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4e9df6c33b66",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0665a17ef66b",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "e01": [
+                        {
+                            "id": "775fd11e1983",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "aedbdc53e2c6",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6018af39c3bb",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "_e_ac_6_0": [
+                        {
+                            "id": "7161406234019762974",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "2105594049961850184",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        },
+                        {
+                            "id": "-1175165143615318345",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s2": [
+                        {
+                            "id": "f3f1522c-2c2d-43c3-988b-d4208fec0b1d",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.19701438657240256,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "score": 0.16034678722954018
+            },
+            {
+                "node_bindings": {
+                    "disease": [
+                        {
+                            "id": "MONDO:0005148"
+                        }
+                    ],
+                    "pathway": [
+                        {
+                            "id": "GO:0035357"
+                        }
+                    ],
+                    "gene": [
+                        {
+                            "id": "NCBIGene:5468",
+                            "qnode_id": "NCBIGene:5468"
+                        }
+                    ]
+                },
+                "edge_bindings": {
+                    "e02": [
+                        {
+                            "id": "e4652dbb70a7",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "e01": [
+                        {
+                            "id": "f3e2048efa51",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s2": [
+                        {
+                            "id": "f3f1522c-2c2d-43c3-988b-d4208fec0b1d",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.19701438657240256,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s18": [
+                        {
+                            "id": "89fbf2e1-7ab5-43bf-b038-14e7c2554cfc",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.008889913940568483,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s19": [
+                        {
+                            "id": "2ac7c455-3d5c-4618-b632-b4c9ee3fef0f",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.012339029057292672,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "score": 0.12421858910525209
+            },
+            {
+                "node_bindings": {
+                    "disease": [
+                        {
+                            "id": "MONDO:0005148"
+                        }
+                    ],
+                    "pathway": [
+                        {
+                            "id": "GO:0030522"
+                        }
+                    ],
+                    "gene": [
+                        {
+                            "id": "NCBIGene:5468",
+                            "qnode_id": "NCBIGene:5468"
+                        }
+                    ]
+                },
+                "edge_bindings": {
+                    "e02": [
+                        {
+                            "id": "b71e23eab37e",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "e01": [
+                        {
+                            "id": "aedbdc53e2c6",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s2": [
+                        {
+                            "id": "f3f1522c-2c2d-43c3-988b-d4208fec0b1d",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.19701438657240256,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "score": 0.12100789356969456
+            },
+            {
+                "node_bindings": {
+                    "disease": [
+                        {
+                            "id": "MONDO:0005148"
+                        }
+                    ],
+                    "pathway": [
+                        {
+                            "id": "GO:0009755"
+                        }
+                    ],
+                    "gene": [
+                        {
+                            "id": "NCBIGene:5468",
+                            "qnode_id": "NCBIGene:5468"
+                        }
+                    ]
+                },
+                "edge_bindings": {
+                    "e02": [
+                        {
+                            "id": "0665a17ef66b",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "e01": [
+                        {
+                            "id": "6018af39c3bb",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s2": [
+                        {
+                            "id": "f3f1522c-2c2d-43c3-988b-d4208fec0b1d",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.19701438657240256,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "score": 0.12100789356969456
+            },
+            {
+                "node_bindings": {
+                    "disease": [
+                        {
+                            "id": "MONDO:0005148"
+                        }
+                    ],
+                    "pathway": [
+                        {
+                            "id": "GO:0043401"
+                        }
+                    ],
+                    "gene": [
+                        {
+                            "id": "NCBIGene:5468",
+                            "qnode_id": "NCBIGene:5468"
+                        }
+                    ]
+                },
+                "edge_bindings": {
+                    "e02": [
+                        {
+                            "id": "4e9df6c33b66",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "e01": [
+                        {
+                            "id": "775fd11e1983",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.2679491924311228,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ],
+                    "s2": [
+                        {
+                            "id": "f3f1522c-2c2d-43c3-988b-d4208fec0b1d",
+                            "attributes": [
+                                {
+                                    "attribute_type_id": "biolink:has_numeric_value",
+                                    "value": 0.19701438657240256,
+                                    "value_type_id": "EDAM:data_1669",
+                                    "original_attribute_name": "weight",
+                                    "value_url": null,
+                                    "attribute_source": null,
+                                    "description": null,
+                                    "attributes": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "score": 0.12100789356969453
+            }
+        ]
+    },
+    "logs": [],
+    "status": "Success",
+    "log_level": null,
+    "pid": "a0f390781161"
+}

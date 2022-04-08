@@ -17,13 +17,13 @@ handler = logging.StreamHandler(sys.stdout)
 logger = logging.getLogger(__name__)
 
 dir_json = dir_code + 'MachineLearningPython/DccKP/Translator/Workflows/Json/'
-file_input_json = dir_json + "Queries/workflow1B_snomedct.json"
-file_input_json = dir_json + "Queries/workflow1B_2curies.json"
+file_input_json = dir_json + "Queries/Pathways/ppargT2dPathwaysQuery.json"
 # file_aragorn_output_json = dir_json + "Results/workflow1B_aragorn_result.json"
-file_output_json = dir_json + "Results/workflow1B_{}_result.json"
+file_output_json = dir_json + "Results/ppargT2dPathways_{}_result.json"
 
 # constants
 url_arax_ara = "https://arax.ncats.io/api/arax/v1.2/query"
+# url_aragorn_ara = "https://aragorn.renci.org/1.2/query?answer_coalesce_type=all"
 url_aragorn_ara = "https://aragorn.renci.org/1.2/query?answer_coalesce_type=all"
 map_ara = {'arax': url_arax_ara, 'aragorn': url_aragorn_ara}
 map_ara = {'arax': url_arax_ara}
@@ -42,6 +42,7 @@ if __name__ == "__main__":
         # issue the request
         start = time.time()
         logger.info("querying ARA: {}".format(url))
+        logger.info("querying with json: \n{}".format(json_payload))
         response = requests.post(url, json=json_payload)
         end = time.time()
         time_elapsed = end - start
