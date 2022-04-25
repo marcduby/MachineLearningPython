@@ -1,5 +1,27 @@
 
 
+20220425 - stanford drug discovery 
+- r&d talk #1
+  - servier 
+    - opebning boston office
+    - reorg
+    - mostly oncology/neuro, looking at small molecule and monoclonal antibodies 
+    - primary product Tibsovo, IDH1 inhibitor
+    - bought shire 
+  - merck 
+    - even largest study 
+  - amgen 
+    - use human genetics to seelct targets
+    - 4 waves of transformative innovations 
+    - hard to make drugs for transriptive factors due to not many sites for binding 
+      - could be overcome by multispecificty 
+      - PRMT5 example (enzyme needed for cancer to grow)
+      - most cancer cells have metabolite MTA is present; it down regulates PRMT5
+      - find a moleule that n;y binds PRMT5 when MTA is present 
+
+
+
+
 20220420 - mit sv nn talk
 - building images from 2 read sections of the genome 
   - one for each axis 
