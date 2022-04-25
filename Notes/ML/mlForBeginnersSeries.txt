@@ -1,0 +1,10 @@
+
+
+
+20220421 - k nearest neighbors
+- the k is for the number of points you compare to 
+  - pick the one where mea n square error starts to level off its drop on a curve 
+- measuring how accurate the model is 
+  - do a confusion matrix 
+
+

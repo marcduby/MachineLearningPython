@@ -1,4 +1,6 @@
 
+
+
 20200730 - ml at AWS
 - aws labeling services
   - manual labeling  

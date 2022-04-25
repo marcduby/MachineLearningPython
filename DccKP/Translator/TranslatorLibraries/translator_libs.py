@@ -257,6 +257,33 @@ def date_to_integer_string(dt_time=None, log=True):
     # return
     return str(int(now.year * 1e8 + now.month * 1e6 + now.day* 1e4 + now.hour* 1e2 + now.minute))
 
+def get_trapi_kps(json_servers, log=True):
+    '''
+    query the smart api and get the KPs
+    '''
+    # initialize
+    map_servers = {}
+
+    # get the kps
+    for entry in json_servers.get('hits'):
+        if entry.get('info').get('x-translator').get('component'):
+            map_server = {'comp': entry.get('info').get('x-translator').get('component')}
+            if map_server.get('comp') == 'KP':
+                if entry.get('info').get('x-translator').get('infores'):
+                    map_server['info'] = entry.get('info').get('x-translator').get('infores')
+                    if entry.get('servers'):
+                        for serv in entry.get('servers'):
+                            if serv.get('x-maturity') == 'production':
+                                if serv.get('url'):
+                                    map_server['url'] = serv.get('url')
+                                    if entry.get('info').get('x-trapi'):
+                                        map_server['version'] = entry.get('info').get('x-trapi').get('version')
+                                        map_servers[map_server.get('info')] = map_server
+
+    # return
+    return map_servers.values()
+
+
 if __name__ == "__main__":
     name_test = "PTPA"
     curie_id = find_ontology(name_test, 'NCBIGene', debug=True)

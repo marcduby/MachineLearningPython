@@ -19,17 +19,20 @@ logger = logging.getLogger(__name__)
 dir_json = dir_code + 'MachineLearningPython/DccKP/Translator/Workflows/Json/'
 file_input_json = dir_json + "Queries/Pathways/ppargT2dPathwaysQuery.json"
 # file_aragorn_output_json = dir_json + "Results/workflow1B_aragorn_result.json"
-file_output_json = dir_json + "Results/ppargT2dPathways_{}_result.json"
+file_output_json = dir_json + "Results/PpargT2dPathways/ppargT2dPathways_{}_result.json"
 
 # constants
 url_arax_ara = "https://arax.ncats.io/api/arax/v1.2/query"
 # url_aragorn_ara = "https://aragorn.renci.org/1.2/query?answer_coalesce_type=all"
 url_aragorn_ara = "https://aragorn.renci.org/1.2/query?answer_coalesce_type=all"
+url_bte_ara = "https://api.bte.ncats.io/v1/team/Service%20Provider/query"
+url_explanatory_ara = "https://explanatory-agent.azurewebsites.net/v1.2/query"
 map_ara = {'arax': url_arax_ara, 'aragorn': url_aragorn_ara}
-map_ara = {'arax': url_arax_ara}
 map_ara = {'aragorn': url_aragorn_ara}
-
-# methods
+map_ara = {"BTE": url_bte_ara}
+map_ara = {"explanatory": url_explanatory_ara}
+map_ara = {'arax': url_arax_ara}
+ # methods
 
 # main
 if __name__ == "__main__":

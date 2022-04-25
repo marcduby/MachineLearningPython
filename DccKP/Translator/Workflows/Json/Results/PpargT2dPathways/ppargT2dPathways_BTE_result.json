@@ -1,0 +1,77 @@
+{
+    "workflow": [
+        {
+            "id": "lookup"
+        }
+    ],
+    "message": {
+        "query_graph": {
+            "edges": {
+                "e01": {
+                    "constraints": [],
+                    "object": "pathway",
+                    "subject": "gene"
+                },
+                "e02": {
+                    "constraints": [],
+                    "object": "disease",
+                    "subject": "pathway"
+                }
+            },
+            "nodes": {
+                "disease": {
+                    "categories": [
+                        "biolink:Disease"
+                    ],
+                    "constraints": [],
+                    "ids": [
+                        "MONDO:0005148"
+                    ],
+                    "is_set": false
+                },
+                "gene": {
+                    "categories": [
+                        "biolink:Gene"
+                    ],
+                    "constraints": [],
+                    "ids": [
+                        "NCBIGene:5468"
+                    ],
+                    "is_set": false
+                },
+                "pathway": {
+                    "categories": [
+                        "biolink:Pathway"
+                    ],
+                    "constraints": [],
+                    "is_set": false
+                }
+            }
+        },
+        "knowledge_graph": {
+            "nodes": {},
+            "edges": {}
+        },
+        "results": []
+    },
+    "logs": [
+        {
+            "timestamp": "2022-04-08T19:04:46.540Z",
+            "level": "DEBUG",
+            "message": "BTE identified 3 qNodes from your query graph",
+            "code": null
+        },
+        {
+            "timestamp": "2022-04-08T19:04:46.540Z",
+            "level": "DEBUG",
+            "message": "BTE identified 2 qEdges from your query graph",
+            "code": null
+        },
+        {
+            "timestamp": "2022-04-08T19:04:46.670Z",
+            "level": "WARNING",
+            "message": "Query Edge (reversed e02) has no MetaKG edges. Your query terminates.",
+            "code": null
+        }
+    ]
+}

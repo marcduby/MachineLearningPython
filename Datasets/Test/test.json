@@ -1,0 +1,28 @@
+{
+    "name": "GWAS_HERMES_eu",
+    "phenotype": "HF",
+    "ancestry": "EU",
+    "author": null,
+    "tech": "GWAS",
+    "credible_set": null,
+    "private": null,
+    "cases": 41734,
+    "controls": 930298,
+    "subjects": 972032,
+    "sources": [
+        "/humgen/diabetes2/users/mvg/portal/scripts/VARIANTS/PHENOTYPES/GWAS_HERMES_eu_dv1/HF/DATA/GWAS_HERMES_eu_dv1.HF.1.txt"
+    ],
+    "schema": {
+        "marker": "VAR_ID",
+        "probability": null,
+        "credible_set_id": null,
+        "var_id": "{chrom}_{pos}_{ref}_{alt}",
+        "pvalue": "P_VALUE",
+        "zscore": null,
+        "stderr": "SE",
+        "beta": null,
+        "odds_ratio": "ODDS_RATIO",
+        "eaf": "EAF_PH",
+        "maf": "MAF_PH"
+    }
+}

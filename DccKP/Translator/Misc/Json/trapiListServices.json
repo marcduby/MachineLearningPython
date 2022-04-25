@@ -1,0 +1,3055 @@
+{
+    "took": 159,
+    "total": 76,
+    "max_score": 0.8438271,
+    "hits": [
+        {
+            "_id": "55510544e95386a5a8ac3b88f9d00d21",
+            "_score": 0.8438271,
+            "info": {
+                "description": "Name resolution service<p/>This service takes lexical strings and attempts to map them to identifiers (curies) from a vocabulary or ontology.  The lookup is not exact, but includes partial matches.<p/> Multiple results may be returned representing possible conceptual matches, but all of the identifiers have been correctly normalized using the <a href=\"https://nodenormalization-sri.renci.org>NodeNormalization service</a>.",
+                "termsOfService": "robokop.renci.org:7055/tos?service_long=Name+Resolver&provider_long=the+Translator+Consortium",
+                "title": "Name Resolver",
+                "version": "1.0.2",
+                "x-translator": {
+                    "component": "Utility",
+                    "infores": "infores:sri-name-resolver",
+                    "team": [
+                        "Standards Reference Implementation Team"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://name-resolution-sri.renci.org/",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "79cbb1390e61733e05a5a9c9df32573b",
+            "_score": 0.7720136,
+            "info": {
+                "contact": {
+                    "email": "kenny@covar.com",
+                    "name": "Kenny Morton",
+                    "x-id": "kennethmorton",
+                    "x-role": "responsible developer"
+                },
+                "termsOfService": "",
+                "title": "Workflow runner",
+                "version": "1.4.2",
+                "x-translator": {
+                    "component": "ARA",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-translator/"
+                    },
+                    "infores": "infores:workflow-runner",
+                    "team": [
+                        "Standards Reference Implementation Team"
+                    ]
+                },
+                "x-trapi": {
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-trapi/"
+                    },
+                    "version": "1.1.0"
+                }
+            },
+            "servers": [
+                {
+                    "url": "https://translator-workflow-runner.renci.org",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "bb806f5c81e86fe12660fa307d4b0a97",
+            "_score": 0.7720136,
+            "info": {
+                "contact": {
+                    "email": "kenny@covar.com",
+                    "name": "Kenneth Morton",
+                    "x-id": "kennethmorton",
+                    "x-role": "responsible developer"
+                },
+                "description": "ICEES API \n<br>[ICEES Overview page](https://researchsoftwareinstitute.github.io/data-translator/apps/icees)\n<br>[documentation](https://github.com/NCATS-Tangerine/icees-api/tree/master/docs) \n<br>[source](https://github.com/NCATS-Tangerine/icees-api/tree/master/) \n<br>[ICEES API example queries](https://github.com/NCATS-Tangerine/icees-api/tree/master/#examples)\n<br>dictionary for versioning of tables\n<br>\n<table>\n    <tr>\n        <th>version</th>\n        <th>table content</th>\n    </tr>\n    <tr>\n        <td>1.0.0</td>\n        <td>cdw, acs, nearest road, and cmaq from 2010</td>\n    </tr>\n    <tr>\n        <td>2.0.0</td>\n        <td>cdw in FHIR format, acs, nearest road, and cmaq from 2010</td>\n    </tr>\n    <tr>\n        <td>3.0.0</td>\n        <td>cdw in FHIR format, acs, nearest road, cmaq, and EPR from 2010 to 2016</td>\n    </tr>\n</table>",
+                "termsOfService": "/tos",
+                "title": "ICEES Asthma Instance API - production",
+                "version": "6.0.0",
+                "x-translator": {
+                    "component": "KP",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-translator/"
+                    },
+                    "infores": "infores:icees-asthma",
+                    "team": [
+                        "Exposures Provider"
+                    ]
+                },
+                "x-trapi": {
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-trapi/"
+                    },
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "url": "https://icees-asthma.renci.org",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "749c8f527fa07964de692e0969b71a4e",
+            "_score": 0.7720136,
+            "info": {
+                "contact": {
+                    "email": "kenny@covar.com",
+                    "name": "Kenneth Morton",
+                    "x-id": "kennethmorton",
+                    "x-role": "responsible developer"
+                },
+                "description": "ICEES API \n<br>[ICEES Overview page](https://researchsoftwareinstitute.github.io/data-translator/apps/icees)\n<br>[documentation](https://github.com/NCATS-Tangerine/icees-api/tree/master/docs) \n<br>[source](https://github.com/NCATS-Tangerine/icees-api/tree/master/) \n<br>[ICEES API example queries](https://github.com/NCATS-Tangerine/icees-api/tree/master/#examples)\n<br>dictionary for versioning of tables\n<br>\n<table>\n    <tr>\n        <th>version</th>\n        <th>table content</th>\n    </tr>\n    <tr>\n        <td>1.0.0</td>\n        <td>DILI</td>\n    </tr>\n</table>\n",
+                "termsOfService": "/tos",
+                "title": "ICEES DILI Instance API - production",
+                "version": "6.0.0",
+                "x-translator": {
+                    "component": "KP",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-translator/"
+                    },
+                    "infores": "infores:icees-dili",
+                    "team": [
+                        "Exposures Provider"
+                    ]
+                },
+                "x-trapi": {
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-trapi/"
+                    },
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "url": "https://icees-dili.renci.org",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "2ca2daadd989387f1e8f7121fa214eda",
+            "_score": 0.7720136,
+            "info": {
+                "contact": {
+                    "email": "balhoff@renci.org",
+                    "name": "Jim Balhoff"
+                },
+                "description": "TRAPI interface to integrated ontology knowledgebase",
+                "license": {
+                    "name": "MIT License",
+                    "url": "https://opensource.org/licenses/MIT"
+                },
+                "termsOfService": "https://opensource.org/licenses/MIT",
+                "title": "Ontology-KP API",
+                "version": "0.1",
+                "x-translator": {
+                    "biolink-version": "2.2.4",
+                    "component": "KP",
+                    "infores": "infores:sri-ontology",
+                    "team": [
+                        "Standards Reference Implementation Team"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://ontology-kp.apps.renci.org",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "4153c947a32e2e2a55a320d0bee22077",
+            "_score": 0.7720136,
+            "info": {
+                "contact": {
+                    "email": "kenny@covar.com",
+                    "name": "Kenneth Morton",
+                    "x-id": "kennethmorton",
+                    "x-role": "responsible developer"
+                },
+                "description": "ICEES API \n<br>[ICEES Overview page](https://researchsoftwareinstitute.github.io/data-translator/apps/icees)\n<br>[documentation](https://github.com/NCATS-Tangerine/icees-api/tree/master/docs) \n<br>[source](https://github.com/NCATS-Tangerine/icees-api/tree/master/) \n<br>[ICEES API example queries](https://github.com/NCATS-Tangerine/icees-api/tree/master/#examples)\n<br>dictionary for versioning of tables\n<br>\n<table>\n    <tr>\n        <th>version</th>\n        <th>table content</th>\n    </tr>\n    <tr>\n        <td>1.0.0</td>\n        <td>PCD</td>\n    </tr>\n</table>\n",
+                "termsOfService": "/tos",
+                "title": "ICEES PCD Instance API - production",
+                "version": "6.0.0",
+                "x-translator": {
+                    "component": "KP",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-translator/"
+                    },
+                    "infores": "infores:icees-pcd",
+                    "team": [
+                        "Exposures Provider"
+                    ]
+                },
+                "x-trapi": {
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-trapi/"
+                    },
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "url": "https://icees-pcd.renci.org",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "1f277e1563fcfd124bfae2cc3c4bcdec",
+            "_score": 0.7720136,
+            "info": {
+                "contact": {
+                    "email": "help@pharmgkb.org",
+                    "name": "pharmgkb help desk",
+                    "x-role": "responsible developer"
+                },
+                "description": "The QuickGO REST API provides access to key biological data from QuickGO and GOA. The services provide a unified interface to query information about ontology terms from GO (the Gene Ontology) and ECO (the Evidence & Conclusion Ontology), Gene Ontology annotations from the EBI's GOA database, and gene products (proteins from UniProt, RNA from RNAcentral and complexes from ComplexPortal).",
+                "termsOfService": "https://www.ebi.ac.uk/QuickGO/services",
+                "title": "QuickGO API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.13",
+                    "component": "KP",
+                    "infores": "infores:ebi-quick-go",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production server",
+                    "url": "https://www.ebi.ac.uk/QuickGO/services",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "dca415f2d792976af9d642b7e73f7a41",
+            "_score": 0.7720136,
+            "info": {
+                "contact": {
+                    "email": "luzh@ncbi.nlm.nih.gov",
+                    "name": "Zhiyong Lu"
+                },
+                "description": "LitVar allows the search and retrieval of variant relevant information from the biomedical literature and shows key biological relations between a variant and its close related entities (e.g. genes, diseases, and drugs). The LitVar results are automatically extracted (with regular updates) from over 27 million PubMed articles as well as applicable full-text articles in PubMed Central.",
+                "termsOfService": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+                "title": "LitVar API",
+                "version": "1.1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.13",
+                    "component": "KP",
+                    "infores": "infores:litvar",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production server",
+                    "url": "https://www.ncbi.nlm.nih.gov/research/bionlp/litvar/api/v1",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "1c056ffc7ed0dd1229e71c4752239465",
+            "_score": 0.7720136,
+            "info": {
+                "contact": {
+                    "email": "help@pharmgkb.org",
+                    "name": "pharmgkb help desk",
+                    "x-role": "responsible developer"
+                },
+                "description": "The OLS REST API provides access to key biological data from OLS. The services provide a unified interface to query information about ontology terms from GO (the Gene Ontology) and ECO (the Evidence & Conclusion Ontology), Gene Ontology annotations from the EBI's GOA database, and gene products (proteins from UniProt, RNA from RNAcentral and complexes from ComplexPortal).",
+                "termsOfService": "https://www.ebi.ac.uk/OLS/services",
+                "title": "Ontology Lookup Service API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.13",
+                    "component": "KP",
+                    "infores": "infores:ols",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production server",
+                    "url": "https://www.ebi.ac.uk/ols/api",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "542ba165e1b4227854cf7c0a8addcc79",
+            "_score": 0.7720136,
+            "info": {
+                "contact": {
+                    "email": "help@opentarget.org",
+                    "name": "opentarget help desk",
+                    "x-role": "responsible developer"
+                },
+                "description": "The Opentarget API",
+                "termsOfService": "http://www.opentarget.org",
+                "title": "OpenTarget API",
+                "version": "3.0",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:open-target",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production server",
+                    "url": "https://platform-api.opentargets.io/v3",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "402ab3809f24903020d71bb8527a202c",
+            "_score": 0.738703,
+            "info": {
+                "contact": {
+                    "email": "webyrd@gmail.com",
+                    "name": "William E. Byrd",
+                    "url": "https://github.com/webyrd"
+                },
+                "description": "Translator API for Unsecret Agent ARA",
+                "license": {
+                    "name": "Apache 2.0",
+                    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+                },
+                "title": "Translator API for Unsecret Agent ARA",
+                "version": "1.0.1-beta",
+                "x-translator": {
+                    "biolink-version": "1.4.0",
+                    "component": "ARA",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/\\ production/x-translator/"
+                    },
+                    "infores": "infores:unsecret-agent",
+                    "team": [
+                        "Unsecret Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/\\ production/x-trapi/"
+                    },
+                    "version": "1.1.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Service endpoint for TRAPI",
+                    "url": "https://medikanren-trapi.ci.transltr.io/v2",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Service endpoint for TRAPI",
+                    "url": "https://medikanren-trapi.ci.transltr.io/v2",
+                    "x-maturity": "development"
+                }
+            ]
+        },
+        {
+            "_id": "78511bb6e6dbaa9721ecde76fa540924",
+            "_score": 0.738703,
+            "info": {
+                "contact": {
+                    "email": "webyrd@gmail.com",
+                    "name": "William E. Byrd",
+                    "url": "https://github.com/webyrd"
+                },
+                "description": "Translator API for Unsecret Agent ARA",
+                "license": {
+                    "name": "Apache 2.0",
+                    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+                },
+                "title": "Translator API for Unsecret Agent ARA",
+                "version": "1.0.1-beta",
+                "x-translator": {
+                    "biolink-version": "1.4.0",
+                    "component": "ARA",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/\\ production/x-translator/"
+                    },
+                    "infores": "infores:unsecret-agent",
+                    "team": [
+                        "Unsecret Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/\\ production/x-trapi/"
+                    },
+                    "version": "1.1.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Service endpoint for TRAPI",
+                    "url": "https://medikanren-trapi.ci.transltr.io/v2",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Service endpoint for TRAPI",
+                    "url": "https://medikanren-trapi.ci.transltr.io/v2",
+                    "x-maturity": "development"
+                }
+            ]
+        },
+        {
+            "_id": "694e7960fdab1827f2f6004c3db01e40",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph based on the [IUPHAR Guide to Pharmacology (https://www.guidetopharmacology.org/)](https://www.guidetopharmacology.org/)",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Gtopdb&provider_long=RENCI",
+                "title": "Automat Gtopdb (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-gtopdb",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/gtopdb/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "8f358795cbbdc9b4fef53346b67033be",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "The NHGRI-EBI Catalog of human genome-wide association studies.",
+                "termsOfService": "https://http://robokop.renci.org:7055/tos?service_long=Automat GTEx&provider_long=RENCI",
+                "title": "Automat GWAS Catalog (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-gwas-catalog",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/gwas-catalog/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "3a31d671dbaf211d8b7f502aec2d609d",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph based on the [Human Metabolome DataBase (hmdb.org)](hmdb.org).",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat HMDB&provider_long=RENCI",
+                "title": "Automat HMDB (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-hmdb",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/hmdb/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "fe351cf879d06616e655d46ee915c2e4",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph consisting of viral proteins from UniProt, connected by similarity edges from UniRef.",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Viral Proteome&provider_long=RENCI",
+                "title": "Automat Viral Proteome (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-viral-proteome",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/viral-proteome/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "b4d881e4443ab6f94b4fb7bcbb49e983",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "Gene families from [HGNC (genenames.org)](genenames.org).",
+                "termsOfService": "http://linkmissing",
+                "title": "Automat HGNC (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-hgnc",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/hgnc/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "882388ba314a61484ba79268bcc93675",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "Biomedical Knowledge graph build by constructing relationships from federated data sets.",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Robokop KG&provider_long=RENCI",
+                "title": "Automat Robokop KG (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "1.8.2",
+                    "component": "KP",
+                    "infores": "infores:automat-robokop",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/robokopkg/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "6118e4e713af49f48b37788593fd3fcb",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": " Human Gene Ontology Annotations from the GO consortium.",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Human GOA&provider_long=RENCI",
+                "title": "Automat Human GOA (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-human-goa",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/human-goa/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "6a3c22bbb4d533c15013a3f9000a8709",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph based on the [Monarch API (https://api.monarchinitiative.org/)](https://api.monarchinitiative.org/).",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Biolink&provider_long=RENCI",
+                "title": "Automat Biolink (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-biolink",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/biolink/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "9df83f691d5fa0d8eb9c9f5f6b6ebb39",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "bizon@renci.org",
+                    "name": "Chris Bizon",
+                    "x-id": "https://github.com/cbizon",
+                    "x-role": "responsible developer"
+                },
+                "description": "The <a href=\"https://biolink.github.io/biolink-model/\">Biolink Model</a> defines a set of common concepts for use in Translator. These include semantic types for entities, as well as the relations between them. These concepts are organized into an inheritance hierarchy capturing different granularities of description. Furthermore, each concept contains metadata relating the concept to ontologies.\nThe Biolink Lookup Service provides a computational interface to the model, including access to previous versions. When the service is deployed, it queries the Biolink Github repository, and updates itself to access the latest supported (default) version.",
+                "license": {
+                    "name": "MIT",
+                    "url": "https://opensource.org/licenses/MIT"
+                },
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Biolink+Model+Lookup&provider_long=the+Translator+Consortium",
+                "title": "Biolink Model Lookup",
+                "version": "1.1.10",
+                "x-translator": {
+                    "component": "Utility",
+                    "infores": "infores:renci-bionames",
+                    "team": [
+                        "Standards Reference Implementation Team"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://bl-lookup-sri.renci.org",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "af7ad4d2e2438ed9406af963d963cd33",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph representation of Uberongraph, an integration of ontologies including GO, CHEBI, Uberon, and HPO.",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Uberongraph&provider_long=RENCI",
+                "title": "Automat Uberongraph (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-uberongraph",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/uberongraph/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "1b9ff9a87e3b3864270fac08345be7a1",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "bizon@renci.org",
+                    "name": "Chris Bizon",
+                    "x-id": "https://github.com/cbizon",
+                    "x-role": "responsible developer"
+                },
+                "description": "Node normalization takes a CURIE, and returns: <ol> <li>The preferred CURIE for this entity <li>All other known equivalent identifiers for the entity <li>Semantic types for the entity as defined by the <a href=\"https://biolink.github.io/biolink-model/\">BioLink Model</a> </ol> The data served by Node Normalization is created by <a href=\"https://github.com/TranslatorIIPrototypes/Babel\">Babel</a>, which attempts to find identifier equivalences, and makes sure that CURIE prefixes are BioLink Model Compliant.  To determine whether Node Normalization is likely to be useful, check /get_semantic_types, which lists the BioLink semantic types for which normalization has been attempted, and /get_curie_prefixes, which lists the number of times each prefix is used for a semantic type.",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Node+Normalization&provider_long=the+Translator+Consortium",
+                "title": "Node Normalization",
+                "version": "2.0.6",
+                "x-translator": {
+                    "component": "Utility",
+                    "infores": "infores:sri-node-normalizer",
+                    "team": [
+                        "Standards Reference Implementation Team"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "Post trapi response",
+                        "Get allowed conflations",
+                        "Get/Post normalized nodes",
+                        "Get semantic types",
+                        "Get/Post curie prefixes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://nodenormalization-sri.renci.org/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "c7f31bbfb232c337ae29b80eea9cfa37",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "Molecular (Gene-Gene) interactions from [EBI IntAct (https://www.ebi.ac.uk/intact/)](https://www.ebi.ac.uk/intact/).",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat IntAct&provider_long=RENCI",
+                "title": "Automat IntAct (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-intact",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/intact/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "3ba7f69133df5fce68d37d00f48e4d3b",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "balhoff@renci.org",
+                    "name": "Jim Balhoff"
+                },
+                "description": "TRAPI interface to database of Causal Activity Models",
+                "license": {
+                    "name": "MIT License",
+                    "url": "https://opensource.org/licenses/MIT"
+                },
+                "termsOfService": "https://opensource.org/licenses/MIT",
+                "title": "CAM-KP API",
+                "version": "0.1",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:cam-kp",
+                    "team": [
+                        "Exposures Provider"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://cam-kp-api.renci.org/1.2.0",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "9326397c93c0ab17b9907d307a76f7b7",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph for ontological hierarchy extracted from Uberongraph.",
+                "termsOfService": "http://linkmissing",
+                "title": "Automat Ontological Hierarchy (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "1.8.2",
+                    "component": "KP",
+                    "infores": "infores:automat-ontology-hierarchy",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/ontological-hierarchy/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "0de0fcb872ddd6daddb9eee27e95996f",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph based on [Pharos (pharos.nih.gov)](pharos.nih.gov).",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Pharos&provider_long=RENCI",
+                "title": "Automat Pharos (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-pharos",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/pharos/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "d907e918a38e85c8e93ee3a0dcfc95d4",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": " A graph of gene families and pathways from [Panther (pantherdb.org)](pantherdb.org)",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Panther&provider_long=RENCI",
+                "title": "Automat Panther (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-panther",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/panther/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "040cddc8d77b1518979da6686f11e89e",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "Knowledge graph constructed from Robokop KG by incorporating Cord-19 dataset and other covid related knowledge sources.",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Covidkop KG&provider_long=RENCI",
+                "title": "Automat Covidkop KG (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-covidkop",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/covidkopkg/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "8956303f273baaa76202ff3195bd6a64",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph based on the [Comparative Toxicogenomics Database (ctdbase.org)](ctdbase.org).",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat CTD&provider_long=RENCI",
+                "title": "Automat CTD (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-ctd",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/ctd/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "6400f0b1b7241b349d9abb601d4ca294",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph consisting of only Chemical nodes and properties on them.",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat molepro-fda&provider_long=RENCI",
+                "title": "Automat molepro-fda (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-mole-pro-fda",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/molepro-fda/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "03c1982f2e3ba3710da20aa9c01a00f6",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph based on the [DrugCentral database](drugcentral.org).",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat DrugCentralD&provider_long=RENCI",
+                "title": "Automat DrugCentral (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-drug-central",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/drugcentral/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "90996aee88fce45a834976e7b3539db1",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph  linking together similar compounds.  Two compounds are linked by an edge in the graph if they are equivalent when charge, salts, and stereochemistry are ignored.",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Chemical Normalization&provider_long=RENCI",
+                "title": "Automat Chemical normalization (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "1.8.2",
+                    "component": "KP",
+                    "infores": "infores:automat-chem-norm",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/chemical-normalization/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "7ba4ef33f17ab1fd4f106f105b19a1bc",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph of the food/chemical relationships in [foodb.ca](foodb.ca).",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Foodb&provider_long=RENCI",
+                "title": "Automat Foodb (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "1.8.2",
+                    "component": "KP",
+                    "infores": "infores:automat-foodb",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/foodb/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "6c7642a4bf213769361c8f9ec1be88f2",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph based on [hetionet (het.io)](het.io).",
+                "termsOfService": "http://linkmissing",
+                "title": "Automat Hetio (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-hetio",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/hetio/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "2c3c45487f65330b058946cd46dbbfa1",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A literature co-occurence graph based on the parsing of the CORD-19 paper set. All triples contain covid-19 as either subject or object.",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Cord19&provider_long=RENCI",
+                "title": "Automat Cord19 (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-cord19",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/cord19/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "0f4e5f1293de2074ccebe01b14567574",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": "A graph containing eqtl and sqtl information from [GTEx Portal (https://gtexportal.org/home/)](https://gtexportal.org/home/). Also includes genes that the variants lie within or near.",
+                "termsOfService": "https://http://robokop.renci.org:7055/tos?service_long=Automat GTEx&provider_long=RENCI",
+                "title": "Automat GTEx (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:automat-gtex",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/gtex/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "d2eecc42b6ae9109b12bcd215c787479",
+            "_score": 0.71340257,
+            "info": {
+                "contact": {
+                    "email": "kebedey@renci.org",
+                    "name": "Yaphet Kebede",
+                    "x-id": "https://github.com/yaphetkg",
+                    "x-role": "contributor"
+                },
+                "description": " A literature co-occurrence graph created by the Translator Text Mining KP.",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=Automat Textmining KP&provider_long=RENCI",
+                "title": "Automat Textmining KP (trapi v-1.2.0)",
+                "version": "1.2.0-7",
+                "x-translator": {
+                    "biolink-version": "1.8.2",
+                    "component": "KP",
+                    "infores": "infores:automat-text-mining-provider",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "overlay_connect_knodes",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://automat.renci.org/textminingkp/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "a5b0ec6bfde5008984d4b6cde402d61f",
+            "_score": 0.6759287,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the HPO query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "Human Phenotype Ontology API",
+                "version": "1.0",
+                "x-translator": {
+                    "component": "KP",
+                    "infores": "infores:biothings-hpo",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/hpo",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/hpo",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "ec6d76016ef40f284359d17fbf78df20",
+            "_score": 0.6759287,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the UBERON query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "UBERON Ontology API",
+                "version": "1.0",
+                "x-translator": {
+                    "component": "KP",
+                    "infores": "infores:biothings-uberon-ontology",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/uberon",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/uberon",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "86c92eba3d7b85720db2501fa32d6cdd",
+            "_score": 0.6646597,
+            "info": {
+                "contact": {
+                    "email": "bizon@renci.org",
+                    "name": "Chris Bizon",
+                    "x-id": "https://github.com/cbizon",
+                    "x-role": "responsible developer"
+                },
+                "description": "ARAGORN: Performs a query operation which compiles data from numerous ARAGORN ranking agent services.",
+                "termsOfService": "http://robokop.renci.org:7055/tos?service_long=ARAGORN&provider_long=RENCI",
+                "title": "ARAGORN",
+                "version": "2.0.24",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "ARA",
+                    "infores": "infores:aragorn",
+                    "team": [
+                        "Ranking Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "lookup",
+                        "enrich_results",
+                        "overlay_connect_knodes",
+                        "score",
+                        "sort_results_score",
+                        "filter_results_top_n",
+                        "filter_kgraph_orphans"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://aragorn.renci.org/1.2",
+                    "x-location": "RENCI",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "09c8782d9f4027712e65b95424adba79",
+            "_score": 0.6347554,
+            "info": {
+                "contact": {
+                    "email": "help@myvariant.info",
+                    "name": "Chunlei Wu",
+                    "x-id": "https://github.com/newgene",
+                    "x-role": "responsible developer"
+                },
+                "description": "Documentation of the MyVariant.info Variant Query web services. Learn more about [MyVariant.info](http://myvariant.info/)",
+                "termsOfService": "http://myvariant.info/terms/",
+                "title": "MyVariant.info API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.8",
+                    "component": "KP",
+                    "infores": "infores:myvariant-info",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://myvariant.info/v1",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://myvariant.info/v1",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "59dce17363dce279d389100834e43648",
+            "_score": 0.6347554,
+            "info": {
+                "contact": {
+                    "email": "help@mygene.info",
+                    "name": "Chunlei Wu",
+                    "x-id": "https://github.com/newgene",
+                    "x-role": "responsible developer"
+                },
+                "description": "Documentation of the MyGene.info Gene Query web services. Learn more about [MyGene.info](http://mygene.info/)",
+                "termsOfService": "http://mygene.info/terms/",
+                "title": "MyGene.info API",
+                "version": "3.0",
+                "x-translator": {
+                    "biolink-version": "2.2.8",
+                    "component": "KP",
+                    "infores": "infores:mygene-info",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://mygene.info/v3",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://mygene.info/v3",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "95b8a4ac17ea779165a709185ac07f23",
+            "_score": 0.6313491,
+            "info": {
+                "contact": {
+                    "email": "rw37@drexel.edu",
+                    "name": "Rosina Weber",
+                    "x-id": "RosinaWeber",
+                    "x-role": "responsible developer"
+                },
+                "description": "A Translator Reasoner API for the Explanatory Agent",
+                "license": {
+                    "name": "License To Be Determined",
+                    "url": "TBD"
+                },
+                "termsOfService": "TBD",
+                "title": "Explanatory Agent API",
+                "version": "1.2",
+                "x-translator": {
+                    "biolink-version": "2.2.0",
+                    "component": "ARA",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/\\ production/x-translator/"
+                    },
+                    "infores": "infores:explanatory-agent",
+                    "team": [
+                        "Explanatory Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "asyncquery": false,
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/\\ production/x-trapi/"
+                    },
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production Server",
+                    "url": "https://explanatory-agent.azurewebsites.net/v1.2/",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Development Server",
+                    "url": "https://explanatory-agent-dev.azurewebsites.net/v1.2/",
+                    "x-maturity": "development"
+                }
+            ]
+        },
+        {
+            "_id": "7f70cdfaeb801501da08dacc294e8b9f",
+            "_score": 0.62348634,
+            "info": {
+                "contact": {
+                    "email": "brett.smith@isbscience.org",
+                    "x-role": "responsible developer"
+                },
+                "description": "SPOKE KP for TRAPI 1.2 - an NIH NCATS Knowledge Provider exposing UCSF's SPOKE",
+                "license": {
+                    "name": "Apache 2.0",
+                    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+                },
+                "termsOfService": "https://spoke.rbvi.ucsf.edu/license.html",
+                "title": "SPOKE KP for TRAPI 1.2",
+                "version": "1.2.0",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "externalDocs": {
+                        "description": "Repository",
+                        "url": "https://github.com/suihuanglab/spoke-kp"
+                    },
+                    "infores": "infores:spoke",
+                    "team": [
+                        "imProving Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "asyncquery": false,
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "dev",
+                    "url": "https://spokekp.healthdatascience.cloud/api/v1.2/",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "415c3b1a85ead4ceb58caf00dee9b24e",
+            "_score": 0.62348634,
+            "info": {
+                "contact": {
+                    "email": "brett.smith@isbscience.org",
+                    "x-role": "responsible developer"
+                },
+                "description": "imProving Agent for TRAPI 1.2 - An NIH NCATS Translator Autonomous Reasoning Agent",
+                "license": {
+                    "name": "Apache 2.0",
+                    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+                },
+                "termsOfService": "https://spoke.rbvi.ucsf.edu/license.html",
+                "title": "imProving Agent for TRAPI 1.2",
+                "version": "1.2.0",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "ARA",
+                    "externalDocs": {
+                        "description": "Code repository and example notebook",
+                        "url": "https://github.com/suihuanglab/improving-agent"
+                    },
+                    "infores": "infores:improving-agent",
+                    "team": [
+                        "imProving Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "asyncquery": false,
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "prod",
+                    "url": "https://ia.healthdatascience.cloud/api/v1.2/",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "671b45c0301c8624abbd26ae78449ca2",
+            "_score": 0.62348634,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "Chunlei Wu",
+                    "x-id": "https://github.com/newgene",
+                    "x-role": "responsible developer"
+                },
+                "description": "Documentation of the MyDisease.info disease query web services.  Learn more about [mydisease.info](http://mydisease.info/)",
+                "termsOfService": "http://mydisease.info/terms",
+                "title": "MyDisease.info API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.8",
+                    "component": "KP",
+                    "infores": "infores:mydisease-info",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production server",
+                    "url": "http://mydisease.info/v1",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "e9f69b81e755e163fdf6c41a2b5e07c0",
+            "_score": 0.62348634,
+            "info": {
+                "contact": {
+                    "email": "vincent.emonet@maastrichtuniversity.nl",
+                    "name": "Vincent Emonet",
+                    "x-role": "responsible developer"
+                },
+                "description": "Get predicted targets for a given entity: the **potential drugs treating a given disease**, or the **potential diseases a given drug could treat**.\n            \n\nUse the **predict** and **similarity** operations to easily retrieve predictions for a given entity (output format complying with the [BioThings Explorer](https://x-bte-extension.readthedocs.io/en/latest/x-bte-kgs-operations.html)).\n            \n\nPredictions are currently produced using the [PREDICT method](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3159979/) from the [fair-workflows/openpredict](https://github.com/fair-workflows/openpredict) project.\n            \n\nMore documentation available at [github.com/MaastrichtU-IDS/translator-openpredict](https://github.com/MaastrichtU-IDS/translator-openpredict)\n            \n\n[![Test production API](https://github.com/MaastrichtU-IDS/translator-openpredict/actions/workflows/run-tests-prod.yml/badge.svg)](https://github.com/MaastrichtU-IDS/translator-openpredict/actions/workflows/run-tests-prod.yml)\n            \n\nService supported by the [NCATS Translator project](https://ncats.nih.gov/translator/about)",
+                "license": {
+                    "name": "MIT license",
+                    "url": "https://opensource.org/licenses/MIT"
+                },
+                "termsOfService": "https://raw.githubusercontent.com/MaastrichtU-IDS/translator-openpredict/master/LICENSE",
+                "title": "OpenPredict API",
+                "version": "1.0.0",
+                "x-logo": {
+                    "url": "https://raw.githubusercontent.com/MaastrichtU-IDS/dsri-documentation/master/website/static/img/um_logo.png"
+                },
+                "x-translator": {
+                    "biolink-version": "1.8.2",
+                    "component": "KP",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-translator/"
+                    },
+                    "infores": "infores:openpredict",
+                    "team": [
+                        "Clinical Data Provider"
+                    ]
+                },
+                "x-trapi": {
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-trapi/"
+                    },
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production OpenPredict API",
+                    "url": "https://openpredict.semanticscience.org",
+                    "x-location": "IDS",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "855adaa128ce5aa58a091d99e520d396",
+            "_score": 0.61127096,
+            "info": {
+                "contact": {
+                    "email": "luke.j.veenhuis@dartmouth.edu",
+                    "name": "Luke Veenhuis",
+                    "x-id": "LukeVeenhuis",
+                    "x-role": "responsible developer"
+                },
+                "description": "A Translator Reasoner API for the Connections Hypothesis Provider",
+                "license": {
+                    "name": "Apache 2.0",
+                    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+                },
+                "termsOfService": "https://github.com/di2ag/chp_api/blob/master/terms%20of%20service",
+                "title": "Connections Hypothesis Provider API",
+                "version": "2.0",
+                "x-reasoner_standard_version": "1.2.0",
+                "x-translator": {
+                    "component": "KP",
+                    "infores": "infores:connections-hypothesis",
+                    "team": [
+                        "Connections Hypothesis Provider"
+                    ]
+                },
+                "x-trapi": {
+                    "operations": [
+                        "bind",
+                        "fill",
+                        "complete_results",
+                        "lookup",
+                        "overlay"
+                    ],
+                    "url": "https://github.com/di2ag/chp_client",
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Pan-Cancer Production Server",
+                    "url": "http://chp.thayer.dartmouth.edu",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Pan-Cancer Production Server",
+                    "url": "http://chp-dev.thayer.dartmouth.edu",
+                    "x-maturity": "staging"
+                },
+                {
+                    "description": "Pan-Cancer Production Server",
+                    "url": "https://chp-api.ci.transltr.io",
+                    "x-maturity": "dev"
+                }
+            ]
+        },
+        {
+            "_id": "8f08d1446e0bb9c2b323713ce83e2bd3",
+            "_score": 0.59951526,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "Chunlei Wu",
+                    "x-id": "https://github.com/newgene",
+                    "x-role": "responsible developer"
+                },
+                "description": "Documentation of the MyChem.info chem query web services.  Learn more about [MyChem.info](http://MyChem.info/)",
+                "termsOfService": "http://MyChem.info/terms",
+                "title": "MyChem.info API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.8",
+                    "component": "KP",
+                    "infores": "infores:mychem-info",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://mychem.info/v1",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://mychem.info/v1",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "77ed27f111262d0289ed4f4071faa619",
+            "_score": 0.59951526,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the MGIgene2phenotype query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "MGIgene2phenotype API",
+                "version": "1.0",
+                "x-translator": {
+                    "component": "KP",
+                    "infores": "infores:biothings-mgi-g2p",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/mgigene2phenotype",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/mgigene2phenotype",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "1f47552dabd67351d4c625adb0a10d00",
+            "_score": 0.59951526,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the EBIgene2phenotype query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "EBIgene2phenotype API",
+                "version": "1.0",
+                "x-translator": {
+                    "component": "KP",
+                    "infores": "infores:biothings-ebi-gene2phenotype",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/ebigene2phenotype",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/ebigene2phenotype",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "a7f784626a426d054885a5f33f17d3f8",
+            "_score": 0.59951526,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the DISEASES query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "DISEASES API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.8",
+                    "component": "KP",
+                    "infores": "infores:biothings-diseases",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/DISEASES",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/DISEASES",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "51c178099fa2dc99b5d8fff8bf9f1a0d",
+            "_score": 0.59017575,
+            "info": {
+                "contact": {
+                    "email": "ct2865@cumc.columbia.edu",
+                    "name": "Casey Ta",
+                    "url": "http://chunhualab.org/",
+                    "x-role": "responsible developer"
+                },
+                "description": "The Columbia Open Health Data (COHD) TRAPI API provides access to associations derived from clinical data between\ndiseases, phenotypic features, drugs, procedures, and demographic features.\n\nCOHD was developed at the [Columbia University Department of Biomedical Informatics](https://www.dbmi.columbia.edu/)\nas a collaboration between the [Weng Lab](http://people.dbmi.columbia.edu/~chw7007/),\n[Tatonetti Lab](http://tatonettilab.org/), and the\n[NCATS Biomedical Data Translator](https://ncats.nih.gov/translator) program.\nThis work was supported in part by grants: NCATS OT2TR003434, NCATS OT3TR002027, NLM R01LM009886-08A1, and\nNIGMS R01GM107145.\n\nThe following external resources may be useful:\n[OHDSI](https://www.ohdsi.org/)\n[OMOP Common Data Model](https://github.com/OHDSI/CommonDataModel/wiki)\n[Athena](http://athena.ohdsi.org) (OMOP vocabularies, search, concept relationships, concept hierarchy)\n[Atlas](http://www.ohdsi.org/web/atlas/) (OMOP vocabularies, search, concept relationships, concept hierarchy,\nconcept sets)\n",
+                "license": {
+                    "name": "Apache 2.0",
+                    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+                },
+                "termsOfService": "http://cohd.nsides.io/terms/",
+                "title": "COHD TRAPI 1.2",
+                "version": "5.1.1",
+                "x-translator": {
+                    "biolink-version": "2.2.1",
+                    "component": "KP",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/\\ production/x-translator/"
+                    },
+                    "infores": "infores:cohd",
+                    "team": [
+                        "Clinical Data Provider"
+                    ]
+                },
+                "x-trapi": {
+                    "asyncquery": false,
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/\\ production/x-trapi/"
+                    },
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "COHD TRAPI Production Server",
+                    "url": "https://cohd.io/api/",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "COHD TRAPI Development Server",
+                    "url": "https://dev.cohd.io/api/",
+                    "x-maturity": "development"
+                }
+            ]
+        },
+        {
+            "_id": "875ba6bb674276255c4b62c756d616f3",
+            "_score": 0.5882462,
+            "info": {
+                "contact": {
+                    "email": "mduby@broadinstitute.org"
+                },
+                "description": "TRAPI 1.2 endpoint for the NCATS Biomedical Translator Genetics Data KP",
+                "license": {
+                    "name": "Apache 2.0",
+                    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+                },
+                "termsOfService": "https://github.com/broadinstitute/genetics-kp-dev/blob/master/LICENSE",
+                "title": "Genetics KP",
+                "version": "1.2.0",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/\\ production/x-translator/"
+                    },
+                    "infores": "infores:genetics-data-provider",
+                    "team": [
+                        "Genetics Provider"
+                    ]
+                },
+                "x-trapi": {
+                    "asyncquery": false,
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/\\ production/x-trapi/"
+                    },
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Default server",
+                    "url": "https://translator.broadinstitute.org/genetics_provider/trapi/v1.2",
+                    "x-location": "Broad Institute",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "8f76fc8ae4cca70daa1a887265ec4073",
+            "_score": 0.5700976,
+            "info": {
+                "contact": {
+                    "email": "translator@broadinstitute.org",
+                    "name": "Molecular Data Provider",
+                    "x-role": "responsible organization"
+                },
+                "description": "Molecular Data Provider for NCATS Biomedical Translator",
+                "license": {
+                    "name": "MIT License",
+                    "url": "https://github.com/broadinstitute/molecular-data-provider/blob/master/LICENSE"
+                },
+                "termsOfService": "https://github.com/broadinstitute/molecular-data-provider/blob/master/terms_of_service.md",
+                "title": "Molecular Data Provider for NCATS Biomedical Translator",
+                "version": "1.2.1.1",
+                "x-translator": {
+                    "biolink-version": "2.2.13",
+                    "component": "KP",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/\\ production/x-translator/"
+                    },
+                    "infores": "infores:molepro",
+                    "team": [
+                        "Molecular Data Provider"
+                    ]
+                },
+                "x-trapi": {
+                    "asyncquery": false,
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/\\ production/x-trapi/"
+                    },
+                    "operations": [
+                        "lookup",
+                        "annotate_nodes"
+                    ],
+                    "version": "1.2.1"
+                }
+            },
+            "servers": [
+                {
+                    "description": "TRAPI production service for MolePro",
+                    "url": "https://molepro-trapi.transltr.io/molepro/trapi/v1.2",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "TRAPI test service for MolePro",
+                    "url": "https://molepro-trapi.test.transltr.io/molepro/trapi/v1.2",
+                    "x-maturity": "test"
+                },
+                {
+                    "description": "TRAPI development service for MolePro",
+                    "url": "https://molepro-trapi.ci.transltr.io/molepro/trapi/v1.2",
+                    "x-maturity": "development"
+                },
+                {
+                    "description": "TRAPI development service for MolePro",
+                    "url": "https://translator.broadinstitute.org/molepro/trapi/v1.2"
+                }
+            ]
+        },
+        {
+            "_id": "f339b28426e7bf72028f60feefcd7465",
+            "_score": 0.56901217,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the Gene Ontology Cellular Component query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "Gene Ontology Cellular Component API",
+                "version": "1.0",
+                "x-translator": {
+                    "component": "KP",
+                    "infores": "infores:biothings-go-cc",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/go_cc",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/go_cc",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "cc857d5b7c8b7609b5bbb38ff990bfff",
+            "_score": 0.56901217,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the Gene Ontology Biological Process query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "Gene Ontology Biological Process API",
+                "version": "1.0",
+                "x-translator": {
+                    "component": "KP",
+                    "infores": "infores:biothings-go-bp",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/go_bp",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/go_bp",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "32f36164fabed5d3abe6c2fd899c9418",
+            "_score": 0.56901217,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the BioThings iDISK (integrated Dietary Supplement Knowledge Base) query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "BioThings iDISK API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.8",
+                    "component": "KP",
+                    "infores": "infores:biothings-idisk",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/idisk",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/idisk",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "34bad236d77bea0a0ee6c6cba5be54a6",
+            "_score": 0.56901217,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the Gene Ontology Molecular Activity query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "Gene Ontology Molecular Activity API",
+                "version": "1.0",
+                "x-translator": {
+                    "component": "KP",
+                    "infores": "infores:biothings-go-mf",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/go_mf",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/go_mf",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "acca268be3645a24556b81cc15ce0e9a",
+            "_score": 0.55774313,
+            "info": {
+                "contact": {
+                    "email": "edeutsch@systemsbiology.org"
+                },
+                "description": "TRAPI 1.2 endpoint for the NCATS Biomedical Translator KP called RTX KG2",
+                "license": {
+                    "name": "Apache 2.0",
+                    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+                },
+                "termsOfService": "https://github.com/RTXteam/RTX/blob/master/LICENSE",
+                "title": "RTX KG2",
+                "version": "2.7.5.0",
+                "x-translator": {
+                    "biolink-version": "2.2.11",
+                    "component": "KP",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-translator/"
+                    },
+                    "infores": "infores:rtx-kg2",
+                    "team": [
+                        "Expander Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "asyncquery": false,
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-trapi/"
+                    },
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.1"
+                }
+            },
+            "servers": [
+                {
+                    "description": "ARAX Translator Reasoner API",
+                    "url": "https://arax.ncats.io/api/rtxkg2/v1.2",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "02af7d098ab304e80d6f4806c3527027",
+            "_score": 0.542351,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the Multiomics Wellness KP query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "Multiomics Wellness KP API",
+                "version": "1.1",
+                "x-translator": {
+                    "biolink-version": "2.2.8",
+                    "component": "KP",
+                    "infores": "infores:biothings-multiomics-wellness",
+                    "team": [
+                        "Multiomics Provider",
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/multiomics_wellness_kp",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "https://biothings.ncats.io/multiomics_wellness_kp",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "e3edd325c76f2992a111b43a907a4870",
+            "_score": 0.542351,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the BioThings DGIdb query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "BioThings DGIdb API",
+                "version": "4.2.0",
+                "x-translator": {
+                    "biolink-version": "2.2.13",
+                    "component": "KP",
+                    "infores": "infores:biothings-dgidb",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/dgidb",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/dgidb",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "5be0f321a829792e934545998b9c6afe",
+            "_score": 0.542351,
+            "info": {
+                "contact": {
+                    "email": "william.baumgartner@cuanschutz.edu",
+                    "name": "Bill Baumgartner",
+                    "x-id": "https://github.com/bill-baumgartner/",
+                    "x-role": "responsible developer"
+                },
+                "description": "Documentation of the Text Mining Provider concept cooccurrence query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "Text Mining CO-OCCURRENCE API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:text-mining-provider-cooccurrence",
+                    "team": [
+                        "Text Mining Provider",
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/text_mining_co_occurrence_kp",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/text_mining_co_occurrence_kp/",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "5219cefb9d2b8d5df08c3a956fdd20f3",
+            "_score": 0.542351,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the TCGA Mutation Frequency KP query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "TCGA Mutation Frequency KP API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:biothings-tcga-mut-freq",
+                    "team": [
+                        "Multiomics Provider",
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/tcga_mut_freq_kp",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/tcga_mut_freq_kp",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "1d288b3a3caf75d541ffaae3aab386c8",
+            "_score": 0.531082,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the BioThings SEMMEDDB query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "BioThings SEMMEDDB API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.13",
+                    "component": "KP",
+                    "infores": "infores:biothings-semmeddb",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production server",
+                    "url": "https://biothings.ncats.io/semmeddb",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "89054eff6ee6d91641d278d9ffdb3993",
+            "_score": 0.531082,
+            "info": {
+                "contact": {
+                    "email": "vincent.emonet@maastrichtuniversity.nl",
+                    "name": "Vincent Emonet",
+                    "x-role": "responsible developer"
+                },
+                "description": "Knowledge Collaboratory API, to publish [Nanopublications](http://nanopub.org/wordpress/) and query the Nanopublications network using [Translator Reasoner API](https://github.com/NCATSTranslator/ReasonerAPI) queries (TRAPI).\n\nTo login, click on the **Authorize 🔓️** button, and use the 2nd option: **OpenIdConnect (OAuth2, implicit)**\n\nYou can access the web application at [https://collaboratory.semanticscience.org](https://collaboratory.semanticscience.org)\n\n[![Test production API](https://github.com/MaastrichtU-IDS/knowledge-collaboratory/actions/workflows/run-tests-prod.yml/badge.svg)](https://github.com/MaastrichtU-IDS/knowledge-collaboratory/actions/workflows/run-tests-prod.yml)\n\nThis service is supported by the [NIH NCATS Biomedical Data Translator project](https://ncats.nih.gov/translator/about)",
+                "license": {
+                    "name": "MIT license",
+                    "url": "https://opensource.org/licenses/MIT"
+                },
+                "termsOfService": "https://raw.githubusercontent.com/MaastrichtU-IDS/translator-openpredict/master/LICENSE",
+                "title": "Knowledge Collaboratory API",
+                "version": "1.0.0",
+                "x-logo": {
+                    "url": "https://raw.githubusercontent.com/MaastrichtU-IDS/dsri-documentation/master/website/static/img/um_logo.png"
+                },
+                "x-translator": {
+                    "biolink-version": "1.8.2",
+                    "component": "KP",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-translator/"
+                    },
+                    "infores": "infores:knowledge-collaboratory",
+                    "team": [
+                        "Clinical Data Provider"
+                    ]
+                },
+                "x-trapi": {
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-trapi/"
+                    },
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production Knowledge Collaboratory API",
+                    "url": "https://api.collaboratory.semanticscience.org",
+                    "x-location": "IDS",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "adf20dd6ff23dfe18e8e012bde686e31",
+            "_score": 0.518849,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "BioThings Team",
+                    "x-id": "https://github.com/biothings",
+                    "x-role": "responsible developers"
+                },
+                "description": "Documentation of the Drug Response KP query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "Multiomics BigGIM-DrugResponse KP API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.13",
+                    "component": "KP",
+                    "infores": "infores:biothings-multiomics-biggim-drugresponse",
+                    "team": [
+                        "Multiomics Provider",
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/drug_response_kp",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/drug_response_kp",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "dc91716f44207d2e1287c727f281d339",
+            "_score": 0.5043544,
+            "info": {
+                "contact": {
+                    "email": "asu@scripps.edu",
+                    "name": "Andrew Su",
+                    "url": "https://github.com/andrewsu"
+                },
+                "description": "A ReasonerStdAPI for BioThings Explorer",
+                "termsOfService": "https://biothings.io/about",
+                "title": "BioThings Explorer ReasonerStdAPI",
+                "version": "2.8.1",
+                "x-translator": {
+                    "biolink-version": "2.2.13",
+                    "component": "ARA",
+                    "infores": "infores:biothings-explorer",
+                    "team": [
+                        "Exploring Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "asyncquery": true,
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production server",
+                    "url": "https://api.bte.ncats.io/v1",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Dev server",
+                    "url": "https://dev.api.bte.ncats.io/v1",
+                    "x-maturity": "development"
+                },
+                {
+                    "description": "CI deployment server",
+                    "url": "https://bte.ci.transltr.io/v1",
+                    "x-maturity": "staging"
+                }
+            ]
+        },
+        {
+            "_id": "36f82f05705c317bac17ddae3a0ea2f0",
+            "_score": 0.5043544,
+            "info": {
+                "contact": {
+                    "email": "help@biothings.io",
+                    "name": "Chunlei Wu",
+                    "x-id": "https://github.com/newgene",
+                    "x-role": "responsible developer"
+                },
+                "description": "Separate registration for the BTE's Service-Provider-specific endpoints. This allows others  to query all of the non-TRAPI APIs that Service Provider ingests through x-bte annotation -  through a TRAPI setup. ",
+                "termsOfService": "https://biothings.io/about",
+                "title": "Service Provider TRAPI",
+                "version": "2.8.1",
+                "x-translator": {
+                    "biolink-version": "2.2.13",
+                    "component": "KP",
+                    "infores": "infores:biothings-explorer",
+                    "team": [
+                        "Service Provider"
+                    ]
+                },
+                "x-trapi": {
+                    "asyncquery": true,
+                    "operations": [
+                        "lookup"
+                    ],
+                    "version": "1.2.0"
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production server",
+                    "url": "https://api.bte.ncats.io/v1/team/Service%20Provider",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Dev server",
+                    "url": "https://dev.api.bte.ncats.io/v1/team/Service%20Provider",
+                    "x-maturity": "development"
+                },
+                {
+                    "description": "CI deployment server",
+                    "url": "https://bte.ci.transltr.io/v1/team/Service%20Provider",
+                    "x-maturity": "staging"
+                }
+            ]
+        },
+        {
+            "_id": "978fe380a147a8641caf72320862697b",
+            "_score": 0.49797606,
+            "info": {
+                "contact": {
+                    "email": "william.baumgartner@cuanschutz.edu",
+                    "name": "Bill Baumgartner",
+                    "x-id": "https://github.com/bill-baumgartner/",
+                    "x-role": "responsible developer"
+                },
+                "description": "Documentation of the Text Mining Targeted Association query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "Text Mining Targeted Association API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.8",
+                    "component": "KP",
+                    "infores": "infores:text-mining-provider-targeted",
+                    "team": [
+                        "Text Mining Provider",
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/text_mining_targeted_association",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "http://biothings.ncats.io/text_mining_targeted_association",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "43af91b3d7cae43591083bff9d75c6dd",
+            "_score": 0.48670703,
+            "info": {
+                "contact": {
+                    "name": "UniProt (EBI)",
+                    "url": "https://www.ebi.ac.uk/proteins/api/doc/contact.html"
+                },
+                "description": "The Proteins REST API provides access to key biological data from UniProt and data from Large Scale Studies (LSS) mapped to UniProt. The services provide sequence feature annotations from UniProtKB, variation data from UniProtKB and mapped from LSS (1000 Genomes, ExAC, ClinVar, TCGA, COSMIC, TOPMed and gnomAD), proteomics data mapped from MS-proteomics repositories (PeptideAtlas, MaxQB, EPD and ProteomicsDB), antigen sequences mapped from Human Protein Atlas (HPA), proteomes and taxonomy search and retrieval, reference genome coordinate mappings and data from UniParc. Go to https://www.ebi.ac.uk/proteins/api/doc/ to learn more.",
+                "termsOfService": "https://www.ebi.ac.uk/about/terms-of-use/",
+                "title": "EBI Proteins API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.13",
+                    "component": "KP",
+                    "infores": "infores:ebi-proteins",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "url": "https://www.ebi.ac.uk/proteins/api",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "9ee398a738916a98b612068cc022454f",
+            "_score": 0.48670703,
+            "info": {
+                "contact": {
+                    "email": "akoleti@med.miami.edu",
+                    "name": "UM BD2K-LINCS DCIC",
+                    "x-id": "http://lincsportal.ccs.miami.edu/",
+                    "x-role": "responsible organization"
+                },
+                "description": "Documentation of the LINCS Data Portal web services. Learn more about [LINCS Data Portal](http://lincsportal.ccs.miami.edu/dcic-portal/)",
+                "termsOfService": "http://lincsportal.ccs.miami.edu/dcic-portal/#/terms",
+                "title": "LINCS Data Portal API",
+                "version": "1.0",
+                "x-translator": {
+                    "biolink-version": "2.2.13",
+                    "component": "KP",
+                    "infores": "infores:lincs",
+                    "team": [
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production server",
+                    "url": "http://lincsportal.ccs.miami.edu/dcic/api/",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "d22b657426375a5295e7da8a303b9893",
+            "_score": 0.48670703,
+            "info": {
+                "contact": {
+                    "email": "cjm@berkeleybop.org",
+                    "name": "Chris Mungall",
+                    "x-id": "https://github.com/cmungall",
+                    "x-role": "responsible developer"
+                },
+                "description": "API integration layer for linked biological objects.",
+                "termsOfService": "https://github.com/monarch-initiative/biolink-api/",
+                "title": "BioLink API",
+                "version": "1.1.14",
+                "x-translator": {
+                    "biolink-version": "2.2.13",
+                    "component": "KP",
+                    "infores": "infores:biolink-api",
+                    "team": [
+                        "Standards Reference Implementation Team"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Production server",
+                    "url": "https://api.monarchinitiative.org/api",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "d86a24f6027ffe778f84ba10a7a1861a",
+            "_score": 0.4793144,
+            "info": {
+                "contact": {
+                    "email": "ryan.roper@isbscience.org",
+                    "name": "Ryan Roper",
+                    "x-id": "https://github.com/rtroper",
+                    "x-role": "responsible developer"
+                },
+                "description": "Documentation of the EHR Clinical Risk KP query web services.",
+                "termsOfService": "https://biothings.io/about",
+                "title": "Clinical Risk KP API",
+                "version": "1.1",
+                "x-translator": {
+                    "biolink-version": "2.1.0",
+                    "component": "KP",
+                    "infores": "infores:biothings-multiomics-clinical-risk",
+                    "team": [
+                        "Multiomics Provider",
+                        "Service Provider"
+                    ]
+                }
+            },
+            "servers": [
+                {
+                    "description": "Encrypted Production server",
+                    "url": "https://biothings.ncats.io/clinical_risk_kp",
+                    "x-maturity": "production"
+                },
+                {
+                    "description": "Production server",
+                    "url": "https://biothings.ncats.io/clinical_risk_kp",
+                    "x-maturity": "production"
+                }
+            ]
+        },
+        {
+            "_id": "e3bebc6620243bd978a6b92d39c0318d",
+            "_score": 0.46804535,
+            "info": {
+                "contact": {
+                    "email": "edeutsch@systemsbiology.org"
+                },
+                "description": "TRAPI 1.2 endpoint for the NCATS Biomedical Translator Reasoner called ARAX",
+                "license": {
+                    "name": "Apache 2.0",
+                    "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+                },
+                "termsOfService": "https://github.com/RTXteam/RTX/blob/master/LICENSE",
+                "title": "ARAX Translator Reasoner",
+                "version": "1.2.8",
+                "x-translator": {
+                    "biolink-version": "2.2.11",
+                    "component": "ARA",
+                    "externalDocs": {
+                        "description": "The values for component and team are restricted according to this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-translator/"
+                    },
+                    "infores": "infores:arax",
+                    "team": [
+                        "Expander Agent"
+                    ]
+                },
+                "x-trapi": {
+                    "asyncquery": true,
+                    "externalDocs": {
+                        "description": "The values for version are restricted according to the regex in this external JSON schema. See schema and examples at url",
+                        "url": "https://github.com/NCATSTranslator/translator_extensions/blob/production/x-trapi/"
+                    },
+                    "operations": [
+                        "lookup",
+                        "lookup_and_score",
+                        "overlay_compute_ngd",
+                        "overlay_compute_jaccard",
+                        "overlay_fisher_exact_test",
+                        "overlay_connect_knodes",
+                        "filter_results_top_n",
+                        "bind",
+                        "fill",
+                        "filter_kgraph_orphans",
+                        "filter_kgraph_top_n",
+                        "filter_kgraph_std_dev",
+                        "filter_kgraph_percentile",
+                        "filter_kgraph_discrete_kedge_attribute",
+                        "filter_kgraph_continuous_kedge_attribute",
+                        "sort_results_score",
+                        "sort_results_edge_attribute",
+                        "sort_results_node_attribute",
+                        "annotate_nodes",
+                        "score",
+                        "complete_results"
+                    ],
+                    "version": "1.2.1"
+                }
+            },
+            "servers": [
+                {
+                    "description": "ARAX Translator Reasoner API",
+                    "url": "https://arax.ncats.io/api/arax/v1.2",
+                    "x-maturity": "production"
+                }
+            ]
+        }
+    ]
+}

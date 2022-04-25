@@ -1,5 +1,68 @@
 
 
+20220420 - mit sv nn talk
+- building images from 2 read sections of the genome 
+  - one for each axis 
+  - relation of position of each section to each other is a hyperparameter of the nn
+    - distance depends on the type of sv and sizes we are trying to identify
+  - from the 2d image, use cnn 
+  - get different channels from each sv type 
+
+-  cheat sheet
+  - het - heterozygous
+  - hom - homozygous
+  - inv - inversion
+  - del - deletion 
+  - dup - duplication 
+  - tra - translaocation 
+  
+
+- model 
+  - 4 layer stacked hourglass network 
+  - hourglass modeul
+    - does post processing using residual layer 
+  - look at newell 2016 arch for human pose estimation paper 
+  - fix the input image size to 256x256
+    - change resolution of section size to pixel (hyperparameter?)
+  - the section map to pixel translator function is designed for each sequencing platform 
+
+- misc 
+  - cost diff between short and long read sequencing 
+    - not all software can handle long reads 
+
+
+
+20220407 - deerfield presentation
+- eeroms's law of drug developmeny costs
+ - about $1B to $2.5B for druge discovery 
+ - about 1.3% of gene tartget idea to success 
+ - antobody progs more successful than small molecule 
+ - supporting genetic evidence leads to 2.5x higher success rate from phase 1 to 3 success
+   - also most prescribed drugs (53%)
+   - 6 of 7 top grossing drugs 
+- open targets, locus to gene score 
+- best data 
+  - OMIM, genebass
+    - LoF inportant
+    - GoF not very significant 
+  - intogen for somatic/cancer
+- gwas 
+  - can't find anotation that makes gene hit better target 
+  - as gwas grows, number of genes associated with traits increases, hence conundrum 
+  - as gwas get better, the number of loci doesn't increase as fast as the strength ofg the existing signals 
+- symptom managing drug more likely to have alternate rx uses
+  - diease managing 1 use 
+  - the less appaorved uses of drug, the more genetic evidence 
+    - the more, the less
+- mAb - monoclonal anti body
+
+
+- lookl at
+  - if drug approved used for different traits, look how similar traits are 
+
+
+
+
 20211025 - NN in cell types (sara mostafavi)
   Sara Mostafavi
   Associate Professor, Paul Allen School of Computer Science and Engineering, University of Washington
