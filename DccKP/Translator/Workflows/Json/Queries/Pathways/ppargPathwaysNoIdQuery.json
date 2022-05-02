@@ -23,15 +23,6 @@
           "categories": [
             "biolink:Pathway"
           ],
-          "ids": [
-            "GO:0045444",
-            "GO:0050873",
-            "GO:0050872",
-            "GO:0045598",
-            "GO:1903444",
-            "GO:0045599",
-            "GO:0045600"
-          ],
           "constraints": [],
           "is_set": false
         }

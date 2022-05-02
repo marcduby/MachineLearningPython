@@ -5,17 +5,17 @@
         "e01": {
           "constraints": [],
           "object": "pathway",
-          "subject": "gene"
+          "subject": "disease"
         }
       },
       "nodes": {
-        "gene": {
+        "disease": {
           "categories": [
-            "biolink:Gene"
+            "biolink:Disease"
           ],
           "constraints": [],
           "ids": [
-            "NCBIGene:5468"
+            "MONDO:0005148"
           ],
           "is_set": false
         },

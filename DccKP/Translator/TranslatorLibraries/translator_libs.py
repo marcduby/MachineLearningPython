@@ -284,6 +284,61 @@ def get_trapi_kps(json_servers, log=True):
     return map_servers.values()
 
 
+def is_string_in(string_search, element, log=False):
+    ''' 
+    find the string if in the tree structure; return true if found
+    '''
+    # initialize
+    is_contained = False
+
+    # log
+    if log:
+        print("looking for string: {}".format(string_search))    
+
+    # loop of dict or list
+    if isinstance(element, list):
+        for child in element:
+            if is_string_in(string_search, child):
+                return True
+    elif isinstance(element, dict):
+        for child in element.values():
+            if is_string_in(string_search, child):
+                return True
+    else:
+        is_contained = string_search in str(element)
+
+    # return
+    return is_contained
+
+
+def find_all_instances_string(string_search, element, log=False):
+    ''' 
+    find all the instances of the string if in the tree structure; return list
+    '''
+    # initialize
+    list_result = []
+
+    # log
+    if log:
+        print("looking for string: {}".format(string_search))    
+
+    # loop of dict or list
+    if isinstance(element, list):
+        for child in element:
+            list_result += find_all_instances_string(string_search, child, log)
+
+    elif isinstance(element, dict):
+        for child in element.values():
+            list_result += find_all_instances_string(string_search, child, log)
+                
+    else:
+        if string_search in str(element):
+            list_result.append(element)
+
+
+    # return
+    return list_result
+
 if __name__ == "__main__":
     name_test = "PTPA"
     curie_id = find_ontology(name_test, 'NCBIGene', debug=True)

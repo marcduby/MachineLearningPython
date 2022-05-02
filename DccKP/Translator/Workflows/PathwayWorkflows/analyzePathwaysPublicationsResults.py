@@ -28,6 +28,8 @@ count_max = 500
 location_json_pparg_pathways = location_inputs + "ppargPathwaysQuery.json"
 location_json_t2d_pathways = location_inputs + "t2dPathwaysQuery.json"
 location_json_pparg_t2d = location_inputs + "t2dPpargQuery.json"
+location_json_pparg_pathways_noId = location_inputs + "ppargPathwaysNoIdQuery.json"
+location_json_t2d_pathways_noId = location_inputs + "t2dPathwaysNoIdQuery.json"
 
 # read the file
 with open(location_servers) as file_json: 
@@ -43,6 +45,10 @@ os.mkdir(location_results)
 
 # load the json inputs
 map_input_json = {}
+with open(location_json_pparg_pathways_noId) as file_json: 
+    map_input_json['ppargPathwaysNoId'] = json.load(file_json)
+with open(location_json_t2d_pathways_noId) as file_json: 
+    map_input_json['t2dPathwaysNoId'] = json.load(file_json)
 with open(location_json_pparg_pathways) as file_json: 
     map_input_json['ppargPathways'] = json.load(file_json)
 with open(location_json_t2d_pathways) as file_json: 
