@@ -4,24 +4,20 @@
             "edges": {
                 "e00": {
                     "subject": "n01",
-                    "object": "n00",
-                    "predicates": [
-                        "biolink:expressed_in"
-                    ]
-                }
+                    "object": "n00"                }
             },
             "nodes": {
                 "n00": {
+                    "ids": [
+                        "NCBIGene:5354"
+                    ],
                     "categories": [
-                        "biolink:NamedThing"
+                        "biolink:Gene"
                     ]
                 },
                 "n01": {
                     "categories": [
-                        "biolink:Disease"
-                    ],
-                    "ids": [
-                        "MONDO:0004496"
+                        "biolink:Cell"
                     ]
                 }
             }
