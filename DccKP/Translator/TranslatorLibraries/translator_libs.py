@@ -339,6 +339,25 @@ def find_all_instances_string(string_search, element, log=False):
     # return
     return list_result
 
+def count_trapi_results_edges(json_result, log=False):
+    '''
+    will take a trapi json result file and return the result edges in the graph
+    '''
+    count = 0
+
+    if json_result.get('message'):
+        if json_result.get('message').get('knowledge_graph'):
+            if json_result.get('message').get('knowledge_graph').get('edges'):
+                count = len(json_result.get('message').get('knowledge_graph').get('edges'))
+
+    # log
+    if log:
+        print("found {} edge results".format(count))
+
+    # return
+    return count
+
+
 if __name__ == "__main__":
     name_test = "PTPA"
     curie_id = find_ontology(name_test, 'NCBIGene', debug=True)

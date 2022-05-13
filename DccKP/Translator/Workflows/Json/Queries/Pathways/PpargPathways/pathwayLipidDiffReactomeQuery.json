@@ -1,0 +1,33 @@
+{
+    "message": {
+        "query_graph": {
+            "edges": {
+                "e0": {
+                    "constraints": [],
+                    "exclude": false,
+                    "object": "disease",
+                    "subject": "pathway"
+                }
+            },
+            "nodes": {
+                "pathway": {
+                    "categories": [
+                        "biolink:Pathway"
+                    ],
+                    "constraints": [],
+                    "ids": [
+                        "REACT:R-HSA-381340"
+                    ],
+                    "is_set": false
+                },
+                "disease": {
+                    "categories": [
+                        "biolink:Disease"
+                    ],
+                    "constraints": [],
+                    "is_set": false
+                }
+            }
+        }
+    }
+}
