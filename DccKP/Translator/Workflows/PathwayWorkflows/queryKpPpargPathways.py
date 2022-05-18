@@ -38,18 +38,24 @@ os.mkdir(location_results)
 map_input_json = {}
 # with open(location_input_query.format("ppargPathwaysReactomeQuery.json")) as file_json: 
 #     map_input_json['ppargReactomeLipidDiff'] = json.load(file_json)
-# with open(location_input_query.format("ppargPathwaysGo0050872Query.json")) as file_json: 
-#     map_input_json['ppargGo0050872LipidDiff'] = json.load(file_json)
-# with open(location_input_query.format("ppargPathwaysGo0045444Query.json")) as file_json: 
-#     map_input_json['ppargGo0045444LipidDiff'] = json.load(file_json)
+with open(location_input_query.format("ppargPathwaysGo0050872Query.json")) as file_json: 
+    map_input_json['ppargGo0050872LipidDiff'] = json.load(file_json)
+with open(location_input_query.format("ppargPathwaysGo0045444Query.json")) as file_json: 
+    map_input_json['ppargGo0045444LipidDiff'] = json.load(file_json)
 # with open(location_input_query.format("ppargPathwaysUmlsQuery.json")) as file_json: 
 #     map_input_json['ppargUmlsLipidDiff'] = json.load(file_json)
 # with open(location_input_query.format("t2dPathwaysReactomeQuery.json")) as file_json: 
 #     map_input_json['t2dReactomeLipidDiff'] = json.load(file_json)
 # with open(location_input_query.format("pathwayLipidDiffReactomeQuery.json")) as file_json: 
 #     map_input_json['reactomeLipidDiff'] = json.load(file_json)
-with open(location_input_query.format("pathwaysReactomeToGoQuery.json")) as file_json: 
-    map_input_json['pathwaysReactomeToGo'] = json.load(file_json)
+
+# reactome to go translation
+# with open(location_input_query.format("pathwaysReactomeToGoQuery.json")) as file_json: 
+#     map_input_json['pathwaysReactomeToGo'] = json.load(file_json)
+
+# superset of cell differentiation for GO
+with open(location_input_query.format("ppargPathwaysGo0030154Query.json")) as file_json: 
+    map_input_json['ppargGo0030154LipidDiff'] = json.load(file_json)
 
 # loop through servers
 for trapi in list_servers:

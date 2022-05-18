@@ -23,7 +23,11 @@ location_results = dir_data + "Translator/Workflows/PathwayPpargT2d/Results/" + 
 location_inputs = dir_code + "MachineLearningPython/DccKP/Translator/Workflows/Json/Queries/Pathways/"
 file_result = "{}_{}_results.json"
 dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220511140027"
-dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220513103246"
+dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220513103654"
+dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220516140102"
+dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220516150723"
+dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220516204039"
+
 # location_ara_results = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220511134655/"
 
 
