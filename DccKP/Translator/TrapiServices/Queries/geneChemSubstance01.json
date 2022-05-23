@@ -1,0 +1,27 @@
+{
+    "query_graph": {
+        "nodes": {
+            "n2": {
+                "ids": [
+                    "ENSEMBL:ENSG00000213699"
+                ],
+                "name": "Gene"
+            },
+            "n3": {
+                "categories": [
+                    "biolink:ChemicalSubstance"
+                ],
+                "name": "Chemical Substance"
+            }
+        },
+        "edges": {
+            "e2": {
+                "subject": "n3",
+                "object": "n2",
+                "predicates": [
+                    "biolink:related_to"
+                ]
+            }
+        }
+    }
+}

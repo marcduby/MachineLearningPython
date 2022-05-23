@@ -1,0 +1,25 @@
+{
+    "message": {
+        "query_graph": {
+            "edges": {
+                "e00": {
+                    "subject": "gene",
+                    "object": "chemical"
+                }
+            },
+            "nodes": {
+                "chemical": {
+                    "categories": [
+                        "biolink:ChemicalEntity"
+                    ]
+                },
+                "gene": {
+                    "categories": [
+                        "biolink:Gene"
+                    ]
+                }
+            }
+        }
+    }
+}
+

@@ -16,6 +16,40 @@ url_name_search = 'https://name-resolution-sri.renci.org/lookup?string={}'
 url_node_normalizer="https://nodenormalization-sri.renci.org/get_normalized_nodes?conflate=true"
 
 # methods
+def translate_to_ontology_id(list_input, ontology_prefix, sort_by_ontology=False, log=False):
+    '''
+    translate array of values using the translator name resolver
+    will return multiple rows if multiple results returned for one name
+    ex: 
+        list_test_result = translate_to_ontology_id(list_test, 'NCBIGene', sort_by_ontology=True)
+    get:
+        [('MT-ND2', 'NCBIGene:56168'), ('MT-ND2', 'NCBIGene:387315')]
+    '''
+    # initialize
+    list_result = []
+    url_name_resolver = "https://name-resolution-sri.renci.org/lookup?string={}"
+
+    # query for the list of names
+    for name in list_input:
+        url_call = url_name_resolver.format(name)
+        try:
+            response = requests.post(url_call)
+            output_json = response.json()
+        except ValueError:
+            print("got json error for {}, so skip".format(name))
+            continue
+
+        # parse
+        for key, value in output_json.items():
+            if ontology_prefix in key:
+                list_result.append((name, key))
+
+    if sort_by_ontology:
+        list_result.sort(key = lambda x: int(x[1].split(":")[1]))
+
+    # return
+    return list_result
+
 def get_curie_names(list_curies, log=False):
     ''' method to return list of tuples for ID and the name of the disease '''
     list_result = []
@@ -158,7 +192,9 @@ def build_trapi_query_node(list_source, list_source_categories, log=False):
     return node
 
 def recursively_find_source_tuples(input_object, type_map, list_elements, level=0, log=False):
-    ''' recursively go through map to find data of type given and pull list elements in tuples '''
+    ''' 
+    recursively go through map to find data of type given and pull list elements in tuples 
+    '''
     # initialize
     list_result = []
 
@@ -208,7 +244,9 @@ def recursively_find_source_tuples(input_object, type_map, list_elements, level=
     return list_result
 
 def find_source_tuple_counts(input_object, type_map, list_elements, log=False):
-    ''' recursively go through map to find data of type given and pull list elements in tuples '''
+    ''' 
+    recursively go through map to find data of type given and pull list elements in tuples 
+    '''
     # initialize
     map_result = {}
     list_result = []
