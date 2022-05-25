@@ -17,13 +17,13 @@ logger = logging.getLogger(__name__)
 dir_code = "/home/javaprog/Code/PythonWorkspace/"
 dir_code = "/Users/mduby/Code/WorkspacePython/"
 dir_data = "/home/javaprog/Data/Broad/"
+dir_data = "/Users/mduby//Data/Broad/"
 sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/Translator/TranslatorLibraries')
 import translator_libs as tl
 location_servers = dir_code + "MachineLearningPython/DccKP/Translator/Misc/Json/trapiListServices.json"
 date_now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-location_results = dir_data + "Translator/Workflows/PathwayPpargT2d/Results/" + date_now
-location_inputs = dir_code + "MachineLearningPython/DccKP/Translator/Workflows/Json/Queries/Pathways/"
-file_result = "{}_{}_results.json"
+location_results = dir_data + "Translator/Workflows/PathwayPpargT2d/SenmedDb/"
+file_result = location_results + "papersSenmedDb.csv"
 url_biothings_senmeddb = "https://biothings.ncats.io/semmeddb/query?q=pmid:{}"
 max_count = 200
 
@@ -38,7 +38,7 @@ map_papers['10622252'] = "Dominant negative mutations in human PPARgamma associa
 map_papers['9806549'] = "A Pro12Ala substitution in PPARgamma2 associated with decreased receptor activity, lower body mass index and improved insulin sensitivity, Deeb"
 map_papers['25157153'] = "Rare variants in PPARG with decreased activity in adipocyte differentiation are associated with increased risk of type 2 diabetes, Majithia"
 
-def query_biothings(paper_id, log=False):
+def query_biothings(paper_id, paper_name, log=False):
     ''' 
     find the journal if in the results
     '''
@@ -64,14 +64,14 @@ def query_biothings(paper_id, log=False):
         print("GOT ERROR: skipping")
 
     # pick put the data
-    map_result = {'id': paper_id, 'predicate': None, 'subject': None, 'subject_type': None, 'object': None, 'object_type': None}
+    map_result = {'pubmed_id': paper_id, 'title': paper_name[0:20], 'predicate': None, 'subject': None, 'subject_type': None, 'object': None, 'object_type': None}
     if json_output:
         if isinstance(json_output, dict):
             if json_output.get('hits'):
                 for child in json_output.get('hits'):
                     is_found = True
                     map_result = child.get('predicate')
-                    map_result = {'id': paper_id, 'predicate': child.get('predicate'), 'subject': child.get('subject').get('name'), 'subject_type': child.get('subject').get('semantic_type_name'),
+                    map_result = {'pubmed_id': paper_id, 'title': paper_name[0:20], 'predicate': child.get('predicate'), 'subject': child.get('subject').get('name'), 'subject_type': child.get('subject').get('semantic_type_name'),
                         'object': child.get('object').get('name'), 'object_type': child.get('object').get('semantic_type_name'),}
                     list_results.append(map_result)
 
@@ -88,13 +88,13 @@ if __name__ == "__main__":
     list_result = []
 
     # loop through the paper ids
-    for key, values in map_papers.items():
+    for key, value in map_papers.items():
         # test the max count
         if count < max_count:
             count += 1
 
             # get the biothings data for the paper
-            list_temp = query_biothings(key, log=True)
+            list_temp = query_biothings(key, value, log=True)
 
             # add to the results
             list_result = list_result + list_temp
@@ -110,4 +110,7 @@ if __name__ == "__main__":
     with pd.option_context('display.max_rows', 999):
         print (df_papers)
 
+    # write out the file
+    df_papers.to_csv(file_result, sep='\t')
+    print("wrote out the file to: {}".format(file_result))
 
