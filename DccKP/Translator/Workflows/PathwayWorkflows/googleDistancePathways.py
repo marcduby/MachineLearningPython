@@ -13,10 +13,10 @@ import csv
 # constants
 handler = logging.StreamHandler(sys.stdout)
 logger = logging.getLogger(__name__)
-dir_code = "/home/javaprog/Code/PythonWorkspace/"
 dir_code = "/Users/mduby/Code/WorkspacePython/"
-dir_data = "/home/javaprog/Data/Broad/"
+dir_code = "/home/javaprog/Code/PythonWorkspace/"
 dir_data = "/Users/mduby/Data/Broad/"
+dir_data = "/home/javaprog/Data/Broad/"
 sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/Translator/TranslatorLibraries')
 import translator_libs as tl
 location_servers = dir_code + "MachineLearningPython/DccKP/Translator/Misc/Json/trapiListServices.json"
@@ -100,11 +100,12 @@ if __name__ == "__main__":
                 google_distance = calculate_google_distance(list_pathway[i].get('list_genes'), list_pathway[j].get('list_genes'))
 
                 # print
-                if count % 500 == 0:
+                if count % 1000000 == 0:
                     print("{} - for {}/{} got GD: {}".format(count, list_pathway[i].get('id'), list_pathway[j].get('id'), google_distance))
 
                 # put the resukt in the result list
-                list_google_distance.append({'subject_id': list_pathway[i].get('id'), 'object_id': list_pathway[j].get('id'), 'google_distance': google_distance})
+                if google_distance > 0.0:
+                    list_google_distance.append({'subject_id': list_pathway[i].get('id'), 'object_id': list_pathway[j].get('id'), 'google_distance': google_distance})
 
 
     # write out the json result

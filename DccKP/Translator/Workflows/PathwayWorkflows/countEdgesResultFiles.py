@@ -27,6 +27,8 @@ dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDiffe
 dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220516140102"
 dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220516150723"
 dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220516204039"
+dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220518141322"
+dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220518144606"
 
 # location_ara_results = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/Results/20220511134655/"
 

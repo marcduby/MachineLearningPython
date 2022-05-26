@@ -14,8 +14,8 @@ import pandas as pd
 # constants
 handler = logging.StreamHandler(sys.stdout)
 logger = logging.getLogger(__name__)
-dir_code = "/home/javaprog/Code/PythonWorkspace/"
 dir_code = "/Users/mduby/Code/WorkspacePython/"
+dir_code = "/home/javaprog/Code/PythonWorkspace/"
 dir_data = "/home/javaprog/Data/Broad/"
 dir_data = "/Users/mduby//Data/Broad/"
 sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/Translator/TranslatorLibraries')
