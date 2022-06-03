@@ -1,0 +1,29 @@
+{
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "n0": {
+                     "ids": ["MONDO:0005148"],
+                     "categories": ["biolink:Disease"]
+                },
+                "n1": {
+                    "categories": ["biolink:Pathway"]
+                },
+                "n2": {
+                    "ids": ["NCBIGene:5468"],
+                    "categories": ["biolink:Gene"]
+                }
+            },
+            "edges": {
+                "e01": {
+                    "subject": "n0",
+                    "object": "n1"
+                },
+                "e02": {
+                    "subject": "n1",
+                    "object": "n2"
+                }
+            }
+        }
+    }
+}

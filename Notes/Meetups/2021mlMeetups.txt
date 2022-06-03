@@ -1,5 +1,22 @@
 
 
+20220512 - viz.ai talk 
+- 
+- some people have different blood vessels in the briain
+- ml process 
+  - get scan of head 
+  - reorient at tope
+  - take out cranial using contrast filtering algorithm
+  - filter to only see blood vessrels
+  - see where the obstruction is due to where brain dye color travelled 
+- 2 to 1 dev to ai staff 
+- even if et 95% of psoitive cases, if you get a few false positives when most are negative, 
+  can wake up physician too many times for false alarm -> problem 
+- tail iof AI is longer to get to mature product because need to retrain 
+  - not so for software, as bugs decrease over time 
+
+
+
 20210414 - mit alphafold 2 talk
 
 - history
