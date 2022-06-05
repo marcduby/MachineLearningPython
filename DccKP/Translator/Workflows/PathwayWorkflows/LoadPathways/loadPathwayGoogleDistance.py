@@ -1,9 +1,6 @@
 
 # imports
-# import pandas as pd 
 import pymysql as mdb
-# import requests 
-# import numpy as np
 import os 
 import json
 
@@ -11,38 +8,18 @@ import json
 # constants
 dir_data = "/home/javaprog/Data/Broad/"
 dir_data = "/Users/mduby/Data/Broad/"
-file_pathways = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/GoogleDistancePathways/pathwayInformation.json"
+file_pathways = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/GoogleDistancePathways/pathwayGoogleDistance.json"
 is_insert_data = True
 is_update_data = True
 DB_PASSWD = os.environ.get('DB_PASSWD')
-db_pathway_table = "tran_upkeep.data_pathway"
+db_pathway_table = "tran_upkeep.data_pathway_similarity"
 
 # sql statements
-sql_insert = """insert into {} (pathway_code, pathway_name, pathway_updated_name, gene_count)
-         values (%s, %s, %s, %s) 
+sql_insert = """insert into {} (subject_pathway_code, object_pathway_code, google_distance)
+         values (%s, %s, %s) 
     """.format(db_pathway_table)
 
 sql_delete = "delete from {}".format(db_pathway_table)
-
-
-# functions
-def create_updated_name(name, log=True):
-    '''
-    creates a human redable name from the given db name
-    '''
-    new_name = name.replace("_", " ")
-    new_name = new_name.title()
-    new_name = new_name.replace("Gomf ", "Gomf - ")
-    new_name = new_name.replace("Gocc ", "Gocc - ")
-    new_name = new_name.replace("Gobp ", "Gobp - ")
-    new_name = new_name.replace("Reactome ", "Reactome - ")
-
-    # log
-    if log:
-        print("for: {} got new name: {}".format(name, new_name))
-
-    # return
-    return new_name
 
 
 # main
@@ -50,12 +27,8 @@ if __name__ == "__main__":
     # load the file
     with open(file_pathways) as file_json: 
         json_pathways = json.load(file_json)
-    list_pathways = json_pathways.get('pathways')
-    print("got {} pathways".format(len(list_pathways)))
-
-    # create the update pathway name
-    for row in list_pathways:
-        row['new_name'] = create_updated_name(row.get('name'))
+    list_pathways = json_pathways.get('results')
+    print("got {} pathways google distance".format(len(list_pathways)))
 
     # connect to the database
     conn = mdb.connect(host='localhost', user='root', password=DB_PASSWD, charset='utf8', db='tran_upkeep')
@@ -69,12 +42,23 @@ if __name__ == "__main__":
     counter = 0
     for row in list_pathways:
         # insert
-        cur.execute(sql_insert, (row['id'], row['name'], row['new_name'], len(row['list_genes'])))
+        cur.execute(sql_insert, (row['subject_id'], row['object_id'], row['google_distance']))
         counter = counter + 1
 
         # commit every 10
-        if counter % 100 == 0:
-            print("{} - pathway added with id {} and {}".format(counter, row['id'], row['name']))
+        if counter % 100000 == 0:
+            print("{} - pathway added with id {} and {}".format(counter, row['subject_id'], row['object_id']))
+            conn.commit()
+
+    counter = 0
+    for row in list_pathways:
+        # insert
+        cur.execute(sql_insert, (row['object_id'], row['subject_id'], row['google_distance']))
+        counter = counter + 1
+
+        # commit every 10
+        if counter % 100000 == 0:
+            print("{} - pathway added with id {} and {}".format(counter, row['object_id'], row['subject_id']))
             conn.commit()
 
     conn.commit()
