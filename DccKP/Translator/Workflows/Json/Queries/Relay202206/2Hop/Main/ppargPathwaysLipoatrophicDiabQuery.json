@@ -1,0 +1,47 @@
+{
+  "message": {
+    "query_graph": {
+      "edges": {
+        "e01": {
+          "constraints": [],
+          "subject": "gene",
+          "object": "pathway"
+        },
+        "e02": {
+          "constraints": [],
+          "subject": "pathway",
+          "object": "disease"
+        }
+      },
+      "nodes": {
+        "gene": {
+          "categories": [
+            "biolink:Gene"
+          ],
+          "constraints": [],
+          "ids": [
+            "NCBIGene:5468"
+          ],
+          "is_set": false
+        },
+        "pathway": {
+          "categories": [
+            "biolink:Pathway"
+          ],
+          "constraints": [],
+          "is_set": false
+        },
+        "disease": {
+          "categories": [
+            "biolink:Disease"
+          ],
+          "constraints": [],
+          "ids": [
+            "MONDO:0018883"
+          ],
+          "is_set": false
+        }
+      }
+    }
+  }
+}

@@ -18,6 +18,7 @@ location_servers = dir_code + "MachineLearningPython/DccKP/Translator/Misc/Json/
 date_now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 location_results = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/AraResults/" + date_now
 location_input_query = dir_code + "MachineLearningPython/DccKP/Translator/Workflows/Json/Queries/Pathways/PpargPathways/{}"
+location_input_query = dir_code + "MachineLearningPython/DccKP/Translator/Workflows/Json/Queries/Relay202206/Presentation/{}"
 file_result = "{}_{}_results.json"
 count = 0
 count_max = 500
@@ -26,14 +27,34 @@ count_max = 500
 map_servers = {}
 map_servers['arax'] = "https://arax.ncats.io/api/arax/v1.2"
 
+# read the file
+with open(location_servers) as file_json: 
+    json_servers = json.load(file_json)
+
+# load the trapi aras
+list_servers = tl.get_trapi_aras(json_servers)
+print("\ngot {} ARAs".format(len(list_servers)))
+for row in list_servers:
+    print("got ARA: {}".format(row))
+print("\ndatetime: {}".format(date_now))
+
+
 # json queries
 map_input_json = {}
-with open(location_input_query.format("ppargT2dPathwayGo0045444Query.json")) as file_json: 
-    map_input_json['ppargT2dPathwayGo0045444Query'] = json.load(file_json)
+with open(location_input_query.format("ppargDisease.json")) as file_json: 
+    map_input_json['ppargDisease'] = json.load(file_json)
+with open(location_input_query.format("goAdipoDiffDisease.json")) as file_json: 
+    map_input_json['goAdipoDiffDisease'] = json.load(file_json)
+with open(location_input_query.format("reactomeAdipoDiffDisease.json")) as file_json: 
+    map_input_json['reactomeAdipoDiffDisease'] = json.load(file_json)
 # with open(location_input_query.format("ppargT2dPathwayGo0050872Query.json")) as file_json: 
 #     map_input_json['ppargT2dPathwayGo0050872Query'] = json.load(file_json)
-with open(location_input_query.format("ppargT2dPathwaysQuery.json")) as file_json: 
-    map_input_json['ppargT2dPathwaysQuery'] = json.load(file_json)
+# with open(location_input_query.format("ppargT2dPathwaysQuery.json")) as file_json: 
+#     map_input_json['ppargT2dPathwaysQuery'] = json.load(file_json)
+print("\n")
+for key, value in map_input_json.items():
+    print("got {} input file".format(key))
+print("\n")
 
 # create the results directory
 os.mkdir(location_results)

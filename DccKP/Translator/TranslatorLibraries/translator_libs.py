@@ -295,9 +295,9 @@ def date_to_integer_string(dt_time=None, log=True):
     # return
     return str(int(now.year * 1e8 + now.month * 1e6 + now.day* 1e4 + now.hour* 1e2 + now.minute))
 
-def get_trapi_kps(json_servers, log=True):
+def get_trapi_servers(json_servers, type='KP', log=True):
     '''
-    query the smart api and get the KPs
+    query the smart api and get the servers of type specified
     '''
     # initialize
     map_servers = {}
@@ -306,7 +306,7 @@ def get_trapi_kps(json_servers, log=True):
     for entry in json_servers.get('hits'):
         if entry.get('info').get('x-translator').get('component'):
             map_server = {'comp': entry.get('info').get('x-translator').get('component')}
-            if map_server.get('comp') == 'KP':
+            if map_server.get('comp') == type:
                 if entry.get('info').get('x-translator').get('infores'):
                     map_server['info'] = entry.get('info').get('x-translator').get('infores')
                     if entry.get('servers'):
@@ -321,6 +321,26 @@ def get_trapi_kps(json_servers, log=True):
     # return
     return map_servers.values()
 
+
+def get_trapi_aras(json_servers, log=True):
+    '''
+    query the smart api and get the ARAs
+    '''
+    # initialize
+    map_servers = get_trapi_servers(json_servers, 'ARA', log=log)
+
+    # return
+    return map_servers
+
+def get_trapi_kps(json_servers, log=True):
+    '''
+    query the smart api and get the KPs
+    '''
+    # initialize
+    map_servers = get_trapi_servers(json_servers, 'KP', log=log)
+
+    # return
+    return map_servers
 
 def is_string_in(string_search, element, log=False):
     ''' 

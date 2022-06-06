@@ -1,0 +1,32 @@
+{
+    "message": {
+      "query_graph": {
+        "edges": {
+          "e01": {
+            "constraints": [],
+            "object": "disease",
+            "subject": "gene"
+          }
+        },
+        "nodes": {
+          "gene": {
+            "categories": [
+              "biolink:Gene"
+            ],
+            "constraints": [],
+            "ids": [
+              "NCBIGene:5468"
+            ],
+            "is_set": false
+          },
+          "disease": {
+            "categories": [
+              "biolink:Disease"
+            ],
+            "constraints": [],
+            "is_set": false
+          }
+        }
+      }
+    }
+  }

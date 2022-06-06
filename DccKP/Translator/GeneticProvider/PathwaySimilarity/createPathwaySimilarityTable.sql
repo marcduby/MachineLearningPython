@@ -7,14 +7,16 @@ create table data_pathway_similarity (
   subject_pathway_code      varchar(250) not null,                        
   object_pathway_code       varchar(250) not null,                        
   google_distance           double,
-  last_updated              timestamp
+  google_distance_min       double,
+  rank_percentage_goo       double,
+  rank_percentage_goo_min   double,
+  last_updated              timestamp default CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
 
 -- create indexes
 create index dt_pathway_sim_subj on data_pathway_similarity(subject_pathway_code);
 create index dt_pathway_sim_obj on data_pathway_similarity(object_pathway_code);
-
 
 
 -- scratch

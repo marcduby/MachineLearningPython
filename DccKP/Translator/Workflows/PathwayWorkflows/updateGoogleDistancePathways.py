@@ -32,12 +32,11 @@ dir_kp_result = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDiffe
 
 file_reactome = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/GoogleDistancePathways/c2.cp.reactome.v7.5.1.json"
 file_go = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/GoogleDistancePathways/c5.go.v7.5.1.json"
-file_google_distance = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/GoogleDistancePathways/pathwayGoogleDistance.json"
+file_google_distance = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/GoogleDistancePathways/pathwayGoogleDistanceMin.json"
 file_pathways = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/GoogleDistancePathways/pathwayInformation.json"
 
 # initialize
-max_count = 5000
-max_count = 5000000000000
+max_count = 50000000000000
 count = 0
 list_genes = ["BANF1","HMGA1","LIG4","PSIP1","XRCC4","XRCC5","XRCC6"]
 list_pathway = []
@@ -45,22 +44,6 @@ list_google_distance = []
 
 
 # methods
-def calculate_google_distance(list1, list2, log=False):
-    '''
-    will calculate the google distance between the two lists (intersection divided by union)
-    '''
-    len_intersection = 0
-    len_union = 0
-    google_distance = 0
-
-    if list1 and list2:
-        len_intersection = len(set(list1) & set(list2))
-        len_union = len(set(list1 + list2))
-        google_distance = len_intersection/len_union
-
-    # return
-    return google_distance
-
 def calculate_updated_google_distance(list1, list2, log=False):
     '''
     will calculate the modified google distance between the two lists (intersection divided by min number from both sets)
@@ -113,19 +96,17 @@ if __name__ == "__main__":
             # limit for testing
             if count < max_count:
                 # get the google distance
-                google_distance = calculate_google_distance(list_pathway[i].get('list_genes'), list_pathway[j].get('list_genes'))
-                google_distance_min = calculate_updated_google_distance(list_pathway[i].get('list_genes'), list_pathway[j].get('list_genes'))
+                google_distance = calculate_updated_google_distance(list_pathway[i].get('list_genes'), list_pathway[j].get('list_genes'))
 
                 # put the resukt in the result list
-                if google_distance > 0.0 and google_distance_min > 0.0:
-                    # print
+                if google_distance > 0.0:
                     count += 1
+                    list_google_distance.append({'subject_id': list_pathway[i].get('id'), 'object_id': list_pathway[j].get('id'), 'google_distance_min': google_distance})
+
+                    # print
                     if count % 100000 == 0:
                         print("{} - for {}/{} got GD: {}".format(count, list_pathway[i].get('id'), list_pathway[j].get('id'), google_distance))
 
-                    # add to final list
-                    list_google_distance.append({'subject_id': list_pathway[i].get('id'), 'object_id': list_pathway[j].get('id'), 
-                        'google_distance': google_distance, 'google_distance_min': google_distance_min})
 
 
     # write out the json result

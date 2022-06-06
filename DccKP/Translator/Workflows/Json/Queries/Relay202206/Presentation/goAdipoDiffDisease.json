@@ -1,0 +1,32 @@
+{
+    "message": {
+      "query_graph": {
+        "edges": {
+          "e01": {
+            "constraints": [],
+            "object": "disease",
+            "subject": "pathway"
+          }
+        },
+        "nodes": {
+          "pathway": {
+            "categories": [
+              "biolink:Pathway"
+            ],
+            "constraints": [],
+            "ids": [
+              "GO:0045444"
+            ],
+            "is_set": false
+          },
+          "disease": {
+            "categories": [
+              "biolink:Disease"
+            ],
+            "constraints": [],
+            "is_set": false
+          }
+        }
+      }
+    }
+  }

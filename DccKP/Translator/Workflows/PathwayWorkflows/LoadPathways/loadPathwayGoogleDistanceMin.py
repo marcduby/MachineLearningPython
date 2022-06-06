@@ -8,18 +8,18 @@ import json
 # constants
 dir_data = "/Users/mduby/Data/Broad/"
 dir_data = "/home/javaprog/Data/Broad/"
-file_pathways = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/GoogleDistancePathways/pathwayGoogleDistance.json"
+file_pathways = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/GoogleDistancePathways/pathwayGoogleDistanceMin.json"
 is_insert_data = True
 is_update_data = True
 DB_PASSWD = os.environ.get('DB_PASSWD')
 db_pathway_table = "tran_upkeep.data_pathway_similarity"
+max_count = 50000000000000
 
 # sql statements
-sql_insert = """insert into {} (subject_pathway_code, object_pathway_code, google_distance, google_distance_min)
-         values (%s, %s, %s, %s) 
+sql_update = """update {} set google_distance_min = %s where subject_pathway_code = %s and object_pathway_code = %s
     """.format(db_pathway_table)
 
-sql_delete = "delete from {}".format(db_pathway_table)
+# sql_delete = "delete from {}".format(db_pathway_table)
 
 
 # main
@@ -34,22 +34,24 @@ if __name__ == "__main__":
     conn = mdb.connect(host='localhost', user='root', password=DB_PASSWD, charset='utf8', db='tran_upkeep')
     cur = conn.cursor()
 
-    # delete the existing rows in the db
-    cur.execute(sql_delete)
-    print("deleted data\n")
-
     # insert all the new rows
     counter = 0
     for row in list_pathways:
         # insert
-        cur.execute(sql_insert, (row['subject_id'], row['object_id'], row['google_distance'], row['google_distance_min']))
-        cur.execute(sql_insert, (row['object_id'], row['subject_id'], row['google_distance'], row['google_distance_min']))
+        # print(sql_update)
+        # print("{} - {} - {}".format(row['google_distance_min'], row['subject_id'], row['object_id']))
+        cur.execute(sql_update, (row['google_distance_min'], row['subject_id'], row['object_id']))
+        cur.execute(sql_update, (row['google_distance_min'], row['object_id'], row['subject_id']))
         counter = counter + 1
 
         # commit every 10
-        if counter % 100000 == 0:
-            print("{} - pathway added with id {} and {}".format(counter, row['subject_id'], row['object_id']))
+        if counter % 1000 == 0:
+            print("{} - pathway updated with id {} and {}".format(counter, row['subject_id'], row['object_id']))
             conn.commit()
+
+        # break if trigger reached
+        if counter > max_count:
+            break
 
     conn.commit()
 

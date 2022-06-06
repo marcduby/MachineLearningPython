@@ -15,6 +15,19 @@ misc:
 -----
   - SELECT CONCAT(first_name, " ", last_name) AS Name FROM test.student  
 
+  -  collation issues
+    - select node.node_code, node_name, pathway.pathway_code, pathway.pathway_updated_name
+      from comb_node_ontology node, tran_upkeep.data_pathway pathway
+      where node.node_code COLLATE utf8mb4_general_ci = pathway.pathway_code;
+
+  - update on join
+    - update comb_node_ontology node
+      join tran_upkeep.data_pathway pathway on node.node_code COLLATE utf8mb4_general_ci = pathway.pathway_code
+      set node.node_name = pathway.pathway_updated_name
+      where node.node_type_id = 4;
+  
+
+
 
 table size: 
 -----------

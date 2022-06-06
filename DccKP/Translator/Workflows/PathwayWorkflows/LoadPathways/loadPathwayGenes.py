@@ -1,6 +1,9 @@
 
 # imports
+# import pandas as pd 
 import pymysql as mdb
+# import requests 
+# import numpy as np
 import os 
 import json
 
@@ -8,15 +11,15 @@ import json
 # constants
 dir_data = "/Users/mduby/Data/Broad/"
 dir_data = "/home/javaprog/Data/Broad/"
-file_pathways = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/GoogleDistancePathways/pathwayGoogleDistance.json"
+file_pathways = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDifferentiation/GoogleDistancePathways/pathwayInformation.json"
 is_insert_data = True
 is_update_data = True
 DB_PASSWD = os.environ.get('DB_PASSWD')
-db_pathway_table = "tran_upkeep.data_pathway_similarity"
+db_pathway_table = "tran_upkeep.data_pathway_genes"
+max_count = 5
 
 # sql statements
-sql_insert = """insert into {} (subject_pathway_code, object_pathway_code, google_distance, google_distance_min)
-         values (%s, %s, %s, %s) 
+sql_insert = """insert into {} (pathway_id, gene_code) select id, %s from data_pathway where pathway_code = %s
     """.format(db_pathway_table)
 
 sql_delete = "delete from {}".format(db_pathway_table)
@@ -27,8 +30,8 @@ if __name__ == "__main__":
     # load the file
     with open(file_pathways) as file_json: 
         json_pathways = json.load(file_json)
-    list_pathways = json_pathways.get('results')
-    print("got {} pathways google distance".format(len(list_pathways)))
+    list_pathways = json_pathways.get('pathways')
+    print("got {} pathways".format(len(list_pathways)))
 
     # connect to the database
     conn = mdb.connect(host='localhost', user='root', password=DB_PASSWD, charset='utf8', db='tran_upkeep')
@@ -41,15 +44,18 @@ if __name__ == "__main__":
     # insert all the new rows
     counter = 0
     for row in list_pathways:
-        # insert
-        cur.execute(sql_insert, (row['subject_id'], row['object_id'], row['google_distance'], row['google_distance_min']))
-        cur.execute(sql_insert, (row['object_id'], row['subject_id'], row['google_distance'], row['google_distance_min']))
-        counter = counter + 1
+        # get the list of genes
+        list_genes = row['list_genes']
 
-        # commit every 10
-        if counter % 100000 == 0:
-            print("{} - pathway added with id {} and {}".format(counter, row['subject_id'], row['object_id']))
-            conn.commit()
+        for gene in list_genes:
+            # insert
+            cur.execute(sql_insert, (gene, row['id']))
+            counter = counter + 1
+
+            # commit every 100
+            if counter % 100 == 0:
+                print("{} - pathway gene added with code {} for pathway {}".format(counter, gene, row['id']))
+                conn.commit()
 
     conn.commit()
 
