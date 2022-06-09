@@ -27,6 +27,7 @@ create table tran_upkeep.data_pathway_genes (
 );
 
 alter table tran_upkeep.data_pathway_genes add index path_gen_path_id_idx (pathway_id);
+alter table tran_upkeep.data_pathway_genes add index path_gen_gen_cde_idx (gene_code);
 
 
 

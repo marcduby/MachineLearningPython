@@ -21,7 +21,7 @@
                     "is_set": false
                 },
                 "n1": {
-                    "categories": ["biolink:Disease"],
+                    "categories": ["biolink:NamedThing"],
                     "is_set": true
                 }
             }

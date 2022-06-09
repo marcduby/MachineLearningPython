@@ -12,7 +12,8 @@ file_pathways = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDiffe
 is_insert_data = True
 is_update_data = True
 DB_PASSWD = os.environ.get('DB_PASSWD')
-db_pathway_table = "tran_upkeep.data_pathway_similarity"
+# db_pathway_table = "tran_upkeep.data_pathway_similarity"
+db_pathway_table = "tran_upkeep.load_pathway_similarity"
 
 # sql statements
 sql_insert = """insert into {} (subject_pathway_code, object_pathway_code, google_distance, google_distance_min)
@@ -43,7 +44,7 @@ if __name__ == "__main__":
     for row in list_pathways:
         # insert
         cur.execute(sql_insert, (row['subject_id'], row['object_id'], row['google_distance'], row['google_distance_min']))
-        cur.execute(sql_insert, (row['object_id'], row['subject_id'], row['google_distance'], row['google_distance_min']))
+        # cur.execute(sql_insert, (row['object_id'], row['subject_id'], row['google_distance'], row['google_distance_min']))
         counter = counter + 1
 
         # commit every 10
