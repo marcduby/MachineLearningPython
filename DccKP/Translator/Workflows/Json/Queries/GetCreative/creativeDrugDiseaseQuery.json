@@ -1,0 +1,34 @@
+{
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "n0": {
+                    "ids": [
+                        "MONDO:0021783"
+                    ],
+                    "categories": [
+                        "biolink:Disease"
+                    ]
+                },
+                "n1": {
+		             "categories":[
+                         "biolink:ChemicalEntity"
+                        ]
+                }
+            },
+            "edges": {
+                "e0": {
+                    "knowledge_type": "inferred",
+                    "subject": "n1",
+                    "object": "n0",
+                    "predicates":[
+                        "biolink:ameliorates",
+                        "biolink:treats",
+                        "biolink:prevents",
+                        "biolink:affects"]
+
+                }
+            }
+        }
+    }
+}

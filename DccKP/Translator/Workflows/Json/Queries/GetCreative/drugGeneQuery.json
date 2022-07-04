@@ -1,0 +1,28 @@
+{
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "drug": {
+                    "categories": [
+                        "biolink:SmallMolecule"
+                    ]
+                },
+                "gene": {
+                    "ids": [
+                        "NCBIGene:2645"
+                    ],
+                    "categories": [
+                        "biolink:Gene"
+                    ]
+                }
+            },
+            "edges": {
+                "e0": {
+                    "subject": "drug",
+                    "object": "gene",
+                    "predicates": ["biolink:ameliorates"]
+                }
+            }
+        }
+    }
+}

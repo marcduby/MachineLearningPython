@@ -16,7 +16,8 @@ file_pathways = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDiffe
 is_insert_data = True
 is_update_data = True
 DB_PASSWD = os.environ.get('DB_PASSWD')
-location_input_query = dir_code + "MachineLearningPython/DccKP/Translator/Workflows/Json/Queries/GetCreative/drugGeneQuery.json"
+db_drug_gene_table = "tran_creative.drug_gene"
+location_input_query = dir_code + "MachineLearningPython/DccKP/Translator/Workflows/Json/Queries/Relay202206/GetCreative/drugGeneQuery.json"
 max_count = 5000
 url_molepro = "https://translator.broadinstitute.org/molepro/trapi/v1.2/query"
 sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/Translator/TranslatorLibraries')
@@ -24,11 +25,9 @@ import translator_libs as tl
 
 
 # sql statements
-sql_select = """ select id, gene_node_id, gene_ontology_id, gene_code from tran_upkeep.molepro_gene_status where load_satus != 'done' """
-sel_update_status = """ update tran_upkeep.molepro_gene_status set load_status = 'done' where id = ? """
-sql_insert = """ insert into tran_upkeep.molepro_drug_gene 
-    (gene_node_id, gene_ontology_id, gene_code, drug_ontology_id, drug_name, drug_categore_biolink_id, predicate_biolink_id) 
-    values(%s, %s, %s, %s, %s, %s, %s) """
+sql_select = """select distinct gene_id from tran_creative.genes_filtered_pathway_disease_magma"""
+sql_insert = """insert into {} (drug_id, drug_name, gene_id, predicate) values(%s, %s, %s, %s)
+    """.format(db_drug_gene_table)
 
 # get the query
 with open(location_input_query) as file_json: 
@@ -79,7 +78,7 @@ if __name__ == "__main__":
     # loop for each gene
     for item in db_results:
         counter = counter + 1
-        row_id, gene_id, gene_ontology_id, gene_code = item[0], item[1], item[2], item[3]
+        gene_id = item[0]
 
         # put gene id in query
         print("{} - querying for gene: {}".format(counter, gene_id))

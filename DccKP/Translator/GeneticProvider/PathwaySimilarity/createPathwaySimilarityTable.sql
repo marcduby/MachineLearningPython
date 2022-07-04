@@ -56,13 +56,15 @@ limit 20;
 
 
 
-select go.subject_pathway_code as subj_pathway, sub.gene_count, go.object_pathway_code as obj_pathway, 
-  go.google_distance as jaccard, go.google_distance_min as intercept_min, 
-  sub.pathway_updated_name as subj_pathway_name
+select go.subject_pathway_code as subj_pathway, sub.gene_count as subj_gene_count, go.object_pathway_code as obj_pathway, 
+  sub.pathway_updated_name as subj_pathway_name,
+  format(go.google_distance, 5) as jaccard, format(go.rank_percentage_goo, 5) as jaccard_rank, 
+  format(go.google_distance_min, 5) as intercept_min,
+  format(go.rank_percentage_goo_min, 5) as intcpt_rank
 from data_pathway_similarity go, data_pathway sub
 where go.object_pathway_code = 'R-HSA-381340' and go.subject_pathway_code = sub.pathway_code
 and go.subject_pathway_code in ('GO:0048869', 'GO:0030154', 'GO:45444', 'GO:0050872', 'GO:0050873', 'GO:0045598', 'GO:0045599', 'GO:0045600')
-order by go.google_distance_min desc
+order by go.google_distance desc
 limit 20;
 
 -- percent rank
@@ -79,8 +81,9 @@ create index clc_pathway_sim_obj on calc_pathway_similarity(object_pathway_code)
 
 update data_pathway_similarity data
 join calc_pathway_similarity calc on data.subject_pathway_code = calc.subject_pathway_code
-and data.object_pathway_code = calc.object_pathway_code
-set data.rank_percentage_goo = calc.jaccard_percent_rank;
+and data.object_pathway_code = calc.object_pathway_code 
+set data.rank_percentage_goo = calc.jaccard_percent_rank
+where data.object_pathway_code = 'R-HSA-381340';
 
 update data_pathway_similarity data
 join calc_pathway_similarity calc on data.object_pathway_code = calc.subject_pathway_code
@@ -96,13 +99,14 @@ order by google_distance_min desc
 ) intercept_percent_rank
 from load_pathway_similarity;
 
-create index clc_pathway_sim_subj on calc_pathway_similarity(subject_pathway_code);
-create index clc_pathway_sim_obj on calc_pathway_similarity(object_pathway_code);
+create index clc_pathway_sim_min_subj on calc_pathway_similarity_min(subject_pathway_code);
+create index clc_pathway_sim_min_obj on calc_pathway_similarity_min(object_pathway_code);
 
 update data_pathway_similarity data
 join calc_pathway_similarity_min calc on data.subject_pathway_code = calc.subject_pathway_code
 and data.object_pathway_code = calc.object_pathway_code
-set data.rank_percentage_goo_min = calc.intercept_percent_rank;
+set data.rank_percentage_goo_min = calc.intercept_percent_rank
+where data.object_pathway_code = 'R-HSA-381340';
 
 update data_pathway_similarity data
 join calc_pathway_similarity_min calc on data.object_pathway_code = calc.subject_pathway_code
