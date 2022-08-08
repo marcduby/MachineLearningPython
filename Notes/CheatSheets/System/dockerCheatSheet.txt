@@ -9,6 +9,12 @@
   - docker run
   - docker exec
 
+- install
+---------
+  - https://docs.docker.com/engine/install/ubuntu/
+  - permissions to run
+    - sudo usermod -aG docker username
+
 
 
 - get info on image
@@ -33,6 +39,8 @@
   - docker rm <container_id>
 
 
+connecting to mysql on server:
+------------------------------
 
 - translator docker
 -------------------

@@ -14,3 +14,12 @@
 - camel pose 
 
 
+
+poses:
+------
+- abs
+  - bird dog
+  - bird dog with movement to x position flow
+- balance
+  - T pose
+  - T pose to upright, to T pose flow

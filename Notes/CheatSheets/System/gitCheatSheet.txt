@@ -22,7 +22,38 @@ new branch:
   - git checkout -b <branch_name>
   - git push -u origin ky_code_documentation
 
+github actions:
+---------------
+  - create yaml file in .github/workflows
 
+    name: ITRB Cloud - Production Tests
+    on: 
+      push:
+      schedule:
+      - cron: '00 6,12,20 * * *'   # 3 times a day
+
+    jobs:
+      build:
+
+        runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@v2
+        - run: |
+            git fetch --prune --unshallow
+        - name: Set up Python 3.8
+          uses: actions/setup-python@v1
+          with:
+            python-version: 3.8
+        - name: Install dependencies
+          run: |
+            python -m pip install --upgrade pip
+        - name: Test with pytest
+          run: |
+            pip install pytest
+            pip install requests
+            export PYTHONPATH=python-flask-server
+            pytest python-flask-server/tests/cloud/test_itrb_prod.py
 
 
 - git stash

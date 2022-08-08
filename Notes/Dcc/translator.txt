@@ -1,0 +1,49 @@
+
+
+- genepro deploy
+  - sudo su -l <dev>
+  - script /dev/null
+  - screen -r geneprov1.0
+  - mysql -u root <db_name> < input.sql 
+
+  -- sed -i 's/utf8mb4_0900_ai_ci/utf8mb4_unicode_ci/g' 20210422geneticsDatarelease.sql
+
+DEPLOYMENT
+- smart api registry
+  - use copy of RTX KG2, look at /api/metadata/...
+- generating new yaml
+  - use open api 5.2.0 generator 
+  - use file generateFromYaml.txt in directory
+    - java -jar ~/Apps/Libs/OpenAPI/openapi-generator-cli.jar generate -i TranslatorReasonersAPI.yaml -g python-flask -o python-flask-server
+  - go to ngnix and copy /repurposing segment for the new DB (dgidb)
+    - change port number
+    - sudo service nginx restart
+      cat /var/log/nginx/access.log # check current access log
+      cd /etc/nginx/sites-available/
+      cp -ip sharpener ~/nginx-sites-enabled-backup/sharpener-{date}
+      sudo emacs sharpener
+      sudo service nginx restart
+  - new ubuntu server 
+    - sudo apt-get update
+    - sudo apt install mysql-server
+    - sudo mysql -u root
+    - sudo service mysql restart
+    - git clone https://github.com/broadinstitute/genetics-kp-dev.git
+    - sudo apt install python3-pip
+    - sudo apt install python3.8-venv
+    - python3 -m venv translator_38
+    - pip3 install -r Requirements/requirements1.1.txt
+    - pip3 install gunicorn 
+    - screen -S data
+    - screen -S app
+
+- gunicorn 
+  - nohup gunicorn -w 2 -b 0.0.0.0:9221 openapi_server.__main__:app --timeout 3600 >& logs/openapi_server.log &
+
+
+- copying new data
+  - fix mysqldump file in vi
+    - %s/utf8mb4_0900_ai_ci/utf8mb4_unicode_ci/g
+  - copy to translator.broadinstitute.org
+  - import
+    - mysql -u root Translator < <import_file>

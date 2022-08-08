@@ -89,7 +89,9 @@ def get_curie_names_post(list_curies, log=False):
     return list_result
 
 def find_ontology(name, list_ontology, debug=False):
-    '''will call REST api and will return ontology id if name exact match and ontology prefix in list provided '''
+    '''
+    will call REST api and will return ontology id if name exact match and ontology prefix in list provided 
+    '''
     # initialize
     ontology_id = None
 

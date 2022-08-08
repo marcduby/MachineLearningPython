@@ -1,0 +1,11 @@
+
+
+
+pulling variable from file path:
+--------------------------------
+    df_lead_snp = spark.read.csv(f'{dir_results}/*/*/*.jma.cojo', sep='\t', header=True) \
+        .withColumn('filename', input_file_name()) \
+        .withColumn('ancestry', regexp_extract('filename', r'/ancestry=([^/]+)/', 1)) \
+        .withColumn('pheno', regexp_extract('filename', r'/([^/]+)/ancestry=', 1))
+
+

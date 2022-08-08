@@ -4,7 +4,7 @@
             "nodes": {
                 "drug": {
                     "categories": [
-                        "biolink:SmallMolecule"
+                        "biolink:ChemicalEntity"
                     ]
                 },
                 "gene": {
@@ -20,7 +20,7 @@
                 "e0": {
                     "subject": "drug",
                     "object": "gene",
-                    "predicates": ["biolink:ameliorates"]
+                    "predicates": ["biolink:affects"]
                 }
             }
         }

@@ -63,6 +63,10 @@ how to run
 - GIVES ERROR:
   - run -c ../config..json --reprocess --stage BurdenbinningStage
 
+working runs:
+-------------
+  - run -c ../config.json --yes --stage PathwayAssociationsStage --only AD --reprocess
+  - run -c ../config.json --yes --stage PathwayAssociationsStage --only 2hr* --reprocess
 
 troubleshooting
 ---------------

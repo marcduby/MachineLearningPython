@@ -16,18 +16,19 @@ file_pathways = dir_data + "Translator/Workflows/MiscQueries/ReactomeLipidsDiffe
 is_insert_data = True
 is_update_data = True
 DB_PASSWD = os.environ.get('DB_PASSWD')
-location_input_query = dir_code + "MachineLearningPython/DccKP/Translator/Workflows/Json/Queries/GetCreative/drugGeneQuery.json"
-max_count = 5000
+# location_input_query = dir_code + "MachineLearningPython/DccKP/Translator/Workflows/Json/Queries/GetCreative/drugGeneQuery.json"
+location_input_query = dir_code + "MachineLearningPython/DccKP/Translator/Workflows/Json/Queries/GetCreative/drugGeneRegulatesQuery.json"
+max_count = 100000
 url_molepro = "https://translator.broadinstitute.org/molepro/trapi/v1.2/query"
 sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/Translator/TranslatorLibraries')
 import translator_libs as tl
 
 
 # sql statements
-sql_select = """ select id, gene_node_id, gene_ontology_id, gene_code from tran_upkeep.molepro_gene_status where load_satus != 'done' """
-sel_update_status = """ update tran_upkeep.molepro_gene_status set load_status = 'done' where id = ? """
-sql_insert = """ insert into tran_upkeep.molepro_drug_gene 
-    (gene_node_id, gene_ontology_id, gene_code, drug_ontology_id, drug_name, drug_categore_biolink_id, predicate_biolink_id) 
+sql_select = """ select id, gene_node_id, gene_ontology_id, gene_code from tran_upkeep.molepro_gene_status where load_status != 'done' limit 50000 """
+sql_update_status = """ update tran_upkeep.molepro_gene_status set load_status = 'done' where id = %s """
+sql_insert = """ insert into tran_upkeep.molepro_drug_gene_regulates 
+    (gene_node_id, gene_ontology_id, gene_code, drug_ontology_id, drug_name, drug_category_biolink_id, predicate_biolink_id) 
     values(%s, %s, %s, %s, %s, %s, %s) """
 
 # get the query
@@ -55,9 +56,22 @@ def get_result_list(json, gene_id, log=False):
         for key, value in map_edges.items():
             drug_id = value.get('subject')
             drug_name = map_nodes.get(drug_id).get('name')
-            print("got drug: {} - {}".format(drug_id, drug_name))
-            list_result.append({'gene_id': gene_id, 'drug_id': drug_id, 
-                'predicate': value.get('predicate'), 'drug_name': drug_name})
+            predicate = value.get('predicate')
+            if len(drug_name) > 960:
+                drug_name = drug_name[:950]
+
+            # get the category of the drug
+            list_drug_category = map_nodes.get(drug_id).get('categories')
+            if list_drug_category and len(list_drug_category) > 0:
+                # print("\nlist categories: {}".format(list_drug_category))
+                drug_category = list_drug_category[0]
+
+                # log
+                print("got drug: {} - {} - {}".format(drug_id, drug_name, predicate))
+
+                # add data
+                list_result.append({'gene_id': gene_id, 'drug_id': drug_id, 
+                    'predicate': predicate, 'drug_name': drug_name, 'drug_category_id': drug_category})
 
     # return
     return list_result
@@ -82,8 +96,8 @@ if __name__ == "__main__":
         row_id, gene_id, gene_ontology_id, gene_code = item[0], item[1], item[2], item[3]
 
         # put gene id in query
-        print("{} - querying for gene: {}".format(counter, gene_id))
-        json_trapi_query.get('message').get('query_graph').get('nodes').get('gene')['ids'] = [gene_id]
+        print("\n{} - querying for gene: {}".format(counter, gene_id))
+        json_trapi_query.get('message').get('query_graph').get('nodes').get('gene')['ids'] = [gene_ontology_id]
 
         # for each gene, query
         response = requests.post(url_molepro, json=json_trapi_query)
@@ -92,8 +106,8 @@ if __name__ == "__main__":
         try:
             json_output = response.json()
             # print("got result: \n{}".format(json_output))
-        except ValueError:
-            print("GOT ERROR: skipping for gene: {}".format(gene_id))
+        except (ValueError, AttributeError) as exception:
+            print("GOT ERROR: skipping for gene: {}".format(gene_ontology_id))
             continue
 
         # get the drug list
@@ -102,7 +116,15 @@ if __name__ == "__main__":
         # loop through results
         for row in list_drugs:
             # insert the results
-            cursor.execute(sql_insert, (row['drug_id'], row['drug_name'], row['gene_id'], row['predicate']))
+                # sql_insert = """ insert into tran_upkeep.molepro_drug_gene 
+                #     (gene_node_id, gene_ontology_id, gene_code, drug_ontology_id, drug_name, drug_categore_biolink_id, predicate_biolink_id) 
+                #     values(%s, %s, %s, %s, %s, %s, %s) """
+            # cursor.execute(sql_insert, (gene_id, gene_ontology_id, gene_code, row['drug_id'], row['drug_name'], row['gene_id'], row['predicate']))
+            cursor.execute(sql_insert, (gene_id, gene_ontology_id, gene_code, row['drug_id'], row['drug_name'], 
+                row['drug_category_id'], row['predicate']))
+
+        # update tthe status row
+        cursor.execute(sql_update_status, (row_id))
 
         # commit every 100
         conn.commit()
