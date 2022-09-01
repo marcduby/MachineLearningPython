@@ -39,7 +39,32 @@ sql inerface:
 
 read:
 -----
-  - Cov = pd.read_csv("path/to/file.txt", sep='\t', names=["Sequence", "Start", "End", "Coverage"])
+- Cov = pd.read_csv("path/to/file.txt", sep='\t', names=["Sequence", "Start", "End", "Coverage"])
+
+- from spark df
+  - pandas_df = spark_df.select("*").toPandas()
+
+
+
+data engineering:
+-----------------
+- check duplicates
+  - df.duplicated().sum()
+
+- find missing data
+  - features_with_na = [features for features in df.columns if df[features].isnull().sum() > 1]
+      for feature in features:
+        print(feature, np.round(df[feature].isnull().mean(), 4). '% missing values)
+  - data.isnull().sum().sort_values(ascending=False)
+
+- replace null values
+  - df.loc[df['feature'].isnull() == True] = 0.0
+
+- count 
+  - df.feature.value_counts()
+  
+- corr heatmap 
+  -    
 
 
 Frpm ML for beginners:

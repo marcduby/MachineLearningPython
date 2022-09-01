@@ -1,0 +1,44 @@
+{
+    "message": {
+        "query_graph": {
+            "edges": {
+                "e0": {
+                    "object": "pathway",
+                    "subject": "pso"
+                },
+                "e1": {
+                    "object": "psa",
+                    "subject": "pathway"
+                }
+            },
+            "nodes": {
+                "pso": {
+                    "categories": [
+                        "biolink:PhenotypicFeature",
+                        "biolink:Disease"
+                    ],
+                    "ids": [
+                        "MONDO:0005083"
+                    ],
+                    "is_set": false
+                },
+                "psa": {
+                    "categories": [
+                        "biolink:PhenotypicFeature",
+                        "biolink:Disease"
+                    ],
+                    "ids": [
+                        "MONDO:0011849"
+                    ],
+                    "is_set": false
+                },
+                "pathway": {
+                    "categories": [
+                        "biolink:Pathway"
+                    ],
+                    "is_set": false
+                }
+            }
+        }
+    }
+}

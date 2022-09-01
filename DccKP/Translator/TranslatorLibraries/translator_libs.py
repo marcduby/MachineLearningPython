@@ -99,17 +99,19 @@ def find_ontology(name, list_ontology, debug=False):
     response = requests.post(url_name_search.format(name.replace("-", " ")))
     output_json = response.json()
 
-    # loop through results, find first exact result
-    for key, values in output_json.items():
+    # do ontology search by order given
+    for item in list_ontology:
         # print("key: {}".format(key))
         # print("value: {}\n".format(values))
-        # do MONDO search first since easiest comparison
-        for item in list_ontology:
+        # loop through results, find first exact result
+        for key, values in output_json.items():
             if item in key:
                 if name.lower() in map(str.lower, values):
                     ontology_id = key
                     break
-
+            if ontology_id:
+                break
+            
     # log
     if debug:
         logger.info("for: {} found: {}".format(name, ontology_id))

@@ -1,6 +1,12 @@
 
 
 
+basics:
+-------
+  - df.show()
+  - df.count()
+  - len(df.columns)
+
 pulling variable from file path:
 --------------------------------
     df_lead_snp = spark.read.csv(f'{dir_results}/*/*/*.jma.cojo', sep='\t', header=True) \

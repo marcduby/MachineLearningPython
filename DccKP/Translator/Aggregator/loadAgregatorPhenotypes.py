@@ -36,11 +36,17 @@ def get_connection():
 
 def load_phenotypes_reference(conn, phenotype_list):
     ''' add phenotypes to mysql phenotype table '''
-    sql = """insert ignore into tran_dataload.agg_aggregator_phenotype (phenotype_id, phenotype_name, group_name)
+    sql_insert = """insert ignore into tran_upkeep.agg_aggregator_phenotype (phenotype_id, phenotype_name, group_name)
             values (%s, %s, %s) 
+        """
+    sql_delete = """delete from tran_upkeep.agg_aggregator_phenotype 
         """
     cur = conn.cursor()
 
+    # delete the data in the table
+    cur.execute(sql_delete)
+
+    # insert the new data
     i = 0
     # loop through rows
     for phenotype_id, phenotype_name, group_name in phenotype_list:
@@ -48,7 +54,7 @@ def load_phenotypes_reference(conn, phenotype_list):
         if i % 20 == 0:
             print("disease {}".format(phenotype_id))
 
-        cur.execute(sql,(phenotype_id, phenotype_name, group_name))
+        cur.execute(sql_insert, (phenotype_id, phenotype_name, group_name))
     conn.commit()
 
 def load_phenotypes_to_translator(conn, phenotype_list):
@@ -132,21 +138,24 @@ if __name__ == "__main__":
     data = get_phenotype_values(resp)
     print(f'got data size of {len(data)}')
 
-    # # get the db connection
-    # conn = get_connection()
+    # get the db connection
+    conn = get_connection()
 
-    # # log
-    # print_num_phenotypes_in_db(conn)
+    # log
+    print_num_phenotypes_in_db(conn)
     
     # # load the data
     # load_phenotypes_to_translator(conn, data)
 
-    # # test the check_phenotype method
-    # assert check_phenotype(conn, 'BMI') == True
-    # assert check_phenotype(conn, 'testasif') == False
+    # load the data to the translator upkeep schema
+    load_phenotypes_reference(conn, data)
 
-    # # log
-    # print_num_phenotypes_in_db(conn)
+    # test the check_phenotype method
+    assert check_phenotype(conn, 'BMI') == True
+    assert check_phenotype(conn, 'testasif') == False
+
+    # log
+    print_num_phenotypes_in_db(conn)
     
 
 

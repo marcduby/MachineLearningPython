@@ -23,3 +23,9 @@ poses:
 - balance
   - T pose
   - T pose to upright, to T pose flow
+
+active poses:
+-------------
+  - from T shape pose on one leg, with blocks in front, go back to mountain, tough floating toe, back to T shape
+  
+

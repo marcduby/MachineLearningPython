@@ -1,0 +1,21 @@
+{
+    "GOBP_10_FORMYLTETRAHYDROFOLATE_METABOLIC_PROCESS": {
+        "systematicName": "M29088",
+        "pmid": "",
+        "exactSource": "GO:0009256",
+        "geneSymbols": [
+            "AASDHPPT",
+            "ALDH1L1",
+            "ALDH1L2",
+            "MTHFD1",
+            "MTHFD1L",
+            "MTHFD2L"
+        ],
+        "msigdbURL": "https://www.gsea-msigdb.org/gsea/msigdb/cards/GOBP_10_FORMYLTETRAHYDROFOLATE_METABOLIC_PROCESS",
+        "externalDetailsURL": [
+            "http://amigo.geneontology.org/amigo/term/GO:0009256"
+        ],
+        "filteredBySimilarity": [],
+        "externalNamesForSimilarTerms": []
+    }
+}

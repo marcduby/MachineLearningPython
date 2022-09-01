@@ -9,6 +9,8 @@
 
 
 
+
+
 20210730 - determing new variants for any new aggregator run
     variants = spark.read.csv('out/varianteffect/variants/')
     variants = df.select('varId')

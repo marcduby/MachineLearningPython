@@ -51,6 +51,21 @@ os:
     import glob
     print(glob.glob("/home/adam/*.txt"))
 
+files:
+------
+  - reading multiple file with wildcard
+  files = [file for file in glob.glob("../somefolder/*")]
+  for file_name in files:
+      with io.open(file_name, 'rb') as image_file:
+          content = image_file.read()
+
+  - read line by line
+  with open(filename) as file:
+    for line in file:
+        print(line.rstrip())
+
+  
+
 misc:
 -----
   - if x is not None:

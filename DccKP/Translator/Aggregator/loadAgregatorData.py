@@ -10,7 +10,7 @@ url_aggregator = "https://bioindex-dev.hugeamp.org/api/bio/query"
 phenotype = 'pparg'
 
 def query_service(input_gene, url):
-    ''' queries the service for disease/chem relationships '''
+    ''' queries the service for disease/gene relationships '''
     # build the query
     query_string = """
     query {

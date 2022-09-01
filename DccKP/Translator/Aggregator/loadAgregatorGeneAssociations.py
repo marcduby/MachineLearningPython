@@ -3,10 +3,13 @@
 import requests
 import pymysql as mdb
 from datetime import datetime
+import os
 
 # constants
 url_query_aggregator = "https://bioindex-dev.hugeamp.org/api/bio/query"
 p_value_limit = 0.0025
+DB_PASSWD = os.environ.get('DB_PASSWD')
+DB_SCHEMA = 'tran_upkeep'
 
 def get_gene_list(conn):
     ''' will return all the gene codes that are in the translator DB '''
@@ -31,7 +34,7 @@ def get_gene_list(conn):
 
 def get_connection():
     ''' get the db connection '''
-    conn = mdb.connect(host='localhost', user='root', password='yoyoma', charset='utf8', db='tran_test_202108')
+    conn = mdb.connect(host='localhost', user='root', password=DB_PASSWD, charset='utf8', db=DB_SCHEMA)
 
     # return
     return conn 

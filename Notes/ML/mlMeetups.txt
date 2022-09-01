@@ -1,5 +1,13 @@
 
 
+20220830 - ML kgalle 4 week course, tampa 
+- process for data cleaing
+  - find duplicate rows
+  - find features with missing columns 
+    - if too high % of missing, remove column
+    - if low, replace values with mean (or somethign else)
+    
+
 
 20200730 - ml at AWS
 - aws labeling services

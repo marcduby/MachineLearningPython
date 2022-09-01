@@ -1,0 +1,40 @@
+{
+    "message": {
+      "query_graph": {
+        "edges": {
+          "e01": {
+            "constraints": [],
+            "object": "gene",
+            "subject": "drug"
+          },
+          "e02": {
+            "constraints": [],
+            "object": "disease",
+            "subject": "gene"
+          }
+        },
+        "nodes": {
+          "disease": {
+            "categories": [
+              "biolink:Disease"
+            ],
+            "ids": [
+              "MONDO:0005148"
+            ]          },
+          "gene": {
+            "categories": [
+              "biolink:Gene"
+            ]
+          },
+          "drug": {
+            "categories": [
+              "biolink:Drug"
+            ],
+            "ids": [
+                "PUBCHEM.COMPOUND:54678486"
+              ]
+          }
+        }
+      }
+    }
+  }

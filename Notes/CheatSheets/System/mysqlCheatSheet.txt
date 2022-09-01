@@ -1,5 +1,7 @@
 
 
+
+
 exporting data:
 ---------------
   - mysql -u root -p tran_genepro -e "select * from gene_lookup" -B > gene.tsv 
@@ -26,6 +28,10 @@ misc:
       set node.node_name = pathway.pathway_updated_name
       where node.node_type_id = 4;
   
+  - delete on join 
+      delete edge from comb_edge_node edge
+      inner join comb_node_ontology node on edge.target_node_id = node.id 
+      where node.node_type_id = 2 and edge.study_id = 1;
 
 
 
