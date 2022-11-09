@@ -1,9 +1,146 @@
 
 
+20221109 - pydata nyc 2022 - graph based ML ransomware detection 
+- ransomware
+  - phishing
+  - software bugs 
+  - brute force credential attack 
+
+- $1.2 billion in 2021 vs $416 million in 2020
+- conti group biggest actor, $25 million per attack 
+
+- data
+  - use 32 threads to encrypt 
+    - speed over stealth 
+  - ransomware will be in network for a month, so have 30 days to fix before issues 
+  - once on computer, you can see what other accounts have beenused on that computer 
+  - mysticpy - security tool developed by M$
+  - usually with backup pivileges, priveled acct 
+    - can start to do damge from here 
+
+- examp,es 
+  - irish healthcare 
+    - $100 million cost to get back up
+    - didn't pay ransom 
+    - some peolle use pen/paper for 35 days 
+
+- approach 
+  - connect events as graph 
+  - calculate centraility 
+
+- code 
+  i,port networkx as nx 
+  g = nx.from_pandas_edgelist(df, source, target)
+  nx.draw(g, ith_labels=True, font-size  1)
+  nx.show()
+
+  nx.closeness_centrality()
+
+- Msticpy library 
+  - productionize wityh streaming graph db -> surrealdb
+
+- new surrealdb product to look at 
+
+- recommendations 
+  - multi factor auth 
+  - identity na;ytics (acct creation, permissions)
+  - response proces to security logging, monitoring, alerts 
+  - patch management 
+  - supply chain 
 
 
 
-20221109 - pydata nyc 2022 
+
+
+
+
+
+
+
+
+
+- met william, ex LMT worker, air force vet, philly based 
+  - met matt, speaker, texas based 
+
+20221109 - pydata nyc 2022 - westher impact models 
+- why predict weather 
+  - crops, stores, transportationm, aviation, predict product mix 
+  - reduce utility downtime 
+    - can schwedule crews ahead of time 
+
+- data collection 
+  - weayher observations 
+  - infrastructure density 
+  - seasonal foliage, vegetation
+
+- feature engineering/feature creation 
+
+- for utilities 
+  - need to predict multip,e times as storm path is being updated 
+  - model preedictas number of outt=ges predicted in the next 72 hours 
+  - weather data is at 4x4 km granularity 
+
+- for creating trai i g data 
+  - outages rolled up for 244 hour 
+  - aggregate weather for t24 hours 
+  - use pyspark as engine 
+
+- ,model features 
+  - wind - max, avg, min, max wind gust, min wind gust 
+  - precipitation, snow, ice - max , avg cumulative, ice, snow density 
+  - tems - max, evg, avg wet bulb temp 
+  - infrastcuture - length of line, ...
+
+- problem 
+  - data quality - hignh outages recorded past event 
+    - due to maintenenece after strim, needed 
+    - lag in outage report as people come back/get service back 
+    - very common for big storms 
+    - data confusing to model, so remove the long tail from model 
+  - also if lots of outage but not weather related 
+    - so not needed for model, so remove outage calls 
+    - outage not weather deependent 
+  - low outages, significant weather 
+    - removed 
+
+- outage data challenges 
+  - wide range and sparsity 
+  - extreme weatyher rarely happens, so sparse 
+
+- models 
+  - best model is random forest 
+  - routine false alarm days measurement 
+  - use pareto boundary analysis for model selection 
+  - clients are mkre intersted in mdeium storm prediction than large storm prediction 
+
+- explainning predicted oputtages 
+  - shapley values (shap)
+    - helps to determine what each feature contributes to the prediction 
+    - need to remove correlated features before training 
+      - or else SHAP test will be skewed 
+  - local interpretable model agnostic explanations (LIME)
+  - contrasctive analysis 
+  - sensitivity analysis
+  - tree analysis (to tune for tree depth)
+    - to help identify the cause of overprediction 
+    - remove events/training daya to created the bad tree predictions 
+
+- scoring models using forecast weather data 
+  - using pyspark to aggregate data for 24/48 and 72 hours 
+  - PMML model 
+
+- look up 
+  - PMML model 
+    - https://en.wikipedia.org/wiki/Predictive_Model_Markup_Language
+
+
+
+
+
+
+
+
+20221109 - pydata nyc 2022 - ML system deployment with kubernetes
 - prod architecture 
   - kubernetes is a coker container management system 
   - can use cluster ip service to ping individual pods
