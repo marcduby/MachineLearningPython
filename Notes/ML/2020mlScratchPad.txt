@@ -1,5 +1,71 @@
 
 
+
+
+
+20221109 - pydata nyc 2022 
+- prod architecture 
+  - kubernetes is a coker container management system 
+  - can use cluster ip service to ping individual pods
+    - even if they hare a VM/IP 
+  - how to expose kubernetes service to outside 
+    - use nodeport service 
+    - can set http request to any workers 
+  - loadbalancer service creates a loadbaalncer outside kubernetes 
+    - it balances across nodes/VM, not pods as kubernetes does 
+  - knative serv ice 
+    - does automatic scaling,, creates pods as needed 
+
+
+- resources 
+  - eatch kubernetes youtube video by honeypot 
+  - alternatives to kubernetes 
+    - mazos, swarm, dockerflow? 
+
+
+
+20221109 - pydata nyc shopify ML 
+- shopify system
+  - catalog management
+    - product categorization 
+  - fraud protection
+  - customer acquisition 
+  - invetory
+  - saless 
+  - finance 
+  - sales 
+  - POS 
+  - p
+
+- models 
+  - multi lingual bert for text 
+  - mobilez net v2 
+
+- model arch 
+  = bert and mobilenet in parrallel
+    - get text embeddings and image embeddings
+  - feed both into perceptron layer 
+
+- inference archticture 
+  - cache the embeddings of text and images as they come through
+  - then send to the next layer 
+  - that way, can look up cache and don't need to run embeddings again 
+  - get savings in computer time and VM perspective 
+
+- how to measure performance and impact 
+  - also measure how used by merchants 
+
+- ml for custoemr acquisition 
+  - go from product categories -> buyer pool -> audience set from ML -> ad platform 
+  - use FB and Google ad, but treplace their targeting engines 
+
+- attribute extraction for prodyucst
+  - probelm: attributes are specific to product categhores 
+  - had domain  experts annotatee product categories 
+
+- 
+
+
 20201223 - pipeline work
 - wrote test pipeline script using CA housing data
   - standard scalar didn't help with R2 score 
