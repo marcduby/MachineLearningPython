@@ -1,4 +1,45 @@
 
+20221110 - pydata nyc 2022 - workflow engines by sanjay from Akasa
+- akasa company 
+  - number 1 cause of bankruptcy is medical bills 
+  - $266 billion is wasteful admin medical work
+  - company tries to automate away this work
+
+- use ML to automate tasks 
+
+
+20221110 - pydata nyc 2022 - stitchfix feature engineering framework
+- book
+  - marshall goldsmith - what got you here won't get you there 
+
+- https://github.com/stitchfix/hamilton
+
+- hamulton framework
+  - has a visualization plug in to view DAG it creates 
+  - can run haliton on spark, dask, ray 
+
+
+
+20221109 - pydata nyc 2022 - shiny fpr python 
+- libs 
+  - astropy -> for astronomy watchong  
+
+- but what abput streamlit?
+  - streamlit rexecutes verything each interaction
+  - some clver caching 
+  - great for simple or small apps 
+  - moderately ambitious apps, becomes liability 
+
+- shiny for ambitious apps 
+
+- https://shiny.rstudio.com/py 
+
+
+- https://github.com/jcheng5/PyDataNYC2022-demos
+
+
+
+
 
 20221109 - pydata nyc 2022 - graph based ML ransomware detection 
 - ransomware
