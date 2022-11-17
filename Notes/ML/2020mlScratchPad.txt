@@ -1,4 +1,213 @@
 
+
+
+20221112 - nyc exercise
+- data
+  - mon 11/07 - 65 row -> 65
+  - tue 11/08 - 0 -> 65
+  - wed 11/09 - 30 bike + 45 bike -> 140 
+  - thu 11/10 - 30 bike + 45 bike  + 5 stair -> 220
+  - fri 11/11 - 30 bike -> 250 
+
+
+20221111 - pydata nyc 2022 - cool stuff to look at 
+- check env from the causal inf talk 
+  - https://github.com/ronikobrosly/pydata_nyc_2022/blob/main/check_environment.py
+
+
+
+
+20221111 - pydata nyc 2022 - causal inference 
+- 3 types of causal relationships 
+  - cofounder 
+    - a cofounder is a third variable to causes both the tratment and outcome 
+      - always need to control 
+    - ie: smoking leads to cancer and leads to coffee 
+      - but if not take into account smoking, looks like coffee correlates with cancer 
+    - ie: if correlation between ice cream sales and violent crime 
+      - but hot weather is the cofounder, since it leads to oth ice creame and violent crime 
+  - colliders (dont want to contriol for)
+    - inverse of confounder 
+    - if smoking is correlated to lung cancer 
+      - collider is # sign days 
+  - mediators (don't want to control for)
+    - sits between treatment and outcome 
+    - ie: cliical signs of lung damage 
+      - if control for lung damage, will lose the causal rekationship between smoking and lung cancer 
+
+- confounder 
+  - need to condition for it 
+    - can remove the data (bayes)
+    - use a model 
+
+
+- traditional variabe importance methods don't tell you anything about causality 
+  - shap, permutation importance could be issue 
+  - don't condition based on these metrics 
+
+- assumptions of causal inference  
+  - - temporarlity 
+  - 
+
+- g-computation 
+  - also look nto propensity score matching 
+  - want to avoid including collider vars in model vars that will be conditioned for 
+  - as opposed to doing linear regression, can use xgboost for the model 
+    - with LR, can get some information from the gradients for the causation effect 
+
+
+
+
+20221111 - pydata nyc 2022 - serving pytirch models in production 
+- walmart 
+  - tf models used 
+  - java shop, so serve models using JNI (java native interface)
+  - wanted to use BERT in pytorch 
+
+- data used 
+  - amazon berkeley objects data 
+
+- optimizing models for production 
+  - port training optimization -> quantization 
+    - store tensors at lower bit fp precision; reduce memorey and speed up
+    - hardware in8 computations 2 to 4x  faster than fp32 computations 
+    - ie
+      model_int = torch.quantization.quantize_dynamic()
+  - 
+
+
+
+20221111 - pydata nyc 2022 - DL for time series analysis 
+- codee 
+  - https://www.kaggle.com/isaacmg/code
+
+- gisttory of time series DL
+  - 2015 - vanilla lstm
+  - 2017 - GRUIs, DA-RNN 
+  - 2019 - transformers 
+  - 2020 - emergence of DNN 
+
+- forecasting, trying to determine feature variable at a future time step 
+- classification, trying to assign labell to sequence of time steps 
+- time series analysis - assign 0/1 label to sequence of time steps 
+
+- pan points 
+  - how to incorporrate additional information 
+
+- tikme series forecasting industry is fractureed 
+
+- stack overflow q (igodfried)
+  - training loss is NAN keran nn
+
+
+- q/a session
+  - need 50k rows for good 
+  - got transformers, can spend days during hyperparameter searching 
+  - harder to do transfer learning for time series NNs than for NLP 
+
+
+20221111 - pydata nyc 2022 - dask tutorial 
+- code 
+  - https://github.com/mrocklin/dask-tutorial
+
+- avocado forecast flow example 
+  - https://www.kaggle.com/code/isaacmg/avocado-price-forecasting-with-flow-forecast-ff
+  - use 4 past time steps to forecast one time step 
+  - use https://wandb.ai/site for logging traiuning model logging 
+    - can get figures of loss rate, etc 
+- avocado GRU example, probabilistic model 
+  - https://www.kaggle.com/code/isaacmg/probablistic-gru-avocado-price-forecast
+- avocado multi region transaformer 
+  - https://www.kaggle.com/code/isaacmg/multi-region-transformer
+
+
+20221110 - pydata nyc interestimg for DCC
+
+- prodyucst
+  - DVC for data version control 
+
+
+
+
+2022110 - pydata nyc 2022 - ML at scale for finances (quansight team)
+- look at 
+  - amd ROCM similar to nvidia CUDA 
+  - dask kubernetes 
+
+  
+- gpu ecosystem 
+  - pytorch, ttf, numba, dask, rapids, heavy.ai, cuDF, blazinfsql (deprecated for dasksql)
+
+- lexssons
+  - io ops from gpu to host very closeness_centrality- gpu expensive 
+  - python cuda ecosystem is great 
+
+- libs 
+  - dask 
+  - prefect data workflow orchestration tool 
+  - argo workflows 
+    - specifically for kubernetes?
+
+
+
+
+
+
+
+20221110 - pydata nyc 2022 - data and model version control in drug discovery pipelines 
+- barreto-ojeda, cyclica inc 
+
+- numbers 
+  - genomics, 25k genes
+  - rna, transcriptomics 1m transcripts
+  - protein, proteomics 20m protein (from alphafold)
+    - also meta published 1m proteins 
+  - metabolites, metabolomics 5k
+
+- data 
+  - low number of observations (samples), high number of varoables (feature)
+    - ie: 1 sample can gtet 100 tumors 
+    - very high dimensional data 
+  - protocals are not always reproduceable 
+  - research based data 
+    - more data on hot topics 
+  - complex biological data 
+    - dissimilar (diverse format and contents)
+    - imbaanced (more data for given featire)
+    - redundnt
+    - spares (lacks annotaTIONS)
+
+- DVC (data version control)
+  - open soruce, works with all github providers (github, gitlab, bitbucket)
+
+
+- code 
+  - pip list | grep dvc 
+
+  - to display chem structure 
+    import pandas as pd
+    data = pd.read_csv('./data/initial_data.csv')
+    data.head()
+    from rdkit import Chem
+    from rdkit.Chem.Draw import IPythonConsole
+    IPythonConsole.drawOptions.addAtomIndices = True
+    IPythonConsole.molSize = 400,400
+
+    mol = Chem.MolFromSmiles(data['smiles'][1])
+    mol
+    import pubchempy as pcp
+
+    id_ = pcp.get_compounds(data['smiles'][1], 'smiles')[0]
+    id_.synonyms[0]
+
+
+- dvs steps 
+  - dvc add 
+  - dvc dag -> will print dependencies 
+
+
+
+
 20221110 - pydata nyc 2022 - workflow engines by sanjay from Akasa
 - akasa company 
   - number 1 cause of bankruptcy is medical bills 
@@ -6,6 +215,35 @@
   - company tries to automate away this work
 
 - use ML to automate tasks 
+
+- two types of automation 
+  - workflow automation 
+    - move data from EHR to insurance UI 
+    - read response from website UI 
+    - update state of the claim in the EHR 
+  - information extraction 
+
+- saying in healthcare 
+  - if you've seen one hospital, you've seen one hospital
+
+- technical 
+  - the workflow stes are async 
+  - also not safe to redo steps if later step fials 
+    - if 10 steps, if step 5 fails, then not necessarily safe to redo step 1 to 4 
+  - do replayable workflow steps by havng the step issue a token for its request 
+    - if restart from start, identical tokens will just return dayta from cache, not rerunning step 
+  - steps implemented in fuctions that are decorated with @wolkflow.task 
+    - the ecorator pushes the function onto a queue 
+  - with workers getting workflow tasks from queue, never blocking 
+    - workers pick up other tasks that are queued up while waiting for the other tasks to complete 
+
+
+- AWS example
+  - when starting an EC2 instance
+    - create network int, EBS FS, etc
+
+
+
 
 
 20221110 - pydata nyc 2022 - stitchfix feature engineering framework
