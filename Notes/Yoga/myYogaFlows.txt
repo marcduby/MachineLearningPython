@@ -23,9 +23,22 @@ poses:
 - balance
   - T pose
   - T pose to upright, to T pose flow
+  - tree pose 
+  - bonzai pose 
+  - balance on block 
+  - dancer pose 
+- lats 
+  - child prayer pose 
+
 
 active poses:
 -------------
   - from T shape pose on one leg, with blocks in front, go back to mountain, tough floating toe, back to T shape
+  - from , straight leg off to side, the slide back to child pose 
   
 
+transitions:
+------------
+  - from warrior 1 ro T position 
+  - from warrior 2 to half moon 
+  - T pose to upright w/ knee in chest, back to T

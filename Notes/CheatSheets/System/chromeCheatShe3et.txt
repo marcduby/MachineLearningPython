@@ -1,0 +1,7 @@
+
+
+- to open postman in chrome 
+  - Type chrome://apps/ in your chorme address line.
+
+
+  

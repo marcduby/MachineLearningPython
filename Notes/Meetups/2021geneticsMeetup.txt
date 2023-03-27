@@ -1,5 +1,35 @@
 
 
+20221117 - mpg, gocalo abecasis 
+- regeneron genome center 
+  - commited to sequencing 7 million samples 
+  
+- notes 
+  - for poligenic risk score, mostly use common variants with sorinkling of high effect rare variants 
+  - for cost effective sequencing, so exome with imputation with some gwas as well 
+    - key is to be able to automate the processing by robots 
+  - get increased results with assaying samples with exomes and umputation (samer cost)
+    - get a little better results with whoel sequencing, but at a much larger cost 
+
+- sardinia study on BCL11A persistent fetal hemoglobin 
+  - fetal hemoglobin is for womb and newborns to better exchange oxygen from host mother 
+    - turned off in adulthood to other type if hemoglobin 
+  - for heterogizous variant, were resistmt to malaria, which is why high concentration of variant in sardinia 
+  - but have serious bad phenotype if homozygous 
+  - eventually, led to vertex sycle cell breathrpugh 
+
+- covid genetics study 
+  - saw ACE2 prmoter signal 
+    - if had this variant, had 40% lower infection and 40% percent lower hospitaliztion 
+
+- use stringent pvalye 5e-08 gor gene using burden test 
+  - get fewer signals, but theyr are more interesting 
+    
+
+- lookm up 
+  - fetal hemoglobin 
+  - how sardinia gwas study led to sickle cell breakthough 
+
 20220425 - stanford drug discovery 
 - r&d talk #1
   - servier 

@@ -1,0 +1,10 @@
+{
+    "mdv": "mdv25",
+    "variants": [
+        "8_118184783_C_T"
+    ],
+    "ci_level": 0.95,
+    "phenotype": "WAISTC_CM",
+    "calc_ci": true,
+    "samples": []
+}

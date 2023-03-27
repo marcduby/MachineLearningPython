@@ -6,3 +6,7 @@ model_selection:
   - StratifiedKFold - takes group information into account for balanced folds for classification
   - train_test_split() - train/test splitting
 
+
+Time series
+-----------
+- needs to be normalized

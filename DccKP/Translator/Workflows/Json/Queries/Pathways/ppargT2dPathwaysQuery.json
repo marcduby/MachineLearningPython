@@ -3,12 +3,10 @@
     "query_graph": {
       "edges": {
         "e01": {
-          "constraints": [],
           "object": "pathway",
           "subject": "gene"
         },
         "e02": {
-          "constraints": [],
           "object": "disease",
           "subject": "pathway"
         }
@@ -18,7 +16,6 @@
           "categories": [
             "biolink:Disease"
           ],
-          "constraints": [],
           "ids": [
             "MONDO:0005148"
           ],
@@ -28,7 +25,6 @@
           "categories": [
             "biolink:Gene"
           ],
-          "constraints": [],
           "ids": [
             "NCBIGene:5468"
           ],
@@ -38,7 +34,6 @@
           "categories": [
             "biolink:Pathway"
           ],
-          "constraints": [],
           "is_set": false
         }
       }

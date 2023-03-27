@@ -22,6 +22,14 @@ new branch:
   - git checkout -b <branch_name>
   - git push -u origin ky_code_documentation
 
+github ssh issue:
+-----------------
+git@github.com:broadinstitute/genetics-kp-dev.git
+
+info:
+-----
+  - git rev-parse --abbrev-ref HEAD   (find out what branch you're on)
+
 github actions:
 ---------------
   - create yaml file in .github/workflows

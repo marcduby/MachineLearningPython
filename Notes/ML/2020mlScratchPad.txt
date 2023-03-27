@@ -1,5 +1,49 @@
 
 
+20221107 - mit ml seminar
+- with single cell assays
+  - can measure
+    - rna Seq 
+    - atac seq
+    - chromatin accessibility
+    - chromatin 3d 
+    - gene expression 
+  - want toi translation/predict what other modlity of measurement will be 
+    - ie: from gene expression and chromatin accessibility, predict atac seq 
+  - for learning 
+    - need measurements from same cell for training data 
+      - most assays are destructive, so only get one reading per cell 
+      - use non destructive assay
+
+- auto encoder
+  - get representation of batch effects and sequencing depth 
+- peptides 
+  - sequence of amino acids (10-15 size?)
+  - get observed spectrum from mass spectometer for each peptide 
+  - the order of the amino acids affects the mass spectrometer reading curve 
+  - only 1.4% overlap in peptides between species 
+    - ? -> research 
+- for transformers in NLP 
+  - learning pairwise relationships between words 
+  - can we use that for spectrometer peaks 
+
+- ml models for genetics mentionned
+  - babel 2021 
+
+
+
+20221027 - broadway - ml in clinical applications
+- questions to use ML 
+  - what are protective mech for disease in the genome (like pcsk9)
+  - how well infer rna expression from dna
+  - can we combine omics data to predict outcomes and mech insights 
+  - can we discover all endophenotypes (like BMI types)
+
+- misc 
+  - if unfold DNA, should be 6 feet long 
+  - BMI - ratio of weight to surface area 
+
+
 20201223 - pipeline work
 - wrote test pipeline script using CA housing data
   - standard scalar didn't help with R2 score 

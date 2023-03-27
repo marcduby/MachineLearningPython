@@ -1,0 +1,47 @@
+{
+    "passback": "123abc",
+    "entity": "variant",
+    "limit": 50,
+    "count": false,
+    "properties": {
+        "cproperty": [
+            "MOST_DEL_SCORE",
+            "VAR_ID",
+            "DBSNP_ID"
+        ],
+        "orderBy": [],
+        "dproperty": {
+            "MAF": [
+                "GWAS_OxBB_mdv1"
+            ],
+            "MAC": [
+                "GWAS_OxBB_mdv1"
+            ]
+        },
+        "pproperty": {
+            "BETA": {
+                "GWAS_OxBB_mdv1": [
+                    "FG"
+                ]
+            }
+        }
+    },
+    "filters": [
+        {
+            "dataset_id": "blah",
+            "phenotype": "blah",
+            "operand": "CHROM",
+            "operator": "EQ",
+            "value": "20",
+            "operand_type": "STRING"
+        },
+        {
+            "dataset_id": "GWAS_OxBB_mdv1",
+            "phenotype": "blah",
+            "operand": "MAF",
+            "operator": "GT",
+            "value": 0,
+            "operand_type": "FLOAT"
+        }
+    ]
+}
