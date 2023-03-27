@@ -10,7 +10,7 @@ create table tran_upkeep.data_pathway (
   pathway_updated_name      varchar(2000),             
   systematic_name           varchar(200),             
   pmid                      varchar(200),             
-  exact_souurce             varchar(200),             
+  exact_source              varchar(200),             
   msig_url                  varchar(2000),             
   ontology_id               varchar(200),             
   gene_count                int(9) not null,           

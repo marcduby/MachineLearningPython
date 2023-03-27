@@ -1,0 +1,21 @@
+{
+    "covariates": [
+        "C1",
+        "C2",
+        "C3",
+        "SEX"
+    ],
+    "mdv": "mdv27",
+    "dataset_id": "samples_55k_multi",
+    "variants": [
+        "20_16223957_C_T",
+        "8_118184783_C_T",
+        "8_118165282_C_T"
+    ],
+    "ci_level": 0.95,
+    "phenotype": "t2d",
+    "calc_ci": true,
+    "filters": [],
+    "allele_type": "multi",
+    "samples": []
+}
