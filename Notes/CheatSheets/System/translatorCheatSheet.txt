@@ -1,0 +1,6 @@
+
+
+
+- query the ARS command line
+  - curl -X POST "https://ars-prod.transltr.io/ars/api/submit" -H "accept: application/json" -H "Content-Type: application/json" -d @yourQueryFileHere.json
+  

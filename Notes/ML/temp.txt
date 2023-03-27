@@ -7,10 +7,7 @@
   - tue 11/08 - 0 -> 65
   - wed 11/09 - 30 bike + 45 bike -> 140 
   - thu 11/10 - 30 bike + 45 bike  + 5 stair -> 220
-  - fri 11/11 - 30 bike + 70 bike -> 320
-  - sat 11/12 - 60 bike + 5 stair -> 380
-  - sun 11/13 - 100 bike -> 480
-
+  - fri 11/11 - 30 bike -> 250 
 
 
 20221111 - pydata nyc 2022 - cool stuff to look at 
@@ -21,10 +18,6 @@
 
 
 20221111 - pydata nyc 2022 - causal inference 
-- code 
-  - https://github.com/ronikobrosly/pydata_nyc_2022
-
-  
 - 3 types of causal relationships 
   - cofounder 
     - a cofounder is a third variable to causes both the tratment and outcome 
@@ -348,7 +341,7 @@
 - met william, ex LMT worker, air force vet, philly based 
   - met matt, speaker, texas based 
 
-20221109 - pydata nyc 2022 - weather impact models 
+20221109 - pydata nyc 2022 - westher impact models 
 - why predict weather 
   - crops, stores, transportationm, aviation, predict product mix 
   - reduce utility downtime 
@@ -448,8 +441,6 @@
 
 
 20221109 - pydata nyc shopify ML 
-- blog post on system 
-  - https://shopify.engineering/merlin-shopify-machine-learning-platform
 - shopify system
   - catalog management
     - product categorization 

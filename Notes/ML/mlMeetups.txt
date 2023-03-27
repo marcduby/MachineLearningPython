@@ -1,5 +1,7 @@
 
 
+
+
 20220830 - ML kgalle 4 week course, tampa 
 - process for data cleaing
   - find duplicate rows

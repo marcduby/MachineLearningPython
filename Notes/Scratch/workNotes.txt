@@ -1,0 +1,13 @@
+
+
+20230323 - gpt4 
+- pre train model on langiage
+  - then fine tune train/transfer learn on  a sub category (law, etc)
+- gpt was originally meant for base model for transfer learning 
+- in context learning 
+  - like sql injection attack 
+
+- code 
+  - uses 124 million param mdel, not the full 750 billion param model 
+  - tqdm: lib for preogress bar 
+  

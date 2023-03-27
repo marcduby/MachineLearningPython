@@ -1,0 +1,532 @@
+
+
+20230322 - mia images and omics predictions 
+- notes 
+  - advantage of getting data on cell profile without destroying it 
+  - biomedical imaging as an alternative 
+    - cheaper to produce than omics data 
+  - how can images co,plement omics data 
+  - so biomolecules meaured omics data also reflect/aborb light differently 
+  - so in data, combine stain data with single cell omics data set 
+  
+
+
+20230308 - mia primer, autoencoders for genetics 
+
+- notes 
+  - autoencoders 
+  - variational autenconders 
+  - when combining different types of data in the input layer, make sure the data scale is the same 
+  - swaping AAE for VAE 
+    - get same performance 
+    - AAE learned a different part of the data than the VAE 
+    - if combine, then get improvement 
+  - for VAE, need to pick input variables carefully 
+    - normal NN will ignore extraneous vars 
+    - VAE needs to rebuild all vars, so results skewed by unnecessary vars 
+  - VAEs are stochastic, don't always give the same result when trained 
+    - because of sdampling in the encoding step?
+    - so need to run experiments multiple times on multiple trained models 
+
+  - for t2d model 
+    - trained model, then perturbed data to see what effect it has 
+
+- notes for 2nd talk 
+  - ROPE: region of practical equivalence 
+  - for perturbation slide, the versicolor dataset if the perturbed one 
+  
+
+
+
+
+
+
+20230306 - schmidt center - de novo protein design, david baker 
+- presenter 
+  - david bake, https://www.bakerlab.org/
+  - institute for protein design 
+
+- notes 
+  - use rosetta model 
+    - but can also use deep leartning
+  - more easy to design small proteins that bind to other large targets 
+  - design protein that alters bound protein state when bound 
+  - deep learning 
+    - use reinforcement learning, monte carlo tree search 
+  - custom model 
+    - rosettafold
+      - baek and dimaio 
+      - second edition of model performed better by modifying loss function 
+      - goes beyond proetein, but also dna 
+      - now rosettafold can model any biomedical molecule system 
+    - ligandMPNN, proteinMPNN
+
+- ie:
+  - take flu virus, point to binding section, then let diffusion process design a protein that binds to that area 
+  
+
+
+
+
+20230301 - ai in rradiology 
+- notes 
+  - noticed that models of chest xrays could identigfy race of patient 
+    - bias?
+
+    
+
+20230215 - computationally designed proteins 
+- talk 
+  - AF stands for alpha fold 
+  - why predicting protein-protein interaction is hard 
+    - very retstrictive set of molecular amino acids
+    - restrictive set of amino acids 
+    - dynamics of protein 
+  - predicitng p-p interaction 
+    - identify a target site on protein for binding 
+    - model motif based on site 
+    - find matching motif for binding protein 
+    - will find some sections where you can't mutate AA or else deleterious to binding  
+      - no improvments to be made 
+
+- 2nd talk 
+  - if two proteins are near together in 3d space, they tend to mutate together 
+    - see this in multi sequence alignments (MSA) between species 
+  - protein MPNN 
+    - protein message passing neural network 
+    
+
+
+- todo 
+  - research TM score 
+
+
+20230201 - mia meeting, brain hie, stanforcd - learning protein evolution 
+
+- study genetic heritability in proteins by training ML
+  - idea of dependencies of choice of amino acid in one position, influences choice of amino acid in other position 
+
+- protein training models 
+  - protein language models 
+    - take protein sequence, mask 15% of sequnence and train model to predict maked sequneces 
+
+- solve viral escape problem 
+  - flu, hiv, covid 
+  - viral escape can be caused by single amino acid change 
+  - viral escape wants to keep binding of protein but change signature so host doesn't recognize the new virus 
+  - maynard word game 
+    - if want to mutate 'word' to word 'gene', but only one letter at a time and intermediate words need to be valid 
+
+- approach 
+  - train anguage models on sequences of amino acids 
+  - some ML models predicted covid mutations before they became variations of concern 
+  - protein language models learn evolutionary rules 
+
+- for proteins 
+  - fitness curve of the sequence across sequence space 
+  - flu
+    - evolves about one sequence a year ?
+    - try to predict next evolution by models (evolutionary velocity)
+    - models dont' assume selection pressure (from immunity)
+
+- info 
+  - serpins -> protein family 
+
+- future 
+  - testing antibody changes against future virus sequences 
+    - also improve fitness of the antibody 
+  - can also try to improve catalitic activity of an enzyme
+
+- algorithms 
+  - markov chain with monte carlo 
+    - initialize random sequence x
+    - loop for 50k generations
+      - mutate x to x' 
+      - calculate f(x') for new sequnece 
+      - if f(x') is superior to f(x), replace x with x'
+      - can also tolerate some drop in f(x') to account for escaping local maximum 
+        - use random loss: bayesian loss?
+
+- use deep protein ml models (alphafold)
+  - but define your own fitness functions 
+    - get different resuklts 
+    - do find some sequences that exist in nature 
+    - hie, candido 2022 bioRxiv
+
+- evolution of viruses go hand in hand with evolution of the hosts 
+  - not well understood, but could use ML models to understand better 
+
+- papers 
+
+
+- models 
+  - DeepSequence 
+    - mostly one sequnece change at a time?
+
+
+----------------------------------------------------------------------
+20201208 - crispr ML
+- base editing 
+  - gores after cytisine 
+  - avoids double starnd break, so avoid indels
+
+- genetic bases 
+  - purines have 2 rings, pyrimidines have one rings
+  - so hard to convert between the two
+
+- how specific is crispr gene editing
+- dna repair outcomes from cas9 
+- base editing outcomes 
+  - base editing very efficient at point mutations 
+  - poitions size of 4-6 nucletides 
+- more base editor than crispr options (easier to create) 
+- for wanted goal phenotype, could use multiple base editors 
+
+- ML
+  - 10k labeled inputs
+    - use xgboosted tree 
+  - deep conditiona; autoregressive model 
+    - pass freq from previous position to next to predict next position
+    - deeper decoder with more layers helped a lot
+    - 
+
+------------------------------------------------------------------------
+20201007 - dyno therapeutics, model guided biological sequence design
+- sam sinai, dyno therapeutics 
+
+- process (see figure)
+  - get data from assays
+  - use ML models to approximate rest of sequences and annotations
+  - look for best sequences in the ML model
+  - then assay those sequences and restart the process 
+
+- models
+  - feedback gans, deep exploration networks 
+  - feedback nn, dyna-ppo (google)
+    - use ensemble of models (nn, randim forest) and cuts exploration if uncertainty too high relative to beginning
+  - BO - bayesian optimization, hard to scale
+  - 
+
+20200923 - mia zoom - 
+
+
+
+20180509 - auditing datasets using AI
+- 
+
+
+
+
+20180502 - math club, carpenter lab, imaging
+- looking at pictures of nultiple cells
+  - detection problem
+    - box around each cell
+  - segmentation problem
+    - find cell boudary
+
+- cell detection problem
+  - for cell detection from slide, detecting all the cells in the image
+  - keras R-CNN package on github for TF
+  - uses faster R CNN network design
+    - faster region convolution neural network
+  - https://github.com/broadinstitute/keras-rcnn
+  
+  
+- nucleaus segmentation problem
+  - find the nuleaus in the cell
+  - otsu's thesholding problem
+  - 2 neural net architecture
+    - u-net and DeepCell
+  - DL makes fewer errors
+    - splits (when one nuclei viewed as 2) and merges (when 2 nuclei seen as 1)
+  - pipleines
+    - CellProfiler Advanced, CellProfiler basic
+  - nucleus segmentation challenge
+    - data science bowl
+    
+- image based profiling
+  - create signatures of tteratments from images
+  - cells treated with the same treatment should look similar, not dissimilar from the others
+    - so segmentation problem
+  - 3 approaches
+    - CellProfiler
+    - Transfer learning
+    - Weakliy supervised learning
+    
+    
+- capture single cell heteregeoneity
+  - how to compare two c3ll populations
+    - look at their phentoyeps
+  - profiling challenges
+    - noise and loss of signal
+  - mean (or median) profiling
+    - but lose heteregeoneity information
+  - complementary measures to mean
+    - measures of dispersion (might have same mean but be situated fatter out in 3D plot)
+    
+  
+    
+
+HMDB0004953
+
+
+
+
+20180411 - MIA, protein folding problem
+- simulation for protein structure
+  - built around energetic optimization
+    - folding goes from high energy state to low energy state
+    
+  - sequence -> energy landscape -> structure
+
+- simulator for pretein structure
+  - back propogation through time
+    =- how to train your simulator
+  - function for each pair of amino acids
+    - start with a straint protein sequence, the end up with 3d model of the folding
+    
+  - energy -_ simulator -> protein structure + loss function
+    - energy over time, so various steps to each simulator step
+     
+- protein folding important in designing medications
+
+    
+- terms
+  - homology
+    - the state of having the same or similar relation, relative position, or structure
+    
+  - RNN (recurring neural networks)
+  - graph neural networks (used in 3d chemistry)
+  - langevin dynamics (gradient descent with noise)
+    - gradient descent process can turn chaotic after awhile; chaos causes not being to back propageta in time (used in learning)
+      - ie: protein could start bouncing between multiple positions that can tend to go apart -> go into chaos, start getting meaningless numbers
+        - perturbations in the system can become amplified by tthe syste itself
+  - protein fold: arrangement of secondary structure elements
+  
+
+
+20171129 - 3d mapping of the human gehnome, prof aiden, Rice University
+- dbna 2 meters long
+- contac6t mapping
+  - exploring structurer via proximity
+    - for town, examine how residents co localize
+    - for genome, use assays that measure dna/dna contacts in intact nuclei (nuclear ligation assay)
+      - this contact maps the human genome
+      
+- Hi-C: 3d genome sequencing
+- chroms in mamls are not extended, they occupy a very discrete volume
+
+- 3d features have 1d codes
+  - weak sense (correlation); there are 1d featres that enable you to predict hwo the genome will fld
+  - strng sense (causation)
+  
+- some patterns/heat maps are close,ly correlated to open/close chrmatin
+- loops in chromatin = peaks in contact map
+
+- hi c map
+  - 2d heat map, usually 400kb x 400 kb
+  - some undercoverd sectionsm, so run some normalizations
+  - so looks like contact matrix
+  - usulally find 10k loops
+  - observations
+    - most loops are short, less than 2MB
+    - a lot of loops are conserved accross cell types, and some species
+      - some change
+    - loops are anchored at convergent CTCF sites
+      - 90% pointed at inward notation
+    - hypothesis
+      - 2 hooked donuts go up and down dna, and stop at stop signs (pointed in their direction), then get loop
+      - extrusion enables prediction of loops
+      - the convergent rule is a code in the strong sense
+      - test: by editing single CTCF motifs, we can engineer loops
+        - try using crispr, take out 20-100 bases of the human genome
+        - by deleting tamdem CTCF sites, we can refold whole chromosomes
+      - note: multiple groups have proposed interphae loop extrusion model
+      - observation
+        - if degrade cohesion, degrade all loops
+        - just get single line heat map
+        - use oxin to degrade the cohesion
+          - if you withdraw the oxin, loops come back
+          - looks lke the extrusion process slides at 400 bases per second
+          
+- what do loop domains do?
+  - loops associated with gene activity
+  - surpisingly, few genes are affected by the loss of cihesin
+  
+      
+        
+    
+  
+
+
+- look up
+  - histone code
+  
+
+20171115 - mia, microsoft research with crispr
+- crispr
+  - cas9 does the cutting
+  - site has a gg
+    - giude rna (20-30 nucleotides long) and appended gg (where cut willoccur)
+  - how to test if successful
+    - flow cytometry (FC)
+    - drug resisteance assay (RES)
+      - if gene knocked out, cell survives
+
+- support vector machines
+
+- look up
+  - regression trees
+    - iteravely combine regression trees
+    - each step, re weight traing data to give more weight to those with bad predictions that last round
+    
+http://research.microsoft.com/en-us/projects/crispr
+https://www.microsoft.com/en-us/research/?from=http%3A%2F%2Fresearch.microsoft.com%2Fen-us%2Fprojects%2Fcrispr
+
+- cloud resources for the research of off target
+  - 17k cores, run 3 weeeks of 24 hours a day
+
+20170426 - single cell analysis
+- rapid daat growth
+  - cell cumbers
+  - high data volumes
+    - 10e5 x 10e4 genes
+    - 30 gig sparse data
+    
+    
+    
+
+20160920 - probabilistic programming - CU profs
+- question
+  - have data
+  - have model
+  - then infer, and now re-evaluate model
+- edwardlib.org
+
+
+20160914 - compressed sensing
+- if have compoite measurement matrix * random composition matirx = gene expression matrix
+  - if 2 geners are colrrelated, then don't boter measuring more than e of them'
+  - can also skip co-regulated genes (co-expressed)
+    - common in bilogy
+
+- housekeeping geens: genes that are on in every tissue
+  - but there are ways (by expressed measurement) what tissue they came from
+  
+- helps to decompress high dimensioal signal
+
+- note: a gene that might be oin a correlation group in ne cell type could be in naother correlation group in another cell type
+- sparse mnf
+- this is a problem of matrix factorization
+- SMAF - sparse module activity factorization
+
+
+
+
+20160511 - MIA, David Blei (CU): stochastic variotion inference models
+- big quesiton on robustsness
+- how to scale stochastic varitional inference
+  - O(n) for each pass where you check for convergence, if go thrpugh each record to asses vars towards ancestery
+  - less if sample random samples to build model for each pass where you check for convergence
+  - black box variotonal inference'
+    - github.com/bei-lab/edward
+    - similar to Stan software
+- ex used
+  - the admixture model of Pirtchard
+  -
+- papers
+  - wainwright and jordan (2008), 300 page paper
+  - Blai et al, 2016, under review
+  - Bishop 2006 book, variation inference
+  - MacKay, Variational inference
+- bayesan stats
+  - for x observation, z latents vars (hidden)
+    - model: p(x, z|alpha)
+    - inference: p(z|x) = p(z,x) / p(x)
+      - probs of Z given x
+      - where p(x) = SUMover z(p(z,x))
+        - marginal distribution
+- debate between being bayesianist and frequentist
+- PSD model (ad mixture model)
+  - setup
+    - data
+      - i as index of individuals
+      - l: locus on genome
+      - y(ilm, ilf): data with phased data on mom/dad for person on lucus l and indiv i
+    - model populations
+      - k: # of populations
+      - BETA k, l: dist of alleles for pop k at locus l
+    - model
+      - for each population, BETA k,l ~ distribution for each pop at each locus (4, 1, for each letter)
+      - for each indix, THETAi ~ dir(ALPHA)   -> hidden vars
+        - for each locus,
+          - z(ilm) ~ THETAi,                  -> hidden
+          - z(ilf) ~ THETAi                   -> hidden
+          - y(ilm) ~ BETA z,l.m   -> observed
+          - y(ilf) ~ BETA z,l.f   -> observed
+      - so 2 observed vars, 3 hidden vars (modeled as distributions)
+- variational inference
+  - mai idea: posit a family of distribs over the latent vars
+- stochastic optimaiation
+  - the drunk story
+    - try to get from boston to LA, assuem everyone is drunk
+    - ask person1 where LA is, walk 700 miles
+    - ask person you run into, person2, where LA is, walk 350 miles into direction
+    - repeat until get to LA
+    - assumption is that if distro of person pointing to LA has mean as LA
+  - in practice
+    - smple indiv
+    - update indiv params of pops assign and
+    - pretend ths indiv is only person in pop
+    - then ask what pop params would be for that
+    - then set pop params 1/2 way between thsi and what pop params were
+    - repeat
+- variation inference vs gib sampler
+
+             
+          
+      
+    
+
+- look into
+  - Balding Nichols (model)
+    - https://en.wikipedia.org/wiki/Balding%E2%80%93Nichols_model
+  - ELBO
+    - term to maximize
+  - CAVI
+
+  
+  
+
+20160217 - MIA - gene regulation in space and time
+- caussal in ference
+  - infer regulatory network from gene expression data
+    - detarermine causal inference from observational data
+  - desirable properties of causal inference algorithms for genetics
+    - pc-algorithm, assumes strong faithfulness condition
+      - consistent algorithm for learning dags
+      - learn directed graph from conditional independence information
+      - caual effects are not allowed to cancel oyt
+        - if medcine is good for kideney, medicine bad for immune system, im good for kidney
+          - doesn't mean no + on kidney for medicine
+      - 3 node ex of dag (x1 -> x2, x1 -> x3, x2 -> x3), c is guassian noise
+        - x1 = c1
+        - x2 = @12 * x1 + c2
+        - x3 = @13 * x1 + @23 * x2 + c3
+- chromosome territories
+  - interphase chromosomes coccupy distinct space
+- find minimal configuration of ellipsoids
+  - measure overlap by largest circle I can fit into the overlap
+  - take norm as weak to avoid solution with a few large overtlaps
+    - want distributed overlap
+  - good way to determine chromosome territories
+    - redict new neighbors as shape of container changes
+    - put cell in different tissue, see how genes get reorganized
+    - cell differentiatino and gene expressio
+- highly expressed genes tend to be at the center of the nucleus
+  - also the smaller ones
+  - genes that are atthe overlap are co regulated and expressed
+  
+
+
+

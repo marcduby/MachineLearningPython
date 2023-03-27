@@ -1,5 +1,15 @@
 
 
+
+20221103 - pacific region dev fest 
+- agenda (of interest)
+  - Keynote - How to build a career in cloud - vergadia
+  - A survey of the state of the art in language models for code - goncharov
+  - Similarity-based machine learning - hapke
+  - Generative Art & Design with TensorFlow - maynard-reid 
+  - Real-time Machine Learning - chloe he 
+  
+
 20201205 - gdg silicon valley devfest 2020
 1330 - firebase with kyle paul
 

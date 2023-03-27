@@ -18,11 +18,21 @@ json:
     with open('strings.json') as f:
       d = json.load(f)
       print(d)
+
+  - display json 
+  print("build trapi payload: \n{}".format(json.dumps(payload, indent=2))
     
 virtual env:
 ------------
   - python3 -m venv tutorial-env
 
+strings:
+--------
+
+pandas:
+-------
+  - df_results = pd.DataFrame.from_dict(list_gene_chemical)
+  
 lists:
 ------
   - chunks = [data[x:x+100] for x in range(0, len(data), 100)]      # split list into sublists of size
@@ -64,6 +74,14 @@ files:
     for line in file:
         print(line.rstrip())
 
+jupyter:
+--------
+- expand seen rows for pandas 
+  from IPython.display import display
+  pd.options.display.max_rows = 999
+  display(df_results)
+
+
   
 
 misc:
@@ -76,11 +94,32 @@ databases:
   cur = db.cursor()  
   cur.execute(sql).fetchall()/fetchone()
 
+
+sqlalchemy:
+-----------
+- return new rowid
+    with engine.connect() as conn:
+        sql_params = data.dict()
+        sql_params.update({'s3_bucket_id': s3_record_id, 'metadata': json.dumps(data.metadata)})
+        res = conn.execute(text("""
+            INSERT INTO records (s3_bucket_id, name, metadata, data_source_type, data_source, data_type, genome_build,
+            ancestry, data_submitter, data_submitter_email, institution, sex, global_sample_size, t1d_sample_size, 
+            bmi_adj_sample_size, status, additional_data) VALUES(:s3_bucket_id, :name, :metadata, :data_source_type, 
+            :data_source, :data_type, :genome_build, :ancestry, :data_submitter, :data_submitter_email, :institution, 
+            :sex, :global_sample_size, :t1d_sample_size, :bmi_adj_sample_size, :status, :additional_data)
+        """), sql_params)
+        conn.commit()
+        s3.create_record_directory(s3_record_id)
+    return s3_record_id, res.lastrowid
+
 objects:
 --------
   - __init__(self)
   - __repl__(self)
   - __str__(self)
+
+  gene_association: GenePhenotypeAssociation
+  for gene_association in list_gene_assoc:
 
 debug:
 ------

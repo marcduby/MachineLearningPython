@@ -1,5 +1,27 @@
 
 
+20230214 - translator relay 
+- ex collaborators attending
+  - noel
+    - works atsra zeneca on patient safety
+  - trung nguyen 
+    - ex NIH
+    - pfizer, infrastructure 
+  - mvon 
+    - ex DCC
+    - takeda, started investigative toxicology group 
+      - very diverse portfolio at takeda 
+      - new using misc data for efficacy (genetics, image)
+  - rajarshi guha
+    - ex NIH
+    - vertex, leads data and methods group 
+    - aim small molecules, genomics, 
+
+
+- how could we collaborate with you?
+  - downloaded graphs of he data 
+  
+
 - genepro deploy
   - sudo su -l <dev>
   - script /dev/null
