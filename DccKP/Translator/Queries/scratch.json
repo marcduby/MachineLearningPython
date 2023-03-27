@@ -1,0 +1,25 @@
+{
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "disease": {
+                    "categories": [
+                        "biolink:Disease"
+                    ]
+                },
+                "drug": {
+		             "ids":[
+                         "GO:0038060"
+                        ]
+                }
+            },
+            "edges": {
+                "e0": {
+                    "subject": "drug",
+                    "object": "disease"
+
+                }
+            }
+        }
+    }
+}

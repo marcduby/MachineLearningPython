@@ -1,0 +1,30 @@
+{
+    "message": {
+      "query_graph": {
+        "edges": {
+          "e01": {
+            "object": "gene",
+            "subject": "disease",
+            "ids": ["biolink:causes"]
+          }
+        },
+        "nodes": {
+          "disease": {
+            "categories": [
+              "biolink:Disease"
+            ],
+            "ids": [
+              "MONDO:0007739"
+            ],
+            "is_set": false
+          },
+          "gene": {
+            "categories": [
+              "biolink:Gene"
+            ],
+            "is_set": false
+          }
+        }
+      }
+    }
+  }

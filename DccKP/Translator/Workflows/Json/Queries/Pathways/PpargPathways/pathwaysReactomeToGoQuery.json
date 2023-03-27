@@ -3,7 +3,6 @@
     "query_graph": {
       "edges": {
         "e01": {
-          "constraints": [],
           "object": "pathway01",
           "subject": "pathway02"
         }
@@ -16,7 +15,6 @@
           "ids": [
             "GO:0045444"
           ],
-          "constraints": [],
           "is_set": false
         },
         "pathway01": {
@@ -26,7 +24,6 @@
           "ids": [
             "REACT:R-HSA-381340"
           ],
-          "constraints": [],
           "is_set": false
         }
       }
