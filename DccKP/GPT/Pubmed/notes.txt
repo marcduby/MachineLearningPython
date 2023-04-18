@@ -1,0 +1,14 @@
+
+
+- approach
+  - need context, then lists of q/a 
+  - use abstract as context 
+  - generate q/a from keywords, with determining type (gene/pheno) from node normalizer 
+  - then run through all abstracts and generate stats 
+
+
+- notice
+  - have access to references 
+    - good for translator
+
+

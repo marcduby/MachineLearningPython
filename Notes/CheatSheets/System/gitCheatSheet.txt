@@ -17,6 +17,8 @@ merging changes from another branch:
   - git merge from_branch
   - git push
 
+  - git merge --abort 
+
 new branch:
 -----------
   - git checkout -b <branch_name>
@@ -25,6 +27,11 @@ new branch:
 github ssh issue:
 -----------------
 git@github.com:broadinstitute/genetics-kp-dev.git
+
+diff:
+-----
+   - git diff HEAD^^ HEAD main.c
+   - git diff HEAD~2 HEAD -- main.c
 
 info:
 -----

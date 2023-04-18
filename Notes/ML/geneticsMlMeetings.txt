@@ -1,4 +1,14 @@
 
+20230405 - GNNs intro 
+- can 
+  - transform one graph into another with a funtction 
+  - better graph built, better models you get 
+  - how to build bad graphs? what to avoid 
+  - move to richer graphs 
+    - the more information, the better 
+  - one brute force model - start with fully connected graph then let it decide which connections to keep 
+  
+
 
 20230322 - mia images and omics predictions 
 - notes 

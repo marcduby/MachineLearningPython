@@ -40,7 +40,8 @@ lists:
   - list_diseases = list(set(list_diseases))                        # get unique elements in the list
   - newlist = [word for word in words if len(word) == 9]
   - if isinstance(input_object, list)                               # one list enterily in another list
-
+  - if any(ext in url_string for ext in extensionsToCheck):
+        print(url_string)
 
 dict:
 -----
@@ -81,7 +82,14 @@ jupyter:
   pd.options.display.max_rows = 999
   display(df_results)
 
-
+exception:
+----------
+  x = 5
+  y = "hello"
+  try:
+      z = x + y
+  except TypeError:
+      print("Error: cannot add an int and a str")
   
 
 misc:
