@@ -1,5 +1,53 @@
 
-20230405 - GNNs intro 
+22030425 - databricks dolly 
+- LLM 
+  - summarixation, traslation, q/a, 
+
+- dolly 
+  - text generation model 
+  - 
+
+20230419 - broad mia - AI research in biomedicine
+- AI for antibiotic research 
+  - problem with generative AI for antibiotics 
+    - generates chem structures that are hard to synsethize
+  - use monte carlo tree search to find easy to synsethize new antibiotics 
+    - still very large search space 
+    - so use antibiotic property predictor to score 
+    - back propagate the score back up the tree to its fragments 
+  - score balances 
+    - efficacy, structural novelty, safety, synthesizability 
+  - sent 70 recipes to Enamine in Ukraine, got 58 back (80% success)
+    - test 58 aganst pathogens that have the most antibiotic escaping 
+    - 6 escape pathogens have developed immunity to existing anitbiotics 
+      - found 6 novel antibiotics that inhibit 4 of the 6 ESKAPE pathogens 
+      - need drugs to work at low dosage 
+
+- AI designed clinical trials 
+  - way to design new clinical trial protocols 
+  - clinicaltrials are the bottlenecks of dug discovery 
+    - if more efficient, should help with drug success yield 
+  - 40% cancer trials fail to reach minimum enrollment 
+  - trail eligibility critera is often arbitrary 
+  - use generative AI on EHR records to emulate traisl and guide design of new trials 
+  
+
+
+20230419 - broad mia - evaluatijng medical AI 
+- ex: skin cancer photo identification 
+  - ussiues with mislabeled data used for training (60%)
+  - some ethnicity bias (20%)
+  - use shapley score to evaluate traing data 
+    - can also use to do synthetic data generation 
+
+- ex: ejection fraction calculation for cardiologists 
+  - from video, cardiologist measure contracted vs expanded chamber to calclate volume of pump 
+  - replace by AI having video coupled with ekg 
+
+
+
+
+20230405 - broad mia - GNNs intro 
 - can 
   - transform one graph into another with a funtction 
   - better graph built, better models you get 
@@ -10,7 +58,7 @@
   
 
 
-20230322 - mia images and omics predictions 
+20230322 - broad mia - images and omics predictions 
 - notes 
   - advantage of getting data on cell profile without destroying it 
   - biomedical imaging as an alternative 
