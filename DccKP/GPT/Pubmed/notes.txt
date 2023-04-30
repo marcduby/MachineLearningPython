@@ -14,6 +14,29 @@
 
 
 
+20230427 - training with 110k lines and length of 80
+training .... 
+  0%|          | 0/12 [00:00<?, ?it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+/usr/local/lib/python3.9/dist-packages/transformers/generation/utils.py:1313: UserWarning: Using `max_length`'s default (20) to control the generation length. This behaviour is deprecated and will be removed from the config in v5 of Transformers -- we recommend using `max_new_tokens` to control the maximum length of the generation.
+  warnings.warn(
+  8%|▊         | 1/12 [03:42<40:50, 222.79s/it]<startofstring> PCSK9 is a gene <bot>: and a gene-related gene gene gene
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 17%|█▋        | 2/12 [07:25<37:04, 222.48s/it]<startofstring> PCSK9 is a gene <bot>: which is associated with the expression of the
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 25%|██▌       | 3/12 [11:08<33:24, 222.70s/it]<startofstring> PCSK9 is a gene <bot>: which is associated with the occurrence of various
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 33%|███▎      | 4/12 [14:51<29:42, 222.86s/it]<startofstring> PCSK9 is a gene <bot>: and the prognostic value of the prog
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 42%|████▏     | 5/12 [18:33<25:59, 222.84s/it]<startofstring> PCSK9 is a gene <bot>: and is associated with the occurrence of a
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 50%|█████     | 6/12 [22:17<22:18, 223.07s/it]<startofstring> PCSK9 is a gene <bot>: and it is involved in the regulation of
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 58%|█████▊    | 7/12 [26:00<18:35, 223.01s/it]<startofstring> PCSK9 is a gene <bot>: and prognostic value is validated in the
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 67%|██████▋   | 8/12 [29:43<14:51, 222.98s/it]<startofstring> PCSK9 is a gene <bot>: and prognosticnostic prediction is a new
+ 67%|██████▋   | 8/12 [31:32<15:46, 236.53s/it]
+ 
+
 
 
 from chatgpt:
@@ -31,7 +54,26 @@ Preprocess the dataset: Once you have chosen a dataset, you will need to preproc
 Create training examples: For each question-answer pair in the dataset, you will need to create a training example that includes the question, the answer, and any relevant context. This context might include the paragraph or article that the question is taken from, for example.
 
 Augment the dataset: To improve the performance of your model, you may want to augment the dataset by generating additional training examples. This can be done through techniques such as data augmentation or paraphrasing.
-
+training .... 
+  0%|          | 0/12 [00:00<?, ?it/s]Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+/usr/local/lib/python3.9/dist-packages/transformers/generation/utils.py:1313: UserWarning: Using `max_length`'s default (20) to control the generation length. This behaviour is deprecated and will be removed from the config in v5 of Transformers -- we recommend using `max_new_tokens` to control the maximum length of the generation.
+  warnings.warn(
+  8%|▊         | 1/12 [03:42<40:50, 222.79s/it]<startofstring> PCSK9 is a gene <bot>: and a gene-related gene gene gene
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 17%|█▋        | 2/12 [07:25<37:04, 222.48s/it]<startofstring> PCSK9 is a gene <bot>: which is associated with the expression of the
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 25%|██▌       | 3/12 [11:08<33:24, 222.70s/it]<startofstring> PCSK9 is a gene <bot>: which is associated with the occurrence of various
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 33%|███▎      | 4/12 [14:51<29:42, 222.86s/it]<startofstring> PCSK9 is a gene <bot>: and the prognostic value of the prog
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 42%|████▏     | 5/12 [18:33<25:59, 222.84s/it]<startofstring> PCSK9 is a gene <bot>: and is associated with the occurrence of a
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 50%|█████     | 6/12 [22:17<22:18, 223.07s/it]<startofstring> PCSK9 is a gene <bot>: and it is involved in the regulation of
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 58%|█████▊    | 7/12 [26:00<18:35, 223.01s/it]<startofstring> PCSK9 is a gene <bot>: and prognostic value is validated in the
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+ 67%|██████▋   | 8/12 [29:43<14:51, 222.98s/it]<startofstring> PCSK9 is a gene <bot>: and prognosticnostic prediction is a new
+ 67%|██████▋   | 8/12 [31:32<15:46, 236.53s/it]
 Split the dataset: Finally, you will need to split the dataset into training, validation, and testing sets. The training set will be used to train the model, the validation set will be used to tune hyperparameters, and the testing set will be used to evaluate the final performance of the model.
 
 By following these steps, you can create a training dataset that can be used to fine-tune a transformer question-answer model. Once you have a suitable dataset, you can use it to train your model using techniques such as transfer learning or fine-tuning.

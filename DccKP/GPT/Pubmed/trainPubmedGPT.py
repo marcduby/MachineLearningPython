@@ -13,10 +13,20 @@ import torch
 device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
 print("Have ML device: {}".format((device)))
 
-# ML constants
+# mac
 FILE_DATA_TRAIN="/Users/mduby/Data/Broad/PubmedGPT/Training/ConversationGPT/data_train.json"
-ML_BATCH_SIZE = 16
 DIR_MODEL="/Users/mduby/Data/Broad/PubmedGPT/Models/ConversationGPT"
+
+# AWS
+FILE_DATA_TRAIN="/home/ubuntu/data_train.json"
+DIR_MODEL="/home/ubuntu/Models"
+
+# local
+FILE_DATA_TRAIN="/home/javaprog/Data/Broad/GPT/Data/ConvoPubmedV1/data_train.json"
+DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models"
+
+# ML constants
+ML_BATCH_SIZE = 64
 ML_MODEL_NAME="gpt2"
 ML_MAX_LENGTH_TRAIN=80
 ML_MAX_LENGTH_INFER=80
@@ -102,8 +112,11 @@ class ChatData(Dataset):
         if size > 0:
             self.X = self.X[:size]
 
-        print(self.X[0])
-        print("size of data: {}".format(len(self.X)))
+        # for i, row in enumerate(self.X):
+        #     print("{} - {}".format(i, row))
+
+        print("first row of data: {}".format(self.X[0]))
+        print("size of training data: {}".format(len(self.X)))
 
         # self.X_encoded = tokenizer(self.X, max_length=120, truncation=True, padding="max_length", return_tensors="pt")
         self.X_encoded = tokenizer(self.X, max_length=ML_MAX_LENGTH_TRAIN, truncation=True, padding="max_length", return_tensors="pt")
@@ -123,7 +136,10 @@ if __name__ == "__main__":
     tokenizer = load_tokenizer(ML_MODEL_NAME)
 
     # load the data
-    chatData = ChatData(FILE_DATA_TRAIN, tokenizer)
+    file_train = FILE_DATA_TRAIN
+    print("download data file: {}".format(file_train))
+    json_data = load_training_data(file_train)
+    chatData = ChatData(json_data, tokenizer)
     # chatData =  DataLoader(chatData, batch_size=32)
     chatData =  DataLoader(chatData, batch_size=ML_BATCH_SIZE)
 

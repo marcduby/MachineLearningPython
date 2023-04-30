@@ -113,7 +113,8 @@ if __name__ == "__main__":
 
     # get the list of abstracts
     conn = get_connection()
-    list_abstracts = get_list_of_abstracts(conn, 'PCSK9')
+    # list_abstracts = get_list_of_abstracts(conn, 'PCSK9')
+    list_abstracts = get_list_of_abstracts(conn, None)
 
     # for each abstract
     for abstract in list_abstracts:
