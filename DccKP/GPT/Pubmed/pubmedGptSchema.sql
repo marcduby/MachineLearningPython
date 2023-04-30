@@ -77,7 +77,7 @@ set keyw.translator_curie = node.ontology_id, keyw.translator_type = look.type_n
 
 
 -- queries
-select distinct paper_date from pubmed_gpt.pmd_abstract order by paper_date;
+select count(id), paper_date from pubmed_gpt.pmd_abstract group by paper_date order by paper_date;
 
 select count(id) from pmd_abstract;
 
@@ -93,7 +93,8 @@ limit 50;
 
 select count(id) from pmd_keyword;
 
-select * from keyword where translator_curie is not null order by keyword;
+select * from keyword where translator_curie is not null
+order by keyword;
 
 -- join keywords with translator nodes case insensitive
 select keyword.keyword, node.ontology_id, node.id, look.type_name
@@ -122,10 +123,18 @@ where abs.id = link.abstract_id and link.keyword_id = keyw.id and keyw.translato
 group by abs.pubmed_id
 order by count, abs.pubmed_id;
 
--- count of keywords with curies by paper 
+-- count of keywords with curies by paper, at leat 3 keywords
 select abs.pubmed_id, count(keyw.id) as count
 from pmd_abstract abs, pmd_keyword keyw, pmd_link_keyword_abstract link
-where abs.id = link.abstract_id and link.keyword_id = keyw.id and keyw.translator_curie is not null
+where abs.id = link.abstract_id and link.keyword_id = keyw.id 
+and keyw.translator_curie is not null and link.offset > 0
 group by abs.pubmed_id
 order by count, abs.pubmed_id;
+
+select abs.pubmed_id, keyw.keyword, keyw.translator_curie, keyw.translator_type, link.offset
+from pmd_abstract abs, pmd_keyword keyw, pmd_link_keyword_abstract link 
+where abs.id = link.abstract_id and link.keyword_id = keyw.id 
+and keyw.translator_curie is not null and link.offset > 0
+order by abs.pubmed_id;
+
 

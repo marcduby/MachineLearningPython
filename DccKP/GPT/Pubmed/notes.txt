@@ -11,7 +11,66 @@
   - have access to references 
     - good for translator
 
+20230430 - nvidia gpu aws
+Every 5.0s: nvidia-smi                                                                                                        ip-172-31-17-134: Sun Apr 30 16:44:11 2023
 
+Sun Apr 30 16:44:11 2023
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.85.12    Driver Version: 525.85.12    CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A10G         On   | 00000000:00:1E.0 Off |                    0 |
+|  0%   51C    P0   263W / 300W |  12858MiB / 23028MiB |     99%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A     33591      C   python3                         12856MiB |
++-----------------------------------------------------------------------------+
+
+
+20230428 - 64 stream, 80 input tokens, 
+
+ 24%|██▍       | 6/25 [1:00:51<3:12:48, 608.88s/it]
+<start> diabetes is associated with genes <bot>: and it is associated with the immune system. We also find that the level of the immune system is related to the level of immune infiltration and the level of the immune system. Finally <end>                              
+<start> PCSK9 is a gene <bot>: which is essential for the proper formation of the mitochondrial membrane. Here <end>                                                                            
+<start> diabetes is a disease <bot>: and it is often caused by genetic or epigenetic factors. We aim to identify the genetic causes of the common and rare <end>                                                        
+ 28%|██▊       | 7/25 [1:11:00<3:02:40, 608.92s/it]
+ <start> diabetes is associated with genes <bot>: and the association between the SEP and DNAm was analyzed. The SEP explained a significant proportion of the phenotypic variation. The SEP explained a significant proportion of the phenotypic variation. The SEP explained a significant proportion of the phenotyp
+<start> PCSK9 is a gene <bot>: which is essential for the proper formation of the proper protein. Here <end>                                                                            
+<start> diabetes is a disease <bot>: and the relationship between genetic and environmental conditions has not been studied. In this study <end>                                                                        
+ 32%|███▏      | 8/25 [1:21:09<2:52:30, 608.85s/it]
+ <start> diabetes is associated with genes <bot>: and the association between the miR-494-3p and miR-544a was close to that observed for all DE traits. In addition <end>                                          
+<start> PCSK9 is a gene <bot>: which is tightly correlated with immune infiltration and may therefore be an independent predictive factor. Therefore <end>                                                                    
+<start> diabetes is a disease <bot>: and the use of big data in medicine is underrepresented among patients in cardiology. We aimed to explore the perspectives and potential implications of healthcare professionals in providing genetics counseling and testing to all patients. Semi-structured interviews were conducted with 10 healthcare professionals from four clinical
+ 36%|███▌      | 9/25 [1:31:17<2:42:18, 608.67s/it]
+ <start> diabetes is associated with genes <bot>: and the use of big data in medicine may improve practice in the aging sample. <end>                                                                      
+<start> PCSK9 is a gene <bot>: and its origin often explained by biological processes such as taste <bot>: and others. We identified eight wayfinding-based methods for gene discovery of important environmental adaptation factors: the simple genomic models from blocks with and those from moderately and highly complex regions by feature selection. For
+<start> diabetes is a disease <bot>: and its incident incidence rate when 14q11.2 duplication was identified in a cohort of 6049 respondents who were BRCA <end>                                                    
+ 40%|████      | 10/25 [1:41:25<2:32:09, 608.65s/it]
+ <start> diabetes is associated with genes <bot>: which are either similar or discordant. The present study identified a possible association between age and alcohol consumption and the risk of ESCC. The findings also revealed a significant association between alcohol consumption and ESCC <end>                      
+<start> PCSK9 is a gene <bot>: which usually occurs in isolation from other animals. The SNP23 recombinant inbred lines (RILs) developed inbred lines with the additive RILs in two populations. The RILs in the parental genome were ranged from 0.4 to 0
+<start> diabetes is a disease <bot>: and the results were confirmed through the functional tests <end>                                                                                      
+ 44%|████▍     | 11/25 [1:51:35<2:22:03, 608.79s/it]
+ <start> diabetes is associated with genes <bot>: and scoliosis may be used as a risk factor to stroke.  We investigated the association between the IFN-γ expression and the risk of stroke. We found that the expression of the inflammatory aging clock-related genes was strongly correlated with the development of
+<start> PCSK9 is a gene <bot>: which is highly expressed in neurons. We previously reported that mice with the MPZD61N variant <end>                                                              
+<start> diabetes is a disease <bot>: and the association between miRNA-124 expression and DNA methylation in the three groups of this study. The results of the current study revealed that miR-124 can be a novel target for the treatment of type 2 diabetes mellitus (T2DM) <end>
+ 48%|████▊     | 12/25 [2:01:44<2:11:58, 609.13s/it]
+ <start> diabetes is associated with genes <bot>: and the association between miRNA-124 and scoliosis is elusive. Therefore <end>                                                                      
+<start> PCSK9 is a gene <bot>: and the mechanism of this activation is related to host metabolism and is probably related to host activation <end>                                                                  
+<start> diabetes is a disease <bot>: and the common mechanism of the most common type of diabetes is based on the genetic predisposition to SLE. The genetic predisposition to SLE development was confirmed in most studies but not in the many studies. The approach of the study was differentially expressed into three
+ 52%|█████▏    | 13/25 [2:11:54<2:01:52, 609.40s/it]
+ <start> diabetes is associated with genes <bot>: and the common comorbidity outcome is stroke and chronic depression. <end>                                                                          
+<start> PCSK9 is a gene <bot>: which is directly regulated by the Dfd and ScrY gene. The same gene expression pattern in the three selected P1D mutant mice is different from that in the control group. The p1D mutant shows an overall proliferation and low survival rate compared to
+<start> diabetes is a disease <bot>: and its occurrence has been documented in the past few decades. In this regard <end>                                                                          
+ 56%|█████▌    | 14/25 [2:22:03<1:51:42, 609.29s/it]
 
 
 20230427 - training with 110k lines and length of 80

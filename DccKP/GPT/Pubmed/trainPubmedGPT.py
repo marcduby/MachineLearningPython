@@ -8,6 +8,7 @@ from torch.optim import Adam
 from torch.utils.data import DataLoader
 import tqdm
 import torch
+import time
 
 # constants 
 device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
@@ -30,7 +31,7 @@ ML_BATCH_SIZE = 64
 ML_MODEL_NAME="gpt2"
 ML_MAX_LENGTH_TRAIN=80
 ML_MAX_LENGTH_INFER=80
-
+ML_NUM_SIZE_TRAIN=100
 
 # methods 
 def load_training_data(file_path, log=False):
@@ -48,10 +49,20 @@ def save_model(dir_path, epoch, log=False):
     ''' 
     save the model to disk
     ''' 
+    pass
+
+def print_elapsed_time(start, num_epoch=0, log=False):
+    '''
+    prints the elapsed time
+    '''
+    end = time.time()
+    print("epoch: {} took: {}s".format(num_epoch, (end - start)))
 
 def train(chatData, model, optim, epochs=25):
     # loop though epochas to train
     for i in tqdm.tqdm(range(epochs)):
+        start = time.time()
+
         for X, a in chatData:
             X = X.to(device)
             a = a.to(device)
@@ -59,9 +70,14 @@ def train(chatData, model, optim, epochs=25):
             loss = model(X, attention_mask=a, labels=X).loss
             loss.backward()
             optim.step()
+
+        # print time 
+        print_elapsed_time(start, num_epoch=i)
+
+        # write out model
         file_model = "{}/model_state_{}.pt".format(DIR_MODEL, i)
         torch.save(model.state_dict(), file_model)
-        print("wrote out model for epoch: {} to file: {}".format((i, file_model)))
+        print("wrote out model for epoch: {} to file: {}".format(i, file_model))
 
         # test the inference
         text_result = infer("\n\nPCSK9 is a gene")
@@ -139,7 +155,7 @@ if __name__ == "__main__":
     file_train = FILE_DATA_TRAIN
     print("download data file: {}".format(file_train))
     json_data = load_training_data(file_train)
-    chatData = ChatData(json_data, tokenizer)
+    chatData = ChatData(json_data, tokenizer, size=ML_NUM_SIZE_TRAIN)
     # chatData =  DataLoader(chatData, batch_size=32)
     chatData =  DataLoader(chatData, batch_size=ML_BATCH_SIZE)
 
