@@ -19,7 +19,7 @@ FILE_DATA_TRAIN="/Users/mduby/Data/Broad/PubmedGPT/Training/ConversationGPT/data
 DIR_MODEL="/Users/mduby/Data/Broad/PubmedGPT/Models/ConversationGPT"
 
 # AWS
-FILE_DATA_TRAIN="/home/ubuntu/data_train.json"
+FILE_DATA_TRAIN="/home/ubuntu/Data/data_train.json"
 DIR_MODEL="/home/ubuntu/Models"
 
 # local
