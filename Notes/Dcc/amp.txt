@@ -1,0 +1,173 @@
+
+
+22030331 - testing rpi keyboard 
+b5b5b5b5iiiib5b5n6n6n6n6mmmn6n6b5b5vvvb5b5n6n6
+
+bbbbnnnnnnnmmppzzxxccvvbb
+
+
+misc
+- vocabulary 
+  - in vivo, ex vivo (cells), in silico 
+
+
+20230328 - kate townsend creasy
+
+
+
+20230328 - ines cebola 
+- NAFLD 
+  - non alcoholic fatty liver disease 
+
+20230328 - melina claussnitzer lab 
+
+20230338 - anna gloyn, stanford 
+- look at genes withon 1mb of signal locus 
+
+
+20230328b - gaulaton lab 
+- smores method 
+  - link regulatory locus to genes, o combine eqtl to chromatin 
+  - ABC method the standard
+    - also cicero method 
+  - qtls also provide direction of effect 
+
+
+20230327 - starnet 
+- pubs
+  - science 2016 publication, starvet outperforms gtex because living patients 
+  - nature CVR january 2022 
+- starnet.mssm.edu 
+
+
+20230327 - MPRA 
+- massively parrallel reporter assays 
+
+- notes 
+  - cells behave differently in  petri dish from when they are next to their neoghbors in tissue 
+
+20230327 - pQtls 
+- melissa miller 
+
+
+20230327 - genetics in drug discovery 
+- questions 
+  - why can't all targets not be indcated by human genetics 
+
+- vocabulary 
+  - modalities of drugs: small molecule vs antibodies 
+    - also rna, gene editing, si-rna, epigentic modifications of genes 
+
+
+- novo nordisk 
+  - targets, safety 
+  - steps 
+    - 1 - locus identification 
+    - 2 - identify caudsal genes
+      - just because top variant, not necessarily causeal variant  
+    - 3 - deduce dirrection of effect 
+    - 4 - use genetics to test for potential adverse effects and additional phewas indications
+    - 5 - establish whether unknown gene has a ole in human disease (new experiments)
+    - 6 - use 
+    - 7 - explore drugability 
+
+  - to identify causal gene 
+    - gwas, epigenetic marker, rare variants, 
+    - mendella  randomization 
+      - gene expression in tissue, protein expression, metabolites, known risk factors 
+
+  - pcsk9 example 
+    - is it causal gene for ldl 
+      - step 1: strong causal locus 
+      - 2: look at  liver transriptomics, also look at protein levels 
+        - lead rs553741 
+        - also look at rarae variants: LoF gets lower CAD, LDL. GoF has higher hypercholesteriolemia 
+      - 3: 
+
+
+  - drugg questions 
+    - where does the molecule need to go (tissue, cell type)
+    - where should molecule not go 
+    - cann we validate hypothesized direction of intervention 
+    - how should we interven e in target biology 
+      - target modr of actiopn 
+
+
+- corey james, Eli Lilly 
+  - finding targets of convistion 
+    - why: 90% of clinical drug dev fails (nature review 2019, p495-496)
+      - dev time has remained static (nature review 2022, p793-794)
+      - moore's law vs eroom's law 
+        - cpu x2 for every 2 years 
+        - for eroom's law, cost in drug discovery going up to market 
+          - $1 billion cost for each new market drug 
+    - target of convistion 
+      - low risk validated target 
+      - strong evidence of genetics or phamacological action in humans 
+        - caveat: not all drug targets can be supported by human genetic evidence 
+      - adequate safety margnins 
+      - technical feasible 
+        - does a feasible tool exist 
+        - novel targets may raise conerns 
+
+  - human genetics in drug discovery 
+    - look at astra zenaca, nature reviews 2014, p419-431 
+
+  - trials are more likely to stop for safety reasons if the target gene 
+    - highly constrained in human populations 
+    - not selectively expressed 
+    - genes with highly interactive proteins (protein/protein interactions)
+    - physiologcal characterization 
+      - look at human knockout populaions 
+    - phewas assessments 
+
+  - technical feasability of gene 
+    - suitable tool for target validation 
+    - known mechanism of action 
+    - 
+    - 
+
+
+- dr yihiang hsu, amgen 
+  - what trials worked and didn't wor, and what characteristics  
+    - had 11 trials in volved in 
+  - steps 
+    - screen for hits
+    - lead identification 
+    - lead optimization 
+    - preclinical 
+    - phase 1 to 3 
+    - regostration 
+    - approved 
+
+  - good target 
+    - link human disease 
+    - link to patheway or moa 
+    - show desired biological effect 
+    - safe unwanted side effects 
+    - druggable 
+    - meet biz demands 
+
+  - target validation 
+    - animal model 
+    - human tissue 
+    - spatial multi omics 
+    - humanized mice 
+
+  - good therapeutics 
+    - deliverable, reach sire fo action 
+    - specific to cell type 
+    - low dosage to achieve biological effect 
+    - reduce immunogenicity pof drug 
+    - able to overcome drug resistance 
+
+  - multi specific antibodies 
+    - complex disease 
+      - cells might respond to inhibition of one receptor by producing more of a 2nd receptor 
+    - multi specific anibidies: target two disease targets with 1 molecule 
+
+  - desired properties 
+    - clear biological function 
+    - disease modifiable, modification of taregt 
+
+

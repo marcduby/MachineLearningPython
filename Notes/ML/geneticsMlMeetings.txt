@@ -1,4 +1,22 @@
 
+
+0230427 - odsc daphne koller interview
+
+- insitro 
+  - genetic association data 
+  - wet lab work using crispered human cells
+- what changed for data in healthcare research 
+  - got a lot more data o train models
+    - lots of ehr data 
+    - gentics data 
+    - cell data using crispr
+- as a founder 
+  - important to boostrap a good culture, which then builds on itself as new generations of employees come in 
+
+- inmsitro 
+  - mix of in sillico and in vitro 
+
+
 22030425 - databricks dolly 
 - LLM 
   - summarixation, traslation, q/a, 
@@ -47,7 +65,7 @@
 
 
 
-20230405 - broad mia - GNNs intro 
+20230405 - GNNs intro 
 - can 
   - transform one graph into another with a funtction 
   - better graph built, better models you get 
