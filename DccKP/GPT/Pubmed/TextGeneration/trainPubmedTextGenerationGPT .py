@@ -15,15 +15,15 @@ device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is
 print("Have ML device: {}".format((device)))
 
 # mac
-FILE_DATA_TRAIN="/Users/mduby/Data/Broad/PubmedGPT/Training/ConversationGPT/data_train.json"
+FILE_DATA_TRAIN="/Users/mduby/Data/Broad/PubmedGPT/Training/ConversationGPT/text_generation_data_train20230430.json"
 DIR_MODEL="/Users/mduby/Data/Broad/PubmedGPT/Models/ConversationGPT"
 
 # AWS
-FILE_DATA_TRAIN="/home/ubuntu/Data/data_train20230430.json"
+FILE_DATA_TRAIN="/home/ubuntu/Data/text_generation_data_train20230430.json"
 DIR_MODEL="/home/ubuntu/Models"
 
 # local
-FILE_DATA_TRAIN="/home/javaprog/Data/Broad/GPT/Data/ConvoPubmedV1/data_train.json"
+FILE_DATA_TRAIN="/home/javaprog/Data/Broad/GPT/Data/ConvoPubmedV1/text_generation_data_train20230430.json"
 DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models"
 
 # ML constants
@@ -85,21 +85,25 @@ def train(chatData, model, optim, num_epochs=25):
 
         # write out model
         if i % ML_NUM_SAVE_MODEL == 0:
-            file_model = "{}/model_state_{}.pt".format(DIR_MODEL, i)
+            file_model = "{}/text_gen_model_state_{}.pt".format(DIR_MODEL, i)
             torch.save(model.state_dict(), file_model)
             print("wrote out model for epoch: {} to file: {}".format(i, file_model))
 
         # test the inference
-        text_result = infer("\n\nPCSK9 is a gene")
-        print(text_result.replace("<pad>", " "))
-        text_result = infer("\ndiabetes is a disease")
-        print(text_result.replace("<pad>", " "))
-        text_result = infer("\ndiabetes is associated with genes")
-        print(text_result.replace("<pad>", " "))
+        print_infer("PCSK9 is a gene")
+        print_infer("diabetes is a disease")
+        print_infer("diabetes is associated with genes")
 
+def print_infer(str_input, log=False):
+    '''
+    prints the test inference
+    '''
+    print("\ninput: {}".format(str_input))
+    text_result = infer(str_input)
+    print("output: {}".format(text_result.replace("<pad>", " ")))
 
 def infer(inp):
-    inp = "<start> "+inp+" <bot>: "
+    inp = "<start> " + inp
     inp = tokenizer(inp, return_tensors="pt")
     X = inp["input_ids"].to(device)
     a = inp["attention_mask"].to(device)
@@ -114,7 +118,6 @@ def load_tokenizer(model_family, log=False):
     tokenizer.add_special_tokens({"pad_token": "<pad>", 
                                     "bos_token": "<start>",
                                     "eos_token": "<end>"})
-    tokenizer.add_tokens(["<bot>:"])
 
     # return
     return tokenizer
