@@ -28,10 +28,13 @@ DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models"
 
 # ML constants
 ML_BATCH_SIZE = 64
+ML_BATCH_SIZE = 96
 ML_MODEL_NAME="gpt2"
 ML_MAX_LENGTH_TRAIN=80
 ML_MAX_LENGTH_INFER=80
 ML_NUM_SIZE_TRAIN=100
+ML_NUM_SAVE_MODEL=20
+ML_NUM_EPOCHS=100
 
 # methods 
 def load_training_data(file_path, log=False):
@@ -58,9 +61,12 @@ def print_elapsed_time(start, num_epoch=0, log=False):
     end = time.time()
     print("epoch: {} took: {}s".format(num_epoch, (end - start)))
 
-def train(chatData, model, optim, epochs=25):
+def train(chatData, model, optim, num_epochs=25):
+    # log
+    print("training model for epochs: {}".format(num_epochs))
+
     # loop though epochas to train
-    for i in tqdm.tqdm(range(epochs)):
+    for i in tqdm.tqdm(range(num_epochs)):
         start = time.time()
 
         for X, a in chatData:
@@ -75,9 +81,10 @@ def train(chatData, model, optim, epochs=25):
         print_elapsed_time(start, num_epoch=i)
 
         # write out model
-        file_model = "{}/model_state_{}.pt".format(DIR_MODEL, i)
-        torch.save(model.state_dict(), file_model)
-        print("wrote out model for epoch: {} to file: {}".format(i, file_model))
+        if i % ML_NUM_SAVE_MODEL == 0:
+            file_model = "{}/model_state_{}.pt".format(DIR_MODEL, i)
+            torch.save(model.state_dict(), file_model)
+            print("wrote out model for epoch: {} to file: {}".format(i, file_model))
 
         # test the inference
         text_result = infer("\n\nPCSK9 is a gene")
@@ -168,6 +175,6 @@ if __name__ == "__main__":
     model.train()
     optim = Adam(model.parameters(), lr=1e-3)
     print("training .... ")
-    train(chatData, model, optim, epochs=2)
+    train(chatData, model, optim, epochs=ML_NUM_EPOCHS)
 
 

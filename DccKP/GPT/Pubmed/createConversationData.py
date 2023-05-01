@@ -10,7 +10,7 @@ import json
 DB_PASSWD = os.environ.get('DB_PASSWD')
 SCHEMA_GPT = "pubmed_gpt"
 DIR_DATA = "/home/javaprog/Data/Broad/GPT/Data/ConvoPubmedV1"
-FILE_DATA = "{}/data_train.json".format(DIR_DATA)
+FILE_DATA = "{}/data_train20230430.json".format(DIR_DATA)
 SQL_SELECT = "select pubmed_id, abstract_text from {}.pmd_abstract".format(SCHEMA_GPT)
 SQL_WHERE = " where abstract_text like %s"
 SQL_WHERE = " where pubmed_id in (36061186,35928446,36072671,36171883,36173399,35910211,36105085,35754818,35480303)"
@@ -115,6 +115,7 @@ if __name__ == "__main__":
     conn = get_connection()
     # list_abstracts = get_list_of_abstracts(conn, 'PCSK9')
     list_abstracts = get_list_of_abstracts(conn, None)
+    print("to process, got list of abstracts of size: {}".format(len(list_abstracts)))
 
     # for each abstract
     for abstract in list_abstracts:
