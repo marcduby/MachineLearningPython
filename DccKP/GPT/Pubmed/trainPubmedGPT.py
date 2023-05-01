@@ -19,7 +19,7 @@ FILE_DATA_TRAIN="/Users/mduby/Data/Broad/PubmedGPT/Training/ConversationGPT/data
 DIR_MODEL="/Users/mduby/Data/Broad/PubmedGPT/Models/ConversationGPT"
 
 # AWS
-FILE_DATA_TRAIN="/home/ubuntu/Data/data_train.json"
+FILE_DATA_TRAIN="/home/ubuntu/Data/data_train20230430.json"
 DIR_MODEL="/home/ubuntu/Models"
 
 # local
@@ -175,6 +175,6 @@ if __name__ == "__main__":
     model.train()
     optim = Adam(model.parameters(), lr=1e-3)
     print("training .... ")
-    train(chatData, model, optim, epochs=ML_NUM_EPOCHS)
+    train(chatData, model, optim, num_epochs=ML_NUM_EPOCHS)
 
 
