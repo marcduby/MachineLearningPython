@@ -32,7 +32,10 @@ ML_BATCH_SIZE = 96
 ML_MODEL_NAME="gpt2"
 ML_MAX_LENGTH_TRAIN=80
 ML_MAX_LENGTH_INFER=80
-ML_NUM_SIZE_TRAIN=100
+
+# ML_NUM_SIZE_TRAIN=100
+ML_NUM_SIZE_TRAIN=-1
+
 ML_NUM_SAVE_MODEL=20
 ML_NUM_EPOCHS=100
 
@@ -124,7 +127,7 @@ class ChatData(Dataset):
 
         self.X = []
         for item in list_conversations:
-            self.X.append(item)
+            self.X.append(item)20230430
 
         # for idx, i in enumerate(self.X):
         #     try:
