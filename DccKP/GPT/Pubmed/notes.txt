@@ -1,7 +1,9 @@
 
 - VM setup
   - run: 'source activate pytorch'
-  - monitor: 
+  - monitor cuda: watch -n 5 nvidia-smi
+  - save model: 
+  - save tokenizer: 
 
 
 - approach
@@ -16,6 +18,9 @@
     - good for translator
 
 20230430 - nvidia gpu aws
+- watch -n 5 nvidia-smi
+- nvidia-smi dmon -i 0 -s mu -d 5 -o TD
+
 Every 5.0s: nvidia-smi                                                                                                        ip-172-31-17-134: Sun Apr 30 16:44:11 2023
 
 Sun Apr 30 16:44:11 2023

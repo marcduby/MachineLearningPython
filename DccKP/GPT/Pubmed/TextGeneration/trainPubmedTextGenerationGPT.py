@@ -27,7 +27,7 @@ DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models"
 
 # AWS
 # FILE_DATA_TRAIN="/home/ubuntu/Data/text_generation_data_train20230430.json"
-DIR_DATA_TRAIN="/home/ubuntu/Models/Data/TextGeneration"
+DIR_DATA_TRAIN="/home/ubuntu/Data/TextGeneration"
 DIR_MODEL="/home/ubuntu/Models"
 DIR_TOKENIZER="/home/ubuntu/Tokenizer"
 
