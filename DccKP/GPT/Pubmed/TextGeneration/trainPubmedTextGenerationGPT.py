@@ -95,7 +95,7 @@ def train(chatData, model, optim, num_epochs=25):
             # torch.save(model.state_dict(), file_model)
             dir_temp = DIR_MODEL + "/text_gen_{}".format(i)
             os.mkdir(dir_temp)
-            model.model.save_pretrained(DIR_MODEL)
+            model.save_pretrained(DIR_MODEL)
             print("wrote out model for epoch: {} to file: {}".format(i, dir_temp))
 
         # test the inference
