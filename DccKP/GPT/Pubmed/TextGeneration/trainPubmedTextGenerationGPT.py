@@ -94,9 +94,9 @@ def train(chatData, model, optim, num_epochs=25):
             # file_model = "{}/text_gen_model_state_{}.pt".format(DIR_MODEL, i)
             # torch.save(model.state_dict(), file_model)
             dir_temp = DIR_MODEL + "/text_gen_{}".format(i)
-            os.mkdir(os.path(dir_temp))
+            os.mkdir(dir_temp)
             model.model.save_pretrained(DIR_MODEL)
-            print("wrote out model for epoch: {} to file: {}".format(i, file_model))
+            print("wrote out model for epoch: {} to file: {}".format(i, dir_temp))
 
         # test the inference
         print_infer("PCSK9 is a gene")
