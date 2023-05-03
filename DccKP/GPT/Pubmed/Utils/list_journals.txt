@@ -1,0 +1,6492 @@
+reading file: /home/javaprog/Data/Broad/GPT/Pubmed/Load20230501/pubmed23n1007.xml
+returning set of size: 3899
+reading file: /home/javaprog/Data/Broad/GPT/Pubmed/Load20230501/pubmed23n1034.xml
+returning set of size: 4012
+reading file: /home/javaprog/Data/Broad/GPT/Pubmed/Load20230501/pubmed23n1038.xml
+returning set of size: 4103
+reading file: /home/javaprog/Data/Broad/GPT/Pubmed/Load20230501/pubmed23n1020.xml
+returning set of size: 3997
+reading file: /home/javaprog/Data/Broad/GPT/Pubmed/Load20230501/pubmed23n1024.xml
+returning set of size: 4122
+sorting set of size: 6479
+sorting list of size: 6479
+got list of journals of size: 6479
+name: 3 Biotech
+name: 3D Print Med
+name: A A Pract
+name: AANA J
+name: AAPS J
+name: AAPS PharmSciTech
+name: ACG Case Rep J
+name: ACM BCB
+name: ACM Trans Knowl Discov Data
+name: ACR Open Rheumatol
+name: ACS Appl Bio Mater
+name: ACS Appl Mater Interfaces
+name: ACS Appl Nano Mater
+name: ACS Biomater Sci Eng
+name: ACS Catal
+name: ACS Chem Biol
+name: ACS Chem Neurosci
+name: ACS Comb Sci
+name: ACS Energy Lett
+name: ACS Infect Dis
+name: ACS Macro Lett
+name: ACS Med Chem Lett
+name: ACS Nano
+name: ACS Omega
+name: ACS Pharmacol Transl Sci
+name: ACS Photonics
+name: ACS Sens
+name: ACS Sustain Chem Eng
+name: ACS Synth Biol
+name: AIAA J
+name: AIDS
+name: AIDS Behav
+name: AIDS Care
+name: AIDS Patient Care STDS
+name: AIDS Res Hum Retroviruses
+name: AIDS Res Ther
+name: AIDS Res Treat
+name: AIMS Neurosci
+name: AJNR Am J Neuroradiol
+name: AJOB Empir Bioeth
+name: AJOB Neurosci
+name: AJP Rep
+name: AJR Am J Roentgenol
+name: ALTEX
+name: AMA J Ethics
+name: AMB Express
+name: AME Case Rep
+name: ANS Adv Nurs Sci
+name: ANZ J Surg
+name: AORN J
+name: APL Bioeng
+name: APMIS
+name: ASAIO J
+name: ASN Neuro
+name: AUA News
+name: AWWA Water Sci
+name: Abdom Radiol (NY)
+name: Acad Emerg Med
+name: Acad Med
+name: Acad Pathol
+name: Acad Pediatr
+name: Acad Psychiatry
+name: Acad Radiol
+name: Acc Chem Res
+name: Accid Anal Prev
+name: Account Res
+name: Acta Anaesthesiol Scand
+name: Acta Biochim Biophys Sin (Shanghai)
+name: Acta Biochim Pol
+name: Acta Bioeng Biomech
+name: Acta Biomater
+name: Acta Biomed
+name: Acta Cardiol
+name: Acta Chir Belg
+name: Acta Chir Orthop Traumatol Cech
+name: Acta Cir Bras
+name: Acta Clin Belg
+name: Acta Crystallogr C Struct Chem
+name: Acta Crystallogr D Struct Biol
+name: Acta Crystallogr E Crystallogr Commun
+name: Acta Crystallogr F Struct Biol Commun
+name: Acta Cytol
+name: Acta Derm Venereol
+name: Acta Dermatovenerol Alp Pannonica Adriat
+name: Acta Diabetol
+name: Acta Endocrinol (Buchar)
+name: Acta Geochimica
+name: Acta Haematol
+name: Acta Histochem
+name: Acta Inform
+name: Acta Med Litu
+name: Acta Med Okayama
+name: Acta Med Port
+name: Acta Microbiol Immunol Hung
+name: Acta Neurochir (Wien)
+name: Acta Neurol Belg
+name: Acta Neurol Scand
+name: Acta Neurol Taiwan
+name: Acta Neuropathol
+name: Acta Neuropathol Commun
+name: Acta Neuropsychiatr
+name: Acta Obstet Gynecol Scand
+name: Acta Odontol Scand
+name: Acta Oncol
+name: Acta Ophthalmol
+name: Acta Orthop
+name: Acta Orthop Traumatol Turc
+name: Acta Otolaryngol
+name: Acta Otorhinolaryngol Ital
+name: Acta Otorrinolaringol Esp (Engl Ed)
+name: Acta Paediatr
+name: Acta Parasitol
+name: Acta Pharm Sin B
+name: Acta Pharmacol Sin
+name: Acta Physiol (Oxf)
+name: Acta Psychiatr Scand
+name: Acta Psychol (Amst)
+name: Acta Radiol
+name: Acta Radiol Open
+name: Acta Reumatol Port
+name: Acta Sci Cancer Biol
+name: Acta Trop
+name: Acta Vet Scand
+name: Actas Dermosifiliogr (Engl Ed)
+name: Actas Esp Psiquiatr
+name: Actas Urol Esp (Engl Ed)
+name: Acupunct Med
+name: Acute Crit Care
+name: Acute Med Surg
+name: Adapt Human Behav Physiol
+name: Adapt Phys Activ Q
+name: Addict Behav
+name: Addict Behav Rep
+name: Addict Biol
+name: Addict Health
+name: Addict Sci Clin Pract
+name: Addiction
+name: Addit Manuf
+name: Adicciones
+name: Adipocyte
+name: Adm Policy Ment Health
+name: Adolesc Health Med Ther
+name: Adv Anat Pathol
+name: Adv Appl Microbiol
+name: Adv Biochem Eng Biotechnol
+name: Adv Biol Regul
+name: Adv Biosyst
+name: Adv Child Dev Behav
+name: Adv Chronic Kidney Dis
+name: Adv Clin Chem
+name: Adv Clin Exp Med
+name: Adv Cogn Psychol
+name: Adv Colloid Interface Sci
+name: Adv Dent Res
+name: Adv Differ Equ
+name: Adv Drug Deliv Rev
+name: Adv Exp Med Biol
+name: Adv Food Nutr Res
+name: Adv Funct Mater
+name: Adv Gerontol
+name: Adv Health Sci Educ Theory Pract
+name: Adv Healthc Mater
+name: Adv Hematol
+name: Adv Immunol
+name: Adv J Emerg Med
+name: Adv Mar Biol
+name: Adv Mater
+name: Adv Mater Interfaces
+name: Adv Mater Technol
+name: Adv Med
+name: Adv Med Educ Pract
+name: Adv Med Sci
+name: Adv Mind Body Med
+name: Adv Neonatal Care
+name: Adv Neurobiol
+name: Adv Nutr
+name: Adv Orthop
+name: Adv Parasitol
+name: Adv Pediatr
+name: Adv Physiol Educ
+name: Adv Prev Med
+name: Adv Respir Med
+name: Adv Rheumatol
+name: Adv Sci (Weinh)
+name: Adv Skin Wound Care
+name: Adv Stud Biol
+name: Adv Ther
+name: Adv Urol
+name: Adv Virol
+name: Adv Wound Care (New Rochelle)
+name: Aerosol Sci Technol
+name: Aerosp Med Hum Perform
+name: Aesthet Surg J
+name: Aesthetic Plast Surg
+name: Afr Archaeol Rev
+name: Afr J AIDS Res
+name: Afr J Disabil
+name: Afr J Emerg Med
+name: Afr J Lab Med
+name: Afr J Prim Health Care Fam Med
+name: Age Ageing
+name: Ageing Res Rev
+name: Aggress Behav
+name: Aging (Albany NY)
+name: Aging Cell
+name: Aging Clin Exp Res
+name: Aging Dis
+name: Aging Male
+name: Aging Med (Milton)
+name: Aging Ment Health
+name: Agri
+name: Agric For Meteorol
+name: Agric Human Values
+name: Agron Sustain Dev
+name: Aktuelle Urol
+name: Alcohol
+name: Alcohol Alcohol
+name: Alcohol Clin Exp Res
+name: Alcohol Res
+name: Algorithms Mol Biol
+name: Aliment Pharmacol Ther
+name: Allergol Immunopathol (Madr)
+name: Allergol Int
+name: Allergol Select
+name: Allergy
+name: Allergy Asthma Clin Immunol
+name: Allergy Asthma Immunol Res
+name: Allergy Rhinol (Providence)
+name: Altern Lab Anim
+name: Altern Ther Health Med
+name: Alzheimer Dis Assoc Disord
+name: Alzheimers Dement
+name: Alzheimers Dement (Amst)
+name: Alzheimers Res Ther
+name: Am Econ J Econ Policy
+name: Am Fam Physician
+name: Am Health Drug Benefits
+name: Am Heart J
+name: Am J Addict
+name: Am J Agric Econ
+name: Am J Alzheimers Dis Other Demen
+name: Am J Audiol
+name: Am J Bioeth
+name: Am J Bot
+name: Am J Cardiol
+name: Am J Cardiovasc Drugs
+name: Am J Case Rep
+name: Am J Chin Med
+name: Am J Clin Dermatol
+name: Am J Clin Nutr
+name: Am J Clin Oncol
+name: Am J Clin Pathol
+name: Am J Community Psychol
+name: Am J Crit Care
+name: Am J Dermatopathol
+name: Am J Drug Alcohol Abuse
+name: Am J Emerg Med
+name: Am J Epidemiol
+name: Am J Eval
+name: Am J Forensic Med Pathol
+name: Am J Gastroenterol
+name: Am J Geriatr Psychiatry
+name: Am J Health Behav
+name: Am J Health Promot
+name: Am J Health Syst Pharm
+name: Am J Hematol
+name: Am J Hosp Palliat Care
+name: Am J Hum Biol
+name: Am J Hum Genet
+name: Am J Hypertens
+name: Am J Ind Med
+name: Am J Infect Control
+name: Am J Kidney Dis
+name: Am J Law Med
+name: Am J Manag Care
+name: Am J Med
+name: Am J Med Case Rep
+name: Am J Med Genet A
+name: Am J Med Genet B Neuropsychiatr Genet
+name: Am J Med Genet C Semin Med Genet
+name: Am J Med Qual
+name: Am J Med Sci
+name: Am J Mens Health
+name: Am J Nephrol
+name: Am J Nurs
+name: Am J Obstet Gynecol
+name: Am J Ophthalmol
+name: Am J Ophthalmol Case Rep
+name: Am J Orthod Dentofacial Orthop
+name: Am J Orthopsychiatry
+name: Am J Otolaryngol
+name: Am J Pathol
+name: Am J Perinatol
+name: Am J Pharm Educ
+name: Am J Phys Anthropol
+name: Am J Phys Med Rehabil
+name: Am J Physiol Cell Physiol
+name: Am J Physiol Endocrinol Metab
+name: Am J Physiol Gastrointest Liver Physiol
+name: Am J Physiol Heart Circ Physiol
+name: Am J Physiol Lung Cell Mol Physiol
+name: Am J Physiol Regul Integr Comp Physiol
+name: Am J Physiol Renal Physiol
+name: Am J Prev Med
+name: Am J Primatol
+name: Am J Psychiatr Rehabil
+name: Am J Psychiatry
+name: Am J Psychiatry Resid J
+name: Am J Psychother
+name: Am J Public Health
+name: Am J Reprod Immunol
+name: Am J Respir Cell Mol Biol
+name: Am J Respir Crit Care Med
+name: Am J Rhinol Allergy
+name: Am J Speech Lang Pathol
+name: Am J Sports Med
+name: Am J Surg
+name: Am J Surg Pathol
+name: Am J Ther
+name: Am J Transl Res
+name: Am J Transplant
+name: Am J Trop Med Hyg
+name: Am J Vet Res
+name: Am Nat
+name: Am Psychol
+name: Am Soc Clin Oncol Educ Book
+name: Ambio
+name: Amino Acids
+name: Amyloid
+name: Amyotroph Lateral Scler Frontotemporal Degener
+name: An Acad Bras Cienc
+name: An Bras Dermatol
+name: An Pediatr (Engl Ed)
+name: An Sist Sanit Navar
+name: Anaerobe
+name: Anaesth Crit Care Pain Med
+name: Anaesth Intensive Care
+name: Anaesth Rep
+name: Anaesthesia
+name: Anaesthesiol Intensive Ther
+name: Anaesthesist
+name: Anal Bioanal Chem
+name: Anal Biochem
+name: Anal Cell Pathol (Amst)
+name: Anal Chem
+name: Anal Chim Acta
+name: Anal Methods
+name: Anal Sci
+name: Analyst
+name: Anasthesiol Intensivmed Notfallmed Schmerzther
+name: Anat Histol Embryol
+name: Anat Rec (Hoboken)
+name: Anat Sci Educ
+name: Anat Sci Int
+name: Anatol J Cardiol
+name: Andrologia
+name: Andrology
+name: Anemia
+name: Anesth Analg
+name: Anesth Essays Res
+name: Anesthesiol Clin
+name: Anesthesiol Res Pract
+name: Anesthesiology
+name: Angew Chem Int Ed Engl
+name: Angiogenesis
+name: Angiology
+name: Angle Orthod
+name: Anim Biosci
+name: Anim Biotechnol
+name: Anim Cells Syst (Seoul)
+name: Anim Cogn
+name: Anim Front
+name: Anim Genet
+name: Anim Microbiome
+name: Anim Reprod Sci
+name: Anim Sci J
+name: Animal
+name: Animals (Basel)
+name: Ann Acad Med Singap
+name: Ann Agric Environ Med
+name: Ann Allergy Asthma Immunol
+name: Ann Am Assoc Geogr
+name: Ann Am Thorac Soc
+name: Ann Anat
+name: Ann Appl Biol
+name: Ann Appl Stat
+name: Ann Behav Med
+name: Ann Biol Clin (Paris)
+name: Ann Biomed Eng
+name: Ann Bot
+name: Ann Card Anaesth
+name: Ann Cardiol Angeiol (Paris)
+name: Ann Chir Plast Esthet
+name: Ann Clin Biochem
+name: Ann Clin Lab Sci
+name: Ann Clin Microbiol Antimicrob
+name: Ann Clin Transl Neurol
+name: Ann Coloproctol
+name: Ann Dermatol Venereol
+name: Ann Diagn Pathol
+name: Ann Dyslexia
+name: Ann Emerg Med
+name: Ann Endocrinol (Paris)
+name: Ann Epidemiol
+name: Ann Fam Med
+name: Ann Gastroenterol Surg
+name: Ann Gen Psychiatry
+name: Ann Glob Health
+name: Ann Health Law Life Sci
+name: Ann Hematol
+name: Ann Hepatobiliary Pancreat Surg
+name: Ann Hepatol
+name: Ann Hum Biol
+name: Ann Hum Genet
+name: Ann Ig
+name: Ann Intensive Care
+name: Ann Intern Med
+name: Ann Ist Super Sanita
+name: Ann Ital Chir
+name: Ann Med
+name: Ann Med Res
+name: Ann Med Surg (Lond)
+name: Ann N Y Acad Sci
+name: Ann Neurol
+name: Ann Noninvasive Electrocardiol
+name: Ann Nucl Med
+name: Ann Nutr Metab
+name: Ann Occup Environ Med
+name: Ann Oncol
+name: Ann Otol Rhinol Laryngol
+name: Ann Palliat Med
+name: Ann Pathol
+name: Ann Pediatr Cardiol
+name: Ann Pediatr Endocrinol Metab
+name: Ann Pharm Fr
+name: Ann Pharmacother
+name: Ann Phys Rehabil Med
+name: Ann Plast Surg
+name: Ann R Coll Surg Engl
+name: Ann Rehabil Med
+name: Ann Rheum Dis
+name: Ann Saudi Med
+name: Ann Sci
+name: Ann Surg
+name: Ann Surg Oncol
+name: Ann Surg Treat Res
+name: Ann Thorac Cardiovasc Surg
+name: Ann Thorac Med
+name: Ann Thorac Surg
+name: Ann Tour Res
+name: Ann Transl Med
+name: Ann Transplant
+name: Ann Trauma Acute Care
+name: Ann Vasc Surg
+name: Ann Work Expo Health
+name: Annu Rep NMR Spectrosc
+name: Annu Res Br
+name: Annu Rev Anal Chem (Palo Alto Calif)
+name: Annu Rev Anim Biosci
+name: Annu Rev Biochem
+name: Annu Rev Biomed Eng
+name: Annu Rev Cell Dev Biol
+name: Annu Rev Chem Biomol Eng
+name: Annu Rev Clin Psychol
+name: Annu Rev Dev Psychol
+name: Annu Rev Entomol
+name: Annu Rev Environ Resour
+name: Annu Rev Fluid Mech
+name: Annu Rev Genomics Hum Genet
+name: Annu Rev Immunol
+name: Annu Rev Med
+name: Annu Rev Microbiol
+name: Annu Rev Pathol
+name: Annu Rev Pharmacol Toxicol
+name: Annu Rev Phys Chem
+name: Annu Rev Physiol
+name: Annu Rev Phytopathol
+name: Annu Rev Plant Biol
+name: Annu Rev Psychol
+name: Annu Rev Virol
+name: Annu Rev Vis Sci
+name: Anthropol Anz
+name: Anthropol Med
+name: Anthropol Today
+name: Antib Ther
+name: Antibiotics (Basel)
+name: Antibodies (Basel)
+name: Anticancer Agents Med Chem
+name: Anticancer Drugs
+name: Anticancer Res
+name: Antiinflamm Antiallergy Agents Med Chem
+name: Antimicrob Agents Chemother
+name: Antimicrob Resist Infect Control
+name: Antioxid Redox Signal
+name: Antioxidants (Basel)
+name: Antipode
+name: Antivir Ther
+name: Antiviral Res
+name: Antonie Van Leeuwenhoek
+name: Anxiety Stress Coping
+name: AoB Plants
+name: Aorta (Stamford)
+name: Apoptosis
+name: Appetite
+name: Appl Anim Behav Sci
+name: Appl Biochem Biotechnol
+name: Appl Bionics Biomech
+name: Appl Clin Genet
+name: Appl Clin Inform
+name: Appl Econ
+name: Appl Energy
+name: Appl Environ Microbiol
+name: Appl Ergon
+name: Appl Health Econ Health Policy
+name: Appl Immunohistochem Mol Morphol
+name: Appl Math Comput
+name: Appl Microbiol Biotechnol
+name: Appl Neuropsychol Adult
+name: Appl Neuropsychol Child
+name: Appl Nurs Res
+name: Appl Phys A Mater Sci Process
+name: Appl Phys B
+name: Appl Phys Lett
+name: Appl Physiol Nutr Metab
+name: Appl Psychol Health Well Being
+name: Appl Psychophysiol Biofeedback
+name: Appl Radiat Isot
+name: Appl Res Qual Life
+name: Appl Sci (Basel)
+name: Appl Spectrosc
+name: Aquat Toxicol
+name: Arab J Gastroenterol
+name: Arch Acad Emerg Med
+name: Arch Anim Nutr
+name: Arch Biochem Biophys
+name: Arch Bronconeumol (Engl Ed)
+name: Arch Cardiol Mex
+name: Arch Cardiovasc Dis
+name: Arch Clin Neuropsychol
+name: Arch Dermatol Res
+name: Arch Dis Child
+name: Arch Dis Child Educ Pract Ed
+name: Arch Dis Child Fetal Neonatal Ed
+name: Arch Endocrinol Metab
+name: Arch Environ Contam Toxicol
+name: Arch Environ Occup Health
+name: Arch Gerontol Geriatr
+name: Arch Gynecol Obstet
+name: Arch Immunol Ther Exp (Warsz)
+name: Arch Insect Biochem Physiol
+name: Arch Ital Biol
+name: Arch Mal Coeur Vaiss Pratique
+name: Arch Med Res
+name: Arch Med Sadowej Kryminol
+name: Arch Microbiol
+name: Arch Oral Biol
+name: Arch Orthop Trauma Surg
+name: Arch Osteoporos
+name: Arch Pathol Lab Med
+name: Arch Pediatr
+name: Arch Pharm (Weinheim)
+name: Arch Pharm Res
+name: Arch Phys Med Rehabil
+name: Arch Physiol Biochem
+name: Arch Physiother
+name: Arch Plast Surg
+name: Arch Prev Riesgos Labor
+name: Arch Psychiatr Nurs
+name: Arch Public Health
+name: Arch Rheumatol
+name: Arch Sex Behav
+name: Arch Soc Esp Oftalmol (Engl Ed)
+name: Arch Suicide Res
+name: Arch Toxicol
+name: Arch Virol
+name: Arch Womens Ment Health
+name: Archaeol Anthropol Sci
+name: Arkh Patol
+name: Arq Bras Cardiol
+name: Arq Bras Oftalmol
+name: Arq Gastroenterol
+name: Arq Neuropsiquiatr
+name: Arterioscler Thromb Vasc Biol
+name: Arthritis Care Res (Hoboken)
+name: Arthritis Res Ther
+name: Arthritis Rheumatol
+name: Arthroplast Today
+name: Arthropod Struct Dev
+name: Arthrosc Tech
+name: Arthroscopy
+name: Artif Cells Nanomed Biotechnol
+name: Artif Intell Med
+name: Artif Life
+name: Artif Organs
+name: Arts Health
+name: Asia Pac J Clin Oncol
+name: Asia Pac J Ophthalmol (Phila)
+name: Asia Pac J Public Health
+name: Asia Pac J Sports Med Arthrosc Rehabil Technol
+name: Asia Pac Psychiatry
+name: Asian Bioeth Rev
+name: Asian Cardiovasc Thorac Ann
+name: Asian J Androl
+name: Asian J Endosc Surg
+name: Asian J Psychiatr
+name: Asian J Surg
+name: Asian Nurs Res (Korean Soc Nurs Sci)
+name: Asian Pac J Allergy Immunol
+name: Asian Pac J Cancer Prev
+name: Asian Spine J
+name: Assay Drug Dev Technol
+name: Assessment
+name: Assist Inferm Ric
+name: Assist Technol
+name: Asthma Res Pract
+name: Astrobiology
+name: Astron Astrophys
+name: Astron J
+name: Astrophys J
+name: Astrophys J Lett
+name: Astrophys J Suppl Ser
+name: Aten Primaria
+name: Atherosclerosis
+name: Atlas Oral Maxillofac Surg Clin North Am
+name: Atmos Chem Phys
+name: Atmos Chem Phys Discuss
+name: Atmos Environ (1994)
+name: Atmos Pollut Res
+name: Atmosphere (Basel)
+name: Attach Hum Dev
+name: Atten Percept Psychophys
+name: Audiol Neurootol
+name: Auris Nasus Larynx
+name: Aust Crit Care
+name: Aust Dent J
+name: Aust Endod J
+name: Aust Health Rev
+name: Aust J Gen Pract
+name: Aust J Prim Health
+name: Aust J Rural Health
+name: Aust N Z J Obstet Gynaecol
+name: Aust N Z J Psychiatry
+name: Aust N Z J Public Health
+name: Aust Occup Ther J
+name: Aust Prescr
+name: Aust Vet J
+name: Australas Emerg Care
+name: Australas J Ageing
+name: Australas J Dermatol
+name: Australas Phys Eng Sci Med
+name: Australas Psychiatry
+name: Autism
+name: Autism Res
+name: Auto Immun Highlights
+name: Autoimmun Rev
+name: Autoimmune Dis
+name: Autoimmunity
+name: Auton Neurosci
+name: Autophagy
+name: Avian Pathol
+name: Avicenna J Med Biotechnol
+name: BDJ Open
+name: BIT Numer Math
+name: BJGP Open
+name: BJHS Themes
+name: BJOG
+name: BJPsych Bull
+name: BJPsych Open
+name: BJS Open
+name: BJU Int
+name: BMB Rep
+name: BMC Anesthesiol
+name: BMC Bioinformatics
+name: BMC Biol
+name: BMC Biomed Eng
+name: BMC Biotechnol
+name: BMC Cancer
+name: BMC Cardiovasc Disord
+name: BMC Chem
+name: BMC Complement Altern Med
+name: BMC Complement Med Ther
+name: BMC Dermatol
+name: BMC Dev Biol
+name: BMC Ecol
+name: BMC Emerg Med
+name: BMC Endocr Disord
+name: BMC Evol Biol
+name: BMC Fam Pract
+name: BMC Gastroenterol
+name: BMC Genet
+name: BMC Genomics
+name: BMC Geriatr
+name: BMC Health Serv Res
+name: BMC Immunol
+name: BMC Infect Dis
+name: BMC Int Health Hum Rights
+name: BMC Med
+name: BMC Med Educ
+name: BMC Med Ethics
+name: BMC Med Genet
+name: BMC Med Genomics
+name: BMC Med Imaging
+name: BMC Med Inform Decis Mak
+name: BMC Med Res Methodol
+name: BMC Microbiol
+name: BMC Mol Cell Biol
+name: BMC Musculoskelet Disord
+name: BMC Nephrol
+name: BMC Neurol
+name: BMC Neurosci
+name: BMC Nurs
+name: BMC Nutr
+name: BMC Ophthalmol
+name: BMC Oral Health
+name: BMC Palliat Care
+name: BMC Pediatr
+name: BMC Pharmacol Toxicol
+name: BMC Plant Biol
+name: BMC Pregnancy Childbirth
+name: BMC Proc
+name: BMC Psychiatry
+name: BMC Psychol
+name: BMC Public Health
+name: BMC Pulm Med
+name: BMC Res Notes
+name: BMC Rheumatol
+name: BMC Sports Sci Med Rehabil
+name: BMC Surg
+name: BMC Urol
+name: BMC Vet Res
+name: BMC Womens Health
+name: BMJ
+name: BMJ Case Rep
+name: BMJ Evid Based Med
+name: BMJ Glob Health
+name: BMJ Health Care Inform
+name: BMJ Innov
+name: BMJ Mil Health
+name: BMJ Open
+name: BMJ Open Diabetes Res Care
+name: BMJ Open Gastroenterol
+name: BMJ Open Ophthalmol
+name: BMJ Open Qual
+name: BMJ Open Respir Res
+name: BMJ Open Sport Exerc Med
+name: BMJ Paediatr Open
+name: BMJ Qual Saf
+name: BMJ Sex Reprod Health
+name: BMJ Simul Technol Enhanc Learn
+name: BMJ Support Palliat Care
+name: Balkan Med J
+name: Basic Clin Androl
+name: Basic Clin Pharmacol Toxicol
+name: Basic Res Cardiol
+name: Bayesian Anal
+name: Behav Brain Funct
+name: Behav Brain Res
+name: Behav Brain Sci
+name: Behav Cogn Psychother
+name: Behav Ecol Sociobiol
+name: Behav Genet
+name: Behav Med
+name: Behav Modif
+name: Behav Neurol
+name: Behav Neurosci
+name: Behav Pharmacol
+name: Behav Processes
+name: Behav Res Methods
+name: Behav Res Ther
+name: Behav Sci (Basel)
+name: Behav Sci Law
+name: Behav Sleep Med
+name: Behav Ther
+name: Beijing Da Xue Xue Bao Yi Xue Ban
+name: Beilstein J Nanotechnol
+name: Beilstein J Org Chem
+name: Benef Microbes
+name: Best Pract Res Clin Endocrinol Metab
+name: Best Pract Res Clin Haematol
+name: Best Pract Res Clin Obstet Gynaecol
+name: Best Pract Res Clin Rheumatol
+name: Biling (Camb Engl)
+name: Bio Protoc
+name: BioData Min
+name: BioDrugs
+name: Bioact Mater
+name: Bioanalysis
+name: Bioarchaeol Int
+name: Biochem Biophys Rep
+name: Biochem Biophys Res Commun
+name: Biochem Cell Biol
+name: Biochem Genet
+name: Biochem J
+name: Biochem Med (Zagreb)
+name: Biochem Mol Biol Educ
+name: Biochem Pharmacol
+name: Biochem Res Int
+name: Biochem Soc Trans
+name: Biochemistry
+name: Biochemistry (Mosc)
+name: Biochim Biophys Acta Bioenerg
+name: Biochim Biophys Acta Biomembr
+name: Biochim Biophys Acta Gen Subj
+name: Biochim Biophys Acta Gene Regul Mech
+name: Biochim Biophys Acta Mol Basis Dis
+name: Biochim Biophys Acta Mol Cell Biol Lipids
+name: Biochim Biophys Acta Mol Cell Res
+name: Biochim Biophys Acta Proteins Proteom
+name: Biochim Biophys Acta Rev Cancer
+name: Biochimie
+name: Bioconjug Chem
+name: Biodegradation
+name: Biodivers Conserv
+name: Biodivers Data J
+name: Bioelectrochemistry
+name: Bioelectromagnetics
+name: Bioelectron Med
+name: Bioelectron Med (Lond)
+name: Bioeng Transl Med
+name: Bioengineered
+name: Bioengineering (Basel)
+name: Bioessays
+name: Bioethics
+name: Biofabrication
+name: Biofactors
+name: Biofouling
+name: Biogeochemistry
+name: Biogerontology
+name: Bioinform Biol Insights
+name: Bioinform Biomed Eng (2019)
+name: Bioinform Res Appl (2018)
+name: Bioinformatics
+name: Bioinformation
+name: Bioinspir Biomim
+name: Biointerphases
+name: Biol Blood Marrow Transplant
+name: Biol Cell
+name: Biol Chem
+name: Biol Conserv
+name: Biol Cybern
+name: Biol Direct
+name: Biol Fertil Soils
+name: Biol Invasions
+name: Biol Lett
+name: Biol Methods Protoc
+name: Biol Open
+name: Biol Pharm Bull
+name: Biol Proced Online
+name: Biol Psychiatry
+name: Biol Psychiatry Cogn Neurosci Neuroimaging
+name: Biol Psychol
+name: Biol Reprod
+name: Biol Res
+name: Biol Res Nurs
+name: Biol Rev Camb Philos Soc
+name: Biol Sex Differ
+name: Biol Sport
+name: Biol Trace Elem Res
+name: Biologicals
+name: Biologics
+name: Biology (Basel)
+name: Biom J
+name: Biomacromolecules
+name: Biomark Med
+name: Biomark Res
+name: Biomarkers
+name: Biomater Investig Dent
+name: Biomater Res
+name: Biomater Sci
+name: Biomaterials
+name: Biomech Model Mechanobiol
+name: Biomed Chromatogr
+name: Biomed Eng Online
+name: Biomed Environ Sci
+name: Biomed Instrum Technol
+name: Biomed J
+name: Biomed Khim
+name: Biomed Mater
+name: Biomed Mater Eng
+name: Biomed Microdevices
+name: Biomed Opt Express
+name: Biomed Pap Med Fac Univ Palacky Olomouc Czech Repub
+name: Biomed Pharmacother
+name: Biomed Phys Eng Express
+name: Biomed Rep
+name: Biomed Res Int
+name: Biomed Spectrosc Imaging
+name: Biomed Tech (Berl)
+name: Biomedica
+name: Biomedicines
+name: Biometals
+name: Biometrics
+name: Biometrika
+name: Biomicrofluidics
+name: Biomimetics (Basel)
+name: Biomol Concepts
+name: Biomol NMR Assign
+name: Biomol Ther (Seoul)
+name: Biomolecules
+name: Bioorg Chem
+name: Bioorg Med Chem
+name: Bioorg Med Chem Lett
+name: Biopharm Drug Dispos
+name: Biophys Chem
+name: Biophys J
+name: Biophys Physicobiol
+name: Biophys Rev
+name: Biopolymers
+name: Biopreserv Biobank
+name: Bioprocess Biosyst Eng
+name: Biores Open Access
+name: Bioresour Technol
+name: Biorheology
+name: Biosaf Health
+name: Biosci Biotechnol Biochem
+name: Biosci Microbiota Food Health
+name: Biosci Rep
+name: Biosci Trends
+name: Bioscience
+name: Biosens Bioelectron
+name: Biosensors (Basel)
+name: Biostatistics
+name: Biosystems
+name: Biotarget
+name: Biotech Histochem
+name: Biotechniques
+name: Biotechnol Adv
+name: Biotechnol Appl Biochem
+name: Biotechnol Bioeng
+name: Biotechnol Biofuels
+name: Biotechnol J
+name: Biotechnol Lett
+name: Biotechnol Prog
+name: Biotechnol Rep (Amst)
+name: Bipolar Disord
+name: Birth
+name: Birth Defects Res
+name: Blood
+name: Blood Adv
+name: Blood Cancer J
+name: Blood Cells Mol Dis
+name: Blood Coagul Fibrinolysis
+name: Blood Lymphat Cancer
+name: Blood Press
+name: Blood Press Monit
+name: Blood Purif
+name: Blood Rev
+name: Blood Transfus
+name: Body Image
+name: Body Soc
+name: Bone
+name: Bone Joint J
+name: Bone Joint Res
+name: Bone Marrow Transplant
+name: Bone Rep
+name: Bone Res
+name: Borderline Personal Disord Emot Dysregul
+name: Bosn J Basic Med Sci
+name: Bot Stud
+name: Boundary Layer Meteorol
+name: Br Dent J
+name: Br J Anaesth
+name: Br J Biomed Sci
+name: Br J Cancer
+name: Br J Clin Pharmacol
+name: Br J Clin Psychol
+name: Br J Community Nurs
+name: Br J Dermatol
+name: Br J Educ Psychol
+name: Br J Gen Pract
+name: Br J Haematol
+name: Br J Health Psychol
+name: Br J Hosp Med (Lond)
+name: Br J Math Stat Psychol
+name: Br J Neurosurg
+name: Br J Nurs
+name: Br J Nutr
+name: Br J Ophthalmol
+name: Br J Oral Maxillofac Surg
+name: Br J Pharmacol
+name: Br J Psychiatry
+name: Br J Psychol
+name: Br J Radiol
+name: Br J Soc Psychol
+name: Br J Sociol
+name: Br J Sports Med
+name: Br J Surg
+name: Br Med Bull
+name: Br Poult Sci
+name: Brachytherapy
+name: Brain
+name: Brain Behav
+name: Brain Behav Evol
+name: Brain Behav Immun
+name: Brain Behav Immun Health
+name: Brain Circ
+name: Brain Cogn
+name: Brain Commun
+name: Brain Connect
+name: Brain Dev
+name: Brain Imaging Behav
+name: Brain Inform
+name: Brain Inj
+name: Brain Lang
+name: Brain Nerve
+name: Brain Pathol
+name: Brain Res
+name: Brain Res Bull
+name: Brain Sci
+name: Brain Stimul
+name: Brain Struct Funct
+name: Brain Topogr
+name: Brain Tumor Pathol
+name: Brainlesion
+name: Braz Dent J
+name: Braz J Anesthesiol
+name: Braz J Biol
+name: Braz J Infect Dis
+name: Braz J Med Biol Res
+name: Braz J Microbiol
+name: Braz J Oral Sci
+name: Braz J Otorhinolaryngol
+name: Braz J Phys Ther
+name: Braz J Psychiatry
+name: Braz Oral Res
+name: Breast
+name: Breast Cancer
+name: Breast Cancer (Auckl)
+name: Breast Cancer (Dove Med Press)
+name: Breast Cancer Res
+name: Breast Cancer Res Treat
+name: Breast J
+name: Breastfeed Med
+name: Brief Bioinform
+name: Brief Funct Genomics
+name: Bull Cancer
+name: Bull Entomol Res
+name: Bull Environ Contam Toxicol
+name: Bull Exp Biol Med
+name: Bull Hist Med
+name: Bull Hosp Jt Dis (2013)
+name: Bull Math Biol
+name: Bull Volcanol
+name: Bull World Health Organ
+name: Bundesgesundheitsblatt Gesundheitsforschung Gesundheitsschutz
+name: Burns
+name: CA Cancer J Clin
+name: CASE (Phila)
+name: CBE Life Sci Educ
+name: CEN Case Rep
+name: CJC Open
+name: CJEM
+name: CMAJ
+name: CMAJ Open
+name: CNS Drugs
+name: CNS Neurol Disord Drug Targets
+name: CNS Neurosci Ther
+name: CNS Oncol
+name: CNS Spectr
+name: COPD
+name: CPT Pharmacometrics Syst Pharmacol
+name: CRISPR J
+name: CVIR Endovasc
+name: Cad Saude Publica
+name: Calc Var Partial Differ Equ
+name: Calcif Tissue Int
+name: Camb Q Healthc Ethics
+name: Can Assoc Radiol J
+name: Can Bull Med Hist
+name: Can Fam Physician
+name: Can J Aging
+name: Can J Anaesth
+name: Can J Cardiol
+name: Can J Diabetes
+name: Can J Exp Psychol
+name: Can J Fish Aquat Sci
+name: Can J Gastroenterol Hepatol
+name: Can J Infect Dis Med Microbiol
+name: Can J Kidney Health Dis
+name: Can J Microbiol
+name: Can J Neurol Sci
+name: Can J Nurs Res
+name: Can J Occup Ther
+name: Can J Ophthalmol
+name: Can J Physiol Pharmacol
+name: Can J Psychiatry
+name: Can J Public Health
+name: Can J Respir Ther
+name: Can J Surg
+name: Can J Urol
+name: Can Respir J
+name: Can Rev Sociol
+name: Can Urol Assoc J
+name: Can Vet J
+name: Cancer
+name: Cancer Biol Med
+name: Cancer Biol Ther
+name: Cancer Biomark
+name: Cancer Biother Radiopharm
+name: Cancer Causes Control
+name: Cancer Cell
+name: Cancer Cell Int
+name: Cancer Chemother Pharmacol
+name: Cancer Commun (Lond)
+name: Cancer Control
+name: Cancer Cytopathol
+name: Cancer Discov
+name: Cancer Drug Resist
+name: Cancer Epidemiol
+name: Cancer Epidemiol Biomarkers Prev
+name: Cancer Gene Ther
+name: Cancer Genet
+name: Cancer Genomics Proteomics
+name: Cancer Imaging
+name: Cancer Immunol Immunother
+name: Cancer Immunol Res
+name: Cancer Inform
+name: Cancer Invest
+name: Cancer Lett
+name: Cancer Manag Res
+name: Cancer Med
+name: Cancer Med J
+name: Cancer Metab
+name: Cancer Metastasis Rev
+name: Cancer Nurs
+name: Cancer Prev Res (Phila)
+name: Cancer Radiother
+name: Cancer Rep (Hoboken)
+name: Cancer Res
+name: Cancer Res Treat
+name: Cancer Sci
+name: Cancer Stud Ther
+name: Cancer Treat Res Commun
+name: Cancer Treat Rev
+name: Cancers (Basel)
+name: Cancers Head Neck
+name: Carbohydr Polym
+name: Carbohydr Res
+name: Carbon Balance Manag
+name: Carcinogenesis
+name: Card Electrophysiol Clin
+name: Cardiol J
+name: Cardiol Res Pract
+name: Cardiol Rev
+name: Cardiol Ther
+name: Cardiol Young
+name: Cardiology
+name: Cardiooncology
+name: Cardiorenal Med
+name: Cardiovasc Diabetol
+name: Cardiovasc Drugs Ther
+name: Cardiovasc Eng Technol
+name: Cardiovasc Hematol Agents Med Chem
+name: Cardiovasc Hematol Disord Drug Targets
+name: Cardiovasc Interv Ther
+name: Cardiovasc Intervent Radiol
+name: Cardiovasc J Afr
+name: Cardiovasc Pathol
+name: Cardiovasc Res
+name: Cardiovasc Revasc Med
+name: Cardiovasc Ther
+name: Cardiovasc Toxicol
+name: Cardiovasc Ultrasound
+name: Caries Res
+name: Cartilage
+name: Case Rep Anesthesiol
+name: Case Rep Cardiol
+name: Case Rep Crit Care
+name: Case Rep Dent
+name: Case Rep Dermatol
+name: Case Rep Dermatol Med
+name: Case Rep Endocrinol
+name: Case Rep Gastroenterol
+name: Case Rep Gastrointest Med
+name: Case Rep Hematol
+name: Case Rep Infect Dis
+name: Case Rep Med
+name: Case Rep Nephrol
+name: Case Rep Nephrol Dial
+name: Case Rep Neurol
+name: Case Rep Neurol Med
+name: Case Rep Obstet Gynecol
+name: Case Rep Oncol
+name: Case Rep Oncol Med
+name: Case Rep Ophthalmol
+name: Case Rep Ophthalmol Med
+name: Case Rep Orthop
+name: Case Rep Otolaryngol
+name: Case Rep Pathol
+name: Case Rep Pediatr
+name: Case Rep Psychiatry
+name: Case Rep Pulmonol
+name: Case Rep Radiol
+name: Case Rep Rheumatol
+name: Case Rep Surg
+name: Case Rep Transplant
+name: Case Rep Urol
+name: Case Rep Vasc Med
+name: Case Rep Vet Med
+name: Case Rep Womens Health
+name: Case Reports Hepatol
+name: Case Reports Immunol
+name: Catal Letters
+name: Catalysts
+name: Catheter Cardiovasc Interv
+name: Cell
+name: Cell Adh Migr
+name: Cell Biochem Biophys
+name: Cell Biochem Funct
+name: Cell Biol Int
+name: Cell Biol Toxicol
+name: Cell Biosci
+name: Cell Calcium
+name: Cell Chem Biol
+name: Cell Commun Signal
+name: Cell Cycle
+name: Cell Death Differ
+name: Cell Death Dis
+name: Cell Death Discov
+name: Cell Discov
+name: Cell Div
+name: Cell Host Microbe
+name: Cell Immunol
+name: Cell J
+name: Cell Metab
+name: Cell Microbiol
+name: Cell Mol Bioeng
+name: Cell Mol Biol (Noisy-le-grand)
+name: Cell Mol Biol Lett
+name: Cell Mol Gastroenterol Hepatol
+name: Cell Mol Immunol
+name: Cell Mol Life Sci
+name: Cell Mol Neurobiol
+name: Cell Oncol (Dordr)
+name: Cell Physiol Biochem
+name: Cell Prolif
+name: Cell Regen
+name: Cell Rep
+name: Cell Rep Med
+name: Cell Reprogram
+name: Cell Res
+name: Cell Signal
+name: Cell Stem Cell
+name: Cell Stress Chaperones
+name: Cell Struct Funct
+name: Cell Syst
+name: Cell Tissue Bank
+name: Cell Tissue Res
+name: Cell Transplant
+name: CellR4 Repair Replace Regen Reprogram
+name: Cells
+name: Cells Tissues Organs
+name: Cellulose (Lond)
+name: Cent Eur J Immunol
+name: Cent Eur J Oper Res
+name: Cent European J Urol
+name: Cephalalgia
+name: Ceram Int
+name: Cereb Cortex
+name: Cerebellum
+name: Cerebellum Ataxias
+name: Cerebrovasc Dis
+name: Cerebrovasc Dis Extra
+name: Ceska Slov Farm
+name: Channels (Austin)
+name: Chaos
+name: Chaos Solitons Fractals
+name: Chem
+name: Chem Asian J
+name: Chem Biodivers
+name: Chem Biol Drug Des
+name: Chem Biol Interact
+name: Chem Commun (Camb)
+name: Chem Eng J
+name: Chem Erde
+name: Chem Geol
+name: Chem Mater
+name: Chem Pharm Bull (Tokyo)
+name: Chem Phys Lett
+name: Chem Phys Lipids
+name: Chem Rec
+name: Chem Res Toxicol
+name: Chem Rev
+name: Chem Sci
+name: Chem Senses
+name: Chem Soc Rev
+name: ChemCatChem
+name: ChemElectroChem
+name: ChemMedChem
+name: ChemNanoMat
+name: ChemSusChem
+name: Chembiochem
+name: Chemistry
+name: ChemistryOpen
+name: ChemistrySelect
+name: Chemosphere
+name: Chemotherapy
+name: Chemphyschem
+name: Chempluschem
+name: Chest
+name: Child Abuse Negl
+name: Child Abuse Rev
+name: Child Adolesc Ment Health
+name: Child Adolesc Psychiatry Ment Health
+name: Child Care Health Dev
+name: Child Dev
+name: Child Maltreat
+name: Child Neurol Open
+name: Child Neuropsychol
+name: Child Obes
+name: Child Psychiatry Hum Dev
+name: Child Youth Care Forum
+name: Child Youth Serv Rev
+name: Children (Basel)
+name: Childs Nerv Syst
+name: Chin Clin Oncol
+name: Chin J Integr Med
+name: Chin J Nat Med
+name: Chin J Traumatol
+name: Chin Med
+name: Chin Med J (Engl)
+name: Chirality
+name: Chiropr Man Therap
+name: Chirurg
+name: Chirurgia (Bucur)
+name: Chonnam Med J
+name: Chromosoma
+name: Chromosome Res
+name: Chron Respir Dis
+name: Chronic Illn
+name: Chronic Stress (Thousand Oaks)
+name: Chronobiol Int
+name: Cien Saude Colet
+name: Cir Cir
+name: Cir Esp (Engl Ed)
+name: Cir Pediatr
+name: Circ Arrhythm Electrophysiol
+name: Circ Cardiovasc Imaging
+name: Circ Cardiovasc Interv
+name: Circ Cardiovasc Qual Outcomes
+name: Circ Genom Precis Med
+name: Circ Heart Fail
+name: Circ J
+name: Circ Res
+name: Circulation
+name: Clean Technol Environ Policy
+name: Cleft Palate Craniofac J
+name: Cleve Clin J Med
+name: Clim Change
+name: Clim Dyn
+name: Climacteric
+name: Clin Adv Periodontics
+name: Clin Anat
+name: Clin Appl Thromb Hemost
+name: Clin Auton Res
+name: Clin Biochem
+name: Clin Biochem Rev
+name: Clin Biomech (Bristol, Avon)
+name: Clin Breast Cancer
+name: Clin Cancer Res
+name: Clin Cardiol
+name: Clin Case Rep
+name: Clin Chem
+name: Clin Chem Lab Med
+name: Clin Chest Med
+name: Clin Child Fam Psychol Rev
+name: Clin Child Psychol Psychiatry
+name: Clin Chim Acta
+name: Clin Colorectal Cancer
+name: Clin Cosmet Investig Dent
+name: Clin Cosmet Investig Dermatol
+name: Clin Dermatol
+name: Clin Diabetes Endocrinol
+name: Clin Drug Investig
+name: Clin Dysmorphol
+name: Clin EEG Neurosci
+name: Clin Endocrinol (Oxf)
+name: Clin Endosc
+name: Clin Epidemiol
+name: Clin Epigenetics
+name: Clin Exp Allergy
+name: Clin Exp Dent Res
+name: Clin Exp Dermatol
+name: Clin Exp Gastroenterol
+name: Clin Exp Hypertens
+name: Clin Exp Immunol
+name: Clin Exp Med
+name: Clin Exp Metastasis
+name: Clin Exp Nephrol
+name: Clin Exp Ophthalmol
+name: Clin Exp Optom
+name: Clin Exp Otorhinolaryngol
+name: Clin Exp Pediatr
+name: Clin Exp Pharmacol Physiol
+name: Clin Exp Reprod Med
+name: Clin Exp Rheumatol
+name: Clin Gastroenterol Hepatol
+name: Clin Genet
+name: Clin Genitourin Cancer
+name: Clin Geriatr Med
+name: Clin Gerontol
+name: Clin Hemorheol Microcirc
+name: Clin Hypertens
+name: Clin Imaging
+name: Clin Immunol
+name: Clin Implant Dent Relat Res
+name: Clin Infect Dis
+name: Clin Interv Aging
+name: Clin Investig Arterioscler
+name: Clin J Am Soc Nephrol
+name: Clin J Gastroenterol
+name: Clin J Oncol Nurs
+name: Clin J Pain
+name: Clin J Sport Med
+name: Clin Lab
+name: Clin Lab Med
+name: Clin Linguist Phon
+name: Clin Liver Dis (Hoboken)
+name: Clin Lung Cancer
+name: Clin Lymphoma Myeloma Leuk
+name: Clin Med (Lond)
+name: Clin Med Insights Blood Disord
+name: Clin Med Insights Cardiol
+name: Clin Med Insights Case Rep
+name: Clin Med Insights Endocrinol Diabetes
+name: Clin Med Res
+name: Clin Microbiol Infect
+name: Clin Microbiol Newsl
+name: Clin Microbiol Rev
+name: Clin Mol Allergy
+name: Clin Mol Hepatol
+name: Clin Nephrol
+name: Clin Nephrol Case Stud
+name: Clin Neurol Neurosurg
+name: Clin Neuropathol
+name: Clin Neuropharmacol
+name: Clin Neurophysiol
+name: Clin Neurophysiol Pract
+name: Clin Neuropsychol
+name: Clin Neuroradiol
+name: Clin Nucl Med
+name: Clin Nurs Res
+name: Clin Nurse Spec
+name: Clin Nutr
+name: Clin Obes
+name: Clin Obstet Gynecol
+name: Clin Oncol (R Coll Radiol)
+name: Clin Ophthalmol
+name: Clin Optom (Auckl)
+name: Clin Oral Implants Res
+name: Clin Oral Investig
+name: Clin Orthop Relat Res
+name: Clin Otolaryngol
+name: Clin Pathol
+name: Clin Pediatr (Phila)
+name: Clin Pediatr Endocrinol
+name: Clin Perinatol
+name: Clin Pharmacokinet
+name: Clin Pharmacol Drug Dev
+name: Clin Pharmacol Ther
+name: Clin Pharmacol Transl Med
+name: Clin Physiol Funct Imaging
+name: Clin Plast Surg
+name: Clin Podiatr Med Surg
+name: Clin Pract
+name: Clin Proteomics
+name: Clin Psychol Psychother
+name: Clin Psychol Rev
+name: Clin Psychol Sci
+name: Clin Pulm Med
+name: Clin Radiol
+name: Clin Rehabil
+name: Clin Res Cardiol
+name: Clin Res Hepatol Gastroenterol
+name: Clin Respir J
+name: Clin Rev Allergy Immunol
+name: Clin Rheumatol
+name: Clin Sarcoma Res
+name: Clin Sci (Lond)
+name: Clin Spine Surg
+name: Clin Sports Med
+name: Clin Teach
+name: Clin Ter
+name: Clin Ther
+name: Clin Toxicol (Phila)
+name: Clin Transl Allergy
+name: Clin Transl Gastroenterol
+name: Clin Transl Immunology
+name: Clin Transl Med
+name: Clin Transl Oncol
+name: Clin Transl Radiat Oncol
+name: Clin Transl Sci
+name: Clin Transplant
+name: Clin Trials
+name: Clinicoecon Outcomes Res
+name: Clinics (Sao Paulo)
+name: Cluster Comput
+name: Cochlear Implants Int
+name: Cochrane Database Syst Rev
+name: Codas
+name: Cogn Affect Behav Neurosci
+name: Cogn Behav Neurol
+name: Cogn Behav Pract
+name: Cogn Behav Therap
+name: Cogn Emot
+name: Cogn Neurodyn
+name: Cogn Neuropsychiatry
+name: Cogn Neuropsychol
+name: Cogn Neurosci
+name: Cogn Process
+name: Cogn Psychol
+name: Cogn Res Princ Implic
+name: Cogn Sci
+name: Cognition
+name: Cold Spring Harb Mol Case Stud
+name: Cold Spring Harb Perspect Biol
+name: Cold Spring Harb Perspect Med
+name: Cold Spring Harb Protoc
+name: Cold Spring Harb Symp Quant Biol
+name: Collabra Psychol
+name: Collegian
+name: Colloids Surf B Biointerfaces
+name: Colomb Med (Cali)
+name: Colorectal Dis
+name: Comb Chem High Throughput Screen
+name: Commun ACM
+name: Commun Biol
+name: Commun Dis Intell (2018)
+name: Commun Integr Biol
+name: Commun Stat Appl Methods
+name: Community Dent Health
+name: Community Dent Oral Epidemiol
+name: Community Ment Health J
+name: Comp Biochem Physiol A Mol Integr Physiol
+name: Comp Biochem Physiol B Biochem Mol Biol
+name: Comp Biochem Physiol C Toxicol Pharmacol
+name: Comp Biochem Physiol Part D Genomics Proteomics
+name: Comp Cytogenet
+name: Comp Immunol Microbiol Infect Dis
+name: Comp Med
+name: Compend Contin Educ Dent
+name: Complement Med Res
+name: Complement Ther Clin Pract
+name: Complement Ther Med
+name: Compr Child Adolesc Nurs
+name: Compr Psychiatry
+name: Comput Biol Chem
+name: Comput Biol Med
+name: Comput Brain Behav
+name: Comput Cardiol (2010)
+name: Comput Chem Eng
+name: Comput Compos
+name: Comput Educ
+name: Comput Environ Urban Syst
+name: Comput Geosci
+name: Comput Graph
+name: Comput Inform Nurs
+name: Comput Intell Neurosci
+name: Comput Math Methods Med
+name: Comput Math Organ Theory
+name: Comput Mech
+name: Comput Med Imaging Graph
+name: Comput Methods Appl Mech Eng
+name: Comput Methods Biomech Biomed Engin
+name: Comput Methods Programs Biomed
+name: Comput Sci Eng
+name: Comput Stat Data Anal
+name: Comput Struct Biotechnol J
+name: Comput Support Coop Work
+name: Comput Toxicol
+name: Concussion
+name: Cond Med
+name: Confl Health
+name: Congenit Anom (Kyoto)
+name: Congenit Heart Dis
+name: Connect Tissue Res
+name: Conscious Cogn
+name: Conserv Biol
+name: Conserv Genet
+name: Conserv Physiol
+name: Cont Lens Anterior Eye
+name: Contact Dermatitis
+name: Contemp Clin Dent
+name: Contemp Clin Trials
+name: Contemp Clin Trials Commun
+name: Contemp Nurse
+name: Contracept X
+name: Contraception
+name: Contrast Media Mol Imaging
+name: Contrib Mineral Petrol
+name: Coral Reefs
+name: Core Evid
+name: Cornea
+name: Coron Artery Dis
+name: Cortex
+name: Cost Eff Resour Alloc
+name: Couns Psychol
+name: Cranio
+name: Creat Nurs
+name: Crim Behav Ment Health
+name: Crime Sci
+name: Crisis
+name: Crit Care
+name: Crit Care Med
+name: Crit Care Nurs Clin North Am
+name: Crit Care Nurse
+name: Crit Care Res Pract
+name: Crit Pathw Cardiol
+name: Crit Rev Anal Chem
+name: Crit Rev Biochem Mol Biol
+name: Crit Rev Biotechnol
+name: Crit Rev Clin Lab Sci
+name: Crit Rev Food Sci Nutr
+name: Crit Rev Int Soc Political Philos
+name: Crit Rev Microbiol
+name: Crit Rev Oncol Hematol
+name: Crit Rev Ther Drug Carrier Syst
+name: Crit Rev Toxicol
+name: Cryobiology
+name: Cryosphere
+name: Cryst Growth Des
+name: Cuad Bioet
+name: Cult Health Sex
+name: Cult Med Psychiatry
+name: Cultur Divers Ethnic Minor Psychol
+name: Curationis
+name: Cureus
+name: Curr Addict Rep
+name: Curr Allergy Asthma Rep
+name: Curr Alzheimer Res
+name: Curr Atheroscler Rep
+name: Curr Behav Neurosci Rep
+name: Curr Biol
+name: Curr Bladder Dysfunct Rep
+name: Curr Breast Cancer Rep
+name: Curr Cancer Drug Targets
+name: Curr Cardiol Rep
+name: Curr Cardiol Rev
+name: Curr Clim Change Rep
+name: Curr Clin Pharmacol
+name: Curr Comput Aided Drug Des
+name: Curr Dev Disord Rep
+name: Curr Dev Nutr
+name: Curr Diab Rep
+name: Curr Diabetes Rev
+name: Curr Drug Deliv
+name: Curr Drug Discov Technol
+name: Curr Drug Metab
+name: Curr Drug Res Rev
+name: Curr Drug Saf
+name: Curr Drug Targets
+name: Curr Environ Health Rep
+name: Curr Epidemiol Rep
+name: Curr Eye Res
+name: Curr Gastroenterol Rep
+name: Curr Gene Ther
+name: Curr Genet
+name: Curr Genomics
+name: Curr Geriatr Rep
+name: Curr Gerontol Geriatr Res
+name: Curr HIV Res
+name: Curr HIV/AIDS Rep
+name: Curr Health Sci J
+name: Curr Heart Fail Rep
+name: Curr Hematol Malig Rep
+name: Curr Hypertens Rep
+name: Curr Hypertens Rev
+name: Curr Infect Dis Rep
+name: Curr Issues Mol Biol
+name: Curr Med Chem
+name: Curr Med Imaging
+name: Curr Med Imaging Rev
+name: Curr Med Res Opin
+name: Curr Med Res Pract
+name: Curr Med Sci
+name: Curr Microbiol
+name: Curr Mol Med
+name: Curr Mol Pharmacol
+name: Curr Neurol Neurosci Rep
+name: Curr Neuropharmacol
+name: Curr Neurovasc Res
+name: Curr Nutr Rep
+name: Curr Obes Rep
+name: Curr Oncol Rep
+name: Curr Opin Allergy Clin Immunol
+name: Curr Opin Anaesthesiol
+name: Curr Opin Biomed Eng
+name: Curr Opin Biotechnol
+name: Curr Opin Cardiol
+name: Curr Opin Cell Biol
+name: Curr Opin Chem Biol
+name: Curr Opin Clin Nutr Metab Care
+name: Curr Opin Crit Care
+name: Curr Opin Endocr Metab Res
+name: Curr Opin Endocrinol Diabetes Obes
+name: Curr Opin Gastroenterol
+name: Curr Opin Genet Dev
+name: Curr Opin HIV AIDS
+name: Curr Opin Hematol
+name: Curr Opin Immunol
+name: Curr Opin Infect Dis
+name: Curr Opin Insect Sci
+name: Curr Opin Lipidol
+name: Curr Opin Microbiol
+name: Curr Opin Nephrol Hypertens
+name: Curr Opin Neurobiol
+name: Curr Opin Neurol
+name: Curr Opin Obstet Gynecol
+name: Curr Opin Oncol
+name: Curr Opin Ophthalmol
+name: Curr Opin Organ Transplant
+name: Curr Opin Otolaryngol Head Neck Surg
+name: Curr Opin Pharmacol
+name: Curr Opin Physiol
+name: Curr Opin Plant Biol
+name: Curr Opin Psychiatry
+name: Curr Opin Psychol
+name: Curr Opin Pulm Med
+name: Curr Opin Rheumatol
+name: Curr Opin Struct Biol
+name: Curr Opin Syst Biol
+name: Curr Opin Toxicol
+name: Curr Opin Urol
+name: Curr Opin Virol
+name: Curr Org Chem
+name: Curr Org Synth
+name: Curr Orthop Pract
+name: Curr Osteoporos Rep
+name: Curr Otorhinolaryngol Rep
+name: Curr Pain Headache Rep
+name: Curr Pediatr Rev
+name: Curr Pharm Biotechnol
+name: Curr Pharm Des
+name: Curr Pharm Teach Learn
+name: Curr Phys Med Rehabil Rep
+name: Curr Probl Cancer
+name: Curr Probl Cardiol
+name: Curr Probl Diagn Radiol
+name: Curr Probl Pediatr Adolesc Health Care
+name: Curr Probl Surg
+name: Curr Protein Pept Sci
+name: Curr Protoc Bioinformatics
+name: Curr Protoc Cell Biol
+name: Curr Protoc Chem Biol
+name: Curr Protoc Cytom
+name: Curr Protoc Hum Genet
+name: Curr Protoc Immunol
+name: Curr Protoc Microbiol
+name: Curr Protoc Mol Biol
+name: Curr Protoc Mouse Biol
+name: Curr Protoc Neurosci
+name: Curr Protoc Nucleic Acid Chem
+name: Curr Protoc Pharmacol
+name: Curr Protoc Plant Biol
+name: Curr Protoc Protein Sci
+name: Curr Protoc Stem Cell Biol
+name: Curr Protoc Toxicol
+name: Curr Psychiatry Rep
+name: Curr Radiopharm
+name: Curr Res Biotechnol
+name: Curr Res Transl Med
+name: Curr Rev Clin Exp Pharmacol
+name: Curr Rev Musculoskelet Med
+name: Curr Rheumatol Rep
+name: Curr Sports Med Rep
+name: Curr Stem Cell Rep
+name: Curr Stem Cell Res Ther
+name: Curr Ther Res Clin Exp
+name: Curr Top Behav Neurosci
+name: Curr Top Dev Biol
+name: Curr Top Med Chem
+name: Curr Top Membr
+name: Curr Top Microbiol Immunol
+name: Curr Transplant Rep
+name: Curr Treat Options Cardiovasc Med
+name: Curr Treat Options Infect Dis
+name: Curr Treat Options Neurol
+name: Curr Treat Options Oncol
+name: Curr Treat Options Pediatr
+name: Curr Treat Options Psychiatry
+name: Curr Urol Rep
+name: Curr Vasc Pharmacol
+name: Curr Zool
+name: Cutan Ocul Toxicol
+name: Cutis
+name: Cyberpsychol Behav Soc Netw
+name: Cytogenet Genome Res
+name: Cytokine
+name: Cytokine Growth Factor Rev
+name: Cytometry A
+name: Cytometry B Clin Cytom
+name: Cytopathology
+name: Cytoskeleton (Hoboken)
+name: Cytotechnology
+name: Cytotherapy
+name: DNA Cell Biol
+name: DNA Repair (Amst)
+name: DNA Res
+name: Dalton Trans
+name: Dan Med J
+name: Daru
+name: Data Brief
+name: Data Min Knowl Discov
+name: Database (Oxford)
+name: Death Stud
+name: Decision (Wash D C )
+name: Degener Neurol Neuromuscul Dis
+name: Dement Geriatr Cogn Dis Extra
+name: Dement Geriatr Cogn Disord
+name: Dementia (London)
+name: Demogr Res
+name: Demography
+name: Dent Clin North Am
+name: Dent J (Basel)
+name: Dent Mater
+name: Dent Mater J
+name: Dent Med Probl
+name: Dent Traumatol
+name: Dentomaxillofac Radiol
+name: Depos Rec
+name: Depress Anxiety
+name: Depress Res Treat
+name: Dermatitis
+name: Dermatol Online J
+name: Dermatol Surg
+name: Dermatol Ther
+name: Dermatol Ther (Heidelb)
+name: Dermatology
+name: Dermatopathology (Basel)
+name: Dev Biol
+name: Dev Cell
+name: Dev Cogn Neurosci
+name: Dev Comp Immunol
+name: Dev Dyn
+name: Dev Genes Evol
+name: Dev Growth Differ
+name: Dev Med Child Neurol
+name: Dev Neurobiol
+name: Dev Neuropsychol
+name: Dev Neurorehabil
+name: Dev Neurosci
+name: Dev Psychobiol
+name: Dev Psychol
+name: Dev Psychopathol
+name: Dev Sci
+name: Dev World Bioeth
+name: Development
+name: Diab Vasc Dis Res
+name: Diabet Med
+name: Diabetes
+name: Diabetes Care
+name: Diabetes Educ
+name: Diabetes Metab
+name: Diabetes Metab Res Rev
+name: Diabetes Metab Syndr
+name: Diabetes Metab Syndr Obes
+name: Diabetes Obes Metab
+name: Diabetes Res Clin Pract
+name: Diabetes Technol Ther
+name: Diabetes Ther
+name: Diabetol Metab Syndr
+name: Diabetologia
+name: Diagn Cytopathol
+name: Diagn Interv Imaging
+name: Diagn Interv Radiol
+name: Diagn Microbiol Infect Dis
+name: Diagn Pathol
+name: Diagn Progn Res
+name: Diagnosis (Berl)
+name: Diagnostics (Basel)
+name: Dialogues Clin Neurosci
+name: Differentiation
+name: Dig Dis
+name: Dig Dis Sci
+name: Dig Endosc
+name: Dig Liver Dis
+name: Dig Surg
+name: Digestion
+name: Digit Health
+name: Digit Med
+name: Dimens Crit Care Nurs
+name: Dis Aquat Organ
+name: Dis Colon Rectum
+name: Dis Esophagus
+name: Dis Markers
+name: Dis Model Mech
+name: Dis Mon
+name: Disabil Health J
+name: Disabil Rehabil
+name: Disabil Rehabil Assist Technol
+name: Disaster Med Public Health Prep
+name: Disasters
+name: Discoveries (Craiova)
+name: Discrete Comput Geom
+name: Diseases
+name: Doc Ophthalmol
+name: Dokl Biochem Biophys
+name: Dokl Biol Sci
+name: Domest Anim Endocrinol
+name: Dose Response
+name: Drug Alcohol Depend
+name: Drug Alcohol Rev
+name: Drug Chem Toxicol
+name: Drug Court Rev
+name: Drug Deliv
+name: Drug Deliv Transl Res
+name: Drug Des Devel Ther
+name: Drug Dev Ind Pharm
+name: Drug Dev Res
+name: Drug Discov Ther
+name: Drug Discov Today
+name: Drug Healthc Patient Saf
+name: Drug Metab Dispos
+name: Drug Metab Lett
+name: Drug Metab Pers Ther
+name: Drug Metab Pharmacokinet
+name: Drug Metab Rev
+name: Drug Res (Stuttg)
+name: Drug Resist Updat
+name: Drug Saf
+name: Drug Saf Case Rep
+name: Drug Test Anal
+name: Drug Ther Bull
+name: Drugs
+name: Drugs Aging
+name: Drugs Context
+name: Drugs R D
+name: Drugs Real World Outcomes
+name: Dtsch Arztebl Int
+name: Dtsch Med Wochenschr
+name: Dyslexia
+name: Dysphagia
+name: EBioMedicine
+name: EC Pharmacol Toxicol
+name: EClinicalMedicine
+name: EFORT Open Rev
+name: EJNMMI Phys
+name: EJNMMI Radiopharm Chem
+name: EJNMMI Res
+name: EMBO J
+name: EMBO Mol Med
+name: EMBO Rep
+name: EPJ Data Sci
+name: EPMA J
+name: ERJ Open Res
+name: ESC Heart Fail
+name: ESCAPE
+name: ESMO Open
+name: EURASIP J Adv Signal Process
+name: EURASIP J Image Video Process
+name: EXCLI J
+name: Ear Hear
+name: Ear Nose Throat J
+name: Early Child Res Q
+name: Early Educ Dev
+name: Early Hum Dev
+name: Early Interv Psychiatry
+name: Earth Planet Sci Lett
+name: Earth Planets Space
+name: East Mediterr Health J
+name: Eat Behav
+name: Eat Disord
+name: Eat Weight Disord
+name: Ecancermedicalscience
+name: Echo Res Pract
+name: Echocardiography
+name: EcoSal Plus
+name: Ecohealth
+name: Ecol Appl
+name: Ecol Eng
+name: Ecol Evol
+name: Ecol Food Nutr
+name: Ecol Indic
+name: Ecol Lett
+name: Ecol Modell
+name: Ecology
+name: Econ Hum Biol
+name: Econ Lett
+name: Ecopsychology
+name: Ecosystems
+name: Ecotoxicol Environ Saf
+name: Ecotoxicology
+name: Educ Prim Care
+name: Educ Psychol Meas
+name: Egypt Heart J
+name: Einstein (Sao Paulo)
+name: Electrochim Acta
+name: Electromagn Biol Med
+name: Electrophoresis
+name: Elife
+name: Emerg Infect Dis
+name: Emerg Med Australas
+name: Emerg Med Int
+name: Emerg Med J
+name: Emerg Med Pract
+name: Emerg Microbes Infect
+name: Emerg Nurse
+name: Emerg Radiol
+name: Emerg Top Life Sci
+name: Emergencias
+name: Emotion
+name: Encephale
+name: Endocr Connect
+name: Endocr J
+name: Endocr Metab Immune Disord Drug Targets
+name: Endocr Pathol
+name: Endocr Pract
+name: Endocr Relat Cancer
+name: Endocr Res
+name: Endocr Rev
+name: Endocrine
+name: Endocrinol Diabetes Metab Case Rep
+name: Endocrinol Diabetes Nutr (Engl Ed)
+name: Endocrinology
+name: Endokrynol Pol
+name: Endosc Int Open
+name: Endosc Ultrasound
+name: Endoscopy
+name: Energies (Basel)
+name: Energy Fuels
+name: Energy Policy
+name: Energy Technol (Weinh)
+name: Enferm Clin (Engl Ed)
+name: Enferm Infecc Microbiol Clin (Engl Ed)
+name: Enferm Intensiva (Engl Ed)
+name: Environ Anal Health Toxicol
+name: Environ Dev Econ
+name: Environ Entomol
+name: Environ Epidemiol
+name: Environ Epigenet
+name: Environ Fluid Mech (Dordr)
+name: Environ Geochem Health
+name: Environ Health
+name: Environ Health Perspect
+name: Environ Health Prev Med
+name: Environ Int
+name: Environ Manage
+name: Environ Microbiol
+name: Environ Microbiol Rep
+name: Environ Model Softw
+name: Environ Mol Mutagen
+name: Environ Monit Assess
+name: Environ Pollut
+name: Environ Res
+name: Environ Res Lett
+name: Environ Resour Econ (Dordr)
+name: Environ Sci Eur
+name: Environ Sci Nano
+name: Environ Sci Policy
+name: Environ Sci Pollut Res Int
+name: Environ Sci Process Impacts
+name: Environ Sci Technol
+name: Environ Sci Technol Lett
+name: Environ Sociol
+name: Environ Technol
+name: Environ Toxicol
+name: Environ Toxicol Chem
+name: Environ Toxicol Pharmacol
+name: Environmetrics
+name: Enzyme Microb Technol
+name: Enzymes
+name: Epidemics
+name: Epidemiol Health
+name: Epidemiol Infect
+name: Epidemiol Psychiatr Sci
+name: Epidemiol Rev
+name: Epidemiol Serv Saude
+name: Epidemiology
+name: Epigenet Insights
+name: Epigenetics
+name: Epigenetics Chromatin
+name: Epigenomics
+name: Epilepsia
+name: Epilepsia Open
+name: Epilepsy Behav
+name: Epilepsy Behav Rep
+name: Epilepsy Curr
+name: Epilepsy Res
+name: Epileptic Disord
+name: Equine Vet J
+name: Ergonomics
+name: Esophagus
+name: Essays Biochem
+name: Estuaries Coast
+name: Ethics Hum Res
+name: Ethn Health
+name: Ethnography
+name: Euphytica
+name: Eur Addict Res
+name: Eur Ann Otorhinolaryngol Head Neck Dis
+name: Eur Arch Otorhinolaryngol
+name: Eur Arch Paediatr Dent
+name: Eur Arch Psychiatry Clin Neurosci
+name: Eur Biophys J
+name: Eur Cardiol
+name: Eur Cell Mater
+name: Eur Child Adolesc Psychiatry
+name: Eur Clin Respir J
+name: Eur Eat Disord Rev
+name: Eur Endocrinol
+name: Eur Endod J
+name: Eur Geriatr Med
+name: Eur Heart J
+name: Eur Heart J Acute Cardiovasc Care
+name: Eur Heart J Cardiovasc Imaging
+name: Eur Heart J Cardiovasc Pharmacother
+name: Eur Heart J Case Rep
+name: Eur Heart J Qual Care Clin Outcomes
+name: Eur J Ageing
+name: Eur J Anaesthesiol
+name: Eur J Appl Physiol
+name: Eur J Breast Health
+name: Eur J Cancer
+name: Eur J Cancer Care (Engl)
+name: Eur J Cancer Prev
+name: Eur J Cardiothorac Surg
+name: Eur J Cardiovasc Nurs
+name: Eur J Case Rep Intern Med
+name: Eur J Cell Biol
+name: Eur J Clin Invest
+name: Eur J Clin Microbiol Infect Dis
+name: Eur J Clin Nutr
+name: Eur J Clin Pharmacol
+name: Eur J Contracept Reprod Health Care
+name: Eur J Dent
+name: Eur J Dent Educ
+name: Eur J Dermatol
+name: Eur J Drug Metab Pharmacokinet
+name: Eur J Emerg Med
+name: Eur J Endocrinol
+name: Eur J Epidemiol
+name: Eur J Gastroenterol Hepatol
+name: Eur J Gen Pract
+name: Eur J Haematol
+name: Eur J Health Econ
+name: Eur J Heart Fail
+name: Eur J Histochem
+name: Eur J Hosp Pharm
+name: Eur J Hum Genet
+name: Eur J Hybrid Imaging
+name: Eur J Immunol
+name: Eur J Inorg Chem
+name: Eur J Intern Med
+name: Eur J Med Chem
+name: Eur J Med Genet
+name: Eur J Med Res
+name: Eur J Microbiol Immunol (Bp)
+name: Eur J Neurol
+name: Eur J Neurosci
+name: Eur J Nucl Med Mol Imaging
+name: Eur J Nutr
+name: Eur J Obstet Gynecol Reprod Biol
+name: Eur J Obstet Gynecol Reprod Biol X
+name: Eur J Oncol Nurs
+name: Eur J Ophthalmol
+name: Eur J Oral Sci
+name: Eur J Orthod
+name: Eur J Orthop Surg Traumatol
+name: Eur J Paediatr Dent
+name: Eur J Paediatr Neurol
+name: Eur J Pain
+name: Eur J Pediatr
+name: Eur J Pediatr Surg
+name: Eur J Pharm Biopharm
+name: Eur J Pharm Sci
+name: Eur J Pharmacol
+name: Eur J Philos Sci
+name: Eur J Phys Rehabil Med
+name: Eur J Prev Cardiol
+name: Eur J Prosthodont Restor Dent
+name: Eur J Protistol
+name: Eur J Psychotraumatol
+name: Eur J Public Health
+name: Eur J Radiol
+name: Eur J Radiol Open
+name: Eur J Rheumatol
+name: Eur J Sport Sci
+name: Eur J Surg Oncol
+name: Eur J Trauma Emerg Surg
+name: Eur J Vasc Endovasc Surg
+name: Eur Neurol
+name: Eur Neuropsychopharmacol
+name: Eur Phys J C Part Fields
+name: Eur Phys J E Soft Matter
+name: Eur Phys J Plus
+name: Eur Psychiatry
+name: Eur Radiol
+name: Eur Radiol Exp
+name: Eur Respir J
+name: Eur Respir Rev
+name: Eur Rev Aging Phys Act
+name: Eur Rev Med Pharmacol Sci
+name: Eur Spine J
+name: Eur Surg Res
+name: Eur Urol
+name: Eur Urol Focus
+name: Eur Urol Oncol
+name: Eurasian J Med
+name: Euro Surveill
+name: EuroIntervention
+name: Europace
+name: European J Org Chem
+name: European J Pediatr Surg Rep
+name: Europhys Lett
+name: Eval Health Prof
+name: Eval Program Plann
+name: Eval Rev
+name: Evid Based Complement Alternat Med
+name: Evid Based Dent
+name: Evid Based Ment Health
+name: Evid Based Nurs
+name: Evodevo
+name: Evol Anthropol
+name: Evol Bioinform Online
+name: Evol Comput
+name: Evol Dev
+name: Evol Ecol
+name: Evol Med Public Health
+name: Evol Stud Imaginative Cult
+name: Evolution
+name: Exerc Immunol Rev
+name: Exerc Sport Sci Rev
+name: Exp Aging Res
+name: Exp Anim
+name: Exp Appl Acarol
+name: Exp Biol Med (Maywood)
+name: Exp Brain Res
+name: Exp Cell Res
+name: Exp Clin Endocrinol Diabetes
+name: Exp Clin Psychopharmacol
+name: Exp Clin Transplant
+name: Exp Dermatol
+name: Exp Eye Res
+name: Exp Gerontol
+name: Exp Hematol
+name: Exp Hematol Oncol
+name: Exp Lung Res
+name: Exp Mol Med
+name: Exp Mol Pathol
+name: Exp Neurobiol
+name: Exp Neurol
+name: Exp Parasitol
+name: Exp Physiol
+name: Exp Ther Med
+name: Expert Opin Biol Ther
+name: Expert Opin Drug Deliv
+name: Expert Opin Drug Discov
+name: Expert Opin Drug Metab Toxicol
+name: Expert Opin Drug Saf
+name: Expert Opin Emerg Drugs
+name: Expert Opin Investig Drugs
+name: Expert Opin Pharmacother
+name: Expert Opin Ther Pat
+name: Expert Opin Ther Targets
+name: Expert Rev Anti Infect Ther
+name: Expert Rev Anticancer Ther
+name: Expert Rev Cardiovasc Ther
+name: Expert Rev Clin Immunol
+name: Expert Rev Clin Pharmacol
+name: Expert Rev Endocrinol Metab
+name: Expert Rev Gastroenterol Hepatol
+name: Expert Rev Hematol
+name: Expert Rev Med Devices
+name: Expert Rev Mol Diagn
+name: Expert Rev Neurother
+name: Expert Rev Pharmacoecon Outcomes Res
+name: Expert Rev Proteomics
+name: Expert Rev Respir Med
+name: Expert Rev Vaccines
+name: Expert Syst Appl
+name: Explore (NY)
+name: Ext Abstr Hum Factors Computing Syst
+name: Extremophiles
+name: Eye (Lond)
+name: Eye Brain
+name: Eye Contact Lens
+name: Eye Vis (Lond)
+name: F1000Res
+name: FASEB J
+name: FEBS J
+name: FEBS Lett
+name: FEBS Open Bio
+name: FEMS Microbiol Ecol
+name: FEMS Microbiol Lett
+name: FEMS Microbiol Rev
+name: FEMS Yeast Res
+name: FP Essent
+name: Facial Plast Surg
+name: Facial Plast Surg Aesthet Med
+name: Fam Cancer
+name: Fam Med
+name: Fam Med Community Health
+name: Fam Pract
+name: Fam Pract Manag
+name: Fam Process
+name: Fam Syst Health
+name: Faraday Discuss
+name: Farm Hosp
+name: Fatigue
+name: Fed Pract
+name: Female Pelvic Med Reconstr Surg
+name: Fertil Res Pract
+name: Fertil Steril
+name: Fetal Diagn Ther
+name: Fetal Pediatr Pathol
+name: Field Crops Res
+name: Financ Res Lett
+name: Fish Physiol Biochem
+name: Fish Shellfish Immunol
+name: Fitoterapia
+name: Fluids Barriers CNS
+name: Focus (Am Psychiatr Publ)
+name: Folia Histochem Cytobiol
+name: Folia Microbiol (Praha)
+name: Folia Morphol (Warsz)
+name: Folia Parasitol (Praha)
+name: Folia Phoniatr Logop
+name: Folia Primatol (Basel)
+name: Food Addit Contam Part A Chem Anal Control Expo Risk Assess
+name: Food Addit Contam Part B Surveill
+name: Food Chem
+name: Food Chem Toxicol
+name: Food Chem X
+name: Food Control
+name: Food Energy Secur
+name: Food Environ Virol
+name: Food Funct
+name: Food Microbiol
+name: Food Nutr Bull
+name: Food Nutr Res
+name: Food Packag Shelf Life
+name: Food Policy
+name: Food Res Int
+name: Food Sci Biotechnol
+name: Food Sci Nutr
+name: Food Sci Technol Int
+name: Food Waterborne Parasitol
+name: Foodborne Pathog Dis
+name: Foods
+name: Foot (Edinb)
+name: Foot Ankle Int
+name: Foot Ankle Spec
+name: Foot Ankle Surg
+name: For Policy Econ
+name: Forensic Sci Int
+name: Forensic Sci Int Genet
+name: Forensic Sci Int Synerg
+name: Forensic Sci Med Pathol
+name: Forensic Sci Rev
+name: Form Methods Syst Des
+name: Fortschr Neurol Psychiatr
+name: Forum Health Econ Policy
+name: Found Comut Math
+name: Found Phys
+name: Free Radic Biol Med
+name: Free Radic Res
+name: Front Aging Neurosci
+name: Front Behav Neurosci
+name: Front Bioeng Biotechnol
+name: Front Cardiovasc Med
+name: Front Cell Dev Biol
+name: Front Cell Infect Microbiol
+name: Front Cell Neurosci
+name: Front Chem
+name: Front Comput Neurosci
+name: Front Dent
+name: Front Earth Sci (Lausanne)
+name: Front Endocrinol (Lausanne)
+name: Front Environ Sci Eng
+name: Front Genet
+name: Front Health Serv Manage
+name: Front Hum Neurosci
+name: Front Immunol
+name: Front Integr Neurosci
+name: Front Mar Sci
+name: Front Med
+name: Front Med (Lausanne)
+name: Front Microbiol
+name: Front Mol Biosci
+name: Front Mol Neurosci
+name: Front Neural Circuits
+name: Front Neuroanat
+name: Front Neuroendocrinol
+name: Front Neuroinform
+name: Front Neurol
+name: Front Neurorobot
+name: Front Neurosci
+name: Front Nutr
+name: Front Oncol
+name: Front Pediatr
+name: Front Pharmacol
+name: Front Phys
+name: Front Physiol
+name: Front Plant Sci
+name: Front Psychiatry
+name: Front Psychol
+name: Front Public Health
+name: Front Surg
+name: Front Sustain Food Syst
+name: Front Synaptic Neurosci
+name: Front Syst Neurosci
+name: Front Vet Sci
+name: Front Zool
+name: Frontline Gastroenterol
+name: Fukushima J Med Sci
+name: Funct Integr Genomics
+name: Funct Neurol
+name: Funct Plant Biol
+name: Fundam Clin Pharmacol
+name: Fungal Biol
+name: Fungal Biol Biotechnol
+name: Fungal Genet Biol
+name: Fungal Syst Evol
+name: Future Cardiol
+name: Future Drug Discov
+name: Future Gener Comput Syst
+name: Future Healthc J
+name: Future Med Chem
+name: Future Microbiol
+name: Future Oncol
+name: Future Sci OA
+name: G Chir
+name: G Ital Cardiol (Rome)
+name: G3 (Bethesda)
+name: GM Crops Food
+name: GMS J Med Educ
+name: GMS Ophthalmol Cases
+name: Gac Med Mex
+name: Gac Sanit
+name: Gait Posture
+name: Games Health J
+name: Gan To Kagaku Ryoho
+name: Gastric Cancer
+name: GastroHep
+name: Gastroenterol Clin North Am
+name: Gastroenterol Hepatol
+name: Gastroenterol Hepatol (N Y)
+name: Gastroenterol Nurs
+name: Gastroenterol Rep (Oxf)
+name: Gastroenterol Res Pract
+name: Gastroenterology
+name: Gastrointest Endosc
+name: Gastrointest Endosc Clin N Am
+name: Gates Open Res
+name: Geburtshilfe Frauenheilkd
+name: Gels
+name: Gen Comp Endocrinol
+name: Gen Hosp Psychiatry
+name: Gen Psychiatr
+name: Gen Thorac Cardiovasc Surg
+name: Gene
+name: Gene Expr
+name: Gene Expr Patterns
+name: Gene Rep
+name: Gene Ther
+name: Genes (Basel)
+name: Genes Brain Behav
+name: Genes Cancer
+name: Genes Cells
+name: Genes Chromosomes Cancer
+name: Genes Dev
+name: Genes Environ
+name: Genes Genet Syst
+name: Genes Genomics
+name: Genes Immun
+name: Genes Nutr
+name: Genesis
+name: Genet Epidemiol
+name: Genet Med
+name: Genet Mol Biol
+name: Genet Sel Evol
+name: Genet Test Mol Biomarkers
+name: Genetica
+name: Genetics
+name: Genome
+name: Genome Biol
+name: Genome Biol Evol
+name: Genome Med
+name: Genome Res
+name: Genomics
+name: Genomics Inform
+name: Genomics Proteomics Bioinformatics
+name: Geobiology
+name: Geochem Geophys Geosyst
+name: Geochim Cosmochim Acta
+name: Geoforum
+name: Geohealth
+name: Geol Mag
+name: Geology
+name: Geophys J Int
+name: Geophys Res Lett
+name: Georgian Med News
+name: Geospat Health
+name: Geriatr Gerontol Int
+name: Geriatr Nurs
+name: Geriatr Orthop Surg Rehabil
+name: Geriatr Psychol Neuropsychiatr Vieil
+name: Geriatrics (Basel)
+name: Gerodontology
+name: Gerontechnology
+name: Gerontol Geriatr Educ
+name: Gerontol Geriatr Med
+name: Gerontologist
+name: Gerontology
+name: Geroscience
+name: Gesundheitswesen
+name: Gigascience
+name: Ginekol Pol
+name: Glia
+name: Glob Adv Health Med
+name: Glob Bioeth
+name: Glob Chall
+name: Glob Chang Biol
+name: Glob Change Biol Bioenergy
+name: Glob Food Sec
+name: Glob Health Action
+name: Glob Health Promot
+name: Glob Health Res Policy
+name: Glob Health Sci Pract
+name: Glob Heart
+name: Glob Pediatr Health
+name: Glob Policy
+name: Glob Public Health
+name: Glob Qual Nurs Res
+name: Glob Soc Welf
+name: Global Biogeochem Cycles
+name: Global Health
+name: Glycobiology
+name: Glycoconj J
+name: Graefes Arch Clin Exp Ophthalmol
+name: Granul Matter
+name: Graphs Comb
+name: Ground Water
+name: Growth Factors
+name: Growth Horm IGF Res
+name: Gut
+name: Gut Liver
+name: Gut Microbes
+name: Gut Pathog
+name: Gynecol Endocrinol
+name: Gynecol Obstet Fertil Senol
+name: Gynecol Obstet Invest
+name: Gynecol Oncol
+name: Gynecol Oncol Rep
+name: Gynecol Surg
+name: HEC Forum
+name: HERD
+name: HIV AIDS (Auckl)
+name: HIV Med
+name: HIV Res Clin Pract
+name: HLA
+name: HNO
+name: HNO Nachr
+name: HPB (Oxford)
+name: HRB Open Res
+name: HSS J
+name: Haematologica
+name: Haemophilia
+name: Hamostaseologie
+name: Hand (N Y)
+name: Hand Clin
+name: Hand Surg Rehabil
+name: Handb Clin Neurol
+name: Handb Exp Pharmacol
+name: Handchir Mikrochir Plast Chir
+name: Harefuah
+name: Harm Reduct J
+name: Harmful Algae
+name: Harv Rev Psychiatry
+name: Hastings Cent Rep
+name: Hautarzt
+name: Hawaii J Health Soc Welf
+name: Head Face Med
+name: Head Neck
+name: Head Neck Pathol
+name: Headache
+name: Health (London)
+name: Health Aff (Millwood)
+name: Health Care Anal
+name: Health Care Manag Sci
+name: Health Care Women Int
+name: Health Commun
+name: Health Econ
+name: Health Econ Policy Law
+name: Health Econ Rev
+name: Health Educ Behav
+name: Health Educ Res
+name: Health Equity
+name: Health Expect
+name: Health Inf Manag
+name: Health Info Libr J
+name: Health Informatics J
+name: Health Justice
+name: Health Lit Res Pract
+name: Health Mark Q
+name: Health Phys
+name: Health Place
+name: Health Policy
+name: Health Policy Plan
+name: Health Promot Int
+name: Health Promot J Austr
+name: Health Promot Pract
+name: Health Psychol
+name: Health Psychol Open
+name: Health Psychol Rev
+name: Health Qual Life Outcomes
+name: Health Rep
+name: Health Res Policy Syst
+name: Health SA
+name: Health Sci Rep
+name: Health Secur
+name: Health Serv Insights
+name: Health Serv Manage Res
+name: Health Serv Res
+name: Health Serv Res Manag Epidemiol
+name: Health Soc Care Community
+name: Health Soc Work
+name: Health Syst Reform
+name: Health Technol (Berl)
+name: Health Technol Assess
+name: Healthc (Amst)
+name: Healthc Manage Forum
+name: Healthc Policy
+name: Healthcare (Basel)
+name: Hear Res
+name: Heart
+name: Heart Fail Clin
+name: Heart Fail Rev
+name: Heart Lung
+name: Heart Lung Circ
+name: Heart Rhythm
+name: Heart Vessels
+name: Heart Views
+name: HeartRhythm Case Rep
+name: Heilberufe
+name: Helicobacter
+name: Heliyon
+name: Hellenic J Cardiol
+name: Hematol Oncol
+name: Hematol Oncol Clin North Am
+name: Hematol Oncol Stem Cell Ther
+name: Hematol Transfus Cell Ther
+name: Hematology
+name: Hemodial Int
+name: Hemoglobin
+name: Hepat Med
+name: Hepatobiliary Pancreat Dis Int
+name: Hepatobiliary Surg Nutr
+name: Hepatol Commun
+name: Hepatol Int
+name: Hepatol Res
+name: Hepatology
+name: Hepatoma Res
+name: Her Russ Acad Sci
+name: Hered Cancer Clin Pract
+name: Hereditas
+name: Heredity (Edinb)
+name: Hernia
+name: Herz
+name: Herzschrittmacherther Elektrophysiol
+name: High Alt Med Biol
+name: High Blood Press Cardiovasc Prev
+name: High Throughput
+name: Hinyokika Kiyo
+name: Hip Int
+name: Hip Pelvis
+name: Hipertens Riesgo Vasc
+name: Hippocampus
+name: Hippokratia
+name: Hisp Health Care Int
+name: Hist Philos Life Sci
+name: Hist Psychiatry
+name: Hist Psychol
+name: Hist Sci
+name: Histochem Cell Biol
+name: Histol Histopathol
+name: Histopathology
+name: Holist Nurs Pract
+name: Home Health Care Serv Q
+name: Home Healthc Now
+name: Homeopathy
+name: Homo
+name: Hong Kong J Occup Ther
+name: Hong Kong Med J
+name: Horm Behav
+name: Horm Cancer
+name: Horm Metab Res
+name: Horm Mol Biol Clin Investig
+name: Horm Res Paediatr
+name: Hormones (Athens)
+name: Hortic Res
+name: Hosp Pediatr
+name: Hosp Pract (1995)
+name: Hosp Pract Res
+name: Hosp Top
+name: Hous Stud
+name: Hua Xi Kou Qiang Yi Xue Za Zhi
+name: Hum Antibodies
+name: Hum Brain Mapp
+name: Hum Cell
+name: Hum Commun Res
+name: Hum Dev
+name: Hum Exp Toxicol
+name: Hum Factors
+name: Hum Fertil (Camb)
+name: Hum Gene Ther
+name: Hum Gene Ther Clin Dev
+name: Hum Gene Ther Methods
+name: Hum Genet
+name: Hum Genomics
+name: Hum Immunol
+name: Hum Mol Genet
+name: Hum Mov Sci
+name: Hum Mutat
+name: Hum Nat
+name: Hum Pathol
+name: Hum Pathol (N Y)
+name: Hum Psychopharmacol
+name: Hum Reprod
+name: Hum Reprod Open
+name: Hum Reprod Update
+name: Hum Resour Dev Q
+name: Hum Resour Health
+name: Hum Vaccin Immunother
+name: Hydrogeol J
+name: Hypertens Pregnancy
+name: Hypertens Res
+name: Hypertension
+name: IBM J Res Dev
+name: IBRO Rep
+name: IDCases
+name: IEEE Access
+name: IEEE Comput Graph Appl
+name: IEEE EMBS Int Conf Biomed Health Inform
+name: IEEE Int Conf Healthc Inform
+name: IEEE J Biomed Health Inform
+name: IEEE J Sel Top Appl Earth Obs Remote Sens
+name: IEEE J Transl Eng Health Med
+name: IEEE Nanotechnol Mag
+name: IEEE Netw
+name: IEEE Pulse
+name: IEEE Rev Biomed Eng
+name: IEEE Sens J
+name: IEEE Signal Process Mag
+name: IEEE Trans Appl Supercond
+name: IEEE Trans Biomed Circuits Syst
+name: IEEE Trans Biomed Eng
+name: IEEE Trans Commun
+name: IEEE Trans Comput Imaging
+name: IEEE Trans Cybern
+name: IEEE Trans Haptics
+name: IEEE Trans Image Process
+name: IEEE Trans Inf Theory
+name: IEEE Trans Med Imaging
+name: IEEE Trans Med Robot Bionics
+name: IEEE Trans Microw Theory Tech
+name: IEEE Trans Nanobioscience
+name: IEEE Trans Neural Netw Learn Syst
+name: IEEE Trans Neural Syst Rehabil Eng
+name: IEEE Trans Pattern Anal Mach Intell
+name: IEEE Trans Power Syst
+name: IEEE Trans Robot
+name: IEEE Trans Ultrason Ferroelectr Freq Control
+name: IEEE Trans Vis Comput Graph
+name: IEEE/ACM Trans Comput Biol Bioinform
+name: IET Nanobiotechnol
+name: IJCAI (U S)
+name: ILAR J
+name: IOP Conf Ser Mater Sci Eng
+name: IS&T Int Symp Electron Imaging
+name: ISA Trans
+name: ISME J
+name: IUBMB Life
+name: IUCrJ
+name: IUCrdata
+name: Icarus
+name: Ideggyogy Sz
+name: Immun Ageing
+name: Immun Inflamm Dis
+name: Immune Netw
+name: Immunity
+name: Immunobiology
+name: Immunogenetics
+name: Immunohematology
+name: Immunohorizons
+name: Immunol Cell Biol
+name: Immunol Invest
+name: Immunol Lett
+name: Immunol Med
+name: Immunol Res
+name: Immunol Rev
+name: Immunology
+name: Immunopharmacol Immunotoxicol
+name: Immunotargets Ther
+name: Immunotherapy
+name: Implement Sci
+name: In Vitro Cell Dev Biol Anim
+name: Ind Eng Chem Res
+name: Ind Health
+name: Indian Heart J
+name: Indian J Anaesth
+name: Indian J Cancer
+name: Indian J Community Med
+name: Indian J Crit Care Med
+name: Indian J Dermatol
+name: Indian J Dermatol Venereol Leprol
+name: Indian J Endocrinol Metab
+name: Indian J Gastroenterol
+name: Indian J Hematol Blood Transfus
+name: Indian J Med Res
+name: Indian J Nephrol
+name: Indian J Occup Environ Med
+name: Indian J Ophthalmol
+name: Indian J Otolaryngol Head Neck Surg
+name: Indian J Palliat Care
+name: Indian J Pathol Microbiol
+name: Indian J Pediatr
+name: Indian J Pharmacol
+name: Indian J Public Health
+name: Indian J Urol
+name: Indian Pacing Electrophysiol J
+name: Indian Pediatr
+name: Indoor Air
+name: Inf Process Med Imaging
+name: Inf Retr Boston
+name: Infancy
+name: Infant Behav Dev
+name: Infant Ment Health J
+name: Infants Young Child
+name: Infect Agent Cancer
+name: Infect Chemother
+name: Infect Control Hosp Epidemiol
+name: Infect Dis (Auckl)
+name: Infect Dis (Lond)
+name: Infect Dis Clin North Am
+name: Infect Dis Health
+name: Infect Dis Model
+name: Infect Dis Now
+name: Infect Dis Obstet Gynecol
+name: Infect Dis Poverty
+name: Infect Dis Ther
+name: Infect Disord Drug Targets
+name: Infect Drug Resist
+name: Infect Genet Evol
+name: Infect Immun
+name: Infection
+name: Infez Med
+name: Inflamm Bowel Dis
+name: Inflamm Regen
+name: Inflamm Res
+name: Inflammation
+name: Inflammopharmacology
+name: Influenza Other Respir Viruses
+name: Inform Health Soc Care
+name: Ing Rech Biomed
+name: Inhal Toxicol
+name: Inj Epidemiol
+name: Inj Prev
+name: Injury
+name: Innate Immun
+name: Innov Aging
+name: Innovations (Phila)
+name: Inorg Chem
+name: Inorg Chem Front
+name: Inorganica Chim Acta
+name: Inorganics (Basel)
+name: Inquiry
+name: Insect Biochem Mol Biol
+name: Insect Mol Biol
+name: Insect Sci
+name: Insects
+name: Insights Imaging
+name: Instr Course Lect
+name: Int Anesthesiol Clin
+name: Int Angiol
+name: Int Arch Allergy Immunol
+name: Int Arch Occup Environ Health
+name: Int Braz J Urol
+name: Int Breastfeed J
+name: Int Cancer Conf J
+name: Int Clin Psychopharmacol
+name: Int Conf Environ Syst
+name: Int Dent J
+name: Int Emerg Nurs
+name: Int Endod J
+name: Int Forum Allergy Rhinol
+name: Int Health
+name: Int Heart J
+name: Int Immunol
+name: Int Immunopharmacol
+name: Int J Adolesc Med Health
+name: Int J Adv Manuf Technol
+name: Int J Aging Hum Dev
+name: Int J Angiol
+name: Int J Antimicrob Agents
+name: Int J Appl Basic Med Res
+name: Int J Appl Ceram Technol
+name: Int J Artif Organs
+name: Int J Audiol
+name: Int J Aviat Psychol
+name: Int J Behav Med
+name: Int J Behav Nutr Phys Act
+name: Int J Biochem Cell Biol
+name: Int J Biol Macromol
+name: Int J Biol Markers
+name: Int J Biol Sci
+name: Int J Biomater
+name: Int J Biomed Eng Clin Sci
+name: Int J Biomed Investig
+name: Int J Biometeorol
+name: Int J Biostat
+name: Int J Bipolar Disord
+name: Int J Cancer
+name: Int J Cardiol
+name: Int J Cardiol Heart Vasc
+name: Int J Cardiovasc Imaging
+name: Int J Cerebrovasc Dis Stroke
+name: Int J Child Youth Family Stud
+name: Int J Chron Obstruct Pulmon Dis
+name: Int J Chronic Dis
+name: Int J Circumpolar Health
+name: Int J Climatol
+name: Int J Clin Health Psychol
+name: Int J Clin Oncol
+name: Int J Clin Pediatr Dent
+name: Int J Clin Pharm
+name: Int J Clin Pharmacol Ther
+name: Int J Clin Pract
+name: Int J Clin Res Trials
+name: Int J Colorectal Dis
+name: Int J Complement Altern Med
+name: Int J Comput Assist Radiol Surg
+name: Int J Comput Biol Drug Des
+name: Int J Comput Vis
+name: Int J Cosmet Sci
+name: Int J Crit Illn Inj Sci
+name: Int J Dent
+name: Int J Dent Hyg
+name: Int J Dermatol
+name: Int J Dev Biol
+name: Int J Dev Neurosci
+name: Int J Digit Earth
+name: Int J Disaster Risk Reduct
+name: Int J Drug Policy
+name: Int J Earth Sci
+name: Int J Eat Disord
+name: Int J Emerg Med
+name: Int J Endocrinol
+name: Int J Environ Health Res
+name: Int J Environ Res Public Health
+name: Int J Epidemiol
+name: Int J Equity Health
+name: Int J Esthet Dent
+name: Int J Evid Based Healthc
+name: Int J Exerc Sci
+name: Int J Exp Pathol
+name: Int J Food Microbiol
+name: Int J Food Sci
+name: Int J Food Sci Nutr
+name: Int J Fract
+name: Int J Gen Med
+name: Int J Genomics
+name: Int J Geriatr Psychiatry
+name: Int J Gynaecol Obstet
+name: Int J Gynecol Cancer
+name: Int J Health Care Qual Assur
+name: Int J Health Econ Manag
+name: Int J Health Geogr
+name: Int J Health Plann Manage
+name: Int J Health Policy Manag
+name: Int J Health Serv
+name: Int J Hematol
+name: Int J Hematol Oncol Stem Cell Res
+name: Int J Hepatol
+name: Int J Hum Comput Stud
+name: Int J Hyg Environ Health
+name: Int J Hypertens
+name: Int J Hyperthermia
+name: Int J Immunogenet
+name: Int J Immunopathol Pharmacol
+name: Int J Implant Dent
+name: Int J Impot Res
+name: Int J Inf Secur
+name: Int J Infect Dis
+name: Int J Inflam
+name: Int J Inj Contr Saf Promot
+name: Int J Integr Care
+name: Int J Lab Hematol
+name: Int J Lang Commun Disord
+name: Int J Law Psychiatry
+name: Int J Legal Med
+name: Int J Low Extrem Wounds
+name: Int J MCH AIDS
+name: Int J Mass Spectrom
+name: Int J Med Educ
+name: Int J Med Inform
+name: Int J Med Microbiol
+name: Int J Med Mushrooms
+name: Int J Med Robot
+name: Int J Med Sci
+name: Int J Ment Health Nurs
+name: Int J Ment Health Syst
+name: Int J Methods Psychiatr Res
+name: Int J Microbiol
+name: Int J Min Sci Technol
+name: Int J Mol Cell Med
+name: Int J Mol Med
+name: Int J Mol Sci
+name: Int J Nanomedicine
+name: Int J Nephrol
+name: Int J Nephrol Renovasc Dis
+name: Int J Neural Syst
+name: Int J Neuropsychopharmacol
+name: Int J Neurorehabil
+name: Int J Neurosci
+name: Int J Numer Method Biomed Eng
+name: Int J Nurs Educ Scholarsh
+name: Int J Nurs Knowl
+name: Int J Nurs Pract
+name: Int J Nurs Stud
+name: Int J Obes (Lond)
+name: Int J Obstet Anesth
+name: Int J Occup Environ Med
+name: Int J Occup Med Environ Health
+name: Int J Occup Saf Ergon
+name: Int J Offender Ther Comp Criminol
+name: Int J Older People Nurs
+name: Int J Oncol
+name: Int J Ophthalmol
+name: Int J Oral Maxillofac Implants
+name: Int J Oral Maxillofac Surg
+name: Int J Oral Sci
+name: Int J Orthop Trauma Nurs
+name: Int J Otolaryngol
+name: Int J Paediatr Dent
+name: Int J Paleopathol
+name: Int J Palliat Nurs
+name: Int J Parasitol
+name: Int J Parasitol Drugs Drug Resist
+name: Int J Parasitol Parasites Wildl
+name: Int J Part Ther
+name: Int J Pediatr
+name: Int J Pediatr Otorhinolaryngol
+name: Int J Periodontics Restorative Dent
+name: Int J Pharm
+name: Int J Pharm Compd
+name: Int J Pharm Pract
+name: Int J Pharm X
+name: Int J Phytoremediation
+name: Int J Prev Med
+name: Int J Progn Health Manag
+name: Int J Prosthodont
+name: Int J Psychiatry Clin Pract
+name: Int J Psychiatry Med
+name: Int J Psychol
+name: Int J Psychophysiol
+name: Int J Public Health
+name: Int J Qual Health Care
+name: Int J Qual Stud Health Well-being
+name: Int J Radiat Biol
+name: Int J Radiat Oncol Biol Phys
+name: Int J Refrig
+name: Int J Rehabil Res
+name: Int J Reprod Med
+name: Int J Retina Vitreous
+name: Int J Rheum Dis
+name: Int J Rheumatol
+name: Int J Risk Saf Med
+name: Int J STD AIDS
+name: Int J Sci Basic Appl Res
+name: Int J Soc Psychiatry
+name: Int J Soc Robot
+name: Int J Speech Lang Pathol
+name: Int J Sport Nutr Exerc Metab
+name: Int J Sports Med
+name: Int J Sports Phys Ther
+name: Int J Sports Physiol Perform
+name: Int J Stem Cells
+name: Int J Stroke
+name: Int J Surg
+name: Int J Surg Case Rep
+name: Int J Surg Oncol
+name: Int J Surg Pathol
+name: Int J Surg Protoc
+name: Int J Syst Evol Microbiol
+name: Int J Technol Assess Health Care
+name: Int J Ther Massage Bodywork
+name: Int J Ther Rehabil
+name: Int J Therm Sci
+name: Int J Toxicol
+name: Int J Trichology
+name: Int J Tryptophan Res
+name: Int J Tuberc Lung Dis
+name: Int J Urol
+name: Int J Vet Sci Med
+name: Int J Vitam Nutr Res
+name: Int J Womens Dermatol
+name: Int J Womens Health
+name: Int J Yoga
+name: Int J Yoga Therap
+name: Int Marit Health
+name: Int Med Case Rep J
+name: Int Microbiol
+name: Int Neurourol J
+name: Int Nurs Rev
+name: Int Ophthalmol
+name: Int Ophthalmol Clin
+name: Int Orthod
+name: Int Orthop
+name: Int Perspect Sex Reprod Health
+name: Int Psychogeriatr
+name: Int Q Community Health Educ
+name: Int Rev Cell Mol Biol
+name: Int Rev Immunol
+name: Int Rev Neurobiol
+name: Int Rev Psychiatry
+name: Int Tinnitus J
+name: Int Urogynecol J
+name: Int Urol Nephrol
+name: Int Wound J
+name: Integr Biol (Camb)
+name: Integr Blood Press Control
+name: Integr Cancer Ther
+name: Integr Comp Biol
+name: Integr Environ Assess Manag
+name: Integr Med Res
+name: Integr Pharm Res Pract
+name: Integr Psychol Behav Sci
+name: Integr Zool
+name: Intellect Dev Disabil
+name: Intensive Care Med
+name: Intensive Care Med Exp
+name: Intensive Crit Care Nurs
+name: Interact Cardiovasc Thorac Surg
+name: Interact J Med Res
+name: Interdiscip Perspect Infect Dis
+name: Interdiscip Sci
+name: Interdiscip Toxicol
+name: Intern Emerg Med
+name: Intern Med
+name: Intern Med J
+name: Internet Interv
+name: Internist (Berl)
+name: Interv Cardiol
+name: Interv Cardiol Clin
+name: Interv Med Appl Sci
+name: Interv Neuroradiol
+name: Intest Res
+name: Invent Math
+name: Invert Neurosci
+name: Invest New Drugs
+name: Invest Ophthalmol Vis Sci
+name: Invest Radiol
+name: Investig Clin Urol
+name: Iowa Orthop J
+name: Iperception
+name: Ir J Med Sci
+name: Ir J Psychol Med
+name: Ir Med J
+name: Ir Vet J
+name: Iran J Basic Med Sci
+name: Iran J Child Neurol
+name: Iran J Kidney Dis
+name: Iran J Microbiol
+name: Iran J Public Health
+name: Islets
+name: Isotopes Environ Health Stud
+name: Isr J Health Policy Res
+name: Isr Med Assoc J
+name: Issues Ment Health Nurs
+name: Ital J Dermatol Venerol
+name: Ital J Food Saf
+name: Ital J Pediatr
+name: J AAPOS
+name: J AIDS HIV Treat
+name: J AOAC Int
+name: J Abnorm Child Psychol
+name: J Abnorm Psychol
+name: J Acad Consult Liaison Psychiatry
+name: J Acad Nutr Diet
+name: J Acoust Soc Am
+name: J Acquir Immune Defic Syndr
+name: J Acupunct Meridian Stud
+name: J Addict
+name: J Addict Dis
+name: J Addict Med
+name: J Addict Nurs
+name: J Adhes Dent
+name: J Adolesc
+name: J Adolesc Health
+name: J Adolesc Res
+name: J Adolesc Young Adult Oncol
+name: J Adv Med Pharm Sci
+name: J Adv Model Earth Syst
+name: J Adv Nurs
+name: J Adv Pharm Technol Res
+name: J Adv Res
+name: J Aerosol Med Pulm Drug Deliv
+name: J Affect Disord
+name: J Aging Health
+name: J Aging Phys Act
+name: J Aging Res
+name: J Aging Soc Policy
+name: J Agric Econ
+name: J Agric Food Chem
+name: J Agromedicine
+name: J Air Transp (Rest)
+name: J Air Transp Manag
+name: J Air Waste Manag Assoc
+name: J Aircr
+name: J Allergy Clin Immunol
+name: J Allergy Clin Immunol Pract
+name: J Allied Health
+name: J Altern Complement Med
+name: J Alzheimers Dis
+name: J Alzheimers Dis Rep
+name: J Am Acad Child Adolesc Psychiatry
+name: J Am Acad Dermatol
+name: J Am Acad Orthop Surg
+name: J Am Acad Orthop Surg Glob Res Rev
+name: J Am Acad Psychiatry Law
+name: J Am Anim Hosp Assoc
+name: J Am Assoc Lab Anim Sci
+name: J Am Assoc Nurse Pract
+name: J Am Ceram Soc
+name: J Am Chem Soc
+name: J Am Coll Cardiol
+name: J Am Coll Health
+name: J Am Coll Nutr
+name: J Am Coll Radiol
+name: J Am Coll Surg
+name: J Am Dent Assoc
+name: J Am Geriatr Soc
+name: J Am Heart Assoc
+name: J Am Med Dir Assoc
+name: J Am Med Inform Assoc
+name: J Am Osteopath Assoc
+name: J Am Pharm Assoc (2003)
+name: J Am Podiatr Med Assoc
+name: J Am Psychiatr Nurses Assoc
+name: J Am Psychoanal Assoc
+name: J Am Soc Cytopathol
+name: J Am Soc Echocardiogr
+name: J Am Soc Mass Spectrom
+name: J Am Soc Nephrol
+name: J Am Stat Assoc
+name: J Am Vet Med Assoc
+name: J Am Water Resour Assoc
+name: J Am Water Works Assoc
+name: J Ambul Care Manage
+name: J Anal Methods Chem
+name: J Anal Toxicol
+name: J Anat
+name: J Anesth
+name: J Anim Breed Genet
+name: J Anim Ecol
+name: J Anim Physiol Anim Nutr (Berl)
+name: J Anim Sci
+name: J Anim Sci Biotechnol
+name: J Anim Sci Technol
+name: J Antibiot (Tokyo)
+name: J Antimicrob Chemother
+name: J Anxiety Disord
+name: J Appl Anim Welf Sci
+name: J Appl Behav Anal
+name: J Appl Biomater Funct Mater
+name: J Appl Biomech
+name: J Appl Clin Med Phys
+name: J Appl Comput Topol
+name: J Appl Dev Psychol
+name: J Appl Ecol
+name: J Appl Econ (Chichester Engl)
+name: J Appl Electrochem
+name: J Appl Genet
+name: J Appl Gerontol
+name: J Appl Lab Med
+name: J Appl Meas
+name: J Appl Microbiol
+name: J Appl Physiol (1985)
+name: J Appl Psychol
+name: J Appl Remote Sens
+name: J Appl Res Child
+name: J Appl Res Intellect Disabil
+name: J Appl Stat
+name: J Appl Toxicol
+name: J Aquat Anim Health
+name: J Arrhythm
+name: J Arthroplasty
+name: J Artif Organs
+name: J Asian Nat Prod Res
+name: J Assist Reprod Genet
+name: J Assoc Genet Technol
+name: J Assoc Nurses AIDS Care
+name: J Assoc Physicians India
+name: J Assoc Res Otolaryngol
+name: J Asthma
+name: J Asthma Allergy
+name: J Atheroscler Thromb
+name: J Athl Train
+name: J Atmos Ocean Technol
+name: J Atmos Sol Terr Phys
+name: J Atten Disord
+name: J Audiol Otol
+name: J Autism Dev Disord
+name: J Autoimmun
+name: J Ayub Med Coll Abbottabad
+name: J Ayurveda Integr Med
+name: J Back Musculoskelet Rehabil
+name: J Bacteriol
+name: J Bank Financ
+name: J Basic Clin Physiol Pharmacol
+name: J Basic Microbiol
+name: J Behav Addict
+name: J Behav Brain Sci
+name: J Behav Health Serv Res
+name: J Behav Med
+name: J Behav Ther Exp Psychiatry
+name: J Belg Soc Radiol
+name: J Binocul Vis Ocul Motil
+name: J Biochem
+name: J Biochem Mol Toxicol
+name: J Bioenerg Biomembr
+name: J Bioeth Inq
+name: J Biogeogr
+name: J Bioinform Comput Biol
+name: J Biol Chem
+name: J Biol Dyn
+name: J Biol Eng
+name: J Biol Inorg Chem
+name: J Biol Methods
+name: J Biol Phys
+name: J Biol Regul Homeost Agents
+name: J Biol Res (Thessalon)
+name: J Biol Rhythms
+name: J Biomater Appl
+name: J Biomater Sci Polym Ed
+name: J Biomech
+name: J Biomech Eng
+name: J Biomed Inform
+name: J Biomed Mater Res A
+name: J Biomed Mater Res B Appl Biomater
+name: J Biomed Opt
+name: J Biomed Phys Eng
+name: J Biomed Res
+name: J Biomed Sci
+name: J Biomed Semantics
+name: J Biomol NMR
+name: J Biomol Struct Dyn
+name: J Biopharm Stat
+name: J Biophotonics
+name: J Biosaf Biosecur
+name: J Biosci
+name: J Biosci Bioeng
+name: J Biosoc Sci
+name: J Biotechnol
+name: J Blood Med
+name: J Bone Joint Surg Am
+name: J Bone Jt Infect
+name: J Bone Metab
+name: J Bone Miner Metab
+name: J Bone Miner Res
+name: J Bone Oncol
+name: J Brachial Plex Peripher Nerve Inj
+name: J Bras Nefrol
+name: J Bras Pneumol
+name: J Breast Cancer
+name: J Breath Res
+name: J Bronchology Interv Pulmonol
+name: J Burn Care Res
+name: J Bus Contin Emer Plan
+name: J Bus Res
+name: J Cachexia Sarcopenia Muscle
+name: J Caffeine Adenosine Res
+name: J Can Assoc Gastroenterol
+name: J Cancer
+name: J Cancer Educ
+name: J Cancer Immunol (Wilmington)
+name: J Cancer Metastasis Treat
+name: J Cancer Policy
+name: J Cancer Prev
+name: J Cancer Res Cell Ther
+name: J Cancer Res Clin Oncol
+name: J Cancer Res Ther Oncol
+name: J Cancer Sci Ther
+name: J Cancer Surviv
+name: J Card Fail
+name: J Card Surg
+name: J Cardiol
+name: J Cardiol Cases
+name: J Cardiothorac Surg
+name: J Cardiothorac Vasc Anesth
+name: J Cardiovasc Comput Tomogr
+name: J Cardiovasc Dev Dis
+name: J Cardiovasc Echogr
+name: J Cardiovasc Electrophysiol
+name: J Cardiovasc Imaging
+name: J Cardiovasc Magn Reson
+name: J Cardiovasc Med (Hagerstown)
+name: J Cardiovasc Nurs
+name: J Cardiovasc Pharmacol
+name: J Cardiovasc Pharmacol Ther
+name: J Cardiovasc Transl Res
+name: J Caring Sci
+name: J Cataract Refract Surg
+name: J Cell Biochem
+name: J Cell Biol
+name: J Cell Commun Signal
+name: J Cell Immunol
+name: J Cell Mol Med
+name: J Cell Physiol
+name: J Cell Sci
+name: J Cent Nerv Syst Dis
+name: J Cereb Blood Flow Metab
+name: J Cerebrovasc Endovasc Neurosurg
+name: J Chem Ecol
+name: J Chem Educ
+name: J Chem Eng Data
+name: J Chem Inf Model
+name: J Chem Neuroanat
+name: J Chem Phys
+name: J Chem Technol Biotechnol
+name: J Chem Theory Comput
+name: J Chem Thermodyn
+name: J Chemother
+name: J Child Adolesc Psychiatr Nurs
+name: J Child Adolesc Psychopharmacol
+name: J Child Fam Stud
+name: J Child Health Care
+name: J Child Lang
+name: J Child Neurol
+name: J Child Orthop
+name: J Child Psychol Psychiatry
+name: J Child Sex Abus
+name: J Chin Med Assoc
+name: J Chiropr Educ
+name: J Christ Nurs
+name: J Chromatogr A
+name: J Chromatogr B Analyt Technol Biomed Life Sci
+name: J Chromatogr Sci
+name: J Circ Biomark
+name: J Clean Prod
+name: J Clim
+name: J Clin Anesth
+name: J Clin Apher
+name: J Clin Child Adolesc Psychol
+name: J Clin Densitom
+name: J Clin Endocrinol Metab
+name: J Clin Epidemiol
+name: J Clin Ethics
+name: J Clin Exp Hematop
+name: J Clin Exp Hepatol
+name: J Clin Exp Neuropsychol
+name: J Clin Gastroenterol
+name: J Clin Hypertens (Greenwich)
+name: J Clin Immunol
+name: J Clin Invest
+name: J Clin Lab Anal
+name: J Clin Lipidol
+name: J Clin Med
+name: J Clin Med Res
+name: J Clin Microbiol
+name: J Clin Monit Comput
+name: J Clin Neuromuscul Dis
+name: J Clin Neurophysiol
+name: J Clin Neurosci
+name: J Clin Nurs
+name: J Clin Oncol
+name: J Clin Ophthalmol Eye Disord
+name: J Clin Orthop Trauma
+name: J Clin Pathol
+name: J Clin Periodontol
+name: J Clin Pharm Ther
+name: J Clin Pharmacol
+name: J Clin Psychiatry
+name: J Clin Psychol
+name: J Clin Psychol Med Settings
+name: J Clin Psychopharmacol
+name: J Clin Res Best Pract
+name: J Clin Res Pediatr Endocrinol
+name: J Clin Rheumatol
+name: J Clin Sleep Med
+name: J Clin Transl Endocrinol
+name: J Clin Transl Hepatol
+name: J Clin Tuberc Other Mycobact Dis
+name: J Clin Ultrasound
+name: J Clin Virol
+name: J Coat Technol Res
+name: J Cogn
+name: J Cogn Neurosci
+name: J Coll Physicians Surg Pak
+name: J Colloid Interface Sci
+name: J Commun
+name: J Commun Disord
+name: J Community Genet
+name: J Community Health
+name: J Community Health Nurs
+name: J Community Psychol
+name: J Comp Eff Res
+name: J Comp Neurol
+name: J Comp Pathol
+name: J Comp Physiol A Neuroethol Sens Neural Behav Physiol
+name: J Comp Physiol B
+name: J Comp Psychol
+name: J Complement Integr Med
+name: J Compos Mater
+name: J Comput Aided Mol Des
+name: J Comput Appl Math
+name: J Comput Assist Tomogr
+name: J Comput Biol
+name: J Comput Chem
+name: J Comput Electron
+name: J Comput Neurosci
+name: J Comput Phys
+name: J Comput Soc Sci
+name: J Consult Clin Psychol
+name: J Contam Hydrol
+name: J Contemp Dent Pract
+name: J Contextual Behav Sci
+name: J Contin Educ Health Prof
+name: J Contin Educ Nurs
+name: J Control Release
+name: J Cosmet Dermatol
+name: J Cosmet Laser Ther
+name: J Couns Psychol
+name: J Craniofac Surg
+name: J Craniomaxillofac Surg
+name: J Crit Care
+name: J Crohns Colitis
+name: J Cross Cult Gerontol
+name: J Curr Glaucoma Pract
+name: J Cutan Aesthet Surg
+name: J Cutan Med Surg
+name: J Cutan Pathol
+name: J Cyst Fibros
+name: J Cytol Histol
+name: J Dairy Res
+name: J Dairy Sci
+name: J Dance Med Sci
+name: J Deaf Stud Deaf Educ
+name: J Dent
+name: J Dent (Shiraz)
+name: J Dent Anesth Pain Med
+name: J Dent Child (Chic)
+name: J Dent Educ
+name: J Dent Hyg
+name: J Dent Res
+name: J Dent Res Dent Clin Dent Prospects
+name: J Dermatol
+name: J Dermatol Sci
+name: J Dermatolog Treat
+name: J Dev Behav Pediatr
+name: J Dev Biol
+name: J Dev Orig Health Dis
+name: J Diabetes
+name: J Diabetes Clin Res
+name: J Diabetes Complications
+name: J Diabetes Investig
+name: J Diabetes Res
+name: J Diabetes Sci Technol
+name: J Diet Suppl
+name: J Dig Dis
+name: J Digit Imaging
+name: J Drug Alcohol Res
+name: J Drug Target
+name: J Drugs Dermatol
+name: J Dtsch Dermatol Ges
+name: J Dual Diagn
+name: J ECT
+name: J Eat Disord
+name: J Echocardiogr
+name: J Econ Entomol
+name: J Educ Eval Health Prof
+name: J Educ Health Promot
+name: J Egypt Natl Canc Inst
+name: J Elder Abuse Negl
+name: J Electrocardiol
+name: J Electromyogr Kinesiol
+name: J Emerg Manag
+name: J Emerg Med
+name: J Emerg Nurs
+name: J Empir Res Hum Res Ethics
+name: J Endocr Soc
+name: J Endocrinol
+name: J Endocrinol Invest
+name: J Endod
+name: J Endourol
+name: J Endovasc Resusc Trauma Manag
+name: J Endovasc Ther
+name: J Eng Math
+name: J Environ Chem Eng
+name: J Environ Econ Manage
+name: J Environ Health Sci Eng
+name: J Environ Manage
+name: J Environ Pathol Toxicol Oncol
+name: J Environ Psychol
+name: J Environ Public Health
+name: J Environ Radioact
+name: J Environ Sci (China)
+name: J Environ Sci Health A Tox Hazard Subst Environ Eng
+name: J Environ Sci Health B
+name: J Environ Sci Health C Toxicol Carcinog
+name: J Enzyme Inhib Med Chem
+name: J Epidemiol
+name: J Epidemiol Community Health
+name: J Equine Vet Sci
+name: J Esthet Restor Dent
+name: J Ethn Subst Abuse
+name: J Ethnobiol Ethnomed
+name: J Ethnopharmacol
+name: J Eukaryot Microbiol
+name: J Eur Acad Dermatol Venereol
+name: J Eur CME
+name: J Eur Ceram Soc
+name: J Eur Econ Assoc
+name: J Eur Opt Soc Rapid Publ
+name: J Eval Clin Pract
+name: J Evid Based Integr Med
+name: J Evid Based Med
+name: J Evid Based Soc Work (2019)
+name: J Evol Biol
+name: J Evol Med Dent Sci
+name: J Exerc Nutrition Biochem
+name: J Exerc Rehabil
+name: J Exp Anal Behav
+name: J Exp Biol
+name: J Exp Bot
+name: J Exp Child Psychol
+name: J Exp Clin Cancer Res
+name: J Exp Med
+name: J Exp Orthop
+name: J Exp Pharmacol
+name: J Exp Psychol Anim Learn Cogn
+name: J Exp Psychol Appl
+name: J Exp Psychol Gen
+name: J Exp Psychol Hum Percept Perform
+name: J Exp Psychol Learn Mem Cogn
+name: J Exp Zool A Ecol Integr Physiol
+name: J Exp Zool B Mol Dev Evol
+name: J Expo Sci Environ Epidemiol
+name: J Extracell Vesicles
+name: J Fam Pract
+name: J Fam Psychol
+name: J Family Community Med
+name: J Family Strengths
+name: J Feline Med Surg
+name: J Fish Biol
+name: J Fish Dis
+name: J Flood Risk Manag
+name: J Fluency Disord
+name: J Fluid Flow Heat Mass Transf
+name: J Fluid Mech
+name: J Fluor Chem
+name: J Fluoresc
+name: J Food Biochem
+name: J Food Prot
+name: J Food Sci
+name: J Food Sci Nutr Res
+name: J Foot Ankle Res
+name: J Foot Ankle Surg
+name: J For
+name: J For Econ
+name: J Forecast
+name: J Forensic Leg Med
+name: J Forensic Nurs
+name: J Forensic Sci
+name: J Formos Med Assoc
+name: J Fr Ophtalmol
+name: J Frailty Aging
+name: J Funct Biomater
+name: J Fungi (Basel)
+name: J Gambl Stud
+name: J Gastroenterol
+name: J Gastroenterol Hepatol
+name: J Gastrointest Cancer
+name: J Gastrointest Surg
+name: J Gen Appl Microbiol
+name: J Gen Fam Med
+name: J Gen Intern Med
+name: J Gen Physiol
+name: J Gen Psychol
+name: J Gen Virol
+name: J Gene Med
+name: J Genet Couns
+name: J Genet Eng Biotechnol
+name: J Genet Genomics
+name: J Genet Psychol
+name: J Geod
+name: J Geophys Res Atmos
+name: J Geophys Res Oceans
+name: J Geophys Res Planets
+name: J Geophys Res Solid Earth
+name: J Geophys Res Space Phys
+name: J Geriatr Cardiol
+name: J Geriatr Oncol
+name: J Geriatr Phys Ther
+name: J Geriatr Psychiatry Neurol
+name: J Gerontol A Biol Sci Med Sci
+name: J Gerontol B Psychol Sci Soc Sci
+name: J Gerontol Nurs
+name: J Gerontol Soc Work
+name: J Ginseng Res
+name: J Glaucoma
+name: J Glob Antimicrob Resist
+name: J Glob Health
+name: J Glob Oncol
+name: J Glob Radiol
+name: J Gynakol Endokrinol
+name: J Gynecol Obstet Hum Reprod
+name: J Gynecol Oncol
+name: J Hand Microsurg
+name: J Hand Surg Am
+name: J Hand Surg Eur Vol
+name: J Hand Ther
+name: J Hazard Mater
+name: J Headache Pain
+name: J Health Care Chaplain
+name: J Health Commun
+name: J Health Econ
+name: J Health Organ Manag
+name: J Health Polit Policy Law
+name: J Health Popul Nutr
+name: J Health Psychol
+name: J Health Serv Res Policy
+name: J Health Soc Behav
+name: J Healthc Eng
+name: J Healthc Leadersh
+name: J Healthc Qual
+name: J Healthc Qual Res
+name: J Healthc Risk Manag
+name: J Heart Lung Transplant
+name: J Helminthol
+name: J Hematol Oncol
+name: J Hepatobiliary Pancreat Sci
+name: J Hepatocell Carcinoma
+name: J Hepatol
+name: J Hered
+name: J Hip Preserv Surg
+name: J Hist Behav Sci
+name: J Hist Biol
+name: J Hist Ideas
+name: J Hist Med Allied Sci
+name: J Hist Neurosci
+name: J Histochem Cytochem
+name: J Histotechnol
+name: J Holist Nurs
+name: J Homosex
+name: J Hosp Infect
+name: J Hosp Med
+name: J Hosp Palliat Nurs
+name: J Hum Evol
+name: J Hum Genet
+name: J Hum Hypertens
+name: J Hum Kinet
+name: J Hum Lact
+name: J Hum Nutr Diet
+name: J Hum Reprod Sci
+name: J Hunger Environ Nutr
+name: J Huntingtons Dis
+name: J Hydrol (Amst)
+name: J Hydrol X
+name: J Hydrometeorol
+name: J Hypertens
+name: J ISAKOS
+name: J Immigr Minor Health
+name: J Immunoassay Immunochem
+name: J Immunol
+name: J Immunol Methods
+name: J Immunol Res
+name: J Immunother
+name: J Immunother Cancer
+name: J Immunotoxicol
+name: J Ind Microbiol Biotechnol
+name: J Indian Assoc Pediatr Surg
+name: J Infect
+name: J Infect Chemother
+name: J Infect Dev Ctries
+name: J Infect Dis
+name: J Infect Prev
+name: J Infect Public Health
+name: J Inflamm (Lond)
+name: J Inflamm Res
+name: J Inherit Metab Dis
+name: J Innate Immun
+name: J Innov Card Rhythm Manag
+name: J Inorg Biochem
+name: J Insect Physiol
+name: J Insect Sci
+name: J Insur Med
+name: J Int AIDS Soc
+name: J Int Adv Otol
+name: J Int Assoc Provid AIDS Care
+name: J Int Med Res
+name: J Int Neuropsychol Soc
+name: J Int Soc Prev Community Dent
+name: J Int Soc Respir Prot
+name: J Int Soc Sports Nutr
+name: J Integr Bioinform
+name: J Integr Cardiol Open Access
+name: J Integr Med
+name: J Integr Plant Biol
+name: J Intell
+name: J Intellect Disabil
+name: J Intellect Disabil Res
+name: J Intensive Care
+name: J Intensive Care Med
+name: J Interferon Cytokine Res
+name: J Intern Med
+name: J Interpers Violence
+name: J Interprof Care
+name: J Interv Card Electrophysiol
+name: J Interv Cardiol
+name: J Invasive Cardiol
+name: J Invertebr Pathol
+name: J Invest Dermatol
+name: J Invest Surg
+name: J Investig Allergol Clin Immunol
+name: J Investig Clin Dent
+name: J Investig Med
+name: J Investig Med High Impact Case Rep
+name: J Knee Surg
+name: J Korean Acad Nurs
+name: J Korean Assoc Oral Maxillofac Surg
+name: J Korean Med Sci
+name: J Korean Neurosurg Soc
+name: J Lab Precis Med
+name: J Labelled Comp Radiopharm
+name: J Laparoendosc Adv Surg Tech A
+name: J Laryngol Otol
+name: J Lasers Med Sci
+name: J Law Med
+name: J Learn Disabil
+name: J Leg Med
+name: J Lesbian Stud
+name: J Leukoc Biol
+name: J Life Sci (Westlake Village)
+name: J Lipid Res
+name: J Liposome Res
+name: J Long Term Eff Med Implants
+name: J Low Genit Tract Dis
+name: J Low Temp Phys
+name: J Magn Reson
+name: J Magn Reson Imaging
+name: J Mammal
+name: J Mammary Gland Biol Neoplasia
+name: J Man Manip Ther
+name: J Manag Care Spec Pharm
+name: J Manipulative Physiol Ther
+name: J Marital Fam Ther
+name: J Mark Access Health Policy
+name: J Mass Spectrom
+name: J Mater Chem B
+name: J Mater Res
+name: J Mater Sci
+name: J Mater Sci Mater Med
+name: J Matern Fetal Neonatal Med
+name: J Math Biol
+name: J Math Imaging Vis
+name: J Math Neurosci
+name: J Maxillofac Oral Surg
+name: J Mech Behav Biomed Mater
+name: J Mech Phys Solids
+name: J Med Case Rep
+name: J Med Chem
+name: J Med Econ
+name: J Med Educ Curric Dev
+name: J Med Eng Technol
+name: J Med Entomol
+name: J Med Ethics
+name: J Med Food
+name: J Med Genet
+name: J Med Humanit
+name: J Med Imaging (Bellingham)
+name: J Med Imaging Radiat Oncol
+name: J Med Imaging Radiat Sci
+name: J Med Internet Res
+name: J Med Libr Assoc
+name: J Med Life
+name: J Med Microbiol
+name: J Med Philos
+name: J Med Primatol
+name: J Med Radiat Sci
+name: J Med Res Innov
+name: J Med Screen
+name: J Med Syst
+name: J Med Toxicol
+name: J Med Ultrason (2001)
+name: J Med Vasc
+name: J Med Virol
+name: J Membr Biol
+name: J Ment Health
+name: J Ment Health Clin Psychol
+name: J Ment Health Policy Econ
+name: J Microbiol
+name: J Microbiol Biol Educ
+name: J Microbiol Biotechnol
+name: J Microbiol Immunol Infect
+name: J Microbiol Methods
+name: J Microencapsul
+name: J Microsc
+name: J Midwifery Womens Health
+name: J Minim Invasive Gynecol
+name: J Mol Biol
+name: J Mol Cell Biol
+name: J Mol Cell Cardiol
+name: J Mol Diagn
+name: J Mol Endocrinol
+name: J Mol Evol
+name: J Mol Genet Med
+name: J Mol Graph Model
+name: J Mol Histol
+name: J Mol Med (Berl)
+name: J Mol Microbiol Biotechnol
+name: J Mol Model
+name: J Mol Neurosci
+name: J Mol Recognit
+name: J Morphol
+name: J Mot Behav
+name: J Multidiscip Healthc
+name: J Muscle Res Cell Motil
+name: J Musculoskelet Neuronal Interact
+name: J Music Ther
+name: J Mycol Med
+name: J Nanobiotechnology
+name: J Nat Med
+name: J Nat Prod
+name: J Natl Cancer Inst
+name: J Natl Compr Canc Netw
+name: J Natl Med Assoc
+name: J Nematol
+name: J Neonatal Nurs
+name: J Neonatal Perinatal Med
+name: J Nephrol
+name: J Nerv Ment Dis
+name: J Neural Eng
+name: J Neural Transm (Vienna)
+name: J Neurochem
+name: J Neurodev Disord
+name: J Neuroendocrinol
+name: J Neuroeng Rehabil
+name: J Neurogastroenterol Motil
+name: J Neurogenet
+name: J Neuroimaging
+name: J Neuroimmune Pharmacol
+name: J Neuroimmunol
+name: J Neuroinfect Dis
+name: J Neuroinflammation
+name: J Neurointerv Surg
+name: J Neurol
+name: J Neurol Neurosurg Psychiatry
+name: J Neurol Phys Ther
+name: J Neurol Sci
+name: J Neurol Surg A Cent Eur Neurosurg
+name: J Neurol Surg B Skull Base
+name: J Neurol Surg Rep
+name: J Neuromuscul Dis
+name: J Neurooncol
+name: J Neuroophthalmol
+name: J Neuropathol Exp Neurol
+name: J Neurophysiol
+name: J Neuropsychiatry Clin Neurosci
+name: J Neuropsychol
+name: J Neuroradiol
+name: J Neurosci
+name: J Neurosci Methods
+name: J Neurosci Nurs
+name: J Neurosci Res
+name: J Neurosci Rural Pract
+name: J Neurosurg
+name: J Neurosurg Anesthesiol
+name: J Neurosurg Pediatr
+name: J Neurosurg Sci
+name: J Neurosurg Spine
+name: J Neurotrauma
+name: J Neurovirol
+name: J Nippon Med Sch
+name: J Nondestr Eval
+name: J Nucl Cardiol
+name: J Nucl Mater
+name: J Nucl Med
+name: J Nucl Med Technol
+name: J Nurs Care Qual
+name: J Nurs Educ
+name: J Nurs Manag
+name: J Nurs Meas
+name: J Nurs Regul
+name: J Nurs Res
+name: J Nurs Scholarsh
+name: J Nurses Prof Dev
+name: J Nutr
+name: J Nutr Biochem
+name: J Nutr Educ Behav
+name: J Nutr Gerontol Geriatr
+name: J Nutr Metab
+name: J Nutr Sci
+name: J Nutr Sci Vitaminol (Tokyo)
+name: J Obes
+name: J Obes Metab Syndr
+name: J Obsessive Compuls Relat Disord
+name: J Obstet Gynaecol
+name: J Obstet Gynaecol Can
+name: J Obstet Gynaecol India
+name: J Obstet Gynaecol Res
+name: J Obstet Gynecol Neonatal Nurs
+name: J Occup Environ Hyg
+name: J Occup Environ Med
+name: J Occup Health
+name: J Occup Health Psychol
+name: J Occup Med Toxicol
+name: J Occup Organ Psychol
+name: J Occup Rehabil
+name: J Ocul Pharmacol Ther
+name: J Off Stat
+name: J Oleo Sci
+name: J Oncol
+name: J Oncol Pharm Pract
+name: J Oncol Pract
+name: J Ophthalmic Inflamm Infect
+name: J Ophthalmol
+name: J Optom
+name: J Oral Biol Craniofac Res
+name: J Oral Biosci
+name: J Oral Implantol
+name: J Oral Maxillofac Res
+name: J Oral Maxillofac Surg
+name: J Oral Microbiol
+name: J Oral Pathol Med
+name: J Oral Rehabil
+name: J Oral Sci
+name: J Org Chem
+name: J Organomet Chem
+name: J Orofac Orthop
+name: J Orthod
+name: J Orthop
+name: J Orthop Res
+name: J Orthop Sci
+name: J Orthop Sports Phys Ther
+name: J Orthop Surg (Hong Kong)
+name: J Orthop Surg Res
+name: J Orthop Translat
+name: J Orthop Trauma
+name: J Orthop Traumatol
+name: J Osteoporos
+name: J Otol
+name: J Otolaryngol Head Neck Surg
+name: J Ovarian Res
+name: J Paediatr Child Health
+name: J Pain
+name: J Pain Palliat Care Pharmacother
+name: J Pain Res
+name: J Pain Symptom Manage
+name: J Pak Med Assoc
+name: J Paleolimnol
+name: J Paleontol
+name: J Palliat Care
+name: J Palliat Med
+name: J Pancreat Cancer
+name: J Pancreatol
+name: J Parasitol
+name: J Parasitol Res
+name: J Parkinsons Dis
+name: J Particip Med
+name: J Pathog
+name: J Pathol
+name: J Pathol Clin Res
+name: J Pathol Inform
+name: J Pathol Transl Med
+name: J Patient Rep Outcomes
+name: J Patient Saf
+name: J Pediatr
+name: J Pediatr (Rio J)
+name: J Pediatr Adolesc Gynecol
+name: J Pediatr Endocrinol Metab
+name: J Pediatr Gastroenterol Nutr
+name: J Pediatr Health Care
+name: J Pediatr Hematol Oncol
+name: J Pediatr Nurs
+name: J Pediatr Oncol Nurs
+name: J Pediatr Ophthalmol Strabismus
+name: J Pediatr Orthop
+name: J Pediatr Orthop B
+name: J Pediatr Pharmacol Ther
+name: J Pediatr Psychol
+name: J Pediatr Rehabil Med
+name: J Pediatr Surg
+name: J Pediatr Surg Case Rep
+name: J Pediatr Urol
+name: J Pediatric Infect Dis Soc
+name: J Pept Sci
+name: J Perianesth Nurs
+name: J Perinat Educ
+name: J Perinat Med
+name: J Perinatol
+name: J Periodontal Res
+name: J Periodontol
+name: J Peripher Nerv Syst
+name: J Pers
+name: J Pers Assess
+name: J Pers Disord
+name: J Pers Med
+name: J Pers Soc Psychol
+name: J Pest Sci (2004)
+name: J Pharm Bioallied Sci
+name: J Pharm Biomed Anal
+name: J Pharm Health Care Sci
+name: J Pharm Innov
+name: J Pharm Pharm Sci
+name: J Pharm Pharmacol
+name: J Pharm Policy Pract
+name: J Pharm Pract
+name: J Pharm Sci
+name: J Pharmacokinet Pharmacodyn
+name: J Pharmacol Exp Ther
+name: J Pharmacol Sci
+name: J Pharmacol Toxicol Methods
+name: J Phase Equilibria Diffus
+name: J Photochem Photobiol A Chem
+name: J Photochem Photobiol B
+name: J Phycol
+name: J Phys Act Health
+name: J Phys Chem
+name: J Phys Chem A
+name: J Phys Chem B
+name: J Phys Chem C Nanomater Interfaces
+name: J Phys Chem Lett
+name: J Phys Condens Matter
+name: J Phys Conf Ser
+name: J Phys Ther Sci
+name: J Physician Assist Educ
+name: J Physiol
+name: J Physiol Anthropol
+name: J Physiol Biochem
+name: J Physiol Pharmacol
+name: J Physiol Sci
+name: J Pineal Res
+name: J Plankton Res
+name: J Plant Physiol
+name: J Plant Res
+name: J Plast Reconstr Aesthet Surg
+name: J Plast Surg Hand Surg
+name: J Polym Sci B Polym Phys
+name: J Pop Cult
+name: J Popul Ther Clin Pharmacol
+name: J Postgrad Med
+name: J Poult Sci
+name: J Precis Med
+name: J Pregnancy
+name: J Prev Alzheimers Dis
+name: J Prev Interv Community
+name: J Prev Med Public Health
+name: J Prim Care Community Health
+name: J Prim Prev
+name: J Prosthet Dent
+name: J Prosthet Orthot
+name: J Prosthodont
+name: J Prosthodont Res
+name: J Proteome Res
+name: J Proteomics
+name: J Proteomics Bioinform
+name: J Psoriasis Psoriatic Arthritis
+name: J Psychiatr Brain Sci
+name: J Psychiatr Ment Health Nurs
+name: J Psychiatr Pract
+name: J Psychiatr Res
+name: J Psychiatry Neurosci
+name: J Psychiatry Psychiatr Disord
+name: J Psychoactive Drugs
+name: J Psychol
+name: J Psycholinguist Res
+name: J Psychopharmacol
+name: J Psychosoc Nurs Ment Health Serv
+name: J Psychosoc Oncol
+name: J Psychosom Obstet Gynaecol
+name: J Psychosom Res
+name: J Public Health (Oxf)
+name: J Public Health Dent
+name: J Public Health Manag Pract
+name: J Public Health Policy
+name: J Public Health Res
+name: J Quant Criminol
+name: J Quant Spectrosc Radiat Transf
+name: J R Coll Physicians Edinb
+name: J R Soc Interface
+name: J R Soc Med
+name: J R Stat Soc Series B Stat Methodol
+name: J Racial Ethn Health Disparities
+name: J Radiat Res
+name: J Radiol Prot
+name: J Recept Signal Transduct Res
+name: J Reconstr Microsurg
+name: J Refract Surg
+name: J Registry Manag
+name: J Rehabil Assist Technol Eng
+name: J Rehabil Med
+name: J Relig Health
+name: J Relig Spiritual Soc Work
+name: J Ren Care
+name: J Ren Nutr
+name: J Renin Angiotensin Aldosterone Syst
+name: J Reprod Dev
+name: J Reprod Immunol
+name: J Reprod Infant Psychol
+name: J Res Adolesc
+name: J Res Med Sci
+name: J Rheumatol
+name: J Robot Surg
+name: J Rural Health
+name: J Rural Med
+name: J S Afr Vet Assoc
+name: J Safety Res
+name: J Sch Health
+name: J Sch Leadersh
+name: J Sch Nurs
+name: J Sci Food Agric
+name: J Sci Med Sport
+name: J Scleroderma Relat Disord
+name: J Sep Sci
+name: J Sex Marital Ther
+name: J Sex Med
+name: J Sex Res
+name: J Shoulder Elbow Surg
+name: J Sleep Res
+name: J Small Anim Pract
+name: J Smooth Muscle Res
+name: J Soc Issues
+name: J Soc Pers Relat
+name: J Soc Psychol
+name: J Soc Work End Life Palliat Care
+name: J Solgel Sci Technol
+name: J Space Saf Eng
+name: J Spec Oper Med
+name: J Spec Pediatr Nurs
+name: J Speech Lang Hear Res
+name: J Spinal Cord Med
+name: J Sport Exerc Psychol
+name: J Sport Health Sci
+name: J Sport Rehabil
+name: J Sports Med (Hindawi Publ Corp)
+name: J Sports Med Phys Fitness
+name: J Sports Sci
+name: J Sports Sci Med
+name: J Stat Comput Simul
+name: J Stat Distrib Appl
+name: J Stat Phys
+name: J Steroid Biochem Mol Biol
+name: J Stomatol Oral Maxillofac Surg
+name: J Strength Cond Res
+name: J Stroke
+name: J Stroke Cerebrovasc Dis
+name: J Struct Biol
+name: J Stud Alcohol Drugs
+name: J Surg Case Rep
+name: J Surg Educ
+name: J Surg Oncol
+name: J Surg Orthop Adv
+name: J Surg Res
+name: J Synchrotron Radiat
+name: J Tehran Heart Cent
+name: J Telemed Telecare
+name: J Texture Stud
+name: J Theor Biol
+name: J Thorac Cardiovasc Surg
+name: J Thorac Dis
+name: J Thorac Imaging
+name: J Thorac Oncol
+name: J Thromb Haemost
+name: J Thromb Thrombolysis
+name: J Thyroid Res
+name: J Tissue Eng
+name: J Tissue Eng Regen Med
+name: J Tissue Viability
+name: J Toxicol
+name: J Toxicol Environ Health A
+name: J Toxicol Environ Health B Crit Rev
+name: J Toxicol Sci
+name: J Trace Elem Med Biol
+name: J Transcult Nurs
+name: J Transl Int Med
+name: J Transl Med
+name: J Transp Eng A Syst
+name: J Trauma Acute Care Surg
+name: J Trauma Dissociation
+name: J Trauma Nurs
+name: J Trauma Stress
+name: J Travel Med
+name: J Trop Med
+name: J Trop Pediatr
+name: J Turk Ger Gynecol Assoc
+name: J Ultrason
+name: J Ultrasound
+name: J Ultrasound Med
+name: J Urban Des (Abingdon)
+name: J Urban Health
+name: J Urol
+name: J Vasc Access
+name: J Vasc Bras
+name: J Vasc Interv Radiol
+name: J Vasc Res
+name: J Vasc Surg
+name: J Vasc Surg Cases Innov Tech
+name: J Vasc Surg Venous Lymphat Disord
+name: J Venom Res
+name: J Vestib Res
+name: J Vet Cardiol
+name: J Vet Dent
+name: J Vet Diagn Invest
+name: J Vet Emerg Crit Care (San Antonio)
+name: J Vet Intern Med
+name: J Vet Med Educ
+name: J Vet Med Sci
+name: J Vet Pharmacol Ther
+name: J Vet Res
+name: J Vet Sci
+name: J Viral Hepat
+name: J Virol
+name: J Virol Methods
+name: J Vis
+name: J Vis Commun Med
+name: J Vis Exp
+name: J Visc Surg
+name: J Vocat Behav
+name: J Voice
+name: J Water Health
+name: J Wildl Dis
+name: J Women Aging
+name: J Womens Health (Larchmt)
+name: J World Prehist
+name: J Wound Care
+name: J Wound Ostomy Continence Nurs
+name: J Wrist Surg
+name: J Xray Sci Technol
+name: J Youth Adolesc
+name: J Zhejiang Univ Sci B
+name: JA Clin Rep
+name: JAAD Case Rep
+name: JAAPA
+name: JACC Basic Transl Sci
+name: JACC Cardiovasc Imaging
+name: JACC Cardiovasc Interv
+name: JACC Case Rep
+name: JACC Clin Electrophysiol
+name: JACC Heart Fail
+name: JAMA
+name: JAMA Cardiol
+name: JAMA Dermatol
+name: JAMA Facial Plast Surg
+name: JAMA Intern Med
+name: JAMA Netw Open
+name: JAMA Neurol
+name: JAMA Oncol
+name: JAMA Ophthalmol
+name: JAMA Otolaryngol Head Neck Surg
+name: JAMA Pediatr
+name: JAMA Psychiatry
+name: JAMA Surg
+name: JAMIA Open
+name: JBI Database System Rev Implement Rep
+name: JBJS Case Connect
+name: JBJS Essent Surg Tech
+name: JBJS Rev
+name: JBMR Plus
+name: JBRA Assist Reprod
+name: JCI Insight
+name: JCO Clin Cancer Inform
+name: JCO Glob Oncol
+name: JCO Oncol Pract
+name: JCO Precis Oncol
+name: JDR Clin Trans Res
+name: JFMS Open Rep
+name: JGH Open
+name: JHEP Rep
+name: JIMD Rep
+name: JMIR Aging
+name: JMIR Cancer
+name: JMIR Cardio
+name: JMIR Diabetes
+name: JMIR Form Res
+name: JMIR Hum Factors
+name: JMIR Med Educ
+name: JMIR Med Inform
+name: JMIR Ment Health
+name: JMIR Mhealth Uhealth
+name: JMIR Pediatr Parent
+name: JMIR Public Health Surveill
+name: JMIR Rehabil Assist Technol
+name: JMIR Res Protoc
+name: JMIR Serious Games
+name: JNCI Cancer Spectr
+name: JOM (1989)
+name: JPEN J Parenter Enteral Nutr
+name: JPRAS Open
+name: JRSM Cardiovasc Dis
+name: JRSM Open
+name: JSLS
+name: Jacobs J Genet
+name: Jamba
+name: Joint Bone Spine
+name: Joule
+name: Jpn J Clin Oncol
+name: Jpn J Infect Dis
+name: Jpn J Nurs Sci
+name: Jpn J Ophthalmol
+name: Jpn J Radiol
+name: Jt Comm J Qual Patient Saf
+name: Jt Dis Relat Surg
+name: Kaku Igaku
+name: Kaohsiung J Med Sci
+name: Kardiol Pol
+name: Kardiologiia
+name: Kew Bull
+name: Khirurgiia (Mosk)
+name: Kidney Blood Press Res
+name: Kidney Dis (Basel)
+name: Kidney Int
+name: Kidney Int Rep
+name: Kidney Int Suppl (2011)
+name: Kidney Med
+name: Kidney Res Clin Pract
+name: Kidney360
+name: Klin Lab Diagn
+name: Klin Monbl Augenheilkd
+name: Klin Onkol
+name: Klin Padiatr
+name: Knee
+name: Knee Surg Sports Traumatol Arthrosc
+name: Kobe J Med Sci
+name: Kona
+name: Korean Circ J
+name: Korean J Anesthesiol
+name: Korean J Fam Med
+name: Korean J Gastroenterol
+name: Korean J Intern Med
+name: Korean J Med Educ
+name: Korean J Ophthalmol
+name: Korean J Parasitol
+name: Korean J Pediatr
+name: Korean J Physiol Pharmacol
+name: Korean J Radiol
+name: Korean J Thorac Cardiovasc Surg
+name: LGBT Health
+name: Lab Anim
+name: Lab Anim (NY)
+name: Lab Anim Res
+name: Lab Animal Sci Prof
+name: Lab Chip
+name: Lab Invest
+name: Lab Med
+name: Laeknabladid
+name: Lakartidningen
+name: Lancet
+name: Lancet Child Adolesc Health
+name: Lancet Diabetes Endocrinol
+name: Lancet Digit Health
+name: Lancet Gastroenterol Hepatol
+name: Lancet Glob Health
+name: Lancet HIV
+name: Lancet Haematol
+name: Lancet Infect Dis
+name: Lancet Neurol
+name: Lancet Oncol
+name: Lancet Planet Health
+name: Lancet Psychiatry
+name: Lancet Public Health
+name: Lancet Respir Med
+name: Landsc Ecol
+name: Lang Learn Dev
+name: Lang Speech
+name: Lang Speech Hear Serv Sch
+name: Langenbecks Arch Surg
+name: Langmuir
+name: Laryngorhinootologie
+name: Laryngoscope
+name: Laryngoscope Investig Otolaryngol
+name: Laser Ther
+name: Lasers Med Sci
+name: Lasers Surg Med
+name: Laterality
+name: Law Hum Behav
+name: Leadersh Health Serv (Bradf Engl)
+name: Learn Behav
+name: Learn Disabil Q
+name: Learn Mem
+name: Leg Med (Tokyo)
+name: Lett Appl Microbiol
+name: Lett Math Phys
+name: Leuk Lymphoma
+name: Leuk Res
+name: Leuk Res Rep
+name: Leukemia
+name: Libyan J Med
+name: Life (Basel)
+name: Life Sci
+name: Life Sci Alliance
+name: Life Sci Soc Policy
+name: Lifetime Data Anal
+name: Light Sci Appl
+name: Limnol Oceanogr
+name: Lin Chung Er Bi Yan Hou Tou Jing Wai Ke Za Zhi
+name: Lipids
+name: Lipids Health Dis
+name: Liver Int
+name: Liver Res
+name: Liver Transpl
+name: Local Reg Anesth
+name: Logoped Phoniatr Vocol
+name: Low Urin Tract Symptoms
+name: Luminescence
+name: Lung
+name: Lung Cancer
+name: Lung Cancer (Auckl)
+name: Lung India
+name: Lupus
+name: Lupus (Los Angel)
+name: Lupus Sci Med
+name: Lymphat Res Biol
+name: MAGMA
+name: MAbs
+name: MCN Am J Matern Child Nurs
+name: MDE Manage Decis Econ
+name: MDM Policy Pract
+name: MMW Fortschr Med
+name: MMWR Morb Mortal Wkly Rep
+name: MMWR Recomm Rep
+name: MSMR
+name: Mach Learn Med Imaging
+name: Macromol Biosci
+name: Macromol Rapid Commun
+name: Macromolecules
+name: Maedica (Bucur)
+name: Magn Reson Chem
+name: Magn Reson Imaging
+name: Magn Reson Med
+name: Magn Reson Med Sci
+name: Malar J
+name: Malawi Med J
+name: Malays J Med Sci
+name: Mar Biodivers
+name: Mar Biotechnol (NY)
+name: Mar Drugs
+name: Mar Environ Res
+name: Mar Genomics
+name: Mar Pollut Bull
+name: Markov Process Relat Fields
+name: Marshall J Med
+name: Mass Spectrom (Tokyo)
+name: Mass Spectrom Rev
+name: Mater Sci Eng A Struct Mater
+name: Mater Today Bio
+name: Materialia (Oxf)
+name: Materials (Basel)
+name: Matern Child Health J
+name: Matern Child Nutr
+name: Math Ann
+name: Math Biosci
+name: Math Ind Case Stud
+name: Matrix Biol
+name: Maturitas
+name: Maxillofac Plast Reconstr Surg
+name: Mayo Clin Proc
+name: Meas Phys Educ Exerc Sci
+name: Measurement (Lond)
+name: Meat Sci
+name: Meccanica
+name: Mech Ageing Dev
+name: Mech Dev
+name: Med Acupunct
+name: Med Anthropol
+name: Med Arch
+name: Med Biol Eng Comput
+name: Med Care
+name: Med Care Res Rev
+name: Med Case Rep (Wilmington)
+name: Med Chem
+name: Med Clin (Barc)
+name: Med Clin North Am
+name: Med Confl Surviv
+name: Med Decis Making
+name: Med Devices (Auckl)
+name: Med Dosim
+name: Med Educ
+name: Med Educ Online
+name: Med Eng Phys
+name: Med Glas (Zenica)
+name: Med Health Care Philos
+name: Med Humanit
+name: Med Hypotheses
+name: Med Image Anal
+name: Med Image Comput Comput Assist Interv
+name: Med Intensiva (Engl Ed)
+name: Med J Armed Forces India
+name: Med J Aust
+name: Med J Malaysia
+name: Med Klin Intensivmed Notfmed
+name: Med Law Rev
+name: Med Leg J
+name: Med Lett Drugs Ther
+name: Med Mal Infect
+name: Med Microbiol Immunol
+name: Med Mol Morphol
+name: Med Mycol
+name: Med Mycol Case Rep
+name: Med Oncol
+name: Med Oral Patol Oral Cir Bucal
+name: Med Pharm Rep
+name: Med Phys
+name: Med Pr
+name: Med Princ Pract
+name: Med Probl Perform Art
+name: Med Res Arch
+name: Med Res Rev
+name: Med Sci (Basel)
+name: Med Sci (Paris)
+name: Med Sci Educ
+name: Med Sci Law
+name: Med Sci Monit
+name: Med Sci Monit Basic Res
+name: Med Sci Sports Exerc
+name: Med Teach
+name: Med Vet Entomol
+name: Medchemcomm
+name: Mediastinum
+name: Mediators Inflamm
+name: Medicina (B Aires)
+name: Medicina (Kaunas)
+name: Medicine (Abingdon)
+name: Medicine (Baltimore)
+name: Medicines (Basel)
+name: Mediterr J Rheumatol
+name: Medizinrecht
+name: Melanoma Res
+name: Mem Cognit
+name: Mem Inst Oswaldo Cruz
+name: Membranes (Basel)
+name: Memory
+name: Menopause
+name: Ment Health Prev
+name: Metab Brain Dis
+name: Metab Eng
+name: Metab Eng Commun
+name: Metab Syndr Relat Disord
+name: Metabolism
+name: Metabolites
+name: Metabolomics
+name: Metallomics
+name: Meteorit Planet Sci
+name: Methods
+name: Methods Appl Fluoresc
+name: Methods Cell Biol
+name: Methods Enzymol
+name: Methods Mol Biol
+name: Methods Protoc
+name: MethodsX
+name: Mhealth
+name: MicroPubl Biol
+name: Microb Biotechnol
+name: Microb Cell
+name: Microb Cell Fact
+name: Microb Drug Resist
+name: Microb Ecol
+name: Microb Genom
+name: Microb Pathog
+name: Microbes Environ
+name: Microbes Infect
+name: Microbiol Immunol
+name: Microbiol Insights
+name: Microbiol Mol Biol Rev
+name: Microbiol Res
+name: Microbiol Resour Announc
+name: Microbiology (Reading)
+name: Microbiologyopen
+name: Microbiome
+name: Microcirculation
+name: Microfluid Nanofluidics
+name: Micromachines (Basel)
+name: Micron
+name: Microorganisms
+name: Microrna
+name: Microsc Microanal
+name: Microsc Res Tech
+name: Microscopy (Oxf)
+name: Microsurgery
+name: Microvasc Res
+name: Middle East Afr J Ophthalmol
+name: Midwifery
+name: Mikrochim Acta
+name: Mil Med
+name: Mil Med Res
+name: Milbank Q
+name: Minds Mach (Dordr)
+name: Minerva Anestesiol
+name: Minerva Cardioangiol
+name: Minerva Cardiol Angiol
+name: Minerva Chir
+name: Minerva Endocrinol
+name: Minerva Gastroenterol Dietol
+name: Minerva Ginecol
+name: Minerva Med
+name: Minerva Pediatr
+name: Minerva Pediatr (Torino)
+name: Minerva Stomatol
+name: Minerva Surg
+name: Minerva Urol Nefrol
+name: Minerva Urol Nephrol
+name: Mini Rev Med Chem
+name: Minim Invasive Surg
+name: Minim Invasive Ther Allied Technol
+name: Minor Planet Bull
+name: Mitochondrial DNA A DNA Mapp Seq Anal
+name: Mitochondrion
+name: Mo Med
+name: Mob DNA
+name: Mod Pathol
+name: Mod Rheumatol
+name: Model Earth Syst Environ
+name: Mol Aspects Med
+name: Mol Autism
+name: Mol Biochem Parasitol
+name: Mol Biol Cell
+name: Mol Biol Evol
+name: Mol Biol Rep
+name: Mol Biol Res Commun
+name: Mol Biotechnol
+name: Mol Brain
+name: Mol Cancer
+name: Mol Cancer Res
+name: Mol Cancer Ther
+name: Mol Carcinog
+name: Mol Cell
+name: Mol Cell Biochem
+name: Mol Cell Biol
+name: Mol Cell Endocrinol
+name: Mol Cell Neurosci
+name: Mol Cell Oncol
+name: Mol Cell Pediatr
+name: Mol Cell Probes
+name: Mol Cell Proteomics
+name: Mol Cells
+name: Mol Clin Oncol
+name: Mol Cytogenet
+name: Mol Diagn Ther
+name: Mol Divers
+name: Mol Ecol
+name: Mol Ecol Resour
+name: Mol Genet Genomic Med
+name: Mol Genet Genomics
+name: Mol Genet Metab
+name: Mol Genet Metab Rep
+name: Mol Hum Reprod
+name: Mol Imaging
+name: Mol Imaging Biol
+name: Mol Immunol
+name: Mol Inform
+name: Mol Med
+name: Mol Med Rep
+name: Mol Membr Biol
+name: Mol Metab
+name: Mol Microbiol
+name: Mol Neurobiol
+name: Mol Neurodegener
+name: Mol Nutr Food Res
+name: Mol Omics
+name: Mol Oncol
+name: Mol Oral Microbiol
+name: Mol Pain
+name: Mol Pharm
+name: Mol Pharmacol
+name: Mol Phylogenet Evol
+name: Mol Plant
+name: Mol Plant Microbe Interact
+name: Mol Plant Pathol
+name: Mol Psychiatry
+name: Mol Reprod Dev
+name: Mol Syndromol
+name: Mol Syst Biol
+name: Mol Ther
+name: Mol Ther Methods Clin Dev
+name: Mol Ther Nucleic Acids
+name: Mol Ther Oncolytics
+name: Mol Vis
+name: Molecules
+name: Mon Not R Astron Soc
+name: Mon Not R Astron Soc Lett
+name: Mon Weather Rev
+name: Monaldi Arch Chest Dis
+name: Monash Bioeth Rev
+name: Monoclon Antib Immunodiagn Immunother
+name: Monte Carlo Methods Appl
+name: Morphologie
+name: Motiv Emot
+name: Motor Control
+name: Mov Disord
+name: Mov Ecol
+name: Mucosal Immunol
+name: Mult Scler
+name: Mult Scler J Exp Transl Clin
+name: Mult Scler Relat Disord
+name: Multidiscip Respir Med
+name: Multimed Man Cardiothorac Surg
+name: Multisens Res
+name: Multivariate Behav Res
+name: Muscle Nerve
+name: Musculoskelet Sci Pract
+name: Musculoskelet Surg
+name: Musculoskeletal Care
+name: Mutagenesis
+name: Mutat Res
+name: MycoKeys
+name: Mycobiology
+name: Mycologia
+name: Mycology
+name: Mycopathologia
+name: Mycorrhiza
+name: Mycoses
+name: Mycotoxin Res
+name: N Biotechnol
+name: N C Med J
+name: N Engl J Med
+name: N Z Med J
+name: N Z Vet J
+name: NAR Genom Bioinform
+name: NASN Sch Nurse
+name: NCHS Data Brief
+name: NMR Biomed
+name: NPJ Aging Mech Dis
+name: NPJ Biofilms Microbiomes
+name: NPJ Breast Cancer
+name: NPJ Digit Med
+name: NPJ Genom Med
+name: NPJ Microgravity
+name: NPJ Parkinsons Dis
+name: NPJ Precis Oncol
+name: NPJ Prim Care Respir Med
+name: NPJ Regen Med
+name: NPJ Schizophr
+name: NPJ Sci Food
+name: NPJ Syst Biol Appl
+name: NPJ Vaccines
+name: NTM
+name: Nagoya J Med Sci
+name: Nano Converg
+name: Nano Lett
+name: Nano Res
+name: NanoImpact
+name: Nanomaterials (Basel)
+name: Nanomedicine
+name: Nanomedicine (Lond)
+name: Nanoscale
+name: Nanoscale Adv
+name: Nanoscale Horiz
+name: Nanoscale Res Lett
+name: Nanotechnol Sci Appl
+name: Nanotechnology
+name: Nanotoxicology
+name: Nat Astron
+name: Nat Biomed Eng
+name: Nat Biotechnol
+name: Nat Cancer
+name: Nat Catal
+name: Nat Cell Biol
+name: Nat Chem
+name: Nat Chem Biol
+name: Nat Clim Chang
+name: Nat Commun
+name: Nat Ecol Evol
+name: Nat Genet
+name: Nat Geosci
+name: Nat Hum Behav
+name: Nat Immunol
+name: Nat Mater
+name: Nat Med
+name: Nat Metab
+name: Nat Methods
+name: Nat Microbiol
+name: Nat Nanotechnol
+name: Nat Neurosci
+name: Nat Phys
+name: Nat Plants
+name: Nat Prod Bioprospect
+name: Nat Prod Rep
+name: Nat Prod Res
+name: Nat Protoc
+name: Nat Rev Cancer
+name: Nat Rev Cardiol
+name: Nat Rev Clin Oncol
+name: Nat Rev Dis Primers
+name: Nat Rev Drug Discov
+name: Nat Rev Endocrinol
+name: Nat Rev Gastroenterol Hepatol
+name: Nat Rev Genet
+name: Nat Rev Immunol
+name: Nat Rev Microbiol
+name: Nat Rev Mol Cell Biol
+name: Nat Rev Nephrol
+name: Nat Rev Neurol
+name: Nat Rev Neurosci
+name: Nat Rev Rheumatol
+name: Nat Rev Urol
+name: Nat Sci Sleep
+name: Nat Struct Mol Biol
+name: Nat Sustain
+name: Natl Med J India
+name: Nature
+name: Naturwissenschaften
+name: Naunyn Schmiedebergs Arch Pharmacol
+name: Ned Tijdschr Geneeskd
+name: Ned Tijdschr Tandheelkd
+name: Nefrologia (Engl Ed)
+name: Neonatal Netw
+name: Neonatology
+name: Neoplasia
+name: Neoplasma
+name: Neoreviews
+name: Neotrop Entomol
+name: Nephrol Dial Transplant
+name: Nephrol Ther
+name: Nephrology (Carlton)
+name: Nephron
+name: Nervenarzt
+name: Nestle Nutr Inst Workshop Ser
+name: Neth Heart J
+name: Neural Comput
+name: Neural Netw
+name: Neural Plast
+name: Neuro Oncol
+name: NeuroRehabilitation
+name: Neurobiol Aging
+name: Neurobiol Dis
+name: Neurobiol Lang (Camb)
+name: Neurobiol Learn Mem
+name: Neurobiol Sleep Circadian Rhythms
+name: Neurocase
+name: Neurochem Int
+name: Neurochem Res
+name: Neurochirurgie
+name: Neurocirugia (Astur : Engl Ed)
+name: Neurocomputing
+name: Neurocrit Care
+name: Neurodegener Dis
+name: Neurodegener Dis Manag
+name: Neuroendocrinology
+name: Neuroepidemiology
+name: Neurogastroenterol Motil
+name: Neurogenetics
+name: Neuroimage
+name: Neuroimage Clin
+name: Neuroimmunomodulation
+name: Neuroinformatics
+name: Neurointervention
+name: Neurol Genet
+name: Neurol India
+name: Neurol Med Chir (Tokyo)
+name: Neurol Neurochir Pol
+name: Neurol Neuroimmunol Neuroinflamm
+name: Neurol Res
+name: Neurol Res Int
+name: Neurol Res Pract
+name: Neurol Sci
+name: Neurol Ther
+name: Neurologia (Engl Ed)
+name: Neurologist
+name: Neurology
+name: Neuromethods
+name: Neuromodulation
+name: Neuromolecular Med
+name: Neuromuscul Disord
+name: Neuron
+name: Neuronal Signal
+name: Neurooncol Adv
+name: Neurooncol Pract
+name: Neuropathol Appl Neurobiol
+name: Neuropathology
+name: Neuropediatrics
+name: Neuropeptides
+name: Neuropharmacology
+name: Neurophotonics
+name: Neurophysiol Clin
+name: Neuropsychiatr Dis Treat
+name: Neuropsychobiology
+name: Neuropsychol Dev Cogn B Aging Neuropsychol Cogn
+name: Neuropsychol Rehabil
+name: Neuropsychol Rev
+name: Neuropsychologia
+name: Neuropsychology
+name: Neuropsychopharmacol Hung
+name: Neuropsychopharmacol Rep
+name: Neuropsychopharmacology
+name: Neuroradiol J
+name: Neuroradiology
+name: Neurorehabil Neural Repair
+name: Neuroreport
+name: Neurosci Biobehav Rev
+name: Neurosci Bull
+name: Neurosci Conscious
+name: Neurosci Lett
+name: Neurosci Res
+name: Neuroscience
+name: Neuroscientist
+name: Neurosignals
+name: Neurospine
+name: Neurosurg Clin N Am
+name: Neurosurg Focus
+name: Neurosurg Rev
+name: Neurosurgery
+name: Neurotherapeutics
+name: Neurotox Res
+name: Neurotoxicol Teratol
+name: Neurotoxicology
+name: Neurourol Urodyn
+name: New Bioeth
+name: New Dir Child Adolesc Dev
+name: New Microbes New Infect
+name: New Microbiol
+name: New Phytol
+name: New Solut
+name: Nicotine Tob Res
+name: Niger J Clin Pract
+name: Niger Postgrad Med J
+name: Nihon Eiseigaku Zasshi
+name: Nihon Hinyokika Gakkai Zasshi
+name: Nihon Hoshasen Gijutsu Gakkai Zasshi
+name: Nihon Koshu Eisei Zasshi
+name: Nihon Shokakibyo Gakkai Zasshi
+name: Nitric Oxide
+name: No Shinkei Geka
+name: Noncoding RNA
+name: Noncoding RNA Res
+name: Nonlinear Dyn
+name: Nord J Psychiatry
+name: Nordisk Alkohol Nark
+name: Nucl Med Biol
+name: Nucl Med Commun
+name: Nucl Med Mol Imaging
+name: Nucleic Acid Ther
+name: Nucleic Acids Res
+name: Nucleosides Nucleotides Nucleic Acids
+name: Nucleus
+name: Nuklearmedizin
+name: Nurs Adm Q
+name: Nurs Child Young People
+name: Nurs Clin North Am
+name: Nurs Crit Care
+name: Nurs Educ Perspect
+name: Nurs Ethics
+name: Nurs Forum
+name: Nurs Health Sci
+name: Nurs Inq
+name: Nurs Leadersh (Tor Ont)
+name: Nurs Manag (Harrow)
+name: Nurs Manage
+name: Nurs Older People
+name: Nurs Open
+name: Nurs Outlook
+name: Nurs Philos
+name: Nurs Res
+name: Nurs Res Pract
+name: Nurs Stand
+name: Nurse Educ
+name: Nurse Educ Pract
+name: Nurse Educ Today
+name: Nurse Lead
+name: Nurse Pract
+name: Nurse Res
+name: Nursing
+name: Nutr Cancer
+name: Nutr Clin Pract
+name: Nutr Diabetes
+name: Nutr Diet
+name: Nutr Health
+name: Nutr Hosp
+name: Nutr J
+name: Nutr Metab (Lond)
+name: Nutr Metab Cardiovasc Dis
+name: Nutr Metab Insights
+name: Nutr Neurosci
+name: Nutr Res
+name: Nutr Res Rev
+name: Nutr Rev
+name: Nutrients
+name: Nutrition
+name: OBM Transplant
+name: OMICS
+name: ORL J Otorhinolaryngol Relat Spec
+name: OSA Contin
+name: OTJR (Thorofare N J)
+name: OTO Open
+name: Obes Facts
+name: Obes Res Clin Pract
+name: Obes Rev
+name: Obes Surg
+name: Obesity (Silver Spring)
+name: Obstet Gynecol
+name: Obstet Gynecol Clin North Am
+name: Obstet Gynecol Int
+name: Obstet Gynecol Surv
+name: Occup Environ Med
+name: Occup Med (Lond)
+name: Occup Ther Health Care
+name: Occup Ther Int
+name: Ocul Immunol Inflamm
+name: Ocul Surf
+name: Odontology
+name: Oecologia
+name: Oikos
+name: Oman Med J
+name: Omega (Westport)
+name: Onco Targets Ther
+name: Oncogene
+name: Oncogenesis
+name: Oncoimmunology
+name: Oncol Lett
+name: Oncol Nurs Forum
+name: Oncol Rep
+name: Oncol Res
+name: Oncol Res Treat
+name: Oncol Rev
+name: Oncologist
+name: Oncology
+name: Oncoscience
+name: Oncotarget
+name: Onderstepoort J Vet Res
+name: One Health
+name: Online J Public Health Inform
+name: Open Access Emerg Med
+name: Open Access J Contracept
+name: Open Access J Sports Med
+name: Open Access Maced J Med Sci
+name: Open Access Rheumatol
+name: Open Biol
+name: Open Forum Infect Dis
+name: Open Heart
+name: Open J Obstet Gynecol
+name: Open Med (Wars)
+name: Oper Neurosurg (Hagerstown)
+name: Oper Orthop Traumatol
+name: Oper Tech Otolayngol Head Neck Surg
+name: Ophthalmic Epidemiol
+name: Ophthalmic Genet
+name: Ophthalmic Physiol Opt
+name: Ophthalmic Plast Reconstr Surg
+name: Ophthalmic Res
+name: Ophthalmic Surg Lasers Imaging Retina
+name: Ophthalmol Glaucoma
+name: Ophthalmol Retina
+name: Ophthalmol Ther
+name: Ophthalmologe
+name: Ophthalmologica
+name: Ophthalmology
+name: Opt Eng
+name: Opt Laser Technol
+name: Opt Lett
+name: Optica
+name: Optom Vis Sci
+name: Oral Dis
+name: Oral Health Prev Dent
+name: Oral Maxillofac Surg
+name: Oral Maxillofac Surg Clin North Am
+name: Oral Oncol
+name: Oral Radiol
+name: Oral Surg Oral Med Oral Pathol Oral Radiol
+name: Orbit
+name: Org Biomol Chem
+name: Org Lett
+name: Org Process Res Dev
+name: Organic Synth
+name: Organometallics
+name: Orig Life Evol Biosph
+name: Orphanet J Rare Dis
+name: Orthod Craniofac Res
+name: Orthop Clin North Am
+name: Orthop J Sports Med
+name: Orthop Nurs
+name: Orthop Res Rev
+name: Orthop Rev (Pavia)
+name: Orthop Surg
+name: Orthop Traumatol Surg Res
+name: Orthopade
+name: Ortop Traumatol Rehabil
+name: Orv Hetil
+name: Osong Public Health Res Perspect
+name: Osteoarthritis Cartilage
+name: Osteoporos Int
+name: Otol Neurotol
+name: Otolaryngol Clin North Am
+name: Otolaryngol Head Neck Surg
+name: Otolaryngol Pol
+name: Oxf Med Case Reports
+name: Oxid Med Cell Longev
+name: PDA J Pharm Sci Technol
+name: PET Clin
+name: PLoS Biol
+name: PLoS Comput Biol
+name: PLoS Genet
+name: PLoS Med
+name: PLoS Negl Trop Dis
+name: PLoS One
+name: PLoS Pathog
+name: PM R
+name: PPAR Res
+name: Pacing Clin Electrophysiol
+name: Paediatr Anaesth
+name: Paediatr Child Health
+name: Paediatr Drugs
+name: Paediatr Int Child Health
+name: Paediatr Perinat Epidemiol
+name: Paediatr Respir Rev
+name: Pain
+name: Pain Manag
+name: Pain Manag Nurs
+name: Pain Med
+name: Pain Physician
+name: Pain Pract
+name: Pain Rep
+name: Pain Res Manag
+name: Pain Ther
+name: Pak J Med Sci
+name: Pak J Pharm Sci
+name: Palaeontology
+name: Paleoceanography
+name: Palliat Med
+name: Palliat Support Care
+name: Pan Afr Med J
+name: Pancreas
+name: Pancreas (Fairfax)
+name: Pancreatology
+name: Panminerva Med
+name: Papillomavirus Res
+name: Parasit Vectors
+name: Parasite
+name: Parasite Epidemiol Control
+name: Parasite Immunol
+name: Parasitol Int
+name: Parasitol Res
+name: Parasitology
+name: Parkinsonism Relat Disord
+name: Parkinsons Dis
+name: Part Fibre Toxicol
+name: Pastoralism
+name: Pathobiology
+name: Pathog Dis
+name: Pathog Glob Health
+name: Pathog Immun
+name: Pathogens
+name: Pathol Int
+name: Pathol Oncol Res
+name: Pathol Res Pract
+name: Pathologe
+name: Pathologica
+name: Pathology
+name: Patient
+name: Patient Educ Couns
+name: Patient Prefer Adherence
+name: Patient Relat Outcome Meas
+name: Patient Saf Surg
+name: Patterns (N Y)
+name: Pediatr Allergy Immunol
+name: Pediatr Allergy Immunol Pulmonol
+name: Pediatr Ann
+name: Pediatr Blood Cancer
+name: Pediatr Cardiol
+name: Pediatr Clin North Am
+name: Pediatr Crit Care Med
+name: Pediatr Dermatol
+name: Pediatr Dev Pathol
+name: Pediatr Diabetes
+name: Pediatr Emerg Care
+name: Pediatr Emerg Med Pract
+name: Pediatr Endocrinol Diabetes Metab
+name: Pediatr Exerc Sci
+name: Pediatr Hematol Oncol
+name: Pediatr Infect Dis J
+name: Pediatr Int
+name: Pediatr Neonatol
+name: Pediatr Nephrol
+name: Pediatr Neurol
+name: Pediatr Neurosurg
+name: Pediatr Obes
+name: Pediatr Phys Ther
+name: Pediatr Pulmonol
+name: Pediatr Qual Saf
+name: Pediatr Radiol
+name: Pediatr Rep
+name: Pediatr Res
+name: Pediatr Rev
+name: Pediatr Rheumatol Online J
+name: Pediatr Surg Int
+name: Pediatr Transplant
+name: Pediatric Health Med Ther
+name: Pediatrics
+name: PeerJ
+name: Peptides
+name: Per Med
+name: Percept Mot Skills
+name: Perception
+name: Perfusion
+name: Perioper Care Oper Room Manag
+name: Perioper Med (Lond)
+name: Perit Dial Int
+name: Perm J
+name: Pers Individ Dif
+name: Pers Med Oncol
+name: Pers Soc Psychol Bull
+name: Pers Soc Psychol Rev
+name: Personal Disord
+name: Personal Ment Health
+name: Perspect Behav Sci
+name: Perspect Clin Res
+name: Perspect Ecol Conserv
+name: Perspect Med Educ
+name: Perspect Psychiatr Care
+name: Perspect Psychol Sci
+name: Perspect Public Health
+name: Perspect Sex Reprod Health
+name: Pest Manag Sci
+name: Pestic Biochem Physiol
+name: Pet Sci
+name: Pflege
+name: Pflugers Arch
+name: Pharm Biol
+name: Pharm Dev Technol
+name: Pharm Diagn Innov
+name: Pharm Nanotechnol
+name: Pharm Pat Anal
+name: Pharm Pract (Granada)
+name: Pharm Res
+name: Pharm Stat
+name: Pharmaceut Med
+name: Pharmaceuticals (Basel)
+name: Pharmaceutics
+name: PharmacoEcon Outcomes News
+name: Pharmacoecon Open
+name: Pharmacoeconomics
+name: Pharmacoepidemiol Drug Saf
+name: Pharmacogenet Genomics
+name: Pharmacogenomics
+name: Pharmacogenomics J
+name: Pharmacol Biochem Behav
+name: Pharmacol Rep
+name: Pharmacol Res
+name: Pharmacol Res Perspect
+name: Pharmacol Rev
+name: Pharmacol Ther
+name: Pharmacology
+name: Pharmacopsychiatry
+name: Pharmacotherapy
+name: Pharmacy (Basel)
+name: Pharmazie
+name: Pharmeur Bio Sci Notes
+name: Pharmgenomics Pers Med
+name: Philos Technol
+name: Philos Trans A Math Phys Eng Sci
+name: Philos Trans R Soc Lond B Biol Sci
+name: Phlebology
+name: Phonetica
+name: Photoacoustics
+name: Photobiomodul Photomed Laser Surg
+name: Photochem Photobiol
+name: Photochem Photobiol Sci
+name: Photodermatol Photoimmunol Photomed
+name: Photodiagnosis Photodyn Ther
+name: Photosynth Res
+name: Phys Biol
+name: Phys Chem Chem Phys
+name: Phys Chem Miner
+name: Phys Eng Sci Med
+name: Phys Fluids (1994)
+name: Phys Imaging Radiat Oncol
+name: Phys Life Rev
+name: Phys Med
+name: Phys Med Biol
+name: Phys Occup Ther Pediatr
+name: Phys Rev A (Coll Park)
+name: Phys Rev D
+name: Phys Rev E
+name: Phys Rev Fluids
+name: Phys Rev Lett
+name: Phys Sportsmed
+name: Phys Ther
+name: Phys Ther Res
+name: Phys Ther Sport
+name: Physiol Behav
+name: Physiol Biochem Zool
+name: Physiol Genomics
+name: Physiol Int
+name: Physiol Meas
+name: Physiol Mol Biol Plants
+name: Physiol Mol Plant Pathol
+name: Physiol Plant
+name: Physiol Rep
+name: Physiol Res
+name: Physiol Rev
+name: Physiology (Bethesda)
+name: Physiother Res Int
+name: Physiother Theory Pract
+name: Physiotherapy
+name: PhytoKeys
+name: Phytochem Anal
+name: Phytochem Lett
+name: Phytochemistry
+name: Phytomedicine
+name: Phytopathology
+name: Phytother Res
+name: Pigment Cell Melanoma Res
+name: Pilot Feasibility Stud
+name: Pituitary
+name: Placenta
+name: Planet Space Sci
+name: Plant Biol (Stuttg)
+name: Plant Biotechnol J
+name: Plant Cell
+name: Plant Cell Environ
+name: Plant Cell Physiol
+name: Plant Cell Rep
+name: Plant Cell Tissue Organ Cult
+name: Plant Direct
+name: Plant Dis
+name: Plant Divers
+name: Plant Foods Hum Nutr
+name: Plant J
+name: Plant Methods
+name: Plant Mol Biol
+name: Plant Pathol J
+name: Plant Physiol
+name: Plant Physiol Biochem
+name: Plant Reprod
+name: Plant Sci
+name: Plant Signal Behav
+name: Plant Soil
+name: Plant Syst Evol
+name: Planta
+name: Planta Med
+name: Plants (Basel)
+name: Plasmid
+name: Plast Reconstr Surg
+name: Plast Reconstr Surg Glob Open
+name: Plast Surg Nurs
+name: Platelets
+name: Pleura Peritoneum
+name: Pneumo News
+name: Pneumologie
+name: Pneumonia (Nathan)
+name: Pol Arch Intern Med
+name: Pol J Microbiol
+name: Pol J Pathol
+name: Pol J Radiol
+name: Pol Merkur Lekarski
+name: Polar Biol
+name: Policy Polit Nurs Pract
+name: Polim Med
+name: Polymers (Basel)
+name: Popul Dev Rev
+name: Popul Health Manag
+name: Popul Space Place
+name: Popul Stud (Camb)
+name: Porcine Health Manag
+name: Positivity (Dordr)
+name: Post Reprod Health
+name: Postepy Dermatol Alergol
+name: Postgrad Med
+name: Postgrad Med J
+name: Poult Sci
+name: Pract Neurol
+name: Pract Radiat Oncol
+name: Pragmat Obs Res
+name: Praxis (Bern 1994)
+name: Predict Intell Med
+name: Pregnancy Hypertens
+name: Prehosp Disaster Med
+name: Prehosp Emerg Care
+name: Prenat Diagn
+name: Prep Biochem Biotechnol
+name: Presse Med
+name: Prev Chronic Dis
+name: Prev Med
+name: Prev Med Rep
+name: Prev Nutr Food Sci
+name: Prev Sci
+name: Prev Vet Med
+name: Pril (Makedon Akad Nauk Umet Odd Med Nauki)
+name: Prim Care
+name: Prim Care Companion CNS Disord
+name: Prim Care Diabetes
+name: Prim Health Care Res Dev
+name: Primates
+name: Prion
+name: Probiotics Antimicrob Proteins
+name: Probl Endokrinol (Mosk)
+name: Proc ASME Dyn Syst Control Conf
+name: Proc Am Control Conf
+name: Proc Annu Hawaii Int Conf Syst Sci
+name: Proc Biol Sci
+name: Proc Conf Empir Methods Nat Lang Process
+name: Proc IEEE Comput Soc Conf Comput Vis Pattern Recognit
+name: Proc IEEE Conf Decis Control
+name: Proc IEEE Int Conf Acoust Speech Signal Process
+name: Proc IEEE Int Conf Big Data
+name: Proc IEEE Int Symp Biomed Imaging
+name: Proc Inst Mech Eng G J Aerosp Eng
+name: Proc Inst Mech Eng H
+name: Proc Int Conf Mach Learn Appl
+name: Proc Int Jt Conf Neural Netw
+name: Proc Jpn Acad Ser B Phys Biol Sci
+name: Proc Lunar Planet Sci
+name: Proc Math Phys Eng Sci
+name: Proc Meet Acoust
+name: Proc Natl Acad Sci U S A
+name: Proc Nutr Soc
+name: Proc SIAM Int Conf Data Min
+name: Proc SIGCHI Conf Hum Factor Comput Syst
+name: Proc SPIE Int Soc Opt Eng
+name: Procare
+name: Process Saf Environ Prot
+name: Prof Case Manag
+name: Prof Dev (Phila)
+name: Prof Psychol Res Pr
+name: Prog Biomater
+name: Prog Biophys Mol Biol
+name: Prog Cardiovasc Dis
+name: Prog Chem Org Nat Prod
+name: Prog Lipid Res
+name: Prog Mol Biol Transl Sci
+name: Prog Neurobiol
+name: Prog Neuropsychopharmacol Biol Psychiatry
+name: Prog Nucl Magn Reson Spectrosc
+name: Prog Orthod
+name: Prog Retin Eye Res
+name: Prog Transplant
+name: Prog Urol
+name: Prostaglandins Leukot Essent Fatty Acids
+name: Prostaglandins Other Lipid Mediat
+name: Prostate
+name: Prostate Cancer Prostatic Dis
+name: Prosthet Orthot Int
+name: Protein Cell
+name: Protein Eng Des Sel
+name: Protein Expr Purif
+name: Protein J
+name: Protein Pept Lett
+name: Protein Sci
+name: Proteins
+name: Proteome Sci
+name: Proteomes
+name: Proteomics
+name: Proteomics Clin Appl
+name: Protist
+name: Protoplasma
+name: Prz Gastroenterol
+name: Prz Menopauzalny
+name: Psicol Reflex Crit
+name: Psoriasis (Auckl)
+name: Psych J
+name: Psychiatr Clin North Am
+name: Psychiatr Danub
+name: Psychiatr Genet
+name: Psychiatr Pol
+name: Psychiatr Prax
+name: Psychiatr Q
+name: Psychiatr Rehabil J
+name: Psychiatr Serv
+name: Psychiatry
+name: Psychiatry Clin Neurosci
+name: Psychiatry Investig
+name: Psychiatry J
+name: Psychiatry Res
+name: Psychiatry Res Neuroimaging
+name: Psychoanal Rev
+name: Psychogeriatrics
+name: Psychol Addict Behav
+name: Psychol Aging
+name: Psychol Assess
+name: Psychol Belg
+name: Psychol Bull
+name: Psychol Health
+name: Psychol Health Med
+name: Psychol Med
+name: Psychol Men Masc
+name: Psychol Ment Health Care
+name: Psychol Methods
+name: Psychol Psychother
+name: Psychol Rep
+name: Psychol Res
+name: Psychol Res Behav Manag
+name: Psychol Rev
+name: Psychol Sci
+name: Psychol Serv
+name: Psychol Sport Exerc
+name: Psychol Trauma
+name: Psychometrika
+name: Psychon Bull Rev
+name: Psychoneuroendocrinology
+name: Psychooncology
+name: Psychopathology
+name: Psychopharmacology (Berl)
+name: Psychophysiology
+name: Psychosom Med
+name: Psychosomatics
+name: Psychother Psychosom
+name: Psychother Psychosom Med Psychol
+name: Psychother Res
+name: Psychotherapy (Chic)
+name: Pteridines
+name: Publ Astron Soc Jpn Nihon Tenmon Gakkai
+name: Public Adm
+name: Public Adm Rev
+name: Public Choice
+name: Public Health
+name: Public Health Nurs
+name: Public Health Nutr
+name: Public Health Rep
+name: Public Health Res Pract
+name: Public Underst Sci
+name: Pulm Circ
+name: Pulm Med
+name: Pulm Pharmacol Ther
+name: Pulm Ther
+name: Pulmonology
+name: Purinergic Signal
+name: Q J Exp Psychol (Hove)
+name: Q J Nucl Med Mol Imaging
+name: QJM
+name: Qatar Med J
+name: Qual Health Res
+name: Qual Life Res
+name: Qual Manag Health Care
+name: Qual Quant
+name: Quantum Inf Process
+name: Quintessence Int
+name: R I Med J (2013)
+name: RMD Open
+name: RNA
+name: RNA Biol
+name: RSC Adv
+name: Radiat Environ Biophys
+name: Radiat Oncol
+name: Radiat Phys Chem Oxf Engl 1993
+name: Radiat Prot Dosimetry
+name: Radiat Res
+name: Radiographics
+name: Radiography (Lond)
+name: Radiol Artif Intell
+name: Radiol Bras
+name: Radiol Case Rep
+name: Radiol Med
+name: Radiol Oncol
+name: Radiol Phys Technol
+name: Radiol Res Pract
+name: Radiologe
+name: Radiologia (Engl Ed)
+name: Radiology
+name: Radiother Oncol
+name: Rambam Maimonides Med J
+name: Rand Health Q
+name: Rapid Commun Mass Spectrom
+name: Read Teach
+name: Recent Pat Antiinfect Drug Discov
+name: Recent Pat Biotechnol
+name: Recent Pat Food Nutr Agric
+name: Recent Pat Inflamm Allergy Drug Discov
+name: Recent Pat Nanotechnol
+name: Recent Results Cancer Res
+name: Recenti Prog Med
+name: Rech Sociol Anthropol
+name: Redox Biol
+name: Redox Rep
+name: Reg Anesth Pain Med
+name: Reg Environ Change
+name: Regen Biomater
+name: Regen Med
+name: Regen Ther
+name: Regul Toxicol Pharmacol
+name: Rehabil Psychol
+name: Rehabil Res Pract
+name: Rehabilitacion (Madr)
+name: Rejuvenation Res
+name: Remediation (N Y)
+name: Remote Sens (Basel)
+name: Remote Sens Environ
+name: Ren Fail
+name: Rep Biochem Mol Biol
+name: Rep Pract Oncol Radiother
+name: Rep Prog Phys
+name: Reprod Biol
+name: Reprod Biol Endocrinol
+name: Reprod Biomed Online
+name: Reprod Biomed Soc Online
+name: Reprod Domest Anim
+name: Reprod Fertil Dev
+name: Reprod Health
+name: Reprod Med Biol
+name: Reprod Sci
+name: Reprod Toxicol
+name: Reproduction
+name: Res Aging
+name: Res Astron Astrophys
+name: Res Autism Spectr Disord
+name: Res Dev Disabil
+name: Res Integr Peer Rev
+name: Res Involv Engagem
+name: Res Microbiol
+name: Res Nurs Health
+name: Res Pharm Sci
+name: Res Policy
+name: Res Pract Thromb Haemost
+name: Res Q Exerc Sport
+name: Res Rep Trop Med
+name: Res Rep Urol
+name: Res Soc Stratif Mobil
+name: Res Social Adm Pharm
+name: Res Sports Med
+name: Res Synth Methods
+name: Res Theory Nurs Pract
+name: Res Vet Sci
+name: Research (Wash D C)
+name: Respir Care
+name: Respir Investig
+name: Respir Med
+name: Respir Med Case Rep
+name: Respir Med Res
+name: Respir Med X
+name: Respir Physiol Neurobiol
+name: Respir Res
+name: Respiration
+name: Respirol Case Rep
+name: Respirology
+name: Restor Neurol Neurosci
+name: Resuscitation
+name: Retin Cases Brief Rep
+name: Retina
+name: Retrovirology
+name: Reumatol Clin (Engl Ed)
+name: Rev Alerg Mex
+name: Rev Argent Microbiol
+name: Rev Assoc Med Bras (1992)
+name: Rev Bras Enferm
+name: Rev Bras Epidemiol
+name: Rev Bras Ginecol Obstet
+name: Rev Bras Ortop (Sao Paulo)
+name: Rev Bras Parasitol Vet
+name: Rev Bras Ter Intensiva
+name: Rev Clin Esp
+name: Rev Clin Esp (Barc)
+name: Rev Col Bras Cir
+name: Rev Colomb Obstet Ginecol
+name: Rev Colomb Psiquiatr (Engl Ed)
+name: Rev Endocr Metab Disord
+name: Rev Environ Contam Toxicol
+name: Rev Environ Health
+name: Rev Epidemiol Sante Publique
+name: Rev Esc Enferm USP
+name: Rev Esp Anestesiol Reanim (Engl Ed)
+name: Rev Esp Cardiol (Engl Ed)
+name: Rev Esp Cir Ortop Traumatol (Engl Ed)
+name: Rev Esp Enferm Dig
+name: Rev Esp Geriatr Gerontol
+name: Rev Esp Med Nucl Imagen Mol (Engl Ed)
+name: Rev Esp Quimioter
+name: Rev Esp Salud Publica
+name: Rev Gastroenterol Mex (Engl Ed)
+name: Rev Gaucha Enferm
+name: Rev Iberoam Micol
+name: Rev Infirm
+name: Rev Inst Med Trop Sao Paulo
+name: Rev Int Androl
+name: Rev Invest Clin
+name: Rev Lat Am Enfermagem
+name: Rev Mal Respir
+name: Rev Med Inst Mex Seguro Soc
+name: Rev Med Interne
+name: Rev Med Liege
+name: Rev Med Suisse
+name: Rev Med Virol
+name: Rev Neurol
+name: Rev Neurol (Paris)
+name: Rev Neurosci
+name: Rev Panam Salud Publica
+name: Rev Paul Pediatr
+name: Rev Port Cardiol (Engl Ed)
+name: Rev Port Cir Cardiotorac Vasc
+name: Rev Prat
+name: Rev Psiquiatr Salud Ment (Engl Ed)
+name: Rev Recent Clin Trials
+name: Rev Saude Publica
+name: Rev Sci Instrum
+name: Rev Soc Bras Med Trop
+name: Rheumatol Adv Pract
+name: Rheumatol Int
+name: Rheumatol Ther
+name: Rheumatology (Oxford)
+name: Rhinology
+name: Rice (N Y)
+name: Rinsho Ketsueki
+name: Rinsho Shinkeigaku
+name: Risk Anal
+name: Risk Manag Healthc Policy
+name: Rofo
+name: Rom J Intern Med
+name: Rural Remote Health
+name: Rural Sociol
+name: S Afr Fam Pract (2004)
+name: S Afr J Bot
+name: S Afr J Commun Disord
+name: S Afr J Physiother
+name: S Afr J Psychiatr
+name: S D Med
+name: SA J Radiol
+name: SAGE Open Med
+name: SAGE Open Med Case Rep
+name: SAR QSAR Environ Res
+name: SICOT J
+name: SLAS Discov
+name: SLAS Technol
+name: SMST
+name: SSM Popul Health
+name: Sage Open
+name: Salud Colect
+name: Sangyo Eiseigaku Zasshi
+name: Sao Paulo Med J
+name: Sarcoma
+name: Saudi J Biol Sci
+name: Saudi J Gastroenterol
+name: Saudi J Kidney Dis Transpl
+name: Saudi J Med Med Sci
+name: Saudi Med J
+name: Scand Cardiovasc J
+name: Scand J Caring Sci
+name: Scand J Clin Lab Invest
+name: Scand J Gastroenterol
+name: Scand J Immunol
+name: Scand J Med Sci Sports
+name: Scand J Occup Ther
+name: Scand J Pain
+name: Scand J Prim Health Care
+name: Scand J Psychol
+name: Scand J Public Health
+name: Scand J Rheumatol
+name: Scand J Surg
+name: Scand J Trauma Resusc Emerg Med
+name: Scand J Urol
+name: Scand J Work Environ Health
+name: Scanning
+name: Scars Burn Heal
+name: Sch Psychol
+name: Schizophr Bull
+name: Schizophr Res
+name: Schizophr Res Cogn
+name: Schizophr Res Treatment
+name: Schmerz
+name: Schweiz Arch Tierheilkd
+name: Sci Adv
+name: Sci China Life Sci
+name: Sci Comput Program
+name: Sci Data
+name: Sci Eng Ethics
+name: Sci Immunol
+name: Sci Justice
+name: Sci Prog
+name: Sci Rep
+name: Sci Robot
+name: Sci Signal
+name: Sci Sports
+name: Sci Stud Read
+name: Sci Technol Adv Mater
+name: Sci Total Environ
+name: Sci Transl Med
+name: Science
+name: ScientificWorldJournal
+name: Scientifica (Cairo)
+name: Scott Med J
+name: Seizure
+name: Semergen
+name: Semin Arthritis Rheum
+name: Semin Cancer Biol
+name: Semin Cardiothorac Vasc Anesth
+name: Semin Cell Dev Biol
+name: Semin Diagn Pathol
+name: Semin Dial
+name: Semin Fetal Neonatal Med
+name: Semin Immunol
+name: Semin Immunopathol
+name: Semin Intervent Radiol
+name: Semin Liver Dis
+name: Semin Musculoskelet Radiol
+name: Semin Nephrol
+name: Semin Neurol
+name: Semin Nucl Med
+name: Semin Oncol
+name: Semin Oncol Nurs
+name: Semin Ophthalmol
+name: Semin Pediatr Neurol
+name: Semin Pediatr Surg
+name: Semin Perinatol
+name: Semin Plast Surg
+name: Semin Reprod Med
+name: Semin Respir Crit Care Med
+name: Semin Roentgenol
+name: Semin Speech Lang
+name: Semin Thorac Cardiovasc Surg
+name: Semin Thromb Hemost
+name: Semin Ultrasound CT MR
+name: Sens Actuators B Chem
+name: Sensors (Basel)
+name: Seq Anal
+name: Sex Abuse
+name: Sex Dev
+name: Sex Health
+name: Sex Med
+name: Sex Med Rev
+name: Sex Reprod Health Matters
+name: Sex Reprod Healthc
+name: Sex Roles
+name: Sex Transm Dis
+name: Sex Transm Infect
+name: Sheng Li Xue Bao
+name: Sheng Wu Gong Cheng Xue Bao
+name: Sheng Wu Yi Xue Gong Cheng Xue Za Zhi
+name: Shock
+name: Shoulder Elbow
+name: Sichuan Da Xue Xue Bao Yi Xue Ban
+name: Signal Transduct Target Ther
+name: Simul Healthc
+name: Singapore Med J
+name: Skelet Muscle
+name: Skeletal Radiol
+name: Skin Appendage Disord
+name: Skin Pharmacol Physiol
+name: Skin Res Technol
+name: Skin Therapy Lett
+name: Skinmed
+name: Sleep
+name: Sleep Biol Rhythms
+name: Sleep Breath
+name: Sleep Disord
+name: Sleep Health
+name: Sleep Med
+name: Sleep Med Clin
+name: Sleep Med Rev
+name: Small
+name: Small GTPases
+name: Small Methods
+name: Soc Cogn Affect Neurosci
+name: Soc Dev
+name: Soc Neurosci
+name: Soc Psychiatry Psychiatr Epidemiol
+name: Soc Psychol (Gott)
+name: Soc Psychol Personal Sci
+name: Soc Sci Med
+name: Soc Sci Q
+name: Soc Stud Sci
+name: Soc Work Health Care
+name: Soc Work Public Health
+name: Soccer Soc
+name: Sociol Focus
+name: Sociol Forum (Randolph N J)
+name: Sociol Health Illn
+name: Sociol Methodol
+name: Soft Matter
+name: Soft Robot
+name: Softw Pract Exp
+name: Soil Org
+name: Soins
+name: Soins Gerontol
+name: Soins Pediatr Pueric
+name: Soins Psychiatr
+name: Sol Phys
+name: Solid State Nucl Magn Reson
+name: Somatosens Mot Res
+name: Somnologie (Berl)
+name: South Afr J HIV Med
+name: South Med J
+name: Space Sci Rev
+name: Space Weather
+name: Span J Psychol
+name: Spat Spatiotemporal Epidemiol
+name: Spec Care Dentist
+name: Spectrochim Acta A Mol Biomol Spectrosc
+name: Spinal Cord
+name: Spinal Cord Ser Cases
+name: Spine (Phila Pa 1976)
+name: Spine Deform
+name: Spine J
+name: Sports (Basel)
+name: Sports Biomech
+name: Sports Health
+name: Sports Med
+name: Sports Med Int Open
+name: Sports Med Open
+name: Sportverletz Sportschaden
+name: Sr Care Pharm
+name: Stat Biosci
+name: Stat Comput
+name: Stat Med
+name: Stat Methods Med Res
+name: Stat Sci
+name: Stat Sin
+name: Stata J
+name: Stem Cell Investig
+name: Stem Cell Reports
+name: Stem Cell Res
+name: Stem Cell Res Ther
+name: Stem Cell Rev Rep
+name: Stem Cells
+name: Stem Cells Cloning
+name: Stem Cells Dev
+name: Stem Cells Int
+name: Stem Cells Transl Med
+name: Stereotact Funct Neurosurg
+name: Steroids
+name: Stoch Environ Res Risk Assess
+name: Stomatologiia (Mosk)
+name: Stomatologija
+name: Strabismus
+name: Strahlenther Onkol
+name: Stress
+name: Stress Health
+name: Stroke
+name: Stroke Res Treat
+name: Stroke Vasc Neurol
+name: Struct Dyn
+name: Structure
+name: Stud Fam Plann
+name: Stud Health Technol Inform
+name: Stud Hist Philos Biol Biomed Sci
+name: Stud Hist Philos Sci
+name: Subst Abus
+name: Subst Abuse
+name: Subst Abuse Rehabil
+name: Subst Abuse Treat Prev Policy
+name: Subst Use Misuse
+name: Sud Med Ekspert
+name: Suicide Life Threat Behav
+name: Support Care Cancer
+name: Surg Case Rep
+name: Surg Endosc
+name: Surg Infect (Larchmt)
+name: Surg Innov
+name: Surg J (N Y)
+name: Surg Laparosc Endosc Percutan Tech
+name: Surg Neurol Int
+name: Surg Obes Relat Dis
+name: Surg Oncol
+name: Surg Oncol Clin N Am
+name: Surg Pathol Clin
+name: Surg Radiol Anat
+name: Surg Res Pract
+name: Surg Technol Int
+name: Surg Today
+name: Surgeon
+name: Surgery
+name: Surv Ophthalmol
+name: Swiss Dent J
+name: Swiss Med Wkly
+name: Synapse
+name: Synlett
+name: Synth Biol (Oxf)
+name: Synth Syst Biotechnol
+name: Synthese
+name: Syst Appl Microbiol
+name: Syst Biol
+name: Syst Biol Reprod Med
+name: Syst Parasitol
+name: Syst Rev
+name: TH Open
+name: Talanta
+name: Tanaffos
+name: Tandartspraktijk
+name: Target Oncol
+name: Teach Learn Med
+name: Tech Coloproctol
+name: Tech Hand Up Extrem Surg
+name: Tech Innov Patient Support Radiat Oncol
+name: Tech Vasc Interv Radiol
+name: Technol Cancer Res Treat
+name: Technol Health Care
+name: Telecommun Syst
+name: Telemed J E Health
+name: Temperature (Austin)
+name: Tetrahedron Lett
+name: Tex Heart Inst J
+name: Tex Med
+name: Theor Appl Genet
+name: Theor Biol Med Model
+name: Theor Chem Acc
+name: Theor Ecol
+name: Theor Med Bioeth
+name: Theor Popul Biol
+name: Theory Biosci
+name: Theory Comput Syst
+name: Theory Decis
+name: Ther Adv Cardiovasc Dis
+name: Ther Adv Chronic Dis
+name: Ther Adv Drug Saf
+name: Ther Adv Endocrinol Metab
+name: Ther Adv Gastrointest Endosc
+name: Ther Adv Hematol
+name: Ther Adv Infect Dis
+name: Ther Adv Med Oncol
+name: Ther Adv Musculoskelet Dis
+name: Ther Adv Neurol Disord
+name: Ther Adv Ophthalmol
+name: Ther Adv Psychopharmacol
+name: Ther Adv Reprod Health
+name: Ther Adv Respir Dis
+name: Ther Adv Urol
+name: Ther Adv Vaccines Immunother
+name: Ther Apher Dial
+name: Ther Clin Risk Manag
+name: Ther Deliv
+name: Ther Drug Monit
+name: Ther Hypothermia Temp Manag
+name: Ther Innov Regul Sci
+name: Ther Umsch
+name: Therap Adv Gastroenterol
+name: Therapie
+name: Theriogenology
+name: Thorac Cancer
+name: Thorac Cardiovasc Surg
+name: Thorac Cardiovasc Surg Rep
+name: Thorax
+name: Thromb Haemost
+name: Thromb J
+name: Thromb Res
+name: Thyroid
+name: Thyroid Res
+name: Ticks Tick Borne Dis
+name: Tidsskr Nor Laegeforen
+name: Tierarztl Prax Ausg K Kleintiere Heimtiere
+name: Tijdschr Psychiatr
+name: Tissue Eng Part A
+name: Tissue Eng Part B Rev
+name: Tissue Eng Part C Methods
+name: Tissue Eng Regen Med
+name: Tob Control
+name: Tob Induc Dis
+name: Tob Regul Sci
+name: Tob Use Insights
+name: Tohoku J Exp Med
+name: Top Catal
+name: Top Clin Nutr
+name: Top Cogn Sci
+name: Top Curr Chem (Cham)
+name: Top Magn Reson Imaging
+name: Top Stroke Rehabil
+name: Toxicol Appl Pharmacol
+name: Toxicol Commun
+name: Toxicol Forensic Med
+name: Toxicol In Vitro
+name: Toxicol Ind Health
+name: Toxicol Lett
+name: Toxicol Mech Methods
+name: Toxicol Pathol
+name: Toxicol Rep
+name: Toxicol Res (Camb)
+name: Toxicol Sci
+name: Toxicology
+name: Toxicon
+name: Toxicon X
+name: Toxics
+name: Toxins (Basel)
+name: Traffic
+name: Traffic Inj Prev
+name: Trans R Soc Trop Med Hyg
+name: Transbound Emerg Dis
+name: Transcult Psychiatry
+name: Transfus Apher Sci
+name: Transfus Clin Biol
+name: Transfus Med
+name: Transfus Med Rev
+name: Transfusion
+name: Transgend Health
+name: Transl Androl Urol
+name: Transl Behav Med
+name: Transl Clin Pharmacol
+name: Transl Gastroenterol Hepatol
+name: Transl Issues Psychol Sci
+name: Transl Lung Cancer Res
+name: Transl Med Aging
+name: Transl Neurodegener
+name: Transl Neurosci
+name: Transl Oncol
+name: Transl Pediatr
+name: Transl Psychiatry
+name: Transl Res
+name: Transl Stroke Res
+name: Transl Vis Sci Technol
+name: Transp Porous Media
+name: Transpl Immunol
+name: Transpl Infect Dis
+name: Transpl Int
+name: Transplant Proc
+name: Transplant Rev (Orlando)
+name: Transplantation
+name: Trauma Case Rep
+name: Trauma Surg Acute Care Open
+name: Trauma Violence Abuse
+name: Travel Med Infect Dis
+name: Tree Physiol
+name: Trees (Berl West)
+name: Tremor Other Hyperkinet Mov (N Y)
+name: Trends Analyt Chem
+name: Trends Biochem Sci
+name: Trends Biotechnol
+name: Trends Cancer
+name: Trends Cardiovasc Med
+name: Trends Cell Biol
+name: Trends Cogn Sci
+name: Trends Dev Biol
+name: Trends Ecol Evol
+name: Trends Endocrinol Metab
+name: Trends Genet
+name: Trends Hear
+name: Trends Immunol
+name: Trends Microbiol
+name: Trends Mol Med
+name: Trends Neurosci
+name: Trends Organ Crime
+name: Trends Parasitol
+name: Trends Pharmacol Sci
+name: Trends Plant Sci
+name: Trends Psychiatry Psychother
+name: Trials
+name: Tribol Lett
+name: Trop Anim Health Prod
+name: Trop Dis Travel Med Vaccines
+name: Trop Doct
+name: Trop Med Health
+name: Trop Med Infect Dis
+name: Trop Med Int Health
+name: Tuberc Res Treat
+name: Tuberc Respir Dis (Seoul)
+name: Tuberculosis (Edinb)
+name: Tumori
+name: Tumour Biol
+name: Turk Arch Otorhinolaryngol
+name: Turk J Emerg Med
+name: Turk J Gastroenterol
+name: Turk J Haematol
+name: Turk J Med Sci
+name: Turk J Pediatr
+name: Turk J Pharm Sci
+name: Turk J Urol
+name: Turk Kardiyol Dern Ars
+name: Turk Neurosurg
+name: Turk Patoloji Derg
+name: Turk Pediatri Ars
+name: Turk Psikiyatri Derg
+name: Turk Thorac J
+name: Twin Res Hum Genet
+name: US CLIVAR Rep
+name: Ugeskr Laeger
+name: Ulster Med J
+name: Ultramicroscopy
+name: Ultraschall Med
+name: Ultrason Imaging
+name: Ultrason Sonochem
+name: Ultrasonics
+name: Ultrasonography
+name: Ultrasound Int Open
+name: Ultrasound J
+name: Ultrasound Med Biol
+name: Ultrasound Obstet Gynecol
+name: Ultrastruct Pathol
+name: Ulus Travma Acil Cerrahi Derg
+name: Undersea Hyperb Med
+name: Unfallchirurg
+name: United European Gastroenterol J
+name: Updates Surg
+name: Ups J Med Sci
+name: Urban Clim
+name: Urol Ann
+name: Urol Case Rep
+name: Urol Int
+name: Urol J
+name: Urol Oncol
+name: Urolithiasis
+name: Urologe A
+name: Urologia
+name: Urology
+name: Util Policy
+name: Vaccine
+name: Vaccine X
+name: Vaccines (Basel)
+name: Vacunas
+name: Value Health Reg Issues
+name: Vasa
+name: Vasc Endovascular Surg
+name: Vasc Health Risk Manag
+name: Vasc Investig Ther
+name: Vasc Med
+name: Vasc Specialist Int
+name: Vascul Pharmacol
+name: Vascular
+name: Vector Borne Zoonotic Dis
+name: Veg Hist Archaeobot
+name: Vestn Oftalmol
+name: Vestn Otorinolaringol
+name: Vet Anaesth Analg
+name: Vet Clin North Am Equine Pract
+name: Vet Clin North Am Food Anim Pract
+name: Vet Clin North Am Small Anim Pract
+name: Vet Clin Pathol
+name: Vet Comp Oncol
+name: Vet Comp Orthop Traumatol
+name: Vet Dermatol
+name: Vet Immunol Immunopathol
+name: Vet J
+name: Vet Med (Auckl)
+name: Vet Med Int
+name: Vet Med Sci
+name: Vet Microbiol
+name: Vet Ophthalmol
+name: Vet Parasitol
+name: Vet Parasitol Reg Stud Reports
+name: Vet Parasitol X
+name: Vet Pathol
+name: Vet Q
+name: Vet Radiol Ultrasound
+name: Vet Rec
+name: Vet Rec Open
+name: Vet Res
+name: Vet Res Commun
+name: Vet Sci
+name: Vet Surg
+name: Vet World
+name: VideoEndocrinology
+name: VideoGIE
+name: Violence Against Women
+name: Violence Vict
+name: Viral Immunol
+name: Virchows Arch
+name: Virol J
+name: Virol Sin
+name: Virology
+name: Virulence
+name: Virus Evol
+name: Virus Genes
+name: Virus Res
+name: Viruses
+name: Vis Comput Ind Biomed Art
+name: Vision (Basel)
+name: Vision Res
+name: Vitam Horm
+name: Vnitr Lek
+name: Vopr Kurortol Fizioter Lech Fiz Kult
+name: Vopr Pitan
+name: Vopr Virusol
+name: Vox Sang
+name: Vulnerable Child Youth Stud
+name: Waste Biomass Valorization
+name: Waste Manag
+name: Waste Manag Res
+name: Water (Basel)
+name: Water Environ Res
+name: Water Res
+name: Water Res X
+name: Water Resour Econ
+name: Water Resour Res
+name: Water Sci Technol
+name: Wellcome Open Res
+name: West Afr J Med
+name: West J Nurs Res
+name: Western Pac Surveill Response J
+name: Wetl Ecol Manag
+name: Wiad Lek
+name: Wien Klin Wochenschr
+name: Wien Med Wochenschr
+name: Wilderness Environ Med
+name: Wiley Interdiscip Rev Cogn Sci
+name: Wiley Interdiscip Rev Comput Mol Sci
+name: Wiley Interdiscip Rev Dev Biol
+name: Wiley Interdiscip Rev Energy Environ
+name: Wiley Interdiscip Rev Nanomed Nanobiotechnol
+name: Wiley Interdiscip Rev RNA
+name: Wiley Interdiscip Rev Syst Biol Med
+name: Wirtschaftsdienst
+name: Women Birth
+name: Women Health
+name: Womens Health (Lond)
+name: Womens Health Issues
+name: Womens Midlife Health
+name: Work
+name: Workplace Health Saf
+name: World Allergy Organ J
+name: World J Biol Psychiatry
+name: World J Clin Cases
+name: World J Clin Oncol
+name: World J Crit Care Med
+name: World J Educ Res
+name: World J Emerg Surg
+name: World J Gastroenterol
+name: World J Gastrointest Oncol
+name: World J Gastrointest Pathophysiol
+name: World J Mens Health
+name: World J Microbiol Biotechnol
+name: World J Nephrol
+name: World J Orthop
+name: World J Pediatr
+name: World J Pediatr Congenit Heart Surg
+name: World J Plast Surg
+name: World J Psychiatry
+name: World J Radiol
+name: World J Stem Cells
+name: World J Surg
+name: World J Surg Oncol
+name: World J Urol
+name: World Neurosurg
+name: World Wide Web
+name: Worldviews Evid Based Nurs
+name: Wound Manag Prev
+name: Wound Repair Regen
+name: Wounds
+name: Xenobiotica
+name: Xenotransplantation
+name: Yakugaku Zasshi
+name: Yeast
+name: Yeungnam Univ J Med
+name: Yi Chuan
+name: Ying Yong Sheng Tai Xue Bao
+name: Yonago Acta Med
+name: Yonsei Med J
+name: Z Evid Fortbild Qual Gesundhwes
+name: Z Gastroenterol
+name: Z Geburtshilfe Neonatol
+name: Z Gerontol Geriatr
+name: Z Kinder Jugendpsychiatr Psychother
+name: Z Med Phys
+name: Z Naturforsch C J Biosci
+name: Z Orthop Unfall
+name: Z Rheumatol
+name: Zebrafish
+name: Zentralbl Arbeitsmed Arbeitsschutz Ergon
+name: Zentralbl Chir
+name: Zh Nevrol Psikhiatr Im S S Korsakova
+name: Zh Vopr Neirokhir Im N N Burdenko
+name: Zhen Ci Yan Jiu
+name: Zhong Nan Da Xue Xue Bao Yi Xue Ban
+name: Zhongguo Dang Dai Er Ke Za Zhi
+name: Zhongguo Fei Ai Za Zhi
+name: Zhongguo Gu Shang
+name: Zhongguo Shi Yan Xue Ye Xue Za Zhi
+name: Zhongguo Xiu Fu Chong Jian Wai Ke Za Zhi
+name: Zhongguo Xue Xi Chong Bing Fang Zhi Za Zhi
+name: Zhongguo Yi Liao Qi Xie Za Zhi
+name: Zhongguo Yi Xue Ke Xue Yuan Xue Bao
+name: Zhongguo Zhen Jiu
+name: Zhonghua Bing Li Xue Za Zhi
+name: Zhonghua Er Bi Yan Hou Tou Jing Wai Ke Za Zhi
+name: Zhonghua Er Ke Za Zhi
+name: Zhonghua Fu Chan Ke Za Zhi
+name: Zhonghua Gan Zang Bing Za Zhi
+name: Zhonghua Jie He He Hu Xi Za Zhi
+name: Zhonghua Kou Qiang Yi Xue Za Zhi
+name: Zhonghua Lao Dong Wei Sheng Zhi Ye Bing Za Zhi
+name: Zhonghua Liu Xing Bing Xue Za Zhi
+name: Zhonghua Nei Ke Za Zhi
+name: Zhonghua Shao Shang Za Zhi
+name: Zhonghua Wei Chang Wai Ke Za Zhi
+name: Zhonghua Wei Zhong Bing Ji Jiu Yi Xue
+name: Zhonghua Xin Xue Guan Bing Za Zhi
+name: Zhonghua Xue Ye Xue Za Zhi
+name: Zhonghua Yan Ke Za Zhi
+name: Zhonghua Yi Shi Za Zhi
+name: Zhonghua Yi Xue Yi Chuan Xue Za Zhi
+name: Zhonghua Yi Xue Za Zhi
+name: Zhonghua Yu Fang Yi Xue Za Zhi
+name: Zhonghua Zhong Liu Za Zhi
+name: Zoo Biol
+name: Zookeys
+name: Zool Res
+name: Zoological Lett
+name: Zoology (Jena)
+name: Zoonoses Public Health
+name: Zootaxa
+name: Zygote
+name: bioRxiv
+name: eNeuro
+name: eNeurologicalSci
+name: iScience
+name: mBio
+name: mSphere
+name: mSystems
+name: medRxiv

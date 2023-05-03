@@ -9,6 +9,7 @@ from torch.utils.data import DataLoader
 import tqdm
 import torch
 import time
+import glob 
 
 # constants 
 device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
@@ -19,11 +20,13 @@ FILE_DATA_TRAIN="/Users/mduby/Data/Broad/PubmedGPT/Training/ConversationGPT/text
 DIR_MODEL="/Users/mduby/Data/Broad/PubmedGPT/Models/ConversationGPT"
 
 # AWS
-FILE_DATA_TRAIN="/home/ubuntu/Data/text_generation_data_train20230430.json"
+# FILE_DATA_TRAIN="/home/ubuntu/Data/text_generation_data_train20230430.json"
+DIR_DATA_TRAIN="/home/ubuntu/Models/Data/TextGeneration"
 DIR_MODEL="/home/ubuntu/Models"
 
 # local
-FILE_DATA_TRAIN="/home/javaprog/Data/Broad/GPT/Data/ConvoPubmedV1/text_generation_data_train20230430.json"
+# FILE_DATA_TRAIN="/home/javaprog/Data/Broad/GPT/Data/ConvoPubmedV1/text_generation_data_train20230430.json"
+DIR_DATA_TRAIN="/home/javaprog/Data/Broad/GPT/Data/TextGeneration"
 DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models"
 
 # ML constants
@@ -158,16 +161,23 @@ class ChatData(Dataset):
     def __getitem__(self, idx):
         return (self.input_ids[idx], self.attention_mask[idx])
 
-
 # main
 if __name__ == "__main__":
     # get the tokenizer
     tokenizer = load_tokenizer(ML_MODEL_NAME)
 
     # load the data
-    file_train = FILE_DATA_TRAIN
-    print("download data file: {}".format(file_train))
-    json_data = load_training_data(file_train)
+    # file_train = FILE_DATA_TRAIN
+    json_data = []
+    # get the list of input files
+    files = [file for file in glob.glob(DIR_DATA_TRAIN + "/*.json")]
+    for file_train in files:
+        print("download data file: {}".format(file_train))
+        temp_data = load_training_data(file_train)
+        json_data = json_data + temp_data
+
+    # load tghe data loader
+    print("got FINAL training set of size: {}".format(len(json_data)))
     chatData = ChatData(json_data, tokenizer, size=ML_NUM_SIZE_TRAIN)
     # chatData =  DataLoader(chatData, batch_size=32)
     chatData =  DataLoader(chatData, batch_size=ML_BATCH_SIZE)
