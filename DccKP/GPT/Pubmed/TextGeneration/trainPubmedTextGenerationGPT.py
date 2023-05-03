@@ -9,6 +9,7 @@ from torch.utils.data import DataLoader
 import tqdm
 import torch
 import time
+import os
 import glob 
 
 # constants 
@@ -19,15 +20,17 @@ print("Have ML device: {}".format((device)))
 FILE_DATA_TRAIN="/Users/mduby/Data/Broad/PubmedGPT/Training/ConversationGPT/text_generation_data_train20230430.json"
 DIR_MODEL="/Users/mduby/Data/Broad/PubmedGPT/Models/ConversationGPT"
 
-# AWS
-# FILE_DATA_TRAIN="/home/ubuntu/Data/text_generation_data_train20230430.json"
-DIR_DATA_TRAIN="/home/ubuntu/Models/Data/TextGeneration"
-DIR_MODEL="/home/ubuntu/Models"
-
 # local
 # FILE_DATA_TRAIN="/home/javaprog/Data/Broad/GPT/Data/ConvoPubmedV1/text_generation_data_train20230430.json"
 DIR_DATA_TRAIN="/home/javaprog/Data/Broad/GPT/Data/TextGeneration"
 DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models"
+
+# AWS
+# FILE_DATA_TRAIN="/home/ubuntu/Data/text_generation_data_train20230430.json"
+DIR_DATA_TRAIN="/home/ubuntu/Models/Data/TextGeneration"
+DIR_MODEL="/home/ubuntu/Models"
+DIR_TOKENIZER="/home/ubuntu/Tokenizer"
+
 
 # ML constants
 ML_BATCH_SIZE = 64
@@ -39,7 +42,7 @@ ML_MAX_LENGTH_INFER=80
 # ML_NUM_SIZE_TRAIN=100
 ML_NUM_SIZE_TRAIN=-1
 
-ML_NUM_SAVE_MODEL=20
+ML_INTERVAL_SAVE_MODEL=20
 ML_NUM_EPOCHS=100
 
 # methods 
@@ -87,9 +90,12 @@ def train(chatData, model, optim, num_epochs=25):
         print_elapsed_time(start, num_epoch=i)
 
         # write out model
-        if i % ML_NUM_SAVE_MODEL == 0:
-            file_model = "{}/text_gen_model_state_{}.pt".format(DIR_MODEL, i)
-            torch.save(model.state_dict(), file_model)
+        if i % ML_INTERVAL_SAVE_MODEL == 0:
+            # file_model = "{}/text_gen_model_state_{}.pt".format(DIR_MODEL, i)
+            # torch.save(model.state_dict(), file_model)
+            dir_temp = DIR_MODEL + "/text_gen_{}".format(i)
+            os.mkdir(os.path(dir_temp))
+            model.model.save_pretrained(DIR_MODEL)
             print("wrote out model for epoch: {} to file: {}".format(i, file_model))
 
         # test the inference
@@ -105,11 +111,11 @@ def print_infer(str_input, log=False):
     text_result = infer(str_input)
     print("output: {}".format(text_result.replace("<pad>", " ")))
 
-def infer(inp):
-    inp = "<start> " + inp
-    inp = tokenizer(inp, return_tensors="pt")
-    X = inp["input_ids"].to(device)
-    a = inp["attention_mask"].to(device)
+def infer(str_input):
+    str_input = "<start> " + str_input
+    str_input = tokenizer(str_input, return_tensors="pt")
+    X = str_input["input_ids"].to(device)
+    a = str_input["attention_mask"].to(device)
     # output = model.generate(X, attention_mask=a)
     # output = model.generate(X, attention_mask=a, max_length= 60)
     output = model.generate(X, attention_mask=a, max_length=ML_MAX_LENGTH_INFER, pad_token_id=tokenizer.eos_token_id)
@@ -181,6 +187,9 @@ if __name__ == "__main__":
     chatData = ChatData(json_data, tokenizer, size=ML_NUM_SIZE_TRAIN)
     # chatData =  DataLoader(chatData, batch_size=32)
     chatData =  DataLoader(chatData, batch_size=ML_BATCH_SIZE)
+
+    # save the tokenizer
+    tokenizer.save_pretrained(DIR_TOKENIZER)
 
     # create the model
     model = GPT2LMHeadModel.from_pretrained(ML_MODEL_NAME)

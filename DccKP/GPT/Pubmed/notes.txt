@@ -1,4 +1,8 @@
 
+- VM setup
+  - run: 'source activate pytorch'
+  - monitor: 
+
 
 - approach
   - need context, then lists of q/a 
@@ -34,6 +38,23 @@ Sun Apr 30 16:44:11 2023
 |=============================================================================|
 |    0   N/A  N/A     33591      C   python3                         12856MiB |
 +-----------------------------------------------------------------------------+
+
+
+=============================================================================
+       __|  __|_  )
+       _|  (     /   Deep Learning AMI GPU PyTorch 2.0.0 (Ubuntu 20.04)
+      ___|\___|___|
+=============================================================================
+
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.15.0-1033-aws x86_64v)
+
+* Please note that Amazon EC2 P2 Instance is not supported on current DLAMI.
+* Supported EC2 instances: G3, P3, P3dn, P4d, P4de, G5, G4dn.
+* To activate pre-built pytorch environment, run: 'source activate pytorch'
+* To activate base conda environment upon login, run: 'conda config --set auto_activate_base true'
+* NVIDIA driver version: 525.85.12
+* CUDA version: 11.8 
+
 
 
 20230428 - 64 stream, 80 input tokens, 
