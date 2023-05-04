@@ -49,6 +49,9 @@ def test_inference(str_input, log=False):
     '''
     print("input: {}".format(str_input))
     str_output = infer(str_input, model, tokenizer)
+    str_output = str_output.replace(" <pad>", "")
+    str_output = str_output.replace(" <end>", "")
+    str_output = str_output.replace(" <start>", "")
     print("output: {}\n".format(str_output))
 
 
