@@ -1,7 +1,6 @@
 
 # imports
 import os 
-import pymysql as mdb
 import glob 
 import io
 import json

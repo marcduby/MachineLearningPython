@@ -15,6 +15,9 @@ print("Have ML device: {}".format((device)))
 
 # constants 
 FILE_MODEL = "/home/javaprog/Data/Broad/GPT/Models/20230501textGeneration39k/text_gen_model_state_60.pt"
+DIR_DATA_TRAIN="/home/ubuntu/Data/TextGeneration"
+DIR_MODEL="/home/ubuntu/Models/text_gen_40"
+DIR_TOKENIZER="/home/ubuntu/Tokenizer"
 
 
 # methods
@@ -41,18 +44,19 @@ def infer(str_input, model, tokenizer, int_length=40, log=False):
 
 if __name__ == "__main__":
     # load the model
-    # model = GPT2LMHeadModel.from_pretrained(FILE_MODEL)
-    model = torch.load(FILE_MODEL,map_location=torch.device('cpu'))
-    # model = model.to(device)
+    model = GPT2LMHeadModel.from_pretrained(DIR_MODEL)
+    # model = torch.load(FILE_MODEL,map_location=torch.device('cpu'))
+    model = model.to(device)
 
     # load the tokenizer
-    tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+    tokenizer = GPT2Tokenizer.from_pretrained(DIR_TOKENIZER)
     tokenizer.add_special_tokens({"pad_token": "<pad>", 
                                     "bos_token": "<start>",
                                     "eos_token": "<end>"})
 
     # do inference
-    str_input="ACE2 is a gene"
-    print("input: {}".format(str_input))
-    str_output = infer(str_input, model, tokenizer)
-    print("output: {}\n".format(str_output))
+    for i in range(5):
+        str_input="ACE2 is a gene"
+        print("input: {}".format(str_input))
+        str_output = infer(str_input, model, tokenizer)
+        print("output: {}\n".format(str_output))
