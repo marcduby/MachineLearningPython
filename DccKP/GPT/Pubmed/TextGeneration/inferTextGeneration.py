@@ -42,6 +42,15 @@ def infer(str_input, model, tokenizer, int_length=40, log=False):
     # return
     return result
 
+def test_inference(str_input, log=False):
+    '''
+    test the inference
+    '''
+    print("input: {}".format(str_input))
+    str_output = infer(str_input, model, tokenizer)
+    print("output: {}\n".format(str_output))
+
+
 if __name__ == "__main__":
     # load the model
     model = GPT2LMHeadModel.from_pretrained(DIR_MODEL)
@@ -55,8 +64,11 @@ if __name__ == "__main__":
                                     "eos_token": "<end>"})
 
     # do inference
-    for i in range(5):
-        str_input="ACE2 is a gene"
-        print("input: {}".format(str_input))
-        str_output = infer(str_input, model, tokenizer)
-        print("output: {}\n".format(str_output))
+    test_inference("ACE2 is a gene")
+    test_inference("BMI is a phenotype")
+    test_inference("cystic fobrosis is a disease")
+    test_inference("dili is a disease")
+    test_inference("diabetes is treated by")
+
+
+
