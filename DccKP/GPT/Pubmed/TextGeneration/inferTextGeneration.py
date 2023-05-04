@@ -73,6 +73,7 @@ if __name__ == "__main__":
     test_inference("cystic fobrosis is a disease")
     test_inference("dili is a disease")
     test_inference("diabetes is treated by")
+    test_inference("atrial fibillation is a disease")
 
 
 
