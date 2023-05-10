@@ -62,6 +62,18 @@ Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.15.0-1033-aws x86_64v)
 
 
 
+20230504 - results
+input: pCSK9 is a gene
+output: PCSK9 is a gene known to cause a broad spectrum of connective tissue disorders which are mainly related to the development of skeletal abnormalities. Despite the identification of several genes associated with this disease <end>
+
+input: diabetes is a disease
+output: diabetes is a disease that involves endocrine dysfunction and is undertaken by a variety of nuclear and extracellular proteins. Neurospora crassa shows genetic and epigenetic changes that are reversible <end>
+
+input: diabetes is associated with genes
+output: diabetes is associated with genes that are pleiotropic to both BMI and glycemic traits. These include genes regulating energy balance <end>             
+
+
+
 20230428 - 64 stream, 80 input tokens, 
 
  24%|██▍       | 6/25 [1:00:51<3:12:48, 608.88s/it]

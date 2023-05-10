@@ -77,7 +77,10 @@ set keyw.translator_curie = node.ontology_id, keyw.translator_type = look.type_n
 
 
 -- queries
-select count(id), paper_date from pubmed_gpt.pmd_abstract group by paper_date order by paper_date;
+select count(id), paper_date from pubmed_gpt.pmd_abstract group by paper_date order by paper_date desc;
+
+select count(id), year(paper_date), month(paper_date) from pubmed_gpt.pmd_abstract 
+group by year(paper_date), month(paper_date) order by year(paper_date) desc, month(paper_date) desc;
 
 select count(id) from pmd_abstract;
 

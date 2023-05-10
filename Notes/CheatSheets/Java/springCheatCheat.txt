@@ -4,5 +4,6 @@ start app:
 ----------
   - java -jar build/libs/lipidserviceskb-0.0.1-SNAPSHOT.jar
   - java -jar build/libs/genomeserviceskb-0.0.1-SNAPSHOT.jar
+  - java -jar build/libs/genomeserviceskb-0.0.1-SNAPSHOT.jar
 
   

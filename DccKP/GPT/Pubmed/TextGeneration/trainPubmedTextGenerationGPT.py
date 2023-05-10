@@ -30,20 +30,20 @@ DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models"
 DIR_DATA_TRAIN="/home/ubuntu/Data/TextGeneration"
 DIR_MODEL="/home/ubuntu/Models"
 DIR_TOKENIZER="/home/ubuntu/Tokenizer"
-
+FILE_KEYWORDS=DIR_DATA_TRAIN + "/text_generation_keywords_train_60k.json"
 
 # ML constants
 ML_BATCH_SIZE = 64
 ML_BATCH_SIZE = 96
 ML_MODEL_NAME="gpt2"
-ML_MAX_LENGTH_TRAIN=80
-ML_MAX_LENGTH_INFER=80
+ML_MAX_LENGTH_TRAIN=60
+ML_MAX_LENGTH_INFER=60
 
 # ML_NUM_SIZE_TRAIN=100
 ML_NUM_SIZE_TRAIN=-1
 
 ML_INTERVAL_SAVE_MODEL=20
-ML_NUM_EPOCHS=100
+ML_NUM_EPOCHS=41
 
 # methods 
 def load_training_data(file_path, log=False):
@@ -93,13 +93,15 @@ def train(chatData, model, optim, num_epochs=25):
         if i % ML_INTERVAL_SAVE_MODEL == 0:
             # file_model = "{}/text_gen_model_state_{}.pt".format(DIR_MODEL, i)
             # torch.save(model.state_dict(), file_model)
-            dir_temp = DIR_MODEL + "/Text_gen_{}".format(i)
+            dir_temp = DIR_MODEL + "/Text_gen_{}_{}".format(ML_MODEL_NAME, i)
             os.mkdir(dir_temp)
             model.save_pretrained(dir_temp)
             print("wrote out model for epoch: {} to file: {}".format(i, dir_temp))
 
         # test the inference
         print_infer("PCSK9 is a gene")
+        print_infer("PPARG is a gene")
+        print_infer("PPARG and diabetes")
         print_infer("diabetes is a disease")
         print_infer("diabetes is associated with genes")
 
@@ -122,11 +124,17 @@ def infer(str_input):
     output = tokenizer.decode(output[0])
     return output
 
-def load_tokenizer(model_family, log=False):
+def load_tokenizer(model_family, list_keywords=[], log=False):
     tokenizer = GPT2Tokenizer.from_pretrained(model_family)
     tokenizer.add_special_tokens({"pad_token": "<pad>", 
                                     "bos_token": "<start>",
                                     "eos_token": "<end>"})
+
+    # add in the pubmed specific keywords
+    if len(list_keywords) > 0:
+        num_tokenizer = len(tokenizer)
+        tokenizer.add_tokens(list_keywords)
+        print("added tokens of size: {}. Tokenizer length went from: {} to {} ".format(len(list_keywords), num_tokenizer, len(tokenizer)))
 
     # return
     return tokenizer
@@ -169,8 +177,11 @@ class ChatData(Dataset):
 
 # main
 if __name__ == "__main__":
+    # get the keyword list
+    list_keywords = json.load(open(FILE_KEYWORDS, "r"))
+
     # get the tokenizer
-    tokenizer = load_tokenizer(ML_MODEL_NAME)
+    tokenizer = load_tokenizer(ML_MODEL_NAME, list_keywords)
 
     # load the data
     # file_train = FILE_DATA_TRAIN

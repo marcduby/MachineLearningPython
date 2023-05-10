@@ -1,20 +1,20 @@
 
 # imports
 import os 
-import pymysql as mdb
 import glob 
 import io
 import json
+import pymysql as mdb
 
 # constants
 DB_PASSWD = os.environ.get('DB_PASSWD')
 SCHEMA_GPT = "pubmed_gpt"
-DIR_DATA = "/home/javaprog/Data/Broad/GPT/Data/ConvoPubmedV1"
-FILE_DATA = "{}/text_generation_data_train_60k.json".format(DIR_DATA)
-SQL_SELECT = "select pubmed_id, abstract_text from {}.pmd_abstract".format(SCHEMA_GPT)
+DIR_DATA = "/home/javaprog/Data/Broad/GPT/TextGenerationBert/Input"
+FILE_DATA = "{}/input_bert.txt".format(DIR_DATA)
+SQL_SELECT = "select pubmed_id, abstract_text from {}.pmd_abstract limit 20000".format(SCHEMA_GPT)
 SQL_WHERE = " where abstract_text like %s"
 SQL_WHERE = " where pubmed_id in (36061186,35928446,36072671,36171883,36173399,35910211,36105085,35754818,35480303)"
-LIST_REPLACE = [["\n", ""], ["CI.", "CI"], []]
+LIST_REPLACE = [["\n", ""], ["CI.", "CI"], ["#text", ""]]
 
 # methods
 def parse_lines_into_array(str_input, list_delimiters, list_remove, num_min_length=40, log=False):
@@ -49,14 +49,14 @@ def parse_lines_into_array(str_input, list_delimiters, list_remove, num_min_leng
     # return            
     return list_result
 
-def create_json_dataset_file(list_input, file_name, log=False):
+def create_text_dataset_file(list_input, file_name, log=False):
     # save to json
     with open(file_name, "w+") as f:
-        json.dump(list_input, f)
+        f.write("\n".join(map(str, list_input)))
 
     print("wrote out: {} size list to: {}".format(len(list_input), file_name))
 
-def create_sentence_list(list_input, str_start="<start> ", str_end=" <end>", log=False):
+def create_conversation_list(list_input, str_start="<start> ", str_end=" <end>", log=False):
     '''
     creates a list of user/bot conversations
     '''
@@ -114,27 +114,27 @@ if __name__ == "__main__":
     conn = get_connection()
     # list_abstracts = get_list_of_abstracts(conn, 'PCSK9')
     list_abstracts = get_list_of_abstracts(conn, None)
-    print("to process, got list of abstracts of size: {}".format(len(list_abstracts)))
+    num_abstracts = len(list_abstracts)
+    print("to process, got list of abstracts of size: {}".format(num_abstracts))
 
     # for each abstract
     for abstract in list_abstracts:
         num_count = num_count + 1
         # split the abstract into sentences
-        list_sentences = parse_lines_into_array(abstract, [".", ";"], [["\n", ""], ["vs.", "vs"], ["'#text':", ""]])
+        list_sentences = parse_lines_into_array(abstract, [".", ";"], [["\n", ""], ["vs.", "vs"], ["'#text': ", ""]], log=True)
+        # list_sentences = parse_lines_into_array(abstract, [",", ";"], [["\n", ""], ["vs.", "vs"]])
 
-        # create a list of exchanges for the abstract
-        list_exchanges = create_sentence_list(list_sentences)
-
-        # add the lists to the overal list
-        list_conversations = list_conversations + list_exchanges
+        # append a space for extra line
+        list_sentences.append("")
 
         # log
-        if num_count % 500 == 0:
-            print("processed abstract: {} of: {}".format(num_count, len(list_abstracts)))
+        print("added: {}/{}".format(num_count, num_abstracts))
+        # add the lists to the overal list
+        list_conversations = list_conversations + list_sentences
 
     # log
     for item in list_conversations:
         print(item)
 
     # write out the conversations
-    create_json_dataset_file(list_conversations, FILE_DATA)
+    create_text_dataset_file(list_conversations, FILE_DATA)

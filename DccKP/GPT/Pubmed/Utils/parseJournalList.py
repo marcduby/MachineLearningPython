@@ -30,7 +30,8 @@ def parse_abstract_file(xmlfile, journal_substring=None, log=False):
     parses the abstract xml file, adds journal names to set
     '''
     set_results = set()
-    xml_doc = None 
+    xml_doc = None def combine_json_files
+
 
     # parse the file
     with open(xmlfile) as xml_input:
