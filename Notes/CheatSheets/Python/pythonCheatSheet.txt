@@ -28,6 +28,10 @@ virtual env:
 
 strings:
 --------
+  a_string = "A string is more than its parts!"
+  matches = ["more", "wholesome", "milk"]
+
+  if any([x in a_string for x in matches]):
 
 pandas:
 -------

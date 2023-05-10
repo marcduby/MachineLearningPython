@@ -1,0 +1,86 @@
+
+
+20230510 - added keywords to tokenizer
+- added
+  - keywords
+  - 60k abstracts
+  - modified max_length
+
+input: PPARG is a gene
+output: <start> PPARG is a gene encoding a protein of the PPARG / AGTR1 /5/10/10 pathway that is highly expressed in the liver and muscle <end>
+
+input: PPARG and diabetes
+output: <start> PPARG and diabetes -associated microRNAs (IR- microRNAs ) are involved in the pathogenesis of obesity <end>
+
+input: diabetes is a disease
+output: <start> diabetes is a disease that affect s the deve lop ment of the central nervous system <end>
+
+input: diabetes is associated with genes
+output: <start> diabetes is associated with genes involved in insulin signaling, lipid metabolism, and energy expenditure <end>                                                                             
+
+6/41 [4:58:30<29:01:37, 2985.63s/it]epoch: 6 took: 2995.542525291443s
+input: PCSK9 is a gene
+output: <start> PCSK9 is a gene involved in the regulation of lipoprotein metabolism and is expressed in the liver and brain <end>                                                                          
+
+input: PPARG is a gene
+output: <start> PPARG is a gene encoding a calcium -activated kinase that is involved in the regulation of energy homeostasis <end>                                                                         
+
+input: PPARG and diabetes
+output: <start> PPARG and diabetes -associated microRNAs were found to be upregulated in the liver of obese individuals, and the expression of these miRNAs was significantly downregulated in the obese group <end>
+
+input: diabetes is a disease
+output: <start> diabetes is a disease with high morbidity and mortality <end>
+
+input: diabetes is associated with genes
+output: <start> diabetes is associated with genes that are involved in the regulation of insulin signaling <end>
+
+7/41 [5:48:28<28:14:11, 2989.74s/it]epoch: 7 took: 2996.41140127182s
+input: PCSK9 is a gene
+output: <start> PCSK9 is a gene involved in the regulation of low-density lipoprotein ( LDL ) homeostasis <end>
+
+input: PPARG is a gene
+output: <start> PPARG is a gene that encodes a PPARG receptor that is highly expressed in the heart and skeletal muscle <end>
+
+input: PPARG and diabetes
+output: <start> PPARG and diabetes -associated microRNAs were also significantly down-regulated in the serum of patients with obesity and healthy controls <end>                                            
+
+input: diabetes is a disease
+output: <start> diabetes is a disease of the primary cilium in which the ciliary protein obtains to the cytoplasm <end>
+
+input: diabetes is associated with genes
+output: <start> diabetes is associated with genes that are not only involved in insulin signaling but also have been implicated in the regulation of insulin signaling <end> 
+
+9/41 [7:28:27<26:37:11, 2994.74s/it] epoch: 9 took: 2996.65953373909s
+input: PCSK9 is a gene
+output: <start> PCSK9 is a gene that is located in the inner segment of the low-density lipoprotein ( LDL ) receptor <end>
+
+input: PPARG is a gene
+output: <start> PPARG is a gene encoding a key muscle growth factor, which is expressed in the skeletal muscle of plateau zoo sperm ic males <end>                                                          
+
+input: PPARG and diabetes
+output: <start> PPARG and diabetes -associated microRNAs (d miR s) have been reported to be involved in the pathogenesis of insulin resistance and type 2 diabetes mellitus (T2DM) <end>                    
+
+input: diabetes is a disease
+output: <start> diabetes is a disease characterized by the deve lop ment of insulin resistance and insulin resistance <end>
+
+input: diabetes is associated with genes
+output: <start> diabetes is associated with genes that are involved in the metabolism of fat and energy <end>
+
+10/41 [8:18:26<25:48:00, 2996.15s/it]epoch: 10 took: 2995.372085094452s
+wrote out model for epoch: 10 to file: /home/ubuntu/Models/Text_gen_gpt2_10
+input: PCSK9 is a gene
+output: <start> PCSK9 is a gene encoding a transmembrane protein expressed in striated muscle <end>
+
+input: PPARG is a gene
+output: <start> PPARG is a gene expressed in the skeletal muscle and that biallelic variants in it cause a syndrome of muscle - specif ic developmental disorders characterized by short stature, brachydactyly, facial dysmorphism, and learning difficulties <end>
+
+input: PPARG and diabetes
+output: <start> PPARG and diabetes -related microRNAs (miRNAs) are involved in the regulation of gene expression <end>                                                                                      
+
+input: diabetes is a disease
+output: <start> diabetes is a disease that is characterized by the deve lop ment of diabetes mellitus, insulin resistance, and vascular disease <end>                                                       
+
+input: diabetes is associated with genes
+output: <start> diabetes is associated with genes that are expressed in the brain <end>
+
+

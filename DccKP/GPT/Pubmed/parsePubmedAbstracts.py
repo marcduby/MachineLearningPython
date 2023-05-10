@@ -46,7 +46,8 @@ SQL_DELETE_ABSTRACTS = "delete from {}.{}".format(SCHEMA_GPT, TABLE_ABSTRACT)
 SQL_DELETE_LINKS = "delete from {}.{}".format(SCHEMA_GPT, TABLE_LINK)
 
 FILE_TEST_XML = "/home/javaprog/Data/Broad/GPT/Pubmed/pubmed23n1165.xml"
-TEXT_JOURNAL_SUBNAME = "genet"
+# TEXT_JOURNAL_SUBNAME = "genet"
+LIST_JOURNAL_SUBNAME = ["drug", "chem"]
 
 # FILE_TEST_XML = "/home/javaprog/Code/PythonWorkspace/MachineLearningPython/DccKP/GPT/Pubmed/test.xml"
 # TEXT_JOURNAL_SUBNAME = "me"
@@ -64,7 +65,7 @@ def get_connection():
     return conn
 
 
-def parse_abstract_file(xmlfile, journal_substring, log=False):
+def parse_abstract_file(xmlfile, list_journal_substring, log=False):
     '''
     parses the abstract xml file, returning list of papers maps
     '''
@@ -84,7 +85,7 @@ def parse_abstract_file(xmlfile, journal_substring, log=False):
 
         # get the journal title
         map_paper[COL_JOURNAL] = paper.get('MedlineCitation').get('Article').get('Journal').get('ISOAbbreviation')
-        if map_paper[COL_JOURNAL] and map_paper[COL_JOURNAL].lower().find(journal_substring) >= 0:
+        if map_paper[COL_JOURNAL] and any([x in map_paper[COL_JOURNAL].lower() for x in list_journal_substring]):
 
             # get the pubmed id
             map_paper[COL_PUBMED] = paper.get('MedlineCitation').get('PMID').get('#text')
@@ -180,7 +181,7 @@ def db_delete_papers(conn, log=False):
     cursor.execute(SQL_DELETE_LINKS)
     conn.commit()
 
-def db_insert_paper_list(cursor, list_paper, log=False):
+def db_insert_paper_list(conn, list_paper, log=False):
     '''
     inserts a list of papers into the corresponding DB tables
     '''
@@ -191,6 +192,12 @@ def db_insert_paper_list(cursor, list_paper, log=False):
 
     # loop through the papers
     for paper in list_paper:
+        # see if paper is already in the db
+        pubmed_id = paper.get(COL_PUBMED)
+        if is_abstract_in_db(cursor, pubmed_id):
+            print("skipping paper: {} that is already in db".format(pubmed_id))
+            continue
+        
         if paper.get(COL_ABSTRACT):
             num_count = num_count + 1
             paper[COL_DATE] = "{}-{}-{}".format(paper[COL_YEAR], paper[COL_MONTH], paper[COL_DAY])
@@ -202,7 +209,7 @@ def db_insert_paper_list(cursor, list_paper, log=False):
 
             try:
                 cursor.execute(SQL_INSERT_ABSTRACT, (paper[COL_PUBMED], paper[COL_TITLE], paper[COL_DATE], paper[COL_JOURNAL], paper[COL_ABSTRACT]))
-                print("\ninserted pubmed: {}".format(paper[COL_PUBMED]))
+                print("\ninserted pubmed: {} from journal: {}".format(paper[COL_PUBMED], paper[COL_JOURNAL]))
 
                 # insert the keyword links
                 db_insert_abstract_links(cursor, paper[COL_PUBMED], paper[COL_ABSTRACT], paper[COL_LINKS], log=log)
@@ -250,6 +257,20 @@ def db_insert_abstract_links(cursor, pubmed_id, text_abstract, set_links, log=Fa
         print("found no abstract id for pubmed: {}".format(pubmed_id))
 
 
+def is_abstract_in_db(cursor, pubmed_id, log=False):
+    '''
+    will return boolean if pubmed id already in db
+    '''
+    is_present = False
+
+    # search the db
+    cursor.execute(SQL_SELECT_ABSTRACT, (pubmed_id))
+    db_result = cursor.fetchall()
+    if db_result:
+        is_present = True
+
+    # return
+    return is_present
 
 
 # main
@@ -267,8 +288,8 @@ if __name__ == "__main__":
     for file_name in files:
         # get the papers for each file
         # list_papers = parse_abstract_file(FILE_TEST_XML)
-        print("reading in file: {}, only keep journals with sub name: {}".format(file_name, TEXT_JOURNAL_SUBNAME))
-        list_papers = parse_abstract_file(file_name, TEXT_JOURNAL_SUBNAME)
+        print("reading in file: {}, only keep journals with sub name: {}".format(file_name, LIST_JOURNAL_SUBNAME))
+        list_papers = parse_abstract_file(file_name, LIST_JOURNAL_SUBNAME)
 
         # insert the paper list
         print("inserting number records: {}\n".format(len(list_papers)))

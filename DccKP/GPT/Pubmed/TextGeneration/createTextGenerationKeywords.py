@@ -10,7 +10,8 @@ import json
 DB_PASSWD = os.environ.get('DB_PASSWD')
 SCHEMA_GPT = "pubmed_gpt"
 DIR_DATA = "/home/javaprog/Data/Broad/GPT/Data/ConvoPubmedV1"
-FILE_DATA = "{}/text_generation_keywords_train_60k.json".format(DIR_DATA)
+# FILE_DATA = "{}/text_generation_keywords_train_60k.json".format(DIR_DATA)
+FILE_DATA = "{}/text_generation_keywords_train_chem_100k.json".format(DIR_DATA)
 SQL_SELECT = "select keyword from {}.pmd_keyword".format(SCHEMA_GPT)
 SQL_WHERE = " where abstract_text like %s"
 SQL_WHERE = " where pubmed_id in (36061186,35928446,36072671,36171883,36173399,35910211,36105085,35754818,35480303)"

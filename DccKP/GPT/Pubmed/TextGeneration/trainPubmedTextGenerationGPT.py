@@ -30,11 +30,12 @@ DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models"
 DIR_DATA_TRAIN="/home/ubuntu/Data/TextGeneration"
 DIR_MODEL="/home/ubuntu/Models"
 DIR_TOKENIZER="/home/ubuntu/Tokenizer"
-FILE_KEYWORDS=DIR_DATA_TRAIN + "/text_generation_keywords_train_60k.json"
+FILE_KEYWORDS=DIR_DATA_TRAIN + "/text_generation_keywords_train_chem_100k.json"
 
 # ML constants
 ML_BATCH_SIZE = 64
 ML_BATCH_SIZE = 96
+ML_BATCH_SIZE = 128
 ML_MODEL_NAME="gpt2"
 ML_MAX_LENGTH_TRAIN=60
 ML_MAX_LENGTH_INFER=60
