@@ -42,7 +42,7 @@ ML_MAX_LENGTH_INFER=60
 # ML_NUM_SIZE_TRAIN=100
 ML_NUM_SIZE_TRAIN=-1
 
-ML_INTERVAL_SAVE_MODEL=20
+ML_INTERVAL_SAVE_MODEL=10
 ML_NUM_EPOCHS=41
 
 # methods 
@@ -200,6 +200,7 @@ if __name__ == "__main__":
     chatData =  DataLoader(chatData, batch_size=ML_BATCH_SIZE)
 
     # save the tokenizer
+    print("saving tokenizer to: {}".format(DIR_TOKENIZER))
     tokenizer.save_pretrained(DIR_TOKENIZER)
 
     # create the model
