@@ -187,7 +187,7 @@ if __name__ == "__main__":
     # file_train = FILE_DATA_TRAIN
     json_data = []
     # get the list of input files
-    files = [file for file in glob.glob(DIR_DATA_TRAIN + "/*.json")]
+    files = [file for file in glob.glob(DIR_DATA_TRAIN + "/text_generation_data*.json")]
     for file_train in files:
         print("download data file: {}".format(file_train))
         temp_data = load_training_data(file_train)
