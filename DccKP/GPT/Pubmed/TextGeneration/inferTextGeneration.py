@@ -22,8 +22,17 @@ DO_SAMPLE=True
 # DIR_DATA_TRAIN="/home/ubuntu/Data/TextGeneration"
 # DIR_MODEL="/home/ubuntu/Models/text_gen_40"
 # DIR_TOKENIZER="/home/ubuntu/Tokenizer"
-DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models/20230510/Models/Text_gen_gpt2_10"
-DIR_TOKENIZER="/home/javaprog/Data/Broad/GPT/Models/20230510/Tokenizer"
+
+# linux
+# DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models/20230510/Models/Text_gen_gpt2_10"
+DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models/20230510geneticsOnly/Models/Text_gen_gpt2_20"
+DIR_TOKENIZER="/home/javaprog/Data/Broad/GPT/Models/20230510geneticsOnly/Tokenizer"
+
+DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models/20230511chemGenetics/Models/Text_gen_gpt2_5"
+DIR_TOKENIZER="/home/javaprog/Data/Broad/GPT/Models/20230511chemGenetics/Tokenizer"
+
+
+# mac
 
 
 # methods
@@ -76,7 +85,6 @@ if __name__ == "__main__":
     test_inference("ACE2 is a gene")
     test_inference("BMI is a phenotype")
     test_inference("cystic fibrosis is a disease")
-    test_inference("dili is a disease")
     test_inference("diabetes is treated by")
     test_inference("atrial fibillation is a disease")
     test_inference("alzheimer's is a disease")
@@ -94,8 +102,6 @@ if __name__ == "__main__":
 
 
     test_inference("alzheimer's is treated by drug")
-    test_inference("alzheimer's is treated by drug")
-    test_inference("alzheimer's is treated by drug")
     test_inference("PPARG pathways")
     test_inference("PPARG diabetes")
     test_inference("PPARG diabetes pathways")
@@ -103,4 +109,12 @@ if __name__ == "__main__":
     test_inference("PPARG is a gene")
     test_inference("PPARG is a gene")
     test_inference("PPARG is a gene")
+
+    test_inference("type 2 diabetes is treated by drug")
+    test_inference("type 2 diabetes is treated by drug")
+    test_inference("type 2 diabetes is treated by drug")
+
+    test_inference("lupus is treated by drug")
+    test_inference("lupus is treated by drug")
+    test_inference("lupus is treated by drug")
 

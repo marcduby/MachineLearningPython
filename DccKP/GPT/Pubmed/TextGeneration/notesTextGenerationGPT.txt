@@ -1,4 +1,45 @@
 
+
+20230511 - results from 60k genetics only model with 20 epochs
+input: PPARG pathways
+output:  PPARG pathways were identified by KEGG pathway anal ysis 
+
+input: PPARG diabetes
+output:  PPARG diabetes is a complex disease with both genetic and environmental factors contributing to its pathogenesis 
+
+input: PPARG diabetes pathways
+output:  PPARG diabetes pathways include the positive regulation of insulin signaling, insulin secretion, and the positive regulation of cell cycle regulation 
+
+input: PPARG is a gene
+output:  PPARG is a gene that has been shown to be associated with blood pressure (BP) and hypertension 
+
+input: PPARG is a gene
+output:  PPARG is a gene that has been shown to be associated with blood pressure (BP) and hypertension 
+
+input: PPARG is a gene
+output:  PPARG is a gene that has been shown to be associated with body mass index (BMI) and obesity 
+
+input: type 2 diabetes is treated by drug
+output:  type 2 diabetes is treated by drug-directed gene therapy 
+
+input: type 2 diabetes is treated by drug
+output:  type 2 diabetes is treated by drug-directed gene therapy 
+
+input: type 2 diabetes is treated by drug
+output:  type 2 diabetes is treated by drug-eluting insulin -like protein ( DMAP ) 
+
+input: lupus is treated by drug
+output:  lupus is treated by drug-like molecules, such as dopamine, serotonin, and pyridoxal 5' - phosphate, which are produced by a number of enzymes 
+
+input: lupus is treated by drug
+output:  lupus is treated by drug-based immunosuppressive drugs and it has been reported that adjuvant treatments can improv e response 
+
+input: lupus is treated by drug
+output:  lupus is treated by drug-like molecules, such as dopamine 
+
+
+
+
 20230510 - chem with 110k data 
 Have ML device: cuda
 added tokens of size: 173396. Tokenizer length went from: 50260 to 114501 
