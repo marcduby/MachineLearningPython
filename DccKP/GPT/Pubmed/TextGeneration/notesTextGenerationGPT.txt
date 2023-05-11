@@ -1,4 +1,15 @@
 
+20230510 - chem with 110k data 
+Have ML device: cuda
+added tokens of size: 173396. Tokenizer length went from: 50260 to 114501 
+download data file: /home/ubuntu/Data/TextGeneration/text_generation_data_train_chem_100k.json
+got json training data of size: 1027295
+got FINAL training set of size: 1027295
+first row of data: <start> [{'@Label': 'BACKGROUND', '@NlmCategory': 'BACKGROUND', 'i': 'SARS1',  'Aminoacyl-tRNA synthetases (ARS) are key enzymes catalysing the first reactions in protein synthesis, with increasingly recognised pleiotropic roles in tumourgenesis, angiogenesis, immune response and lifespan <end>
+size of training data: 1027295
+
+
+
 
 20230510 - added keywords to tokenizer
 - added
