@@ -38,6 +38,11 @@
   - docker pull nginx:<version>
   - docker rm <container_id>
 
+- build an image 
+----------------
+  - no cache 
+    - docker build --no-cache -t u12_core -f u12_core .
+
 
 connecting to mysql on server:
 ------------------------------

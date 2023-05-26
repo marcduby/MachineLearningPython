@@ -26,7 +26,10 @@ new branch:
 
 github ssh issue:
 -----------------
-git@github.com:broadinstitute/genetics-kp-dev.git
+  - https://github.blog/2023-03-23-we-updated-our-rsa-ssh-host-key/
+  - remove old key  
+    - $ ssh-keygen -R github.com
+    
 
 diff:
 -----
