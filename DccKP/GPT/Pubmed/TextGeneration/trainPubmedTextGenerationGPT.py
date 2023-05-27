@@ -35,7 +35,7 @@ FILE_KEYWORDS=DIR_DATA_TRAIN + "/text_generation_keywords_train_chem_100k.json"
 # ML constants
 # ML_BATCH_SIZE = 64
 # ML_BATCH_SIZE = 96
-ML_BATCH_SIZE = 128
+ML_BATCH_SIZE = 160
 ML_MODEL_NAME="gpt2"
 ML_MAX_LENGTH_TRAIN=40
 # ML_MAX_LENGTH_INFER=60
@@ -129,7 +129,8 @@ def infer(str_input):
     return output
 
 def load_tokenizer(model_family, list_keywords=[], log=False):
-    tokenizer = GPT2Tokenizer.from_pretrained(model_family)
+    print("loading tokenizer")
+    # tokenizer = GPT2Tokenizer.from_pretrained(model_family)
     tokenizer = GPT2TokenizerFast.from_pretrained(model_family)
     tokenizer.add_special_tokens({"pad_token": "<pad>", 
                                     "bos_token": "<start>",
