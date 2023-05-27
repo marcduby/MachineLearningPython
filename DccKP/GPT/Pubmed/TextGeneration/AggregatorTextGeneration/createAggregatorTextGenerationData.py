@@ -40,11 +40,11 @@ from {}.data_pathway_genes assoc, {}.data_pathway pathway
 where assoc.pathway_id = pathway.id and pathway.ontology_id is not null
 """.format(SCHEMA_GPT, SCHEMA_GPT, FLOAT_PROB_CUTOFF)
 
-SQL_SELECT_PATHWAY_ASSOCIATIONs = """
-select assoc.id, assoc.gene_code as gene, pathway.pathway_name as pathway_name, pathway.ontology_id
-from {}.data_pathway_genes assoc, {}.data_pathway pathway
-where assoc.pathway_id = pathway.id and pathway.ontology_id is not null
-""".format(SCHEMA_GPT, SCHEMA_GPT, FLOAT_PROB_CUTOFF)
+SQL_SELECT_PATHWAY_ASSOCIATIONS = """
+select assoc.id, pheno.phenotype_name as phenotype_name, pathway.pathway_name as pathway_name, pathway.ontology_id
+from {}.agg_pathway_phenotype assoc, {}.data_pathway pathway, {}.agg_aggregator_phenotype pheno
+where assoc.pathway_code = pathway.pathway_code and pathway.ontology_id is not null and assoc.p_value < 0.05 and assoc.phenotype_code = pheno.phenotype_id
+""".format(SCHEMA_GPT, SCHEMA_GPT, SCHEMA_GPT)
 
 SQL_SELECT_PHENOTYPE_PHENOTYPE_ASSOCIATIONS = """
 select assoc.id, pheno1.phenotype_name as phenotype_name1, pheno2.phenotype_name as phenotype_name2
@@ -177,6 +177,45 @@ def get_list_of_gene_association_sentences(conn, string_select, has_beta = True,
     # return
     return list_sentences, set_keywords
 
+def get_list_of_pathway_association_sentences(conn, string_select, has_beta = True, log=False):
+    '''
+    retrieves the prob beta data from the DB
+    '''
+    cursor = conn.cursor()
+    list_sentences = []
+    set_keywords = set()
+    sentence1 = ""
+    sentence_template1 = "pathway {} with curie {} has a genetic association with {}"
+    sentence2 = ""
+    sentence_template2 = "{} has a genetic association with pathway {} with curie {}"
+
+    # run the qery
+    cursor.execute(string_select)
+
+    # get the results
+    db_results = cursor.fetchall()
+    print("got DB results of size: {}".format(len(db_results)))
+    for row in db_results:
+
+        # get the sentences
+        sentence1 = sentence_template1.format(row[2], row[3], row[1])
+        list_sentences.append(sentence1)
+        sentence2 = sentence_template2.format(row[1], row[2], row[3])
+        list_sentences.append(sentence2)
+
+        # add the keywords
+        set_keywords.add(row[3])
+        set_keywords.update(row[1].split(" "))
+        set_keywords.update(row[2].split(" "))
+
+        if log:
+            # print("db: {}".format(row))
+            print("sentence: {}".format(sentence1))
+            print("sentence: {}".format(sentence2))
+
+    # return
+    return list_sentences, set_keywords
+
 def get_list_of_gene_pathway_sentences(conn, string_select, log=False):
     '''
     retrieves the gene pathway data from the DB
@@ -272,6 +311,13 @@ if __name__ == "__main__":
     # create the keyword set
     set_keywords = {'mild', 'strong', 'firm', 'weak', 'genetic', 'association', 'gene', 'pathway', 'direction', 'positive', 'negative', 'curie'}
 
+    # get pathway phenotype data 
+    list_temp, set_temp = get_list_of_pathway_association_sentences(conn, SQL_SELECT_PATHWAY_ASSOCIATIONS, log=False)
+    print("to process, got pathway phenotype list of size: {} with keyword set of size: {}".format(len(list_temp), len(set_temp)))
+    list_sentences = list_sentences + list_temp
+    set_keywords = set_keywords.union(set_temp)
+    print("after pathway phenotype, sentence list of size: {} with keyword set of size: {}".format(len(list_sentences), len(set_keywords)))
+
     # get genebass data 
     list_temp, set_temp = get_list_of_gene_association_sentences(conn, SQL_SELECT_GENEBASS, log=False)
     print("to process, got genebass list of size: {} with keyword set of size: {}".format(len(list_temp), len(set_temp)))
@@ -300,7 +346,7 @@ if __name__ == "__main__":
     set_keywords = set_keywords.union(set_temp)
     print("after gene pathways, sentence list of size: {} with keyword set of size: {}".format(len(list_sentences), len(set_keywords)))
 
-    # get pathway disease data
+    # get phenotype to phenotype data
     list_temp, set_temp = get_list_of_phenotype_phenotype_sentences(conn, SQL_SELECT_PHENOTYPE_PHENOTYPE_ASSOCIATIONS, log=False)
     print("to process, got phanotype/phenotype list of size: {} with keywords size: {}".format(len(list_temp), len(set_temp)))
     list_sentences = list_sentences + list_temp
