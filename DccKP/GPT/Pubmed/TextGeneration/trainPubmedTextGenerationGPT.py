@@ -3,7 +3,7 @@
 # imports
 from torch.utils.data import Dataset
 import json
-from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from transformers import GPT2LMHeadModel, GPT2Tokenizer, GPT2TokenizerFast
 from torch.optim import Adam
 from torch.utils.data import DataLoader
 import tqdm
@@ -45,7 +45,8 @@ ML_MAX_LENGTH_INFER=30
 # ML_NUM_SIZE_TRAIN=100
 ML_NUM_SIZE_TRAIN=-1
 
-ML_INTERVAL_SAVE_MODEL=5
+# ML_INTERVAL_SAVE_MODEL=5
+ML_INTERVAL_SAVE_MODEL=2
 ML_NUM_EPOCHS=41
 
 # methods 
@@ -75,7 +76,7 @@ def print_elapsed_time(start, num_epoch=0, log=False):
 
 def train(chatData, model, optim, num_epochs=25):
     # log
-    print("training model for epochs: {}".format(num_epochs))
+    print("starting training model for epochs: {}".format(num_epochs))
 
     # loop though epochas to train
     for i in tqdm.tqdm(range(num_epochs)):
@@ -129,6 +130,7 @@ def infer(str_input):
 
 def load_tokenizer(model_family, list_keywords=[], log=False):
     tokenizer = GPT2Tokenizer.from_pretrained(model_family)
+    tokenizer = GPT2TokenizerFast.from_pretrained(model_family)
     tokenizer.add_special_tokens({"pad_token": "<pad>", 
                                     "bos_token": "<start>",
                                     "eos_token": "<end>"})
