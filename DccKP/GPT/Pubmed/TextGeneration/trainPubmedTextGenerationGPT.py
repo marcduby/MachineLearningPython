@@ -178,7 +178,14 @@ class ChatData(Dataset):
 # main
 if __name__ == "__main__":
     # get the keyword list
-    list_keywords = json.load(open(FILE_KEYWORDS, "r"))
+    files = [file for file in glob.glob(DIR_DATA_TRAIN + "/text_generation_keywords*.json")]
+    list_keywords = []
+    for file_train in files:
+        print("download keyword file: {}".format(file_train))
+        temp_data = load_training_data(file_train)
+        list_keywords = list_keywords + temp_data
+    print("got final keyword list of size: {}".format(len(list_keywords)))
+    # list_keywords = json.load(open(FILE_KEYWORDS, "r"))
 
     # get the tokenizer
     tokenizer = load_tokenizer(ML_MODEL_NAME, list_keywords)
