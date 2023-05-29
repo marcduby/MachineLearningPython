@@ -33,6 +33,13 @@ DIR_TOKENIZER="/home/javaprog/Data/Broad/GPT/Models/20230511chemGenetics/Tokeniz
 
 
 # mac
+# chem gen model
+DIR_MODEL="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/ChemGenetics100k/Model"
+DIR_TOKENIZER="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/ChemGenetics100k/Tokenizer"
+
+# gen model
+DIR_MODEL="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Model"
+DIR_TOKENIZER="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Tokenizer"
 
 
 # methods

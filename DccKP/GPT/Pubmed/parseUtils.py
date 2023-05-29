@@ -74,6 +74,7 @@ def create_conversation_list(list_input, str_start="<start> ", str_end=" <end>",
     # return
     return list_result
 
+
 # main
 if __name__ == "__main__":
     # test list delimiter
