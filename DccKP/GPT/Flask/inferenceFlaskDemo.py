@@ -10,8 +10,8 @@ device="cpu"
 print("got device: {}".format((device)))
 ML_TEMPERATURE=0.2
 DO_SAMPLE=True
-MAX_LENGTH=80
-NUM_INFERENCE=10
+MAX_LENGTH=60
+NUM_INFERENCE=5
 
 # chem gen model
 DIR_MODEL="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/ChemGenetics100k/Model"
@@ -60,18 +60,20 @@ def inference():
     str_number = request.args.get("times")
     num_inferences = NUM_INFERENCE
 
+    str_infer = "{} is a gene".format(str_input)
+
     # log
-    print("running inferences of num: {} for str: {}".format(num_inferences, str_input))
+    print("running inferences of num: {} for str: {}".format(num_inferences, str_infer))
 
     # number queries
     if str_number:
         num_inferences = int(str_number)
         
     # query
-    str_response = "<html><div><b>Query: {}</b></div><div><ul>".format((str_input))
+    str_response = "<html><div><b>Query: {}</b></div><div><ul>".format((str_infer))
 
     # get the inference
-    list_result = list_infer(str_input, num_inferences=num_inferences)
+    list_result = list_infer(str_infer, num_inferences=num_inferences)
 
     # build the response
     for item in list_result:
