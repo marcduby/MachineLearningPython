@@ -33,7 +33,8 @@ DIR_TOKENIZER="/home/ubuntu/Tokenizer"
 FILE_KEYWORDS=DIR_DATA_TRAIN + "/text_generation_keywords_train_chem_100k.json"
 
 # ML constants
-ML_BATCH_SIZE = 64
+ML_BATCH_SIZE = 32
+# ML_BATCH_SIZE = 64
 # ML_BATCH_SIZE = 96
 # ML_BATCH_SIZE = 192
 ML_MODEL_NAME="tiiuae/falcon-rw-1b"
