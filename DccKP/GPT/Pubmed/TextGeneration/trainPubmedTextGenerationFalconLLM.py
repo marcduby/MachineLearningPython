@@ -132,7 +132,7 @@ def infer(str_input):
 def load_tokenizer(model_family, list_keywords=[], log=False):
     print("loading tokenizer")
     # tokenizer = GPT2Tokenizer.from_pretrained(model_family)
-    tokenizer = AutoTokenizer.from_pretrained(model_family)
+    tokenizer = AutoTokenizer.from_pretrained(model_family, trust_remote_code=True)
     tokenizer.add_special_tokens({"pad_token": "<pad>", 
                                     "bos_token": "<start>",
                                     "eos_token": "<end>"})
@@ -218,7 +218,7 @@ if __name__ == "__main__":
     tokenizer.save_pretrained(DIR_TOKENIZER)
 
     # create the model
-    model = AutoModelForCausalLM.from_pretrained(ML_MODEL_NAME)
+    model = AutoModelForCausalLM.from_pretrained(ML_MODEL_NAME, trust_remote_code=True)
     model.resize_token_embeddings(len(tokenizer))
     model = model.to(device)
 
