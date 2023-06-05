@@ -1,7 +1,7 @@
 
 # imports
 from flask import Flask, request
-from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from transformers import GPT2LMHeadModel, GPT2Tokenizer, GPT2TokenizerFast
 import torch
 
 # constants 
@@ -10,26 +10,20 @@ device="cpu"
 print("got device: {}".format((device)))
 ML_TEMPERATURE=0.2
 DO_SAMPLE=True
-MAX_LENGTH=60
-NUM_INFERENCE=4
+MAX_LENGTH=80
+NUM_INFERENCE=10
 
 # chem gen model
 DIR_MODEL="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/ChemGenetics100k/Model"
 DIR_TOKENIZER="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/ChemGenetics100k/Tokenizer"
 
 # gen model
-DIR_MODEL="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Model"
-DIR_TOKENIZER="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Tokenizer"
+DIR_ROOT="/Users/mduby/Data/Broad/GPT/Models/FlaskModel/{}"
+# DIR_MODEL="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Model"
+# DIR_TOKENIZER="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Tokenizer"
+DIR_MODEL=DIR_ROOT.format("Model")
+DIR_TOKENIZER=DIR_ROOT.format(("Tokenizer"))
 
-is it accurate 
-does it have provenance 
-is it novel 
-
-drug treats NUM_INFERENCE
-drug target gene
-gene associated with 
-gene affects blah 
- 
 # chem model
 # DIR_MODEL="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Model"
 # DIR_TOKENIZER="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Tokenizer"
@@ -39,6 +33,8 @@ app = Flask(__name__)
 
 # load tokenizer
 tokenizer = GPT2Tokenizer.from_pretrained(DIR_TOKENIZER)
+# tokenizer = GPT2TokenizerFast.from_pretrained(DIR_TOKENIZER)
+print("tokenizer loaded of size: {} and type: {}".format(len(tokenizer), type(tokenizer)))
 
 # load model
 model = GPT2LMHeadModel.from_pretrained(DIR_MODEL)
@@ -64,7 +60,7 @@ def inference():
     num_inferences = NUM_INFERENCE
 
     # log
-    print("running inferences of num: {} for str: {}".format((num_inferences, str_input)))
+    print("running inferences of num: {} for str: {}".format(num_inferences, str_input))
 
     # number queries
     if str_number:
