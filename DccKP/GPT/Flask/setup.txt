@@ -1,0 +1,2 @@
+export FLASK_APP=inferenceFlaskDemo
+export FLASK_ENV=development
