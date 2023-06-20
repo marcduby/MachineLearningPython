@@ -1,0 +1,202 @@
+{
+    "biolink_version": "3.2.0",
+    "message": {
+        "auxiliary_graphs": {
+            "0_graph_aux": {
+                "edges": [
+                    "68_PUBCHEM.COMPOUND:5852_NCBIGene:351",
+                    "5222001_NCBIGene:351_MONDO:0004975",
+                    "2121421_GO:1905906_NCBIGene:351",
+                    "8071297_GO:1905906_MONDO:0004975"
+                ]
+            }
+        },
+        "knowledge_graph": {
+            "edges": {
+                "0_creative": {
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:support_graphs",
+                            "value": [
+                                "0_graph_aux"
+                            ]
+                        }
+                    ],
+                    "object": "MONDO:0004975",
+                    "predicate": "biolink:affects",
+                    "sources": [
+                        {
+                            "resource_id": "infores:genetics-data-provider",
+                            "resource_role": "primary_knowledge_source",
+                            "source_record_urls": [
+                                "https://github.com/broadinstitute/genetics-kp-dev/blob/master/DATA/Details/magmaData.md"
+                            ]
+                        }
+                    ],
+                    "subject": "PUBCHEM.COMPOUND:5852"
+                },
+                "2121421_GO:1905906_NCBIGene:351": {
+                    "attributes": [],
+                    "object": "NCBIGene:351",
+                    "predicate": "biolink:has_part",
+                    "sources": [
+                        {
+                            "resource_id": "infores:genetics-data-provider",
+                            "resource_role": "primary_knowledge_source",
+                            "source_record_urls": [
+                                "https://github.com/broadinstitute/genetics-kp-dev/blob/master/DATA/Details/magmaData.md"
+                            ]
+                        }
+                    ],
+                    "subject": "GO:1905906"
+                },
+                "5222001_NCBIGene:351_MONDO:0004975": {
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:p_value",
+                            "original_attribute_name": "pvalue",
+                            "value": 1.4274e-07
+                        }
+                    ],
+                    "object": "MONDO:0004975",
+                    "predicate": "biolink:genetic_association",
+                    "sources": [
+                        {
+                            "resource_id": "infores:genetics-data-provider",
+                            "resource_role": "primary_knowledge_source",
+                            "source_record_urls": [
+                                "https://github.com/broadinstitute/genetics-kp-dev/blob/master/DATA/Details/magmaData.md"
+                            ]
+                        }
+                    ],
+                    "subject": "NCBIGene:351"
+                },
+                "68_PUBCHEM.COMPOUND:5852_NCBIGene:351": {
+                    "attributes": [],
+                    "object": "NCBIGene:351",
+                    "predicate": "biolink:increases_metabolic_processing_of",
+                    "sources": [
+                        {
+                            "resource_id": "infores:molepro",
+                            "resource_role": "primary_knowledge_source",
+                            "source_record_urls": [
+                                "https://github.com/broadinstitute/molecular-data-provider"
+                            ]
+                        },
+                        {
+                            "resource_id": "infores:genetics-data-provider",
+                            "resource_role": "aggregator_knowledge_source",
+                            "source_record_urls": [
+                                "https://github.com/broadinstitute/genetics-kp-dev/blob/master/DATA/Details/geneticsKp.md"
+                            ]
+                        }
+                    ],
+                    "subject": "PUBCHEM.COMPOUND:5852"
+                },
+                "8071297_GO:1905906_MONDO:0004975": {
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:p_value",
+                            "original_attribute_name": "pvalue",
+                            "value": 3.182e-07
+                        }
+                    ],
+                    "object": "MONDO:0004975",
+                    "predicate": "biolink:genetic_association",
+                    "sources": [
+                        {
+                            "resource_id": "infores:genetics-data-provider",
+                            "resource_role": "primary_knowledge_source",
+                            "source_record_urls": [
+                                "https://github.com/broadinstitute/genetics-kp-dev/blob/master/DATA/Details/magmaData.md"
+                            ]
+                        }
+                    ],
+                    "subject": "GO:1905906"
+                }
+            },
+            "nodes": {
+                "GO:1905906": {
+                    "categories": [
+                        "biolink:Pathway"
+                    ],
+                    "name": "Gobp - Regulation Of Amyloid Fibril Formation"
+                },
+                "MONDO:0004975": {
+                    "categories": [
+                        "biolink:Disease"
+                    ],
+                    "name": "Alzheimer's disease"
+                },
+                "NCBIGene:351": {
+                    "categories": [
+                        "biolink:Gene"
+                    ],
+                    "name": "APP"
+                },
+                "PUBCHEM.COMPOUND:5852": {
+                    "categories": [
+                        "biolink:SmallMolecule"
+                    ],
+                    "name": "penicillamine"
+                }
+            }
+        },
+        "query_graph": {
+            "edges": {
+                "e0": {
+                    "knowledge_type": "inferred",
+                    "object": "disease",
+                    "predicates": [
+                        "biolink:affects"
+                    ],
+                    "subject": "drug"
+                }
+            },
+            "nodes": {
+                "disease": {
+                    "categories": [
+                        "biolink:Disease"
+                    ],
+                    "ids": [
+                        "MONDO:0004975"
+                    ]
+                },
+                "drug": {
+                    "categories": [
+                        "biolink:ChemicalEntity"
+                    ]
+                }
+            }
+        },
+        "results": [
+            {
+                "analyses": [
+                    {
+                        "edge_bindings": {
+                            "e0": [
+                                {
+                                    "id": "0_creative"
+                                }
+                            ]
+                        },
+                        "resource_id": "infores:genetics-data-provider"
+                    }
+                ],
+                "node_bindings": {
+                    "drug": [
+                        {
+                            "id": "PUBCHEM.COMPOUND:5852"
+                        }
+                    ],
+                    "gene": [
+                        {
+                            "id": "NCBIGene:351"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "schema_version": "1.4.0"
+}

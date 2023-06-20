@@ -11,7 +11,7 @@ DB_PASSWD = os.environ.get('DB_PASSWD')
 SCHEMA_GPT = "tran_upkeep"
 DIR_DATA = "/home/javaprog/Data/Broad/GPT/Data/TextGenerationAggregator"
 FILE_DATA = "{}/text_generation_data_aggregator.json".format(DIR_DATA)
-FILE_KEYWORDS = "{}/text_generation_aggregator_keywords.json".format(DIR_DATA)
+FILE_KEYWORDS = "{}/text_generation_keywords_aggregator.json".format(DIR_DATA)
 
 FLOAT_PROB_CUTOFF=0.2
 
@@ -311,12 +311,12 @@ if __name__ == "__main__":
     # create the keyword set
     set_keywords = {'mild', 'strong', 'firm', 'weak', 'genetic', 'association', 'gene', 'pathway', 'direction', 'positive', 'negative', 'curie'}
 
-    # get pathway phenotype data 
-    list_temp, set_temp = get_list_of_pathway_association_sentences(conn, SQL_SELECT_PATHWAY_ASSOCIATIONS, log=False)
-    print("to process, got pathway phenotype list of size: {} with keyword set of size: {}".format(len(list_temp), len(set_temp)))
-    list_sentences = list_sentences + list_temp
-    set_keywords = set_keywords.union(set_temp)
-    print("after pathway phenotype, sentence list of size: {} with keyword set of size: {}".format(len(list_sentences), len(set_keywords)))
+    # # get pathway phenotype data 
+    # list_temp, set_temp = get_list_of_pathway_association_sentences(conn, SQL_SELECT_PATHWAY_ASSOCIATIONS, log=False)
+    # print("to process, got pathway phenotype list of size: {} with keyword set of size: {}".format(len(list_temp), len(set_temp)))
+    # list_sentences = list_sentences + list_temp
+    # set_keywords = set_keywords.union(set_temp)
+    # print("after pathway phenotype, sentence list of size: {} with keyword set of size: {}".format(len(list_sentences), len(set_keywords)))
 
     # get genebass data 
     list_temp, set_temp = get_list_of_gene_association_sentences(conn, SQL_SELECT_GENEBASS, log=False)
@@ -325,12 +325,12 @@ if __name__ == "__main__":
     set_keywords = set_keywords.union(set_temp)
     print("after genebass, sentence list of size: {} with keyword set of size: {}".format(len(list_sentences), len(set_keywords)))
 
-    # get 600k data
-    list_temp, set_temp = get_list_of_gene_association_sentences(conn, SQL_SELECT_600k, log=False)
-    print("to process, got 600k gene phenotype list of size: {} with keywords size: {}".format(len(list_temp), len(set_temp)))
-    list_sentences = list_sentences + list_temp
-    set_keywords = set_keywords.union(set_temp)
-    print("after gene pathways, sentence list of size: {} with keyword set of size: {}".format(len(list_sentences), len(set_keywords)))
+    # # get 600k data
+    # list_temp, set_temp = get_list_of_gene_association_sentences(conn, SQL_SELECT_600k, log=False)
+    # print("to process, got 600k gene phenotype list of size: {} with keywords size: {}".format(len(list_temp), len(set_temp)))
+    # list_sentences = list_sentences + list_temp
+    # set_keywords = set_keywords.union(set_temp)
+    # print("after gene pathways, sentence list of size: {} with keyword set of size: {}".format(len(list_sentences), len(set_keywords)))
 
     # get magma data
     list_temp, set_temp = get_list_of_gene_association_sentences(conn, SQL_SELECT_MAGMA, has_beta=False, log=False)
@@ -339,12 +339,12 @@ if __name__ == "__main__":
     set_keywords = set_keywords.union(set_temp)
     print("after gene pathways, sentence list of size: {} with keyword set of size: {}".format(len(list_sentences), len(set_keywords)))
 
-    # get gene pathway data
-    list_temp, set_temp = get_list_of_gene_pathway_sentences(conn, SQL_SELECT_PATHWAY_GENES, log=False)
-    print("to process, got pathway gene list of size: {} with keywords size: {}".format(len(list_temp), len(set_temp)))
-    list_sentences = list_sentences + list_temp
-    set_keywords = set_keywords.union(set_temp)
-    print("after gene pathways, sentence list of size: {} with keyword set of size: {}".format(len(list_sentences), len(set_keywords)))
+    # # get gene pathway data
+    # list_temp, set_temp = get_list_of_gene_pathway_sentences(conn, SQL_SELECT_PATHWAY_GENES, log=False)
+    # print("to process, got pathway gene list of size: {} with keywords size: {}".format(len(list_temp), len(set_temp)))
+    # list_sentences = list_sentences + list_temp
+    # set_keywords = set_keywords.union(set_temp)
+    # print("after gene pathways, sentence list of size: {} with keyword set of size: {}".format(len(list_sentences), len(set_keywords)))
 
     # get phenotype to phenotype data
     list_temp, set_temp = get_list_of_phenotype_phenotype_sentences(conn, SQL_SELECT_PHENOTYPE_PHENOTYPE_ASSOCIATIONS, log=False)

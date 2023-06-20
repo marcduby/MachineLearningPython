@@ -1,0 +1,148 @@
+{
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "n0": {
+                    "id": "diabetes"
+                },
+                "n1": {
+                    "categories": [
+                        "drug"
+                    ]
+                }
+            },
+            "edges": {
+                "e0": {
+                    "predicates": [
+                        "treats"
+                    ],
+                    "subject": "n1",
+                    "object": "n0",
+                    "knowledge_type": "inferred"
+                }
+            }
+        },
+        "knowledge_graph": {
+            "nodes": {
+                "diabetes": {
+                    "categories": [
+                        "biolink:Disease"
+                    ],
+                    "name": "diabetes"
+                },
+                "metformin": {
+                    "categories": [
+                        "biolink:SmallMolecule"
+                    ],
+                    "name": "metformin"
+                },
+                "hypoglycemia": {
+                    "categories": [
+                        "biolink:Disease"
+                    ],
+                    "name": "hypoglycemia"
+                },
+                "extra_node": {
+                    "categories": [
+                        "biolink:SmallMolecule"
+                    ],
+                    "name": "OBATOCLAX MESYLATE"
+                }
+            },
+            "edges": {
+                "e01": {
+                    "subject": "metformin",
+                    "object": "diabetes",
+                    "predicate": "treats",
+                },
+                "e02": {
+                    "subject": "diabetes",
+                    "object": "hypoglycemia",
+                    "predicate": "similar_to"
+                },
+                "e12": {
+                    "subject": "metformin",
+                    "object": "hypoglycemia",
+                    "predicate": "contraindicated for"
+                },
+                "creative_edge": {
+                    "subject": "metformin",
+                    "object": "diabetes",
+                    "predicate": "treats",
+                    "attributes": [
+                        {
+                            "attribute_type_id": "biolink:support_graphs",
+                            "values": [
+                                "a0"
+                            ]
+                        }
+                    ]
+                },
+                "extra_edge0": {
+                    "subject": "metformin",
+                    "object": "diabetes",
+                    "predicate": "co-occurs in literature with"
+                },
+                "extra_edge1": {
+                    "subject": "metformin",
+                    "object": "extra_node",
+                    "predicate": "related to"
+                }
+            }
+        },
+        "auxiliary_graphs": {
+            "a0": {
+                "edges": [
+                    "e02",
+                    "e12"
+                ]
+            },
+            "a1": {
+                "edges": [
+                    "extra_edge0"
+                ]
+            },
+            "a2": {
+                "edges"[
+                    "extra_edge1"
+                ]
+            }
+        },
+        "results": [
+            {
+                "node_bindings": {
+                    "n0": [
+                        {
+                            "id": "diabetes"
+                        }
+                    ],
+                    "n1": [
+                        {
+                            "id": "metformin"
+                        }
+                    ]
+                },
+                "analyses": [
+                    {
+                        "resource_id": "infores:ara0",
+                        "edge_bindings": {
+                            "e0": [
+                                {
+                                    "id": "e01"
+                                },
+                                {
+                                    "id": "creative_edge"
+                                }
+                            ]
+                        },
+                        "support_graphs": [
+                            "a1",
+                            "a2"
+                        ]
+                    }
+                ],
+                "score": 0.7
+            }
+        ]
+    }
+}

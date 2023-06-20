@@ -11,7 +11,7 @@ tagging:
 merging changes from another branch:
 ------------------------------------
   - git checkout from_branch
-  - git pull
+  - git pull`
   - git checkout to_branch
   - git pull
   - git merge from_branch

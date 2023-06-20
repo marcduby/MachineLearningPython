@@ -11,6 +11,7 @@ print("got device: {}".format((device)))
 ML_TEMPERATURE=0.2
 DO_SAMPLE=True
 MAX_LENGTH=80
+MAX_LENGTH=60
 NUM_INFERENCE=10
 
 # chem gen model
@@ -23,6 +24,14 @@ DIR_ROOT="/Users/mduby/Data/Broad/GPT/Models/FlaskModel/{}"
 # DIR_TOKENIZER="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Tokenizer"
 DIR_MODEL=DIR_ROOT.format("Model")
 DIR_TOKENIZER=DIR_ROOT.format(("Tokenizer"))
+DIR_MODEL="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Model"
+DIR_TOKENIZER="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Tokenizer"
+
+# gen aggregator model
+DIR_MODEL="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Model"
+DIR_TOKENIZER="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Tokenizer"
+DIR_MODEL="/home/javaprog/Data/Broad/GPT/Models/FlaskModel/Model"
+DIR_TOKENIZER="/home/javaprog/Data/Broad/GPT/Models/FlaskModel/Tokenizer"
 
 # chem model
 # DIR_MODEL="/Users/mduby/Data/Broad/GPT/Pubmed/Saved/Genetics60k/Model"
@@ -32,9 +41,11 @@ DIR_TOKENIZER=DIR_ROOT.format(("Tokenizer"))
 app = Flask(__name__)
 
 # load tokenizer
-tokenizer = GPT2Tokenizer.from_pretrained(DIR_TOKENIZER)
-# tokenizer = GPT2TokenizerFast.from_pretrained(DIR_TOKENIZER)
-print("tokenizer loaded of size: {} and type: {}".format(len(tokenizer), type(tokenizer)))
+# tokenizer = GPT2Tokenizer.from_pretrained(DIR_TOKENIZER)
+# # tokenizer = GPT2TokenizerFast.from_pretrained(DIR_TOKENIZER)
+# print("tokenizer loaded of size: {} and type: {}".format(len(tokenizer), type(tokenizer)))
+# tokenizer = GPT2Tokenizer.from_pretrained(DIR_TOKENIZER)
+tokenizer = GPT2TokenizerFast.from_pretrained(DIR_TOKENIZER)
 
 # load model
 model = GPT2LMHeadModel.from_pretrained(DIR_MODEL)
