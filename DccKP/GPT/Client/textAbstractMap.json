@@ -1,0 +1,732 @@
+{'PubmedArticleSet': {'PubmedArticle': {'MedlineCitation': {'@Status': 'MEDLINE', '@Owner': 'NLM', '@IndexingMethod': 'Curated', 'PMID': {'@Version': '1', '#text': '36383675'
+                }, 'DateCompleted': {'Year': '2022', 'Month': '11', 'Day': '21'
+                }, 'DateRevised': {'Year': '2023', 'Month': '04', 'Day': '05'
+                }, 'Article': {'@PubModel': 'Print-Electronic', 'Journal': {'ISSN': {'@IssnType': 'Electronic', '#text': '2375-2548'
+                        }, 'JournalIssue': {'@CitedMedium': 'Internet', 'Volume': '8', 'Issue': '46', 'PubDate': {'Year': '2022', 'Month': 'Nov', 'Day': '18'
+                            }
+                        }, 'Title': 'Science advances', 'ISOAbbreviation': 'Sci Adv'
+                    }, 'ArticleTitle': {'i': 'MAP3K15', '#text': 'Human genetics uncovers  as an obesity-independent therapeutic target for diabetes.'
+                    }, 'Pagination': {'StartPage': 'eadd5430', 'MedlinePgn': 'eadd5430'
+                    }, 'ELocationID': [
+                        {'@EIdType': 'pii', '@ValidYN': 'Y', '#text': 'eadd5430'
+                        },
+                        {'@EIdType': 'doi', '@ValidYN': 'Y', '#text': '10.1126/sciadv.add5430'
+                        }
+                    ], 'Abstract': {'AbstractText': {'i': ['MAP3K15', 'P', 'P', 'P', 'MAP3K15', 'SLC16A11', 'P', 'MAP3K15', 'P', 'MAP3K15'
+                            ], 'sup': ['-10', '-24', '-4'
+                            ], '#text': 'We performed collapsing analyses on 454,
+                            796 UK Biobank (UKB) exomes to detect gene-level associations with diabetes. Recessive carriers of nonsynonymous variants in  were 30% less likely to develop diabetes ( = 5.7 × 10) and had lower glycosylated hemoglobin (β = -0.14 SD units,  = 1.1 × 10). These associations were independent of body mass index, suggesting protection against insulin resistance even in the setting of obesity. We replicated these findings in 96,
+                            811 Admixed Americans in the Mexico City Prospective Study ( < 0.05)Moreover, the protective effect of  variants was stronger in individuals who did not carry the Latino-enriched  risk haplotype ( = 6.0 × 10). Separately, we identified a Finnish-enriched  protein-truncating variant associated with decreased odds of both type 1 and type 2 diabetes ( < 0.05) in FinnGen. No adverse phenotypes were associated with protein-truncating  variants in the UKB, supporting this gene as a therapeutic target for diabetes.'
+                        }
+                    }, 'AuthorList': {'@CompleteYN': 'Y', 'Author': [
+                            {'@ValidYN': 'Y', 'LastName': 'Nag', 'ForeName': 'Abhishek', 'Initials': 'A', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0002-4638-2433'
+                                }, 'AffiliationInfo': {'Affiliation': 'Centre for Genomics Research, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Cambridge, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Dhindsa', 'ForeName': 'Ryan S', 'Initials': 'RS', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0002-8965-0813'
+                                }, 'AffiliationInfo': {'Affiliation': 'Centre for Genomics Research, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Waltham, MA, USA.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Mitchell', 'ForeName': 'Jonathan', 'Initials': 'J', 'AffiliationInfo': {'Affiliation': 'Centre for Genomics Research, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Cambridge, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Vasavda', 'ForeName': 'Chirag', 'Initials': 'C', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0003-4558-4698'
+                                }, 'AffiliationInfo': {'Affiliation': 'Centre for Genomics Research, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Waltham, MA, USA.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Harper', 'ForeName': 'Andrew R', 'Initials': 'AR', 'AffiliationInfo': {'Affiliation': 'Centre for Genomics Research, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Cambridge, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Vitsios', 'ForeName': 'Dimitrios', 'Initials': 'D', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0002-8939-5445'
+                                }, 'AffiliationInfo': {'Affiliation': 'Centre for Genomics Research, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Cambridge, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Ahnmark', 'ForeName': 'Andrea', 'Initials': 'A', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0001-8932-4631'
+                                }, 'AffiliationInfo': {'Affiliation': 'Bioscience Metabolism, Early CVRM, BioPharmaceuticals R&D, AstraZeneca, Gothenburg, Sweden.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Bilican', 'ForeName': 'Bilada', 'Initials': 'B', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0002-3057-2654'
+                                }, 'AffiliationInfo': {'Affiliation': 'Discovery Biology, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Gothenburg, Sweden.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Madeyski-Bengtson', 'ForeName': 'Katja', 'Initials': 'K', 'AffiliationInfo': {'Affiliation': 'Discovery Biology, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Gothenburg, Sweden.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Zarrouki', 'ForeName': 'Bader', 'Initials': 'B', 'AffiliationInfo': {'Affiliation': 'Bioscience Metabolism, Early CVRM, BioPharmaceuticals R&D, AstraZeneca, Gothenburg, Sweden.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Zoghbi', 'ForeName': 'Anthony W', 'Initials': 'AW', 'AffiliationInfo': {'Affiliation': 'Centre for Genomics Research, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Waltham, MA, USA.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Wang', 'ForeName': 'Quanli', 'Initials': 'Q', 'AffiliationInfo': {'Affiliation': 'Centre for Genomics Research, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Waltham, MA, USA.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Smith', 'ForeName': 'Katherine R', 'Initials': 'KR', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0002-0329-5938'
+                                }, 'AffiliationInfo': {'Affiliation': 'Centre for Genomics Research, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Cambridge, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Alegre-Díaz', 'ForeName': 'Jesus', 'Initials': 'J', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0001-9390-3871'
+                                }, 'AffiliationInfo': {'Affiliation': 'Faculty of Medicine, National Autonomous University of Mexico, Copilco Universidad, Coyoacán,
+                                    4360 Ciudad de México, Mexico.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Kuri-Morales', 'ForeName': 'Pablo', 'Initials': 'P', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0002-0704-9507'
+                                }, 'AffiliationInfo': {'Affiliation': 'Faculty of Medicine, National Autonomous University of Mexico, Copilco Universidad, Coyoacán,
+                                    4360 Ciudad de México, Mexico.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Berumen', 'ForeName': 'Jaime', 'Initials': 'J', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0001-6707-3317'
+                                }, 'AffiliationInfo': {'Affiliation': 'Faculty of Medicine, National Autonomous University of Mexico, Copilco Universidad, Coyoacán,
+                                    4360 Ciudad de México, Mexico.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Tapia-Conyer', 'ForeName': 'Roberto', 'Initials': 'R', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0003-3814-2904'
+                                }, 'AffiliationInfo': {'Affiliation': 'Faculty of Medicine, National Autonomous University of Mexico, Copilco Universidad, Coyoacán,
+                                    4360 Ciudad de México, Mexico.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Emberson', 'ForeName': 'Jonathan', 'Initials': 'J', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0001-7792-9422'
+                                }, 'AffiliationInfo': {'Affiliation': 'Nuffield Department of Population Health, University of Oxford, Oxford OX3 7LF, England, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Torres', 'ForeName': 'Jason M', 'Initials': 'JM', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0002-7537-7035'
+                                }, 'AffiliationInfo': {'Affiliation': 'Nuffield Department of Population Health, University of Oxford, Oxford OX3 7LF, England, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Collins', 'ForeName': 'Rory', 'Initials': 'R', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0001-8288-8602'
+                                }, 'AffiliationInfo': {'Affiliation': 'Nuffield Department of Population Health, University of Oxford, Oxford OX3 7LF, England, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Smith', 'ForeName': 'David M', 'Initials': 'DM', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0001-6831-280X'
+                                }, 'AffiliationInfo': {'Affiliation': 'Emerging Innovations, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Cambridge, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Challis', 'ForeName': 'Benjamin', 'Initials': 'B', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0002-1130-2851'
+                                }, 'AffiliationInfo': {'Affiliation': 'Translational Science and Experimental Medicine, Early CVRM, BioPharmaceuticals R&D, AstraZeneca, Cambridge, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Paul', 'ForeName': 'Dirk S', 'Initials': 'DS', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0002-8230-0116'
+                                }, 'AffiliationInfo': {'Affiliation': 'Centre for Genomics Research, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Cambridge, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Bohlooly-Y', 'ForeName': 'Mohammad', 'Initials': 'M', 'AffiliationInfo': {'Affiliation': 'Discovery Biology, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Gothenburg, Sweden.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Snowden', 'ForeName': 'Mike', 'Initials': 'M', 'AffiliationInfo': {'Affiliation': 'Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Cambridge, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Baker', 'ForeName': 'David', 'Initials': 'D', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0002-8020-3275'
+                                }, 'AffiliationInfo': {'Affiliation': 'Bioscience Metabolism, Early CVRM, BioPharmaceuticals R&D, AstraZeneca, Cambridge, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Fritsche-Danielson', 'ForeName': 'Regina', 'Initials': 'R', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0003-0582-6429'
+                                }, 'AffiliationInfo': {'Affiliation': 'Early CVRM, BioPharmaceuticals R&D, AstraZeneca, Gothenburg, Sweden.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Pangalos', 'ForeName': 'Menelas N', 'Initials': 'MN', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0001-9783-0956'
+                                }, 'AffiliationInfo': {'Affiliation': 'BioPharmaceuticals R&D, AstraZeneca, Cambridge, UK.'
+                                }
+                            },
+                            {'@ValidYN': 'Y', 'LastName': 'Petrovski', 'ForeName': 'Slavé', 'Initials': 'S', 'Identifier': {'@Source': 'ORCID', '#text': '0000-0002-1527-961X'
+                                }, 'AffiliationInfo': [
+                                    {'Affiliation': 'Centre for Genomics Research, Discovery Sciences, BioPharmaceuticals R&D, AstraZeneca, Cambridge, UK.'
+                                    },
+                                    {'Affiliation': 'Department of Medicine, University of Melbourne, Austin Health, Melbourne, Victoria, Australia.'
+                                    }
+                                ]
+                            }
+                        ]
+                    }, 'Language': 'eng', 'GrantList': {'@CompleteYN': 'Y', 'Grant': [
+                            {'GrantID': 'G0300622', 'Acronym': 'MRC_', 'Agency': 'Medical Research Council', 'Country': 'United Kingdom'
+                            },
+                            {'GrantID': 'MC_PC_12027', 'Acronym': 'MRC_', 'Agency': 'Medical Research Council', 'Country': 'United Kingdom'
+                            },
+                            {'GrantID': 'CH/1996001/9454', 'Acronym': 'BHF_', 'Agency': 'British Heart Foundation', 'Country': 'United Kingdom'
+                            },
+                            {'GrantID': 'MC_UU_00017/2', 'Acronym': 'MRC_', 'Agency': 'Medical Research Council', 'Country': 'United Kingdom'
+                            },
+                            {'GrantID': 'MC_PC_12029', 'Acronym': 'MRC_', 'Agency': 'Medical Research Council', 'Country': 'United Kingdom'
+                            },
+                            {'GrantID': 'MC_U137686854', 'Acronym': 'MRC_', 'Agency': 'Medical Research Council', 'Country': 'United Kingdom'
+                            },
+                            {'GrantID': 'RG/18/13/33946', 'Acronym': 'BHF_', 'Agency': 'British Heart Foundation', 'Country': 'United Kingdom'
+                            },
+                            {'GrantID': '058299', 'Acronym': 'WT_', 'Agency': 'Wellcome Trust', 'Country': 'United Kingdom'
+                            },
+                            {'GrantID': 'MC_PC_12028', 'Acronym': 'MRC_', 'Agency': 'Medical Research Council', 'Country': 'United Kingdom'
+                            },
+                            {'GrantID': 'RG/13/13/30194', 'Acronym': 'BHF_', 'Agency': 'British Heart Foundation', 'Country': 'United Kingdom'
+                            },
+                            {'GrantID': 'MC_UU_00017/3', 'Acronym': 'MRC_', 'Agency': 'Medical Research Council', 'Country': 'United Kingdom'
+                            },
+                            {'GrantID': 'MC_EX_G0801669', 'Acronym': 'MRC_', 'Agency': 'Medical Research Council', 'Country': 'United Kingdom'
+                            },
+                            {'GrantID': 'CH/12/2/29428', 'Acronym': 'BHF_', 'Agency': 'British Heart Foundation', 'Country': 'United Kingdom'
+                            }
+                        ]
+                    }, 'PublicationTypeList': {'PublicationType': {'@UI': 'D016428', '#text': 'Journal Article'
+                        }
+                    }, 'ArticleDate': {'@DateType': 'Electronic', 'Year': '2022', 'Month': '11', 'Day': '16'
+                    }
+                }, 'MedlineJournalInfo': {'Country': 'United States', 'MedlineTA': 'Sci Adv', 'NlmUniqueID': '101653440', 'ISSNLinking': '2375-2548'
+                }, 'ChemicalList': {'Chemical': [
+                        {'RegistryNumber': '0', 'NameOfSubstance': {'@UI': 'D027501', '#text': 'Monocarboxylic Acid Transporters'
+                            }
+                        },
+                        {'RegistryNumber': '0', 'NameOfSubstance': {'@UI': 'C586426', '#text': 'SLC16A11 protein, human'
+                            }
+                        },
+                        {'RegistryNumber': 'EC 2.7.11.25', 'NameOfSubstance': {'@UI': 'C550123', '#text': 'MAP3K15 protein, human'
+                            }
+                        },
+                        {'RegistryNumber': 'EC 2.7.11.25', 'NameOfSubstance': {'@UI': 'D020930', '#text': 'MAP Kinase Kinase Kinases'
+                            }
+                        }
+                    ]
+                }, 'CitationSubset': 'IM', 'MeshHeadingList': {'MeshHeading': [
+                        {'DescriptorName': {'@UI': 'D006801', '@MajorTopicYN': 'N', '#text': 'Humans'
+                            }
+                        },
+                        {'DescriptorName': {'@UI': 'D003924', '@MajorTopicYN': 'Y', '#text': 'Diabetes Mellitus, Type 2'
+                            }, 'QualifierName': {'@UI': 'Q000235', '@MajorTopicYN': 'N', '#text': 'genetics'
+                            }
+                        },
+                        {'DescriptorName': {'@UI': 'D020022', '@MajorTopicYN': 'N', '#text': 'Genetic Predisposition to Disease'
+                            }
+                        },
+                        {'DescriptorName': {'@UI': 'D027501', '@MajorTopicYN': 'N', '#text': 'Monocarboxylic Acid Transporters'
+                            }, 'QualifierName': {'@UI': 'Q000235', '@MajorTopicYN': 'N', '#text': 'genetics'
+                            }
+                        },
+                        {'DescriptorName': {'@UI': 'D009765', '@MajorTopicYN': 'N', '#text': 'Obesity'
+                            }, 'QualifierName': {'@UI': 'Q000235', '@MajorTopicYN': 'N', '#text': 'genetics'
+                            }
+                        },
+                        {'DescriptorName': {'@UI': 'D011446', '@MajorTopicYN': 'N', '#text': 'Prospective Studies'
+                            }
+                        },
+                        {'DescriptorName': {'@UI': 'D020930', '@MajorTopicYN': 'Y', '#text': 'MAP Kinase Kinase Kinases'
+                            }, 'QualifierName': {'@UI': 'Q000235', '@MajorTopicYN': 'N', '#text': 'genetics'
+                            }
+                        }
+                    ]
+                }
+            }, 'PubmedData': {'History': {'PubMedPubDate': [
+                        {'@PubStatus': 'entrez', 'Year': '2022', 'Month': '11', 'Day': '16', 'Hour': '14', 'Minute': '5'
+                        },
+                        {'@PubStatus': 'pubmed', 'Year': '2022', 'Month': '11', 'Day': '17', 'Hour': '6', 'Minute': '0'
+                        },
+                        {'@PubStatus': 'medline', 'Year': '2022', 'Month': '11', 'Day': '19', 'Hour': '6', 'Minute': '0'
+                        }
+                    ]
+                }, 'PublicationStatus': 'ppublish', 'ArticleIdList': {'ArticleId': [
+                        {'@IdType': 'pubmed', '#text': '36383675'
+                        },
+                        {'@IdType': 'mid', '#text': 'EMS157313'
+                        },
+                        {'@IdType': 'pmc', '#text': 'PMC9668288'
+                        },
+                        {'@IdType': 'doi', '#text': '10.1126/sciadv.add5430'
+                        }
+                    ]
+                }, 'ReferenceList': {'Reference': [
+                        {'Citation': 'Saeedi P., Petersohn I., Salpea P., Malanda B., Karuranga S., Unwin N., Colagiuri S., Guariguata L., Motala A. A., Ogurtsova K., Shaw J. E., Bright D., Williams R.; IDF Diabetes Atlas Committee , Global and regional diabetes prevalence estimates for 2019 and projections for 2030 and 2045: Results from the International Diabetes Federation Diabetes Atlas,
+                            9th edition. Diabetes Res. Clin. Pract. 157,
+                            107843 (2019).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '31518657'
+                                }
+                            }
+                        },
+                        {'Citation': 'Deshpande A. D., Harris-Hayes M., Schootman M., Epidemiology of diabetes and diabetes-related complications. Phys. Ther. 88,
+                            1254–1264 (2008).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC3870323'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '18801858'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Cnop M., Welsh N., Jonas J.-C., Jörns A., Lenzen S., Eizirik D. L., Mechanisms of pancreatic beta-cell death in type 1 and type 2 diabetes: Many differences, few similarities. Diabetes 54 Suppl 2, S97–S107 (2005).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '16306347'
+                                }
+                            }
+                        },
+                        {'Citation': 'Pociot F., Type 1 diabetes genome-wide association studies: Not to be lost in translation. Clin Transl Immunology 6, e162 (2017).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC5750451'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '29333267'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Mahajan A., Taliun D., Thurner M., Robertson N. R., Torres J. M., Rayner N. W., Payne A. J., Steinthorsdottir V., Scott R. A., Grarup N., Cook J. P., Schmidt E. M., Wuttke M., Sarnowski C., Mägi R., Nano J., Gieger C., Trompet S., Lecoeur C., Preuss M. H., Prins B. P., Guo X., Bielak L. F., Below J. E., Bowden D. W., Chambers J. C., Kim Y. J., Ng M. C. Y., Petty L. E., Sim X., Zhang W., Bennett A. J., Bork-Jensen J., Brummett C. M., Canouil M., Kardt K.-U. E., Fischer K., Kardia S. L. R., Kronenberg F., Läll K., Liu C.-T., Locke A. E., Luan J., Ntalla I., Nylander V., Schönherr S., Schurmann C., Yengo L., Bottinger E. P., Brandslund I., Christensen C., Dedoussis G., Florez J. C., Ford I., Franco O. H., Frayling T. M., Giedraitis V., Hackinger S., Hattersley A. T., Herder C., Ikram M. A., Ingelsson M., Jørgensen M. E., Jørgensen T., Kriebel J., Kuusisto J., Ligthart S., Lindgren C. M., Linneberg A., Lyssenko V., Mamakou V., Meitinger T., Mohlke K. L., Morris A. D., Nadkarni G., Pankow J. S., Peters A., Sattar N., Stančáková A., Strauch K., Taylor K. D., Thorand B., Thorleifsson G., Thorsteinsdottir U., Tuomilehto J., Witte D. R., Dupuis J., Peyser P. A., Zeggini E., Loos R. J. F., Froguel P., Ingelsson E., Lind L., Groop L., Laakso M., Collins F. S., Jukema J. W., Palmer C. N. A., Grallert H., Metspalu A., Dehghan A., Köttgen A., Abecasis G. R., Meigs J. B., Rotter J. I., Marchini J., Pedersen O., Hansen T., Langenberg C., Wareham N. J., Stefansson K., Gloyn A. L., Morris A. P., Boehnke M., McCarthy M. I., Fine-mapping type 2 diabetes loci to single-variant resolution using high-density imputation and islet-specific epigenome maps. Nat. Genet. 50,
+                            1505–1513 (2018).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC6287706'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '30297969'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Vujkovic M., Keaton J. M., Lynch J. A., Miller D. R., Zhou J., Tcheandjieu C., Huffman J. E., Assimes T. L., Lorenz K., Zhu X., Hilliard A. T., Judy R. L., Huang J., Lee K. M., Klarin D., Pyarajan S., Danesh J., Melander O., Rasheed A., Mallick N. H., Hameed S., Qureshi I. H., Afzal M. N., Malik U., Jalal A., Abbas S., Sheng X., Gao L., Kaestner K. H., Susztak K., Sun Y. V., DuVall S. L., Cho K., Lee J. S., Gaziano J. M., Phillips L. S., Meigs J. B., Reaven P. D., Wilson P. W., Edwards T. L., Rader D. J., Damrauer S. M., O’Donnell C. J., Tsao P. S.; The HPAP Consortium; Regeneron Genetics Center; VA Million Veteran Program, Chang K.-M., Voight B. F., Saleheen D., Discovery of 318 new risk loci for type 2 diabetes and related vascular outcomes among 1.4 million participants in a multi-ancestry meta-analysis. Nat. Genet. 52,
+                            680–691 (2020).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC7343592'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '32541925'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Cohen J. C., Boerwinkle E., Mosley T. H., Hobbs H. H., Sequence variations in PCSK9, low LDL, and protection against coronary heart disease. N. Engl. J. Med. 354,
+                            1264–1272 (2006).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '16554528'
+                                }
+                            }
+                        },
+                        {'Citation': 'Akbari P., Gilani A., Sosina O., Kosmicki J. A., Khrimian L., Fang Y.-Y., Persaud T., Garcia V., Sun D., Li A., Mbatchou J., Locke A. E., Benner C., Verweij N., Lin N., Hossain S., Agostinucci K., Pascale J. V., Dirice E., Dunn M., Kraus W. E., Shah S. H., Chen Y.-D. I., Rotter J. I., Rader D. J., Melander O., Still C. D., Mirshahi T., Carey D. J., Berumen-Campos J., Kuri-Morales P., Alegre-Díaz J., Torres J. M., Emberson J. R., Collins R., Balasubramanian S., Hawes A., Jones M., Zambrowicz B., Murphy A. J., Paulding C., Coppola G., Overton J. D., Reid J. G., Shuldiner A. R., Cantor M., Kang H. M., Abecasis G. R., Karalis K., Economides A. N., Marchini J., Yancopoulos G. D., Sleeman M. W., Altarejos J., Gatta G. D., Tapia-Conyer R., Schwartzman M. L., Baras A., Ferreira M. A. R., Lotta L. A., Sequencing of 640,
+                            000 exomes identifies GPR75 variants associated with protection from obesity. Science 373, eabf8683 (2021).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '34210852'
+                                }
+                            }
+                        },
+                        {'Citation': 'Abul-Husn N. S., Cheng X., Li A. H., Xin Y., Schurmann C., Stevis P., Liu Y., Kozlitina J., Stender S., Wood G. C., Stepanchick A. N., Still M. D., McCarthy S., O’Dushlaine C., Packer J. S., Balasubramanian S., Gosalia N., Esopi D., Kim S. Y., Mukherjee S., Lopez A. E., Fuller E. D., Penn J., Chu X., Luo J. Z., Mirshahi U. L., Carey D. J., Still C. D., Feldman M. D., Small A., Damrauer S. M., Rader D. J., Zambrowicz B., Olson W., Murphy A. J., Borecki I. B., Shuldiner A. R., Reid J. G., Overton J. D., Yancopoulos G. D., Hobbs H. H., Cohen J. C., Gottesman O., Teslovich T. M., Baras A., Mirshahi T., Gromada J., Dewey F. E., A protein-truncating HSD17B13 variant and protection from chronic liver disease. N. Engl. J. Med. 378,
+                            1096–1106 (2018).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC6668033'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '29562163'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'UK10K Consortium, Walter K., Min J. L., Huang J., Crooks L., Memari Y., McCarthy S., Perry J. R. B., Xu C., Futema M., Lawson D., Iotchkova V., Schiffels S., Hendricks A. E., Danecek P., Li R., Floyd J., Wain L. V., Barroso I., Humphries S. E., Hurles M. E., Zeggini E., Barrett J. C., Plagnol V., Richards J. B., Greenwood C. M. T., Timpson N. J., Durbin R., Soranzo N., The UK10K project identifies rare variants in health and disease. Nature 526,
+                            82–90 (2015).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC4773891'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '26367797'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Flannick J., Mercader J. M., Fuchsberger C., Udler M. S., Mahajan A., Wessel J., Teslovich T. M., Caulkins L., Koesterer R., Barajas-Olmos F., Blackwell T. W., Boerwinkle E., Brody J. A., Centeno-Cruz F., Chen L., Chen S., Contreras-Cubas C., Córdova E., Correa A., Cortes M., DeFronzo R. A., Dolan L., Drews K. L., Elliott A., Floyd J. S., Gabriel S., Garay-Sevilla M. E., García-Ortiz H., Gross M., Han S., Heard-Costa N. L., Jackson A. U., Jørgensen M. E., Kang H. M., Kelsey M., Kim B.-J., Koistinen H. A., Kuusisto J., Leader J. B., Linneberg A., Liu C.-T., Liu J., Lyssenko V., Manning A. K., Marcketta A., Malacara-Hernandez J. M., Martínez-Hernández A., Matsuo K., Mayer-Davis E., Mendoza-Caamal E., Mohlke K. L., Morrison A. C., Ndungu A., Ng M. C. Y., O’Dushlaine C., Payne A. J., Pihoker C., Post W. S., Preuss M., Psaty B. M., Vasan R. S., Rayner N. W., Reiner A. P., Revilla-Monsalve C., Robertson N. R., Santoro N., Schurmann C., So W. Y., Soberón X., Stringham H. M., Strom T. M., Tam C. H. T., Thameem F., Tomlinson B., Torres J. M., Tracy R. P., van Dam R. M., Vujkovic M., Wang S., Welch R. P., Witte D. R., Wong T.-Y., Atzmon G., Barzilai N., Blangero J., Bonnycastle L. L., Bowden D. W., Chambers J. C., Chan E., Cheng C.-Y., Cho Y. S., Collins F. S., de Vries P. S., Duggirala R., Glaser B., Gonzalez C., Gonzalez M. E., Groop L., Kooner J. S., Kwak S. H., Laakso M., Lehman D. M., Nilsson P., Spector T. D., Tai E. S., Tuomi T., Tuomilehto J., Wilson J. G., Aguilar-Salinas C. A., Bottinger E., Burke B., Carey D. J., Chan J. C. N., Dupuis J., Frossard P., Heckbert S. R., Hwang M. Y., Kim Y. J., Kirchner H. L., Lee J.-Y., Lee J., Loos R. J. F., Ma R. C. W., Morris A. D., O’Donnell C. J., Palmer C. N. A., Pankow J., Park K. S., Rasheed A., Saleheen D., Sim X., Small K. S., Teo Y. Y., Haiman C., Hanis C. L., Henderson B. E., Orozco L., Tusié-Luna T., Dewey F. E., Baras A., Gieger C., Meitinger T., Strauch K., Lange L., Grarup N., Hansen T., Pedersen O., Zeitler P., Dabelea D., Abecasis G., Bell G. I., Cox N. J., Seielstad M., Sladek R., Meigs J. B., Rich S. S., Rotter J. I., Altshuler D., Burtt N. P., Scott L. J., Morris A. P., Florez J. C., McCarthy M. I., Boehnke M., Exome sequencing of 20,
+                            791 cases of type 2 diabetes and 24,
+                            440 controls. Nature 570,
+                            71–76 (2019).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC6699738'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '31118516'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Wang Q., Dhindsa R. S., Carss K., Harper A. R., Nag A., Tachmazidou I., Vitsios D., Deevi S. V. V., Mackay A., Muthas D., Hühn M., Monkley S., Olsson H.; AstraZeneca Genomics Initiative, Wasilewski S., Smith K. R., March R., Platt A., Haefliger C., Petrovski S., Rare variant contribution to human disease in 281,
+                            104 UK Biobank exomes. Nature 597,
+                            527–532 (2021).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC8458098'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '34375979'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Vionnet N., Stoffel M., Takeda J., Yasuda K., Bell G. I., Zouali H., Lesage S., Velho G., Iris F., Passa P., Froguel P., Cohen D., Nonsense mutation in the glucokinase gene causes early-onset non-insulin-dependent diabetes mellitus. Nature 356,
+                            721–722 (1992).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '1570017'
+                                }
+                            }
+                        },
+                        {'Citation': 'Deaton A. M., Parker M. M., Ward L. D., Flynn-Carroll A. O., BonDurant L., Hinkle G., Akbari P., Lotta L. A.; Regeneron Genetics Center; DiscovEHR Collaboration, Baras A., Nioi P., Gene-level analysis of rare variants in 379,
+                            066 whole exome sequences identifies an association of GIGYF1 loss of function with type 2 diabetes. Sci Rep. 11,
+                            21565 (2021).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC8566487'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '34732801'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Yamagata K., Oda N., Kaisaki P. J., Menzel S., Furuta H., Vaxillaire M., Southam L., Cox R. D., Lathrop G. M., Boriraj V. V., Chen X., Cox N. J., Oda Y., Yano H., le Beau M. M., Yamada S., Nishigori H., Takeda J., Fajans S. S., Hattersley A. T., Iwasaki N., Hansen T., Pedersen O., Polonsky K. S., Turner R. C., Velho G., Chèvre J.-C., Froguel P., Bell G. I., Mutations in the hepatocyte nuclear factor-1alpha gene in maturity-onset diabetes of the young (MODY3). Nature 384,
+                            455–458 (1996).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '8945470'
+                                }
+                            }
+                        },
+                        {'Citation': 'Flannick J., Thorleifsson G., Beer N. L., Jacobs S. B. R., Grarup N., Burtt N. P., Mahajan A., Fuchsberger C., Atzmon G., Benediktsson R., Blangero J., Bowden D. W., Brandslund I., Brosnan J., Burslem F., Chambers J., Cho Y. S., Christensen C., Douglas D. A., Duggirala R., Dymek Z., Farjoun Y., Fennell T., Fontanillas P., Forsén T., Gabriel S., Glaser B., Gudbjartsson D. F., Hanis C., Hansen T., Hreidarsson A. B., Hveem K., Ingelsson E., Isomaa B., Johansson S., Jørgensen T., Jørgensen M. E., Kathiresan S., Kong A., Kooner J., Kravic J., Laakso M., Lee J.-Y., Lind L., Lindgren C. M., Linneberg A., Masson G., Meitinger T., Mohlke K. L., Molven A., Morris A. P., Potluri S., Rauramaa R., Ribel-Madsen R., Richard A.-M., Rolph T., Salomaa V., Segrè A. V., Skärstrand H., Steinthorsdottir V., Stringham H. M., Sulem P., Tai E. S., Teo Y. Y., Teslovich T., Thorsteinsdottir U., Trimmer J. K., Tuomi T., Tuomilehto J., Vaziri-Sani F., Voight B. F., Wilson J. G., Boehnke M., McCarthy M. I., Njølstad P. R., Pedersen O.; Go-T2D Consortium; T2D-GENES Consortium, Groop L., Cox D. R., Stefansson K., Altshuler D., Loss-of-function mutations in SLC30A8 protect against type 2 diabetes. Nat. Genet. 46,
+                            357–363 (2014).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC4051628'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '24584071'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Alegre-Díaz J., Herrington W., López-Cervantes M., Gnatiuc L., Ramirez R., Hill M., Baigent C., McCarthy M. I., Lewington S., Collins R., Whitlock G., Tapia-Conyer R., Peto R., Kuri-Morales P., Emberson J. R., Diabetes and cause-specific mortality in Mexico City. N. Engl. J. Med. 375,
+                            1961–1971 (2016).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC5215048'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '27959614'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Karczewski K. J., Francioli L. C., Tiao G., Cummings B. B., Alföldi J., Wang Q., Collins R. L., Laricchia K. M., Ganna A., Birnbaum D. P., Gauthier L. D., Brand H., Solomonson M., Watts N. A., Rhodes D., Singer-Berk M., England E. M., Seaby E. G., Kosmicki J. A., Walters R. K., Tashman K., Farjoun Y., Banks E., Poterba T., Wang A., Seed C., Whiffin N., Chong J. X., Samocha K. E., Pierce-Hoffman E., Zappala Z., O’Donnell-Luria A. H., Minikel E. V., Weisburd B., Lek M., Ware J. S., Vittal C., Armean I. M., Bergelson L., Cibulskis K., Connolly K. M., Covarrubias M., Donnelly S., Ferriera S., Gabriel S., Gentry J., Gupta N., Jeandet T., Kaplan D., Llanwarne C., Munshi R., Novod S., Petrillo N., Roazen D., Ruano-Rubio V., Saltzman A., Schleicher M., Soto J., Tibbetts K., Tolonen C., Wade G., Talkowski M. E.; Genome Aggregation Database Consortium, Neale B. M., Daly M. J., MacArthur D. G., The mutational constraint spectrum quantified from variation in 141,
+                            456 humans. Nature 581,
+                            434–443 (2020).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC7334197'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '32461654'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'SIGMA Type 2 Diabetes Consortium , Sequence variants in SLC16A11 are a common risk factor for type 2 diabetes in Mexico. Nature 506,
+                            97–101 (2014).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC4127086'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '24390345'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Rusu V., Hoch E., Mercader J. M., Tenen D. E., Gymrek M., Hartigan C. R., DeRan M., von Grotthuss M., Fontanillas P., Spooner A., Guzman G., Deik A. A., Pierce K. A., Dennis C., Clish C. B., Carr S. A., Wagner B. K., Schenone M., Ng M. C. Y., Chen B. H.; MEDIA Consortium; SIGMA T2D Consortium, Centeno-Cruz F., Zerrweck C., Orozco L., Altshuler D. M., Schreiber S. L., Florez J. C., Jacobs S. B. R., Lander E. S., Type 2 diabetes variants disrupt function of SLC16A11 through two distinct mechanisms. Cell 170,
+                            199–212.e20 (2017).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC5562285'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '28666119'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'M. I. Kurki, J. Karjalainen, P. Palta, T. P. Sipilä, K. Kristiansson, K. Donner, M. P. Reeve, H. Laivuori, M. Aavikko, M. A. Kaunisto, A. Loukola, E. Lahtela, H. Mattsson, P. Laiho, P. della Briotta Parolo, A. Lehisto, M. Kanai, N. Mars, J. Rämö, T. Kiiskinen, H. O. Heyne, K. Veerapen, S. Rüeger, S. Lemmelä, W. Zhou, S. Ruotsalainen, K. Pärn, T. Hiekkalinna, S. Koskelainen, T. Paajanen, V. Llorens, J. Gracia-Tabuenca, H. Siirtola, K. Reis, A. G. Elnahas, K. Aalto-Setälä, K. Alasoo, M. Arvas, K. Auro, S. Biswas, A. Bizaki-Vallaskangas, O. Carpen, C.-Y. Chen, O. A. Dada, Z. Ding, M. G. Ehm, K. Eklund, M. Färkkilä, H. Finucane, A. Ganna, A. Ghazal, R. R. Graham, E. Green, A. Hakanen, M. Hautalahti, Å. Hedman, M. Hiltunen, R. Hinttala, I. Hovatta, X. Hu, A. Huertas-Vazquez, L. Huilaja, J. Hunkapiller, H. Jacob, J.-N. Jensen, H. Joensuu, S. John, V. Julkunen, M. Jung, J. Junttila, K. Kaarniranta, M. Kähönen, R. M. Kajanne, L. Kallio, R. Kälviäinen, J. Kaprio, N. Kerimov, J. Kettunen, E. Kilpeläinen, T. Kilpi, K. Klinger, V.-M. Kosma, T. Kuopio, V. Kurra, T. Laisk, J. Laukkanen, N. Lawless, A. Liu, S. Longerich, R. Mägi, J. Mäkelä, A. Mäkitie, A. Malarstig, A. Mannermaa, J. Maranville, A. Matakidou, T. Meretoja, S. v Mozaffari, M. E. K. Niemi, M. Niemi, T. Niiranen, C. J. O’Donnell, M. Obeidat, G. Okafo, H. M. Ollila, A. Palomäki, T. Palotie, J. Partanen, D. S. Paul, M. Pelkonen, R. K. Pendergrass, S. Petrovski, A. Pitkäranta, A. Platt, D. Pulford, E. Punkka, P. Pussinen, N. Raghavan, F. Rahimov, D. Rajpal, N. A. Renaud, B. Riley-Gillis, R. Rodosthenous, E. Saarentaus, A. Salminen, E. Salminen, V. Salomaa, J. Schleutker, R. Serpi, H. Shen, R. Siegel, K. Silander, S. Siltanen, S. Soini, H. Soininen, J. H. Sul, I. Tachmazidou, K. Tasanen, P. Tienari, S. Toppila-Salmi, T. Tukiainen, T. Tuomi, J. A. Turunen, J. C. Ulirsch, F. Vaura, P. Virolainen, J. Waring, D. Waterworth, R. Yang, M. Nelis, A. Reigo, A. Metspalu, L. Milani, T. Esko, C. Fox, A. S. Havulinna, M. Perola, S. Ripatti, A. Jalanko, T. Laitinen, T. Mäkelä, R. Plenge, M. McCarthy, H. Runz, M. J. Daly, A. Palotie, FinnGen: Unique genetic insights from combining isolated population and national health register data. medRxiv, in press, doi: 10.1101/2022.03.03.22271360.', 'ArticleIdList': {'ArticleId': {'@IdType': 'doi', '#text': '10.1101/2022.03.03.22271360'
+                                }
+                            }
+                        },
+                        {'Citation': 'Jakkula E., Rehnström K., Varilo T., Pietiläinen O. P. H., Paunio T., Pedersen N. L., deFaire U., Järvelin M.-R., Saharinen J., Freimer N., Ripatti S., Purcell S., Collins A., Daly M. J., Palotie A., Peltonen L., The genome-wide patterns of variation expose significant substructure in a founder population. Am. J. Hum. Genet. 83,
+                            787–794 (2008).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC2668058'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '19061986'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'DIAMOND Project Group , Incidence and trends of childhood type 1 diabetes worldwide 1990-1999. Diabet. Med. 23,
+                            857–866 (2006).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '16911623'
+                                }
+                            }
+                        },
+                        {'Citation': 'Krüger M., Kratchmarova I., Blagoev B., Tseng Y.-H., Kahn C. R., Mann M., Dissection of the insulin signaling pathway via quantitative phosphoproteomics. Proc. Natl. Acad. Sci. U.S.A. 105,
+                            2451–2456 (2008).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC2268157'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '18268350'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Samuel V. T., Liu Z.-X., Qu X., Elder B. D., Bilz S., Befroy D., Romanelli A. J., Shulman G. I., Mechanism of hepatic insulin resistance in non-alcoholic fatty liver disease. J. Biol. Chem. 279,
+                            32345–32353 (2004).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '15166226'
+                                }
+                            }
+                        },
+                        {'Citation': 'Bezy O., Tran T. T., Pihlajamäki J., Suzuki R., Emanuelli B., Winnay J., Mori M. A., Haas J., Biddinger S. B., Leitges M., Goldfine A. B., Patti M. E., King G. L., Kahn C. R., PKCδ regulates hepatic insulin sensitivity and hepatosteatosis in mice and humans. J. Clin. Invest. 121,
+                            2504–2517 (2011).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC3104767'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '21576825'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Naguro I., Umeda T., Kobayashi Y., Maruyama J., Hattori K., Shimizu Y., Kataoka K., Kim-Mitsuyama S., Uchida S., Vandewalle A., Noguchi T., Nishitoh H., Matsuzawa A., Takeda K., Ichijo H., ASK3 responds to osmotic stress and regulates blood pressure by suppressing WNK1-SPAK/OSR1 signaling in the kidney. Nat. Commun. 3,
+                            1285 (2012).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '23250415'
+                                }
+                            }
+                        },
+                        {'Citation': 'Hattori K., Naguro I., Runchel C., Ichijo H., The roles of ASK family proteins in stress responses and diseases. Cell Commun. Signal 7,
+                            9 (2009).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC2685135'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '19389260'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Carithers L. J., Moore H. M., The Genotype-Tissue Expression (GTEx) Project. Biopreserv. Biobank. 13,
+                            307–308 (2015).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC4692118'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '26484569'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Lawlor N., George J., Bolisetty M., Kursawe R., Sun L., Sivakamasundari V., Kycia I., Robson P., Stitzel M. L., Single-cell transcriptomes identify human islet cell signatures and reveal cell-type-specific expression changes in type 2 diabetes. Genome Res. 27,
+                            208–222 (2017).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC5287227'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '27864352'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Muraro M. J., Dharmadhikari G., Grün D., Groen N., Dielen T., Jansen E., van Gurp L., Engelse M. A., Carlotti F., de Koning E. J. P., van Oudenaarden A., A single-cell transcriptome atlas of the human pancreas. Cell Syst. 3,
+                            385–394.e3 (2016).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC5092539'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '27693023'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Grün D., Muraro M. J., Boisset J.-C., Wiebrands K., Lyubimova A., Dharmadhikari G., van den Born M., van Es J., Jansen E., Clevers H., de Koning E. J. P., van Oudenaarden A., De novo prediction of stem cell identity using single-cell transcriptome data. Cell Stem Cell 19,
+                            266–277 (2016).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC4985539'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '27345837'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Baron M., Veres A., Wolock S. L., Faust A. L., Gaujoux R., Vetere A., Ryu J. H., Wagner B. K., Shen-Orr S. S., Klein A. M., Melton D. A., Yanai I., A single-cell transcriptomic map of the human and mouse pancreas reveals inter- and intra-cell population structure. Cell Syst. 3,
+                            346–360.e4 (2016).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC5228327'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '27667365'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Segerstolpe Å., Palasantza A., Eliasson P., Andersson E.-M., Andréasson A.-C., Sun X., Picelli S., Sabirsh A., Clausen M., Bjursell M. K., Smith D. M., Kasper M., Ämmälä C., Sandberg R., Single-cell transcriptome profiling of human pancreatic islets in health and type 2 diabetes. Cell Metab. 24,
+                            593–607 (2016).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC5069352'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '27667667'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Alonso L., Piron A., Morán I., Guindo-Martínez M., Bonàs-Guarch S., Atla G., Miguel-Escalada I., Royo R., Puiggròs M., Garcia-Hurtado X., Suleiman M., Marselli L., Esguerra J. L. S., Turatsinze J.-V., Torres J. M., Nylander V., Chen J., Eliasson L., Defrance M., Amela R., MAGIC, Mulder H., Gloyn A. L., Groop L., Marchetti P., Eizirik D. L., Ferrer J., Mercader J. M., Cnop M., Torrents D., TIGER: The gene expression regulatory variation landscape of human pancreatic islets. Cell Rep. 37,
+                            109807 (2021).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC8864863'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '34644572'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Kameneva P., Artemov A. V., Kastriti M. E., Sundström E., Kharchenko P. V., Adameyko I., Evolutionary switch in expression of key markers between mouse and human leads to mis-assignment of cell types in developing adrenal medulla. Cancer Cell 39,
+                            590–591 (2021).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '33930313'
+                                }
+                            }
+                        },
+                        {'Citation': 'Mohan V., Radha V., Nguyen T. T., Stawiski E. W., Pahuja K. B., Goldstein L. D., Tom J., Anjana R. M., Kong-Beltran M., Bhangale T., Jahnavi S., Chandni R., Gayathri V., George P., Zhang N., Murugan S., Phalke S., Chaudhuri S., Gupta R., Zhang J., Santhosh S., Stinson J., Modrusan Z., Ramprasad V. L., Seshagiri S., Peterson A. S., Comprehensive genomic analysis identifies pathogenic variants in maturity-onset diabetes of the young (MODY) patients in South India. BMC Med. Genet. 19,
+                            22 (2018).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC5811965'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '29439679'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Middleton L., Harper A. R., Nag A., Wang Q., Reznichenko A., Vitsios D., Petrovski S., Gene-SCOUT: Identifying genes with similar continuous trait fingerprints from phenome-wide association analyses. Nucleic Acids Res. 50,
+                            4289–4301 (2022).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC9071452'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '35474393'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Dwivedi O. P., Lehtovirta M., Hastoy B., Chandra V., Krentz N. A. J., Kleiner S., Jain D., Richard A.-M., Abaitua F., Beer N. L., Grotz A., Prasad R. B., Hansson O., Ahlqvist E., Krus U., Artner I., Suoranta A., Gomez D., Baras A., Champon B., Payne A. J., Moralli D., Thomsen S. K., Kramer P., Spiliotis I., Ramracheya R., Chabosseau P., Theodoulou A., Cheung R., van de Bunt M., Flannick J., Trombetta M., Bonora E., Wolheim C. B., Sarelin L., Bonadonna R. C., Rorsman P., Davies B., Brosnan J., McCarthy M. I., Otonkoski T., Lagerstedt J. O., Rutter G. A., Gromada J., Gloyn A. L., Tuomi T., Groop L., Loss of ZnT8 function protects against diabetes by enhanced insulin secretion. Nat. Genet. 51,
+                            1596–1606 (2019).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC6858874'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '31676859'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Kleiner S., Gomez D., Megra B., Na E., Bhavsar R., Cavino K., Xin Y., Rojas J., Dominguez-Gutierrez G., Zambrowicz B., Carrat G., Chabosseau P., Hu M., Murphy A. J., Yancopoulos G. D., Rutter G. A., Gromada J., Mice harboring the human SLC30A8 R138X loss-of-function mutation have increased insulin secretory capacity. Proc. Natl. Acad. Sci. U.S.A. 115, E7642–E7649 (2018).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC6094147'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '30038024'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Vitsios D., Petrovski S., Mantis-ml: Disease-agnostic gene prioritization from high-throughput genomic screens by stochastic semi-supervised learning. Am. J. Hum. Genet. 106,
+                            659–678 (2020).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC7212270'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '32386536'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Ahlqvist E., Storm P., Käräjämäki A., Martinell M., Dorkhan M., Carlsson A., Vikman P., Prasad R. B., Aly D. M., Almgren P., Wessman Y., Shaat N., Spégel P., Mulder H., Lindholm E., Melander O., Hansson O., Malmqvist U., Lernmark Å., Lahti K., Forsén T., Tuomi T., Rosengren A. H., Groop L., Novel subgroups of adult-onset diabetes and their association with outcomes: A data-driven cluster analysis of six variables. Lancet Diabetes Endocrinol. 6,
+                            361–369 (2018).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '29503172'
+                                }
+                            }
+                        },
+                        {'Citation': 'Backman J. D., Li A. H., Marcketta A., Sun D., Mbatchou J., Kessler M. D., Benner C., Liu D., Locke A. E., Balasubramanian S., Yadav A., Banerjee N., Gillies C., Damask A., Liu S., Bai X., Hawes A., Maxwell E., Gurski L., Watanabe K., Kosmicki J. A., Rajagopal V., Mighty J.; Regeneron Genetics Center; DiscovEHR, Jones M., Mitnaul L., Stahl E., Coppola G., Jorgenson E., Habegger L., Salerno W. J., Shuldiner A. R., Lotta L. A., Overton J. D., Cantor M. N., Reid J. G., Yancopoulos G., Kang H. M., Marchini J., Baras A., Abecasis G. R., Ferreira M. A., Exome sequencing and analysis of 454,
+                            787 UK Biobank participants. Nature 599,
+                            628–634 (2021).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC8596853'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '34662886'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Ochoa D., Hercules A., Carmona M., Suveges D., Gonzalez-Uriarte A., Malangone C., Miranda A., Fumis L., Carvalho-Silva D., Spitzer M., Baker J., Ferrer J., Raies A., Razuvayevskaya O., Faulconbridge A., Petsalaki E., Mutowo P., Machlitt-Northen S., Peat G., McAuley E., Ong C. K., Mountjoy E., Ghoussaini M., Pierleoni A., Papa E., Pignatelli M., Koscielny G., Karim M., Schwartzentruber J., Hulcoop D. G., Dunham I., McDonagh E. M., Open Targets Platform: Supporting systematic drug-target identification and prioritisation. Nucleic Acids Res. 49, D1302–D1310 (2021).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC7779013'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '33196847'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Szklarczyk D., Gable A. L., Nastou K. C., Lyon D., Kirsch R., Pyysalo S., Doncheva N. T., Legeay M., Fang T., Bork P., Jensen L. J., von Mering C., The STRING database in 2021: Customizable protein-protein networks, and functional characterization of user-uploaded gene/measurement sets. Nucleic Acids Res. 49, D605–D612 (2021).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC7779004'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '33237311'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Rivas M. A., Pirinen M., Neville M. J., Gaulton K. J., Moutsianas L.; GoT2D Consortium, Lindgren C. M., Karpe F., McCarthy M. I., Donnelly P., Assessing association between protein truncating variants and quantitative traits. Bioinformatics 29,
+                            2419–2426 (2013).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC3777107'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '23860716'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Watanabe K., Morishita K., Zhou X., Shiizaki S., Uchiyama Y., Koike M., Naguro I., Ichijo H., Cells recognize osmotic stress through liquid-liquid phase separation lubricated with poly(ADP-ribose). Nat. Commun. 12,
+                            1353 (2021).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC7921423'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '33649309'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Surwit R. S., Schneider M. S., Feinglos M. N., Stress and diabetes mellitus. Diabetes Care 15,
+                            1413–1422 (1992).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '1425110'
+                                }
+                            }
+                        },
+                        {'Citation': 'Chiodini I., Adda G., Scillitani A., Coletti F., Morelli V., di Lembo S., Epaminonda P., Masserini B., Beck-Peccoz P., Orsi E., Ambrosi B., Arosio M., Cortisol secretion in patients with type 2 diabetes: Relationship with chronic complications. Diabetes Care 30,
+                            83–88 (2007).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '17192338'
+                                }
+                            }
+                        },
+                        {'Citation': 'Bycroft C., Freeman C., Petkova D., Band G., Elliott L. T., Sharp K., Motyer A., Vukcevic D., Delaneau O., O’Connell J., Cortes A., Welsh S., Young A., Effingham M., McVean G., Leslie S., Allen N., Donnelly P., Marchini J., The UK Biobank resource with deep phenotyping and genomic data. Nature 562,
+                            203–209 (2018).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC6786975'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '30305743'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Tapia-Conyer R., Kuri-Morales P., Alegre-Díaz J., Whitlock G., Emberson J., Clark S., Peto R., Collins R., Cohort profile: The Mexico City Prospective Study. Int. J. Epidemiol. 35,
+                            243–249 (2006).', 'ArticleIdList': {'ArticleId': {'@IdType': 'pubmed', '#text': '16556648'
+                                }
+                            }
+                        },
+                        {'Citation': 'Cingolani P., Platts A., Wang L. L., Coon M., Nguyen T., Wang L., Land S. J., Lu X., Ruden D. M., A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster strain w1118; iso-2; iso-3. Fly 6,
+                            80–92 (2012).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC3679285'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '22728672'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Traynelis J., Silk M., Wang Q., Berkovic S. F., Liu L., Ascher D. B., Balding D. J., Petrovski S., Optimizing genomic medicine in epilepsy through a gene-customized approach to missense variant interpretation. Genome Res. 27,
+                            1715–1729 (2017).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC5630035'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '28864458'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Ioannidis N. M., Rothstein J. H., Pejaver V., Middha S., McDonnell S. K., Baheti S., Musolf A., Li Q., Holzinger E., Karyadi D., Cannon-Albright L. A., Teerlink C. C., Stanford J. L., Isaacs W. B., Xu J., Cooney K. A., Lange E. M., Schleutker J., Carpten J. D., Powell I. J., Cussenot O., Cancel-Tassin G., Giles G. G., MacInnis R. J., Maier C., Hsieh C.-L., Wiklund F., Catalona W. J., Foulkes W. D., Mandal D., Eeles R. A., Kote-Jarai Z., Bustamante C. D., Schaid D. J., Hastie T., Ostrander E. A., Bailey-Wilson J. E., Radivojac P., Thibodeau S. N., Whittemore A. S., Sieh W., REVEL: An Ensemble method for predicting the pathogenicity of rare missense variants. Am. J. Hum. Genet. 99,
+                            877–885 (2016).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC5065685'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '27666373'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Manichaikul A., Mychaleckyj J. C., Rich S. S., Daly K., Sale M., Chen W. M., Robust relationship inference in genome-wide association studies. Bioinformatics 26,
+                            2867–2873 (2010).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC3025716'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '20926424'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Pedersen B. S., Quinlan A. R., Who’s who? Detecting and resolving sample anomalies in human DNA sequencing studies with Peddy. Am. J. Hum. Genet. 100,
+                            406–413 (2017).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC5339084'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '28190455'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'The 1000 Genomes Project Consortium , A global reference for human genetic variation. Nature 526,
+                            68–74 (2015).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC4750478'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '26432245'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'Chang C. C., Chow C. C., Tellier L. C., Vattikuti S., Purcell S. M., Lee J. J., Second-generation PLINK: Rising to the challenge of larger and richer datasets. Gigascience 4,
+                            7 (2015).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC4342193'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '25722852'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'S. C. Ritchie, P. Surendran, S. Karthikeyan, S. A. Lambert, T. Bolton, L. Pennells, J. Danesh, E. Di Angelantonio, A. S. Butterworth, M. Inouye, Quality control and removal of technical variation of NMR metabolic biomarker data in ∼120,
+                            000 UK Biobank participants, medRxiv, in press, doi: 10.1101/2021.09.24.21264079.', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'doi', '#text': '10.1101/2021.09.24.21264079'
+                                    },
+                                    {'@IdType': 'pmc', '#text': 'PMC9887579'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '36720882'
+                                    }
+                                ]
+                            }
+                        },
+                        {'Citation': 'A. Nag, L. Middleton, R. S. Dhindsa, D. Vitsios, E. Wigmore, E. L. Allman, A. Reznichenko, K. Carss, K. R. Smith, Q. Wang, B. Challis, D. S. Paul, A. R. Harper, S. Petrovski, Assessing the contribution of rare-to-common protein-coding variants to circulating metabolic biomarker levels via 412,
+                            394 UK Biobank exome sequences, medRxiv, in press, doi: 10.1101/2021.12.24.21268381.', 'ArticleIdList': {'ArticleId': {'@IdType': 'doi', '#text': '10.1101/2021.12.24.21268381'
+                                }
+                            }
+                        },
+                        {'Citation': 'Stuart T., Butler A., Hoffman P., Hafemeister C., Papalexi E., Mauck III W. M., Hao Y., Stoeckius M., Smibert P., Satija R., Comprehensive integration of single-cell data. Cell 177,
+                            1888–1902.e21 (2019).', 'ArticleIdList': {'ArticleId': [
+                                    {'@IdType': 'pmc', '#text': 'PMC6687398'
+                                    },
+                                    {'@IdType': 'pubmed', '#text': '31178118'
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+{'i': ['MAP3K15', 'P', 'P', 'P', 'MAP3K15', 'SLC16A11', 'P', 'MAP3K15', 'P', 'MAP3K15'
+    ], 'sup': ['-10', '-24', '-4'
+    ], '#text': 'We performed collapsing analyses on 454,
+    796 UK Biobank (UKB) exomes to detect gene-level associations with diabetes. Recessive carriers of nonsynonymous variants in  were 30% less likely to develop diabetes ( = 5.7 × 10) and had lower glycosylated hemoglobin (β = -0.14 SD units,  = 1.1 × 10). These associations were independent of body mass index, suggesting protection against insulin resistance even in the setting of obesity. We replicated these findings in 96,
+    811 Admixed Americans in the Mexico City Prospective Study ( < 0.05)Moreover, the protective effect of  variants was stronger in individuals who did not carry the Latino-enriched  risk haplotype ( = 6.0 × 10). Separately, we identified a Finnish-enriched  protein-truncating variant associated with decreased odds of both type 1 and type 2 diabetes ( < 0.05) in FinnGen. No adverse phenotypes were associated with protein-truncating  variants in the UKB, supporting this gene as a therapeutic target for diabetes.'
+}
