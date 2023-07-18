@@ -1,0 +1,785 @@
+{
+    "PubmedArticleSet": {
+     "PubmedArticle": {
+      "MedlineCitation": {
+       "@Status": "MEDLINE",
+       "@Owner": "NLM",
+       "@IndexingMethod": "Automated",
+       "PMID": {
+        "@Version": "1",
+        "#text": "37303064"
+       },
+       "DateCompleted": {
+        "Year": "2023",
+        "Month": "06",
+        "Day": "13"
+       },
+       "DateRevised": {
+        "Year": "2023",
+        "Month": "06",
+        "Day": "22"
+       },
+       "Article": {
+        "@PubModel": "Electronic",
+        "Journal": {
+         "ISSN": {
+          "@IssnType": "Electronic",
+          "#text": "1756-6606"
+         },
+         "JournalIssue": {
+          "@CitedMedium": "Internet",
+          "Volume": "16",
+          "Issue": "1",
+          "PubDate": {
+           "Year": "2023",
+           "Month": "Jun",
+           "Day": "11"
+          }
+         },
+         "Title": "Molecular brain",
+         "ISOAbbreviation": "Mol Brain"
+        },
+        "ArticleTitle": "A new AAV tool for highly preferentially targeting hippocampal CA2.",
+        "Pagination": {
+         "StartPage": "50",
+         "MedlinePgn": "50"
+        },
+        "ELocationID": [
+         {
+          "@EIdType": "pii",
+          "@ValidYN": "Y",
+          "#text": "50"
+         },
+         {
+          "@EIdType": "doi",
+          "@ValidYN": "Y",
+          "#text": "10.1186/s13041-023-01038-6"
+         }
+        ],
+        "Abstract": {
+         "AbstractText": {
+          "sup": [
+           "+",
+           "-",
+           "+",
+           "+",
+           "+",
+           "+"
+          ],
+          "#text": "Mice hippocampus contains three prominent subregions, CA1, CA3 and DG and is well regarded as an essential multiple task processor for learning, memory and cognition based on tremendous studies on these three subregions. The narrow region sandwiched between CA1 and CA3 called CA2 has been neglected for a long time. But it raises great attentions recently since this region manifests the indispensable role in social memory. Its unique physical position connecting CA1 and CA3 suggests the potential novel functions besides social memory regulation. But the CA2 is too small to be accurately targeted. A flexible AAV tool capable of accurately and efficiently targeting this region is highly demanded. To fill this gap, we generate an AAV expressing Cre driven by the mini Map3k15 promoter, AAV/M1-Cre, which can be easily utilized to help tracing and manipulating CA2 pyramidal neurons. However, M1-Cre labeled a small percentage of M1RGS14 neurons that do not colocalize with any RGS14/STEP/PEP4/Amigo2 pyramidal neurons. They are proved to be the mixture of normal CA2 pyramidal neurons, CA3-like neurons in CA2-CA3 mixed border, some CA2 interneurons and rarely few CA1-like neurons, which are probably the ones projecting to the revealed CA2 downstream targets, VMH, STHY and PMV in WT mice injecting this AAV/M1-Cre virus but not in Amigo2-Cre mice. Though it is still challenging to get a pure CA2 tracking and manipulation system, this tool provides a new, more flexible and extended strategy for in-depth CA2 functional study in the future."
+         },
+         "CopyrightInformation": "\u00a9 2023. The Author(s)."
+        },
+        "AuthorList": {
+         "@CompleteYN": "Y",
+         "Author": [
+          {
+           "@ValidYN": "Y",
+           "LastName": "Peng",
+           "ForeName": "Siqi",
+           "Initials": "S",
+           "AffiliationInfo": {
+            "Affiliation": "School of Life Science and Technology, The Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing, 210096, China."
+           }
+          },
+          {
+           "@ValidYN": "Y",
+           "LastName": "Gu",
+           "ForeName": "Wenzhen",
+           "Initials": "W",
+           "AffiliationInfo": {
+            "Affiliation": "School of Life Science and Technology, The Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing, 210096, China."
+           }
+          },
+          {
+           "@ValidYN": "Y",
+           "LastName": "Zhu",
+           "ForeName": "Wenxiu",
+           "Initials": "W",
+           "AffiliationInfo": {
+            "Affiliation": "School of Life Science and Technology, The Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing, 210096, China."
+           }
+          },
+          {
+           "@ValidYN": "Y",
+           "LastName": "Zhuang",
+           "ForeName": "Yan",
+           "Initials": "Y",
+           "AffiliationInfo": {
+            "Affiliation": "School of Life Science and Technology, The Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing, 210096, China."
+           }
+          },
+          {
+           "@ValidYN": "Y",
+           "LastName": "Yang",
+           "ForeName": "Xiuqi",
+           "Initials": "X",
+           "AffiliationInfo": {
+            "Affiliation": "School of Life Science and Technology, The Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing, 210096, China."
+           }
+          },
+          {
+           "@ValidYN": "Y",
+           "LastName": "Lv",
+           "ForeName": "Yaochen",
+           "Initials": "Y",
+           "AffiliationInfo": {
+            "Affiliation": "School of Life Science and Technology, The Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing, 210096, China."
+           }
+          },
+          {
+           "@ValidYN": "Y",
+           "LastName": "Meng",
+           "ForeName": "Sibie",
+           "Initials": "S",
+           "AffiliationInfo": {
+            "Affiliation": "School of Life Science and Technology, The Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing, 210096, China."
+           }
+          },
+          {
+           "@ValidYN": "Y",
+           "LastName": "Xie",
+           "ForeName": "Wei",
+           "Initials": "W",
+           "AffiliationInfo": [
+            {
+             "Affiliation": "School of Life Science and Technology, The Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing, 210096, China."
+            },
+            {
+             "Affiliation": "Jiangsu Co-Innovation Center of Neuroregeneration, Nantong University, Nantong, 226001, China."
+            }
+           ]
+          },
+          {
+           "@ValidYN": "Y",
+           "LastName": "Li",
+           "ForeName": "Moyi",
+           "Initials": "M",
+           "Identifier": {
+            "@Source": "ORCID",
+            "#text": "0000-0003-3566-3931"
+           },
+           "AffiliationInfo": [
+            {
+             "Affiliation": "School of Life Science and Technology, The Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing, 210096, China. limoyi@seu.edu.cn."
+            },
+            {
+             "Affiliation": "Jiangsu Co-Innovation Center of Neuroregeneration, Nantong University, Nantong, 226001, China. limoyi@seu.edu.cn."
+            }
+           ]
+          }
+         ]
+        },
+        "Language": "eng",
+        "PublicationTypeList": {
+         "PublicationType": [
+          {
+           "@UI": "D016428",
+           "#text": "Journal Article"
+          },
+          {
+           "@UI": "D013485",
+           "#text": "Research Support, Non-U.S. Gov't"
+          }
+         ]
+        },
+        "ArticleDate": {
+         "@DateType": "Electronic",
+         "Year": "2023",
+         "Month": "06",
+         "Day": "11"
+        }
+       },
+       "MedlineJournalInfo": {
+        "Country": "England",
+        "MedlineTA": "Mol Brain",
+        "NlmUniqueID": "101468876",
+        "ISSNLinking": "1756-6606"
+       },
+       "CitationSubset": "IM",
+       "MeshHeadingList": {
+        "MeshHeading": [
+         {
+          "DescriptorName": {
+           "@UI": "D000818",
+           "@MajorTopicYN": "N",
+           "#text": "Animals"
+          }
+         },
+         {
+          "DescriptorName": {
+           "@UI": "D051379",
+           "@MajorTopicYN": "N",
+           "#text": "Mice"
+          }
+         },
+         {
+          "DescriptorName": {
+           "@UI": "D009474",
+           "@MajorTopicYN": "Y",
+           "#text": "Neurons"
+          }
+         },
+         {
+          "DescriptorName": {
+           "@UI": "D017966",
+           "@MajorTopicYN": "Y",
+           "#text": "Pyramidal Cells"
+          }
+         },
+         {
+          "DescriptorName": {
+           "@UI": "D003071",
+           "@MajorTopicYN": "N",
+           "#text": "Cognition"
+          }
+         },
+         {
+          "DescriptorName": {
+           "@UI": "D006624",
+           "@MajorTopicYN": "N",
+           "#text": "Hippocampus"
+          }
+         },
+         {
+          "DescriptorName": {
+           "@UI": "D007395",
+           "@MajorTopicYN": "N",
+           "#text": "Interneurons"
+          }
+         }
+        ]
+       },
+       "KeywordList": {
+        "@Owner": "NOTNLM",
+        "Keyword": [
+         {
+          "@MajorTopicYN": "N",
+          "#text": "AAV tool"
+         },
+         {
+          "@MajorTopicYN": "N",
+          "#text": "Cornu ammonis 2"
+         },
+         {
+          "@MajorTopicYN": "N",
+          "#text": "Hippocampus"
+         },
+         {
+          "@MajorTopicYN": "N",
+          "#text": "Neural activity regulation"
+         },
+         {
+          "@MajorTopicYN": "N",
+          "#text": "Neural tracing"
+         }
+        ]
+       },
+       "CoiStatement": "The authors declare that they have no competing interests."
+      },
+      "PubmedData": {
+       "History": {
+        "PubMedPubDate": [
+         {
+          "@PubStatus": "received",
+          "Year": "2022",
+          "Month": "12",
+          "Day": "10"
+         },
+         {
+          "@PubStatus": "accepted",
+          "Year": "2023",
+          "Month": "5",
+          "Day": "25"
+         },
+         {
+          "@PubStatus": "medline",
+          "Year": "2023",
+          "Month": "6",
+          "Day": "13",
+          "Hour": "6",
+          "Minute": "42"
+         },
+         {
+          "@PubStatus": "pubmed",
+          "Year": "2023",
+          "Month": "6",
+          "Day": "12",
+          "Hour": "0",
+          "Minute": "42"
+         },
+         {
+          "@PubStatus": "entrez",
+          "Year": "2023",
+          "Month": "6",
+          "Day": "11",
+          "Hour": "23",
+          "Minute": "14"
+         }
+        ]
+       },
+       "PublicationStatus": "epublish",
+       "ArticleIdList": {
+        "ArticleId": [
+         {
+          "@IdType": "pubmed",
+          "#text": "37303064"
+         },
+         {
+          "@IdType": "pmc",
+          "#text": "PMC10257852"
+         },
+         {
+          "@IdType": "doi",
+          "#text": "10.1186/s13041-023-01038-6"
+         },
+         {
+          "@IdType": "pii",
+          "#text": "10.1186/s13041-023-01038-6"
+         }
+        ]
+       },
+       "ReferenceList": {
+        "Reference": [
+         {
+          "Citation": "Nakazawa K, McHugh TJ, Wilson MA, Tonegawa S. NMDA receptors, place cells and hippocampal spatial memory. Nat Rev Neurosci. 2004;5:361\u2013372. doi: 10.1038/nrn1385.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1038/nrn1385"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "15100719"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Andersen P. The Hippocampus Book Oxford. New York Oxford University Press; 2007."
+         },
+         {
+          "Citation": "O'Keefe J, Dostrovsky J. The hippocampus as a spatial map. Preliminary evidence from unit activity in the freely-moving rat. Brain Res. 1971;34:171\u2013175. doi: 10.1016/0006-8993(71)90358-1.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1016/0006-8993(71)90358-1"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "5124915"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Leung C, Cao F, Nguyen R, Joshi K, Aqrabawi AJ, Xia S, et al. Activation of entorhinal cortical projections to the dentate gyrus underlies social memory retrieval. Cell Rep. 2018;23:2379\u20132391. doi: 10.1016/j.celrep.2018.04.073.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1016/j.celrep.2018.04.073"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "29791849"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Zeidman P, Maguire EA. Anterior hippocampus: the anatomy of perception, imagination and episodic memory. Nat Rev Neurosci. 2016;17:173\u2013182. doi: 10.1038/nrn.2015.24.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1038/nrn.2015.24"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC5358751"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "26865022"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Okuyama T. Social memory engram in the hippocampus. Neurosci Res. 2018;129:17\u201323. doi: 10.1016/j.neures.2017.05.007.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1016/j.neures.2017.05.007"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "28577978"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Meira T, Leroy F, Buss EW, Oliva A, Park J, Siegelbaum SA. A hippocampal circuit linking dorsal CA2 to ventral CA1 critical for social memory dynamics. Nat Commun. 2018;9:4163. doi: 10.1038/s41467-018-06501-w.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1038/s41467-018-06501-w"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC6178349"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "30301899"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Lorente de N\u00f3 R. Studies on the structure of the cerebral cortex. II. Continuation of the study of the ammonic system. J Psychol Neurol. 1934;46:64."
+         },
+         {
+          "Citation": "Dudek SM, Alexander GM, Farris S. Rediscovering area CA2: unique properties and functions. Nat Rev Neurosci. 2016;17:89\u2013102. doi: 10.1038/nrn.2015.22.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1038/nrn.2015.22"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC4856153"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "26806628"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Shinohara Y, Kohara K. Projections of hippocampal CA2 pyramidal neurons: Distinct innervation patterns of CA2 compared to CA3 in rodents. Hippocampus 2023.",
+          "ArticleIdList": {
+           "ArticleId": {
+            "@IdType": "pubmed",
+            "#text": "36855258"
+           }
+          }
+         },
+         {
+          "Citation": "Young WS, Song J. Characterization of oxytocin receptor expression within various neuronal populations of the mouse dorsal hippocampus. Front Mol Neurosci. 2020;13:40. doi: 10.3389/fnmol.2020.00040.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.3389/fnmol.2020.00040"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC7093644"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "32256314"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Bartesaghi R, Ravasi L. Pyramidal neuron types in field CA2 of the guinea pig. Brain Res Bull. 1999;50:263\u2013273. doi: 10.1016/S0361-9230(99)00198-7.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1016/S0361-9230(99)00198-7"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "10582524"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Hitti FL, Siegelbaum SA. The hippocampal CA2 region is essential for social memory. Nature. 2014;508:88\u201392. doi: 10.1038/nature13028.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1038/nature13028"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC4000264"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "24572357"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Oliva A, Fernandez-Ruiz A, Leroy F, Siegelbaum SA. Hippocampal CA2 sharp-wave ripples reactivate and promote social memory. Nature. 2020;587:264\u2013269. doi: 10.1038/s41586-020-2758-y.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1038/s41586-020-2758-y"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC7666067"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "32968277"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Dang R, Zhou Y, Zhang Y, Liu D, Wu M, Liu A, et al. Regulation of social memory by lateral entorhinal cortical projection to dorsal hippocampal CA2. Neurosci Bull. 2022;38:318\u2013322. doi: 10.1007/s12264-021-00813-6.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1007/s12264-021-00813-6"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC8975938"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "35020113"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Lehr AB, Kumar A, Tetzlaff C, Hafting T, Fyhn M, Stober TM. CA2 beyond social memory: evidence for a fundamental role in hippocampal information processing. Neurosci Biobehav Rev. 2021;126:398\u2013412. doi: 10.1016/j.neubiorev.2021.03.020.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1016/j.neubiorev.2021.03.020"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "33775693"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Piskorowski RA, Chevaleyre V. Memory circuits: CA2. Curr Opin Neurobiol. 2018;52:54\u201359. doi: 10.1016/j.conb.2018.04.015.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1016/j.conb.2018.04.015"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "29705549"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Kohara K, Pignatelli M, Rivest AJ, Jung HY, Kitamura T, Suh J, et al. Cell type-specific genetic and optogenetic tools reveal hippocampal CA2 circuits. Nat Neurosci. 2014;17:269\u2013279. doi: 10.1038/nn.3614.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1038/nn.3614"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC4004172"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "24336151"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Lee SE, Simons SB, Heldt SA, Zhao M, Schroeder JP, Vellano CP, et al. RGS14 is a natural suppressor of both synaptic plasticity in CA2 neurons and hippocampal-based learning and memory. Proc Natl Acad Sci U S A. 2010;107:16994\u201316998. doi: 10.1073/pnas.1005362107.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1073/pnas.1005362107"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC2947872"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "20837545"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Chevaleyre V, Siegelbaum SA. Strong CA2 pyramidal neuron synapses define a powerful disynaptic cortico-hippocampal loop. Neuron. 2010;66:560\u2013572. doi: 10.1016/j.neuron.2010.04.013.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1016/j.neuron.2010.04.013"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC2905041"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "20510860"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Middleton SJ, McHugh TJ. CA2: a highly connected intrahippocampal relay. Annu Rev Neurosci. 2020;43:55\u201372. doi: 10.1146/annurev-neuro-080719-100343.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1146/annurev-neuro-080719-100343"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "31874067"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Cui Z, Gerfen CR, Young WS., 3rd Hypothalamic and other connections with dorsal CA2 area of the mouse hippocampus. J Comp Neurol. 2013;521:1844\u20131866. doi: 10.1002/cne.23263.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1002/cne.23263"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC3798086"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "23172108"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Helton TD, Zhao M, Farris S, Dudek SM. Diversity of dendritic morphology and entorhinal cortex synaptic effectiveness in mouse CA2 pyramidal neurons. Hippocampus. 2019;29:78\u201392. doi: 10.1002/hipo.23012.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1002/hipo.23012"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC6347543"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "30067288"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Zingg B, Chou XL, Zhang ZG, Mesik L, Liang FX, Tao HW, et al. AAV-mediated anterograde transsynaptic tagging: mapping corticocollicular input-defined neural pathways for defense behaviors. Neuron. 2017;93:33\u201347. doi: 10.1016/j.neuron.2016.11.045.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1016/j.neuron.2016.11.045"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC5538794"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "27989459"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Zeng WB, Jiang HF, Gang YD, Song YG, Shen ZZ, Yang H, et al. Anterograde monosynaptic transneuronal tracers derived from herpes simplex virus 1 strain H129. Mol Neurodegeneration 2017, 12.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "pmc",
+             "#text": "PMC5427628"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "28499404"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Castle MJ, Perlson E, Holzbaur ELF, Wolfe JH. Long-distance axonal transport of AAV9 is driven by dynein and kinesin-2 and is trafficked in a highly motile Rab7-positive compartment. Mol Ther. 2014;22:554\u2013566. doi: 10.1038/mt.2013.237.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1038/mt.2013.237"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC3944332"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "24100640"
+            }
+           ]
+          }
+         },
+         {
+          "Citation": "Aschauer DF, Kreuz S, Rumpel S. Analysis of transduction efficiency, tropism and axonal transport of AAV serotypes 1, 2, 5, 6, 8 and 9 in the mouse brain. PLoS ONE. 2013;8:e76310. doi: 10.1371/journal.pone.0076310.",
+          "ArticleIdList": {
+           "ArticleId": [
+            {
+             "@IdType": "doi",
+             "#text": "10.1371/journal.pone.0076310"
+            },
+            {
+             "@IdType": "pmc",
+             "#text": "PMC3785459"
+            },
+            {
+             "@IdType": "pubmed",
+             "#text": "24086725"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     }
+    }
+   }
+   
