@@ -15,10 +15,6 @@ import pymysql as mdb
 # constants
 
 # constants
-DB_PASSWD = os.environ.get('DB_PASSWD')
-SCHEMA_GPT = "gene_gpt"
-DB_PAPER_TABLE = "pgpt_paper"
-DB_PAPER_ABSTRACT = "pgpt_paper_abtract"
 URL_PAPER = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id={}"
 URL_SEARCH_BY_KEYWORD = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term={}"
 URL_SEARCH_BY_WEB_ENV = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?query_key={}&WebEnv={}&cmd=neighbor_history"
@@ -30,6 +26,16 @@ ID_TEST_ARTICLE = 37303064
 LIST_KEYWORDS = ['UBE2NL', 'human']
 LIST_KEYWORDS = ['UBE2NL']
 LIST_KEYWORDS = ['PPARG', 'human']
+
+# sql constants
+DB_PASSWD = os.environ.get('DB_PASSWD')
+SCHEMA_GPT = "gene_gpt"
+DB_PAPER_TABLE = "pgpt_paper"
+DB_PAPER_ABSTRACT = "pgpt_paper_abtract"
+SQL_SELECT_PUBMED = "select pubmed_id from {}.pgpt_paper where pubmed_id = %s".format(SCHEMA_GPT)
+SQL_SELECT_ABSTRACT = "select pubmed_id from {}.pgpt_paper_abstract where pubmed_id = %s".format(SCHEMA_GPT)
+SQL_INSERT_PAPER = "insert into {}.pgpt_paper (pubmed_id) values(%s)".format(SCHEMA_GPT)
+SQL_INSERT_ABSTRACT = "insert into {}.pgpt_paper_abstract (pubmed_id, abstract, title, journal_name, paper_year, document_level) values(%s, %s, %s, %s, %s, %s)".format(SCHEMA_GPT)
 
 # methods
 def get_list_gpt_inputs(list_abstracts, num_limit=4096, log=True):
@@ -100,7 +106,10 @@ def get_pubmed_abtract(id_pubmed, log=False):
     text_abstract = ""
     title = ""
     journal = ""
-    year = ""
+    year = 0
+
+    # sleep
+    time.sleep(2)
 
     # get the url
     url_string = URL_PAPER.format(id_pubmed)
@@ -133,8 +142,11 @@ def get_pubmed_abtract(id_pubmed, log=False):
             text_abstract = list_abstract
 
     # get year
-    year = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('DateCompleted').get('Year')
+    if map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('DateCompleted'):
+        year = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('DateCompleted').get('Year')
     title = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article').get('ArticleTitle')
+    if isinstance(title, dict):
+        title = title.get('#text')
     journal = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article').get('Journal').get('Title')
 
     # return
@@ -184,17 +196,60 @@ def get_list_pubmed_ids_from_webenv(web_env, query_key, log=False):
     # return
     return list_response_id
 
-def insert_pubmed_id(conn, pubmed_id, log=False):
+def get_db_pubmed_id(conn, pubmed_id, look_for_abstract=False, log=False):
+    '''
+    find keyword PK or return None
+    '''
+    paper_id = None
+    cursor = conn.cursor()
+
+    # pick query 
+    if look_for_abstract:
+        sql_select = SQL_SELECT_ABSTRACT
+    else:
+        sql_select = SQL_SELECT_PUBMED
+
+    # find
+    cursor.execute(sql_select, (pubmed_id))
+    db_result = cursor.fetchall()
+    if db_result:
+        paper_id = db_result[0][0]
+
+    # return 
+    return paper_id
+
+def insert_pubmed_id(conn, pubmed_id, abstract=None, title=None, journal=None, year=None, in_abstract=False, log=False):
     '''
     will insert a pubmed id in the database if necessary
     '''
     # initialize
+    result_id = None
+    cursor = conn.cursor()
+    int_pubmed = int(pubmed_id)
 
     # see if already in db
+    result_id = get_db_pubmed_id(conn, pubmed_id, look_for_abstract=in_abstract)
 
     # if not, insert
+    if not result_id:
+        cursor = conn.cursor()
+        if in_abstract:
+            if log:
+                print("inserting: {} - {} - {}".format(year, journal, title))
+            int_year = int(year)
+            cursor.execute(SQL_INSERT_ABSTRACT, (int_pubmed, abstract, title, journal, int_year, 0))
+        else:
+            cursor.execute(SQL_INSERT_PAPER, (int_pubmed))
+        conn.commit()
 
+def get_connection():
+    ''' 
+    get the db connection 
+    '''
+    conn = mdb.connect(host='localhost', user='root', password=DB_PASSWD, charset='utf8', db=SCHEMA_GPT)
 
+    # return
+    return conn
 
 # main
 if __name__ == "__main__":
@@ -208,7 +263,7 @@ if __name__ == "__main__":
     print("for {}, got original list of papers of size: {}\n\n".format(list_keywords, len(list_pubmed_ids)))
 
     # query for the abstract text
-    text_abstract, title, journal, year = get_pubmed_abtract(ID_TEST_ARTICLE, log=True)
+    text_abstract, title, journal, year = get_pubmed_abtract(ID_TEST_ARTICLE, log=False)
     print("got abstract: \n{}".format(text_abstract))
     print("title: {} for journal: {} and year: {}".format(title, journal, year))
 
@@ -229,4 +284,18 @@ if __name__ == "__main__":
     query_key = 1
     list_pubmed_ids = get_list_pubmed_ids_from_webenv(web_env, query_key, log=False)
     print("\ngot list of pubmed ids of size: {}".format(len(list_pubmed_ids)))
+
+    # insert pubmed ids
+    conn = get_connection()
+    for i in range(1000):
+        pubmed_id = list_pubmed_ids[i]
+
+        # get the abstract
+        if not get_db_pubmed_id(conn, pubmed_id, look_for_abstract=True):
+            print("inserting journal: {}".format(pubmed_id))
+            text_abstract, title, journal, year = get_pubmed_abtract(pubmed_id, log=True)
+
+            # insert
+            insert_pubmed_id(conn, pubmed_id)
+            insert_pubmed_id(conn, pubmed_id, text_abstract, title, journal, year, in_abstract=True, log=True)
 
