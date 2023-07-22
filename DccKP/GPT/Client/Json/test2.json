@@ -1,0 +1,1514 @@
+{
+    "PubmedArticleSet": {
+        "PubmedBookArticle": {
+            "BookDocument": {
+                "PMID": {
+                    "@Version": "1",
+                    "#text": "27809445"
+                },
+                "ArticleIdList": {
+                    "ArticleId": {
+                        "@IdType": "bookaccession",
+                        "#text": "NBK395584"
+                    }
+                },
+                "Book": {
+                    "Publisher": {
+                        "PublisherName": "MDText.com, Inc.",
+                        "PublisherLocation": "South Dartmouth (MA)"
+                    },
+                    "BookTitle": {
+                        "@book": "endotext",
+                        "#text": "Endotext"
+                    },
+                    "PubDate": {
+                        "Year": "2000"
+                    },
+                    "BeginningDate": {
+                        "Year": "2000"
+                    },
+                    "AuthorList": {
+                        "@Type": "editors",
+                        "@CompleteYN": "Y",
+                        "Author": [
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Feingold",
+                                "ForeName": "Kenneth R",
+                                "Initials": "KR",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Medicine Emeritus, University of California, San Francisco, CA"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Anawalt",
+                                "ForeName": "Bradley",
+                                "Initials": "B",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Chief of Medicine at the University of Washington Medical Center and Professor and Vice Chair of the Department of Medicine, University of Washington"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Blackman",
+                                "ForeName": "Marc R",
+                                "Initials": "MR",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Sr. Physician Scientist, Washington DC VA Medical Center; Professor of Medicine & Rehabilitation Medicine, Georgetown University; Clinical Professor of Medicine, Biochemistry and Molecular Medicine, George Washington University; and Professor of Medicine (Part-time), Johns Hopkins University"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Boyce",
+                                "ForeName": "Alison",
+                                "Initials": "A",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Pediatric Endocrinologist and Associate Research Physician in the Skeletal Diseases and Mineral Homeostasis Section, National Institute of Dental and Craniofacial Research, National Institutes of Health"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Chrousos",
+                                "ForeName": "George",
+                                "Initials": "G",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Pediatrics and Endocrinology, Division of Endocrinology, Metabolism and Diabetes, First Department of Pediatrics, National and Kapodistrian University of Athens Medical School, \"Aghia Sophia\" Children's Hospital, Athens, Greece"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Corpas",
+                                "ForeName": "Emiliano",
+                                "Initials": "E",
+                                "AffiliationInfo": {
+                                    "Affiliation": "M.D. Ph.D in Gerontology. Honorary Professor of Medicine, Universidad de Alcal\u00e1, Madrid. Consultant in Endocrinology, Hospital HLA Guadalajara (Spain)."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "de Herder",
+                                "ForeName": "Wouter W",
+                                "Initials": "WW",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Endocrine Oncology, Erasmus MC and Erasmus MC Cancer Center, Rotterdam, the Netherlands"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Dhatariya",
+                                "ForeName": "Ketan",
+                                "Initials": "K",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Consultant in Diabetes, Endocrinology and General Medicine, Norfolk and Norwich University Hospitals NHS Foundation Trust and University of East Anglia, Norwich, UK."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Dungan",
+                                "ForeName": "Kathleen",
+                                "Initials": "K",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Medicine, Division of Endocrinology, Diabetes, and Metabolism, Ohio State University"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Hofland",
+                                "ForeName": "Johannes",
+                                "Initials": "J",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Consultant Endocrinologist, Erasmus MC and Erasmus MC Cancer Center, Rotterdam, the Netherlands"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Kalra",
+                                "ForeName": "Sanjay",
+                                "Initials": "S",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Consultant Endocrinologist, Department of Endocrinology, Bharti Hospital, Karnal, India"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Kaltsas",
+                                "ForeName": "Gregory",
+                                "Initials": "G",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of General Medicine-Endocrinology, 1st Department of Propaedeutic Medicine, National and Kapodistrian University of Athens, Athens, Greece"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Kapoor",
+                                "ForeName": "Nitin",
+                                "Initials": "N",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Endocrinology, Department of Endocrinology, Diabetes and Metabolism, Christian Medical College & Hospital, Vellore, Tamil Nadu, India, Melbourne School of Population and Global Health, Faculty of Medicine, Dentistry and Health Science, The University of Melbourne, Australia."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Koch",
+                                "ForeName": "Christian",
+                                "Initials": "C",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor, The University of Tennessee Health Science Center, Memphis, Tennessee"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Kopp",
+                                "ForeName": "Peter",
+                                "Initials": "P",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Medicine and Chief of the Division of Endocrinology, Diabetology and Metabolism, University of Lausanne, Switzerland"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Korbonits",
+                                "ForeName": "M\u00e1rta",
+                                "Initials": "M",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Endocrinology and Metabolism, Centre Lead for Endocrinology and Deputy Institute Director, William Harvey Research Institute, Barts and the London School of Medicine and Dentistry, Queen Mary University of London, London, England"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Kovacs",
+                                "ForeName": "Christopher S",
+                                "Initials": "CS",
+                                "AffiliationInfo": {
+                                    "Affiliation": "University Research Professor and Professor of Medicine (Endocrinology and Metabolism), Obstetrics & Gynecology, and BioMedical Sciences, at Memorial University of Newfoundland in St. John\u2019s, Newfoundland, Canada."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Kuohung",
+                                "ForeName": "Wendy",
+                                "Initials": "W",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Director of the Division of Reproductive Endocrinology at Boston Medical Center and an Associate Professor of Obstetrics and Gynecology at the Boston University School of Medicine"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Laferr\u00e8re",
+                                "ForeName": "Blandine",
+                                "Initials": "B",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Medicine, New York Nutrition Obesity Research Center, Division of Endocrinology, Department of Medicine, Columbia University Irving Medical Center, New York, NY, USA."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Levy",
+                                "ForeName": "Miles",
+                                "Initials": "M",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Consultant endocrinologist at University Hospitals of Leicester and Honorary Associate Professor at Leicester University"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "McGee",
+                                "ForeName": "Elizabeth A",
+                                "Initials": "EA",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Obstetrics and Gynecology at the University of Vermont and Director of the Division of Reproductive Endocrinology and Infertility. Burlington, Vermont"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "McLachlan",
+                                "ForeName": "Robert",
+                                "Initials": "R",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Director of Clinical Research, Hudson Institute of Medical Research; Consultant Endocrinologist, Monash Medical Centre, Melbourne, Australia"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "New",
+                                "ForeName": "Maria",
+                                "Initials": "M",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Pediatrics, Professor of Genetics and Genomic Sciences, and Chief of the Adrenal Steroid Disorders Program, Icahn School of Medicine, Mount Sinai School of Medicine, New York, NY"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Purnell",
+                                "ForeName": "Jonathan",
+                                "Initials": "J",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Medicine, Knight Cardiovascular Institute and the Division of Endocrinology, and Associate Director, Bob and Charlee Moore Institute for Nutrition and Wellness, Oregon Health and Science University, Portland, OR"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Sahay",
+                                "ForeName": "Rakesh",
+                                "Initials": "R",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor and Head of Department of Endocrinology, Osmania Medical College and Osmania General Hospital, Hyderabad, India."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Shah",
+                                "ForeName": "Amy S",
+                                "Initials": "AS",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Pediatrics, The University of Cincinnati, Department of Pediatrics and Cincinnati Children\u2019s Hospital Medical Center, Division of Endocrinology, Cincinnati, OH, USA"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Singer",
+                                "ForeName": "Frederick",
+                                "Initials": "F",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Director of the Endocrine/Bone Disease Program, Saint Johns Cancer Institute at Saint John\u2019s Health Center, Santa Monica, CA; Clinical Professor of Medicine, UCLA School of Medicine, Los Angeles, CA"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Sperling",
+                                "ForeName": "Mark A",
+                                "Initials": "MA",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professorial Lecturer, Division of Pediatric Endocrinology and Diabetes, Icahn School of Medicine at Mount Sinai, New York, NY. Emeritus Professor and Chair, Department of Pediatrics, University of Pittsburgh."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Stratakis",
+                                "ForeName": "Constantine A",
+                                "Initials": "CA",
+                                "AffiliationInfo": {
+                                    "Affiliation": "CSO, ELPEN, Inc. & Director, Research Institute, Athens, Greece & Senior Investigator, Human Genetics & Precision Medicine, FORTH (ITE), Heraklion, Greece. Emeritus Scientific Director & Senior Investigator, NICHD, NIH, Bethesda, MD, USA"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Trence",
+                                "ForeName": "Dace L",
+                                "Initials": "DL",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Professor of Medicine, Emeritus, University of Washington, Seattle, WA"
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Wilson",
+                                "ForeName": "Don P",
+                                "Initials": "DP",
+                                "AffiliationInfo": {
+                                    "Affiliation": "Endowed Chair, Cardiovascular Health and Risk Prevention, Pediatric Endocrinology and Diabetes, Cook Children's Medical Center, Fort Worth, TX"
+                                }
+                            }
+                        ]
+                    },
+                    "Medium": "Internet"
+                },
+                "ArticleTitle": {
+                    "@book": "endotext",
+                    "@part": "gen-dyslipid",
+                    "#text": "Genetics and Dyslipidemia"
+                },
+                "Language": "eng",
+                "AuthorList": {
+                    "@Type": "authors",
+                    "@CompleteYN": "Y",
+                    "Author": [
+                        {
+                            "@ValidYN": "Y",
+                            "LastName": "Patni",
+                            "ForeName": "Nivedita",
+                            "Initials": "N",
+                            "AffiliationInfo": {
+                                "Affiliation": "Division of Pediatric Endocrinology, Department of Pediatrics, UT Southwestern Medical Center, Dallas, Texas."
+                            }
+                        },
+                        {
+                            "@ValidYN": "Y",
+                            "LastName": "Ahmad",
+                            "ForeName": "Zahid",
+                            "Initials": "Z",
+                            "AffiliationInfo": {
+                                "Affiliation": "Division of Nutrition and Metabolic Disease, Department of Internal Medicine, Center for Human Nutrition, UT Southwestern Medical Center, Dallas, Texas"
+                            }
+                        },
+                        {
+                            "@ValidYN": "Y",
+                            "LastName": "Wilson",
+                            "ForeName": "Don P.",
+                            "Initials": "DP",
+                            "AffiliationInfo": {
+                                "Affiliation": "Pediatric Endocrinology and Diabetes, Cook Children\u2019s Medical Center, Fort Worth, Texas"
+                            }
+                        }
+                    ]
+                },
+                "PublicationType": {
+                    "@UI": "D016454",
+                    "#text": "Review"
+                },
+                "Abstract": {
+                    "AbstractText": {
+                        "i": [
+                            "(APOB),",
+                            "PCSK9)",
+                            "LDLRAP1",
+                            "LPL",
+                            "APOCII",
+                            "LMF-1",
+                            "APOAV",
+                            "GPIHBP1"
+                        ],
+                        "#text": "Pediatric primary or monogenic dyslipidemias are a heterogeneous group of disorders, characterized by severe elevation of cholesterol, triglycerides, or rarely a combination of the two. Monogenic hypercholesterolemias have elevated low-density lipoprotein-cholesterol (LDL-C) levels and very high risk of premature atherosclerotic disease. They are caused by mutations in genes involved in the receptor-mediated uptake of LDL by the LDL receptor (LDLR) in hepatocytes. Autosomal dominant familial hypercholesterolemia results from mutations in LDLR, apolipoprotein B-100  or proprotein convertase subtilisin-like kexin type 9 (. Autosomal recessive hypercholesterolemia is caused by mutations in the LDLR adaptor protein 1 () gene. Type 1 hyperlipoproteinemia (Familial Chylomicronemia Syndrome) have severe fasting hypertriglyceridemia secondary to accumulation of triglyceride (TG)-rich lipoproteins, especially chylomicrons. It results from mutations in one or more genes that compromise chylomicron lipolysis and clearance. It has autosomal recessive inheritance caused by mutations in lipoprotein lipase (), Apolipoprotein C-II(), Lipase maturation factor 1(), Apolipoprotein A-V(), Glycosylphosphatidylinositolanchored high-density lipoprotein-binding protein 1(). Familial combined hypercholesterolemia is a complex genetic disease and primarily a disorder of adults. There is strong evidence demonstrating a log-linear relationship between total cholesterol levels and coronary heart disease risk. Severe hypertriglyceridemia has an increased risk of acute pancreatitis. Universal lipid screening with measurement of non-fasting non-HDL cholesterol should be performed in all children ages 9 \u201311 years and 17\u201321 years. Advanced genetic testing and counseling play very important role in patients with genetic dyslipidemia. For complete coverage of all related areas of Endocrinology, please visit our on-line FREE web-text, WWW.ENDOTEXT.ORG."
+                    },
+                    "CopyrightInformation": "Copyright \u00a9 2000-2023, MDText.com, Inc."
+                },
+                "Sections": {
+                    "Section": [
+                        {
+                            "SectionTitle": {
+                                "@book": "endotext",
+                                "@part": "gen-dyslipid",
+                                "@sec": "gen-dyslipid.ABSTRACT",
+                                "#text": "ABSTRACT"
+                            }
+                        },
+                        {
+                            "SectionTitle": {
+                                "@book": "endotext",
+                                "@part": "gen-dyslipid",
+                                "@sec": "gen-dyslipid.INTRODUCTION",
+                                "#text": "INTRODUCTION"
+                            }
+                        },
+                        {
+                            "SectionTitle": {
+                                "@book": "endotext",
+                                "@part": "gen-dyslipid",
+                                "@sec": "gen-dyslipid.MONOGENIC_HYPERCHOLESTEROLE",
+                                "#text": "MONOGENIC HYPERCHOLESTEROLEMIA"
+                            }
+                        },
+                        {
+                            "SectionTitle": {
+                                "@book": "endotext",
+                                "@part": "gen-dyslipid",
+                                "@sec": "gen-dyslipid.LIPOPROTEIN_a",
+                                "#text": "LIPOPROTEIN(a)"
+                            }
+                        },
+                        {
+                            "SectionTitle": {
+                                "@book": "endotext",
+                                "@part": "gen-dyslipid",
+                                "@sec": "gen-dyslipid.FAMILIAL_CHYLOMICRONEMIA_SY",
+                                "#text": "FAMILIAL CHYLOMICRONEMIA SYNDROME (FCS) (TYPE 1 HYPERLIPOPROTEINEMIA)"
+                            }
+                        },
+                        {
+                            "SectionTitle": {
+                                "@book": "endotext",
+                                "@part": "gen-dyslipid",
+                                "@sec": "gen-dyslipid.FAMILIAL_COMBINED_HYPERLIPI",
+                                "#text": "FAMILIAL COMBINED HYPERLIPIDEMIA (FCHL)"
+                            }
+                        },
+                        {
+                            "SectionTitle": {
+                                "@book": "endotext",
+                                "@part": "gen-dyslipid",
+                                "@sec": "gen-dyslipid.FAMILIAL_HYPERTRIGLYCERIDEM",
+                                "#text": "FAMILIAL HYPERTRIGLYCERIDEMIA (FHTG)"
+                            }
+                        },
+                        {
+                            "SectionTitle": {
+                                "@book": "endotext",
+                                "@part": "gen-dyslipid",
+                                "@sec": "gen-dyslipid.FAMILIAL_DYSBETALIPOPROTEIN",
+                                "#text": "FAMILIAL DYSBETALIPOPROTEINEMIA"
+                            }
+                        },
+                        {
+                            "SectionTitle": {
+                                "@book": "endotext",
+                                "@part": "gen-dyslipid",
+                                "@sec": "gen-dyslipid.LIPODYSTROPHY",
+                                "#text": "LIPODYSTROPHY"
+                            }
+                        },
+                        {
+                            "SectionTitle": {
+                                "@book": "endotext",
+                                "@part": "gen-dyslipid",
+                                "@sec": "gen-dyslipid.SCREENING",
+                                "#text": "SCREENING"
+                            }
+                        },
+                        {
+                            "SectionTitle": {
+                                "@book": "endotext",
+                                "@part": "gen-dyslipid",
+                                "@sec": "gen-dyslipid.GENETIC_COUNSELING",
+                                "#text": "GENETIC COUNSELING"
+                            }
+                        },
+                        {
+                            "SectionTitle": {
+                                "@book": "endotext",
+                                "@part": "gen-dyslipid",
+                                "@sec": "gen-dyslipid.REFERENCES",
+                                "#text": "REFERENCES"
+                            }
+                        }
+                    ]
+                },
+                "ContributionDate": {
+                    "Year": "2023",
+                    "Month": "4",
+                    "Day": "17"
+                },
+                "ReferenceList": {
+                    "Reference": [
+                        {
+                            "Citation": "Berberich AJ, Hegele RA. The complex molecular genetics of familial hypercholesterolaemia. Nat Rev Cardiol. 2019;16:9\u201320.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "29973710"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Teslovich TM, Musunuru K, Smith AV, Edmondson AC, Stylianou IM, Koseki M, Pirruccello JP, Ripatti S, Chasman DI, Willer CJ, Johansen CT, Fouchier SW, Isaacs A, Peloso GM, Barbalic M, Ricketts SL, Bis JC, Aulchenko YS, Thorleifsson G, Feitosa MF, Chambers J, Orho-Melander M, Melander O, Johnson T, Li X, Guo X, Li M, Shin Cho Y, Jin Go M, Jin Kim Y, Lee JY, Park T, Kim K, Sim X, Twee-Hee Ong R, Croteau-Chonka DC, Lange LA, Smith JD, Song K, Hua Zhao J, Yuan X, Luan J, Lamina C, Ziegler A, Zhang W, Zee RY, Wright AF, Witteman JC, Wilson JF, Willemsen G, Wichmann HE, Whitfield JB, Waterworth DM, Wareham NJ, Waeber G, Vollenweider P, Voight BF, Vitart V, Uitterlinden AG, Uda M, Tuomilehto J, Thompson JR, Tanaka T, Surakka I, Stringham HM, Spector TD, Soranzo N, Smit JH, Sinisalo J, Silander K, Sijbrands EJ, Scuteri A, Scott J, Schlessinger D, Sanna S, Salomaa V, Saharinen J, Sabatti C, Ruokonen A, Rudan I, Rose LM, Roberts R, Rieder M, Psaty BM, Pramstaller PP, Pichler I, Perola M, Penninx BW, Pedersen NL, Pattaro C, Parker AN, Pare G, Oostra BA, O'Donnell CJ, Nieminen MS, Nickerson DA, Montgomery GW, Meitinger T, McPherson R, McCarthy MI, McArdle W, Masson D, Martin NG, Marroni F, Mangino M, Magnusson PK, Lucas G, Luben R, Loos RJ, Lokki ML, Lettre G, Langenberg C, Launer LJ, Lakatta EG, Laaksonen R, Kyvik KO, Kronenberg F, Konig IR, Khaw KT, Kaprio J, Kaplan LM, Johansson A, Jarvelin MR, Janssens AC, Ingelsson E, Igl W, Kees Hovingh G, Hottenga JJ, Hofman A, Hicks AA, Hengstenberg C, Heid IM, Hayward C, Havulinna AS, Hastie ND, Harris TB, Haritunians T, Hall AS, Gyllensten U, Guiducci C, Groop LC, Gonzalez E, Gieger C, Freimer NB, Ferrucci L, Erdmann J, Elliott P, Ejebe KG, Doring A, Dominiczak AF, Demissie S, Deloukas P, de Geus EJ, de Faire U, Crawford G, Collins FS, Chen YD, Caulfield MJ, Campbell H, Burtt NP, Bonnycastle LL, Boomsma DI, Boekholdt SM, Bergman RN, Barroso I, Bandinelli S, Ballantyne CM, Assimes TL, Quertermous T, Altshuler D, Seielstad M, Wong TY, Tai ES, Feranil AB, Kuzawa CW, Adair LS, Taylor HA, Jr, Borecki IB, Gabriel SB, Wilson JG, Holm H, Thorsteinsdottir U, Gudnason V, Krauss RM, Mohlke KL, Ordovas JM, Munroe PB, Kooner JS, Tall AR, Hegele RA, Kastelein JJ, Schadt EE, Rotter JI, Boerwinkle E, Strachan DP, Mooser V, Stefansson K, Reilly MP, Samani NJ, Schunkert H, Cupples LA, Sandhu MS, Ridker PM, Rader DJ, van Duijn CM, Peltonen L, Abecasis GR, Boehnke M, Kathiresan S. Biological, clinical and population relevance of 95 loci for blood lipids. Nature. 2010;466:707\u2013713.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC3039276"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "20686565"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Johansen CT, Hegele RA. Genetic bases of hypertriglyceridemic phenotypes. Curr Opin Lipidol. 2011;22:247\u2013253.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "21519249"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "O'Sullivan JW, Raghavan S, Marquez-Luna C, Luzum JA, Damrauer SM, Ashley EA, O'Donnell CJ, Willer CJ, Natarajan P. American Heart Association Council on G, Precision M, Council on Clinical C, Council on Arteriosclerosis T, Vascular B, Council on Cardiovascular R, Intervention, Council on L, Cardiometabolic H, Council on Peripheral Vascular D. Polygenic Risk Scores for Cardiovascular Disease: A Scientific Statement From the American Heart Association. Circulation. 2022;146:e93\u2013e118.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC9847481"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "35862132"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Rader DJ, Cohen J, Hobbs HH. Monogenic hypercholesterolemia: new insights in pathogenesis and treatment. J Clin Invest. 2003;111:1795\u20131803.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC161432"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "12813012"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Goldstein JL, Brown MS. The LDL receptor locus and the genetics of familial hypercholesterolemia. Annu Rev Genet. 1979;13:259\u2013289.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "231932"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Leigh SE, Foster AH, Whittall RA, Hubbart CS, Humphries SE. Update and analysis of the University College London low density lipoprotein receptor familial hypercholesterolemia database. Ann Hum Genet. 2008;72:485\u2013498.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "18325082"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Wald DS, Bestwick JP, Morris JK, Whyte K, Jenkins L, Wald NJ. Child-Parent Familial Hypercholesterolemia Screening in Primary Care. N Engl J Med. 2016;375:1628\u20131637.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "27783906"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Sturm AC, Knowles JW, Gidding SS, Ahmad ZS, Ahmed CD, Ballantyne CM, Baum SJ, Bourbon M, Carrie A, Cuchel M, de Ferranti SD, Defesche JC, Freiberger T, Hershberger RE, Hovingh GK, Karayan L, Kastelein JJP, Kindt I, Lane SR, Leigh SE, Linton MF, Mata P, Neal WA, Nordestgaard BG, Santos RD, Harada-Shiba M, Sijbrands EJ, Stitziel NO, Yamashita S, Wilemon KA, Ledbetter DH, Rader DJ. Convened by the Familial Hypercholesterolemia F. Clinical Genetic Testing for Familial Hypercholesterolemia: JACC Scientific Expert Panel. J Am Coll Cardiol. 2018;72:662\u2013680.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "30071997"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Sjouke B, Hovingh GK, Kastelein JJ, Stefanutti C. Homozygous autosomal dominant hypercholesterolaemia: prevalence, diagnosis, and current and future treatment perspectives. Curr Opin Lipidol. 2015;26:200\u2013209.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "25950706"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Nordestgaard BG, Chapman MJ, Humphries SE, Ginsberg HN, Masana L, Descamps OS, Wiklund O, Hegele RA, Raal FJ, Defesche JC, Wiegman A, Santos RD, Watts GF, Parhofer KG, Hovingh GK, Kovanen PT, Boileau C, Averna M, Boren J, Bruckert E, Catapano AL, Kuivenhoven JA, Pajukanta P, Ray K, Stalenhoef AF, Stroes E, Taskinen MR, Tybjaerg-Hansen A. European Atherosclerosis Society Consensus P. Familial hypercholesterolaemia is underdiagnosed and undertreated in the general population: guidance for clinicians to prevent coronary heart disease: consensus statement of the European Atherosclerosis Society. Eur Heart J. 2013;34:3478\u20133490a.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC3844152"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "23956253"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Garg A, Garg V, Hegele RA, Lewis GF. Practical definitions of severe versus familial hypercholesterolaemia and hypertriglyceridaemia for adult clinical practice. Lancet Diabetes Endocrinol. 2019;7:880\u2013886.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "31445954"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Soria LF, Ludwig EH, Clarke HR, Vega GL, Grundy SM, McCarthy BJ. Association between a specific apolipoprotein B mutation and familial defective apolipoprotein B-100. Proc Natl Acad Sci U S A. 1989;86:587\u2013591.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC286517"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "2563166"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Maxwell KN, Fisher EA, Breslow JL. Overexpression of PCSK9 accelerates the degradation of the LDLR in a post-endoplasmic reticulum compartment. Proc Natl Acad Sci U S A. 2005;102:2069\u20132074.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC546019"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "15677715"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Pisciotta L, Priore Oliva C, Pes GM, Di Scala L, Bellocchio A, Fresa R, Cantafora A, Arca M, Calandra S, Bertolini S. Autosomal recessive hypercholesterolemia (ARH) and homozygous familial hypercholesterolemia (FH): a phenotypic comparison. Atherosclerosis. 2006;188:398\u2013405.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "16343504"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "D'Erasmo L, Minicocci I, Nicolucci A, Pintus P, Roeters Van Lennep JE, Masana L, Mata P, Sanchez-Hernandez RM, Prieto-Matos P, Real JT, Ascaso JF, Lafuente EE, Pocovi M, Fuentes FJ, Muntoni S, Bertolini S, Sirtori C, Calabresi L, Pavanello C, Averna M, Cefalu AB, Noto D, Pacifico AA, Pes GM, Harada-Shiba M, Manzato E, Zambon S, Zambon A, Vogt A, Scardapane M, Sjouke B, Fellin R, Arca M. Autosomal Recessive Hypercholesterolemia: Long-Term Cardiovascular Outcomes. J Am Coll Cardiol. 2018;71:279\u2013288.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "29348020"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Lu K, Lee MH, Hazard S, Brooks-Wilson A, Hidaka H, Kojima H, Ose L, Stalenhoef AF, Mietinnen T, Bjorkhem I, Bruckert E, Pandya A, Brewer HB, Jr, Salen G, Dean M, Srivastava A, Patel SB. Two genes that map to the STSL locus cause sitosterolemia: genomic structure and spectrum of mutations involving sterolin-1 and sterolin-2, encoded by ABCG5 and ABCG8, respectively. Am J Hum Genet. 2001;69:278\u2013290.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC1201544"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "11452359"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Anderson RA, Rao N, Byrum RS, Rothschild CB, Bowden DW, Hayworth R, Pettenati M. In situ localization of the genetic locus encoding the lysosomal acid lipase/cholesteryl esterase (LIPA) deficient in Wolman disease to chromosome 10q23.2-q23.3. Genomics. 1993;15:245\u2013247.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "8432549"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Khachadurian AK, Uthman SM. Experiences with the homozygous cases of familial hypercholesterolemia. A report of 52 patients. Nutrition and metabolism. 1973;15:132\u2013140.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "4351242"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Jenkins T, Nicholls E, Gordon E, Mendelsohn D, Seftel HC, Andrew MJ. Familial hypercholesterolaemia--a common genetic disorder in the Afrikaans population. S Afr Med J. 1980;57:943\u2013947.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "7404060"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "van der Graaf A, Avis HJ, Kusters DM, Vissers MN, Hutten BA, Defesche JC, Huijgen R, Fouchier SW, Wijburg FA, Kastelein JJ, Wiegman A. Molecular basis of autosomal dominant hypercholesterolemia: assessment in a large cohort of hypercholesterolemic children. Circulation. 2011;123:1167\u20131173.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "21382890"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Moorjani S, Roy M, Gagne C, Davignon J, Brun D, Toussaint M, Lambert M, Campeau L, Blaichman S, Lupien P. Homozygous familial hypercholesterolemia among French Canadians in Quebec Province. Arteriosclerosis. 1989;9:211\u2013216.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "2923577"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Seftel HC, Baker SG, Jenkins T, Mendelsohn D. Prevalence of familial hypercholesterolemia in Johannesburg Jews. Am J Med Genet. 1989;34:545\u2013547.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "2624266"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Ahmad Z, Adams-Huet B, Chen C, Garg A. Low Prevalence of Mutations in Known Loci for Autosomal Dominant Hypercholesterolemia in a Multi-Ethnic Patient Cohort. Circ Cardiovasc Genet. 2012;5:666\u2013675.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC3774009"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "23064986"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "http://www.ncbi.nlm.nih.gov/clinvar?LinkName=gene_clinvar&from_uid=3949."
+                        },
+                        {
+                            "Citation": "Bruikman CS, Hovingh GK, Kastelein JJ. Molecular basis of familial hypercholesterolemia. Curr Opin Cardiol. 2017",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "28169949"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Henderson R, O'Kane M, McGilligan V, Watterson S. The genetics and screening of familial hypercholesterolaemia. J Biomed Sci. 2016;23:39.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC4833930"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "27084339"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Goldberg AC, Hopkins PN, Toth PP, Ballantyne CM, Rader DJ, Robinson JG, Daniels SR, Gidding SS, de Ferranti SD, Ito MK, McGowan MP, Moriarty PM, Cromwell WC, Ross JL, Ziajka PE. National Lipid Association Expert Panel on Familial H. Familial hypercholesterolemia: screening, diagnosis and management of pediatric and adult patients: clinical guidance from the National Lipid Association Expert Panel on Familial Hypercholesterolemia. Journal of clinical lipidology. 2011;5:S1\u20138.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "21600525"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Ng PC, Henikoff S. SIFT: Predicting amino acid changes that affect protein function. Nucleic Acids Res. 2003;31:3812\u20133814.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC168916"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "12824425"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Adzhubei I, Jordan DM, Sunyaev SR. Predicting functional effect of human missense mutations using PolyPhen-2. Curr Protoc Hum Genet 2013; Chapter 7:Unit7 20",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC4480630"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "23315928"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Kircher M, Witten DM, Jain P, O'Roak BJ, Cooper GM, Shendure J. A general framework for estimating the relative pathogenicity of human genetic variants. Nat Genet. 2014;46:310\u2013315.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC3992975"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "24487276"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Guo J, Gao Y, Li X, He Y, Zheng X, Bi J, Hou L, Sa Y, Zhang M, Yin H, Jiang L. Systematic prediction of familial hypercholesterolemia caused by low-density lipoprotein receptor missense mutations. Atherosclerosis. 2019;281:1\u20138.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "30583242"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Do R, Stitziel NO, Won HH, Jorgensen AB, Duga S, Angelica Merlini P, Kiezun A, Farrall M, Goel A, Zuk O, Guella I, Asselta R, Lange LA, Peloso GM, Auer PL, Project NES, Girelli D, Martinelli N, Farlow DN, DePristo MA, Roberts R, Stewart AF, Saleheen D, Danesh J, Epstein SE, Sivapalaratnam S, Kees Hovingh G, Kastelein JJ, Samani NJ, Schunkert H, Erdmann J, Shah SH, Kraus WE, Davies R, Nikpay M, Johansen CT, Wang J, Hegele RA, Hechter E, Marz W, Kleber ME, Huang J, Johnson AD, Li M, Burke GL, Gross M, Liu Y, Assimes TL, Heiss G, Lange EM, Folsom AR, Taylor HA, Olivieri O, Hamsten A, Clarke R, Reilly DF, Yin W, Rivas MA, Donnelly P, Rossouw JE, Psaty BM, Herrington DM, Wilson JG, Rich SS, Bamshad MJ, Tracy RP, Adrienne Cupples L, Rader DJ, Reilly MP, Spertus JA, Cresci S, Hartiala J, Wilson Tang WH, Hazen SL, Allayee H, Reiner AP, Carlson CS, Kooperberg C, Jackson RD, Boerwinkle E, Lander ES, Schwartz SM, Siscovick DS, McPherson R, Tybjaerg-Hansen A, Abecasis GR, Watkins H, Nickerson DA, Ardissino D, Sunyaev SR, O'Donnell CJ, Altshuler D, Gabriel S, Kathiresan S. Exome sequencing identifies rare LDLR and APOA5 alleles conferring risk for myocardial infarction. Nature. 2014",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC4319990"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "25487149"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Austin MA, Hutter CM, Zimmern RL, Humphries SE. Genetic causes of monogenic heterozygous familial hypercholesterolemia: a HuGE prevalence review. Am J Epidemiol. 2004;160:407\u2013420.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "15321837"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Goldstein JL HH, Brown MS. . Familial hypercholesterolemia.: New York, NY: McGraw-Hill Companies, Inc,."
+                        },
+                        {
+                            "Citation": "Cuchel M, Bruckert E, Ginsberg HN, Raal FJ, Santos RD, Hegele RA, Kuivenhoven JA, Nordestgaard BG, Descamps OS, Steinhagen-Thiessen E, Tybjaerg-Hansen A, Watts GF, Averna M, Boileau C, Boren J, Catapano AL, Defesche JC, Hovingh GK, Humphries SE, Kovanen PT, Masana L, Pajukanta P, Parhofer KG, Ray KK, Stalenhoef AF, Stroes E, Taskinen MR, Wiegman A, Wiklund O, Chapman MJ. European Atherosclerosis Society Consensus Panel on Familial H. Homozygous familial hypercholesterolaemia: new insights and guidance for clinicians to improve detection and clinical management. A position paper from the Consensus Panel on Familial Hypercholesterolaemia of the European Atherosclerosis Society. Eur Heart J. 2014;35:2146\u20132157.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC4139706"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "25053660"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Innerarity TL, Weisgraber KH, Arnold KS, Mahley RW, Krauss RM, Vega GL, Grundy SM. Familial defective apolipoprotein B-100: low density lipoproteins with abnormal receptor binding. Proc Natl Acad Sci U S A. 1987;84:6919\u20136923.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC299196"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "3477815"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Andersen LH, Miserez AR, Ahmad Z, Andersen RL. Familial defective apolipoprotein B-100: A review. Journal of clinical lipidology. 2016;10:1297\u20131302.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "27919345"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Peloso GM, Auer PL, Bis JC, Voorman A, Morrison AC, Stitziel NO, Brody JA, Khetarpal SA, Crosby JR, Fornage M, Isaacs A, Jakobsdottir J, Feitosa MF, Davies G, Huffman JE, Manichaikul A, Davis B, Lohman K, Joon AY, Smith AV, Grove ML, Zanoni P, Redon V, Demissie S, Lawson K, Peters U, Carlson C, Jackson RD, Ryckman KK, Mackey RH, Robinson JG, Siscovick DS, Schreiner PJ, Mychaleckyj JC, Pankow JS, Hofman A, Uitterlinden AG, Harris TB, Taylor KD, Stafford JM, Reynolds LM, Marioni RE, Dehghan A, Franco OH, Patel AP, Lu Y, Hindy G, Gottesman O, Bottinger EP, Melander O, Orho-Melander M, Loos RJ, Duga S, Merlini PA, Farrall M, Goel A, Asselta R, Girelli D, Martinelli N, Shah SH, Kraus WE, Li M, Rader DJ, Reilly MP, McPherson R, Watkins H, Ardissino D, Project NGES, Zhang Q, Wang J, Tsai MY, Taylor HA, Correa A, Griswold ME, Lange LA, Starr JM, Rudan I, Eiriksdottir G, Launer LJ, Ordovas JM, Levy D, Chen YD, Reiner AP, Hayward C, Polasek O, Deary IJ, Borecki IB, Liu Y, Gudnason V, Wilson JG, van Duijn CM, Kooperberg C, Rich SS, Psaty BM, Rotter JI, O'Donnell CJ, Rice K, Boerwinkle E, Kathiresan S, Cupples LA. Association of low-frequency and rare coding-sequence variants with blood lipids and coronary heart disease in 56,000 whites and blacks. Am J Hum Genet. 2014;94:223\u2013232.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC3928662"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "24507774"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Chiou KR, Charng MJ. Genetic diagnosis of familial hypercholesterolemia in Han Chinese. Journal of clinical lipidology. 2016;10:490\u2013496.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "27206935"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Hoogeveen RC, Gaubatz JW, Sun W, Dodge RC, Crosby JR, Jiang J, Couper D, Virani SS, Kathiresan S, Boerwinkle E, Ballantyne CM. Small dense low-density lipoprotein-cholesterol concentrations predict risk for coronary heart disease: the Atherosclerosis Risk In Communities (ARIC) study. Arterioscler Thromb Vasc Biol. 2014;34:1069\u20131077.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC3999643"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "24558110"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Zhang DW, Lagace TA, Garuti R, Zhao Z, McDonald M, Horton JD, Cohen JC, Hobbs HH. Binding of proprotein convertase subtilisin/kexin type 9 to epidermal growth factor-like repeat A of low density lipoprotein receptor decreases receptor recycling and increases degradation. J Biol Chem. 2007;282:18602\u201318612.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "17452316"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Cameron J, Holla OL, Ranheim T, Kulseth MA, Berge KE, Leren TP. Effect of mutations in the PCSK9 gene on the cell surface LDL receptors. Hum Mol Genet. 2006;15:1551\u20131558.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "16571601"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Lipari MT, Li W, Moran P, Kong-Beltran M, Sai T, Lai J, Lin SJ, Kolumam G, Zavala-Solorio J, Izrael-Tomasevic A, Arnott D, Wang J, Peterson AS, Kirchhofer D. Furin-cleaved proprotein convertase subtilisin/kexin type 9 (PCSK9) is active and modulates low density lipoprotein receptor and serum cholesterol levels. J Biol Chem. 2012;287:43482\u201343491.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC3527935"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "23135270"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Bottomley MJ, Cirillo A, Orsatti L, Ruggeri L, Fisher TS, Santoro JC, Cummings RT, Cubbon RM, Lo Surdo P, Calzetta A, Noto A, Baysarowich J, Mattu M, Talamo F, De Francesco R, Sparrow CP, Sitlani A, Carfi A. Structural and biochemical characterization of the wild type PCSK9-EGF(AB) complex and natural familial hypercholesterolemia mutants. J Biol Chem. 2009;284:1313\u20131323.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "19001363"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Sanchez-Hernandez RM, Di Taranto MD, Benito-Vicente A, Uribe KB, Lamiquiz-Moneo I, Larrea-Sebal A, Jebari S, Galicia-Garcia U, Novoa FJ, Boronat M, Wagner AM, Civeira F, Martin C, Fortunato G. The Arg499His gain-of-function mutation in the C-terminal domain of PCSK9. Atherosclerosis. 2019;289:162\u2013172.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "31518966"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Abifadel M, Varret M, Rabes JP, Allard D, Ouguerram K, Devillers M, Cruaud C, Benjannet S, Wickham L, Erlich D, Derre A, Villeger L, Farnier M, Beucler I, Bruckert E, Chambaz J, Chanu B, Lecerf JM, Luc G, Moulin P, Weissenbach J, Prat A, Krempf M, Junien C, Seidah NG, Boileau C. Mutations in PCSK9 cause autosomal dominant hypercholesterolemia. Nat Genet. 2003;34:154\u2013156.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "12730697"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Dron JS, Hegele RA. Complexity of mechanisms among human proprotein convertase subtilisin-kexin type 9 variants. Curr Opin Lipidol. 2017;28:161\u2013169.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "28157721"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Wiegman A, de Groot E, Hutten BA, Rodenburg J, Gort J, Bakker HD, Sijbrands EJ, Kastelein JJ. Arterial intima-media thickness in children heterozygous for familial hypercholesterolaemia. Lancet. 2004;363:369\u2013370.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "15070569"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Williams RR, Hunt SC, Schumacher MC, Hegele RA, Leppert MF, Ludwig EH, Hopkins PN. Diagnosing heterozygous familial hypercholesterolemia using new practical criteria validated by molecular genetics. Am J Cardiol. 1993;72:171\u2013176.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "8328379"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Risk of fatal coronary heart disease in familial hypercholesterolaemia. Scientific Steering Committee on behalf of the Simon Broome Register Group. BMJ. 1991;303:893\u2013896.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC1671226"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "1933004"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "World Health Organization. Familial hypercholesterolemia\u2014report of a second WHO Consultation. Geneva SWHO, 1999. (WHO publication no. WHO/HGN/FH/CONS/99.2)."
+                        },
+                        {
+                            "Citation": "Wilson DP, Jacobson TA, Jones PH, Koschinsky ML, McNeal CJ, Nordestgaard BG, Orringer CE. Use of Lipoprotein(a) in clinical practice: A biomarker whose time has come. A scientific statement from the National Lipid Association. Journal of clinical lipidology. 2019;13:374\u2013392.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "31147269"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Brunzell JD, Deeb SS. Familial Lipoprotein Lipase Deficiency, Apo C-II Deficiency, and Hepatic Lipase Deficiency. In: Valle D, Beaudet AL, Vogelstein B, Kinzler KW, Antonarakis SE, Ballabio A, eds. Online Metabolic and Molecular Bases of Inherited Disease: McGraw-Hill; 2006:1-60."
+                        },
+                        {
+                            "Citation": "Brunzell JD. Familial lipoprotein lipase deficiency. Gene reviews [Internet] 2014.;"
+                        },
+                        {
+                            "Citation": "Brahm AJ, Hegele RA. Chylomicronaemia-current diagnosis and future therapies. Nat Rev Endocrinol. 2015;11:352\u2013362.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "25732519"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Peterfy M, Ben-Zeev O, Mao HZ, Weissglas-Volkov D, Aouizerat BE, Pullinger CR, Frost PH, Kane JP, Malloy MJ, Reue K, Pajukanta P, Doolittle MH. Mutations in LMF1 cause combined lipase deficiency and severe hypertriglyceridemia. Nat Genet. 2007;39:1483\u20131487.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "17994020"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Beigneux AP, Franssen R, Bensadoun A, Gin P, Melford K, Peter J, Walzem RL, Weinstein MM, Davies BS, Kuivenhoven JA, Kastelein JJ, Fong LG, Dallinga-Thie GM, Young SG. Chylomicronemia With a Mutant GPIHBP1 (Q115P) That Cannot Bind Lipoprotein Lipase. Arterioscler Thromb Vasc Biol. 2009",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC2811263"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "19304573"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Patni N, Li X, Adams-Huet B, Garg A. The prevalence and etiology of extreme hypertriglyceridemia in children: Data from a tertiary children's hospital. Journal of clinical lipidology. 2018;12:305\u2013310.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "29454679"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Chokshi N, Blumenschein SD, Ahmad Z, Garg A. Genotype-phenotype relationships in patients with type I hyperlipoproteinemia. Journal of clinical lipidology. 2014;8:287\u2013295.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "24793350"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Fojo SS, Brewer HB. Hypertriglyceridaemia due to genetic defects in lipoprotein lipase and apolipoprotein C-II. J Intern Med. 1992;231:669\u2013677.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "1619390"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Johansen CT, Hegele RA. The complex genetic basis of plasma triglycerides. Curr Atheroscler Rep. 2012;14:227\u2013234.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "22528520"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Peterfy M. Lipase maturation factor 1: a lipase chaperone involved in lipid metabolism. Biochim Biophys Acta. 2012;1821:790\u2013794.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC3288453"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "22063272"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Nilsson SK, Heeren J, Olivecrona G, Merkel M. Apolipoprotein A-V; a potent triglyceride reducer. Atherosclerosis. 2011;219:15\u201321.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "21831376"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Calandra S, Priore Oliva C, Tarugi P, Bertolini S. APOA5 and triglyceride metabolism, lesson from human APOA5 deficiency. Curr Opin Lipidol. 2006;17:122\u2013127.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "16531747"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Davies BS, Beigneux AP, Barnes RH, 2nd, Tu Y, Gin P, Weinstein MM, Nobumori C, Nyren R, Goldberg I, Olivecrona G, Bensadoun A, Young SG, Fong LG. GPIHBP1 is responsible for the entry of lipoprotein lipase into capillaries. Cell Metab. 2010;12:42\u201352.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC2913606"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "20620994"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Beigneux AP, Davies BS, Gin P, Weinstein MM, Farber E, Qiao X, Peale F, Bunting S, Walzem RL, Wong JS, Blaner WS, Ding ZM, Melford K, Wongsiriroj N, Shu X, de Sauvage F, Ryan RO, Fong LG, Bensadoun A, Young SG. Glycosylphosphatidylinositol-anchored high-density lipoprotein-binding protein 1 plays a critical role in the lipolytic processing of chylomicrons. Cell Metab. 2007;5:279\u2013291.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC1913910"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "17403372"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Ahmad Z, Wilson DP. Familial chylomicronemia syndrome and response to medium-chain triglyceride therapy in an infant with novel mutations in GPIHBP1. Journal of clinical lipidology. 2014;8:635\u2013639.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "25499947"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Feoli-Fonseca JC, Levy E, Godard M, Lambert M. Familial lipoprotein lipase deficiency in infancy: clinical, biochemical, and molecular study. J Pediatr. 1998;133:417\u2013423.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "9738727"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Wilson CJ, Priore Oliva C, Maggi F, Catapano AL, Calandra S. Apolipoprotein C-II deficiency presenting as a lipid encephalopathy in infancy. Ann Neurol. 2003;53:807\u2013810.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "12783430"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Rahalkar AR, Hegele RA. Monogenic pediatric dyslipidemias: classification, genetics and clinical spectrum. Mol Genet Metab. 2008;93:282\u2013294.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "18023224"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Servaes S, Bellah R, Verma R, Pawel B. Lipoprotein lipase deficiency with visceral xanthomas. Pediatr Radiol. 2010;40:1440\u20131442.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "20143060"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Patni N, Brothers J, Xing C, Garg A. Type 1 hyperlipoproteinemia in a child with large homozygous deletion encompassing GPIHBP1. Journal of clinical lipidology. 2016",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "27578137"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Dyslipidaemia Durrington P. Lancet. 2003;362:717\u2013731.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "12957096"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Expert panel on integrated guidelines for cardiovascular health and risk reduction in children and adolescents: summary report. Pediatrics. 2011;128 Suppl 5:S213\u2013256.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC4536582"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "22084329"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Patni N, Quittner C, Garg A. Orlistat Therapy for Children With Type 1 Hyperlipoproteinemia: A Randomized Clinical Trial. J Clin Endocrinol Metab. 2018;103:2403\u20132407.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC6456945"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "29659879"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Senior M. After Glybera's withdrawal, what's next for gene therapy? Nat Biotechnol. 2017;35:491\u2013492.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "28591128"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Goldstein JL, Schrott HG, Hazzard WR, Bierman EL, Motulsky AG. Hyperlipidemia in coronary heart disease. II. Genetic analysis of lipid levels in 176 families and delineation of a new inherited disorder, combined hyperlipidemia. J Clin Invest. 1973;52:1544\u20131568.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC302426"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "4718953"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Veerkamp MJ, de Graaf J, Hendriks JC, Demacker PN, Stalenhoef AF. Nomogram to diagnose familial combined hyperlipidemia on the basis of results of a 5-year follow-up study. Circulation. 2004;109:2980\u20132985.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "15184285"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Brouwers MC, van Greevenbroek MM, Stehouwer CD, de Graaf J, Stalenhoef AF. The genetics of familial combined hyperlipidaemia. Nat Rev Endocrinol. 2012;8:352\u2013362.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "22330738"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Gaddi A, Cicero AF, Odoo FO, Poli AA, Paoletti R. Atherosclerosis, Metabolic Diseases Study G. Practical guidelines for familial combined hyperlipidemia diagnosis: an up-date. Vasc Health Risk Manag. 2007;3:877\u2013886.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC2350131"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "18200807"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Koopal C, Marais AD, Visseren FL. Familial dysbetalipoproteinemia: an underdiagnosed lipid disorder. Curr Opin Endocrinol Diabetes Obes. 2017;24:133\u2013139.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "28098593"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Sniderman A, Tremblay A, Bergeron J, Gagne C, Couture P. Diagnosis of type III hyperlipoproteinemia from plasma total cholesterol, triglyceride, and apolipoprotein B. Journal of clinical lipidology. 2007;1:256\u2013263.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "21291689"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Patni N, Garg A. Congenital generalized lipodystrophies--new insights into metabolic dysfunction. Nat Rev Endocrinol. 2015;11:522\u2013534.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC7605893"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "26239609"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Patni N, Li X, Adams-Huet B, Vasandani C, Gomez-Diaz RA, Garg A. Regional Body Fat Changes and Metabolic Complications in Children With Dunnigan Lipodystrophy-Causing LMNA Variants. J Clin Endocrinol Metab. 2019;104:1099\u20131108.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC6382455"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "30418556"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Expert Panel on Integrated Guidelines for Cardiovascular H Risk Reduction in C, Adolescents, National Heart L, Blood I. Expert panel on integrated guidelines for cardiovascular health and risk reduction in children and adolescents: summary report. Pediatrics. 2011;128 Suppl 5:S213\u2013256.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC4536582"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "22084329"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Mortality in treated heterozygous familial hypercholesterolaemia: implications for clinical management. Scientific Steering Committee on behalf of the Simon Broome Register Group. Atherosclerosis. 1999;142:105\u2013112.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "9920511"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Brett T, Qureshi N, Gidding S, Watts GF. Screening for familial hypercholesterolaemia in primary care: Time for general practice to play its part. Atherosclerosis. 2018;277:399\u2013406.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "30270077"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Vinson A, Guerra L, Hamilton L, Wilson DP. Fnla. Reverse Cascade Screening for Familial Hypercholesterolemia. J Pediatr Nurs. 2019;44:50\u201355.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "30683281"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Landstrom AP, Chahal AA, Ackerman MJ, Cresci S, Milewicz DM, Morris AA, Sarquella-Brugada G, Semsarian C, Shah SH, Sturm AC. American Heart Association Data S, Precision Medicine Committee of the Council on G, Precision M, Council on Clinical C, Council on C, Stroke N, Council on H, Council on Lifelong Congenital Heart D, Heart Health in the Y, Council on Peripheral Vascular D, Stroke C. Interpreting Incidentally Identified Variants in Genes Associated With Heritable Cardiovascular Disease: A Scientific Statement From the American Heart Association. Circ Genom Precis Med. 2023;16:e000092.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "36970980"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Miller DT, Lee K, Abul-Husn NS, Amendola LM, Brothers K, Chung WK, Gollob MH, Gordon AS, Harrison SM, Hershberger RE, Klein TE, Richards CS, Stewart DR, Martin CL. documents@acmg.net ASFWGEa. ACMG SF v3.1 list for reporting of secondary findings in clinical exome and genome sequencing: A policy statement of the American College of Medical Genetics and Genomics (ACMG). Genet Med. 2022;24:1407\u20131414.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "35802134"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Goldman L, Goldman PA, Williams LW, Weinstein MC. Cost-effectiveness considerations in the treatment of heterozygous familial hypercholesterolemia with medications. Am J Cardiol. 1993;72:75D\u201379D.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "8213502"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Marks D, Wonderling D, Thorogood M, Lambert H, Humphries SE, Neil HA. Cost effectiveness analysis of different approaches of screening for familial hypercholesterolaemia. BMJ. 2002;324:1303.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC113765"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "12039822"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Marang-van de Mheen PJ, ten Asbroek AH, Bonneux L, Bonsel GJ, Klazinga NS. Cost-effectiveness of a family and DNA based screening programme on familial hypercholesterolaemia in The Netherlands. Eur Heart J. 2002;23:1922\u20131930.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "12473254"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Crosland P, Maconachie R, Buckner S, McGuire H, Humphries SE, Qureshi N. Cost-utility analysis of searching electronic health records and cascade testing to identify and diagnose familial hypercholesterolaemia in England and Wales. Atherosclerosis. 2018;275:80\u201387.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC6116897"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "29879685"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "PubmedBookData": {
+                "PublicationStatus": "ppublish",
+                "ArticleIdList": {
+                    "ArticleId": {
+                        "@IdType": "pubmed",
+                        "#text": "27809445"
+                    }
+                }
+            }
+        }
+    }
+}

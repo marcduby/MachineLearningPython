@@ -35,8 +35,22 @@ Sun Apr 30 16:44:11 2023
 |  0%   51C    P0   263W / 300W |  12858MiB / 23028MiB |     99%      Default |
 |                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
+SLC30A8
 
-+-----------------------------------------------------------------------------+
+
+
+
+20230717 - genes of interest
+  PPARG
+  UBE2NL
+  LDLR
+  MAP3K15
+  INHBE
+  GIGYF1
+  GPR75
+
+
+
 | Processes:                                                                  |
 |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
 |        ID   ID                                                   Usage      |

@@ -32,10 +32,19 @@ DB_PASSWD = os.environ.get('DB_PASSWD')
 SCHEMA_GPT = "gene_gpt"
 DB_PAPER_TABLE = "pgpt_paper"
 DB_PAPER_ABSTRACT = "pgpt_paper_abtract"
+
 SQL_SELECT_PUBMED = "select pubmed_id from {}.pgpt_paper where pubmed_id = %s".format(SCHEMA_GPT)
 SQL_SELECT_ABSTRACT = "select pubmed_id from {}.pgpt_paper_abstract where pubmed_id = %s".format(SCHEMA_GPT)
+
 SQL_INSERT_PAPER = "insert into {}.pgpt_paper (pubmed_id) values(%s)".format(SCHEMA_GPT)
 SQL_INSERT_ABSTRACT = "insert into {}.pgpt_paper_abstract (pubmed_id, abstract, title, journal_name, paper_year, document_level) values(%s, %s, %s, %s, %s, %s)".format(SCHEMA_GPT)
+
+SQL_SELECT_SEARCH_PAPER = "select id from {}.pgpt_search_paper where search_id = %s and paper_id = %s".format(SCHEMA_GPT)
+SQL_INSERT_SEARCH_PAPER = "insert into {}.pgpt_search_paper (search_id, paper_id) values(%s, %s)".format(SCHEMA_GPT)
+
+# SQL_SELECT_SEARCH_LIST = "select id, terms from {}.pgpt_search order by id desc".format(SCHEMA_GPT)
+SQL_SELECT_SEARCH_LIST = "select id, terms from {}.pgpt_search order by id ".format(SCHEMA_GPT)
+
 
 # methods
 def get_list_gpt_inputs(list_abstracts, num_limit=4096, log=True):
@@ -76,7 +85,7 @@ def get_pubmed_ids_query_key(list_keywords, use_history=False, log=False):
     # query
     url_string = URL_SEARCH_BY_KEYWORD.format(input_keyword)
     if use_history:
-        url_string = url_string + 'usehistory=y'
+        url_string = url_string + '&usehistory=y'
     if log:
         print("got request: {}".format(url_string))
 
@@ -90,6 +99,12 @@ def get_pubmed_ids_query_key(list_keywords, use_history=False, log=False):
     if list_response_id:
         for item in list_response_id:
             list_pubmed_ids.append(item)
+
+    # get history 
+    if map_response.get('eSearchResult'):
+        web_env = map_response.get('eSearchResult').get('WebEnv')
+        query_key = map_response.get('eSearchResult').get('QueryKey')
+
     # log
     if log:
         print("got pubmed id list: {}".format(list_pubmed_ids))
@@ -127,27 +142,30 @@ def get_pubmed_abtract(id_pubmed, log=False):
     if log:
         print("got rest response: {}".format(json.dumps(map_response, indent=1)))
 
-    list_abstract = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article').get('Abstract').get('AbstractText')
-    if log:
-        print(list_abstract)
+    if map_response.get('PubmedArticleSet') and map_response.get('PubmedArticleSet').get('PubmedArticle') and map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation'):
+        resp_article = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article')
+        if resp_article and resp_article.get('Abstract'):
+            list_abstract = resp_article.get('Abstract').get('AbstractText')
+            if log:
+                print(list_abstract)
 
-    if list_abstract:
-        if isinstance(list_abstract, list):
-            for item in list_abstract:
-                list_temp.append(item.get('#text'))
-            text_abstract = " ".join(list_temp)
-        elif isinstance(list_abstract, dict):
-            text_abstract = list_abstract.get('#text')
-        elif isinstance(list_abstract, str):
-            text_abstract = list_abstract
+            if list_abstract:
+                if isinstance(list_abstract, list):
+                    for item in list_abstract:
+                        list_temp.append(item.get('#text'))
+                    text_abstract = " ".join(list_temp)
+                elif isinstance(list_abstract, dict):
+                    text_abstract = list_abstract.get('#text')
+                elif isinstance(list_abstract, str):
+                    text_abstract = list_abstract
 
-    # get year
-    if map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('DateCompleted'):
-        year = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('DateCompleted').get('Year')
-    title = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article').get('ArticleTitle')
-    if isinstance(title, dict):
-        title = title.get('#text')
-    journal = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article').get('Journal').get('Title')
+            # get year
+            if map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('DateCompleted'):
+                year = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('DateCompleted').get('Year')
+            title = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article').get('ArticleTitle')
+            if isinstance(title, dict):
+                title = title.get('#text')
+            journal = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article').get('Journal').get('Title')
 
     # return
     return text_abstract, title, journal, year
@@ -218,6 +236,25 @@ def get_db_pubmed_id(conn, pubmed_id, look_for_abstract=False, log=False):
     # return 
     return paper_id
 
+def get_db_pubmed_searches_list(conn, log=False):
+    '''
+    find all the pubmed searches to do
+    '''
+    list_search = []
+    cursor = conn.cursor()
+
+    # pick query 
+    # find
+    cursor.execute(SQL_SELECT_SEARCH_LIST)
+    db_result = cursor.fetchall()
+    for row in db_result:
+        search_id = row[0]
+        search_terms = row[1]
+        list_search.append({'id': search_id, 'terms': search_terms})
+
+    # return 
+    return list_search
+
 def insert_pubmed_id(conn, pubmed_id, abstract=None, title=None, journal=None, year=None, in_abstract=False, log=False):
     '''
     will insert a pubmed id in the database if necessary
@@ -230,9 +267,12 @@ def insert_pubmed_id(conn, pubmed_id, abstract=None, title=None, journal=None, y
     # see if already in db
     result_id = get_db_pubmed_id(conn, pubmed_id, look_for_abstract=in_abstract)
 
+    # shorten abstract if need be
+    if abstract and len(abstract) > 3950:
+        abstract = abstract[:3950]
+
     # if not, insert
     if not result_id:
-        cursor = conn.cursor()
         if in_abstract:
             if log:
                 print("inserting: {} - {} - {}".format(year, journal, title))
@@ -240,6 +280,24 @@ def insert_pubmed_id(conn, pubmed_id, abstract=None, title=None, journal=None, y
             cursor.execute(SQL_INSERT_ABSTRACT, (int_pubmed, abstract, title, journal, int_year, 0))
         else:
             cursor.execute(SQL_INSERT_PAPER, (int_pubmed))
+        conn.commit()
+
+def insert_db_search_paper(conn, pubmed_id, search_id, log=False):
+    '''
+    will insert a paper/search link in the db
+    '''
+    # initialize
+    result_id = None
+    cursor = conn.cursor()
+    int_pubmed = int(pubmed_id)
+
+    # see if already in db
+    cursor.execute(SQL_SELECT_SEARCH_PAPER, (search_id, int_pubmed))
+    db_results = cursor.fetchall()
+
+    # if not, insert
+    if not db_results:
+        cursor.execute(SQL_INSERT_SEARCH_PAPER, (search_id, int_pubmed))
         conn.commit()
 
 def get_connection():
@@ -253,19 +311,67 @@ def get_connection():
 
 # main
 if __name__ == "__main__":
-    # set keywords
-    list_keywords = ['MAP3K15', 'human']
-    list_keywords = ['PPARG', 'human']
-    list_keywords = LIST_KEYWORDS
+    # initialize
+    conn = get_connection()
 
-    # query for pubmed ids
-    list_pubmed_ids, web_env, query_key = get_pubmed_ids_query_key(list_keywords, log=True)
-    print("for {}, got original list of papers of size: {}\n\n".format(list_keywords, len(list_pubmed_ids)))
+    # get list of searches
+    list_searches = get_db_pubmed_searches_list(conn)
+    list_searches=[{'id': 8, 'terms': 'SLC30A8,human'}]
 
-    # query for the abstract text
-    text_abstract, title, journal, year = get_pubmed_abtract(ID_TEST_ARTICLE, log=False)
-    print("got abstract: \n{}".format(text_abstract))
-    print("title: {} for journal: {} and year: {}".format(title, journal, year))
+    # loop
+    for item in list_searches:
+        time.sleep(5)
+        # get search terms
+        print("searh pubmed for: {}".format(item.get('terms')))
+        list_keywords = item.get('terms').split(",")
+        search_id = item.get('id')
+
+        # query for pubmed ids
+        list_pubmed_ids, web_env, query_key = get_pubmed_ids_query_key(list_keywords=list_keywords, use_history=True, log=True)
+        print("for {}, got original list of papers of size: {}\n\n".format(list_keywords, len(list_pubmed_ids)))
+
+
+        # get the abstract list
+        # web_env = "MCID_64b697f1a865fa461a518090"
+        # query_key = 1
+        print("query pubmed for queryKey: {} and webEnv: {}".format(query_key, web_env))
+        list_pubmed_ids = get_list_pubmed_ids_from_webenv(web_env, query_key, log=False)
+        print("\ngot list of pubmed ids of size: {}".format(len(list_pubmed_ids)))
+
+        # insert pubmed ids
+        for pubmed_id in list_pubmed_ids:
+        # for i in range(100000):
+            # pubmed_id = list_pubmed_ids[i]
+
+            # get the abstract
+            if not get_db_pubmed_id(conn, pubmed_id, look_for_abstract=True):
+                print("inserting journal abstract for pubmed id: {}".format(pubmed_id))
+                text_abstract, title, journal, year = get_pubmed_abtract(pubmed_id, log=True)
+
+                # insert
+                if text_abstract and title and journal:
+                    insert_pubmed_id(conn, pubmed_id)
+                    insert_pubmed_id(conn, pubmed_id, text_abstract, title, journal, year, in_abstract=True, log=True)
+                    insert_db_search_paper(conn=conn, pubmed_id=pubmed_id, search_id=search_id)
+                else:
+                    print("ERROR: skipping {} due to lack of data".format(pubmed_id))
+
+
+
+
+
+
+
+# for testing
+    # # set keywords
+    # list_keywords = ['MAP3K15', 'human']
+    # list_keywords = ['PPARG', 'human']
+    # list_keywords = LIST_KEYWORDS
+
+    # # query for the abstract text
+    # text_abstract, title, journal, year = get_pubmed_abtract(ID_TEST_ARTICLE, log=False)
+    # print("got abstract: \n{}".format(text_abstract))
+    # print("title: {} for journal: {} and year: {}".format(title, journal, year))
 
     # # get the abstract list
     # list_abstracts = get_list_abstracts(list_keywords, log=True)
@@ -277,25 +383,4 @@ if __name__ == "__main__":
     # list_chat_inputs = get_list_gpt_inputs(list_abstracts)
     # for item in list_chat_inputs:
     #     print("\ngpt input: \n{}\n".format(item))
-
-
-    # get the abstract list
-    web_env = "MCID_64b697f1a865fa461a518090"
-    query_key = 1
-    list_pubmed_ids = get_list_pubmed_ids_from_webenv(web_env, query_key, log=False)
-    print("\ngot list of pubmed ids of size: {}".format(len(list_pubmed_ids)))
-
-    # insert pubmed ids
-    conn = get_connection()
-    for i in range(1000):
-        pubmed_id = list_pubmed_ids[i]
-
-        # get the abstract
-        if not get_db_pubmed_id(conn, pubmed_id, look_for_abstract=True):
-            print("inserting journal: {}".format(pubmed_id))
-            text_abstract, title, journal, year = get_pubmed_abtract(pubmed_id, log=True)
-
-            # insert
-            insert_pubmed_id(conn, pubmed_id)
-            insert_pubmed_id(conn, pubmed_id, text_abstract, title, journal, year, in_abstract=True, log=True)
 

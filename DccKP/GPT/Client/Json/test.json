@@ -1,0 +1,508 @@
+{
+    "PubmedArticleSet": {
+        "PubmedArticle": {
+            "MedlineCitation": {
+                "@Status": "MEDLINE",
+                "@Owner": "NLM",
+                "@IndexingMethod": "Automated",
+                "PMID": {
+                    "@Version": "1",
+                    "#text": "28546348"
+                },
+                "DateCompleted": {
+                    "Year": "2019",
+                    "Month": "05",
+                    "Day": "16"
+                },
+                "DateRevised": {
+                    "Year": "2019",
+                    "Month": "05",
+                    "Day": "16"
+                },
+                "Article": {
+                    "@PubModel": "Print",
+                    "Journal": {
+                        "ISSN": {
+                            "@IssnType": "Electronic",
+                            "#text": "1524-4571"
+                        },
+                        "JournalIssue": {
+                            "@CitedMedium": "Internet",
+                            "Volume": "120",
+                            "Issue": "11",
+                            "PubDate": {
+                                "Year": "2017",
+                                "Month": "May",
+                                "Day": "26"
+                            }
+                        },
+                        "Title": "Circulation research",
+                        "ISOAbbreviation": "Circ Res"
+                    },
+                    "ArticleTitle": "GPR75 Identified as the First 20-HETE Receptor: A Chemokine Receptor Adopted by a New Family.",
+                    "Pagination": {
+                        "StartPage": "1696",
+                        "EndPage": "1698",
+                        "MedlinePgn": "1696-1698"
+                    },
+                    "ELocationID": {
+                        "@EIdType": "doi",
+                        "@ValidYN": "Y",
+                        "#text": "10.1161/CIRCRESAHA.117.311022"
+                    },
+                    "AuthorList": {
+                        "@CompleteYN": "Y",
+                        "Author": [
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Fan",
+                                "ForeName": "Fan",
+                                "Initials": "F",
+                                "AffiliationInfo": {
+                                    "Affiliation": "From the Department of Pharmacology and Toxicology, University of Mississippi Medical Center, Jackson."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Roman",
+                                "ForeName": "Richard J",
+                                "Initials": "RJ",
+                                "AffiliationInfo": {
+                                    "Affiliation": "From the Department of Pharmacology and Toxicology, University of Mississippi Medical Center, Jackson. rroman@umc.edu."
+                                }
+                            }
+                        ]
+                    },
+                    "Language": "eng",
+                    "GrantList": {
+                        "@CompleteYN": "Y",
+                        "Grant": [
+                            {
+                                "GrantID": "R01 DK104184",
+                                "Acronym": "DK",
+                                "Agency": "NIDDK NIH HHS",
+                                "Country": "United States"
+                            },
+                            {
+                                "GrantID": "R21 AG050049",
+                                "Acronym": "AG",
+                                "Agency": "NIA NIH HHS",
+                                "Country": "United States"
+                            },
+                            {
+                                "GrantID": "P20 GM104357",
+                                "Acronym": "GM",
+                                "Agency": "NIGMS NIH HHS",
+                                "Country": "United States"
+                            },
+                            {
+                                "GrantID": "R37 HL036279",
+                                "Acronym": "HL",
+                                "Agency": "NHLBI NIH HHS",
+                                "Country": "United States"
+                            },
+                            {
+                                "GrantID": "R01 HL036279",
+                                "Acronym": "HL",
+                                "Agency": "NHLBI NIH HHS",
+                                "Country": "United States"
+                            }
+                        ]
+                    },
+                    "PublicationTypeList": {
+                        "PublicationType": [
+                            {
+                                "@UI": "D016421",
+                                "#text": "Editorial"
+                            },
+                            {
+                                "@UI": "D052061",
+                                "#text": "Research Support, N.I.H., Extramural"
+                            },
+                            {
+                                "@UI": "D013485",
+                                "#text": "Research Support, Non-U.S. Gov't"
+                            },
+                            {
+                                "@UI": "D016420",
+                                "#text": "Comment"
+                            }
+                        ]
+                    }
+                },
+                "MedlineJournalInfo": {
+                    "Country": "United States",
+                    "MedlineTA": "Circ Res",
+                    "NlmUniqueID": "0047103",
+                    "ISSNLinking": "0009-7330"
+                },
+                "ChemicalList": {
+                    "Chemical": [
+                        {
+                            "RegistryNumber": "0",
+                            "NameOfSubstance": {
+                                "@UI": "C120151",
+                                "#text": "GPR75 protein, human"
+                            }
+                        },
+                        {
+                            "RegistryNumber": "0",
+                            "NameOfSubstance": {
+                                "@UI": "D006893",
+                                "#text": "Hydroxyeicosatetraenoic Acids"
+                            }
+                        },
+                        {
+                            "RegistryNumber": "0",
+                            "NameOfSubstance": {
+                                "@UI": "D019707",
+                                "#text": "Receptors, Chemokine"
+                            }
+                        },
+                        {
+                            "RegistryNumber": "0",
+                            "NameOfSubstance": {
+                                "@UI": "D043562",
+                                "#text": "Receptors, G-Protein-Coupled"
+                            }
+                        },
+                        {
+                            "RegistryNumber": "79551-86-3",
+                            "NameOfSubstance": {
+                                "@UI": "C055987",
+                                "#text": "20-hydroxy-5,8,11,14-eicosatetraenoic acid"
+                            }
+                        }
+                    ]
+                },
+                "CitationSubset": "IM",
+                "CommentsCorrectionsList": {
+                    "CommentsCorrections": {
+                        "@RefType": "CommentOn",
+                        "RefSource": "Circ Res. 2017 May 26;120(11):1776-1788",
+                        "PMID": {
+                            "@Version": "1",
+                            "#text": "28325781"
+                        }
+                    }
+                },
+                "MeshHeadingList": {
+                    "MeshHeading": [
+                        {
+                            "DescriptorName": {
+                                "@UI": "D006801",
+                                "@MajorTopicYN": "N",
+                                "#text": "Humans"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D006893",
+                                "@MajorTopicYN": "Y",
+                                "#text": "Hydroxyeicosatetraenoic Acids"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D006973",
+                                "@MajorTopicYN": "Y",
+                                "#text": "Hypertension"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D019707",
+                                "@MajorTopicYN": "N",
+                                "#text": "Receptors, Chemokine"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D043562",
+                                "@MajorTopicYN": "N",
+                                "#text": "Receptors, G-Protein-Coupled"
+                            }
+                        }
+                    ]
+                },
+                "KeywordList": {
+                    "@Owner": "NOTNLM",
+                    "Keyword": [
+                        {
+                            "@MajorTopicYN": "N",
+                            "#text": "Editorials"
+                        },
+                        {
+                            "@MajorTopicYN": "N",
+                            "#text": "blood pressure"
+                        },
+                        {
+                            "@MajorTopicYN": "N",
+                            "#text": "blood vessels"
+                        },
+                        {
+                            "@MajorTopicYN": "N",
+                            "#text": "cell proliferation"
+                        },
+                        {
+                            "@MajorTopicYN": "N",
+                            "#text": "hypertension"
+                        },
+                        {
+                            "@MajorTopicYN": "N",
+                            "#text": "inflammation"
+                        }
+                    ]
+                }
+            },
+            "PubmedData": {
+                "History": {
+                    "PubMedPubDate": [
+                        {
+                            "@PubStatus": "entrez",
+                            "Year": "2017",
+                            "Month": "5",
+                            "Day": "27",
+                            "Hour": "6",
+                            "Minute": "0"
+                        },
+                        {
+                            "@PubStatus": "pubmed",
+                            "Year": "2017",
+                            "Month": "5",
+                            "Day": "27",
+                            "Hour": "6",
+                            "Minute": "0"
+                        },
+                        {
+                            "@PubStatus": "medline",
+                            "Year": "2019",
+                            "Month": "5",
+                            "Day": "17",
+                            "Hour": "6",
+                            "Minute": "0"
+                        }
+                    ]
+                },
+                "PublicationStatus": "ppublish",
+                "ArticleIdList": {
+                    "ArticleId": [
+                        {
+                            "@IdType": "pubmed",
+                            "#text": "28546348"
+                        },
+                        {
+                            "@IdType": "mid",
+                            "#text": "NIHMS869182"
+                        },
+                        {
+                            "@IdType": "pmc",
+                            "#text": "PMC5766006"
+                        },
+                        {
+                            "@IdType": "doi",
+                            "#text": "10.1161/CIRCRESAHA.117.311022"
+                        },
+                        {
+                            "@IdType": "pii",
+                            "#text": "CIRCRESAHA.117.311022"
+                        }
+                    ]
+                },
+                "ReferenceList": {
+                    "Reference": [
+                        {
+                            "Citation": "Garcia V, Gilani A, Shkolnik B, Pandey V, Zhang FF, Dakarapu R, Gandham SK, Reddy NR, Graves JP, Gruzdev A, Zeldin DC, Capdevila JH, Falck JR, Schwartzman ML. 20-HETE Signals Through G Protein-Coupled Receptor GPR75 (Gq) to Affect Vascular Function and Trigger Hypertension. Circ Res. 2017",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC5446268"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "28325781"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Ignatov A, Robert J, Gregory-Evans C, Schaller HC. RANTES stimulates Ca2+ mobilization and inositol trisphosphate (IP3) formation in cells transfected with G protein-coupled receptor 75. Br J Pharmacol. 2006;149:490\u2013497.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC2014681"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "17001303"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Liu B, Hassan Z, Amisten S, King AJ, Bowe JE, Huang GC, Jones PM, Persaud SJ. The novel chemokine receptor, G-protein-coupled receptor 75, is expressed by islets and is coupled to stimulation of insulin secretion and improved glucose homeostasis. Diabetologia. 2013;56:2467\u20132476.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "23979485"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Roman RJ. P-450 metabolites of arachidonic acid in the control of cardiovascular function. Physiol Rev. 2002;82:131\u2013185.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "11773611"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Fan F, Ge Y, Lv W, Elliott MR, Muroya Y, Hirata T, Booz GW, Roman RJ. Molecular mechanisms and cell signaling of 20-hydroxyeicosatetraenoic acid in vascular pathophysiology. Front Biosci (Landmark Ed) 2016;21:1427\u20131463.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC5064940"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "27100515"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Alonso-Galicia M, Falck JR, Reddy KM, Roman RJ. 20-HETE agonists and antagonists in the renal circulation. Am J Physiol. 1999;277:F790\u2013796.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "10564244"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Akbulut T, Regner KR, Roman RJ, Avner ED, Falck JR, Park F. 20-HETE activates the Raf/MEK/ERK pathway in renal epithelial cells through an EGFR-and c-Src-dependent mechanism. Am J Physiol. 2009;297:F662\u2013F670.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC2739708"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "19570883"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Hoopes SL, Garcia V, Edin ML, Schwartzman ML, Zeldin DC. Vascular actions of 20-HETE. Prostaglandins Other Lipid Mediat. 2015;120:9\u201316.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC4575602"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "25813407"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Wu-Zhang AX, Newton AC. Protein kinase C pharmacology: refining the toolbox. Biochem J. 2013;452:195\u2013209.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC4079666"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "23662807"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Inoue R, Jensen LJ, Jian Z, Shi J, Hai L, Lurie AI, Henriksen FH, Salomonsson M, Morita H, Kawarabayashi Y, Mori M, Mori Y, Ito Y. Synergistic activation of vascular TRPC6 channel by receptor and mechanical stimulation via phospholipase C/diacylglycerol and phospholipase A2/omega-hydroxylase/20-HETE pathways. Circ Res. 2009;104:1399\u20131409.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "19443836"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Fan F, Muroya Y, Roman RJ. Cytochrome P450 eicosanoids in hypertension and renal disease. Curr Opin Nephrol Hypertens. 2015;24:37\u201346.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC4260681"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "25427230"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Garcia V, Schwartzman ML. Recent developments on the vascular effects of 20-hydroxyeicosatetraenoic acid. Curr Opin Nephrol Hypertens. 2017;26:74\u201382.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "27906746"
+                                }
+                            }
+                        },
+                        {
+                            "Citation": "Renic M, Klaus JA, Omura T, Kawashima N, Onishi M, Miyata N, Koehler RC, Harder DR, Roman RJ. Effect of 20-HETE inhibition on infarct volume and cerebral blood flow after transient middle cerebral artery occlusion. J Cereb Blood Flow Metab. 2009;29:629\u2013639.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC2821901"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "19107134"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Nowicki S, Chen SL, Aizman O, Cheng XJ, Li D, Nowicki C, Nairn A, Greengard P, Aperia A. 20-Hydroxyeicosa-tetraenoic acid (20 HETE) activates protein kinase C. Role in regulation of rat renal Na+, K+-ATPase. J Clin Invest 1997. 1997 Mar 15;99:1224\u20131230.",
+                            "ArticleIdList": {
+                                "ArticleId": [
+                                    {
+                                        "@IdType": "pmc",
+                                        "#text": "PMC507936"
+                                    },
+                                    {
+                                        "@IdType": "pubmed",
+                                        "#text": "9077530"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Citation": "Gu RM, Wei Y, Falck JR, Krishna UM, Wang WH. Effects of protein tyrosine kinase and protein tyrosine phosphatase on apical K(+) channels in the TAL. Am J Physiol Cell Physiol. 2001;281:C1188\u20131195.",
+                            "ArticleIdList": {
+                                "ArticleId": {
+                                    "@IdType": "pubmed",
+                                    "#text": "11546655"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
