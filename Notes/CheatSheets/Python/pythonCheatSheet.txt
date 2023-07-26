@@ -37,6 +37,13 @@ strings:
 
   if any([x in a_string for x in matches]):
 
+  str.lentgh()
+  str[:300]
+
+timer:
+------
+
+
 pandas:
 -------
   - df_results = pd.DataFrame.from_dict(list_gene_chemical)

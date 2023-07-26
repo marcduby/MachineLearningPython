@@ -6,11 +6,20 @@ create table pgpt_search (
   name                      varchar(500) not null,
   terms                     varchar(5000) null,
   gene                      varchar(100) null,
+  pubmed_count              int(7) default -1 not null,
   ready                     enum('Y', 'N') default 'N' not null,
+  to_download               enum('Y', 'N') default 'N' not null,
+  date_last_download        datetime null,
+  date_last_summary         datetime null,
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
 
 -- alter table pgpt_search add column ready enum('Y', 'N') default 'N' not null;
+-- alter table pgpt_search add column to_download enum('Y', 'N') default 'N' not null;
+-- alter table pgpt_search add column date_last_download datetime null;
+-- alter table pgpt_search add column pubmed_count int(7) default -1 not null;
+-- alter table pgpt_search add column date_last_summary datetime null;
+
 
 -- keywords tables
 drop table if exists pgpt_keyword;
@@ -84,6 +93,11 @@ alter table pgpt_gpt_paper add index pgpt_gpt_pap_sea (search_id);
 
 
 
+
+
+
+
+
 -- start data
 insert into pgpt_keyword (keyword) values ('PPARG');
 insert into pgpt_keyword (keyword) values ('human');
@@ -105,11 +119,10 @@ insert into pgpt_search (name, terms, gene) values('GPR75 search', 'GPR75,human'
 insert into pgpt_search (name, terms, gene) values('SLC30A8 search', 'SLC30A8,human', 'SLC30A8');
 insert into pgpt_keyword (keyword) values ('SLC30A8');
   
+insert into pgpt_search (name, terms, gene) values('GCK search', 'GCK,human', 'GCK');
+insert into pgpt_keyword (keyword) values ('GCK');
   
   
-  
-  
-
 insert into pgpt_search_keyword (search_id, keyword_id) values(1, 1);
 insert into pgpt_search_keyword (search_id, keyword_id) values(1, 2);
 
@@ -121,13 +134,16 @@ where pa.id != pb.id and pa.pubmed_id = pb.pubmed_id;
 
 
 
+
+
+
+
+
+
 -- count
 select count(id) from pgpt_paper_abstract where pubmed_id is not null;
 
-select count(sp.id), sp.search_id, se.terms
-from pgpt_search_paper sp, pgpt_search se
-where sp.search_id = se.id
-group by search_id order by search_id;
+select count(sp.id), se.* from pgpt_search_paper sp, pgpt_search se where sp.search_id = se.id group by search_id order by search_id;
 
 
 select count(sp.id), sp.search_id, sp.document_level, se.terms
@@ -140,6 +156,21 @@ order by search_id;
 
 
 -- query
+-- get the search results
+select se.gene, abst.abstract
+from pgpt_paper_abstract abst, pgpt_search se 
+where abst.search_top_level_of = se.id
+order by se.gene;
+
+
+select * from pgpt_paper_abstract where search_top_level_of = 1;
+
+select se.id, se.gene, abs.abstract
+from pgpt_paper_abstract abs, pgpt_search se 
+where se.id = abs.search_top_level_of
+order by se.id;
+
+
 select link.search_id, se.name, se.terms, link.keyword_id, k.keyword
 from pgpt_search se, pgpt_keyword k, pgpt_search_keyword link
 where se.id = link.search_id and k.id = link.keyword_id
@@ -162,6 +193,17 @@ order by gpt.child_id;
 
 
 select count(distinct parent_id), document_level from pgpt_gpt_paper group by document_level order by document_level;
+
+select avg(wordcount(abstract)) from pgpt_paper_abstract where id < 100;
+SELECT
+    ROUND (   
+        (
+            CHAR_LENGTH(abstract) - CHAR_LENGTH(REPLACE (abstract, " ", "")) 
+        ) 
+        / CHAR_LENGTH(" ")        
+    ) AS count    
+FROM from pgpt_paper_abstract where id < 10;
+
 
 --- find papers for first level inference
 select abst.id, abst.abstract 
@@ -189,16 +231,27 @@ update pgpt_gpt_paper node
   join pgpt_paper_abstract paper on node.child_id = paper.pubmed_id
   set node.child_id = paper.id;
 
+search_top_level_of
 
-insert into pgpt_search_paper (search_id, paper_id) 
-select distinct pubmed_id, 1 from pgpt_paper;
 
-update pgpt_search_paper set search_id = paper_id, paper_id = search_id where search_id > 1000;
 
+-- update searches
+update pgpt_search set ready = 'N';
+-- update pgpt_search set ready = 'Y' where id = 1;
+update pgpt_search set ready = 'Y' where id not in (1, 2, 4, 8);
+
+-- updates
+update pgpt_search set to_download = 'Y' where id > 20 and id < 30;
+
+update pgpt_search set date_last_summary = sysdate() -1 where id in (select search_top_level_of from pgpt_paper_abstract where search_top_level_of is not null);
 
 update pgpt_search set ready = 'N';
-update pgpt_search set ready = 'Y' where id = 8;
+update pgpt_search set ready = 'Y' where pubmed_count < 900 and date_last_summary is null and date_last_download is not null;
 
+select * from pgpt_search where pubmed_count < 900 and date_last_summary is null and date_last_download is not null;
+select * from pgpt_search where date_last_download is not null;
+
+select * from pgpt_search where ready = 'Y';
 
 -- data fixes
 -- 20230721 - change search from 0 to 1 for PPARG for id 1 to 247
@@ -214,6 +267,38 @@ from pgpt_paper_abstract abst, pgpt_gpt_paper gpt
 where abst.document_level = 2 and gpt.parent_id = abst.id and gpt.search_id = 4
 and abst.id not in (select child_id from pgpt_gpt_paper where search_id = 4);
 
+
+-- load genes from t2d huge scores of translator
+-- insert genes
+insert into pgpt_keyword (keyword)
+select phe.gene_code
+from tran_upkeep.agg_gene_phenotype phe
+where phe.phenotype_code = 'T2D'
+and phe.gene_code not in (select gene from pgpt_search) 
+order by phe.abf_probability_combined desc limit 100;
+
+-- insert searches
+insert into pgpt_search (name, terms, gene) 
+select concat(phe.gene_code, ' search'), concat(phe.gene_code, ',human'), phe.gene_code
+from tran_upkeep.agg_gene_phenotype phe
+where phe.phenotype_code = 'T2D'
+and phe.gene_code not in (select gene from pgpt_search) 
+order by phe.abf_probability_combined desc limit 100;
+
+
+
+select phe.gene_code
+from tran_upkeep.agg_gene_phenotype phe
+where phe.phenotype_code = 'T2D'
+and phe.gene_code not in (select gene from pgpt_search) 
+order by phe.abf_probability_combined desc limit 100;
+
+
+
+insert into pgpt_search (name, terms, gene) values('GCK search', 'GCK,human', 'GCK');
+
+
+insert into pgpt_keyword (keyword) values ('GCK');
 
 
 

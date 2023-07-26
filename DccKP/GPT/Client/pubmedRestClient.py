@@ -43,7 +43,9 @@ SQL_SELECT_SEARCH_PAPER = "select id from {}.pgpt_search_paper where search_id =
 SQL_INSERT_SEARCH_PAPER = "insert into {}.pgpt_search_paper (search_id, paper_id) values(%s, %s)".format(SCHEMA_GPT)
 
 # SQL_SELECT_SEARCH_LIST = "select id, terms from {}.pgpt_search order by id desc".format(SCHEMA_GPT)
-SQL_SELECT_SEARCH_LIST = "select id, terms from {}.pgpt_search order by id ".format(SCHEMA_GPT)
+SQL_SELECT_SEARCH_LIST_TO_DOWNLOAD = "select id, terms from {}.pgpt_search where to_download = 'Y' order by id ".format(SCHEMA_GPT)
+SQL_UPDATE_SEARCH_AFTER_DOWNLOAD = "update {}.pgpt_search set to_download = 'N', date_last_download = sysdate() where id = %s ".format(SCHEMA_GPT)
+SQL_UPDATE_SEARCH_COUNT = "update {}.pgpt_search set pubmed_count = %s where id = %s ".format(SCHEMA_GPT)
 
 
 # methods
@@ -78,6 +80,7 @@ def get_pubmed_ids_query_key(list_keywords, use_history=False, log=False):
     list_pubmed_ids = []
     web_env = None
     query_key = None
+    count_pubmed = -1
 
     # build keywords
     input_keyword = ",".join(list_keywords)
@@ -104,13 +107,16 @@ def get_pubmed_ids_query_key(list_keywords, use_history=False, log=False):
     if map_response.get('eSearchResult'):
         web_env = map_response.get('eSearchResult').get('WebEnv')
         query_key = map_response.get('eSearchResult').get('QueryKey')
+        count_pubmed = map_response.get('eSearchResult').get('Count')
+        if count_pubmed:
+            count_pubmed = int(count_pubmed)
 
     # log
     if log:
         print("got pubmed id list: {}".format(list_pubmed_ids))
 
     # return
-    return list_pubmed_ids, web_env, query_key
+    return list_pubmed_ids, web_env, query_key, count_pubmed
 
 def get_pubmed_abtract(id_pubmed, log=False):
     '''
@@ -124,7 +130,7 @@ def get_pubmed_abtract(id_pubmed, log=False):
     year = 0
 
     # sleep
-    time.sleep(2)
+    time.sleep(5)
 
     # get the url
     url_string = URL_PAPER.format(id_pubmed)
@@ -245,7 +251,7 @@ def get_db_pubmed_searches_list(conn, log=False):
 
     # pick query 
     # find
-    cursor.execute(SQL_SELECT_SEARCH_LIST)
+    cursor.execute(SQL_SELECT_SEARCH_LIST_TO_DOWNLOAD)
     db_result = cursor.fetchall()
     for row in db_result:
         search_id = row[0]
@@ -300,6 +306,35 @@ def insert_db_search_paper(conn, pubmed_id, search_id, log=False):
         cursor.execute(SQL_INSERT_SEARCH_PAPER, (search_id, int_pubmed))
         conn.commit()
 
+def update_db_search_to_done(conn, search_id, log=False):
+    '''
+    will update the search to done
+    '''
+    # initialize
+    cursor = conn.cursor()
+
+    # see if already in db
+    cursor.execute(SQL_UPDATE_SEARCH_AFTER_DOWNLOAD, (search_id))
+    conn.commit()
+
+def update_db_search_pubmed_count(conn, search_id, count_pubmed, log=False):
+    '''
+    will update the search to done
+    '''
+    # initialize
+    cursor = conn.cursor()
+
+    # log
+    if log:
+        print("setting pubmed count to: {} for search: {}".format(count_pubmed, search_id))
+
+    # see if already in db
+    if count_pubmed is not None:
+        cursor.execute(SQL_UPDATE_SEARCH_COUNT, (count_pubmed, search_id))
+        conn.commit()
+    else:
+        print("ERROR: got none count for pubmed for search: {}".format(count_pubmed))
+
 def get_connection():
     ''' 
     get the db connection 
@@ -316,20 +351,21 @@ if __name__ == "__main__":
 
     # get list of searches
     list_searches = get_db_pubmed_searches_list(conn)
-    list_searches=[{'id': 8, 'terms': 'SLC30A8,human'}]
+    # list_searches=[{'id': 9, 'terms': 'GCK,human'}]
 
     # loop
     for item in list_searches:
-        time.sleep(5)
         # get search terms
         print("searh pubmed for: {}".format(item.get('terms')))
         list_keywords = item.get('terms').split(",")
         search_id = item.get('id')
 
         # query for pubmed ids
-        list_pubmed_ids, web_env, query_key = get_pubmed_ids_query_key(list_keywords=list_keywords, use_history=True, log=True)
+        list_pubmed_ids, web_env, query_key, count_pubmed = get_pubmed_ids_query_key(list_keywords=list_keywords, use_history=True, log=True)
         print("for {}, got original list of papers of size: {}\n\n".format(list_keywords, len(list_pubmed_ids)))
 
+        # update the search count
+        update_db_search_pubmed_count(conn=conn, search_id=search_id, count_pubmed=count_pubmed, log=True)
 
         # get the abstract list
         # web_env = "MCID_64b697f1a865fa461a518090"
@@ -355,6 +391,12 @@ if __name__ == "__main__":
                     insert_db_search_paper(conn=conn, pubmed_id=pubmed_id, search_id=search_id)
                 else:
                     print("ERROR: skipping {} due to lack of data".format(pubmed_id))
+
+        # update search when done
+        update_db_search_to_done(conn=conn, search_id=search_id)
+
+        # pause for next query
+        time.sleep(120)
 
 
 

@@ -47,6 +47,7 @@ SQL_INSERT_GPT_LINK = "insert into {}.pgpt_gpt_paper (search_id, parent_id, chil
 SQL_UPDATE_ABSTRACT_FOR_TOP_LEVEL = "update {}.pgpt_paper_abstract set search_top_level_of = %s where id = %s".format(SCHEMA_GPT)
 
 SQL_SELECT_SEARCHES = "select id, terms, gene from {}.pgpt_search where ready='Y' limit %s".format(SCHEMA_GPT)
+SQL_UPDATE_SEARCH_AFTER_SUMMARY = "update {}.pgpt_search set ready = 'N', date_last_summary = sysdate() where id = %s ".format(SCHEMA_GPT)
 
 # methods
 def call_chatgpt(str_query, log=False):
@@ -173,6 +174,22 @@ def insert_gpt_results(conn, id_search, num_level, list_abstracts, gpt_abstract,
     # return
     return id_result
 
+def update_db_search_after_summary(conn, search_id, log=False):
+    '''
+    will update the search to done after summary
+    '''
+    # initialize
+    cursor = conn.cursor()
+
+    # log
+    if log:
+        print("setting search to summary done for search: {}".format(search_id))
+
+    # see if already in db
+    cursor.execute(SQL_UPDATE_SEARCH_AFTER_SUMMARY, (search_id))
+    conn.commit()
+
+
 def get_connection():
     ''' 
     get the db connection 
@@ -201,12 +218,13 @@ if __name__ == "__main__":
     conn = get_connection()
 
     # get the list of searches
-    list_searches = get_db_list_ready_searches(conn=conn, num_searches=1)
+    list_searches = get_db_list_ready_searches(conn=conn, num_searches=100)
 
     # loop
     for search in list_searches:
         id_search = search.get('id')
         id_top_level_abstract = -1
+        gene = search.get('gene')
 
         for num_level in range(20):
             # assume this is the top of the pyramid level until we find 2+ abstracts at this level
@@ -214,7 +232,7 @@ if __name__ == "__main__":
 
             # get all papers in sets of 7
             for i in range(100000):
-                str_input = GPT_PROMPT.format(search.get('gene'))
+                str_input = GPT_PROMPT.format(gene)
 
                 # get the list of abstracts eligible to summarize for the level given
                 list_abstracts = get_list_abstracts(conn=conn, id_search=id_search, num_level=num_level, num_abstracts=num_abstracts, log=True)
@@ -233,7 +251,7 @@ if __name__ == "__main__":
                     print("using {} for gpt query for level: {} and search: {}".format(len(list_abstracts), num_level, id_search))
                     # get the chat gpt response
                     str_chat = call_chatgpt(str_input, log=False)
-                    print("using GPT prompt: {}".format(str_input))
+                    print("using GPT prompt: \n{}".format(str_input))
                     print("\n\ngot chat gpt string: {}".format(str_chat))
 
                     # insert results and links
@@ -245,6 +263,7 @@ if __name__ == "__main__":
                     if found_top_level:
                         id_top_level_abstract = list_abstracts[0].get('id')
                         update_db_abstract_for_search(conn=conn, abstract_id=id_top_level_abstract, search_id=id_search)
+                        update_db_search_after_summary(conn=conn, search_id=id_search)
                         print("\n\n\nNo more articles; set top level: {} for search: {} with abstract: {}".format(num_level, id_search, id_top_level_abstract))
                     else:
                         print("\n\n\nNo more articles for level: {} for search: {}".format(num_level, id_search))
