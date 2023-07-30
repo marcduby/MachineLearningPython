@@ -43,8 +43,8 @@ SQL_SELECT_SEARCH_PAPER = "select id from {}.pgpt_search_paper where search_id =
 SQL_INSERT_SEARCH_PAPER = "insert into {}.pgpt_search_paper (search_id, paper_id) values(%s, %s)".format(SCHEMA_GPT)
 
 # SQL_SELECT_SEARCH_LIST = "select id, terms from {}.pgpt_search order by id desc".format(SCHEMA_GPT)
-SQL_SELECT_SEARCH_LIST_TO_DOWNLOAD = "select id, terms from {}.pgpt_search where to_download = 'Y' order by id ".format(SCHEMA_GPT)
-SQL_UPDATE_SEARCH_AFTER_DOWNLOAD = "update {}.pgpt_search set to_download = 'N', date_last_download = sysdate() where id = %s ".format(SCHEMA_GPT)
+SQL_SELECT_SEARCH_LIST_TO_DOWNLOAD = "select id, terms from {}.pgpt_search where to_download = 'Y' order by id desc ".format(SCHEMA_GPT)
+SQL_UPDATE_SEARCH_AFTER_DOWNLOAD = "update {}.pgpt_search set to_download = 'N', ready = 'Y', date_last_download = sysdate() where id = %s ".format(SCHEMA_GPT)
 SQL_UPDATE_SEARCH_COUNT = "update {}.pgpt_search set pubmed_count = %s where id = %s ".format(SCHEMA_GPT)
 
 
@@ -391,6 +391,9 @@ if __name__ == "__main__":
                     insert_db_search_paper(conn=conn, pubmed_id=pubmed_id, search_id=search_id)
                 else:
                     print("ERROR: skipping {} due to lack of data".format(pubmed_id))
+            else:
+                # also insert link to search if found
+                insert_db_search_paper(conn=conn, pubmed_id=pubmed_id, search_id=search_id)
 
         # update search when done
         update_db_search_to_done(conn=conn, search_id=search_id)
@@ -399,6 +402,7 @@ if __name__ == "__main__":
         time.sleep(120)
 
 
+# TODO - put in limit of 1500 abstracts
 
 
 

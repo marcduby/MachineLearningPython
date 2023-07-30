@@ -126,6 +126,44 @@ insert into pgpt_keyword (keyword) values ('GCK');
 insert into pgpt_search_keyword (search_id, keyword_id) values(1, 1);
 insert into pgpt_search_keyword (search_id, keyword_id) values(1, 2);
 
+-- lipodystrophy genes
+insert into pgpt_search (name, terms, gene) values('LMNA search', 'LMNA,human', 'LMNA');
+insert into pgpt_keyword (keyword) values ('LMNA');
+
+insert into pgpt_search (name, terms, gene) values('PLIN1 search', 'PLIN1,human', 'PLIN1');
+insert into pgpt_keyword (keyword) values ('PLIN1');
+
+insert into pgpt_search (name, terms, gene) values('AGPAT2 search', 'AGPAT2,human', 'AGPAT2');
+insert into pgpt_keyword (keyword) values ('AGPAT2');
+
+insert into pgpt_search (name, terms, gene) values('BSCL2 search', 'BSCL2,human', 'BSCL2');
+insert into pgpt_keyword (keyword) values ('BSCL2');
+
+insert into pgpt_search (name, terms, gene) values('CAV1 search', 'CAV1,human', 'CAV1');
+insert into pgpt_keyword (keyword) values ('CAV1');
+
+insert into pgpt_search (name, terms, gene) values('PTRF search', 'PTRF,human', 'PTRF');
+insert into pgpt_keyword (keyword) values ('PTRF');
+
+-- mody genes
+insert into pgpt_search (name, terms, gene) values('HNF1B search', 'HNF1B,human', 'HNF1B');
+insert into pgpt_keyword (keyword) values ('HNF1B');
+  
+insert into pgpt_search (name, terms, gene) values('CEL search', 'CEL,human', 'CEL');
+insert into pgpt_keyword (keyword) values ('CEL');
+  
+insert into pgpt_search (name, terms, gene) values('PDX1 search', 'PDX1,human', 'PDX1');
+insert into pgpt_keyword (keyword) values ('PDX1');
+  
+insert into pgpt_search (name, terms, gene) values('INS search', 'INS,human', 'INS');
+insert into pgpt_keyword (keyword) values ('INS');
+  
+insert into pgpt_search (name, terms, gene) values('NEUROD1 search', 'NEUROD1,human', 'NEUROD1');
+insert into pgpt_keyword (keyword) values ('NEUROD1');
+  
+insert into pgpt_search (name, terms, gene) values('KLF11 search', 'KLF11,human', 'KLF11');
+insert into pgpt_keyword (keyword) values ('KLF11');
+  
 
 
 -- verify
@@ -152,7 +190,7 @@ where sp.search_id = se.id
 group by search_id, sp.document_level 
 order by search_id;
 
-
+select search_top_level_of from pgpt_paper_abstract where search_top_level_of is not null order by search_top_level_of;
 
 
 -- query
@@ -301,4 +339,12 @@ insert into pgpt_search (name, terms, gene) values('GCK search', 'GCK,human', 'G
 insert into pgpt_keyword (keyword) values ('GCK');
 
 
+-- gene sets
+-- mody genes
+select * from pgpt_search where gene in ('GCK', 'HNF1A', 'HNF1B', 'CEL', 'PDX1', 'HNF4A', 'INS', 'NEUROD1', 'KLF11') order by gene;
+select * from pgpt_search where gene in ('HNF1B', 'CEL', 'PDX1', 'INS', 'NEUROD1', 'KLF11') order by gene;
+
+
+-- lipodystrophy genes
+select * from pgpt_search where gene in ('LMNA', 'PPARG', 'PLIN1', 'AGPAT2', 'BSCL2', 'CAV1', 'PTRF') order by gene;
 

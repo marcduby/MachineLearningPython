@@ -1,0 +1,15 @@
+
+
+- MODY genes: 
+  - GCK, HNF1A, HNF1B, CEL, PDX1, HNF4A, INS, NEUROD1, KLF11
+
+- lipodystrophy genes
+  - LMNA, PPARG, PLIN1, AGPAT2, BSCL2, CAV1, PTRF
+
+
+- huggingface virtualenv
+  - !pip install -q transformers einops accelerate langchain bitsandbytes
+  - Token has not been saved to git credential helper.
+    - Your token has been saved to /home/acct/.cache/huggingface/token
+
+
