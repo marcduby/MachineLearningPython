@@ -342,9 +342,31 @@ insert into pgpt_keyword (keyword) values ('GCK');
 -- gene sets
 -- mody genes
 select * from pgpt_search where gene in ('GCK', 'HNF1A', 'HNF1B', 'CEL', 'PDX1', 'HNF4A', 'INS', 'NEUROD1', 'KLF11') order by gene;
-select * from pgpt_search where gene in ('HNF1B', 'CEL', 'PDX1', 'INS', 'NEUROD1', 'KLF11') order by gene;
 
 
 -- lipodystrophy genes
-select * from pgpt_search where gene in ('LMNA', 'PPARG', 'PLIN1', 'AGPAT2', 'BSCL2', 'CAV1', 'PTRF') order by gene;
+select * from pgpt_search where gene in ('LMNA', 'PPARG', 'PLIN1', 'AGPAT2', 'BSCL2', 'CAV1', 'PTRF') order by id;
+
+select count(sp.id), sp.search_id, sp.document_level, se.gene, se.pubmed_count
+from pgpt_gpt_paper sp, pgpt_search se
+where sp.search_id = se.id and ((se.id = 1) or (se.id >= 137 and se.id <=142))
+group by search_id, sp.document_level 
+order by search_id;
+
+
+select count(sp.id), sp.search_id, sp.document_level
+from pgpt_gpt_paper sp, pgpt_search se
+where sp.search_id = se.id
+group by search_id, sp.document_level;
+
+
+select count(sp.id)
+from pgpt_gpt_paper sp, pgpt_search se
+where sp.search_id = se.id and se.id = 137 and sp.document_level = 1;
+
+
+select sp.abstract, se.gene 
+from pgpt_paper_abstract sp, pgpt_search se
+where sp.search_top_level_of = se.id and ((se.id = 1) or (se.id >= 137 and se.id <= 142));
+
 

@@ -1,0 +1,569 @@
+{
+    "PubmedArticleSet": {
+        "PubmedArticle": {
+            "MedlineCitation": {
+                "@Status": "MEDLINE",
+                "@Owner": "NLM",
+                "@IndexingMethod": "Automated",
+                "PMID": {
+                    "@Version": "1",
+                    "#text": "34705354"
+                },
+                "DateCompleted": {
+                    "Year": "2021",
+                    "Month": "12",
+                    "Day": "10"
+                },
+                "DateRevised": {
+                    "Year": "2021",
+                    "Month": "12",
+                    "Day": "14"
+                },
+                "Article": {
+                    "@PubModel": "Electronic",
+                    "Journal": {
+                        "ISSN": {
+                            "@IssnType": "Electronic",
+                            "#text": "2719-535X"
+                        },
+                        "JournalIssue": {
+                            "@CitedMedium": "Internet",
+                            "Volume": "23",
+                            "Issue": "4",
+                            "PubDate": {
+                                "Year": "2021",
+                                "Month": "Jan",
+                                "Day": "29"
+                            }
+                        },
+                        "Title": "Journal of mother and child",
+                        "ISOAbbreviation": "J Mother Child"
+                    },
+                    "ArticleTitle": "Perinatalna opieka paliatywna realizowana w oddziale po\u0142o\u017cniczym i neonatologicznym we wsp\u00f3\u0142pracy z hospicjum dla dzieci - do\u015bwiadczenia w\u0142asne.",
+                    "Pagination": {
+                        "StartPage": "253",
+                        "EndPage": "262",
+                        "MedlinePgn": "253-262"
+                    },
+                    "ELocationID": {
+                        "@EIdType": "doi",
+                        "@ValidYN": "Y",
+                        "#text": "10.34763/devperiodmed.20192304.253262"
+                    },
+                    "Abstract": {
+                        "AbstractText": [
+                            {
+                                "@Label": "INTRODUCTION",
+                                "@NlmCategory": "BACKGROUND",
+                                "i": "Wady letalne prowadz\u0105 do wewn\u0105trzmacicznego zgonu p\u0142odu lub dziecka bezpo\u015brednio po urodzeniu lub we wczesnym okresie niemowl\u0119cym, bez wzgl\u0119du na zastosowane leczenie. W przypadku wad letalnych nie ma mo\u017cliwo\u015bci skutecznej pomocy dziecku, mimo post\u0119pu mi zeadsytcoysnoyw ania najnowocze\u015bniejszej aparatury lub terapii. Rodzice, kt\u00f3rzy decyduj\u0105 si\u0119 na urodzenie dziecka z wad\u0105 letaln\u0105 mog\u0105 by\u0107 obj\u0119ci perinataln\u0105 opiek\u0105 hospicyjn\u0105, kt\u00f3ra ma charakter kompleksowy. Polega ona na wsparciu ci\u0119\u017carnej w okresie przygotowania do porodu, w czasie porodu i po porodzie oraz na wsparciu jej rodziny oraz obejmuje udzielenie rodzicom pe\u0142nej informacji o chorobie ich dziecka. Opieka nad dzieckiem po urodzeniu jest nastawiona na ochron\u0119 przed uporczyw\u0105 terapi\u0105 i zapewnienie dziecku opieki paliatywnej."
+                            },
+                            {
+                                "@Label": "CEL",
+                                "@NlmCategory": "UNASSIGNED",
+                                "i": "Wykazanie znaczenia perinatalnej opieki paliatywnej dla kobiet w ci\u0105\u017cy, u kt\u00f3rych wyniki bada\u0144 prenatalnych wskazywa\u0142y na ci\u0119\u017ckie zaburzenie rozwojowe u p\u0142odu o potencjalnie letalnym rokowaniu oraz przedstawienie schematu post\u0119powania wed\u0142ug modelu wewn\u0105trzszpitalnego hospicjum perinatalnego."
+                            },
+                            {
+                                "@Label": "MATERIA\u0141 I METODY",
+                                "@NlmCategory": "UNASSIGNED",
+                                "i": "Analiz\u0105 retrospektywn\u0105 obj\u0119to dokumentacj\u0119 67 pacjentek skierowanych do Programu RAZEM we Wroc\u0142awiu w latach 2014-2018 z powodu nieprawid\u0142owych wynik\u00f3w bada\u0144 prenatalnych (ultrasonograficznych lub/i genetycznych), kt\u00f3re wskazywa\u0142y na ci\u0119\u017ckie zaburzenie rozwojowe u p\u0142odu o potencjalnie letalnym rokowaniu. Dokonanoanalizy danych socjodemograficznych, danych klinicznych rozpoznania choroby u p\u0142odu, przebiegu ci\u0105\u017cy i porodu, trybu post\u0119powania w okresie prenatalnym, podczas porodu i po urodzeniu si\u0119 dziecka."
+                            },
+                            {
+                                "@Label": "WYNIKI",
+                                "@NlmCategory": "UNASSIGNED",
+                                "i": "Do Programu zosta\u0142o skierowanych 67 kobiet w wieku 20-43 lat (\u015brednio 31,2), kt\u00f3re zg\u0142asza\u0142y si\u0119 w okresie od 15 do 39 tygodnia ci\u0105\u017cy (\u015brednio w 25. tygodniu ci\u0105\u017cy). Do opieki paliatywnej zakwalifikowano 57 kobiet, czyli 85% skierowanych do programu. Opiek\u0119 paliatywn\u0105 kontynuowano u 51 pacjentek, poniewa\u017c 6 kobiet w trakcie procesu diagnostycznego zdecydowa\u0142o si\u0119 na zako\u0144czenie ci\u0105\u017cy (10,5%). Najcz\u0119stszymi zaburzeniami u p\u0142od\u00f3w by\u0142y aberracje chromosomowe, wady OUN i wady nerek. W 95% przypadk\u00f3w dosz\u0142o do obumarcia wewn\u0105trzmacicznego p\u0142odu lub \u015bmierci noworodka."
+                            },
+                            {
+                                "@Label": "WNIOSKI",
+                                "@NlmCategory": "UNASSIGNED",
+                                "i": "Perinatalna opieka paliatywna jest niezb\u0119dn\u0105 form\u0105 opieki dla kobiet w ci\u0105\u017cy, u kt\u00f3rych wyniki bada\u0144 prenatalnych wskazuj\u0105 na ci\u0119\u017ckie zaburzenie rozwojowe u p\u0142odu o potencjalnie letalnym rokowaniu. Model wewn\u0105trzszpitalny hospicjum perinatalnego jest korzystn\u0105 form\u0105 opieki, zapewnia jej sp\u00f3jno\u015b\u0107 i dobr\u0105 komunikacj\u0119 w zespole, co wp\u0142ywa na dobr\u0105 jako\u015b\u0107 opieki."
+                            },
+                            {
+                                "@Label": "INTRODUCTION",
+                                "@NlmCategory": "BACKGROUND",
+                                "i": "Lethal defects lead to the intrauterine death of the fetus or the passing away of the child immediately after birth or in early infancy, regardless of the treatment used. In the case of lethal defects, it is not possible to effectively help the child, despite using the most modern equipment or medicines in the treatment or the progress made by medicine. Parents, who decide to continue the pregnancy, although the fetus has a lethal defect that cannot be cured, may be covered by perinatal hospice care, which is comprehensive and consists in supporting the pregnant woman during the prenatal time, during delivery and after delivery and support of her family, giving full information to the parents about their child's illness. Childcare after birth is focused on protecting the infant from persistent therapy and providing him with appropriate conditions."
+                            },
+                            {
+                                "@Label": "AIM",
+                                "@NlmCategory": "OBJECTIVE",
+                                "i": "To demonstrate the role of perinatal palliative care for pregnant women in whom the results of prenatal tests pointed to a severe developmental disorder in the fetus with a potentially lethal prognosis, and to present a pattern of behavior for their hospitalization in the perinatal hospice."
+                            },
+                            {
+                                "@Label": "MATERIALS AND METHODS",
+                                "@NlmCategory": "METHODS",
+                                "i": "The retrospective analysis included documentation of 67 patients referred to the RAZEM (TOGETHER) Program in Wroc\u0142aw in 2014-2018 due to abnormal results of (ultrasound and / or genetic) prenatal tests, which indicated a serious developmental disorder in the fetus with potentially lethal prognosis. Analysis was conducted of sociodemographic data, clinical data on fetal diagnosis, pregnancy and delivery, the procedure for prenatal delivery and postnatal birth."
+                            },
+                            {
+                                "@Label": "RESULTS",
+                                "@NlmCategory": "RESULTS",
+                                "i": "67 women aged 20-43 years (mean 31.2) were referred to the RAZEM Program. Out of these, 57 women were enrolled for palliative care, which accounted for 85% of those referred to the program. Palliative care was continued in 51 patients, because 6 women decided to terminate their pregnancy during the diagnostic process (10.5%). The most common abnormalities in the fetuses were chromosomal aberrations, CNS defects and kidney defects. In 95% of the cases, intrauterine fetal death or neonatal death occurred."
+                            },
+                            {
+                                "@Label": "CONCLUSIONS",
+                                "@NlmCategory": "CONCLUSIONS",
+                                "i": "Perinatal palliative care is an indispensable form of care for pregnant women in whom the results of prenatal tests indicate a serious developmental disorder in the fetus with potentially lethal prognosis. The in-hospital model of a perinatal hospice is a beneficial form of care, as it ensures consistency and good communication in the team, which favourably affects its quality."
+                            }
+                        ],
+                        "CopyrightInformation": "\u00a9 2019 Agnieszka Jalowska, Joanna Krzeszowiak, Agnieszka Stembalska, Krzysztof Szmyd, Mariusz Zimmer, Gizela Jagielska, Ma\u0142gorzata Ra\u015b, Agnieszka Pas\u0142awska, Agnieszka Szafra\u0144ska, Dorota Paluszy\u0144ska, Tomasz Fuchs, Karolina Pesz, Maria S\u0105siadek, Barbara Kr\u00f3lak-Olejnik, Robert \u015amigiel, published by Sciendo."
+                    },
+                    "AuthorList": {
+                        "@CompleteYN": "Y",
+                        "Author": [
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Jalowska",
+                                "ForeName": "Agnieszka",
+                                "Initials": "A",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0001-6360-7158"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Katedra i Klinika Neonatologii, Uniwersytet Medyczny we Wroc\u0142awiu, Wroc\u0142awiu Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Krzeszowiak",
+                                "ForeName": "Joanna",
+                                "Initials": "J",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0002-0297-4496"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Katedra Pediatrii, Zak\u0142ad Propedeutyki Pediatrii i Chor\u00f3b Rzadkich, Uniwersytet Medyczny we Wroc\u0142awiu, Wroc\u0142awiu Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Stembalska",
+                                "ForeName": "Agnieszka",
+                                "Initials": "A",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0003-3528-6582"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Katedra Genetyki, Uniwersytet Medyczny we Wroc\u0142awiu, Wroc\u0142awiu Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Szmyd",
+                                "ForeName": "Krzysztof",
+                                "Initials": "K",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0001-8922-5318"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Stowarzyszenie Hospicjum dla Dzieci Dolnego \u015al\u0105ska \" Formu\u0142a Dobra'', Wroc\u0142aw, Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Zimmer",
+                                "ForeName": "Mariusz",
+                                "Initials": "M",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0002-4067-2675"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Katedra i Klinika Ginekologii i Po\u0142o\u017cnictwa, Uniwersytet Medyczny we Wroc\u0142awiu, Wroc\u0142awiu Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Jagielska",
+                                "ForeName": "Gizela",
+                                "Initials": "G",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0003-1678-8376"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Oddzia\u0142 Ginekologii i Po\u0142o\u017cnictwa, Powiatowy Zesp\u00f3\u0142 Szpitali w Ole\u015bnicy, Ole\u015bnicy Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Ra\u015b",
+                                "ForeName": "Ma\u0142gorzata",
+                                "Initials": "M",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0002-7105-5258"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Oddzia\u0142 Kardiologii Dzieci\u0119cej, Wojew\u00f3dzki Szpital Specjalistyczny we Wroc\u0142awiu, Wroc\u0142awiu Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Pas\u0142awska",
+                                "ForeName": "Agnieszka",
+                                "Initials": "A",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0002-4881-499X"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Stowarzyszenie Hospicjum dla Dzieci Dolnego \u015al\u0105ska \" Formu\u0142a Dobra'', Wroc\u0142aw, Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Szafra\u0144ska",
+                                "ForeName": "Agnieszka",
+                                "Initials": "A",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0003-0889-5948"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Katedra i Klinika Neonatologii, Uniwersytet Medyczny we Wroc\u0142awiu, Wroc\u0142awiu Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Paluszy\u0144ska",
+                                "ForeName": "Dorota",
+                                "Initials": "D",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0002-0626-124X"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Katedra i Klinika Neonatologii, Uniwersytet Medyczny we Wroc\u0142awiu, Wroc\u0142awiu Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Fuchs",
+                                "ForeName": "Tomasz",
+                                "Initials": "T",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0002-8575-261X"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Katedra i Klinika Ginekologii i Po\u0142o\u017cnictwa, Uniwersytet Medyczny we Wroc\u0142awiu, Wroc\u0142awiu Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Pesz",
+                                "ForeName": "Karolina",
+                                "Initials": "K",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0003-1482-1021"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Katedra Genetyki, Uniwersytet Medyczny we Wroc\u0142awiu, Wroc\u0142awiu Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "S\u0105siadek",
+                                "ForeName": "Maria",
+                                "Initials": "M",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0002-7599-7074"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Katedra Genetyki, Uniwersytet Medyczny we Wroc\u0142awiu, Wroc\u0142awiu Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Kr\u00f3lak-Olejnik",
+                                "ForeName": "Barbara",
+                                "Initials": "B",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0002-6493-0333"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Katedra i Klinika Neonatologii, Uniwersytet Medyczny we Wroc\u0142awiu, Wroc\u0142awiu Polska."
+                                }
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "\u015amigiel",
+                                "ForeName": "Robert",
+                                "Initials": "R",
+                                "Identifier": {
+                                    "@Source": "ORCID",
+                                    "#text": "0000-0003-2930-9549"
+                                },
+                                "AffiliationInfo": {
+                                    "Affiliation": "Katedra Pediatrii, Zak\u0142ad Propedeutyki Pediatrii i Chor\u00f3b Rzadkich, Uniwersytet Medyczny we Wroc\u0142awiu, Wroc\u0142awiu Polska."
+                                }
+                            }
+                        ]
+                    },
+                    "Language": "eng",
+                    "PublicationTypeList": {
+                        "PublicationType": {
+                            "@UI": "D016428",
+                            "#text": "Journal Article"
+                        }
+                    },
+                    "ArticleDate": {
+                        "@DateType": "Electronic",
+                        "Year": "2021",
+                        "Month": "01",
+                        "Day": "29"
+                    }
+                },
+                "MedlineJournalInfo": {
+                    "Country": "Poland",
+                    "MedlineTA": "J Mother Child",
+                    "NlmUniqueID": "101771247",
+                    "ISSNLinking": "1428-345X"
+                },
+                "CitationSubset": "IM",
+                "MeshHeadingList": {
+                    "MeshHeading": [
+                        {
+                            "DescriptorName": {
+                                "@UI": "D002648",
+                                "@MajorTopicYN": "N",
+                                "#text": "Child"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D005260",
+                                "@MajorTopicYN": "N",
+                                "#text": "Female"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D005313",
+                                "@MajorTopicYN": "N",
+                                "#text": "Fetal Death"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D017051",
+                                "@MajorTopicYN": "Y",
+                                "#text": "Hospice Care"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D006801",
+                                "@MajorTopicYN": "N",
+                                "#text": "Humans"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D007231",
+                                "@MajorTopicYN": "N",
+                                "#text": "Infant, Newborn"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D008297",
+                                "@MajorTopicYN": "N",
+                                "#text": "Male"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D010166",
+                                "@MajorTopicYN": "N",
+                                "#text": "Palliative Care"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D011247",
+                                "@MajorTopicYN": "N",
+                                "#text": "Pregnancy"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D011296",
+                                "@MajorTopicYN": "N",
+                                "#text": "Prenatal Diagnosis"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@UI": "D012189",
+                                "@MajorTopicYN": "N",
+                                "#text": "Retrospective Studies"
+                            }
+                        }
+                    ]
+                },
+                "KeywordList": {
+                    "@Owner": "NOTNLM",
+                    "Keyword": [
+                        {
+                            "@MajorTopicYN": "N",
+                            "#text": "hospicjum perinatalne"
+                        },
+                        {
+                            "@MajorTopicYN": "N",
+                            "#text": "lethal defects"
+                        },
+                        {
+                            "@MajorTopicYN": "N",
+                            "#text": "perinatal hospice"
+                        },
+                        {
+                            "@MajorTopicYN": "N",
+                            "#text": "perinatal palliative care"
+                        },
+                        {
+                            "@MajorTopicYN": "N",
+                            "#text": "perinatalna opieka paliatywna"
+                        },
+                        {
+                            "@MajorTopicYN": "N",
+                            "#text": "wady letalne"
+                        }
+                    ]
+                }
+            },
+            "PubmedData": {
+                "History": {
+                    "PubMedPubDate": [
+                        {
+                            "@PubStatus": "received",
+                            "Year": "2019",
+                            "Month": "10",
+                            "Day": "29"
+                        },
+                        {
+                            "@PubStatus": "accepted",
+                            "Year": "2019",
+                            "Month": "11",
+                            "Day": "27"
+                        },
+                        {
+                            "@PubStatus": "entrez",
+                            "Year": "2021",
+                            "Month": "10",
+                            "Day": "27",
+                            "Hour": "12",
+                            "Minute": "46"
+                        },
+                        {
+                            "@PubStatus": "pubmed",
+                            "Year": "2021",
+                            "Month": "10",
+                            "Day": "28",
+                            "Hour": "6",
+                            "Minute": "0"
+                        },
+                        {
+                            "@PubStatus": "medline",
+                            "Year": "2021",
+                            "Month": "12",
+                            "Day": "15",
+                            "Hour": "6",
+                            "Minute": "0"
+                        }
+                    ]
+                },
+                "PublicationStatus": "epublish",
+                "ArticleIdList": {
+                    "ArticleId": [
+                        {
+                            "@IdType": "pubmed",
+                            "#text": "34705354"
+                        },
+                        {
+                            "@IdType": "doi",
+                            "#text": "10.34763/devperiodmed.20192304.253262"
+                        },
+                        {
+                            "@IdType": "pii",
+                            "#text": "devperiodmed.20192304.253262"
+                        }
+                    ]
+                },
+                "ReferenceList": {
+                    "Title": "Pi\u015bmiennictwo",
+                    "Reference": [
+                        {
+                            "Citation": "Wrodzone wady rozwojowe w Polsce w latach 2005-2006: dane z Polskiego Rejestru Wrodzonych Wad Rozwojowych. Latos-Biele\u0144ska A (red.), Materna-Kiryluk A (red.) ; Zesp\u00f3\u0142 Polskiego Rejestru Wrodzonych Wad Rozwojowych. Pozna\u0144: O\u015brodek Wydawnictw Naukowych, 2010 (dr. 2011); 85 s. ISBN 9788375971057."
+                        },
+                        {
+                            "Citation": "\u015amigiel R. Wady wrodzone i zespo\u0142y dysmorficzne u dzieci, s. 110-132. W: Pozw\u00f3lcie mi odej\u015b\u0107 w ramionach najbli\u017cszych...: medyczne, psychologiczne i prawne aspekty \u015bmierci dziecka w okresie oko\u0142oporodowym i w pierwszych miesi\u0105cach \u017cycia. Pod red. Szmyd K, Urbaniak K, Dytman-Stasie\u0144ko A. Bielsko-Bia\u0142a, Wydawnictwo Inspiracje, 2017; 181 s. ISBN 9788393353972."
+                        },
+                        {
+                            "Citation": "Szmyd K, Krzeszowiak J, \u015amigiel R. Wady letalne u p\u0142od\u00f3w i noworodk\u00f3w z punktu widzenia medycyny paliatywnej i hospicjum perinatalnego. Przegl Pediatr. 2016;45(3):2834."
+                        },
+                        {
+                            "Citation": "Dangel T. Wady letalne u noworodk\u00f3w - opieka paliatywna jako alternatywa wobec eugenicznej aborcji, eugenicznego dzieciob\u00f3jstwa i uporczywej terapii. s. 196-203. W: Anestezjologia w po\u0142o\u017cnictwie i medycynie perinatalnej: zasady i praktyka. Red. nauk. Kuczkowski KM, Drobnik L; t\u0142. z j\u0119z. ang. Kami\u0144ski B, t\u0142. z j\u0119z. hisz. Ha\u0142adaj M. Warszawa: Med-Media, cop. 2009; 232 s. ISBN 978-83-60418-40-6."
+                        },
+                        {
+                            "Citation": "Leuthner SR. Palliative care of the infant with lethal anomalies. Pediatr Clin North Am. 2004;51(3):747-759, xi. doi: 10.1016/j.pcl.2004.01.006."
+                        },
+                        {
+                            "Citation": "Howard ED. Family-centered care in the context of fetal abnormality. J Perinat Neonatal Nurs. 2006;20(3):237-242. doi: 10.1097/00005237-200607000-00011."
+                        },
+                        {
+                            "Citation": "Szmyd K, \u015amigiel R, Kr\u00f3lak-Olejnik B. Propozycje post\u0119powania z noworodkiem w przypadku rozpoznania wady letalnej w okresie prenatalnym. Proposals for managements of newborn with prenatal diagnosis of lethal defect. Pediatr Pol. 2014;89(6):389-394. doi: 10.1016/j.pepo.2014.08.004."
+                        },
+                        {
+                            "Citation": "Zaniechanie i wycofanie si\u0119 z uporczywego leczenia podtrzymuj\u0105cego \u017cycie u dzieci : wytyczne dla lekarzy. Red. nauk. Tomasz Dangel ; Polskie Towarzystwo Pediatryczne. Warszawa : Fundacja Warszawskie Hospicjum dla Dzieci, 2011; 132 s. ISBN 9788390876221."
+                        },
+                        {
+                            "Citation": "\u015amigiel R, Patkowski D, Pyrek D, Zieli\u0144ska M, Go\u0142\u0119biowski G, Czy\u017cewska M, Szmyd K, S\u0105siadek MM. Trudne decyzje dotycz\u0105ce leczenia noworodk\u00f3w z zaro\u015bni\u0119ciem prze\u0142yku oraz trisomi\u0105 chromosomu 18 - rozwa\u017cania genetyka, chirurga, neonatologa, pediatry i anestezjologa. Med. Wieku Rozw. 2011;15(1):7-15."
+                        },
+                        {
+                            "Citation": "Maciejewski T. Rola i miejsce zespo\u0142u interdyscyplinarnego w diagnostyce i podejmowaniu decyzji w okresie p\u0142odowym. s. 135-141. W: Post\u0119powanie paliatywne w opiece perinatalnej: praktyka kliniczna, etyka, prawo, psychologia. Rutkowska M, Szczepaniak S (red). ; autorzy Bara\u0144ska M, Castaneda J, Cie\u015blak-Osik B, Dmoch-Gajzlerska E, Dobrowolska B, Duda T, Helwich E, Henzler-Urbaniak K, Jalowska A, K\u0119dzierska B, Kmita G, Korzeniewska-Eksterowicz A, Kowalski Z, Kristeva J, Kr\u00f3l-Olejnik B, Krzeszowiak J, Lewandowska D, \u0141ozi\u0144ska-Czerniak A, Maciejewski TM, Miniszewska J, Nowak B, Obersztyn E, Pawlik D, Pawlus B, Piotrowski A, Rawicz M, Respondek-Liberska M, Re\u015bko-Zachara M, Rutkowska M, Salamo\u0144czyk M, Szczepaniak S, Szeroczy\u0144ska M, Szmyd K, \u015amigiel R, Terczy\u0144ska I, Walas W. Wyd. 1. Warszawa : PZWL Wydawnictwo Lekarskie, 2018; XIII, [1], 425, [1] s. ISBN 9788320055658."
+                        },
+                        {
+                            "Citation": "Szmyd K, Pankiewicz O, \u015amigiel R, W\u0119c\u0142awek-Tompol J, Kr\u00f3lak-Olejnik B. Znaczenie komunikacji lekarza z pacjentem dla post\u0119powania terapeutycznego w czasie trwania ci\u0105\u017cy i po urodzeniu dziecka. Analiza przypadku oraz obecnego stanu prawnego. Importance of communication between the physician and the patient for therapy during pregnancy and after childbirth. Case report and analysis of current legal status. Pediatr Pol. 2017;92(6):796-801. doi: 10.1016/j. pepo.2017.06.004."
+                        },
+                        {
+                            "Citation": "Palliative Care (Supportive and End of Life Care) : A Framework for Clinical Practice in Perinatal Medicine: Report of the Working Group August 2010. British Association of Perinatal Medicine ; contributors Murdoch E (Chair), Cole A, Craig F, Daly C, English S, George S, Gill B, Harris L, Kaiser A, Lees C, Mancini A, Miller M, Schott J, Smith N, Statham H. London, UK : British Association of Perinatal Medicine (BAPM); 11 s."
+                        },
+                        {
+                            "Citation": "Polskimodel perinatalnej opiekipaliatywnej.s. 82-88 [82-83].W: Standardy. Standardy post\u0119powania i procedury medyczne pediatrycznej domowej opieki paliatywnej w hospicjach dla dzieci. Standardy perinatalnej opieki paliatywnej. Red. nauk. Dangel T ; autorzy Bednarska I, Boszko K, Dangel T, D\u0119bska M, Grenda R, Januszaniec A, Karwacki M, Kurkiewicz A, Marczyk K, Niew\u0119g\u0142owska N, Piotrowski A, Rawicz M, Stru\u015b-Wo\u0142os M, Szewczyk K, Szymborski J, Szymkiewicz-Dangel J. Standardy post\u0119powania i procedury medyczne pediatrycznej domowej opieki paliatywnej w hospicjach dla dzieci. Wyd. 4. Standardy perinatalnej opieki paliatywnej. Wyd. 1. Warszawa : Fundacja Warszawskie Hospicjum dla Dzieci, 2019 ; 119 s. ISBN 978-83-938474-2-6."
+                        },
+                        {
+                            "Citation": "Jalowska A, Kr\u00f3lak-Olejnik B, Krzeszowiak J. Opieka paliatywna w przypadku rozpoznania u p\u0142odu/noworodka ci\u0119\u017ckiej wady rozwojowej o potencjalnie letalnym rokowaniu - od sali porodowej do oddzia\u0142u intensywnej terapii noworodka. s. 211 -229. W: Post\u0119powanie paliatywne w opiece perinatalnej: praktyka kliniczna, etyka, prawo, psychologia. Rutkowska M, Szczepaniak S (red). ; autorzy Bara\u0144ska M, Castaneda J, Cie\u015blak-Osik B, Dmoch-Gajzlerska E, Dobrowolska B, Duda T, Helwich E, Henzler-Urbaniak K, Jalowska A, K\u0119dzierska B, Kmita G, Korzeniewska-Eksterowicz A, Kowalski Z, Kristeva J, Kr\u00f3l-Olejnik B, Krzeszowiak J, Lewandowska D, \u0141ozi\u0144ska-Czerniak A, Maciejewski TM, Miniszewska J, Nowak B, Obersztyn E, Pawlik D, Pawlus B, Piotrowski A, Rawicz M, Respondek-Liberska M, Re\u015bko-Zachara M, Rutkowska M, Salamo\u0144czyk M, Szczepaniak S, Szeroczy\u0144ska M, Szmyd K, \u015amigiel R, Terczy\u0144ska I, Walas W. Wyd. 1. Warszawa : PZWL Wydawnictwo Lekarskie, 2018; XIII, [1], 425, [1] s. ISBN 9788320055658."
+                        },
+                        {
+                            "Citation": "Milstein J. A paradigm of integrative care: healing with curing throughout life, \u201ebeing with\u201d and \u201edoing to\u201d. J Perinatol. 2005;25(9):563-568. doi: 10.1038/sj.jp.7211358."
+                        },
+                        {
+                            "Citation": "Szymkiewicz-Dangel J. Perinatalna opieka paliatywna - czy mo\u017cliwa jest wsp\u00f3\u0142praca po\u0142o\u017cnik\u00f3w i neonatolog\u00f3w z hospicjami domowymi dla dzieci? Opieka Paliatywna nad Dzie\u0107mi. 2007;15:25-28."
+                        },
+                        {
+                            "Citation": "Korzeniewska-Eksterowicz A, Respondek-Liberska M, Przys\u0142o \u0141, Fendler W, M\u0142ynarski W, Gulczy\u0144ska E. Perinatal palliative care: barriers and attitudes of neonatologists and nurses in Poland. Scientific WorldJournal. 2013 Oct 28;2013:168060. doi: 10.1155/2013/168060."
+                        },
+                        {
+                            "Citation": "Kenner C, Press J, Ryan D. Recommendations for palliative and bereavement care in the NICU: a family-centered integrative approach. J Perinatol. 2015;35(Suppl 1):S19-S23. doi: 10.1038/jp.2015.145."
+                        },
+                        {
+                            "Citation": "Krzeszowiak J, \u015amigiel R. Rola i zadania po\u0142o\u017cnej jako cz\u0142onka zespo\u0142u sprawuj\u0105cego opiek\u0119 nad ci\u0119\u017carn\u0105 pacjentk\u0105 z rozpoznan\u0105 wad\u0105 letaln\u0105 u p\u0142odu. The Role and Tasks of a Midwife as a Team Member Who Takes Care of the Pregnant Patient Diagnosed with Lethal Fetal Defect. Piel Zdr Publ. 2016;6(1):57-61. doi: 10.17219/pzp/61828."
+                        },
+                        {
+                            "Citation": "Cereda A, Carey JC. The trisomy 18 syndrome. Orphanet J Rare Dis. 2012 Oct 23;7:81. doi: 10.1186/1750-1172-781."
+                        },
+                        {
+                            "Citation": "Wool C, Kain VJ, Mendes J, Carter BS. Quality predictors of parental satisfaction after birth of infants with lifelimiting conditions. Acta Paediatr. 2018;107(2):276-282. doi: 10.1111/apa.13980."
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

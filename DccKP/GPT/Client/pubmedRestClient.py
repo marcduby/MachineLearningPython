@@ -158,7 +158,8 @@ def get_pubmed_abtract(id_pubmed, log=False):
             if list_abstract:
                 if isinstance(list_abstract, list):
                     for item in list_abstract:
-                        list_temp.append(item.get('#text'))
+                        if item.get('#text'):
+                            list_temp.append(item.get('#text'))
                     text_abstract = " ".join(list_temp)
                 elif isinstance(list_abstract, dict):
                     text_abstract = list_abstract.get('#text')
@@ -348,6 +349,10 @@ def get_connection():
 if __name__ == "__main__":
     # initialize
     conn = get_connection()
+
+    # DEBUG
+    # id_pubmed_test = 34705354
+    # text_test = get_pubmed_abtract(id_pubmed=id_pubmed_test, log=True)
 
     # get list of searches
     list_searches = get_db_pubmed_searches_list(conn)

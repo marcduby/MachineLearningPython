@@ -46,8 +46,12 @@ SQL_INSERT_ABSTRACT = "insert into {}.pgpt_paper_abstract (abstract, title, jour
 SQL_INSERT_GPT_LINK = "insert into {}.pgpt_gpt_paper (search_id, parent_id, child_id, document_level) values(%s, %s, %s, %s)".format(SCHEMA_GPT)
 SQL_UPDATE_ABSTRACT_FOR_TOP_LEVEL = "update {}.pgpt_paper_abstract set search_top_level_of = %s where id = %s".format(SCHEMA_GPT)
 
-SQL_SELECT_SEARCHES = "select id, terms, gene from {}.pgpt_search where ready='Y' limit %s".format(SCHEMA_GPT)
+# SQL_SELECT_SEARCHES = "select id, terms, gene from {}.pgpt_search where ready='Y' and id > 136 limit %s".format(SCHEMA_GPT)
+SQL_SELECT_SEARCHES = "select id, terms, gene from {}.pgpt_search where ready='Y' and id > 136 limit %s".format(SCHEMA_GPT)
 SQL_UPDATE_SEARCH_AFTER_SUMMARY = "update {}.pgpt_search set ready = 'N', date_last_summary = sysdate() where id = %s ".format(SCHEMA_GPT)
+
+# counts each paper multiple times due to not distinct
+SQL_SEARCH_COUNT_FOR_LEVEL = "select count(sp.id) from pgpt_gpt_paper sp, pgpt_search se where sp.search_id = se.id and se.id = %s and sp.document_level = %s".format(SCHEMA_GPT)
 
 # methods
 def call_chatgpt(str_query, log=False):
@@ -106,6 +110,23 @@ def get_list_abstracts(conn, id_search, num_level=0, num_abstracts=NUM_ABSTRACT_
 
     # return
     return list_abstracts
+
+def get_db_search_paper_at_document_level(conn, id_search, document_level, log=False):
+    '''
+    get a list of abstract map objects
+    '''
+    # initialize
+    result_count = 0
+    cursor = conn.cursor()
+
+    # query 
+    cursor.execute(SQL_SEARCH_COUNT_FOR_LEVEL, (id_search, document_level))
+    db_result = cursor.fetchall()
+    if db_result:
+        result_count = db_result[0][0]
+
+    # return
+    return result_count
 
 def get_db_list_ready_searches(conn, num_searches=-1, log=False):
     '''
@@ -208,6 +229,7 @@ if __name__ == "__main__":
     id_search = 1
     num_abstracts = 7
     gpt_prompt = GPT_PROMPT.format("PPARG")
+    max_per_level = 700
 
     # # get the chat gpt response
     # str_chat = call_chatgpt(str_input, log=True)
@@ -232,6 +254,14 @@ if __name__ == "__main__":
 
             # get all papers in sets of 7
             for i in range(100000):
+                # check if level reached limit
+                count_at_level = get_db_search_paper_at_document_level(conn, id_search, num_level + 1)
+                if count_at_level > max_per_level:
+                    print("reached: {} for level: {} and search: {}; MOVING ON TO NEXT LEVEL".format(count_at_level, num_level + 1, id_search))
+                    found_top_level = False
+                    time.sleep(20)
+                    break
+
                 str_input = GPT_PROMPT.format(gene)
 
                 # get the list of abstracts eligible to summarize for the level given
@@ -256,7 +286,8 @@ if __name__ == "__main__":
 
                     # insert results and links
                     insert_gpt_results(conn=conn, id_search=id_search, num_level=num_level, list_abstracts=list_abstracts, gpt_abstract=str_chat, log=True)
-                    time.sleep(30)
+                    # time.sleep(30)
+                    time.sleep(3)
 
                 else:
                     # update abstract as the top level

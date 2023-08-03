@@ -28,7 +28,7 @@ order by se.gene;
 """.format(SCHEMA_GPT, SCHEMA_GPT)
 
 # methods
-def get_db_gene_summaries(conn, num_summaries=-1, log=False):
+def get_db_gene_summaries(conn, list_genes=None, num_summaries=-1, log=False):
     '''
     get a list of abstract map objects
     '''
@@ -42,6 +42,9 @@ def get_db_gene_summaries(conn, num_summaries=-1, log=False):
     for row in db_result:
         gene = row[0]
         abstract = row[1]
+        if list_genes and gene not in list_genes:
+            # skip if provided list of genes and not in it
+            continue
         list_summaries.append({"gene": gene, 'summary': abstract})
 
     # return
@@ -62,9 +65,13 @@ def get_connection():
 if __name__ == "__main__":
     # get the db connection
     conn = get_connection()
+    list_genes_lipodystrophy = ['LMNA', 'PPARG', 'PLIN1', 'AGPAT2', 'BSCL2', 'CAV1', 'PTRF']
+    list_genes_mody = ['GCK', 'HNF1A', 'HNF1B', 'CEL', 'PDX1', 'HNF4A', 'INS', 'NEUROD1', 'KLF11']
+    list_genes = list_genes_mody
 
     # get the results
     list_summaries = get_db_gene_summaries(conn=conn)
+    list_summaries = get_db_gene_summaries(conn=conn, list_genes=list_genes)
 
     # create the document
     document = Document()
@@ -83,7 +90,9 @@ if __name__ == "__main__":
         document.add_page_break()
 
     # save the document
-    document.save(DOC_FILENAME.format(round(time.time() * 1000)))
+    file_document = DOC_FILENAME.format(round(time.time() * 1000))
+    print("saving list tio dicument: {}".format(file_document))
+    document.save(file_document)
 
 
 
