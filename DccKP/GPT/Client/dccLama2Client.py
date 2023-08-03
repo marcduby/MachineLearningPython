@@ -149,30 +149,30 @@ def get_connection():
 
 # main
 if __name__ == "__main__":
-    # initialize
-    num_level = 0
-    id_search = 2
+    # # initialize
+    # num_level = 0
+    # id_search = 2
 
-    # get the db connection
-    conn = get_connection()
+    # # get the db connection
+    # conn = get_connection()
 
-    # get the abstracts
-    list_abstracts = get_list_abstracts(conn=conn, id_search=id_search, num_level=num_level, num_abstracts=5, log=True)
+    # # get the abstracts
+    # list_abstracts = get_list_abstracts(conn=conn, id_search=id_search, num_level=num_level, num_abstracts=5, log=True)
 
-    # get the llm summary
-    str_input = ""
-    if len(list_abstracts) > 1:
-        # top level is not this level if more than 2 abstracts found at this level
-        found_top_level = False
-        for item in list_abstracts:
-            abstract = item.get('abstract')
-            print("using abstract: \n{}".format(abstract))
-            str_input = str_input + " " + abstract
+    # # get the llm summary
+    # str_input = ""
+    # if len(list_abstracts) > 1:
+    #     # top level is not this level if more than 2 abstracts found at this level
+    #     found_top_level = False
+    #     for item in list_abstracts:
+    #         abstract = item.get('abstract')
+    #         print("using abstract: \n{}".format(abstract))
+    #         str_input = str_input + " " + abstract
 
-        # log
-        print("using {} for gpt query for level: {} and search: {}".format(len(list_abstracts), num_level, id_search))
+    #     # log
+    #     print("using {} for gpt query for level: {} and search: {}".format(len(list_abstracts), num_level, id_search))
 
-    print("using text: \n{}".format(str_input))
+    # print("using text: \n{}".format(str_input))
 
     # # get the model
     # llm_model, tokenizer = get_model_tokenizer(MODEL_NAME)
