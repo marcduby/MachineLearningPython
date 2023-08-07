@@ -1,5 +1,14 @@
 
 
+- installs
+pip3 install langchain
+pip3 install transformers
+pip3 install pymysql
+pip3 install accelerate
+
+huggingface-cli login
+
+
 - MODY genes: 
   - GCK, HNF1A, HNF1B, CEL, PDX1, HNF4A, INS, NEUROD1, KLF11
 
@@ -11,6 +20,17 @@
   - !pip install -q transformers einops accelerate langchain bitsandbytes
   - Token has not been saved to git credential helper.
     - Your token has been saved to /home/acct/.cache/huggingface/token
+
+
+- llama2 runs
+
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:07<00:00,  3.90s/it]
+Xformers is not installed correctly. If you want to use memorry_efficient_attention to accelerate training use the following command to install Xformers
+pip install xformers.
+Input length of input_ids is 1635, but `max_length` is set to 1000. This can lead to unexpected behavior. You should consider increasing `max_new_tokens`.
+1
+
+
 
 
 

@@ -187,6 +187,7 @@ if __name__ == "__main__":
 
     tokenizer = AutoTokenizer.from_pretrained(model)
 
+    # max length for pipeline indicates max input token 
     pipeline = transformers.pipeline(
         "text-generation", #task
         model=model,
@@ -224,6 +225,8 @@ Genetic association studies for gastroschisis have highlighted several candidate
     """
 
 
+    result = llm_chain.run(text)
+    print(" ".join(result.split()))
     print(llm_chain.run(text))
 
 
