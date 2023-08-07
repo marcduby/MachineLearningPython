@@ -229,13 +229,13 @@ if __name__ == "__main__":
 #     print(" ".join(result2.split()))
 #     print(result2)
 
-    # test for gene set summary test 
+    # test for virgin gene set summary test 
     templateSet = """
-                summarize any patterns in the gene set AGPAT2, BSCL2, CAV1, LMNA, PLIN1.
+                are there any patterns in the gene set {text}.
                 SUMMARY:
             """
 
-    promptSet = PromptTemplate(template=templateSet)
+    promptSet = PromptTemplate(template=templateSet, input_variables=["text"])
 
     llm_chain = LLMChain(prompt=promptSet, llm=llm)
 
@@ -251,10 +251,10 @@ Gene therapy using nucleotide vectors is a promising approach to correcting LMNA
 Perilipin-1 (PLIN1) is a protein that plays a vital role in regulating lipid metabolism and lipolysis. It coats the lipid droplets in adipocytes and influences fat storage regulation. PLIN1 is involved in various pathological conditions, including obesity, metabolic disorders, and heart failure. Studies have identified genetic variations in the perilipin gene that may impact postprandial lipoprotein metabolism and atherogenic risk. Additionally, PLIN1 has been linked to bone loss, fatty liver disease, breast cancer, and age-related hearing loss. PLIN1 expression is regulated by PPAR and PI3K-Akt pathways, and its overexpression reportedly protects against atheroma progression. PLIN1 is also involved in the fragmentation and dispersion of cytoplasmic lipid droplets in response to β-adrenergic activation of adenylate cyclase. Studies have identified PLIN1 mutations that cause familial partial lipodystrophy, severe insulin resistance, diabetes, dyslipidemia, and fatty liver. PLIN1 has been targeted for potential therapeutic interventions for age-related hearing loss and adipogenesis-related conditions. Altering DCAD shifts adipose tissue metabolism from lipogenesis to lipolysis, while exposure to carbamazepine causes lipid metabolism disorder and mitochondrial damage. A combination of dietary bio-actives, grape seed proanthocyanidin extract, and retinoic acid has also been studied for their potential therapeutic effects on directing adipogenic differentiation in human cells. Overall, research indicates the importance of PLIN1 in lipid metabolism and the potential for therapeutic interventions in various diseases and conditions.
     """
 
+    textSet = "AGPAT2, BSCL2, CAV1, LMNA, PLIN1"
 
-    resultSet = llm_chain.run()
+    resultSet = llm_chain.run(textSet)
     print(" ".join(resultSet.split()))
-    # print(resultSet)
 
     print("\n\n###################################################\n\n")
 
