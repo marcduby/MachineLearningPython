@@ -195,7 +195,7 @@ if __name__ == "__main__":
         torch_dtype=torch.bfloat16,
         trust_remote_code=True,
         device_map="auto",
-        max_length=1000,
+        max_length=2500,
         do_sample=True,
         top_k=10,
         num_return_sequences=1,
@@ -231,7 +231,7 @@ if __name__ == "__main__":
 
     # test for virgin gene set summary test 
     templateSet = """
-                are there any patterns in the gene set {text}.
+                describe the patterns in the gene set {text}.
                 SUMMARY:
             """
 
@@ -252,6 +252,13 @@ Perilipin-1 (PLIN1) is a protein that plays a vital role in regulating lipid met
     """
 
     textSet = "AGPAT2, BSCL2, CAV1, LMNA, PLIN1"
+
+    resultSet = llm_chain.run(textSet)
+    print(" ".join(resultSet.split()))
+
+    print("\n\n###################################################\n\n")
+
+    textSet = "CEL, HNF1B, HNF4, KLF11, NEUROD1"
 
     resultSet = llm_chain.run(textSet)
     print(" ".join(resultSet.split()))
