@@ -231,7 +231,7 @@ if __name__ == "__main__":
 
     # test for virgin gene set summary test 
     templateSet = """
-                describe the patterns in the gene set {text}.
+                describe in 1000 words or less the patterns in the gene set {text}.
                 SUMMARY:
             """
 
