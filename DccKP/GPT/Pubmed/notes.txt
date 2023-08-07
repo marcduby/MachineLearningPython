@@ -12,6 +12,14 @@
   - generate q/a from keywords, with determining type (gene/pheno) from node normalizer 
   - then run through all abstracts and generate stats 
 
+- AWS new G5 instance setup
+sudo yum install htop 
+pip3 install langchain
+pip3 install transformers
+pip3 install pymysql
+pip3 install accelerate
+git clone https://github.com/marcduby/MachineLearningPython.git
+
 
 - notice
   - have access to references 
