@@ -25,32 +25,32 @@ if __name__ == "__main__":
     # )
 
     hf_auth = HUG_KEY
-    model_config = transformers.AutoConfig.from_pretrained(
-        model_id,
-        use_auth_token=hf_auth
-    )
+    # model_config = transformers.AutoConfig.from_pretrained(
+    #     model_id,
+    #     use_auth_token=hf_auth
+    # )
 
-    model = transformers.AutoModelForCausalLM.from_pretrained(
-        model_id,
-        trust_remote_code=True,
-        config=model_config,
-        # quantization_config=bnb_config,
-        device_map='auto',
-        use_auth_token=hf_auth
-    )
-    model.eval()
-    print(f"Model loaded on {device}")
+    # model = transformers.AutoModelForCausalLM.from_pretrained(
+    #     model_id,
+    #     trust_remote_code=True,
+    #     config=model_config,
+    #     # quantization_config=bnb_config,
+    #     device_map='auto',
+    #     use_auth_token=hf_auth
+    # )
+    # model.eval()
+    # print(f"Model loaded on {device}")
 
     # tokenizer = transformers.AutoTokenizer.from_pretrained(
     #     model_id,
     #     use_auth_token=hf_auth
     # )
-    tokenizer = AutoTokenizer.from_pretrained(model)
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
     print(f"Tokenizer loaded on {device}")
 
 
     generate_text = transformers.pipeline(
-        model=model, 
+        model=model_id, 
         tokenizer=tokenizer,
 
         # added in to fix CUDA out of memory
