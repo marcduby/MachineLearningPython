@@ -4,6 +4,7 @@ import torch
 import transformers
 from torch import cuda, bfloat16
 import os
+from transformers import AutoTokenizer
 
 # constants
 model_id = 'meta-llama/Llama-2-7b-chat-hf'
@@ -40,10 +41,13 @@ if __name__ == "__main__":
     model.eval()
     print(f"Model loaded on {device}")
 
-    tokenizer = transformers.AutoTokenizer.from_pretrained(
-        model_id,
-        use_auth_token=hf_auth
-    )
+    # tokenizer = transformers.AutoTokenizer.from_pretrained(
+    #     model_id,
+    #     use_auth_token=hf_auth
+    # )
+    tokenizer = AutoTokenizer.from_pretrained(model)
+    print(f"Tokenizer loaded on {device}")
+
 
     generate_text = transformers.pipeline(
         model=model, 
@@ -60,14 +64,15 @@ if __name__ == "__main__":
         num_return_sequences=1,
         eos_token_id=tokenizer.eos_token_id,
 
-        return_full_text=True,  
+        # return_full_text=True,  
         task='text-generation',
-        temperature=0.0,  # 'randomness' of outputs, 0.0 is the min and 1.0 the max
-        max_new_tokens=512,  # mex number of tokens to generate in the output
-        repetition_penalty=1.1  # without this output begins repeating
+        temperature=0,  # 'randomness' of outputs, 0.0 is the min and 1.0 the max
+        # max_new_tokens=512,  # mex number of tokens to generate in the output
+        # repetition_penalty=1.1  # without this output begins repeating
 
 
     )
+    print(f"Pipeline loaded on {device}")
 
     res = generate_text("Explain to me the difference between nuclear fission and fusion.")
     print(res[0]["generated_text"])
