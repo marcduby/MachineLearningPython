@@ -52,19 +52,20 @@ if __name__ == "__main__":
         # added in to fix CUDA out of memory
         torch_dtype=torch.bfloat16,
 
+        trust_remote_code=True,
+        device_map="auto",
+        max_length=2500,
+        do_sample=True,
+        top_k=10,
+        num_return_sequences=1,
+        eos_token_id=tokenizer.eos_token_id,
+
         return_full_text=True,  
         task='text-generation',
         temperature=0.0,  # 'randomness' of outputs, 0.0 is the min and 1.0 the max
         max_new_tokens=512,  # mex number of tokens to generate in the output
         repetition_penalty=1.1  # without this output begins repeating
 
-        # trust_remote_code=True,
-        # device_map="auto",
-        # max_length=2500,
-        # do_sample=True,
-        # top_k=10,
-        # num_return_sequences=1,
-        # eos_token_id=tokenizer.eos_token_id
 
     )
 
