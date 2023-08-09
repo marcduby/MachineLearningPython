@@ -30,7 +30,7 @@ SQL_SELECT_ABSTRACT_BY_TITLE = "select id from {}.pgpt_paper_abstract where titl
 SQL_SELECT_ABSTRACT_LIST_LEVEL_0 = """
 select abst.id, abst.abstract 
 from {}.pgpt_paper_abstract abst, {}.pgpt_search_paper seapaper 
-where abst.document_level = 0 and seapaper.paper_id = abst.pubmed_id and seapaper.search_id = %s
+where abst.document_level = 0 and seapaper.pubmed_id = abst.pubmed_id and seapaper.search_id = %s
 and abst.id not in (select child_id from {}.pgpt_gpt_paper where search_id = %s) limit %s
 """.format(SCHEMA_GPT, SCHEMA_GPT, SCHEMA_GPT)
 

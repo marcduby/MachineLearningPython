@@ -39,8 +39,8 @@ SQL_SELECT_ABSTRACT = "select pubmed_id from {}.pgpt_paper_abstract where pubmed
 SQL_INSERT_PAPER = "insert into {}.pgpt_paper (pubmed_id) values(%s)".format(SCHEMA_GPT)
 SQL_INSERT_ABSTRACT = "insert into {}.pgpt_paper_abstract (pubmed_id, abstract, title, journal_name, paper_year, document_level) values(%s, %s, %s, %s, %s, %s)".format(SCHEMA_GPT)
 
-SQL_SELECT_SEARCH_PAPER = "select id from {}.pgpt_search_paper where search_id = %s and paper_id = %s".format(SCHEMA_GPT)
-SQL_INSERT_SEARCH_PAPER = "insert into {}.pgpt_search_paper (search_id, paper_id) values(%s, %s)".format(SCHEMA_GPT)
+SQL_SELECT_SEARCH_PAPER = "select id from {}.pgpt_search_paper where search_id = %s and pubmed_id = %s".format(SCHEMA_GPT)
+SQL_INSERT_SEARCH_PAPER = "insert into {}.pgpt_search_paper (search_id, pubmed_id) values(%s, %s)".format(SCHEMA_GPT)
 
 # SQL_SELECT_SEARCH_LIST = "select id, terms from {}.pgpt_search order by id desc".format(SCHEMA_GPT)
 SQL_SELECT_SEARCH_LIST_TO_DOWNLOAD = "select id, terms from {}.pgpt_search where to_download = 'Y' order by id desc ".format(SCHEMA_GPT)
@@ -361,7 +361,7 @@ if __name__ == "__main__":
     # loop
     for item in list_searches:
         # get search terms
-        print("searh pubmed for: {}".format(item.get('terms')))
+        print("search pubmed for: {}".format(item.get('terms')))
         list_keywords = item.get('terms').split(",")
         search_id = item.get('id')
 

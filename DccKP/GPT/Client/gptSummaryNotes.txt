@@ -217,4 +217,34 @@ In summary, lipid metabolism, adipose tissue, metabolic disease, and structural/
 
 
 
+llama2 Q:
+write a 500 word summary of the information related to MAP3K15 from the information below:
+Answer:
+     Based on the provided information, here is a summary of the main points related to MAP3K15:
+* MAP3K15 (also known as ASK3) is a mitogen-activated protein kinase kinase kinase (MAP3K) that plays a crucial role in the regulation of various cellular processes, including cell survival, proliferation, differentiation, and death.
+* MAP3K15 has been implicated in the pathogenesis of non-malignant kidney disease, including hypertension and diabetes.
+* Studies have shown that MAP3K15 is associated with a reduced risk of developing diabetes, particularly in individuals who do not carry the Latino-enriched risk haplotype.
+* MAP3K15 has also been linked to lower glycosylated hemoglobin levels, indicating better glucose metabolism.
+* Despite its potential therapeutic benefits, targeting MAP3K15 may lead to adverse effects, such as acute kidney injury and nephrotic syndrome, highlighting the need for further research into its mechanisms and potential applications.
+* Overall, MAP3K15 is a promising therapeutic target for the treatment of kidney disease, particularly when combined with other approaches that target downstream effectors in the signaling cascade.
+
+
+
+llama2 Q:
+write a 500 word summary of the information related to UBE2NL from the information below:
+
+Answer:
+The article discusses the identification of new lead structures for the treatment of cancer using structure-based drug discovery methods. The study focuses on the ubiquitin proteins, which play a crucial role in cancer cell growth and proliferation. The authors use homology modeling techniques to evaluate the 3D structure of UBE2NL, a putative ubiquitin-conjugating enzyme E2N-like, and identify the hydrophobic pocket that binds with its natural receptor ubiquitin-conjugating enzyme E2 variant (UBE2V). They also use protein-protein docking study to identify the binding site region of UBE2NL and virtual screening study with a small molecular structural database to identify potential lead compounds. The study finds that four novel rare non-synonymous mutations in UBE2NL are associated with migraine without aura (MWO) in a Chinese sample. Additionally, the study identifies novel genetic variants in the X chromosome in sporadic Alzheimer's disease (SAD) using exome sequencing data. Finally, the study identifies potential gastroschisis susceptibility variants in a Mexican family with recurrence of gastroschisis using whole exome sequencing.
+
+
+
+llama2 Q:
+write a 500 word summary of the information related to UBE2NL from the following text delimited by triple backquotes
+Answer:
+     UBE2NL is a crucial protein involved in the ubiquitin pathway, which plays a vital role in cancer cell progression. The study used structure-based drug discovery methods to identify new lead structures that are selective to UBE2NL. The hydrophobic pocket of UBE2NL was identified through protein-protein docking study, and the binding site region of UBE2NL was identified using active site prediction tools. The study also used virtual screening study with a small molecular structural database against the active site of UBE2NL to identify potential lead compounds.
+In the context of migraine without aura (MWO), the study identified novel non-synonymous mutations predisposing to the susceptibility to MWO in a Chinese sample using exome sequencing. Six novel rare non-synonymous mutations were observed in four patients with MWO, including EDA2R (G170A), UBE2NL (T266G), GBP2 (A907G), EMR1 (C264G), CLCNKB (A1225G), and ARHGAP28 (C413G). The study suggests that multiple genes may predispose to the susceptibility to MWO, and that ARHGAP28-, EMR1-, and GBP2-encoded proteins may affect angiokinesis, while CLCNKB-encoded protein may affect cell membrane potential.
+In sporadic Alzheimer's disease (SAD), the study used whole-exome sequencing to identify genetic risk factors. The study found a higher number of single nucleotide variants (SNVs) in genes present on the X chromosome in SAD patients compared to non-demented controls. Two of these gene variants, located in the ubiquitin pathway (UBE2NL and ATXN3L), were found to be associated with SAD.
+In gastroschisis, a birth defect, the study aimed to identify novel susceptibility variants by employing whole exome sequencing (WES) in a Mexican family with recurrence of gastroschisis. The study identified 428 heterozygous variations in the proband and his family members, including SPATA17, PDE4DIP, CFAP65, ALPP, ZNF717, OR4C3, MAP2K3, TLR8, and UBE2NL. The study proposes a multifactorial model of gastroschisis pathogenesis, suggesting that multiple interacting background modifiers may regulate gastroschisis susceptibility.
+
+
 

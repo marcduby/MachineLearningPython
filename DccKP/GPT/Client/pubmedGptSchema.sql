@@ -9,6 +9,7 @@ create table pgpt_search (
   pubmed_count              int(7) default -1 not null,
   ready                     enum('Y', 'N') default 'N' not null,
   to_download               enum('Y', 'N') default 'N' not null,
+  to_download_ids           enum('Y', 'N') default 'N' not null,
   date_last_download        datetime null,
   date_last_summary         datetime null,
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
@@ -19,6 +20,7 @@ create table pgpt_search (
 -- alter table pgpt_search add column date_last_download datetime null;
 -- alter table pgpt_search add column pubmed_count int(7) default -1 not null;
 -- alter table pgpt_search add column date_last_summary datetime null;
+-- alter table pgpt_search add column to_download_ids enum('Y', 'N') default 'N' not null;
 
 
 -- keywords tables
@@ -48,8 +50,8 @@ create table pgpt_paper (
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
 
-
 -- paper/search table
+-- paper_id is pubmed_id
 drop table if exists pgpt_search_paper;
 create table pgpt_search_paper (
   id                        int not null auto_increment primary key,
@@ -60,6 +62,7 @@ create table pgpt_search_paper (
 alter table pgpt_search_paper add index pgpt_ser_pap_ser (search_id);
 alter table pgpt_search_paper add index pgpt_ser_pap_pap (paper_id);
 
+ALTER TABLE pgpt_search_paper CHANGE paper_id pubmed_id int(9) not null;
 
 -- download paper table
 drop table if exists pgpt_paper_abstract;
@@ -72,11 +75,16 @@ create table pgpt_paper_abstract (
   document_level            int(9) not null,
   paper_year                int(9) null,
   search_top_level_of       int(9) null,
+  gpt_run_id                int(9) null,
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
 alter table pgpt_paper_abstract add index pgpt_pap_abs_pub (pubmed_id);
 
 alter table pgpt_paper_abstract add column search_top_level_of int(9) null;
+alter table pgpt_paper_abstract add column gpt_run_id int(9) null;
+
+-- add first run data
+update pgpt_paper_abstract set gpt_run_id = 1 where pubmed_id is null;
 
 drop table if exists pgpt_gpt_paper;
 create table pgpt_gpt_paper (
@@ -92,8 +100,47 @@ alter table pgpt_gpt_paper add index pgpt_gpt_pap_chi (child_id);
 alter table pgpt_gpt_paper add index pgpt_gpt_pap_sea (search_id);
 
 
+-- paper reference table
+drop table if exists pgpt_paper_reference;
+create table pgpt_paper_reference (
+  id                        int not null auto_increment primary key,
+  pubmed_id                 int(9) not null,
+  ref_pubmed_id             int(9) not null,
+  date_created              datetime DEFAULT CURRENT_TIMESTAMP
+);
+alter table pgpt_paper_reference add index pgpt_pap_ref_pib (pubmed_id);
+alter table pgpt_paper_reference add index pgpt_pap_ref_ref (ref_pubmed_id);
 
 
+-- gpt engine table
+drop table if exists pgpt_gpt_engine;
+create table pgpt_gpt_engine (
+  id                        int not null primary key,
+  gpt_name                  varchar(200) not null,
+  gpt_description           varchar(2000) null,
+  date_created              datetime DEFAULT CURRENT_TIMESTAMP
+);
+
+insert into pgpt_gpt_engine (id, gpt_name) values(1, 'ChatGPT 3.5 free service');
+insert into pgpt_gpt_engine (id, gpt_name) values(2, 'ChatGPT 3.5 paid service');
+insert into pgpt_gpt_engine (id, gpt_name) values(3, 'Claude 2 free service');
+insert into pgpt_gpt_engine (id, gpt_name) values(4, 'Llama2 7B chat HF local');
+
+
+-- gpt run tableupdate pgpt_paper_abstract set gpt_run_id = 1 where pubmed_id is null;
+
+drop table if exists pgpt_gpt_run;
+create table pgpt_gpt_run (
+  id                        int not null auto_increment primary key,
+  name                      varchar(200) not null,
+  gpt_engine_id             int(9) not null,
+  prompt                    varchar(4000) null,
+  date_created              datetime DEFAULT CURRENT_TIMESTAMP
+);
+
+insert into pgpt_gpt_run (name, gpt_engine_id) values('ChatGPT 3.5 free service', 1);
+insert into pgpt_gpt_run (name, gpt_engine_id) values('ChatGPT 3.5 paid service', 2);
+insert into pgpt_gpt_run (name, gpt_engine_id) values('Llama2 on g5xl AWS', 3);
 
 
 
@@ -313,7 +360,7 @@ select phe.gene_code
 from tran_upkeep.agg_gene_phenotype phe
 where phe.phenotype_code = 'T2D'
 and phe.gene_code not in (select gene from pgpt_search) 
-order by phe.abf_probability_combined desc limit 100;
+order by phe.abf_probability_combined desc limit 1000;
 
 -- insert searches
 insert into pgpt_search (name, terms, gene) 
@@ -321,8 +368,14 @@ select concat(phe.gene_code, ' search'), concat(phe.gene_code, ',human'), phe.ge
 from tran_upkeep.agg_gene_phenotype phe
 where phe.phenotype_code = 'T2D'
 and phe.gene_code not in (select gene from pgpt_search) 
-order by phe.abf_probability_combined desc limit 100;
+order by phe.abf_probability_combined desc limit 1000;
 
+insert into pgpt_search (name, terms, gene) 
+select concat(phe.gene_code, ' search'), concat(phe.gene_code, ',human'), phe.gene_code
+from tran_upkeep.agg_gene_phenotype phe
+where phe.phenotype_code = 'AF'
+and phe.gene_code not in (select gene from pgpt_search) 
+order by phe.abf_probability_combined desc limit 500;
 
 
 select phe.gene_code
