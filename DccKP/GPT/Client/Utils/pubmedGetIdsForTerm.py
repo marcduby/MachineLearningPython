@@ -12,6 +12,11 @@ import xml
 import time
 import pymysql as mdb
 
+# import relative libraries
+dir_code = "/home/javaprog/Code/PythonWorkspace/"
+import sys
+sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/GPT/')
+import dcc_gpt_lib
 
 # constants
 URL_SEARCH_BY_KEYWORD = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term={}"
@@ -22,6 +27,9 @@ DB_PASSWD = os.environ.get('DB_PASSWD')
 SCHEMA_GPT = "gene_gpt"
 DB_PAPER_TABLE = "pgpt_paper"
 DB_PAPER_ABSTRACT = "pgpt_paper_abtract"
+
+SQL_INSERT_PUBMED = "insert into {}.pgpt_paper (pubmed_id) values(%s)".format(SCHEMA_GPT)
+SQL_SELECT_PUBMED = "select pubmed_id from {}.pgpt_paper where pubmed_id = %s".format(SCHEMA_GPT)
 
 SQL_SELECT_SEARCH_PUBMED = "select pubmed_id from {}.pgpt_search_paper where search_id = %s and pubmed_id = %s".format(SCHEMA_GPT)
 SQL_INSERT_SEARCH_PUBMED = "insert into {}.pgpt_search_paper (search_id, pubmed_id) values(%s, %s)".format(SCHEMA_GPT)
@@ -107,7 +115,45 @@ def get_list_pubmed_ids_from_webenv(web_env, query_key, log=False):
     # return
     return list_response_id
 
-def get_db_pubmed_id(conn, search_id, pubmed_id, log=False):
+def get_db_pubmed_id(conn, pubmed_id, log=False):
+    '''
+    find keyword PK or return None
+    '''
+    paper_id = None
+    cursor = conn.cursor()
+
+    # pick query 
+    sql_select = SQL_SELECT_PUBMED
+
+    # find
+    cursor.execute(sql_select, (pubmed_id))
+    db_result = cursor.fetchall()
+    if db_result:
+        paper_id = db_result[0][0]
+
+    # return 
+    return paper_id
+
+def insert_db_pubmed_id(conn, pubmed_id, log=False):
+    '''
+    will insert a pubmed id
+    '''
+    # initialize
+    result_id = None
+    cursor = conn.cursor()
+    int_pubmed = int(pubmed_id)
+
+    # see if already in db
+    result_id = get_db_pubmed_id(conn, pubmed_id)
+
+    # if not, insert
+    if not result_id:
+        if log:
+            print("inserting into table pubmed_id: {}".format(int_pubmed))
+        cursor.execute(SQL_INSERT_PUBMED, (int_pubmed))
+        conn.commit()
+
+def get_db_pubmed_id_for_search(conn, search_id, pubmed_id, log=False):
     '''
     find keyword PK or return None
     '''
@@ -126,8 +172,7 @@ def get_db_pubmed_id(conn, search_id, pubmed_id, log=False):
     # return 
     return paper_id
 
-
-def insert_db_pubmed_id(conn, search_id, pubmed_id, log=False):
+def insert_db_pubmed_id_for_search(conn, search_id, pubmed_id, log=False):
     '''
     will insert a pubmed id search/pubmed link table
     '''
@@ -137,7 +182,7 @@ def insert_db_pubmed_id(conn, search_id, pubmed_id, log=False):
     int_pubmed = int(pubmed_id)
 
     # see if already in db
-    result_id = get_db_pubmed_id(conn, search_id, pubmed_id)
+    result_id = get_db_pubmed_id_for_search(conn, search_id, pubmed_id)
 
     # if not, insert
     if not result_id:
@@ -238,13 +283,17 @@ if __name__ == "__main__":
             # query_key = 1
             # time.sleep(90)
             if count_pubmed > 0:
+                # time.sleep(30)
+                time.sleep(10)
+                # time.sleep(5)
                 print("query pubmed for queryKey: {} and webEnv: {}".format(query_key, web_env))
                 list_pubmed_ids = get_list_pubmed_ids_from_webenv(web_env, query_key, log=False)
                 print("\ngot list of pubmed ids of size: {}".format(len(list_pubmed_ids)))
 
                 # insert pubmed ids
                 for pubmed_id in list_pubmed_ids:
-                    insert_db_pubmed_id(conn, search_id=search_id, pubmed_id=pubmed_id, log=True)
+                    insert_db_pubmed_id_for_search(conn, search_id=search_id, pubmed_id=pubmed_id, log=True)
+                    insert_db_pubmed_id(conn, pubmed_id=pubmed_id, log=True)
 
             # update search to done
             update_db_search_to_done(conn=conn, search_id=search_id)

@@ -47,8 +47,14 @@ alter table pgpt_search_keyword add index pgpt_ser_key_key (keyword_id);
 drop table if exists pgpt_paper;
 create table pgpt_paper (
   pubmed_id                 int not null primary key,
+  to_download               enum('Y', 'N') default 'Y' not null,
+  download_success          enum('Y', 'N') default 'N' not null,
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
+
+-- alter table pgpt_paper add column to_download enum('Y', 'N') default 'Y' not null;
+-- alter table pgpt_paper add column download_success enum('Y', 'N') default 'N' not null;
+
 
 -- paper/search table
 -- paper_id is pubmed_id
@@ -56,13 +62,13 @@ drop table if exists pgpt_search_paper;
 create table pgpt_search_paper (
   id                        int not null auto_increment primary key,
   search_id                 int(9) not null,
-  paper_id                  int(9) not null,
+  pubmed_id                 int(9) not null,
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
 alter table pgpt_search_paper add index pgpt_ser_pap_ser (search_id);
 alter table pgpt_search_paper add index pgpt_ser_pap_pap (paper_id);
 
-ALTER TABLE pgpt_search_paper CHANGE paper_id pubmed_id int(9) not null;
+-- ALTER TABLE pgpt_search_paper CHANGE paper_id pubmed_id int(9) not null;
 
 -- download paper table
 drop table if exists pgpt_paper_abstract;
@@ -370,12 +376,28 @@ where phe.phenotype_code = 'T2D'
 and phe.gene_code not in (select gene from pgpt_search) 
 order by phe.abf_probability_combined desc limit 1000;
 
-insert into pgpt_search (name, terms, gene) 
-select concat(phe.gene_code, ' search'), concat(phe.gene_code, ',human'), phe.gene_code
+insert into pgpt_search (name, terms, gene, to_download_ids) 
+select concat(phe.gene_code, ' search'), concat(phe.gene_code, ',human'), phe.gene_code, 'Y'
 from tran_upkeep.agg_gene_phenotype phe
 where phe.phenotype_code = 'AF'
 and phe.gene_code not in (select gene from pgpt_search) 
 order by phe.abf_probability_combined desc limit 500;
+
+
+insert into pgpt_search (name, terms, gene, to_download_ids) 
+select concat(phe.gene_code, ' search'), concat(phe.gene_code, ',human'), phe.gene_code, 'Y'
+from tran_upkeep.agg_gene_phenotype phe
+where phe.phenotype_code = 'CAD'
+and phe.gene_code not in (select gene from pgpt_search) 
+order by phe.abf_probability_combined desc limit 1000;
+
+-- verify
+select a.id, b.id, a.gene, b.gene 
+from pgpt_search a, pgpt_search b
+where a.id != b.id and a.gene = b.gene;
+
+select count(id), to_download_ids from pgpt_search group by to_download_ids;
+
 
 
 select phe.gene_code
@@ -421,5 +443,31 @@ where sp.search_id = se.id and se.id = 137 and sp.document_level = 1;
 select sp.abstract, se.gene 
 from pgpt_paper_abstract sp, pgpt_search se
 where sp.search_top_level_of = se.id and ((se.id = 1) or (se.id >= 137 and se.id <= 142));
+
+
+
+-- clean data after adding download column to paper
+update pgpt_paper paper
+join pgpt_paper_abstract abstract on paper.pubmed_id = abstract.pubmed_id
+set paper.download_success = 'Y', paper.to_download = 'N';
+
+insert into pgpt_paper (pubmed_id)
+select distinct pubmed_id from pgpt_search_paper where pubmed_id not in (select pubmed_id from pgpt_paper);
+
+-- 602122 rows in set (1.57 sec)
+-- mysql> select count(pubmed_id) from pgpt_paper;
+-- +------------------+
+-- | count(pubmed_id) |
+-- +------------------+
+-- |            50854 |
+-- +------------------+
+-- 1 row in set (0.00 sec)
+-- mysql> select count(pubmed_id) from pgpt_paper;
+-- +------------------+
+-- | count(pubmed_id) |
+-- +------------------+
+-- |           652976 |
+-- +------------------+
+-- 1 row in set (0.03 sec)
 
 

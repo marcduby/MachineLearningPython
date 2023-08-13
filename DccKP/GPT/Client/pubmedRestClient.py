@@ -124,7 +124,7 @@ def get_pubmed_abtract(id_pubmed, log=False):
     '''
     # initialize
     list_temp = []
-    text_abstract = ""
+    text_abstract = None
     title = ""
     journal = ""
     year = 0
@@ -142,37 +142,39 @@ def get_pubmed_abtract(id_pubmed, log=False):
     response = requests.get(url_string)
     try:
         map_response = xmltodict.parse(response.content)
+
+        if log:
+            print("got rest response: {}".format(json.dumps(map_response, indent=1)))
+
+        if map_response.get('PubmedArticleSet') and map_response.get('PubmedArticleSet').get('PubmedArticle') and map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation'):
+            resp_article = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article')
+            if resp_article and resp_article.get('Abstract'):
+                list_abstract = resp_article.get('Abstract').get('AbstractText')
+                if log:
+                    print(list_abstract)
+
+                if list_abstract:
+                    if isinstance(list_abstract, list):
+                        for item in list_abstract:
+                            if item.get('#text'):
+                                list_temp.append(item.get('#text'))
+                        text_abstract = " ".join(list_temp)
+                    elif isinstance(list_abstract, dict):
+                        text_abstract = list_abstract.get('#text')
+                    elif isinstance(list_abstract, str):
+                        text_abstract = list_abstract
+
+                # get year
+                if map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('DateCompleted'):
+                    year = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('DateCompleted').get('Year')
+                title = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article').get('ArticleTitle')
+                if isinstance(title, dict):
+                    title = title.get('#text')
+                journal = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article').get('Journal').get('Title')
+
     except xml.parsers.expat.ExpatError:
         print("GOT ERROR: {}".format(response.content))
-
-    if log:
-        print("got rest response: {}".format(json.dumps(map_response, indent=1)))
-
-    if map_response.get('PubmedArticleSet') and map_response.get('PubmedArticleSet').get('PubmedArticle') and map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation'):
-        resp_article = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article')
-        if resp_article and resp_article.get('Abstract'):
-            list_abstract = resp_article.get('Abstract').get('AbstractText')
-            if log:
-                print(list_abstract)
-
-            if list_abstract:
-                if isinstance(list_abstract, list):
-                    for item in list_abstract:
-                        if item.get('#text'):
-                            list_temp.append(item.get('#text'))
-                    text_abstract = " ".join(list_temp)
-                elif isinstance(list_abstract, dict):
-                    text_abstract = list_abstract.get('#text')
-                elif isinstance(list_abstract, str):
-                    text_abstract = list_abstract
-
-            # get year
-            if map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('DateCompleted'):
-                year = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('DateCompleted').get('Year')
-            title = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article').get('ArticleTitle')
-            if isinstance(title, dict):
-                title = title.get('#text')
-            journal = map_response.get('PubmedArticleSet').get('PubmedArticle').get('MedlineCitation').get('Article').get('Journal').get('Title')
+        time.sleep(20)
 
     # return
     return text_abstract, title, journal, year
@@ -404,7 +406,7 @@ if __name__ == "__main__":
         update_db_search_to_done(conn=conn, search_id=search_id)
 
         # pause for next query
-        time.sleep(120)
+        time.sleep(20)
 
 
 # TODO - put in limit of 1500 abstracts
