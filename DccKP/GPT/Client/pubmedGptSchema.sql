@@ -79,6 +79,7 @@ create table pgpt_paper_abstract (
   abstract                  varchar(4000) not null,
   journal_name              varchar(2000) not null,
   document_level            int(9) not null,
+  in_pubmed_file            varchar(50) null,
   paper_year                int(9) null,
   search_top_level_of       int(9) null,
   gpt_run_id                int(9) null,
@@ -86,8 +87,10 @@ create table pgpt_paper_abstract (
 );
 alter table pgpt_paper_abstract add index pgpt_pap_abs_pub (pubmed_id);
 
-alter table pgpt_paper_abstract add column search_top_level_of int(9) null;
-alter table pgpt_paper_abstract add column gpt_run_id int(9) null;
+-- alter table pgpt_paper_abstract add column search_top_level_of int(9) null;
+-- alter table pgpt_paper_abstract add column gpt_run_id int(9) null;
+-- alter table pgpt_paper_abstract add column in_pubmed_file varchar(50) null;
+
 
 -- add first run data
 update pgpt_paper_abstract set gpt_run_id = 1 where pubmed_id is null;
@@ -283,6 +286,14 @@ where gpt.child_id = paper.id
 order by gpt.child_id;
 
 
+-- find papers without downloaded abstracts
+SELECT count(paper.pubmed_id)
+FROM pgpt_paper paper LEFT JOIN pgpt_paper_abstract abstract
+ON paper.pubmed_id = abstract.pubmed_id WHERE abstract.id IS NULL;
+
+
+
+
 select count(distinct parent_id), document_level from pgpt_gpt_paper group by document_level order by document_level;
 
 select avg(wordcount(abstract)) from pgpt_paper_abstract where id < 100;
@@ -387,7 +398,7 @@ order by phe.abf_probability_combined desc limit 500;
 insert into pgpt_search (name, terms, gene, to_download_ids) 
 select concat(phe.gene_code, ' search'), concat(phe.gene_code, ',human'), phe.gene_code, 'Y'
 from tran_upkeep.agg_gene_phenotype phe
-where phe.phenotype_code = 'CAD'
+where phe.phenotype_code = 'CKD'
 and phe.gene_code not in (select gene from pgpt_search) 
 order by phe.abf_probability_combined desc limit 1000;
 
@@ -454,6 +465,8 @@ set paper.download_success = 'Y', paper.to_download = 'N';
 insert into pgpt_paper (pubmed_id)
 select distinct pubmed_id from pgpt_search_paper where pubmed_id not in (select pubmed_id from pgpt_paper);
 
+select count(pubmed_id), to_download from pgpt_paper group by to_download;
+
 -- 602122 rows in set (1.57 sec)
 -- mysql> select count(pubmed_id) from pgpt_paper;
 -- +------------------+
@@ -470,4 +483,34 @@ select distinct pubmed_id from pgpt_search_paper where pubmed_id not in (select 
 -- +------------------+
 -- 1 row in set (0.03 sec)
 
+
+-- SME work
+-- LIST_T2D = "PAM,TBC1D4,WFS1,ANGPTL4,GCK,GLIS3,GLP1R,KCNJ11,MC4R,PDX1"
+-- LIST_KCD = "ALKAL2,BCL2L14,BIN3,F12,FAM102A,FAM53B,FGF5,IRF5,KNG1,MFSD4A,OVOL1,SESN2,SHROOM3,SLC47A1,TMEM125,TTYH3,TUB,UBASH3B,UBE2D3,UMOD,USP2"
+-- LIST_OSTEO = "CHST3,FBN2,FGFR3,GDF5,LMX1B,LTBP3,MGP,SMAD3,WNT10B"
+-- LIST_CAD = "PCSK9,NOS3,BSND,LPL,LIPA,ANGPTL4,LDLR"
+-- LIST_T1D = "CTLA4,CTSH,C1QTNF6,INS,IL2RA,AIRE,CCR5,GLIS3,IFIH1,PRF1,PTPN22,SH2B3,TYK2,CEL,FUT2,MICA,ZFP57,SIRPG"
+-- LIST_OBESITY = "FTO,MC4R,HSD17B12,INO80E,MAP2K5,NFATC2IP,POC5,SH2B1,TUFM"
+
+select * from pgpt_search where gene in ('PAM','TBC1D4','WFS1','ANGPTL4','GCK','GLIS3','GLP1R','KCNJ11','MC4R','PDX1') order by gene;
+select * from pgpt_search where gene in ('ALKAL2','BCL2L14','BIN3','F12','FAM102A','FAM53B','FGF5','IRF5','KNG1','MFSD4A','OVOL1','SESN2','SHROOM3','SLC47A1','TMEM125','TTYH3','TUB','UBASH3B','UBE2D3','UMOD','USP2') order by gene;
+
+select * from pgpt_search where gene in () order by gene;
+select * from pgpt_search where gene in () order by gene;
+select * from pgpt_search where gene in () order by gene;
+select * from pgpt_search where gene in () order by gene;
+
+
+
+-- verify
+-- look for duplicate paper searches
+select * 
+from pgpt_search_paper a, pgpt_search_paper b 
+where a.search_id = b.search_id and a.pubmed_id = b.pubmed_id and a.id != b.id;
+
+
+-- look for astracts not in the paper table
+SELECT abstract.pubmed_id
+FROM pgpt_paper_abstract abstract LEFT JOIN pgpt_paper paper
+ON paper.pubmed_id = abstract.pubmed_id WHERE abstract.pubmed_id is not null and  paper.pubmed_id IS NULL;
 

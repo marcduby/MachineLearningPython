@@ -77,6 +77,18 @@ os:
     import glob
     print(glob.glob("/home/adam/*.txt"))
 
+
+  # Get the directory path
+  dir_path = '/path/to/directory' 
+  # List to store files
+  files = [] 
+  # Iterate over directory contents
+  for entry in os.scandir(dir_path):
+      # If entry is a file, store it
+      if entry.is_file():
+          files.append(entry.name) 
+
+
 files:
 ------
   - reading multiple file with wildcard

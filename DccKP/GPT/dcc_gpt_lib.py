@@ -22,13 +22,39 @@ LIST_MASTER = [LIST_T2D, LIST_KCD, LIST_OSTEO, LIST_CAD, LIST_T1D, LIST_OBESITY]
 # schema
 SCHEMA_GPT = "gene_gpt"
 
-SQL_SELECT_SEARCH = "select id from {}.pgpt_search where gene = %s".format(SCHEMA_GPT)
-SQL_INSERT_SEARCH = "insert into {}.pgpt_search (name, terms, gene, to_download, to_download_ids) values(%s, %s, %s, %s, %s)".format(SCHEMA_GPT)
-SQL_UPDATE_SEARCH = "update {}.pgpt_search set to_download_ids = %s, to_download = %s, ready = %s where id = %s".format(SCHEMA_GPT)
-SQL_UPDATE_SEARCH_TO_DOWNLOAD = "update {}.pgpt_search set to_download = %s where id = %s".format(SCHEMA_GPT)
-SQL_UPDATE_SEARCH_TO_DOWNLOAD_BY_GENE = "update {}.pgpt_search set to_download = %s where gene = %s".format(SCHEMA_GPT)
+# took out schema reference since will depned on connection
+SQL_SELECT_SEARCH = "select id from pgpt_search where gene = %s"
+SQL_INSERT_SEARCH = "insert into pgpt_search (name, terms, gene, to_download, to_download_ids) values(%s, %s, %s, %s, %s)"
+SQL_UPDATE_SEARCH = "update pgpt_search set to_download_ids = %s, to_download = %s, ready = %s where id = %s"
+SQL_UPDATE_SEARCH_TO_DOWNLOAD = "update pgpt_search set to_download = %s where id = %s"
+SQL_UPDATE_SEARCH_TO_DOWNLOAD_BY_GENE = "update pgpt_search set to_download = %s where gene = %s"
+
+SQL_INSERT_ABSTRACT = "insert into pgpt_paper_abstract (pubmed_id, abstract, title, journal_name, paper_year, document_level, in_pubmed_file) values(%s, %s, %s, %s, %s, %s, %s)"
+SQL_SELECT_ABSTRACT_IF_NOT_DOWNLOADED = """
+SELECT paper.pubmed_id 
+FROM pgpt_paper paper LEFT JOIN pgpt_paper_abstract abstract
+ON paper.pubmed_id = abstract.pubmed_id WHERE abstract.id IS NULL;
+"""
+
+SQL_SELECT_PAPER_ALL = "select pubmed_id from pgpt_paper"
+SQL_SELECT_ABSTRACT_BY_PUBMED_ID = "select id from pgpt_paper_abstract where pubmed_id = %s"
+
+SQL_SELECT_ABSTRACT_FILES = "select distinct in_pubmed_file from pgpt_paper_abstract"
 
 
+# SQL_INSERT_SEARCH = "insert into {}.pgpt_search (name, terms, gene, to_download, to_download_ids) values(%s, %s, %s, %s, %s)".format(SCHEMA_GPT)
+# SQL_UPDATE_SEARCH = "update {}.pgpt_search set to_download_ids = %s, to_download = %s, ready = %s where id = %s".format(SCHEMA_GPT)
+# SQL_UPDATE_SEARCH_TO_DOWNLOAD = "update {}.pgpt_search set to_download = %s where id = %s".format(SCHEMA_GPT)
+# SQL_UPDATE_SEARCH_TO_DOWNLOAD_BY_GENE = "update {}.pgpt_search set to_download = %s where gene = %s".format(SCHEMA_GPT)
+
+# SQL_INSERT_ABSTRACT = "insert into {}.pgpt_paper_abstract (pubmed_id, abstract, title, journal_name, paper_year, document_level, in_pubmed_file) values(%s, %s, %s, %s, %s, %s, %s)".format(SCHEMA_GPT)
+# SQL_SELECT_ABSTRACT_IF_DOWNLOADED = """
+# SELECT paper.pubmed_id 
+# FROM {}.pgpt_paper paper LEFT JOIN {}.pgpt_paper_abstract abstract
+# ON paper.pubmed_id = abstract.pubmed_id WHERE abstract.id IS NULL and paper.pubmed_id = %s;
+# """.format(SCHEMA_GPT, SCHEMA_GPT)
+
+# SQL_SELECT_PAPER_ALL = "select pubmed_id from {}.pgpt_paper".format(SCHEMA_GPT)
 
 # methods
 def get_connection(schema=SCHEMA_GPT):
@@ -39,6 +65,101 @@ def get_connection(schema=SCHEMA_GPT):
 
     # return
     return conn
+
+def get_db_abstract_files_processed(conn, log=False):
+    '''
+    will return all the file names of the abstract files already processed
+    '''
+    # initialize
+    list_result = []
+    cursor = conn.cursor()
+
+    # pick query 
+    sql_select = SQL_SELECT_ABSTRACT_FILES
+
+    # find
+    cursor.execute(sql_select, ())
+    db_result = cursor.fetchall()
+    for row in db_result:
+        if row[0]:
+           list_result.append(row[0])
+
+    # return 
+    return set(list_result)
+
+def get_db_all_pubmed_ids(conn, log=False):
+    '''
+    will return all the pubmed ids in the database
+    '''
+    # initialize
+    list_result = []
+    cursor = conn.cursor()
+
+    # pick query 
+    sql_select = SQL_SELECT_ABSTRACT_IF_NOT_DOWNLOADED
+
+    # find
+    cursor.execute(sql_select, ())
+    db_result = cursor.fetchall()
+    for row in db_result:
+        list_result.append(int(row[0]))
+
+    # return 
+    return set(list_result)
+
+def get_db_if_pubmed_downloaded(conn, pubmed_id, log=False):
+    '''
+    will return value if abstract already downloaded, None otherwise
+    '''
+    # initialize
+    result_id = None
+    cursor = conn.cursor()
+
+    # pick query 
+    sql_select = SQL_SELECT_ABSTRACT_BY_PUBMED_ID
+
+    # log
+    if log:
+        print("looking for abstract pubmed_id: {}".format(pubmed_id))
+
+    # find
+    cursor.execute(sql_select, (pubmed_id))
+    db_result = cursor.fetchall()
+    if db_result:
+        result_id = db_result[0][0]
+    else:
+        if log:
+            print("found abstract not downloaded for pubmed id: {}".format(pubmed_id))
+
+    # return 
+    return result_id
+
+def insert_db_paper_abstract(conn, pubmed_id, abstract, title, journal, year, file_name=None, document_level=0, log=False):
+    '''
+    will insert a row int he paper abstract table
+    '''
+    # initialize
+    cursor = conn.cursor()
+
+    # log
+    if log:
+        print("inserting abstract for pubmed id: {} - for file: {}".format(pubmed_id, file_name))
+
+    # shorten abstract if need be
+    if abstract and len(abstract) > 3950:
+        abstract = abstract[:3950]
+    elif abstract:
+        abstract = abstract.strip()
+
+    # insert if data
+    try:
+        if abstract and journal and title:
+            cursor.execute(SQL_INSERT_ABSTRACT, (pubmed_id, abstract, title, journal, year, document_level, file_name))
+            conn.commit()
+        else:
+            print("GOT ERROR: skipping empty abstract for pubmed id: {}".format(pubmed_id))
+    except mdb.err.DataError:
+        print("GOT DATABASE ERROR: skipping empty abstract for pubmed id: {}".format(pubmed_id))
 
 
 def get_db_search_by_gene(conn, gene, log=False):
