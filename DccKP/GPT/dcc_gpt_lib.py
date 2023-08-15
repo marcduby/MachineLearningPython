@@ -28,6 +28,7 @@ SQL_INSERT_SEARCH = "insert into pgpt_search (name, terms, gene, to_download, to
 SQL_UPDATE_SEARCH = "update pgpt_search set to_download_ids = %s, to_download = %s, ready = %s where id = %s"
 SQL_UPDATE_SEARCH_TO_DOWNLOAD = "update pgpt_search set to_download = %s where id = %s"
 SQL_UPDATE_SEARCH_TO_DOWNLOAD_BY_GENE = "update pgpt_search set to_download = %s where gene = %s"
+SQL_UPDATE_SEARCH_READY_BY_GENE = "update pgpt_search set ready = %s where gene = %s"
 
 SQL_INSERT_ABSTRACT = "insert into pgpt_paper_abstract (pubmed_id, abstract, title, journal_name, paper_year, document_level, in_pubmed_file) values(%s, %s, %s, %s, %s, %s, %s)"
 SQL_SELECT_ABSTRACT_IF_NOT_DOWNLOADED = """
@@ -221,6 +222,17 @@ def update_db_search_to_download(conn, id_search, to_download = 'N', log=False):
     cursor.execute(SQL_UPDATE_SEARCH_TO_DOWNLOAD, (to_download, id_search))
     conn.commit()
 
+def update_db_search_ready_by_gene(conn, gene, ready = 'N', log=False):
+    '''
+    will update a gene search ready flag
+    '''
+    # initialize
+    cursor = conn.cursor()
+
+    # update
+    cursor.execute(SQL_UPDATE_SEARCH_READY_BY_GENE, (ready, gene))
+    conn.commit()
+
 def update_db_search_to_download_by_gene(conn, gene, to_download = 'N', log=False):
     '''
     will update a gene search
@@ -294,19 +306,101 @@ def get_paper_data_from_map(map_paper, log=False):
             elif isinstance(list_abstract, str):
                 text_abstract = list_abstract
 
-        # get year
-        if map_paper.get('MedlineCitation').get('DateCompleted'):
-            year = map_paper.get('MedlineCitation').get('DateCompleted').get('Year')
-        title = map_paper.get('MedlineCitation').get('Article').get('ArticleTitle')
-        if isinstance(title, dict):
-            title = title.get('#text')
-        journal = map_paper.get('MedlineCitation').get('Article').get('Journal').get('Title')
-        id_pubmed = map_paper.get('MedlineCitation').get('PMID').get('#text')
-        if id_pubmed:
-            id_pubmed = int(id_pubmed)
+    # FIX: move this out of abstract test since none abstract still has pubmed id and other data
+    # get year
+    if map_paper.get('MedlineCitation').get('DateCompleted'):
+        year = map_paper.get('MedlineCitation').get('DateCompleted').get('Year')
+    title = map_paper.get('MedlineCitation').get('Article').get('ArticleTitle')
+    if isinstance(title, dict):
+        title = title.get('#text')
+    journal = map_paper.get('MedlineCitation').get('Article').get('Journal').get('Title')
+    id_pubmed = map_paper.get('MedlineCitation').get('PMID').get('#text')
+    if id_pubmed:
+        id_pubmed = int(id_pubmed)
 
     # return
     return text_abstract, title, journal, year, id_pubmed
+
+def get_paper_references_from_map(map_paper, log=False):
+    '''
+    extracts the abstract, journal and other data from the given map data
+    '''
+    # initialize
+    id_pubmed = None
+    list_temp = []
+
+    data_pubmed = map_paper.get('PubmedData')
+    if data_pubmed:
+        map_article = data_pubmed.get('ArticleIdList')
+
+        # get the pubmed id
+        list_article = map_article.get('ArticleId')
+        id_pubmed = get_pubmed_id_from_article_id_list(list_article=list_article)
+
+        if id_pubmed:
+            id_pubmed = int(id_pubmed)
+            # find the references
+            if data_pubmed.get('ReferenceList'):
+                if not isinstance(data_pubmed.get('ReferenceList'), list):
+                    list_reference = data_pubmed.get('ReferenceList').get('Reference')
+                    if log:
+                        print(json.dumps(list_reference, indent=1))
+                    if list_reference:
+                        if isinstance(list_reference, list):
+                            for item in list_reference:
+                                id_reference = get_pubmed_reference_from_map(item)
+                                if id_reference:
+                                    list_temp.append(int(id_reference))
+
+                            #     if item.get('ArticleIdList'):
+                            #         if item.get('ArticleIdList').get('ArticleId'):
+                            #             id_reference = get_pubmed_id_from_article_id_list(item.get('ArticleIdList').get('ArticleId'))
+                            #             if id_reference:
+                            #                 list_temp.append(int(id_reference))
+                        else:
+                            id_reference = get_pubmed_reference_from_map(list_reference)
+                            if id_reference:
+                                list_temp.append(int(id_reference))
+                else:                            
+                    print("GOT ODD REFRENCE: \n{}".format(json.dumps(data_pubmed.get('lis'), indent=1)))
+
+    # return
+    return id_pubmed, list_temp
+
+def get_pubmed_reference_from_map(item, log=False):
+    '''
+    extracts the reference list from the map
+    '''
+    id_reference = None
+
+    if item.get('ArticleIdList'):
+        if item.get('ArticleIdList').get('ArticleId'):
+            id_reference = get_pubmed_id_from_article_id_list(item.get('ArticleIdList').get('ArticleId'))
+
+    return id_reference
+
+def get_pubmed_id_from_article_id_list(list_article, log=False):
+    '''
+    extract the ids from a map of article llist
+    '''
+    id_pubmed = None 
+    map_id = None
+
+    # extract the data
+    if list_article:
+        if isinstance(list_article, list):
+            for item in list_article:
+                if item.get('@IdType') and item.get('@IdType') == 'pubmed':
+                    map_id = item
+        else:
+            if list_article.get('@IdType') and list_article.get('@IdType') == 'pubmed':
+                map_id = list_article
+
+    if map_id:
+        id_pubmed = int(map_id.get('#text'))
+
+    # return
+    return id_pubmed
 
 
 def file_to_string(file_path):
@@ -315,4 +409,20 @@ def file_to_string(file_path):
     '''
     with open(file_path, 'r') as f:
         return f.read()
+
+def get_all_files_in_directory(dir_input, log=False):
+    '''
+    get all the files in a directory
+    '''
+    list_files = []
+
+    # get all the files
+    # Iterate over directory contents
+    for entry in os.scandir(dir_input):
+        # If entry is a file, store it
+        if entry.is_file():
+            list_files.append(entry.name) 
+
+    # return
+    return list_files
 

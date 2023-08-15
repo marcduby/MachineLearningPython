@@ -15,6 +15,7 @@ KEY_CHATGPT = os.environ.get('CHAT_KEY')
 openai.api_key = KEY_CHATGPT
 MODEL_CHATGPT="gpt-3.5-turbo-0301"
 MODEL_PROMPT_SUMMARIZE = "summarize the following in 200 words: \n{}"
+LIMIT_GPT_CALLS_PER_LEVEL = 45
 
 SEARCH_ID=1
 GPT_PROMPT = "summarize the information related to {} from the information below:\n"
@@ -47,7 +48,7 @@ SQL_INSERT_GPT_LINK = "insert into {}.pgpt_gpt_paper (search_id, parent_id, chil
 SQL_UPDATE_ABSTRACT_FOR_TOP_LEVEL = "update {}.pgpt_paper_abstract set search_top_level_of = %s where id = %s".format(SCHEMA_GPT)
 
 # SQL_SELECT_SEARCHES = "select id, terms, gene from {}.pgpt_search where ready='Y' and id > 136 limit %s".format(SCHEMA_GPT)
-SQL_SELECT_SEARCHES = "select id, terms, gene from {}.pgpt_search where ready='Y' and id > 136 limit %s".format(SCHEMA_GPT)
+SQL_SELECT_SEARCHES = "select id, terms, gene from {}.pgpt_search where ready='Y' and id > 136 order by id desc limit %s".format(SCHEMA_GPT)
 SQL_UPDATE_SEARCH_AFTER_SUMMARY = "update {}.pgpt_search set ready = 'N', date_last_summary = sysdate() where id = %s ".format(SCHEMA_GPT)
 
 # counts each paper multiple times due to not distinct
@@ -247,19 +248,20 @@ if __name__ == "__main__":
         id_search = search.get('id')
         id_top_level_abstract = -1
         gene = search.get('gene')
-
+        
         for num_level in range(20):
             # assume this is the top of the pyramid level until we find 2+ abstracts at this level
             found_top_level = True
 
             # get all papers in sets of 7
-            for i in range(100000):
+            for i in range(1000):
                 # check if level reached limit
                 count_at_level = get_db_search_paper_at_document_level(conn, id_search, num_level + 1)
                 if count_at_level > max_per_level:
                     print("reached: {} for level: {} and search: {}; MOVING ON TO NEXT LEVEL".format(count_at_level, num_level + 1, id_search))
                     found_top_level = False
-                    time.sleep(20)
+                    # time.sleep(20)
+                    time.sleep(5)
                     break
 
                 str_input = GPT_PROMPT.format(gene)
@@ -291,7 +293,7 @@ if __name__ == "__main__":
 
                 else:
                     # update abstract as the top level
-                    if found_top_level:
+                    if found_top_level and len(list_abstracts) > 0:
                         id_top_level_abstract = list_abstracts[0].get('id')
                         update_db_abstract_for_search(conn=conn, abstract_id=id_top_level_abstract, search_id=id_search)
                         update_db_search_after_summary(conn=conn, search_id=id_search)

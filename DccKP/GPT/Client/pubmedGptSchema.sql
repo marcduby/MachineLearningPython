@@ -151,6 +151,15 @@ insert into pgpt_gpt_run (name, gpt_engine_id) values('ChatGPT 3.5 free service'
 insert into pgpt_gpt_run (name, gpt_engine_id) values('ChatGPT 3.5 paid service', 2);
 insert into pgpt_gpt_run (name, gpt_engine_id) values('Llama2 on g5xl AWS', 3);
 
+drop table if exists pgpt_files_run;
+create table pgpt_files_run (
+  id                        int not null auto_increment primary key,
+  file_name                 varchar(200) not null,
+  run_name                  varchar(200) not null,
+  is_done                   enum('Y', 'N') default 'N' not null,
+  date_created              datetime DEFAULT CURRENT_TIMESTAMP
+);
+
 
 
 
@@ -509,7 +518,7 @@ from pgpt_search_paper a, pgpt_search_paper b
 where a.search_id = b.search_id and a.pubmed_id = b.pubmed_id and a.id != b.id;
 
 
--- look for astracts not in the paper table
+-- look for astracts not in the paper table, so downloads which should not have happened
 SELECT abstract.pubmed_id
 FROM pgpt_paper_abstract abstract LEFT JOIN pgpt_paper paper
 ON paper.pubmed_id = abstract.pubmed_id WHERE abstract.pubmed_id is not null and  paper.pubmed_id IS NULL;

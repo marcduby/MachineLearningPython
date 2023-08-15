@@ -57,10 +57,15 @@ if __name__ == "__main__":
     list_genes = create_list_from_string(dcc_gpt_lib.LIST_MASTER, log=True)
     print("got list: {}".format(list_genes))
 
-    # create searches
-    for gene in list_genes:
-        dcc_gpt_lib.insert_db_search(conn=conn, gene=gene, to_dowwnload='Y', to_download_ids='Y', log=True)
+    # # create searches
+    # for gene in list_genes:
+    #     dcc_gpt_lib.insert_db_search(conn=conn, gene=gene, to_dowwnload='Y', to_download_ids='Y', log=True)
 
+    # # update for download
+    # for gene in list_genes:
+    #     dcc_gpt_lib.update_db_search_to_download_by_gene(conn=conn, gene=gene, to_download='Y')
+
+    # update for ready to summarize
     for gene in list_genes:
-        dcc_gpt_lib.update_db_search_to_download_by_gene(conn=conn, gene=gene, to_download='Y')
+        dcc_gpt_lib.update_db_search_ready_by_gene(conn=conn, gene=gene, ready='Y')
 

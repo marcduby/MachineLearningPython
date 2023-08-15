@@ -16,10 +16,16 @@ from docx import Document
 from docx.shared import Inches
 
 
+# import relative libraries
+dir_code = "/home/javaprog/Code/PythonWorkspace/"
+import sys
+sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/GPT/')
+import dcc_gpt_lib
+
 # constants
 DB_PASSWD = os.environ.get('DB_PASSWD')
 SCHEMA_GPT = "gene_gpt"
-DOC_FILENAME = "/home/javaprog/Data/Broad/GPT/GeneSummaries/geneSummary_{}.docx"
+DOC_FILENAME = "/home/javaprog/Data/Broad/GPT/GeneSummaries/geneSummary_{}_{}.docx"
 SQL_SELECT_GENE_SUMMARIES = """
 select se.gene, abst.abstract
 from {}.pgpt_paper_abstract abst, {}.pgpt_search se 
@@ -69,30 +75,37 @@ if __name__ == "__main__":
     list_genes_mody = ['GCK', 'HNF1A', 'HNF1B', 'CEL', 'PDX1', 'HNF4A', 'INS', 'NEUROD1', 'KLF11']
     list_genes = list_genes_mody
 
-    # get the results
-    list_summaries = get_db_gene_summaries(conn=conn)
-    list_summaries = get_db_gene_summaries(conn=conn, list_genes=list_genes)
+    # map
+    map_gene_lists = {'T2D': dcc_gpt_lib.LIST_T2D, 'CAD': dcc_gpt_lib.LIST_CAD, 'Osteoarthritis': dcc_gpt_lib.LIST_OSTEO, 
+                      'Kidney': dcc_gpt_lib.LIST_KCD, 'T1D': dcc_gpt_lib.LIST_T1D, 'Obesity': dcc_gpt_lib.LIST_OBESITY}
 
-    # create the document
-    document = Document()
+    # loop through map
+    for key, value in map_gene_lists.items():
+        # get the results
+        list_genes = value
+        # list_summaries = get_db_gene_summaries(conn=conn)
+        list_summaries = get_db_gene_summaries(conn=conn, list_genes=list_genes)
 
-    # loop
-    for item in list_summaries:
-        # get the data
-        gene = item.get('gene')
-        summary = item.get('summary')
+        # create the document
+        document = Document()
 
-        # add to document
-        document.add_heading('Gene: {}'.format(gene), 0)
+        # loop
+        for item in list_summaries:
+            # get the data
+            gene = item.get('gene')
+            summary = item.get('summary')
 
-        document.add_paragraph(summary, style='Intense Quote')
+            # add to document
+            document.add_heading('Gene: {}'.format(gene), 0)
 
-        document.add_page_break()
+            document.add_paragraph(summary, style='Intense Quote')
 
-    # save the document
-    file_document = DOC_FILENAME.format(round(time.time() * 1000))
-    print("saving list tio dicument: {}".format(file_document))
-    document.save(file_document)
+            document.add_page_break()
+
+        # save the document
+        file_document = DOC_FILENAME.format(key, round(time.time() * 1000))
+        print("saving list tio dicument: {}".format(file_document))
+        document.save(file_document)
 
 
 

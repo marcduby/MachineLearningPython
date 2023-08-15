@@ -57,6 +57,16 @@ Let me know if you need any assistance setting up or comparing these models for 
 
 
 
+20230815 - reference list
+- test ids 
+  - 36253005
+  - 36283285
+
+
+
+20230813 - inserting from files
+- at srat, not in: 1118732 - 56443 = 1062289
+- abstracts not in yet: 1062256
 
 - lipodystrophy summarties
 AGPAT2, BSCL2, CAV1, LMNA, PLIN1
