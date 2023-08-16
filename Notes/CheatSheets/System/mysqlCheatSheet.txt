@@ -4,6 +4,9 @@ strings:
 
 SELECT SUBSTRING("SQL Tutorial", 1, 6) AS ExtractString;
 
+install:
+--------
+- sudo apt install mysql-server
 
 
 exporting data:

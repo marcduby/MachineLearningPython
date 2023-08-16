@@ -62,6 +62,19 @@ Let me know if you need any assistance setting up or comparing these models for 
   - 36253005
   - 36283285
 
+Traceback (most recent call last):
+  File "extractPubmedReferenceDataFromFiles.py", line 61, in <module>
+    id_pubmed, list_reference = dcc_gpt_lib.get_paper_references_from_map(item, log=False)
+  File "/home/javaprog/Code/PythonWorkspace/MachineLearningPython/DccKP/GPT/dcc_gpt_lib.py", line 398, in get_paper_references_from_map
+    id_reference = get_pubmed_reference_from_map(item)
+  File "/home/javaprog/Code/PythonWorkspace/MachineLearningPython/DccKP/GPT/dcc_gpt_lib.py", line 425, in get_pubmed_reference_from_map
+    id_reference = get_pubmed_id_from_article_id_list(item.get('ArticleIdList').get('ArticleId'))
+  File "/home/javaprog/Code/PythonWorkspace/MachineLearningPython/DccKP/GPT/dcc_gpt_lib.py", line 447, in get_pubmed_id_from_article_id_list
+    id_pubmed = int(map_id.get('#text'))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+(pubmed_gpt) javaprog (master *) Utils $ 
+
+
 
 
 20230813 - inserting from files

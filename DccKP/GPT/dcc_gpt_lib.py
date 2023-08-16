@@ -443,8 +443,11 @@ def get_pubmed_id_from_article_id_list(list_article, log=False):
             if list_article.get('@IdType') and list_article.get('@IdType') == 'pubmed':
                 map_id = list_article
 
-    if map_id:
-        id_pubmed = int(map_id.get('#text'))
+    if map_id and map_id.get('#text'):
+        try:
+            id_pubmed = int(map_id.get('#text'))
+        except ValueError:
+            print("ERROR: pubmed not int: {}".format(map_id.get('#text')))
 
     # return
     return id_pubmed

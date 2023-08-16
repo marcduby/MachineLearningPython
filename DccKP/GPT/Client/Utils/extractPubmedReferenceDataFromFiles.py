@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     # get all the files in the pubmed directory
     list_files = dcc_gpt_lib.get_all_files_in_directory(dir_input=DIR_PUBMED)
-    list_files = [FILE_TEST]
+    # list_files = [FILE_TEST]
     print("for files: {}".format(list_files))
     time.sleep(10)
 
@@ -59,18 +59,18 @@ if __name__ == "__main__":
         # get the list of data
         for jindex, item in enumerate(list_pubmed):
             id_pubmed, list_reference = dcc_gpt_lib.get_paper_references_from_map(item, log=False)
+            if id_pubmed:
+                # test
+                # if id_pubmed == 36253005:
+                # if jindex == 0:
+                #     print("got {} paper json: \n{}".format(id_pubmed, json.dumps(item, indent=1)))
+                print("for: {} got list of references: {}".format(id_pubmed, list_reference))
 
-            # test
-            # if id_pubmed == 36253005:
-            if jindex == 0:
-                print("got {} paper json: \n{}".format(id_pubmed, json.dumps(item, indent=1)))
-            print("for: {} got list of references: {}".format(id_pubmed, list_reference))
-
-            # insert data
-            if list_reference and len(list_reference) > 0:
-                for id_ref in list_reference:
-                    dcc_gpt_lib.insert_db_pubmed_reference(conn=conn, pubmed_id=id_ref, ref_pubmed_id=id_pubmed)
-                conn.commit()
+                # insert data
+                if list_reference and len(list_reference) > 0:
+                    for id_ref in list_reference:
+                        dcc_gpt_lib.insert_db_pubmed_reference(conn=conn, pubmed_id=id_ref, ref_pubmed_id=id_pubmed)
+                    conn.commit()
 
         # set file to completed
         dcc_gpt_lib.insert_db_file_run(conn=conn, file_name=file_name, run_name=name_run, completed='Y')
