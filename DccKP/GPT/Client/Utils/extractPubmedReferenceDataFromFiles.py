@@ -15,7 +15,8 @@ import dcc_gpt_lib
 
 # constants
 DIR_PUBMED = "/scratch/Javaprog/Data/Broad/GPT/Pubmed"
-FILE_TEST = "pubmed23n1159.xml.gz"
+# FILE_TEST = "pubmed23n1159.xml.gz"
+FILE_TEST = "pubmed23n1158.xml.gz"
 SCHEMA_GPT = "gene_gpt"
 
 # methods
@@ -24,20 +25,17 @@ SCHEMA_GPT = "gene_gpt"
 if __name__ == "__main__":
     # get the db connection
     conn = dcc_gpt_lib.get_connection(SCHEMA_GPT)
-    skip_processed_files = False
+    skip_processed_files = True
+    name_run = "20230815_reference"
 
     # get the processed abstract files 
-    list_files_processed = dcc_gpt_lib.get_db_abstract_files_processed(conn=conn)
-
-    # load the cache id set 
-    set_pubmed_id = dcc_gpt_lib.get_db_all_pubmed_ids(conn=conn)
-    print("for to download pubmed id set of size: {}".format(len(set_pubmed_id)))
+    list_files_processed = dcc_gpt_lib.get_db_completed_file_runs(conn=conn, run_name=name_run)
 
     # get all the files in the pubmed directory
-    # list_files = dcc_gpt_lib.get_all_files_in_directory(dir_input=DIR_PUBMED)
+    list_files = dcc_gpt_lib.get_all_files_in_directory(dir_input=DIR_PUBMED)
     list_files = [FILE_TEST]
-    # print("for files: {}".format(list_files))
-    # time.sleep(100)
+    print("for files: {}".format(list_files))
+    time.sleep(10)
 
     # loop through files
     # file_name = FILE_TEST
@@ -68,6 +66,14 @@ if __name__ == "__main__":
                 print("got {} paper json: \n{}".format(id_pubmed, json.dumps(item, indent=1)))
             print("for: {} got list of references: {}".format(id_pubmed, list_reference))
 
+            # insert data
+            if list_reference and len(list_reference) > 0:
+                for id_ref in list_reference:
+                    dcc_gpt_lib.insert_db_pubmed_reference(conn=conn, pubmed_id=id_ref, ref_pubmed_id=id_pubmed)
+                conn.commit()
+
+        # set file to completed
+        dcc_gpt_lib.insert_db_file_run(conn=conn, file_name=file_name, run_name=name_run, completed='Y')
 
 
 

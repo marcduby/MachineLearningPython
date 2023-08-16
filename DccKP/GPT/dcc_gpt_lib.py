@@ -42,6 +42,10 @@ SQL_SELECT_ABSTRACT_BY_PUBMED_ID = "select id from pgpt_paper_abstract where pub
 
 SQL_SELECT_ABSTRACT_FILES = "select distinct in_pubmed_file from pgpt_paper_abstract"
 
+SQL_SELECT_FILE_FOR_RUN = "select file_name from pgpt_file_run where run_name = %s and is_done = 'Y'"
+SQL_INSERT_FILE_RUN = "insert into pgpt_file_run (file_name, run_name, is_done) values(%s, %s, %s)"
+
+SQL_INSERT_PUBMED_REFERENCE = "insert ignore into pgpt_paper_reference (pubmed_id, referring_pubmed_id) select pap.pubmed_id, %s from pgpt_paper pap where pap.pubmed_id = %s"
 
 # SQL_INSERT_SEARCH = "insert into {}.pgpt_search (name, terms, gene, to_download, to_download_ids) values(%s, %s, %s, %s, %s)".format(SCHEMA_GPT)
 # SQL_UPDATE_SEARCH = "update {}.pgpt_search set to_download_ids = %s, to_download = %s, ready = %s where id = %s".format(SCHEMA_GPT)
@@ -66,6 +70,49 @@ def get_connection(schema=SCHEMA_GPT):
 
     # return
     return conn
+
+def insert_db_pubmed_reference(conn, pubmed_id, ref_pubmed_id, is_commit='N', log=False):
+    '''
+    inserts the pubmed reference
+    '''
+    # initialize
+    cursor = conn.cursor()
+
+    # find
+    cursor.execute(SQL_INSERT_PUBMED_REFERENCE, (ref_pubmed_id, pubmed_id))
+    if is_commit:
+        conn.commit()
+
+def get_db_completed_file_runs(conn, run_name, log=False):
+    '''
+    will return all the file names of the references already processed
+    '''
+    # initialize
+    list_result = []
+    cursor = conn.cursor()
+
+    # pick query 
+    sql_select = SQL_SELECT_FILE_FOR_RUN
+
+    # find
+    cursor.execute(sql_select, (run_name))
+    db_result = cursor.fetchall()
+    for row in db_result:
+        if row[0]:
+           list_result.append(row[0])
+
+    return list_result
+
+def insert_db_file_run(conn, file_name, run_name, completed='Y', log=False):
+    '''
+    inserts the file and run into the log table
+    '''
+    # initialize
+    cursor = conn.cursor()
+
+    # find
+    cursor.execute(SQL_INSERT_FILE_RUN, (file_name, run_name, completed))
+    conn.commit()
 
 def get_db_abstract_files_processed(conn, log=False):
     '''

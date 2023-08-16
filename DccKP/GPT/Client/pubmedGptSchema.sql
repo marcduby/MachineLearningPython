@@ -114,12 +114,12 @@ drop table if exists pgpt_paper_reference;
 create table pgpt_paper_reference (
   id                        int not null auto_increment primary key,
   pubmed_id                 int(9) not null,
-  ref_pubmed_id             int(9) not null,
+  referring_pubmed_id       int(9) not null,
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
 alter table pgpt_paper_reference add index pgpt_pap_ref_pib (pubmed_id);
 alter table pgpt_paper_reference add index pgpt_pap_ref_ref (ref_pubmed_id);
-
+alter table pgpt_paper_reference add constraint cons_pap_ref unique (pubmed_id, ref_pubmed_id);
 
 -- gpt engine table
 drop table if exists pgpt_gpt_engine;
@@ -151,8 +151,9 @@ insert into pgpt_gpt_run (name, gpt_engine_id) values('ChatGPT 3.5 free service'
 insert into pgpt_gpt_run (name, gpt_engine_id) values('ChatGPT 3.5 paid service', 2);
 insert into pgpt_gpt_run (name, gpt_engine_id) values('Llama2 on g5xl AWS', 3);
 
-drop table if exists pgpt_files_run;
-create table pgpt_files_run (
+
+drop table if exists pgpt_file_run;
+create table pgpt_file_run (
   id                        int not null auto_increment primary key,
   file_name                 varchar(200) not null,
   run_name                  varchar(200) not null,
