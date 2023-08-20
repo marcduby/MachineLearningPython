@@ -5,8 +5,14 @@ import gzip
 import time 
 import os
 
+# for AWS
+ENV_DIR_CODE = os.environ.get('DIR_CODE')
+ENV_DIR_PUBMED = os.environ.get('DIR_CODE')
+
 # import relative libraries
 dir_code = "/home/javaprog/Code/PythonWorkspace/"
+if ENV_DIR_CODE:
+    dir_code = ENV_DIR_CODE
 import sys
 sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/GPT/')
 import dcc_gpt_lib
@@ -14,6 +20,8 @@ import dcc_gpt_lib
 
 # constants
 DIR_PUBMED = "/scratch/Javaprog/Data/Broad/GPT/Pubmed"
+if ENV_DIR_PUBMED:
+    DIR_PUBMED = ENV_DIR_PUBMED
 FILE_TEST = "pubmed23n1166.xml.gz"
 SCHEMA_GPT = "gene_gpt"
 
@@ -38,7 +46,7 @@ def get_all_fiels_in_directory(dir_input, log=False):
 if __name__ == "__main__":
     # get the db connection
     conn = dcc_gpt_lib.get_connection(SCHEMA_GPT)
-    skip_processed_files = True
+    skip_processed_files = False
 
     # get the processed abstract files 
     list_files_processed = dcc_gpt_lib.get_db_abstract_files_processed(conn=conn)

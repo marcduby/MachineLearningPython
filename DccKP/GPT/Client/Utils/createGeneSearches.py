@@ -9,9 +9,14 @@ import json
 import xml
 import time
 
+# for AWS
+ENV_DIR_CODE = os.environ.get('DIR_CODE')
+ENV_DIR_PUBMED = os.environ.get('DIR_CODE')
 
 # import relative libraries
 dir_code = "/home/javaprog/Code/PythonWorkspace/"
+if ENV_DIR_CODE:
+    dir_code = ENV_DIR_CODE
 import sys
 sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/GPT/')
 import dcc_gpt_lib
@@ -57,13 +62,13 @@ if __name__ == "__main__":
     list_genes = create_list_from_string(dcc_gpt_lib.LIST_MASTER, log=True)
     print("got list: {}".format(list_genes))
 
-    # # create searches
-    # for gene in list_genes:
-    #     dcc_gpt_lib.insert_db_search(conn=conn, gene=gene, to_dowwnload='Y', to_download_ids='Y', log=True)
+    # create searches
+    for gene in list_genes:
+        dcc_gpt_lib.insert_db_search(conn=conn, gene=gene, to_dowwnload='Y', to_download_ids='Y', log=True)
 
-    # # update for download
-    # for gene in list_genes:
-    #     dcc_gpt_lib.update_db_search_to_download_by_gene(conn=conn, gene=gene, to_download='Y')
+    # update for download
+    for gene in list_genes:
+        dcc_gpt_lib.update_db_search_to_download_by_gene(conn=conn, gene=gene, to_download='Y')
 
     # update for ready to summarize
     for gene in list_genes:

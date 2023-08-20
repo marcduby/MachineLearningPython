@@ -118,8 +118,8 @@ create table pgpt_paper_reference (
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
 alter table pgpt_paper_reference add index pgpt_pap_ref_pib (pubmed_id);
-alter table pgpt_paper_reference add index pgpt_pap_ref_ref (ref_pubmed_id);
-alter table pgpt_paper_reference add constraint cons_pap_ref unique (pubmed_id, ref_pubmed_id);
+alter table pgpt_paper_reference add index pgpt_pap_ref_ref (referring_pubmed_id);
+alter table pgpt_paper_reference add constraint cons_pap_ref unique (pubmed_id, referring_pubmed_id);
 
 -- gpt engine table
 drop table if exists pgpt_gpt_engine;
@@ -161,7 +161,9 @@ create table pgpt_file_run (
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
 
-
+drop table if exists pgpt_paper_ref_count;
+create table pgpt_paper_ref_count as select count(id) as ref_count, pubmed_id from pgpt_paper_reference group by pubmed_id;
+alter table pgpt_paper_ref_count add index pgpt_pap_ref_cot_pib (pubmed_id);
 
 
 -- start data

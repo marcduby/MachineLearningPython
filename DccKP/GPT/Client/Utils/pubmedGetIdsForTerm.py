@@ -12,8 +12,14 @@ import xml
 import time
 import pymysql as mdb
 
+# for AWS
+ENV_DIR_CODE = os.environ.get('DIR_CODE')
+ENV_DIR_PUBMED = os.environ.get('DIR_CODE')
+
 # import relative libraries
 dir_code = "/home/javaprog/Code/PythonWorkspace/"
+if ENV_DIR_CODE:
+    dir_code = ENV_DIR_CODE
 import sys
 sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/GPT/')
 import dcc_gpt_lib
