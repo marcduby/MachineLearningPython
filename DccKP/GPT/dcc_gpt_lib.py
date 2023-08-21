@@ -120,7 +120,7 @@ def insert_gpt_results(conn, id_search, num_level, list_abstracts, gpt_abstract,
     level_document = num_level + 1
 
     # insert the result
-    str_time = strftime("%Y-%m-%d %H:%M:%S:%f", gmtime())
+    str_time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
     title = "GPT - {} - {}".format(name_run, str_time)
     journal_name = name_run
     if log:

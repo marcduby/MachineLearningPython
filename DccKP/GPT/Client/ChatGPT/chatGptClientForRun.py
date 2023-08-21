@@ -215,8 +215,8 @@ if __name__ == "__main__":
     # id_search = 1
     num_abstracts_per_summary = 5
     gpt_prompt = GPT_PROMPT.format("PPARG")
-    max_per_level = 20
-    id_run = 4
+    max_per_level = 100
+    id_run = 5
 
     # # get the chat gpt response
     # str_chat = call_chatgpt(str_input, log=True)
@@ -240,8 +240,8 @@ if __name__ == "__main__":
         gene = search.get('gene')
 
         # log
-        print("\n processing search: {} for gene: {} for run id: {} of name: {}".format(id_search, gene, id_run, name_run))
-        time.sleep(10)
+        print("\nprocessing search: {} for gene: {} for run id: {} of name: {}".format(id_search, gene, id_run, name_run))
+        time.sleep(5)
         
         # not anticipating to ever have 20 levels
         for num_level in range(20):
@@ -277,7 +277,7 @@ if __name__ == "__main__":
                         str_abstracts = str_abstracts + "\n" + abstract
 
                     # log
-                    print("using {} for gpt query for level: {} and search: {}".format(len(list_abstracts), num_level, id_search))
+                    print("using abstract count: {} for gpt query for level: {} and search: {}".format(len(list_sub), num_level, id_search))
 
                     # build the prompt
                     str_prompt = prompt_run.format(gene, gene, str_abstracts)
