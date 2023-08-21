@@ -560,8 +560,9 @@ ON paper.pubmed_id = abstract.pubmed_id WHERE abstract.pubmed_id is not null and
 -- values('20230821 ChatGPT genetics', 2, 'as a genetics researcher, summarize the genetics of gene {} from the following text: \n{}', 'Y');
 
 insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process)
-values('20230821 ChatGPT genetics', 2, 
+values('20230821 Paid ChatGPT genetics', 2, 
   'Below are the abstracts from different research papers on gene {}. Please read through the abstracts and write a 200 word summary that synthesizes the key findings of the papers on the genetics of gene {}\n{}', 
   'Y');
 
+select search_top_level_of, gpt_run_id, asbtract from pgpt_paper_abstract where gpt_run_id = 6 and search_top_level_of is not null;
 

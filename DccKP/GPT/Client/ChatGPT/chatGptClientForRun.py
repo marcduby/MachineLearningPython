@@ -216,7 +216,7 @@ if __name__ == "__main__":
     num_abstracts_per_summary = 5
     gpt_prompt = GPT_PROMPT.format("PPARG")
     max_per_level = 100
-    id_run = 5
+    id_run = 7
 
     # # get the chat gpt response
     # str_chat = call_chatgpt(str_input, log=True)

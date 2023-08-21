@@ -52,10 +52,11 @@ FROM pgpt_paper paper LEFT JOIN pgpt_paper_abstract abstract
 ON paper.pubmed_id = abstract.pubmed_id WHERE abstract.id IS NULL;
 """
 
+# join on gpt paper table to make sure they are derived abstracts (necessary?)
 SQL_SELECT_ABSTRACT_LIST_LEVEL_HIGHER = """
 select distinct abst.id, abst.abstract, abst.document_level
 from pgpt_paper_abstract abst, pgpt_gpt_paper gpt
-where abst.document_level = %s and gpt.parent_id = abst.id and gpt.search_id = %s
+where abst.document_level = %s and gpt.parent_id = abst.id and gpt.search_id = %s and abst.gpt_run_id = %s
 and abst.id not in (select child_id from pgpt_gpt_paper where search_id = %s and run_id = %s) limit %s
 """
 SQL_UPDATE_ABSTRACT_FOR_TOP_LEVEL = "update pgpt_paper_abstract set search_top_level_of = %s, gpt_run_id = %s where id = %s"
@@ -170,7 +171,7 @@ def get_list_abstracts(conn, id_search, id_run, num_level=0, num_abstracts=350, 
     if num_level == 0:
         list_abstracts = get_db_most_ref_abstracts_for_search(conn=conn, id_search=id_search, to_shuffle=True, limit=num_abstracts)
     else:
-        cursor.execute(SQL_SELECT_ABSTRACT_LIST_LEVEL_HIGHER, (num_level, id_search, id_search, id_run, num_abstracts))
+        cursor.execute(SQL_SELECT_ABSTRACT_LIST_LEVEL_HIGHER, (num_level, id_search, id_run, id_search, id_run, num_abstracts))
 
         # query 
         db_result = cursor.fetchall()
