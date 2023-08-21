@@ -215,7 +215,7 @@ if __name__ == "__main__":
     # id_search = 1
     num_abstracts_per_summary = 5
     gpt_prompt = GPT_PROMPT.format("PPARG")
-    max_per_level = 100
+    max_per_level = 50
     id_run = 7
 
     # # get the chat gpt response
