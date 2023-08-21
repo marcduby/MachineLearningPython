@@ -14,7 +14,7 @@ import pymysql as mdb
 
 # for AWS
 ENV_DIR_CODE = os.environ.get('DIR_CODE')
-ENV_DIR_PUBMED = os.environ.get('DIR_CODE')
+ENV_DIR_PUBMED = os.environ.get('DIR_PUBMED')
 
 # import relative libraries
 dir_code = "/home/javaprog/Code/PythonWorkspace/"
