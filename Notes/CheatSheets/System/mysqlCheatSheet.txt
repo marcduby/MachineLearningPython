@@ -35,6 +35,10 @@ misc:
       set node.node_name = pathway.pathway_updated_name
       where node.nodSELECT SUBSTRING("SQL Tutorial", 1, 6) AS ExtractString;
 
+      update pgpt_paper paper
+      join pgpt_paper_ref_count ref_count on paper.pubmed_id = ref_count.pubmed_id
+      set paper.count_reference = ref_count.ref_count;
+
   - delete on join 
       delete edge from comb_edge_node edge
       inner join comb_node_ontology node on edge.target_node_id = node.id 
@@ -60,6 +64,12 @@ WHERE table_schema = "digkb"
     AND table_name = "common_dv23";
 
 
+new install password:
+---------------------
+sudo systemctl stop mysql
+sudo mysqld_safe --skip-grant-tables &
+
+
 new install:
 ------------
 sudo apt-get update
@@ -75,6 +85,7 @@ mysql> exit;
 
 $ sudo service mysql restart
 
+UPDATE user SET authentication_string=password('YOURNEWPASSWORD') WHERE user='root';
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new-password';
 
 

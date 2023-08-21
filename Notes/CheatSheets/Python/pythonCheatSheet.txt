@@ -65,6 +65,14 @@ lists:
   - if any(ext in url_string for ext in extensionsToCheck):
         print(url_string)
 
+    list_input = [STR_INPUT1, STR_INPUT2, STR_INPUT3]
+    str_input = " ".join(list_input)    
+
+  sub_size = 3
+  for i in range(0, len(my_list), sub_size):
+      sub = my_list[i:i+sub_size] 
+      print(sub)
+
 dict:
 -----
   - dict.get('key')     # null safe way of getting element

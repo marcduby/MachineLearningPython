@@ -49,11 +49,13 @@ create table pgpt_paper (
   pubmed_id                 int not null primary key,
   to_download               enum('Y', 'N') default 'Y' not null,
   download_success          enum('Y', 'N') default 'N' not null,
+  count_reference           int(9) default 0 not null,
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
 
 -- alter table pgpt_paper add column to_download enum('Y', 'N') default 'Y' not null;
 -- alter table pgpt_paper add column download_success enum('Y', 'N') default 'N' not null;
+-- alter table pgpt_paper add column count_reference int(9) default 0 not null;
 
 
 -- paper/search table
@@ -101,12 +103,14 @@ create table pgpt_gpt_paper (
   parent_id                 int(9) not null,
   child_id                  int(9) not null,
   search_id                 int(9) not null,
+  run_id                    int(9) not null,
   document_level            int(9) not null,
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
 alter table pgpt_gpt_paper add index pgpt_gpt_pap_par (parent_id);
 alter table pgpt_gpt_paper add index pgpt_gpt_pap_chi (child_id);
 alter table pgpt_gpt_paper add index pgpt_gpt_pap_sea (search_id);
+-- alter table pgpt_gpt_paper add column run_id int(9) not null default 1;
 
 
 -- paper reference table
@@ -144,12 +148,14 @@ create table pgpt_gpt_run (
   name                      varchar(200) not null,
   gpt_engine_id             int(9) not null,
   prompt                    varchar(4000) null,
+  to_process                enum('Y', 'N') default 'N' not null,
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
 
 insert into pgpt_gpt_run (name, gpt_engine_id) values('ChatGPT 3.5 free service', 1);
 insert into pgpt_gpt_run (name, gpt_engine_id) values('ChatGPT 3.5 paid service', 2);
 insert into pgpt_gpt_run (name, gpt_engine_id) values('Llama2 on g5xl AWS', 3);
+-- alter table pgpt_gpt_run add column to_process enum('Y', 'N') default 'N' not null;
 
 
 drop table if exists pgpt_file_run;
@@ -209,9 +215,7 @@ insert into pgpt_keyword (keyword) values ('BSCL2');
 
 insert into pgpt_search (name, terms, gene) values('CAV1 search', 'CAV1,human', 'CAV1');
 insert into pgpt_keyword (keyword) values ('CAV1');
-
-insert into pgpt_search (name, terms, gene) values('PTRF search', 'PTRF,human', 'PTRF');
-insert into pgpt_keyword (keyword) values ('PTRF');
+alter table pgpt_gpt_run add column to_process enum('Y', 'N') default 'N' not null;
 
 -- mody genes
 insert into pgpt_search (name, terms, gene) values('HNF1B search', 'HNF1B,human', 'HNF1B');
@@ -259,6 +263,28 @@ group by search_id, sp.document_level
 order by search_id;
 
 select search_top_level_of from pgpt_paper_abstract where search_top_level_of is not null order by search_top_level_of;
+
+
+-- get best referenced papers for a search
+select abstract.pubmed_id, paper.count_reference, search_paper.search_id
+from pgpt_paper_abstract abstract, pgpt_paper paper, pgpt_search_paper search_paper 
+where search_paper.pubmed_id = paper.pubmed_id and abstract.pubmed_id = search_paper.pubmed_id
+and search_paper.search_id = 3742
+order by paper.count_reference desc
+limit 20;
+
+
+update pgpt_paper paper
+join pgpt_paper_ref_count ref_count on paper.pubmed_id = ref_count.pubmed_id
+set paper.count_reference = ref_count.ref_count;
+
+-- select abstract.pubmed_id, ref_count.ref_count, search_paper.search_id
+-- from pgpt_paper_abstract abstract, pgpt_paper_ref_count ref_count, pgpt_search_paper search_paper 
+-- where search_paper.pubmed_id = ref_count.pubmed_id and abstract.pubmed_id = search_paper.pubmed_id
+-- and search_paper.search_id = 3730
+-- order by ref_count.ref_count desc
+-- limit 20;
+
 
 
 -- query
@@ -437,6 +463,7 @@ insert into pgpt_search (name, terms, gene) values('GCK search', 'GCK,human', 'G
 insert into pgpt_keyword (keyword) values ('GCK');
 
 
+
 -- gene sets
 -- mody genes
 select * from pgpt_search where gene in ('GCK', 'HNF1A', 'HNF1B', 'CEL', 'PDX1', 'HNF4A', 'INS', 'NEUROD1', 'KLF11') order by gene;
@@ -525,4 +552,16 @@ where a.search_id = b.search_id and a.pubmed_id = b.pubmed_id and a.id != b.id;
 SELECT abstract.pubmed_id
 FROM pgpt_paper_abstract abstract LEFT JOIN pgpt_paper paper
 ON paper.pubmed_id = abstract.pubmed_id WHERE abstract.pubmed_id is not null and  paper.pubmed_id IS NULL;
+
+
+
+-- add run data
+-- insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process)
+-- values('20230821 ChatGPT genetics', 2, 'as a genetics researcher, summarize the genetics of gene {} from the following text: \n{}', 'Y');
+
+insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process)
+values('20230821 ChatGPT genetics', 2, 
+  'Below are the abstracts from different research papers on gene {}. Please read through the abstracts and write a 200 word summary that synthesizes the key findings of the papers on the genetics of gene {}\n{}', 
+  'Y');
+
 

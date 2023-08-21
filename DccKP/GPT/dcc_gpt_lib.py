@@ -4,6 +4,8 @@ import os
 import pymysql as mdb
 import xmltodict
 import json
+from time import gmtime, strftime
+from random import shuffle
 
 # constants
 DB_PASSWD = os.environ.get('DB_PASSWD')
@@ -50,6 +52,18 @@ FROM pgpt_paper paper LEFT JOIN pgpt_paper_abstract abstract
 ON paper.pubmed_id = abstract.pubmed_id WHERE abstract.id IS NULL;
 """
 
+SQL_SELECT_ABSTRACT_LIST_LEVEL_HIGHER = """
+select distinct abst.id, abst.abstract, abst.document_level
+from pgpt_paper_abstract abst, pgpt_gpt_paper gpt
+where abst.document_level = %s and gpt.parent_id = abst.id and gpt.search_id = %s
+and abst.id not in (select child_id from pgpt_gpt_paper where search_id = %s and run_id = %s) limit %s
+"""
+SQL_UPDATE_ABSTRACT_FOR_TOP_LEVEL = "update pgpt_paper_abstract set search_top_level_of = %s, gpt_run_id = %s where id = %s"
+SQL_INSERT_ABSTRACT_GPT = "insert into pgpt_paper_abstract (abstract, title, journal_name, document_level, gpt_run_id) values(%s, %s, %s, %s, %s)"
+SQL_SELECT_ABSTRACT_BY_TITLE = "select id from pgpt_paper_abstract where title = %s"
+SQL_INSERT_GPT_LINK = "insert into pgpt_gpt_paper (search_id, run_id, parent_id, child_id, document_level) values(%s, %s, %s, %s, %s)"
+
+
 SQL_SELECT_PAPER_ALL = "select pubmed_id from pgpt_paper"
 SQL_SELECT_ABSTRACT_BY_PUBMED_ID = "select id from pgpt_paper_abstract where pubmed_id = %s"
 
@@ -59,6 +73,18 @@ SQL_SELECT_FILE_FOR_RUN = "select file_name from pgpt_file_run where run_name = 
 SQL_INSERT_FILE_RUN = "insert into pgpt_file_run (file_name, run_name, is_done) values(%s, %s, %s)"
 
 SQL_INSERT_PUBMED_REFERENCE = "insert ignore into pgpt_paper_reference (pubmed_id, referring_pubmed_id) select pap.pubmed_id, %s from pgpt_paper pap where pap.pubmed_id = %s"
+
+SQL_SELECT_MOST_REF_ABSTRACTS_FOR_SEARCH = """
+select abstract.id, abstract.abstract
+from pgpt_paper_abstract abstract, pgpt_paper paper, pgpt_search_paper search_paper 
+where search_paper.pubmed_id = paper.pubmed_id and abstract.pubmed_id = search_paper.pubmed_id
+and search_paper.search_id = %s order by paper.count_reference desc limit %s
+"""
+
+# SQL_SELECT_SEARCHES = "select id, terms, gene from {}.pgpt_search where ready='Y' and id > 136 limit %s".format(SCHEMA_GPT)
+SQL_SELECT_SEARCHES_TO_SUMMARIZE = "select id, terms, gene from {}.pgpt_search where ready='Y' order by id desc limit %s".format(SCHEMA_GPT)
+
+SQL_SELECT_RUN_BY_ID = "select name, prompt from {}.pgpt_gpt_run where id = %s".format(SCHEMA_GPT)
 
 # SQL_INSERT_SEARCH = "insert into {}.pgpt_search (name, terms, gene, to_download, to_download_ids) values(%s, %s, %s, %s, %s)".format(SCHEMA_GPT)
 # SQL_UPDATE_SEARCH = "update {}.pgpt_search set to_download_ids = %s, to_download = %s, ready = %s where id = %s".format(SCHEMA_GPT)
@@ -83,6 +109,144 @@ def get_connection(schema=SCHEMA_GPT):
 
     # return
     return conn
+
+def insert_gpt_results(conn, id_search, num_level, list_abstracts, gpt_abstract, id_run, name_run, log=False):
+    '''
+    insert the gpt list
+    '''
+    # intialize
+    id_result = 0
+    cursor = conn.cursor()
+    level_document = num_level + 1
+
+    # insert the result
+    str_time = strftime("%Y-%m-%d %H:%M:%S:%f", gmtime())
+    title = "GPT - {} - {}".format(name_run, str_time)
+    journal_name = name_run
+    if log:
+        print("generating GPT entry: {}".format(title))
+    cursor.execute(SQL_INSERT_ABSTRACT_GPT, (gpt_abstract, title, journal_name, level_document, id_run))
+    conn.commit()
+
+    # get the id
+    cursor.execute(SQL_SELECT_ABSTRACT_BY_TITLE, (title))
+    db_result = cursor.fetchall()
+    if log:
+        print("found parent_id result: {}".format(db_result))
+    if db_result:
+        id_result = db_result[0][0]
+
+    # insert the links
+    for item in list_abstracts:
+        cursor.execute(SQL_INSERT_GPT_LINK, (id_search, id_run, id_result, item.get('id'), level_document))
+
+    # commit
+    conn.commit()
+
+    # return
+    return id_result
+
+def update_db_abstract_for_search_and_run(conn, id_abstract, id_search, id_run, log=False):
+    '''
+    update abstract, make it top level for search and run
+    '''
+    cursor = conn.cursor()
+
+    # find
+    cursor.execute(SQL_UPDATE_ABSTRACT_FOR_TOP_LEVEL, (id_search, id_run, id_abstract))
+    conn.commit()
+
+def get_list_abstracts(conn, id_search, id_run, num_level=0, num_abstracts=350, log=False):
+    '''
+    get a list of abstract map objects
+    '''
+    # initialize
+    list_abstracts = []
+    cursor = conn.cursor()
+
+    # pick the sql based on level
+    if log:
+        print("searching for abstracts got input search: {}, doc_level: {}, limit: {}".format(id_search, num_level, num_abstracts))
+    if num_level == 0:
+        list_abstracts = get_db_most_ref_abstracts_for_search(conn=conn, id_search=id_search, to_shuffle=True, limit=num_abstracts)
+    else:
+        cursor.execute(SQL_SELECT_ABSTRACT_LIST_LEVEL_HIGHER, (num_level, id_search, id_search, id_run, num_abstracts))
+
+        # query 
+        db_result = cursor.fetchall()
+        for row in db_result:
+            paper_id = row[0]
+            abstract = row[1]
+            list_abstracts.append({"id": paper_id, 'abstract': abstract})
+
+    # return
+    return list_abstracts
+
+def get_db_run_data(conn, id_run, log=False):
+    '''
+    returns the run data
+    '''
+    name = None
+    prompt = None
+    cursor = conn.cursor()
+
+    # query 
+    cursor.execute(SQL_SELECT_RUN_BY_ID, (id_run))
+    db_result = cursor.fetchall()
+    for row in db_result:
+        name = row[0]
+        prompt = row[1]
+
+    # return
+    return id_run, name, prompt
+
+def get_db_list_ready_searches(conn, num_searches=-1, log=False):
+    '''
+    get a list of abstract map objects
+    '''
+    # initialize
+    list_searches = []
+    cursor = conn.cursor()
+
+    # query 
+    cursor.execute(SQL_SELECT_SEARCHES_TO_SUMMARIZE, (num_searches))
+    db_result = cursor.fetchall()
+    for row in db_result:
+        search_id = row[0]
+        terms = row[1]
+        gene = row[2]
+        list_searches.append({"id": search_id, 'terms': terms, 'gene': gene})
+
+    # return
+    return list_searches
+
+def get_db_most_ref_abstracts_for_search(conn, id_search, limit=350, to_shuffle=True, log=False):
+    '''
+    will return the most referenced abstracts for a search in descending order
+    '''
+    # initialize
+    list_result = []
+    cursor = conn.cursor()
+
+    # pick query 
+    sql_select = SQL_SELECT_MOST_REF_ABSTRACTS_FOR_SEARCH
+
+    # find
+    cursor.execute(sql_select, (id_search, limit))
+    db_result = cursor.fetchall()
+    for row in db_result:
+        paper_id = row[0]
+        abstract = row[1]
+        list_result.append({"id": paper_id, 'abstract': abstract})
+
+    # shuffle if needed
+    if to_shuffle:
+        if log:
+            print("shuffling: {}".format(list_result))
+        shuffle(list_result)
+
+    # return
+    return list_result
 
 def insert_db_pubmed_reference(conn, pubmed_id, ref_pubmed_id, is_commit='N', log=False):
     '''
