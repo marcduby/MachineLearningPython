@@ -14,6 +14,7 @@ import time
 import pymysql as mdb
 from docx import Document
 from docx.shared import Inches
+from time import gmtime, strftime
 
 
 ENV_DIR_CODE = os.environ.get('DIR_CODE')
@@ -119,7 +120,9 @@ if __name__ == "__main__":
                     document.add_page_break()
 
                 # save the document
-                file_document = DOC_FILENAME.format(key_run, disease, round(time.time() * 1000))
+                str_time = strftime("%Y-%m-%d", gmtime())
+                # file_document = DOC_FILENAME.format(key_run, disease, round(time.time() * 1000))
+                file_document = DOC_FILENAME.format(key_run, disease, str_time)
                 print("saving list to document: {}".format(file_document))
                 document.save(file_document)
 
