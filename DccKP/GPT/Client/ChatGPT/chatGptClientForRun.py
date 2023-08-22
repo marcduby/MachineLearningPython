@@ -294,6 +294,8 @@ if __name__ == "__main__":
                     time.sleep(3)
 
 
+    # TODO - loop through runs then set to done
+    
 
 
 

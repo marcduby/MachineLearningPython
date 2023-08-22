@@ -564,5 +564,13 @@ values('20230821 Paid ChatGPT genetics', 2,
   'Below are the abstracts from different research papers on gene {}. Please read through the abstracts and write a 200 word summary that synthesizes the key findings of the papers on the genetics of gene {}\n{}', 
   'Y');
 
-select search_top_level_of, gpt_run_id, asbtract from pgpt_paper_abstract where gpt_run_id = 6 and search_top_level_of is not null;
+select search.gene, abstract.search_top_level_of, abstract.gpt_run_id, abstract.abstract 
+from pgpt_paper_abstract abstract, pgpt_search search 
+where abstract.gpt_run_id = 7 and abstract.search_top_level_of is not null and abstract.search_top_level_of = search.id;
+
+
+insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process)
+values('20230821 Paid ChatGPT biology', 2, 
+  'Below are the abstracts from different research papers on gene {}. Please read through the abstracts and as a genetics researcher write a 100 word summary that synthesizes the key findings of the papers on the biology of gene {}\n{}', 
+  'Y');
 
