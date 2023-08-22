@@ -29,7 +29,7 @@ sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/GPT/')
 import dcc_gpt_lib
 
 # constants
-DOC_FILENAME = "/home/javaprog/Data/Broad/GPT/GeneSummaries/geneSummary_{}_{}.docx"
+DOC_FILENAME = "/home/javaprog/Data/Broad/GPT/GeneSummaries/geneSummary_{}_{}_{}.docx"
 if ENV_DIR_SUMMARY_DOC:
     DOC_FILENAME = ENV_DIR_SUMMARY_DOC + "/geneSummary_{}_{}_{}.docx"
 
@@ -113,7 +113,8 @@ if __name__ == "__main__":
                     # add to document
                     document.add_heading('Gene: {}'.format(gene), 0)
 
-                    document.add_paragraph(summary, style='Intense Quote')
+                    # document.add_paragraph(summary, style='Intense Quote')
+                    document.add_paragraph(summary, style='Normal')
 
                     document.add_page_break()
 
