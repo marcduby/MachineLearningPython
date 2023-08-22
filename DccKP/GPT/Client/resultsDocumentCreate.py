@@ -97,7 +97,7 @@ if __name__ == "__main__":
             
             # list_summaries = get_db_gene_summaries(conn=conn)
             print("looking for run: {} - {} with disease: {}".format(key_run, id_run, disease))
-            list_summaries = get_db_gene_summaries(conn=conn, id_run=id_run, list_genes=list_genes, log=True)
+            list_summaries = get_db_gene_summaries(conn=conn, id_run=id_run, list_genes=list_genes, log=False)
             print("found summary count: {} for run: {} with disease: {}".format(len(list_summaries), key_run, disease))
 
             if list_summaries and len(list_summaries) > 0:
