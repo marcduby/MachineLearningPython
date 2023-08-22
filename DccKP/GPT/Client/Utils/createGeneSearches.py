@@ -28,30 +28,6 @@ DB_PAPER_ABSTRACT = "pgpt_paper_abtract"
 
 
 # methods
-def create_list_from_string(list_str, log=False):
-    '''
-    will create a list from the combination of comma seperated string
-    '''
-    # intialize
-    list_result = []
-
-    # loop
-    for row in list_str:
-        # split stribng
-        list_temp = row.split(",")
-
-        # log
-        if log:
-            print("adding list of size: {} to list of size: {}".format(len(list_temp), len(list_result)))
-
-        # add
-        list_result = list_result + list_temp
-
-    # return
-    return list_result
-
-
-
 
 # main
 if __name__ == "__main__":
@@ -59,7 +35,7 @@ if __name__ == "__main__":
     conn = dcc_gpt_lib.get_connection(schema=SCHEMA_GPT)
 
     # get the list of genes
-    list_genes = create_list_from_string(dcc_gpt_lib.LIST_MASTER, log=True)
+    list_genes = dcc_gpt_lib.create_list_from_string_list(dcc_gpt_lib.LIST_MASTER, log=True)
     print("got list: {}".format(list_genes))
 
     # create searches

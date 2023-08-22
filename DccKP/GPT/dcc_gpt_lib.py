@@ -654,3 +654,25 @@ def get_all_files_in_directory(dir_input, log=False):
     # return
     return list_files
 
+def create_list_from_string_list(list_str, log=False):
+    '''
+    will create a list from the combination of comma seperated string
+    '''
+    # intialize
+    list_result = []
+
+    # loop
+    for row in list_str:
+        # split stribng
+        list_temp = row.split(",")
+
+        # log
+        if log:
+            print("adding list of size: {} to list of size: {}".format(len(list_temp), len(list_result)))
+
+        # add
+        list_result = list_result + list_temp
+
+    # return
+    return list_result
+

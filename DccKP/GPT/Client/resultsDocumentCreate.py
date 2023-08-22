@@ -59,6 +59,9 @@ def get_db_gene_summaries(conn, id_run, list_genes=None, num_summaries=-1, log=F
 
     # query 
     for gene in list_genes:
+        if log:
+            print("searching for gene: {}".format(gene))
+
         cursor.execute(SQL_SELECT_GENE_SUMMARY_BY_GENE, (id_run, gene))
         db_result = cursor.fetchall()
         for row in db_result:
@@ -88,13 +91,13 @@ if __name__ == "__main__":
     for key_run, id_run in map_runs.items():
         # loop through map
         for key, value in map_gene_lists.items():
-            # get the results
-            list_genes = value
+            # get the list of genes
+            list_genes = dcc_gpt_lib.create_list_from_string_list([value])
             disease = key
             
             # list_summaries = get_db_gene_summaries(conn=conn)
-            print("looking for run: {} with disease: {}".format(key_run, disease))
-            list_summaries = get_db_gene_summaries(conn=conn, id_run=id_run, list_genes=list_genes)
+            print("looking for run: {} - {} with disease: {}".format(key_run, id_run, disease))
+            list_summaries = get_db_gene_summaries(conn=conn, id_run=id_run, list_genes=list_genes, log=True)
             print("found summary count: {} for run: {} with disease: {}".format(len(list_summaries), key_run, disease))
 
             if list_summaries and len(list_summaries) > 0:
