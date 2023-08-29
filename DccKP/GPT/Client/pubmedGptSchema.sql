@@ -583,13 +583,20 @@ values('20230821 Paid ChatGPT biology', 2,
 
 -- 9
 insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process, max_docs_per_level)
-values('20230826 Paid ChatGPT genetics', 2, 
+values('20230826 Paid ChatGPT genetics - no abstracts', 2, 
   'Write a 200 word summary that synthesizes the key findings of the papers on the genetics of gene {}', 
   'Y', 0);
 
+-- 10
+insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process, max_docs_per_level)
+values('20230826 Paid ChatGPT genetics - no abstracts', 2, 
+  'Write a 200 word summary that synthesizes the key findings on the genetics of gene {}', 
+  'Y', 0);
+
+-- 11
 insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_processm max_docs_per_level)
-values('20230826 Paid ChatGPT biology', 2, 
-  'As a genetics researcher write a 100 word summary that synthesizes the key findings of the papers on the biology of gene {}', 
+values('20230826 Paid ChatGPT biology - no abstracts', 2, 
+  'As a genetics researcher write a 100 word summary that synthesizes the key findings on the biology of gene {}', 
   'Y', 0);
 
 select se.gene, abst.abstract

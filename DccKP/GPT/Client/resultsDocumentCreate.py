@@ -88,6 +88,7 @@ if __name__ == "__main__":
                       'Kidney': dcc_gpt_lib.LIST_KCD, 'T1D': dcc_gpt_lib.LIST_T1D, 'Obesity': dcc_gpt_lib.LIST_OBESITY}
     
     map_runs = {'Genetics': 7, 'Biology': 8}
+    map_runs = {'GeneticsWithoutAbstracts': 10, 'BiologyWithoutAbstracts': 11}
 
     for key_run, id_run in map_runs.items():
         # loop through map
