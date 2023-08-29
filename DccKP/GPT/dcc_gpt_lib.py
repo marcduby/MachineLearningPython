@@ -60,7 +60,7 @@ where abst.document_level = %s and gpt.parent_id = abst.id and gpt.search_id = %
 and abst.id not in (select child_id from pgpt_gpt_paper where search_id = %s and run_id = %s) limit %s
 """
 SQL_UPDATE_ABSTRACT_FOR_TOP_LEVEL = "update pgpt_paper_abstract set search_top_level_of = %s, gpt_run_id = %s where id = %s"
-SQL_INSERT_ABSTRACT_GPT = "insert into pgpt_paper_abstract (abstract, title, journal_name, document_level, gpt_run_id) values(%s, %s, %s, %s, %s)"
+SQL_INSERT_ABSTRACT_GPT = "insert into pgpt_paper_abstract (abstract, title, journal_name, document_level, gpt_run_id, search_top_level_of) values(%s, %s, %s, %s, %s, %s)"
 SQL_SELECT_ABSTRACT_BY_TITLE = "select id from pgpt_paper_abstract where title = %s"
 SQL_INSERT_GPT_LINK = "insert into pgpt_gpt_paper (search_id, run_id, parent_id, child_id, document_level) values(%s, %s, %s, %s, %s)"
 
