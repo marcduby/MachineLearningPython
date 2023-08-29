@@ -123,7 +123,7 @@ if __name__ == "__main__":
     gpt_prompt = GPT_PROMPT.format("PPARG")
     max_per_level = 50
     id_run = 7
-    list_id_run = [10, 11]
+    list_id_run = [12, 13]
 
     # # get the chat gpt response
     # str_chat = call_chatgpt(str_input, log=True)
@@ -168,24 +168,11 @@ if __name__ == "__main__":
             print("\n\ngot chat gpt string: {}\n".format(str_chat))
 
             # insert results and links
-            dcc_gpt_lib.insert_gpt_results(conn=conn, id_search=id_search, num_level=num_level, list_abstracts=[], 
-                                            gpt_abstract=str_chat, id_run=id_run, name_run=name_run, log=True)
-            # time.sleep(30)
-            time.sleep(3)
-
-            # get all the abstracts for the document level and run
-            list_abstracts = dcc_gpt_lib.get_list_abstracts(conn=conn, id_search=id_search, id_run=id_run, num_level=num_level, num_abstracts=max_per_level, log=True)
-
-            # if only one abstract, then set to final abstract and break
-            if len(list_abstracts) == 1:
-                id_top_level_abstract = list_abstracts[0].get('id')
-                dcc_gpt_lib.update_db_abstract_for_search_and_run(conn=conn, id_abstract=id_top_level_abstract, id_search=id_search, id_run=id_run)
-                print("\n\n\nset top level: {} for search: {}, run: {} with abstract: {}".format(num_level, id_search, id_run, id_top_level_abstract))
-
-            # if not abstracts, then already done for this run and break
-            elif len(list_abstracts) == 0:
-                print("\n\n\nalready done with no abstracts at level: {} for search: {}, run: {}".format(num_level, id_search, id_run))
+            id_top_level_abstract = dcc_gpt_lib.insert_gpt_results(conn=conn, id_search=id_search, num_level=num_level, list_abstracts=[], 
+                                            gpt_abstract=str_chat, id_run=id_run, name_run=name_run, search_id=id_search, log=True)
+            print("\n\n\nset top level: {} for search: {}, run: {} with abstract: {}".format(num_level, id_search, id_run, id_top_level_abstract))
 
             # time.sleep(30)
-            time.sleep(3)
+            time.sleep(10)
+
 

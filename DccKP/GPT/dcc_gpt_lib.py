@@ -111,7 +111,7 @@ def get_connection(schema=SCHEMA_GPT):
     # return
     return conn
 
-def insert_gpt_results(conn, id_search, num_level, list_abstracts, gpt_abstract, id_run, name_run, log=False):
+def insert_gpt_results(conn, id_search, num_level, list_abstracts, gpt_abstract, id_run, name_run, search_id = None, log=False):
     '''
     insert the gpt list
     '''
@@ -126,7 +126,7 @@ def insert_gpt_results(conn, id_search, num_level, list_abstracts, gpt_abstract,
     journal_name = name_run
     if log:
         print("generating GPT entry: {}".format(title))
-    cursor.execute(SQL_INSERT_ABSTRACT_GPT, (gpt_abstract, title, journal_name, level_document, id_run))
+    cursor.execute(SQL_INSERT_ABSTRACT_GPT, (gpt_abstract, title, journal_name, level_document, id_run, search_id))
     conn.commit()
 
     # get the id
