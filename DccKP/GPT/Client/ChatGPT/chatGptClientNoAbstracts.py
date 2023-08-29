@@ -178,12 +178,10 @@ if __name__ == "__main__":
             id_top_level_abstract = list_abstracts[0].get('id')
             dcc_gpt_lib.update_db_abstract_for_search_and_run(conn=conn, id_abstract=id_top_level_abstract, id_search=id_search, id_run=id_run)
             print("\n\n\nset top level: {} for search: {}, run: {} with abstract: {}".format(num_level, id_search, id_run, id_top_level_abstract))
-            break
 
         # if not abstracts, then already done for this run and break
         elif len(list_abstracts) == 0:
             print("\n\n\nalready done with no abstracts at level: {} for search: {}, run: {}".format(num_level, id_search, id_run))
-            break
 
         # time.sleep(30)
         time.sleep(3)
