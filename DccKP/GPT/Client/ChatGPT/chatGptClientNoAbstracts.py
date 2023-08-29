@@ -157,7 +157,7 @@ if __name__ == "__main__":
         found_top_level = True
 
         # build the prompt
-        str_prompt = prompt_run.format(gene, gene, str_abstracts)
+        str_prompt = prompt_run.format(gene, gene, "")
 
         # get the chat gpt response
         str_chat = call_chatgpt(str_query=str_prompt, log=False)
