@@ -88,6 +88,8 @@ create table pgpt_paper_abstract (
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
 alter table pgpt_paper_abstract add index pgpt_pap_abs_pub (pubmed_id);
+alter table pgpt_paper_abstract add index pgpt_pap_abs_top (search_top_level_of);
+alter table pgpt_paper_abstract add index pgpt_pap_abs_run (gpt_run_id);
 
 -- alter table pgpt_paper_abstract add column search_top_level_of int(9) null;
 -- alter table pgpt_paper_abstract add column gpt_run_id int(9) null;
@@ -148,6 +150,7 @@ create table pgpt_gpt_run (
   name                      varchar(200) not null,
   gpt_engine_id             int(9) not null,
   prompt                    varchar(4000) null,
+  max_docs_per_level        int(9) default 0 not null,
   to_process                enum('Y', 'N') default 'N' not null,
   date_created              datetime DEFAULT CURRENT_TIMESTAMP
 );
@@ -156,6 +159,9 @@ insert into pgpt_gpt_run (name, gpt_engine_id) values('ChatGPT 3.5 free service'
 insert into pgpt_gpt_run (name, gpt_engine_id) values('ChatGPT 3.5 paid service', 2);
 insert into pgpt_gpt_run (name, gpt_engine_id) values('Llama2 on g5xl AWS', 3);
 -- alter table pgpt_gpt_run add column to_process enum('Y', 'N') default 'N' not null;
+-- alter table pgpt_gpt_run add column document_number int(9) default 0 not null;
+-- ALTER TABLE pgpt_gpt_run CHANGE document_number max_docs_per_level int(9);
+-- ALTER TABLE pgpt_gpt_run CHANGE max_docs_per_level max_docs_per_level int(9) default 0 not null;
 
 
 drop table if exists pgpt_file_run;
@@ -564,13 +570,31 @@ values('20230821 Paid ChatGPT genetics', 2,
   'Below are the abstracts from different research papers on gene {}. Please read through the abstracts and write a 200 word summary that synthesizes the key findings of the papers on the genetics of gene {}\n{}', 
   'Y');
 
+-- 7
 select search.gene, abstract.search_top_level_of, abstract.gpt_run_id, abstract.abstract 
 from pgpt_paper_abstract abstract, pgpt_search search 
 where abstract.gpt_run_id = 7 and abstract.search_top_level_of is not null and abstract.search_top_level_of = search.id;
 
-
+-- 8
 insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process)
 values('20230821 Paid ChatGPT biology', 2, 
   'Below are the abstracts from different research papers on gene {}. Please read through the abstracts and as a genetics researcher write a 100 word summary that synthesizes the key findings of the papers on the biology of gene {}\n{}', 
   'Y');
+
+-- 9
+insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process, max_docs_per_level)
+values('20230826 Paid ChatGPT genetics', 2, 
+  'Write a 200 word summary that synthesizes the key findings of the papers on the genetics of gene {}', 
+  'Y', 0);
+
+insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_processm max_docs_per_level)
+values('20230826 Paid ChatGPT biology', 2, 
+  'As a genetics researcher write a 100 word summary that synthesizes the key findings of the papers on the biology of gene {}', 
+  'Y', 0);
+
+select se.gene, abst.abstract
+from pgpt_paper_abstract abst, pgpt_search se 
+where abst.search_top_level_of = se.id and abst.gpt_run_id = 7 and se.gene = 'CLN3';
+
+
 
