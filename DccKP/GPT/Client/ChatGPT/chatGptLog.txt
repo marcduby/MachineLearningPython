@@ -1,0 +1,7 @@
+
+
+- good GPT ids
+  - 7: genetics abstracts
+  - 8: biology abstracts
+  - 12: genetics no abstracts
+  - 14: biology no abstracts

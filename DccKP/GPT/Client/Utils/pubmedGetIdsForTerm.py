@@ -288,7 +288,7 @@ if __name__ == "__main__":
             # web_env = "MCID_64b697f1a865fa461a518090"
             # query_key = 1
             # time.sleep(90)
-            if count_pubmed > 0:
+            if count_pubmed  and count_pubmed > 0:
                 # time.sleep(30)
                 time.sleep(10)
                 # time.sleep(5)

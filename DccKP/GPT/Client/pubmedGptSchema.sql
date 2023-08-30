@@ -587,16 +587,28 @@ values('20230826 Paid ChatGPT genetics - no abstracts', 2,
   'Write a 200 word summary that synthesizes the key findings of the papers on the genetics of gene {}', 
   'Y', 0);
 
--- 10
+-- 10, 12
 insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process, max_docs_per_level)
 values('20230826 Paid ChatGPT genetics - no abstracts', 2, 
   'Write a 200 word summary that synthesizes the key findings on the genetics of gene {}', 
   'Y', 0);
 
--- 11
-insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_processm max_docs_per_level)
+-- 11, 13, 14
+insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process, max_docs_per_level)
 values('20230826 Paid ChatGPT biology - no abstracts', 2, 
   'As a genetics researcher write a 100 word summary that synthesizes the key findings on the biology of gene {}', 
+  'Y', 0);
+
+-- 16
+insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process, max_docs_per_level)
+values('20230829 Paid ChatGPT generic', 2, 
+  'Below are the abstracts from different research papers on gene {}. Please read through the abstracts and write a 200 word summary that synthesizes the key findings of the papers on gene {}\n{}', 
+  'Y', 50);
+
+-- 17
+insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process, max_docs_per_level)
+values('20230829 Paid ChatGPT generic - no abstracts', 2, 
+  'Write a 200 word summary that synthesizes the key findings on gene {}', 
   'Y', 0);
 
 select se.gene, abst.abstract
@@ -604,4 +616,6 @@ from pgpt_paper_abstract abst, pgpt_search se
 where abst.search_top_level_of = se.id and abst.gpt_run_id = 7 and se.gene = 'CLN3';
 
 
+select count(id), gpt_run_id from pgpt_paper_abstract where gpt_run_id in (9, 10, 11) and search_top_level_of is not null group by gpt_run_id;
 
+summarize the information below regarding gene {}
