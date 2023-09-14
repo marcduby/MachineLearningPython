@@ -11,7 +11,7 @@ from langchain.chains import RetrievalQA
 # cosntants
 DIR_DATA = "/home/javaprog/Data/"
 DIR_DOCS = DIR_DATA + "ML/Llama2Test/Genetics/Docs"
-DIR_DB = DIR_DATA + "ML/Llama2Test/Genetics/VectorStore"
+DIR_VECTOR_STORE = DIR_DATA + "ML/Llama2Test/Genetics/VectorStore"
 FILE_MODEL = DIR_DATA + "ML/Llama2Test/Genetics/Model/llama-2-7b-chat.ggmlv3.q8_0.bin"
 PROMPT = """Use the following piece of information to anser the user's question.
 
@@ -93,7 +93,7 @@ def get_inference(question, chain_qa, log=False):
 # main
 if __name__ == "__main__":
     # initialize
-    dir_db = DIR_DB
+    dir_db = DIR_VECTOR_STORE
     file_model = FILE_MODEL
     prompt = PROMPT
 
