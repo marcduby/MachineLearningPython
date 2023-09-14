@@ -26,7 +26,7 @@ FILE_TEST = "pubmed23n1166.xml.gz"
 SCHEMA_GPT = "gene_gpt"
 
 # methods
-def get_all_fiels_in_directory(dir_input, log=False):
+def get_all_files_in_directory(dir_input, log=False):
     '''
     get all the files in a directory
     '''
@@ -52,11 +52,11 @@ if __name__ == "__main__":
     list_files_processed = dcc_gpt_lib.get_db_abstract_files_processed(conn=conn)
 
     # load the cache id set 
-    set_pubmed_id = dcc_gpt_lib.get_db_all_pubmed_ids(conn=conn)
+    set_pubmed_id = dcc_gpt_lib.get_db_all_pubmed_ids_astract_not_downloaded(conn=conn)
     print("for to download pubmed id set of size: {}".format(len(set_pubmed_id)))
 
     # get all the files in the pubmed directory
-    list_files = get_all_fiels_in_directory(dir_input=DIR_PUBMED)
+    list_files = get_all_files_in_directory(dir_input=DIR_PUBMED)
     # print("for files: {}".format(list_files))
     # time.sleep(100)
 
@@ -97,7 +97,7 @@ if __name__ == "__main__":
                     dcc_gpt_lib.insert_db_paper_abstract(conn=conn, pubmed_id=id_pubmed, abstract=text_abstract, journal=journal, title=title, 
                                                         year=year, document_level=0, file_name=file_name, log=True)
 
-        # log total papers
-        print("for file: {}, got paper list of size: {}\n\n".format(file_name, len(list_pubmed)))
+        # log total papers for this file
+        print("{}/{} - for file: {}, got paper list of size: {}\n\n".format(index, len(list_files), file_name, len(list_pubmed)))
 
 

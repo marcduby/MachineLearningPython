@@ -1,0 +1,6 @@
+pip3 install torch transformers pandas
+pip3 install langchain
+pip3 install pypdf
+pip3 install sentence_transformers
+pip3 install faiss-cpu
+pip3 install ctransformers

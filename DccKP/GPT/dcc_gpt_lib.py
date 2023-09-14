@@ -76,7 +76,7 @@ SQL_INSERT_FILE_RUN = "insert into pgpt_file_run (file_name, run_name, is_done) 
 SQL_INSERT_PUBMED_REFERENCE = "insert ignore into pgpt_paper_reference (pubmed_id, referring_pubmed_id) select pap.pubmed_id, %s from pgpt_paper pap where pap.pubmed_id = %s"
 
 SQL_SELECT_MOST_REF_ABSTRACTS_FOR_SEARCH = """
-select abstract.id, abstract.abstract
+select abstract.id, abstract.abstract, abstract.title, abstract.pubmed_id, paper.count_reference
 from pgpt_paper_abstract abstract, pgpt_paper paper, pgpt_search_paper search_paper 
 where search_paper.pubmed_id = paper.pubmed_id and abstract.pubmed_id = search_paper.pubmed_id
 and search_paper.search_id = %s order by paper.count_reference desc limit %s
@@ -238,7 +238,10 @@ def get_db_most_ref_abstracts_for_search(conn, id_search, limit=350, to_shuffle=
     for row in db_result:
         paper_id = row[0]
         abstract = row[1]
-        list_result.append({"id": paper_id, 'abstract': abstract})
+        title = row[2]
+        pubmed_id = row[3]
+        ref_count = row[4]
+        list_result.append({"id": paper_id, 'abstract': abstract, 'title': title, 'pubmed_id': pubmed_id, 'ref_count': ref_count})
 
     # shuffle if needed
     if to_shuffle:

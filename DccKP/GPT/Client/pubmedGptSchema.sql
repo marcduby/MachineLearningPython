@@ -446,6 +446,12 @@ where phe.phenotype_code = 'CKD'
 and phe.gene_code not in (select gene from pgpt_search) 
 order by phe.abf_probability_combined desc limit 1000;
 
+-- from temp gene table
+insert into pgpt_search (name, terms, gene, to_download_ids) 
+select concat(phe.gene_code, ' search'), concat(phe.gene_code, ',human'), phe.gene_code, 'Y'
+from temp_gene phe
+where phe.gene_code not in (select gene from pgpt_search);
+
 -- verify
 select a.id, b.id, a.gene, b.gene 
 from pgpt_search a, pgpt_search b
@@ -618,4 +624,41 @@ where abst.search_top_level_of = se.id and abst.gpt_run_id = 7 and se.gene = 'CL
 
 select count(id), gpt_run_id from pgpt_paper_abstract where gpt_run_id in (9, 10, 11) and search_top_level_of is not null group by gpt_run_id;
 
-summarize the information below regarding gene {}
+-- summarize the information below regarding gene {}
+
+select count(pubmed_id), to_download from pgpt_paper group by to_download;
+-- +------------------+-------------+
+-- | count(pubmed_id) | to_download |
+-- +------------------+-------------+
+-- |          1582746 | Y           |
+-- |            50852 | N           |
+-- +------------------+-------------+
+-- 2 rows in set (0.84 sec)
+
+
+update pgpt_paper paper
+join pgpt_paper_abstract abstract on paper.pubmed_id = abstract.pubmed_id
+set paper.to_download = 'N';
+
+
+
+select abstract.id, abstract.abstract, abstract.title, abstract.pubmed_id, paper.count_reference
+from pgpt_paper_abstract abstract, pgpt_paper paper, pgpt_search_paper search_paper 
+where search_paper.pubmed_id = paper.pubmed_id and abstract.pubmed_id = search_paper.pubmed_id
+and search_paper.search_id = 1 order by paper.count_reference desc limit 20
+
+
+
+-- reports
+-- searches that still need to have linked pubmed ids downloaded
+select count(id), to_download_ids from pgpt_search group by to_download_ids;
+
+-- abstracts that still need to be fully downloaded
+select count(pubmed_id), to_download, download_success from pgpt_paper group by to_download, download_success;
+
+SELECT paper.pubmed_id, count(abst.pubmed_id) as joint_count
+FROM pgpt_paper paper LEFT JOIN pgpt_paper_abstract abst
+ON paper.pubmed_id = abst.pubmed_id
+GROUP BY paper.pubmed_id;
+
+

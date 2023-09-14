@@ -1,0 +1,12 @@
+
+
+
+
+
+interesting errors:
+-------------------
+
+ValueError: Got unsupported chain type: dude. Should be one of dict_keys(['stuff', 'map_reduce', 'refine', 'map_rerank'])
+(llama2_38) javaprog (master *) LLama2CPU $ 
+
+
