@@ -66,7 +66,7 @@ def get_inference_summary_prompt(gene, text_input, max_tokens=512, log=False):
     # get the prompt
     # prompt = dcc_langchain_lib.PROMPT_GENE_TEXT
     prompt = dcc_langchain_lib.PROMPT_SIMPLE_GENE_TEXT
-    prompt = dcc_langchain_lib.PROMPT_SIMPLE_BULLETPOINT_GENE_TEXT
+    # prompt = dcc_langchain_lib.PROMPT_SIMPLE_BULLETPOINT_GENE_TEXT
     prompt_template = PromptTemplate(
         input_variables = ['gene', 'text'],
         template = prompt
