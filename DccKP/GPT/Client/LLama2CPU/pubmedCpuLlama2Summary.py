@@ -22,6 +22,7 @@ if ENV_DIR_CODE:
 import sys
 sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/GPT/')
 import dcc_gpt_lib
+import dcc_langchain_lib
 
 # constants
 DIR_DATA = "/home/javaprog/Data/"
@@ -49,7 +50,7 @@ Please read through the abstracts and as a genetics researcher write a 100 word 
 {abstracts}
 """
 
-GPT_PROMPT = "{abstracts}"
+GPT_PROMPT = "{text_prompt}"
 
 # methods
 def set_prompt(prompt, log=False):
@@ -103,19 +104,32 @@ def get_qa_bot(dir_db, file_model, prompt, log=False):
 
     return chain_qa
 
-def get_inference(gene, abstracts, log=False):
+
+
+def get_inference(gene, text_input, log=False):
     '''
     do the llm inference
     '''
     if log:
-        print("doing llm inference using gene: {} and abstracts: \n{}".format(gene, abstracts))
+        print("doing llm inference using gene: {} and abstracts: \n{}\n".format(gene, text_input))
 
     # Define prompt
     # prompt_template = """Write a concise summary of the following:
     # "{text}"
     # CONCISE SUMMARY:"""
-    prompt = GPT_PROMPT
+    # prompt = GPT_PROMPT
+    prompt = dcc_langchain_lib.TEMPLATE_PROMPT_EMPTY
     prompt_template = PromptTemplate.from_template(prompt)
+
+    # build the instruction
+    text_instruction = dcc_langchain_lib.get_biology_summary_instruction(gene=gene, text=text_input)
+
+    # build the text prompt
+    text_prompt = dcc_langchain_lib.get_prompt_no_tags(instruction=text_instruction, system_prompt=dcc_langchain_lib.ROLE_BIOLOGIST_IN_GENETICS)
+
+    # log
+    if log:
+        print("Using prompt text: \n{}\n".format(text_prompt))
 
     # Define LLM chain
     llm = load_llm(file_model=file_model, log=log)
@@ -124,12 +138,12 @@ def get_inference(gene, abstracts, log=False):
 
     # Define StuffDocumentsChain
     stuff_chain = StuffDocumentsChain(
-        llm_chain=llm_chain, document_variable_name="abstracts"
+        llm_chain=llm_chain, document_variable_name="text_prompt"
     )
 
     # loader = text_to_docs(abstracts)
     # docs = loader.load()
-    docs = Document(page_content=abstracts)
+    docs = Document(page_content=text_prompt)
     print("\n docs: \n{}".format(docs))
     result = stuff_chain.run([docs])
 
@@ -197,20 +211,21 @@ if __name__ == "__main__":
                 str_abstracts = str_abstracts + "\n" + abstract
 
             # log
-            print("using abstract count: {} for gpt query for level: {} and search: {}".format(len(list_sub), num_level, id_search))
+            # print("using abstract count: {} for gpt query for level: {} and search: {}".format(len(list_sub), num_level, id_search))
 
             # build the prompt
             str_prompt = prompt_run.format(gene, gene, str_abstracts)
 
 
-            str_abstracts = """
-Below are the abstracts from different research papers on gene CCDC171. 
-Please read through the abstracts and as a genetics researcher write a 100 word summary that synthesizes the key findings of the papers on the biology of gene CCDC171
-MicroRNAs (miRNAs) play an important role in posttranscriptional regulation by binding to target sites in the 3'UTR of protein-coding genes. Genetic variation within target sites may potentially disrupt the binding activity of miRNAs, thereby impacting this regulation. In the current study, we investigated whether any established BMI-associated genetic variants potentially function by altering a miRNA target site. The genomic positions of all predicted miRNA target site seed regions were identified, and these positions were queried in the T2D Knowledge Portal for variants that associated with BMI in the GIANT UK Biobank. This in silico analysis identified ten target site variants that associated with BMI with a P value ≤ 5\u2009×\u200910. These ten variants mapped to nine genes, FAIM2, CCDC171, ADPGK, ZNF654, MLXIP, NT5C2, SHISA4, SLC25A22, and CTNNB1. In vitro functional analyses showed that five of these target site variants, rs7132908 (FAIM2), rs4963153 (SLC25A22), rs9460 (ADPGK), rs11191548 (NT5C2), and rs3008747 (CCDC171), disrupted the binding activity of miRNAs to their target in an allele-specific manner. In conclusion, our study suggests that some established variants for BMI may function by altering miRNA binding to a 3'UTR target site.\nWomen with epithelial ovarian cancer (EOC) are usually treated with platinum/taxane therapy after cytoreductive surgery but there is considerable inter-individual variation in response. To identify germline single-nucleotide polymorphisms (SNPs) that contribute to variations in individual responses to chemotherapy, we carried out a multi-phase genome-wide association study (GWAS) in 1,244 women diagnosed with serous EOC who were treated with the same first-line chemotherapy, carboplatin and paclitaxel. We identified two SNPs (rs7874043 and rs72700653) in TTC39B (best P=7x10-5, HR=1.90, for rs7874043) associated with progression-free survival (PFS). Functional analyses show that both SNPs lie in a putative regulatory element (PRE) that physically interacts with the promoters of PSIP1, CCDC171 and an alternative promoter of TTC39B. The C allele of rs7874043 is associated with poor PFS and showed increased binding of the Sp1 transcription factor, which is critical for chromatin interactions with PSIP1. Silencing of PSIP1 significantly impaired DNA damage-induced Rad51 nuclear foci and reduced cell viability in ovarian cancer lines. PSIP1 (PC4 and SFRS1 Interacting Protein 1) is known to protect cells from stress-induced apoptosis, and high expression is associated with poor PFS in EOC patients. We therefore suggest that the minor allele of rs7874043 confers poor PFS by increasing PSIP1 expression.\nChronic kidney disease (CKD) is an important public health problem in the world. The aim of our research was to identify novel potential serum biomarkers of renal injury. ELISA assay showed that cytokines and chemokines IL-1β, IL-2, IL-4, IL-5, IL-6, IL-7, IL-8, IL-9, IL-10, IL-12 (p70), IL-13, IL-15, IL-17, Eotaxin, FGFb, G-CSF, GM-CSF, IP-10, MCP-1, MIP-1α, MIP-1β, PDGF-1bb, RANTES, TNF-α and VEGF were significantly higher (R > 0.6,  value < 0.05) in the serum of patients with CKD compared to healthy subjects, and they were positively correlated with well-established markers (urea and creatinine). The multiple reaction monitoring (MRM) quantification method revealed that levels of HSP90B2, AAT, IGSF22, CUL5, PKCE, APOA4, APOE, APOA1, CCDC171, CCDC43, VIL1, Antigen KI-67, NKRF, APPBP2, CAPRI and most complement system proteins were increased in serum of CKD patients compared to the healthy group. Among complement system proteins, the C8G subunit was significantly decreased three-fold in patients with CKD. However, only AAT and HSP90B2 were positively correlated with well-established markers and, therefore, could be proposed as potential biomarkers for CKD.\nRecent genome-wide association studies (GWAS) have identified 97 body-mass index (BMI) associated loci. We aimed to evaluate if dietary intake modifies BMI associations at these loci in the Singapore Chinese population. We utilized GWAS information from six data subsets from two adult Chinese population (N\u2009=\u20097817). Seventy-eight genotyped or imputed index BMI single nucleotide polymorphisms (SNPs) that passed quality control procedures were available in all datasets. Alternative Healthy Eating Index (AHEI)-2010 score and ten nutrient variables were evaluated. Linear regression analyses between z score transformed BMI (Z-BMI) and dietary factors were performed. Interaction analyses were performed by introducing the interaction term (diet x SNP) in the same regression model. Analysis was carried out in each cohort individually and subsequently meta-analyzed using the inverse-variance weighted method. Analyses were also evaluated with a weighted gene-risk score (wGRS) contructed by BMI index SNPs from recent large-scale GWAS studies. Nominal associations between Z-BMI and AHEI-2010 and some dietary factors were identified (P\u2009=\u20090.047-0.010). The BMI wGRS was robustly associated with Z-BMI (P\u2009=\u20091.55\u2009×\u200910) but not with any dietary variables. Dietary variables did not significantly interact with the wGRS to modify BMI associations. When interaction analyses were repeated using individual SNPs, a significant association between cholesterol intake and rs4740619 (CCDC171) was identified (β\u2009=\u20090.077, adjP\u2009=\u20090.043). The CCDC171 gene locus may interact with cholesterol intake to increase BMI in the Singaporean Chinese population, however most known obesity risk loci were not associated with dietary intake and did not interact with diet to modify BMI levels.
-"""
+#             str_abstracts = """
+# Below are the abstracts from different research papers on gene CCDC171. 
+# Please read through the abstracts and as a genetics researcher write a 100 word summary that synthesizes the key findings of the papers on the biology of gene CCDC171
+# MicroRNAs (miRNAs) play an important role in posttranscriptional regulation by binding to target sites in the 3'UTR of protein-coding genes. Genetic variation within target sites may potentially disrupt the binding activity of miRNAs, thereby impacting this regulation. In the current study, we investigated whether any established BMI-associated genetic variants potentially function by altering a miRNA target site. The genomic positions of all predicted miRNA target site seed regions were identified, and these positions were queried in the T2D Knowledge Portal for variants that associated with BMI in the GIANT UK Biobank. This in silico analysis identified ten target site variants that associated with BMI with a P value ≤ 5\u2009×\u200910. These ten variants mapped to nine genes, FAIM2, CCDC171, ADPGK, ZNF654, MLXIP, NT5C2, SHISA4, SLC25A22, and CTNNB1. In vitro functional analyses showed that five of these target site variants, rs7132908 (FAIM2), rs4963153 (SLC25A22), rs9460 (ADPGK), rs11191548 (NT5C2), and rs3008747 (CCDC171), disrupted the binding activity of miRNAs to their target in an allele-specific manner. In conclusion, our study suggests that some established variants for BMI may function by altering miRNA binding to a 3'UTR target site.\nWomen with epithelial ovarian cancer (EOC) are usually treated with platinum/taxane therapy after cytoreductive surgery but there is considerable inter-individual variation in response. To identify germline single-nucleotide polymorphisms (SNPs) that contribute to variations in individual responses to chemotherapy, we carried out a multi-phase genome-wide association study (GWAS) in 1,244 women diagnosed with serous EOC who were treated with the same first-line chemotherapy, carboplatin and paclitaxel. We identified two SNPs (rs7874043 and rs72700653) in TTC39B (best P=7x10-5, HR=1.90, for rs7874043) associated with progression-free survival (PFS). Functional analyses show that both SNPs lie in a putative regulatory element (PRE) that physically interacts with the promoters of PSIP1, CCDC171 and an alternative promoter of TTC39B. The C allele of rs7874043 is associated with poor PFS and showed increased binding of the Sp1 transcription factor, which is critical for chromatin interactions with PSIP1. Silencing of PSIP1 significantly impaired DNA damage-induced Rad51 nuclear foci and reduced cell viability in ovarian cancer lines. PSIP1 (PC4 and SFRS1 Interacting Protein 1) is known to protect cells from stress-induced apoptosis, and high expression is associated with poor PFS in EOC patients. We therefore suggest that the minor allele of rs7874043 confers poor PFS by increasing PSIP1 expression.\nChronic kidney disease (CKD) is an important public health problem in the world. The aim of our research was to identify novel potential serum biomarkers of renal injury. ELISA assay showed that cytokines and chemokines IL-1β, IL-2, IL-4, IL-5, IL-6, IL-7, IL-8, IL-9, IL-10, IL-12 (p70), IL-13, IL-15, IL-17, Eotaxin, FGFb, G-CSF, GM-CSF, IP-10, MCP-1, MIP-1α, MIP-1β, PDGF-1bb, RANTES, TNF-α and VEGF were significantly higher (R > 0.6,  value < 0.05) in the serum of patients with CKD compared to healthy subjects, and they were positively correlated with well-established markers (urea and creatinine). The multiple reaction monitoring (MRM) quantification method revealed that levels of HSP90B2, AAT, IGSF22, CUL5, PKCE, APOA4, APOE, APOA1, CCDC171, CCDC43, VIL1, Antigen KI-67, NKRF, APPBP2, CAPRI and most complement system proteins were increased in serum of CKD patients compared to the healthy group. Among complement system proteins, the C8G subunit was significantly decreased three-fold in patients with CKD. However, only AAT and HSP90B2 were positively correlated with well-established markers and, therefore, could be proposed as potential biomarkers for CKD.\nRecent genome-wide association studies (GWAS) have identified 97 body-mass index (BMI) associated loci. We aimed to evaluate if dietary intake modifies BMI associations at these loci in the Singapore Chinese population. We utilized GWAS information from six data subsets from two adult Chinese population (N\u2009=\u20097817). Seventy-eight genotyped or imputed index BMI single nucleotide polymorphisms (SNPs) that passed quality control procedures were available in all datasets. Alternative Healthy Eating Index (AHEI)-2010 score and ten nutrient variables were evaluated. Linear regression analyses between z score transformed BMI (Z-BMI) and dietary factors were performed. Interaction analyses were performed by introducing the interaction term (diet x SNP) in the same regression model. Analysis was carried out in each cohort individually and subsequently meta-analyzed using the inverse-variance weighted method. Analyses were also evaluated with a weighted gene-risk score (wGRS) contructed by BMI index SNPs from recent large-scale GWAS studies. Nominal associations between Z-BMI and AHEI-2010 and some dietary factors were identified (P\u2009=\u20090.047-0.010). The BMI wGRS was robustly associated with Z-BMI (P\u2009=\u20091.55\u2009×\u200910) but not with any dietary variables. Dietary variables did not significantly interact with the wGRS to modify BMI associations. When interaction analyses were repeated using individual SNPs, a significant association between cholesterol intake and rs4740619 (CCDC171) was identified (β\u2009=\u20090.077, adjP\u2009=\u20090.043). The CCDC171 gene locus may interact with cholesterol intake to increase BMI in the Singaporean Chinese population, however most known obesity risk loci were not associated with dietary intake and did not interact with diet to modify BMI levels.
+# """
 
             # do inference
-            response = get_inference(gene=gene, abstracts=str_abstracts, log=True)
+            gene = 'CCDC171'
+            response = get_inference(gene=gene, text_input=str_abstracts, log=True)
             print("got response: \n\n{}".format(response))
             # print("using GPT prompt: \n{}".format(str_prompt))
 

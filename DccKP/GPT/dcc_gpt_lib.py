@@ -316,7 +316,7 @@ def get_db_abstract_files_processed(conn, log=False):
     # return 
     return set(list_result)
 
-def get_db_all_pubmed_ids(conn, log=False):
+def get_db_all_pubmed_ids_astract_not_downloaded(conn, log=False):
     '''
     will return all the pubmed ids in the database
     '''
@@ -678,4 +678,10 @@ def create_list_from_string_list(list_str, log=False):
 
     # return
     return list_result
+
+def print_count_words_in_string(text, name, log=False):
+    '''
+    returns the number of words in the string
+    '''
+    print("the {} has word count: {}".format(name, len(text.split())))
 
