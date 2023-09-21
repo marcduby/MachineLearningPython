@@ -69,6 +69,9 @@ if __name__ == "__main__":
         print("for file: {}, got paper list of size: {}".format(file_name, len(list_pubmed)))
         time.sleep(3)
 
+        # open a cursor for better memory management
+        cursor = conn.cursor()
+
         # get the list of data
         for jindex, item in enumerate(list_pubmed):
             id_pubmed, list_reference = dcc_gpt_lib.get_paper_references_from_map(item, log=False)
@@ -84,8 +87,10 @@ if __name__ == "__main__":
                     for id_ref in list_reference:
                         # only insert if the pubmed id is in our system
                         if id_ref in set_pubmed_ids:
-                            dcc_gpt_lib.insert_db_pubmed_reference(conn=conn, pubmed_id=id_ref, ref_pubmed_id=id_pubmed)
-                    conn.commit()
+                            dcc_gpt_lib.insert_db_pubmed_reference(conn=conn, pubmed_id=id_ref, ref_pubmed_id=id_pubmed, input_cursor=cursor)
+
+        # commit 
+        conn.commit()
 
         # set file to completed
         dcc_gpt_lib.insert_db_file_run(conn=conn, file_name=file_name, run_name=name_run, completed='Y')

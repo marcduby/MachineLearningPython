@@ -272,12 +272,15 @@ def get_db_most_ref_abstracts_for_search(conn, id_search, limit=350, to_shuffle=
     # return
     return list_result
 
-def insert_db_pubmed_reference(conn, pubmed_id, ref_pubmed_id, is_commit='N', log=False):
+def insert_db_pubmed_reference(conn, pubmed_id, ref_pubmed_id, input_cursor=None, is_commit='N', log=False):
     '''
     inserts the pubmed reference
     '''
     # initialize
-    cursor = conn.cursor()
+    if input_cursor:
+        cursor = input_cursor
+    else:
+        cursor = conn.cursor()
 
     # find
     cursor.execute(SQL_INSERT_PUBMED_REFERENCE, (ref_pubmed_id, pubmed_id))
