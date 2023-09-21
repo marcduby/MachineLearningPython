@@ -26,7 +26,7 @@ if __name__ == "__main__":
     # get the db connection
     conn = dcc_gpt_lib.get_connection(SCHEMA_GPT)
     skip_processed_files = True
-    name_run = "20230815_reference"
+    name_run = "20230921_reference"
 
     # get the processed abstract files 
     list_files_processed = dcc_gpt_lib.get_db_completed_file_runs(conn=conn, run_name=name_run)
@@ -36,6 +36,11 @@ if __name__ == "__main__":
     # list_files = [FILE_TEST]
     print("for files: {}".format(list_files))
     time.sleep(10)
+
+    # get the list of all ids in the system
+    # list_pubmed_ids = dcc_gpt_lib.get_db_list_all_pubmed_ids(conn=conn)
+    set_pubmed_ids = set(dcc_gpt_lib.get_db_list_all_pubmed_ids(conn=conn))
+    print("got list of existing pubmed ids of size: {}".format(len(set_pubmed_ids)))
 
     # loop through files
     # file_name = FILE_TEST
@@ -69,7 +74,9 @@ if __name__ == "__main__":
                 # insert data
                 if list_reference and len(list_reference) > 0:
                     for id_ref in list_reference:
-                        dcc_gpt_lib.insert_db_pubmed_reference(conn=conn, pubmed_id=id_ref, ref_pubmed_id=id_pubmed)
+                        # only insert if the pubmed id is in our system
+                        if id_ref in set_pubmed_ids:
+                            dcc_gpt_lib.insert_db_pubmed_reference(conn=conn, pubmed_id=id_ref, ref_pubmed_id=id_pubmed)
                     conn.commit()
 
         # set file to completed

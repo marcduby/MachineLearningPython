@@ -73,16 +73,8 @@ def call_chatgpt(str_query, log=False):
     str_result = ""
     list_conversation = []
 
-    # build the payload
-    list_conversation.append({'role': 'system', 'content': MODEL_PROMPT_SUMMARIZE.format(str_query)})
-    if log:
-        print("using chat input: {}".format(list_conversation))
+    # build the payload    gpt_prompt = GPT_PROMPT.format("PPARG")
 
-    # query
-    response = openai.ChatCompletion.create(
-        model = MODEL_CHATGPT,
-        messages = list_conversation
-    )
 
     # get the response
     str_response = response.choices

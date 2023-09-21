@@ -73,7 +73,8 @@ SQL_SELECT_ABSTRACT_FILES = "select distinct in_pubmed_file from pgpt_paper_abst
 SQL_SELECT_FILE_FOR_RUN = "select file_name from pgpt_file_run where run_name = %s and is_done = 'Y'"
 SQL_INSERT_FILE_RUN = "insert into pgpt_file_run (file_name, run_name, is_done) values(%s, %s, %s)"
 
-SQL_INSERT_PUBMED_REFERENCE = "insert ignore into pgpt_paper_reference (pubmed_id, referring_pubmed_id) select pap.pubmed_id, %s from pgpt_paper pap where pap.pubmed_id = %s"
+# SQL_INSERT_PUBMED_REFERENCE = "insert ignore into pgpt_paper_reference (pubmed_id, referring_pubmed_id) select pap.pubmed_id, %s from pgpt_paper pap where pap.pubmed_id = %s"
+SQL_INSERT_PUBMED_REFERENCE = "insert ignore into pgpt_paper_reference (referring_pubmed_id, pubmed_id) values(%s, %s)"
 
 SQL_SELECT_MOST_REF_ABSTRACTS_FOR_SEARCH = """
 select abstract.id, abstract.abstract, abstract.title, abstract.pubmed_id, paper.count_reference
@@ -182,6 +183,25 @@ def get_list_abstracts(conn, id_search, id_run, num_level=0, num_abstracts=350, 
 
     # return
     return list_abstracts
+
+def get_db_list_all_pubmed_ids(conn, log=False):
+    '''
+    get a list of pubmed ids in the DB
+    '''
+    # initialize
+    list_papers = []
+    cursor = conn.cursor()
+
+    cursor.execute(SQL_SELECT_PAPER_ALL, ())
+
+    # query 
+    db_result = cursor.fetchall()
+    for row in db_result:
+        paper_id = int(row[0])
+        list_papers.append(paper_id)
+
+    # return
+    return list_papers
 
 def get_db_run_data(conn, id_run, log=False):
     '''

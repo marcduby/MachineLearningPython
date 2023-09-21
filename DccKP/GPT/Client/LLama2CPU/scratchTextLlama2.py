@@ -53,7 +53,7 @@ Please read through the abstracts and as a genetics researcher write a 100 word 
 GPT_PROMPT = "{text_prompt}"
 
 # methods
-def get_inference_summary_prompt(gene, text_input, max_tokens=512, log=False):
+def get_inference_summary_prompt(gene, text_input, max_tokens=512, temperature=0.1,  log=False):
     '''
     do the llm inference
     '''
@@ -77,7 +77,7 @@ def get_inference_summary_prompt(gene, text_input, max_tokens=512, log=False):
         print("Using prompt template: \n{}\n".format(prompt_template))
 
     # get the llm
-    llm = dcc_langchain_lib.load_local_llama_model(dcc_langchain_lib.FILE_LLAMA2_7B_CPU)
+    llm = dcc_langchain_lib.load_local_llama_model(dcc_langchain_lib.FILE_LLAMA2_7B_CPU, temperature=temperature)
     # llm = dcc_langchain_lib.load_local_llama_model(dcc_langchain_lib.FILE_LLAMA2_13B_CPU, max_new_tokens=max_tokens)
 
     # llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo-16k")
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     # dir_db = DIR_VECTOR_STORE
     file_model = FILE_MODEL
     prompt = PROMPT
-    num_abstracts_per_summary = 3
+    num_abstracts_per_summary = 2
     max_per_level = 50
     id_run = 7
     num_level = 0
@@ -109,50 +109,50 @@ if __name__ == "__main__":
     print("got inference: \n{}".format(response))
 
 
-    # # get the connection
-    # conn = dcc_gpt_lib.get_connection()
+    # get the connection
+    conn = dcc_gpt_lib.get_connection()
 
-    # # get the name and prompt of the run
-    # _, name_run, prompt_run = dcc_gpt_lib.get_db_run_data(conn=conn, id_run=id_run)
-    # print("got run: {} with prompt: \n'{}'\n".format(name_run, prompt_run))
+    # get the name and prompt of the run
+    _, name_run, prompt_run = dcc_gpt_lib.get_db_run_data(conn=conn, id_run=id_run)
+    print("got run: {} with prompt: \n'{}'\n".format(name_run, prompt_run))
 
-    # # get the list of searches
-    # list_searches = dcc_gpt_lib.get_db_list_ready_searches(conn=conn, num_searches=1)
+    # get the list of searches
+    list_searches = dcc_gpt_lib.get_db_list_ready_searches(conn=conn, num_searches=1)
 
-    # # get the best abstracts for gene
-    # for search in list_searches:
-    #     id_search = search.get('id')
-    #     id_top_level_abstract = -1
-    #     gene = search.get('gene')
+    # get the best abstracts for gene
+    for search in list_searches:
+        id_search = search.get('id')
+        id_top_level_abstract = -1
+        gene = search.get('gene')
 
-    #     # test data
-    #     gene = "PPARG"
-    #     id_search = 1
+        # test data
+        gene = "PPARG"
+        id_search = 1
 
-    #     # log
-    #     print("\nprocessing search: {} for gene: {} for run id: {} of name: {}".format(id_search, gene, id_run, name_run))
-    #     # time.sleep(5)
+        # log
+        print("\nprocessing search: {} for gene: {} for run id: {} of name: {}".format(id_search, gene, id_run, name_run))
+        # time.sleep(5)
 
-    #     # get all the abstracts for the document level and run
-    #     list_abstracts = dcc_gpt_lib.get_list_abstracts(conn=conn, id_search=id_search, id_run=id_run, num_level=num_level, num_abstracts=max_per_level, log=True)
+        # get all the abstracts for the document level and run
+        list_abstracts = dcc_gpt_lib.get_list_abstracts(conn=conn, id_search=id_search, id_run=id_run, num_level=num_level, num_abstracts=max_per_level, log=True)
 
-    #     for i in range(0, len(list_abstracts), num_abstracts_per_summary):
-    #         list_sub = list_abstracts[i : i + num_abstracts_per_summary] 
+        for i in range(0, len(list_abstracts), num_abstracts_per_summary):
+            list_sub = list_abstracts[i : i + num_abstracts_per_summary] 
 
-    #         # for the sub list
-    #         str_abstracts = ""
-    #         for item in list_sub:
-    #             abstract = item.get('abstract')
-    #             word_count = len(abstract.split())
-    #             print("using abstract: {} with word count: {} and ref count: {}".format(item.get('id'), word_count, item.get('ref_count')))
-    #             str_abstracts = str_abstracts + "\n" + abstract
+            # for the sub list
+            str_abstracts = ""
+            for item in list_sub:
+                abstract = item.get('abstract')
+                word_count = len(abstract.split())
+                print("using abstract: {} with word count: {} and ref count: {}".format(item.get('id'), word_count, item.get('ref_count')))
+                str_abstracts = str_abstracts + "\n" + abstract
 
-    #         # get the inference
-    #         response = get_inference_summary_prompt(gene=gene, text_input=str_abstracts, max_tokens=512, log=True)
-    #         print("got inference: \n{}".format(response))
+            # get the inference
+            response = get_inference_summary_prompt(gene=gene, text_input=str_abstracts, max_tokens=512, temperature=0.5, log=True)
+            print("got inference: \n{}".format(response))
 
-    #         # break after one inference
-    #         break
+            # break after one inference
+            break
 
 
 
