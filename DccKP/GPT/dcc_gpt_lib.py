@@ -272,7 +272,7 @@ def get_db_most_ref_abstracts_for_search(conn, id_search, limit=350, to_shuffle=
     # return
     return list_result
 
-def insert_db_pubmed_reference(conn, pubmed_id, ref_pubmed_id, input_cursor=None, is_commit='N', log=False):
+def insert_db_pubmed_reference(conn, pubmed_id, ref_pubmed_id, input_cursor=None, is_commit=False, log=False):
     '''
     inserts the pubmed reference
     '''

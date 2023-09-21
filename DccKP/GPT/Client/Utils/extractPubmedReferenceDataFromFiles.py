@@ -65,15 +65,15 @@ if __name__ == "__main__":
 
         # get the json from the xml
         print("{}/{} - reading file: {}".format(index, len(list_files), file_name))
-        list_pubmed = dcc_gpt_lib.get_pubmed_article_list(xml_input=file_content, log=False)
-        print("for file: {}, got paper list of size: {}".format(file_name, len(list_pubmed)))
+        list_papers = dcc_gpt_lib.get_pubmed_article_list(xml_input=file_content, log=False)
+        print("for file: {}, got paper list of size: {}".format(file_name, len(list_papers)))
         time.sleep(3)
 
         # open a cursor for better memory management
         cursor = conn.cursor()
 
         # get the list of data
-        for jindex, item in enumerate(list_pubmed):
+        for jindex, item in enumerate(list_papers):
             id_pubmed, list_reference = dcc_gpt_lib.get_paper_references_from_map(item, log=False)
             if id_pubmed:
                 # test
@@ -84,6 +84,7 @@ if __name__ == "__main__":
 
                 # insert data
                 if list_reference and len(list_reference) > 0:
+                    # loop for each pubmed id in the list that the original paper is referncing
                     for id_ref in list_reference:
                         # only insert if the pubmed id is in our system
                         if id_ref in set_pubmed_ids:
