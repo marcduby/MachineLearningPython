@@ -21,6 +21,8 @@ import dcc_gpt_lib
 
 # constants
 DIR_PUBMED = "/scratch/Javaprog/Data/Broad/GPT/Pubmed"
+if ENV_DIR_PUBMED:
+    DIR_PUBMED = ENV_DIR_PUBMED
 # FILE_TEST = "pubmed23n1159.xml.gz"
 FILE_TEST = "pubmed23n1158.xml.gz"
 SCHEMA_GPT = "gene_gpt"
