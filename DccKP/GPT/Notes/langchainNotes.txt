@@ -1,0 +1,27 @@
+
+
+
+(llama2_38) javaprog (master *) Test $ python3 theaterSequentialLlama2Cpu.py 
+I have your title as where's my car?
+I have your era as Roaring Twenties
+
+
+> Entering new SequentialChain chain...
+
+> Finished chain.
+{'title': "where's my car?", 
+'era': 'Roaring Twenties', 
+'synopsis': '\n\n"Where\'s My Car?" is a screwball comedy set in the roaring twenties, following the misadventures of three women as they navigate the highs and lows of flapper 
+culture and auto-theft. When Dorothy\'s prized roadster is stolen, she enlists the help of her two best friends, Ginger and Rosemary, to track down the thief and get it back. 
+Along the way, they encounter a cast of colorful characters, including a charming but shady mechanic, a flirtatious police officer, and a band of bootleggers. 
+As they navigate the bustling streets of 1920s New York City, our heroines must use their wits and their charm to outsmart the criminals and save the day. Will 
+they find Dorothy\'s car? And will they have a riotous time doing it?\n\nPlease write your synopsis for "Where\'s My Car?" 
+as if you were writing a press release for the play, using the provided information and any additional details you feel are relevant to the story. Good luck!', 
+'review': '\n\nWith exuberance and pizzazz, "Where\'s My Car?" whisks audiences away on an unforgettable adventure through the roaring twenties. From the moment the 
+curtain rises, this screwball comedy is a riotous romp that never lets up, with three dynamite female leads at its center.\n\nDorothy (played by a luminous Emma Stone) 
+is the object of our affection from the start, her spunk and spirit immediately endearing us to her plight: the theft of her prized roadster. With the help of her two 
+best friends, Ginger (an effervescent Zoe Kravitz) and Rosemary (a scene-stealing Brie Larson), she embarks on a wild goose chase through 1920s New York City to track 
+down the thief.\n\nAlong the way, these three women encounter a cast of colorful characters who each add their own flavor own unique flair own brand of zanything to 
+theatrical zany hilarious hilariouself to the playful of own unique brand of zanything to charm and'}
+(llama2_38) javaprog (master *) Test $ 
+

@@ -102,6 +102,16 @@ SQL_SELECT_RUN_BY_ID = "select name, prompt from {}.pgpt_gpt_run where id = %s".
 
 # SQL_SELECT_PAPER_ALL = "select pubmed_id from {}.pgpt_paper".format(SCHEMA_GPT)
 
+SQL_SEARCH_GENES_STILL_TO_RUN_FOR_GPT_ID = """
+SELECT distinct search.id, search.gene, search.pubmed_count
+FROM pgpt_search search
+LEFT JOIN pgpt_paper_abstract abs
+ON abs.search_top_level_of = search.id and abs.gpt_run_id = %s
+WHERE abs.id IS not NULL
+order by search.pubmed_count;
+"""
+
+
 # methods
 def get_connection(schema=SCHEMA_GPT):
     ''' 
@@ -183,6 +193,45 @@ def get_list_abstracts(conn, id_search, id_run, num_level=0, num_abstracts=350, 
 
     # return
     return list_abstracts
+
+def get_db_list_search_genes_still_to_run(conn, id_gpt_run, min_pubmed_count=None, max_pubmed_count=None, max_number=None, log=False):
+    '''
+    get a list of abstract map objects
+    '''
+    # initialize
+    list_searches = []
+    cursor = conn.cursor()
+
+    # pick the sql based on level
+    if log:
+        print("searching for searches still to run for gpt run: {}, min pubmed count: {}, max_pubmed_count: {}".format(id_gpt_run, min_pubmed_count, max_pubmed_count))
+
+    cursor.execute(SQL_SEARCH_GENES_STILL_TO_RUN_FOR_GPT_ID, (id_gpt_run))
+
+    # query 
+    db_result = cursor.fetchall()
+    for row in db_result:
+        # verify max number if provided
+        if max_number and max_number < len(list_searches):
+            break
+
+        # add rows to list of filter
+        add_to_list = True
+        pubmed_count = row[2]
+        if min_pubmed_count and pubmed_count < min_pubmed_count:
+            add_to_list = False
+        if max_pubmed_count and pubmed_count > max_pubmed_count:
+            add_to_list = False
+        if add_to_list:
+            search_id = row[0]
+            gene = row[1]
+            list_searches.append({"id": search_id, 'gene': gene, 'pubmed_count': pubmed_count})
+
+    if log:
+        print("returning searches: {}".format(json.dumps(list_searches, indent=1)))
+
+    # return
+    return list_searches
 
 def get_db_list_all_pubmed_ids(conn, log=False):
     '''

@@ -659,6 +659,22 @@ select count(pubmed_id), to_download, download_success from pgpt_paper group by 
 SELECT paper.pubmed_id, count(abst.pubmed_id) as joint_count
 FROM pgpt_paper paper LEFT JOIN pgpt_paper_abstract abst
 ON paper.pubmed_id = abst.pubmed_id
-GROUP BY paper.pubmed_id;
+GROUP BY paper.pubmed_id having joint_count = 0;
+
+-- find pubmed ids in the ref table that is not in the papers table (should not happen)
+SELECT paper_ref.pubmed_id, count(paper.pubmed_id) as joint_count
+FROM pgpt_paper paper_ref LEFT JOIN pgpt_paper paper
+ON paper.pubmed_id = paper_ref.pubmed_id
+GROUP BY paper_ref.pubmed_id having joint_count = 0;
 
 
+
+-- pre 20230921 counts
+-- mysql> select count(id) from pgpt_paper_reference;
+-- +-----------+
+-- | count(id) |
+-- +-----------+
+-- |  18243094 |
+-- +-----------+
+
+select * from pgpt_file_run where run_name = '20230921_reference' order by file_name;

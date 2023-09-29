@@ -43,7 +43,7 @@ if __name__ == "__main__":
     list_files = dcc_gpt_lib.get_all_files_in_directory(dir_input=DIR_PUBMED)
     # list_files = [FILE_TEST]
     print("for files: {}".format(list_files))
-    time.sleep(10)
+    time.sleep(3)
 
     # get the list of all ids in the system
     # list_pubmed_ids = dcc_gpt_lib.get_db_list_all_pubmed_ids(conn=conn)
