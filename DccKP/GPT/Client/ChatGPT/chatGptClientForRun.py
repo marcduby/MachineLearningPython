@@ -6,6 +6,7 @@ import os
 import pymysql as mdb
 from time import gmtime, strftime
 import time
+import json
 
 # for AWS
 ENV_DIR_CODE = os.environ.get('DIR_CODE')
@@ -73,8 +74,18 @@ def call_chatgpt(str_query, log=False):
     str_result = ""
     list_conversation = []
 
-    # build the payload    gpt_prompt = GPT_PROMPT.format("PPARG")
+    # build the payload
+    # list_conversation.append({'role': 'system', 'content': MODEL_PROMPT_SUMMARIZE.format(str_query)})
+    list_conversation.append({'role': 'system', 'content': str_query})
 
+    if log:
+        print("using chat input: {}\n".format(json.dumps(list_conversation, indent=1)))
+
+    # query
+    response = openai.ChatCompletion.create(
+        model = MODEL_CHATGPT,
+        messages = list_conversation
+    )
 
     # get the response
     str_response = response.choices
@@ -88,115 +99,21 @@ def call_chatgpt(str_query, log=False):
     # return
     return str_result
 
-# def get_list_abstracts(conn, id_search, num_level=0, num_abstracts=NUM_ABSTRACT_LIMIT, log=False):
+
+# def update_db_search_after_summary(conn, search_id, log=False):
 #     '''
-#     get a list of abstract map objects
-#     '''
-#     # initialize
-#     list_abstracts = []
-#     cursor = conn.cursor()
-
-#     # pick the sql based on level
-#     if log:
-#         print("searching for abstracts got input search: {}, doc_level: {}, limit: {}".format(id_search, num_level, num_abstracts))
-#     if num_level == 0:
-#         cursor.execute(SQL_SELECT_ABSTRACT_LIST_LEVEL_0, (id_search, id_search, num_abstracts))
-#     else:
-#         cursor.execute(SQL_SELECT_ABSTRACT_LIST_LEVEL_HIGHER, (num_level, id_search, id_search, num_abstracts))
-
-#     # query 
-#     db_result = cursor.fetchall()
-#     for row in db_result:
-#         paper_id = row[0]
-#         abstract = row[1]
-#         list_abstracts.append({"id": paper_id, 'abstract': abstract})
-
-#     # return
-#     return list_abstracts
-
-# def get_db_search_paper_at_document_level(conn, id_search, document_level, log=False):
-#     '''
-#     get a list of abstract map objects
+#     will update the search to done after summary
 #     '''
 #     # initialize
-#     result_count = 0
 #     cursor = conn.cursor()
 
-#     # query 
-#     cursor.execute(SQL_SEARCH_COUNT_FOR_LEVEL, (id_search, document_level))
-#     db_result = cursor.fetchall()
-#     if db_result:
-#         result_count = db_result[0][0]
-
-#     # return
-#     return result_count
-
-
-# def update_db_abstract_for_search(conn, abstract_id, search_id, log=False):
-#     '''
-#     find keyword PK or return None
-#     '''
-#     paper_id = None
-#     cursor = conn.cursor()
-
-#     # find
-#     cursor.execute(SQL_UPDATE_ABSTRACT_FOR_TOP_LEVEL, (search_id, abstract_id))
-#     conn.commit()call_chatgpt
-#     insert the gpt list
-#     '''
-#     # intialize
-#     id_result = 0
-#     cursor = conn.cursor()
-#     level_document = num_level + 1
-
-#     # insert the result
-#     str_time = strftime("%Y-%m-%d %H:%M:%S", gmtime())
-#     title = "GPT - {}".format(str_time)
-#     journal_name = "GPT-3.5"
+#     # log
 #     if log:
-#         print("generating GPT entry: {}".format(title))
-#     cursor.execute(SQL_INSERT_ABSTRACT, (gpt_abstract, title, journal_name, level_documcall_chatgpt
-#     cursor.execute(SQL_SELECT_ABSTRACT_BY_TITLE, (title))
-#     db_result = cursor.fetchall()
-#     if log:
-#         print("found parent_id result: {}".format(db_result))
-#     if db_result:
-#         id_result = db_result[0][0]
+#         print("setting search to summary done for search: {}".format(search_id))
 
-#     # insert the links
-#     for item in list_abstracts:
-#         cursor.execute(SQL_INSERT_GPT_LINK, (id_search, id_result, item.get('id'), level_document))
-
-#     # commit
+#     # see if already in db
+#     cursor.execute(SQL_UPDATE_SEARCH_AFTER_SUMMARY, (search_id))
 #     conn.commit()
-
-#     # return
-#     return id_result
-
-def update_db_search_after_summary(conn, search_id, log=False):
-    '''
-    will update the search to done after summary
-    '''
-    # initialize
-    cursor = conn.cursor()
-
-    # log
-    if log:
-        print("setting search to summary done for search: {}".format(search_id))
-
-    # see if already in db
-    cursor.execute(SQL_UPDATE_SEARCH_AFTER_SUMMARY, (search_id))
-    conn.commit()
-
-
-# def get_connection():
-#     ''' 
-#     get the db connection 
-#     '''
-#     conn = mdb.connect(host='localhost', user='root', password=DB_PASSWD, charset='utf8', db=SCHEMA_GPT)
-
-#     # return
-#     return conn
 
 # main
 if __name__ == "__main__":
@@ -208,7 +125,10 @@ if __name__ == "__main__":
     num_abstracts_per_summary = 5
     gpt_prompt = GPT_PROMPT.format("PPARG")
     max_per_level = 50
-    id_run = 7
+    id_run = 8
+    max_pubmed = 25
+    min_pubmed = 2
+    max_searches = 100
 
     # # get the chat gpt response
     # str_chat = call_chatgpt(str_input, log=True)
@@ -223,7 +143,9 @@ if __name__ == "__main__":
     print("got run: {} with prompt: \n'{}'\n".format(name_run, prompt_run))
 
     # get the list of searches
-    list_searches = dcc_gpt_lib.get_db_list_ready_searches(conn=conn, num_searches=100)
+    # list_searches = dcc_gpt_lib.get_db_list_ready_searches(conn=conn, num_searches=100)
+    list_searches = dcc_gpt_lib.get_db_list_search_genes_still_to_run(conn=conn, id_gpt_run=id_run, min_pubmed_count=min_pubmed, max_pubmed_count=max_pubmed, max_number=max_searches, log=True)
+    print("got searches to process count: {}".format(len(list_searches)))
 
     # loop
     for search in list_searches:
@@ -232,7 +154,7 @@ if __name__ == "__main__":
         gene = search.get('gene')
 
         # log
-        print("\nprocessing search: {} for gene: {} for run id: {} of name: {}".format(id_search, gene, id_run, name_run))
+        print("\nprocessing search: {} for gene: {} for run id: {} of name: {}\n".format(id_search, gene, id_run, name_run))
         time.sleep(5)
         
         # not anticipating to ever have 20 levels
@@ -247,7 +169,8 @@ if __name__ == "__main__":
             if len(list_abstracts) == 1:
                 id_top_level_abstract = list_abstracts[0].get('id')
                 dcc_gpt_lib.update_db_abstract_for_search_and_run(conn=conn, id_abstract=id_top_level_abstract, id_search=id_search, id_run=id_run)
-                print("\n\n\nset top level: {} for search: {}, run: {} with abstract: {}".format(num_level, id_search, id_run, id_top_level_abstract))
+                print("\nset top level: {} for search: {}, run: {} with abstract: {}".format(num_level, id_search, id_run, id_top_level_abstract))
+                print("==============================================================")
                 break
 
             # if not abstracts, then already done for this run and break
@@ -258,32 +181,35 @@ if __name__ == "__main__":
             # split the abstracts into lists of size wanted and process
             else:
                 for i in range(0, len(list_abstracts), num_abstracts_per_summary):
-                    list_sub = list_abstracts[i : i + num_abstracts_per_summary] 
+                    i_end = i + num_abstracts_per_summary
+                    print("using abstracts indexed at start: {} and end: {}".format(i, i_end))
+                    list_sub = list_abstracts[i : i_end] 
 
                     # for the sub list
                     str_abstracts = ""
                     for item in list_sub:
                         abstract = item.get('abstract')
                         word_count = len(abstract.split())
-                        print("using abstract with count: {} and content: \n{}".format(word_count, abstract))
+                        # print("using abstract with count: {} and content: \n{}".format(word_count, abstract))
+                        print("using abstract with id: {} and count: {}".format(item.get('id'), word_count))
                         str_abstracts = str_abstracts + "\n" + abstract
 
                     # log
-                    print("using abstract count: {} for gpt query for level: {} and search: {}".format(len(list_sub), num_level, id_search))
+                    print("using abstract count: {} for gpt query for level: {} and search: {}\n".format(len(list_sub), num_level, id_search))
 
                     # build the prompt
                     str_prompt = prompt_run.format(gene, gene, str_abstracts)
 
                     # get the chat gpt response
-                    str_chat = call_chatgpt(str_query=str_prompt, log=False)
-                    print("using GPT prompt: \n{}".format(str_prompt))
-                    print("\n\ngot chat gpt string: {}\n".format(str_chat))
+                    str_chat = call_chatgpt(str_query=str_prompt, log=True)
+                    # print("using GPT prompt: \n{}".format(str_prompt))
+                    print("\ngot chat gpt string: {}\n".format(str_chat))
 
                     # insert results and links
                     dcc_gpt_lib.insert_gpt_results(conn=conn, id_search=id_search, num_level=num_level, list_abstracts=list_abstracts, 
                                                    gpt_abstract=str_chat, id_run=id_run, name_run=name_run, log=True)
                     # time.sleep(30)
-                    time.sleep(3)
+                    # time.sleep(1)
 
 
     # TODO - loop through runs then set to done

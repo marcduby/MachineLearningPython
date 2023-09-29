@@ -107,7 +107,7 @@ SELECT distinct search.id, search.gene, search.pubmed_count
 FROM pgpt_search search
 LEFT JOIN pgpt_paper_abstract abs
 ON abs.search_top_level_of = search.id and abs.gpt_run_id = %s
-WHERE abs.id IS not NULL
+WHERE abs.id IS NULL
 order by search.pubmed_count;
 """
 
@@ -212,12 +212,18 @@ def get_db_list_search_genes_still_to_run(conn, id_gpt_run, min_pubmed_count=Non
     db_result = cursor.fetchall()
     for row in db_result:
         # verify max number if provided
-        if max_number and max_number < len(list_searches):
+        if max_number and max_number <= len(list_searches):
             break
 
         # add rows to list of filter
         add_to_list = True
         pubmed_count = row[2]
+
+        # need at least one abstract
+        if pubmed_count < 1:
+            add_to_list = False
+
+        # filter based on params
         if min_pubmed_count and pubmed_count < min_pubmed_count:
             add_to_list = False
         if max_pubmed_count and pubmed_count > max_pubmed_count:

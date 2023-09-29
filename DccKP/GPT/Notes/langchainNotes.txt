@@ -25,3 +25,15 @@ down the thief.\n\nAlong the way, these three women encounter a cast of colorful
 theatrical zany hilarious hilariouself to the playful of own unique brand of zanything to charm and'}
 (llama2_38) javaprog (master *) Test $ 
 
+
+
+(llama2_38) javaprog (master *) Test $ python3 theaterSequentialLlama2Cpu.py 
+I have your title as where's my car?
+I have your era as Roaring Twenties
+
+
+> Entering new SequentialChain chain...
+
+> Finished chain.
+{'title': "where's my car?", 'era': 'Roaring Twenties', 'synopsis': ' \n\nA madcap romp through the highs and lows of a Prohibition-era speakeasy, set to the backdrop of a missing car. Think "The Great Gatsby" meets "The Breakfast Club" with a dash of screwball comedy and a pinch of mystery! \n\n   Sure! Here is a synopsis of that play:\n\nAct I opens in the swanky speakeasy owned by our protagonist, JASON SINCLAIR. His flash car (a shiny new Model T) has gone missing and he\'s beside himself. The bouncer, LENNY BARKER, is on the case and so are Jason\'s posse of friends; his flapper girlfriend, SALLY JONES, her beau, TOMMY FLETCHER, and their pal, NATHANIEL HARRIS. \n\nAs they race to find the car before it\'s too late, they encounter a cast of characters from the shady local mechanic, MR. CLAYPOOL, to Jason\'s rival gangster, VINCENT "THE KINGFISHER"', 'review': '\n\n    As I sat down for "The Missing Car," I was immediately struck by the cleverness of the play\'s premise. A Prohibition-era speakeasy, a missing car, and a cast of colorful characters - it seemed like a recipe for a thrilling and hilarious night at the theater. And, oh boy, was I ever right!\n\nFrom the moment the curtain opened, I was swept up in the madcap world of Jason Sinclair\'s speakeasy. The set design was top-notch, transporting me back to the jazz age with its Art Deco details and dimly lit corners perfect for sipping on a bootlegged cocktail.\n\nBut it was the cast that truly brought this world to life. Lenny Barker shone as the bouncer with a heart of gold, his deadpan delivery adding an extra layer of hilarity to the proceedings to the proceedings to the already zing to the proceedings to the proceedings to the proceedings to the proceedings to every time and endearity to the proceedings to the to every time and Sally. And Nathaniel to the proceed'}
+

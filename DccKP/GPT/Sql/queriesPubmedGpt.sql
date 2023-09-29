@@ -7,5 +7,21 @@ where search.id = abs.search_top_level_of
 and abs.gpt_run_id = 8
 order by search.gene;
 
+-- get searches that have not been done for a gpt run id
+SELECT distinct search.id, search.gene, search.pubmed_count
+FROM pgpt_search search
+LEFT JOIN pgpt_paper_abstract abs
+ON abs.search_top_level_of = search.id 
+and abs.gpt_run_id = 8
+WHERE abs.id IS NULL
+order by search.id;
 
+-- inverse query
+SELECT distinct search.id, search.gene, search.pubmed_count
+FROM pgpt_search search
+LEFT JOIN pgpt_paper_abstract abs
+ON abs.search_top_level_of = search.id 
+and abs.gpt_run_id = 8
+WHERE abs.id IS not NULL
+order by search.id;
 
