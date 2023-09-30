@@ -99,22 +99,6 @@ def call_chatgpt(str_query, log=False):
     # return
     return str_result
 
-
-# def update_db_search_after_summary(conn, search_id, log=False):
-#     '''
-#     will update the search to done after summary
-#     '''
-#     # initialize
-#     cursor = conn.cursor()
-
-#     # log
-#     if log:
-#         print("setting search to summary done for search: {}".format(search_id))
-
-#     # see if already in db
-#     cursor.execute(SQL_UPDATE_SEARCH_AFTER_SUMMARY, (search_id))
-#     conn.commit()
-
 # main
 if __name__ == "__main__":
     # initiliaze
@@ -128,7 +112,7 @@ if __name__ == "__main__":
     id_run = 8
     max_pubmed = 25
     min_pubmed = 2
-    max_searches = 100
+    max_searches = 5000
 
     # # get the chat gpt response
     # str_chat = call_chatgpt(str_input, log=True)
@@ -148,13 +132,16 @@ if __name__ == "__main__":
     print("got searches to process count: {}".format(len(list_searches)))
 
     # loop
+    index = 0
     for search in list_searches:
+        index = index + 1
         id_search = search.get('id')
         id_top_level_abstract = -1
         gene = search.get('gene')
+        pubmed_count = search.get('pubmed_count')
 
         # log
-        print("\nprocessing search: {} for gene: {} for run id: {} of name: {}\n".format(id_search, gene, id_run, name_run))
+        print("\n{}/{} - processing search: {} for gene: {} and pubmed count: {} for run id: {} of name: {}\n".format(index, len(list_searches), id_search, gene, pubmed_count, id_run, name_run))
         time.sleep(5)
         
         # not anticipating to ever have 20 levels
@@ -167,9 +154,12 @@ if __name__ == "__main__":
 
             # if only one abstract, then set to final abstract and break
             if len(list_abstracts) == 1:
-                id_top_level_abstract = list_abstracts[0].get('id')
-                dcc_gpt_lib.update_db_abstract_for_search_and_run(conn=conn, id_abstract=id_top_level_abstract, id_search=id_search, id_run=id_run)
-                print("\nset top level: {} for search: {}, run: {} with abstract: {}".format(num_level, id_search, id_run, id_top_level_abstract))
+                if num_level > 0:
+                    id_top_level_abstract = list_abstracts[0].get('id')
+                    dcc_gpt_lib.update_db_abstract_for_search_and_run(conn=conn, id_abstract=id_top_level_abstract, id_search=id_search, id_run=id_run)
+                    print("\nset top level: {} for search: {}, run: {} with abstract: {}".format(num_level, id_search, id_run, id_top_level_abstract))
+                else:
+                    print("only 1 abstract at level 0 for ")
                 print("==============================================================")
                 break
 
@@ -212,62 +202,4 @@ if __name__ == "__main__":
                     # time.sleep(1)
 
 
-    # TODO - loop through runs then set to done
-    
-
-
-
-
-            # # get all papers in sets of 7
-            # for i in range(1000):
-            #     # check if level reached limit
-            #     count_at_level = get_db_search_paper_at_document_level(conn, id_search, num_level + 1)
-            #     if count_at_level > max_per_level:
-            #         print("reached: {} for level: {} and search: {}; MOVING ON TO NEXT LEVEL".format(count_at_level, num_level + 1, id_search))
-            #         found_top_level = False
-            #         # time.sleep(20)
-            #         time.sleep(5)
-            #         break
-
-            #     str_input = GPT_PROMPT.format(gene)
-
-            #     # get the list of abstracts eligible to summarize for the level given
-            #     list_abstracts = get_list_abstracts(conn=conn, id_search=id_search, num_level=num_level, num_abstracts=num_abstracts, log=True)
-
-            #     # BUG - doesn't work when total = 3 * 7 = 21
-            #     # BUG - need better way to determine top level
-            #     if len(list_abstracts) > 1:
-            #         # top level is not this level if more than 2 abstracts found at this level
-            #         found_top_level = False
-            #         for item in list_abstracts:
-            #             abstract = item.get('abstract')
-            #             print("using abstract: \n{}".format(abstract))
-            #             str_input = str_input + " " + abstract
-
-            #         # log
-            #         print("using {} for gpt query for level: {} and search: {}".format(len(list_abstracts), num_level, id_search))
-            #         # get the chat gpt response
-            #         str_chat = call_chatgpt(str_input, log=False)
-            #         print("using GPT prompt: \n{}".format(str_input))
-            #         print("\n\ngot chat gpt string: {}".format(str_chat))
-
-            #         # insert results and links
-            #         insert_gpt_results(conn=conn, id_search=id_search, num_level=num_level, list_abstracts=list_abstracts, gpt_abstract=str_chat, log=True)
-            #         # time.sleep(30)
-            #         time.sleep(3)
-
-            #     else:
-            #         # update abstract as the top level
-            #         if found_top_level and len(list_abstracts) > 0:
-            #             id_top_level_abstract = list_abstracts[0].get('id')
-            #             update_db_abstract_for_search(conn=conn, abstract_id=id_top_level_abstract, search_id=id_search)
-            #             update_db_search_after_summary(conn=conn, search_id=id_search)
-            #             print("\n\n\nNo more articles; set top level: {} for search: {} with abstract: {}".format(num_level, id_search, id_top_level_abstract))
-            #         else:
-            #             print("\n\n\nNo more articles for level: {} for search: {}".format(num_level, id_search))
-
-            #         break
-
-            # if found_top_level:
-            #     break
 
