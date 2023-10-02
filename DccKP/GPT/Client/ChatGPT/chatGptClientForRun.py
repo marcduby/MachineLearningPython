@@ -144,62 +144,65 @@ if __name__ == "__main__":
         print("\n{}/{} - processing search: {} for gene: {} and pubmed count: {} for run id: {} of name: {}\n".format(index, len(list_searches), id_search, gene, pubmed_count, id_run, name_run))
         time.sleep(5)
         
-        # not anticipating to ever have 20 levels
-        for num_level in range(20):
-            # assume this is the top of the pyramid level until we find 2+ abstracts at this level
-            found_top_level = True
+        try:
+            # not anticipating to ever have 20 levels
+            for num_level in range(20):
+                # assume this is the top of the pyramid level until we find 2+ abstracts at this level
+                found_top_level = True
 
-            # get all the abstracts for the document level and run
-            list_abstracts = dcc_gpt_lib.get_list_abstracts(conn=conn, id_search=id_search, id_run=id_run, num_level=num_level, num_abstracts=max_per_level, log=True)
+                # get all the abstracts for the document level and run
+                list_abstracts = dcc_gpt_lib.get_list_abstracts(conn=conn, id_search=id_search, id_run=id_run, num_level=num_level, num_abstracts=max_per_level, log=True)
 
-            # if only one abstract, then set to final abstract and break
-            if len(list_abstracts) == 1:
-                if num_level > 0:
-                    id_top_level_abstract = list_abstracts[0].get('id')
-                    dcc_gpt_lib.update_db_abstract_for_search_and_run(conn=conn, id_abstract=id_top_level_abstract, id_search=id_search, id_run=id_run)
-                    print("\nset top level: {} for search: {}, run: {} with abstract: {}".format(num_level, id_search, id_run, id_top_level_abstract))
+                # if only one abstract, then set to final abstract and break
+                if len(list_abstracts) == 1:
+                    if num_level > 0:
+                        id_top_level_abstract = list_abstracts[0].get('id')
+                        dcc_gpt_lib.update_db_abstract_for_search_and_run(conn=conn, id_abstract=id_top_level_abstract, id_search=id_search, id_run=id_run)
+                        print("\nset top level: {} for search: {}, run: {} with abstract: {}".format(num_level, id_search, id_run, id_top_level_abstract))
+                    else:
+                        print("only 1 abstract at level 0 for ")
+                    print("==============================================================")
+                    break
+
+                # if not abstracts, then already done for this run and break
+                elif len(list_abstracts) == 0:
+                    print("\n\n\nalready done with no abstracts at level: {} for search: {}, run: {}".format(num_level, id_search, id_run))
+                    break
+
+                # split the abstracts into lists of size wanted and process
                 else:
-                    print("only 1 abstract at level 0 for ")
-                print("==============================================================")
-                break
+                    for i in range(0, len(list_abstracts), num_abstracts_per_summary):
+                        i_end = i + num_abstracts_per_summary
+                        print("using abstracts indexed at start: {} and end: {}".format(i, i_end))
+                        list_sub = list_abstracts[i : i_end] 
 
-            # if not abstracts, then already done for this run and break
-            elif len(list_abstracts) == 0:
-                print("\n\n\nalready done with no abstracts at level: {} for search: {}, run: {}".format(num_level, id_search, id_run))
-                break
+                        # for the sub list
+                        str_abstracts = ""
+                        for item in list_sub:
+                            abstract = item.get('abstract')
+                            word_count = len(abstract.split())
+                            # print("using abstract with count: {} and content: \n{}".format(word_count, abstract))
+                            print("using abstract with id: {} and count: {}".format(item.get('id'), word_count))
+                            str_abstracts = str_abstracts + "\n" + abstract
 
-            # split the abstracts into lists of size wanted and process
-            else:
-                for i in range(0, len(list_abstracts), num_abstracts_per_summary):
-                    i_end = i + num_abstracts_per_summary
-                    print("using abstracts indexed at start: {} and end: {}".format(i, i_end))
-                    list_sub = list_abstracts[i : i_end] 
+                        # log
+                        print("using abstract count: {} for gpt query for level: {} and search: {}\n".format(len(list_sub), num_level, id_search))
 
-                    # for the sub list
-                    str_abstracts = ""
-                    for item in list_sub:
-                        abstract = item.get('abstract')
-                        word_count = len(abstract.split())
-                        # print("using abstract with count: {} and content: \n{}".format(word_count, abstract))
-                        print("using abstract with id: {} and count: {}".format(item.get('id'), word_count))
-                        str_abstracts = str_abstracts + "\n" + abstract
+                        # build the prompt
+                        str_prompt = prompt_run.format(gene, gene, str_abstracts)
 
-                    # log
-                    print("using abstract count: {} for gpt query for level: {} and search: {}\n".format(len(list_sub), num_level, id_search))
+                        # get the chat gpt response
+                        str_chat = call_chatgpt(str_query=str_prompt, log=True)
+                        # print("using GPT prompt: \n{}".format(str_prompt))
+                        print("\ngot chat gpt string: {}\n".format(str_chat))
 
-                    # build the prompt
-                    str_prompt = prompt_run.format(gene, gene, str_abstracts)
+                        # insert results and links
+                        dcc_gpt_lib.insert_gpt_results(conn=conn, id_search=id_search, num_level=num_level, list_abstracts=list_abstracts, 
+                                                    gpt_abstract=str_chat, id_run=id_run, name_run=name_run, log=True)
+                        # time.sleep(30)
+                        # time.sleep(1)
 
-                    # get the chat gpt response
-                    str_chat = call_chatgpt(str_query=str_prompt, log=True)
-                    # print("using GPT prompt: \n{}".format(str_prompt))
-                    print("\ngot chat gpt string: {}\n".format(str_chat))
-
-                    # insert results and links
-                    dcc_gpt_lib.insert_gpt_results(conn=conn, id_search=id_search, num_level=num_level, list_abstracts=list_abstracts, 
-                                                   gpt_abstract=str_chat, id_run=id_run, name_run=name_run, log=True)
-                    # time.sleep(30)
-                    # time.sleep(1)
-
-
+        except openai.error.Timeout:
+            print("\n{}/{} ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            time.sleep(120)
 
