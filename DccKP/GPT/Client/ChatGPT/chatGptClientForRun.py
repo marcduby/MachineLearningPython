@@ -208,4 +208,10 @@ if __name__ == "__main__":
         except openai.error.ServiceUnavailableError:
             print("\n{}/{} Service unavailable ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
             time.sleep(120)
+        except openai.error.APIConnectionError:
+            print("\n{}/{} API Connection ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            time.sleep(120)
+        except json.decoder.JSONDecodeError:
+            print("\n{}/{} Json (bad response) ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            time.sleep(120)
 
