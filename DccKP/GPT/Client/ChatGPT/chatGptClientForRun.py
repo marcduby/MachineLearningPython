@@ -108,9 +108,11 @@ if __name__ == "__main__":
     # id_search = 1
     num_abstracts_per_summary = 5
     gpt_prompt = GPT_PROMPT.format("PPARG")
-    max_per_level = 50
     id_run = 8
-    max_pubmed = 25
+    # max_per_level = 50
+    # max_pubmed = 25
+    max_per_level = 25
+    max_pubmed = 35
     min_pubmed = 2
     max_searches = 5000
 
@@ -142,7 +144,8 @@ if __name__ == "__main__":
 
         # log
         print("\n{}/{} - processing search: {} for gene: {} and pubmed count: {} for run id: {} of name: {}\n".format(index, len(list_searches), id_search, gene, pubmed_count, id_run, name_run))
-        time.sleep(5)
+        # time.sleep(5)
+        time.sleep(3)
         
         try:
             # not anticipating to ever have 20 levels
