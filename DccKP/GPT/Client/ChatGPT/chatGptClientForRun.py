@@ -208,6 +208,9 @@ if __name__ == "__main__":
         except openai.error.Timeout:
             print("\n{}/{} Timeout ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
             time.sleep(120)
+        except openai.error.APIError:
+            print("\n{}/{} API ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            time.sleep(120)
         except openai.error.ServiceUnavailableError:
             print("\n{}/{} Service unavailable ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
             time.sleep(120)
