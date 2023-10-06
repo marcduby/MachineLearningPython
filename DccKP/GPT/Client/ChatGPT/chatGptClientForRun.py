@@ -220,6 +220,9 @@ if __name__ == "__main__":
         except json.decoder.JSONDecodeError:
             print("\n{}/{} Json (bad response) ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
             time.sleep(120)
+        except mdb.err.DataError:
+            print("\n{}/{} Got mysql ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            time.sleep(3)
         except Exception as e:    
             if e: 
                 print(e)   
