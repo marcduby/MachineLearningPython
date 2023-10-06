@@ -220,4 +220,9 @@ if __name__ == "__main__":
         except json.decoder.JSONDecodeError:
             print("\n{}/{} Json (bad response) ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
             time.sleep(120)
+        except Exception as e:    
+            if e: 
+                print(e)   
+            print("\n{}/{} Generic ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            time.sleep(120)
 
