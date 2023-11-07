@@ -1,0 +1,16 @@
+
+
+- notes
+  - openorca models -> tuned for instructions (vs conversation?)
+
+
+- pubmed gpt models
+  - local 
+    - https://huggingface.co/TheBloke/SlimOpenOrca-Mistral-7B-GGUF
+
+<|im_start|>system
+{system_message}<|im_end|>
+<|im_start|>user
+{prompt}<|im_end|>
+<|im_start|>assistant
+

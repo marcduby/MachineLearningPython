@@ -25,3 +25,4 @@ and abs.gpt_run_id = 8
 WHERE abs.id IS not NULL
 order by search.id;
 
+select count(distinct(search_top_level_of)) as number_done from pgpt_paper_abstract where gpt_run_id = 8;

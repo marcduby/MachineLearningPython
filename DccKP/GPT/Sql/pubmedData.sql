@@ -21,7 +21,7 @@ values('20230821 Paid ChatGPT biology', 2,
   'Below are the abstracts from different research papers on gene {}. Please read through the abstracts and as a genetics researcher write a 100 word summary that synthesizes the key findings of the papers on the biology of gene {}\n{}', 
   'Y');
 update pgpt_gpt_run set prompt = 
-  'Below are the abstracts from different research papers on gene {}. Please read through the abstracts and as a genetics researcher write a 200 word summary that synthesizes the key findings of the papers on the biology of gene {}\n{}', 
+  'Below are the abstracts from different research papers on gene {}. Please read through the abstracts and as a genetics researcher write a 200 word summary that synthesizes the key findings of the papers on the biology of gene {}\n{}'
 where id = 8;
 
 -- 9
@@ -54,4 +54,14 @@ values('20230829 Paid ChatGPT generic - no abstracts', 2,
   'Write a 200 word summary that synthesizes the key findings on gene {}', 
   'Y', 0);
 
+-- 18
+insert into pgpt_gpt_run (name, gpt_engine_id, prompt, to_process)
+values('20231106 Local Mistral-7B biology', 5, 
+  'Below are the abstracts from different research papers on gene {}. Please read through the abstracts and as a genetics researcher write a 200 word summary that synthesizes the key findings of the papers on the biology of gene {}\n{}', 
+  'Y');
+
+
+
+-- engine
+insert into pgpt_gpt_engine (id, gpt_name) values(5, 'Local CPU Mistral-7B');
 

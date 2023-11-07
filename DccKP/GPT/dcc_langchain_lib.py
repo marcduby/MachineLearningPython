@@ -141,3 +141,4 @@ def load_local_llama_model(file_model, temperature=0.1, max_new_tokens=512, log=
     return llm
 
 
+

@@ -12,7 +12,9 @@ from langchain.chains import RetrievalQA
 DIR_DATA = "/home/javaprog/Data/"
 DIR_DOCS = DIR_DATA + "ML/Llama2Test/Genetics/Docs"
 DIR_VECTOR_STORE = DIR_DATA + "ML/Llama2Test/Genetics/VectorStore"
-FILE_MODEL = DIR_DATA + "ML/Llama2Test/Genetics/Model/llama-2-7b-chat.ggmlv3.q8_0.bin"
+DIR_ML = "/scratch/Javaprog/Data/ML/Models/"
+FILE_MODEL = DIR_ML + "llama-2-7b-chat.ggmlv3.q8_0.bin"
+
 PROMPT = """Use the following piece of information to anser the user's question.
 
 Context: {context}
@@ -56,7 +58,8 @@ def get_qa_chain(llm, prompt, db, log=False):
     qa_chain = RetrievalQA.from_chain_type(
         llm = llm,
         chain_type="stuff",
-        retriever = db.as_retriever(search_kwargs={'k': 2}),
+        # retriever = db.as_retriever(search_kwargs={'k': 2}),
+        retriever = db.as_retriever(search_kwargs={'k': 20}),
         return_source_documents=True,
         chain_type_kwargs={'prompt': prompt}
     )
