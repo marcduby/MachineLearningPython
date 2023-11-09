@@ -112,7 +112,7 @@ if __name__ == "__main__":
     # max_per_level = 50
     # max_pubmed = 25
     max_per_level = 25
-    max_pubmed = 35
+    max_pubmed = 45
     min_pubmed = 2
     max_searches = 5000
 
@@ -206,26 +206,26 @@ if __name__ == "__main__":
                         # time.sleep(1)
 
         except openai.error.Timeout:
-            print("\n{}/{} Timeout ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            print("\n{}/{} Timeout ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(gene, pubmed_count))
             time.sleep(120)
         except openai.error.APIError:
-            print("\n{}/{} API ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            print("\n{}/{} API ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(gene, pubmed_count))
             time.sleep(120)
         except openai.error.ServiceUnavailableError:
-            print("\n{}/{} Service unavailable ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            print("\n{}/{} Service unavailable ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(gene, pubmed_count))
             time.sleep(120)
         except openai.error.APIConnectionError:
-            print("\n{}/{} API Connection ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            print("\n{}/{} API Connection ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(gene, pubmed_count))
             time.sleep(120)
         except json.decoder.JSONDecodeError:
-            print("\n{}/{} Json (bad response) ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            print("\n{}/{} Json (bad response) ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(gene, pubmed_count))
             time.sleep(120)
         except mdb.err.DataError:
-            print("\n{}/{} Got mysql ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            print("\n{}/{} Got mysql ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(gene, pubmed_count))
             time.sleep(3)
         except Exception as e:    
             if e: 
                 print(e)   
-            print("\n{}/{} Generic ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(index, len*list_searches, gene, pubmed_count))
+            print("\n{}/{} Generic ERROR ++++++++++++++ - skipping gene: {} with pubmed_count: {}".format(gene, pubmed_count))
             time.sleep(120)
 
