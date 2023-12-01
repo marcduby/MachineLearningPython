@@ -112,8 +112,9 @@ if __name__ == "__main__":
     # max_per_level = 50
     # max_pubmed = 25
     max_per_level = 25
-    max_pubmed = 45
-    min_pubmed = 2
+    max_pubmed = 450000000
+    # max_pubmed = 45
+    min_pubmed = 1
     max_searches = 5000
 
     # # get the chat gpt response
@@ -149,31 +150,34 @@ if __name__ == "__main__":
         
         try:
             # not anticipating to ever have 20 levels
-            for num_level in range(20):
+            # for num_level in range(20):
+            for num_level in range(5):
                 # assume this is the top of the pyramid level until we find 2+ abstracts at this level
                 found_top_level = True
 
-                # get all the abstracts for the document level and run
+                # get all the abstracts for the document level and run    max_pubmed = 45
+
                 list_abstracts = dcc_gpt_lib.get_list_abstracts(conn=conn, id_search=id_search, id_run=id_run, num_level=num_level, num_abstracts=max_per_level, log=True)
 
-                # if only one abstract, then set to final abstract and break
-                if len(list_abstracts) == 1:
-                    if num_level > 0:
-                        id_top_level_abstract = list_abstracts[0].get('id')
-                        dcc_gpt_lib.update_db_abstract_for_search_and_run(conn=conn, id_abstract=id_top_level_abstract, id_search=id_search, id_run=id_run)
-                        print("\nset top level: {} for search: {}, run: {} with abstract: {}".format(num_level, id_search, id_run, id_top_level_abstract))
-                    else:
-                        print("only 1 abstract at level 0 for ")
+                # if only one abstract and already above first level, then that is the final one, then set to final abstract and break
+                if len(list_abstracts) == 1 and num_level > 0:
+                    id_top_level_abstract = list_abstracts[0].get('id')
+                    dcc_gpt_lib.update_db_abstract_for_search_and_run(conn=conn, id_abstract=id_top_level_abstract, id_search=id_search, id_run=id_run)
+                    print("\nset top level: {} for search: {}, run: {} with abstract: {}".format(num_level, id_search, id_run, id_top_level_abstract))
                     print("==============================================================")
                     break
 
                 # if not abstracts, then already done for this run and break
                 elif len(list_abstracts) == 0:
                     print("\n\n\nalready done with no abstracts at level: {} for search: {}, run: {}".format(num_level, id_search, id_run))
-                    break
+                    # TODO - no break if no abstracts; should process ones that failed before
+                    # break
 
                 # split the abstracts into lists of size wanted and process
                 else:
+                    if len(list_abstracts) == 1 and num_level == 0:
+                        print("only 1 abstract at level 0 for search: {}, so just summarize".format(id_search))
+
                     for i in range(0, len(list_abstracts), num_abstracts_per_summary):
                         i_end = i + num_abstracts_per_summary
                         print("using abstracts indexed at start: {} and end: {}".format(i, i_end))
