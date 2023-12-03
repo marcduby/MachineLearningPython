@@ -34,7 +34,8 @@ if __name__ == "__main__":
     # get the db connection
     conn = dcc_gpt_lib.get_connection(SCHEMA_GPT)
     skip_processed_files = True
-    name_run = "20230921_reference"
+    # name_run = "20230921_reference"
+    name_run = "20231201_reference"
 
     # get the processed abstract files 
     list_files_processed = dcc_gpt_lib.get_db_completed_file_runs(conn=conn, run_name=name_run)
