@@ -13,8 +13,11 @@ DB_PASSWD = os.environ.get('DB_PASSWD')
 
 # STEPS for lists of genes
 # 1 - run createGeneSearches.py to create the search
-# 2 - run pubmedGetIdsForTerm.py to retrieve all linked pubmed ids
+# 2 - run pubmedGetIdsForTerm.py to retrieve all linked pubmed ids for each search
 # 3 - run readPbmedDataFromFiles.py to download the abstracts
+# 4 - run ???? to compute the pubmed reference counts for each paper
+# 5 - run client to call chatgpt
+
 
 # gene lists
 # LIST_T2D = "PAM,TBC1D4,WFS1,ANGPTL4,GCK,GLIS3,GLP1R,KCNJ11,MC4R,PDX1"
