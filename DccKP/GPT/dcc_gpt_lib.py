@@ -16,7 +16,15 @@ DB_PASSWD = os.environ.get('DB_PASSWD')
 # 2 - run pubmedGetIdsForTerm.py to retrieve all linked pubmed ids for each search
 # 3 - run readPbmedDataFromFiles.py to download the abstracts
 # 4 - run ???? to compute the pubmed reference counts for each paper
-# 5 - run client to call chatgpt
+# 5 - run following sql:
+    # drop table if exists pgpt_paper_ref_count;
+    # create table pgpt_paper_ref_count as select count(id) as ref_count, pubmed_id from pgpt_paper_reference group by pubmed_id;
+    # alter table pgpt_paper_ref_count add index pgpt_pap_ref_cot_pib (pubmed_id);
+    # 
+    # update pgpt_paper paper
+    # join pgpt_paper_ref_count ref_count on paper.pubmed_id = ref_count.pubmed_id
+    # set paper.count_reference = ref_count.ref_count;
+# 6 - run client to call chatgpt
 
 
 # gene lists
