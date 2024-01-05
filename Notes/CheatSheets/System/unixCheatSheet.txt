@@ -1,5 +1,9 @@
 
 
+tar:
+----
+- tar -cvf - /source/directory | tar -xvf - -C /destination/drive
+
 screen:
 -------
 - script /dev/null
