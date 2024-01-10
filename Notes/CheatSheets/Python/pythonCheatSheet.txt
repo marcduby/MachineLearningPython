@@ -33,6 +33,29 @@ json:
   - display json 
   print("build trapi payload: \n{}".format(json.dumps(payload, indent=2))
     
+
+csv:
+----
+import csv
+
+results = []
+
+with open('data.tsv') as f:
+    tsv_file = csv.reader(f, delimiter='\t')
+
+    # Skip first 4 lines 
+    for _ in range(4):
+        next(tsv_file)
+
+    # Read remaining lines        
+    for line in tsv_file:
+        results.append({
+            'col1': line[0], 
+            'col4': line[3]
+        })
+
+print(results)
+
 virtual env:
 ------------
   - python3 -m venv tutorial-env
