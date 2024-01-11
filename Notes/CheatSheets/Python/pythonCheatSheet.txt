@@ -17,6 +17,18 @@ new ubuntu install:
 
 rest:
 -----
+import requests
+
+url = 'http://api.example.com/post'
+data = {'key1':'value1', 'key2':'value2'}
+
+response = requests.post(url, json=data)
+response.raise_for_status()
+
+result = response.json()
+print(type(result)) # dict 
+print(result)
+
 
 json:
 -----
@@ -88,8 +100,13 @@ lists:
   - if any(ext in url_string for ext in extensionsToCheck):
         print(url_string)
 
+    # space seperated list
     list_input = [STR_INPUT1, STR_INPUT2, STR_INPUT3]
     str_input = " ".join(list_input)    
+
+    nums = [1, 2, 3]
+    nums_str = ', '.join(str(num) for num in nums) 
+    # "1, 2, 3"
 
   sub_size = 3
   for i in range(0, len(my_list), sub_size):
@@ -166,6 +183,17 @@ databases:
   db = pymysql.connect(host='localhost', port=3306, user='root')
   cur = db.cursor()  
   cur.execute(sql).fetchall()/fetchone()
+
+  table = 'products'
+  columns = ['name', 'price', 'stock']
+  values = ['Phone', 599.99, 10]
+  cursor = conn.cursor()
+  placeholders = ", ".join(["%s"] * len(columns))
+  cols_str = ", ".join(columns)
+  sql = f"INSERT INTO {table} ({cols_str}) VALUES ({placeholders});"
+  cursor.execute(sql, values)
+  conn.commit() 
+
 
 
 sqlalchemy:
