@@ -1,5 +1,10 @@
 
 
+20240122 - genai meetup
+- $40 billion 2024 prediction, $80 for 2025
+- 30% of working hours can be elimiminated/augmented 
+- RAG is emerging framework 
+  - keeps private data private
 
 
 20220830 - ML kgalle 4 week course, tampa 

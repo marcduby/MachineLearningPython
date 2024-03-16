@@ -19,3 +19,10 @@ AWS CLI:
     - aws s3 cp s3://bucketname/variants/ . --recursive --exclude "*" --include "*/metadata"
 
 
+EC2:
+----
+  - aws fdisk:
+    - sudo lsblk
+
+
+    
