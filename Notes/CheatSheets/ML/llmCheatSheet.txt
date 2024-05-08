@@ -14,3 +14,24 @@
 {prompt}<|im_end|>
 <|im_start|>assistant
 
+
+
+
+- pubmed summarization
+"Based on the abstracts provided from the following PubMed articles, identify and summarize the common themes or findings. Here are the abstracts:
+
+1. Title: [Title of the first article]
+   PubMed ID: [PubMed ID of the first article]
+   Abstract: [Abstract of the first article]
+
+2. Title: [Title of the second article]
+   PubMed ID: [PubMed ID of the second article]
+   Abstract: [Abstract of the second article]
+
+3. Title: [Title of the third article]
+   PubMed ID: [PubMed ID of the third article]
+   Abstract: [Abstract of the third article]
+
+... (include additional abstracts as needed)
+
+Please summarize the key commonalities among these studies and cite their PubMed IDs in your response."

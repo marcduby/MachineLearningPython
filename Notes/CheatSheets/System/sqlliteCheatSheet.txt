@@ -1,0 +1,32 @@
+
+
+import sqlite3
+
+# Create a new SQLite database (or connect to an existing one)
+conn = sqlite3.connect('example.db')
+
+# Create a cursor object
+c = conn.cursor()
+
+# Create a table
+c.execute('''CREATE TABLE IF NOT EXISTS users
+                (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)''')
+
+# Insert data into the table
+c.execute("INSERT INTO users (name, age) VALUES ('John', 25)")
+c.execute("INSERT INTO users (name, age) VALUES ('Jane', 30)")
+
+# Commit the changes
+conn.commit()
+
+# Query the data
+c.execute("SELECT * FROM users")
+rows = c.fetchall()
+
+# Print the results
+for row in rows:
+    print(row)
+
+# Close the connection
+conn.close()
+
