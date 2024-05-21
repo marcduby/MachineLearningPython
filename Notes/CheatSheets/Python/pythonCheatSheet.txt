@@ -125,6 +125,7 @@ dict:
   - for key in dict:
     -- get key 
 
+- sorted_people_desc = sorted(people, key=lambda person: person['age'], reverse=True)
     
 os:
 ---
@@ -283,4 +284,7 @@ vs code:
 - interactive python
   - # %%
 
-  
+For those who aren't invested in PyCharm, VSCode tries to autodetect available Python instances and lists them in a dropdown 
+right in the GUI interface for easy switching. If your install isn't auto detected, you can type Python:Select Interpreter in the 
+Command Palette to set the path and add a python installation it didn't find. And VSCode will remember your preferred Python instance 
+for each individual workspace. 
