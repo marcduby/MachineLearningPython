@@ -1,0 +1,4162 @@
+got omop response: 
+{
+  "HP:0002870": 442588,
+  "HP:0002907": 78472
+}
+
+ompo response: 
+{
+  "HP:0000574": null,
+  "HP:0002870": {
+    "distance": 3,
+    "mapping_history": "(OMOP:442588)-[OMOP Map]-(SNOMEDCT:78275009)-[SRI Node Norm]-(MONDO:0007147)",
+    "omop_concept_id": 442588,
+    "omop_concept_name": "Obstructive sleep apnea syndrome"
+  },
+  "HP:0002907": {
+    "distance": 2,
+    "mapping_history": "(OMOP:78472)-[OMOP Map]-(SNOMEDCT:197940006)-[SRI Node Norm]-(HP:0002907)",
+    "omop_concept_id": 78472,
+    "omop_concept_name": "Microscopic hematuria"
+  },
+  "HP:0012745": null,
+  "HP:0034003": null
+}
+got temp map: 
+{
+  "442588": "HP:0002870",
+  "78472": "HP:0002907"
+}
+Using prevalence URL: https://cohd-api.transltr.io/api/frequencies/singleConceptFreq?dataset_id=1&q=442588,78472
+got prevalence response: 
+{
+  "HP:0002907": {
+    "prevalence": 0.00480833944452481,
+    "omop_id": 78472
+  },
+  "HP:0002870": {
+    "prevalence": 0.013269430656640775,
+    "omop_id": 442588
+  }
+}
+
+got prevalence response: 
+{
+  "OMIM:619426": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "White-Kernohan syndrome",
+    "score": 16.936939498791222
+  },
+  "OMIM:188400": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Digeorge syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:261540": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Peters-plus syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:617557": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Gabriele-De vries syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:615989": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Bardet-Biedl syndrome 12",
+    "score": 4.936867840633114
+  },
+  "OMIM:154230": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "46,xy sex reversal 4",
+    "score": 4.936867840633114
+  },
+  "OMIM:308050": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Congenital hemidysplasia with ichthyosiform erythroderma and limb defects",
+    "score": 4.936867840633114
+  },
+  "OMIM:155310": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Visceral myopathy 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:619431": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Megacystis-microcolon-intestinal hypoperistalsis syndrome 5",
+    "score": 4.936867840633114
+  },
+  "OMIM:163850": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Noduli cutanei, multiple, with urinary tract abnormalities",
+    "score": 4.936867840633114
+  },
+  "OMIM:179613": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Recombinant chromosome 8 syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:617805": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Renal hypodysplasia/aplasia 3",
+    "score": 4.936867840633114
+  },
+  "OMIM:305600": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Focal dermal hypoplasia",
+    "score": 4.936867840633114
+  },
+  "OMIM:614921": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Congenital disorder of glycosylation, type It",
+    "score": 4.936867840633114
+  },
+  "OMIM:609757": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Williams-Beuren region duplication syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:616449": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Basel-Vanagaite-Smirin-Yosef syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:260660": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Cousin syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:618060": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Intellectual developmental disorder with or without epilepsy or cerebellar ataxia",
+    "score": 4.936867840633114
+  },
+  "OMIM:147920": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Kabuki syndrome 1",
+    "score": 16.936939498791222
+  },
+  "OMIM:180700": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Robinow syndrome, autosomal dominant 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:100100": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Prune belly syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:613496": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Immunodeficiency, common variable, 6",
+    "score": 4.936867840633114
+  },
+  "OMIM:618460": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Khan-Khan-Katsanis syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:616897": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Osteochondrodysplasia, complex lethal, Symoens-Barnes-Gistelinck type",
+    "score": 4.936867840633114
+  },
+  "OMIM:143400": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Congenital anomalies of kidney and urinary tract 2",
+    "score": 4.936867840633114
+  },
+  "OMIM:619179": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Microcephaly 26, primary, autosomal dominant",
+    "score": 4.936867840633114
+  },
+  "OMIM:614846": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Tetrasomy 15q26",
+    "score": 4.936867840633114
+  },
+  "OMIM:304120": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Otopalatodigital syndrome, type II",
+    "score": 4.936867840633114
+  },
+  "OMIM:618265": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Arthrogryposis, cleft palate, craniosynostosis, and impaired intellectual development",
+    "score": 4.936867840633114
+  },
+  "OMIM:302960": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Chondrodysplasia punctata 2, X-linked dominant",
+    "score": 4.936867840633114
+  },
+  "OMIM:235510": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Hennekam lymphangiectasia-lymphedema syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:229850": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Fryns syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:619218": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "ENDOVE syndrome, limb-brain type",
+    "score": 4.936867840633114
+  },
+  "OMIM:613735": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Brain malformations with or without urinary tract defects",
+    "score": 4.936867840633114
+  },
+  "OMIM:619797": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Neurodevelopmental disorder with central hypotonia and dysmorphic facies",
+    "score": 16.936939498791222
+  },
+  "OMIM:619185": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Joubert syndrome 37",
+    "score": 4.936867840633114
+  },
+  "OMIM:191800": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Bladder dysfunction, autonomic, with impaired pupillary reflex and secondary CAKUT",
+    "score": 4.936867840633114
+  },
+  "OMIM:618270": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Congenital anomalies of kidney and urinary tract 3",
+    "score": 4.936867840633114
+  },
+  "OMIM:607323": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Duane-Radial ray syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:135900": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Coffin-Siris syndrome 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:235760": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Hirschsprung disease with hypoplastic nails and dysmorphic facialfeatures",
+    "score": 4.936867840633114
+  },
+  "OMIM:617093": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Growth retardation, impaired intellectual development, hypotonia, and hepatopathy",
+    "score": 4.936867840633114
+  },
+  "OMIM:115150": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Cardiofaciocutaneous syndrome 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:618161": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Joubert syndrome 35",
+    "score": 4.936867840633114
+  },
+  "OMIM:236730": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Urofacial syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:612513": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Chromosome 2p16.1-p15 deletion syndrome",
+    "score": 16.936939498791222
+  },
+  "OMIM:617127": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Orofaciodigital syndrome XV",
+    "score": 4.936867840633114
+  },
+  "OMIM:265380": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Alveolar capillary dysplasia with misalignment of pulmonary veins",
+    "score": 4.936867840633114
+  },
+  "OMIM:619269": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Ondontochondrodysplasia 2 with hearing loss and diabetes",
+    "score": 4.936867840633114
+  },
+  "OMIM:617913": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Neurodevelopmental disorder with microcephaly, cataracts, and renal abnormalities",
+    "score": 4.936867840633114
+  },
+  "OMIM:214800": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Charge syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:272950": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Teebi-Shaltout syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:201000": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Carpenter syndrome 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:304150": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Occipital horn syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:271520": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Spondylocostal dysostosis with anal atresia and urogenital anomalies",
+    "score": 4.936867840633114
+  },
+  "OMIM:212093": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Cardiac valvular defect, developmental",
+    "score": 4.936867840633114
+  },
+  "OMIM:314390": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "VACTERL association, X-linked",
+    "score": 4.936867840633114
+  },
+  "OMIM:236680": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Hydrolethalus syndrome 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:611209": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Congenital disorder of glycosylation, type IIg",
+    "score": 4.936867840633114
+  },
+  "OMIM:270400": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Smith-Lemli-Opitz syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:243800": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Johanson-Blizzard syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:619522": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Neurodevelopmental-craniofacial syndrome with variable renal and cardiac abnormalities",
+    "score": 4.936867840633114
+  },
+  "OMIM:312870": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Simpson-Golabi-Behmel syndrome, type 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:608836": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Carnitine palmitoyltransferase II deficiency, lethal neonatal",
+    "score": 4.936867840633114
+  },
+  "OMIM:269150": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Schinzel-Giedion midface-retraction syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:615287": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Muscular dystrophy-dystroglycanopathy (congenital with brain and eye anomalies), type A, 13",
+    "score": 4.936867840633114
+  },
+  "OMIM:129900": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Ectrodactyly, ectodermal dysplasia, and cleft lip/palate syndrome1",
+    "score": 4.936867840633114
+  },
+  "OMIM:613390": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Fanconi anemia, complementation group O",
+    "score": 4.936867840633114
+  },
+  "OMIM:268310": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Robinow syndrome, autosomal recessive",
+    "score": 4.936867840633114
+  },
+  "DECIPHER:70": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "2p15-16.1 microdeletion syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:606170": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Genitopatellar syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:601186": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Microphthalmia, syndromic 9",
+    "score": 4.936867840633114
+  },
+  "OMIM:619534": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Biliary, renal, neurologic, and skeletal syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:278300": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Xanthinuria, type I",
+    "score": 4.936867840633114
+  },
+  "OMIM:267750": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Knobloch syndrome, type 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:618950": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Suleiman-El-Hattab syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:618975": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Myopathy, congenital, with diaphragmatic defects, respiratory insufficiency, and dysmorphic facies",
+    "score": 4.936867840633114
+  },
+  "OMIM:618578": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Myopathy, congenital, progressive, with scoliosis",
+    "score": 4.936867840633114
+  },
+  "OMIM:220210": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Ritscher-Schinzel syndrome 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:613001": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Encephalocraniocutaneous lipomatosis",
+    "score": 4.936867840633114
+  },
+  "OMIM:114290": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Campomelic dysplasia",
+    "score": 4.936867840633114
+  },
+  "OMIM:610443": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Koolen-De Vries syndrome",
+    "score": 16.936939498791222
+  },
+  "OMIM:616973": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Mental retardation, autosomal dominant 42",
+    "score": 4.936867840633114
+  },
+  "OMIM:610682": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Osteogenesis imperfecta, type VII",
+    "score": 4.936867840633114
+  },
+  "OMIM:300712": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000126"
+    ],
+    "disease_name": "Craniofacioskeletal syndrome",
+    "score": 9.873735681266227
+  },
+  "OMIM:300048": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Intestinal pseudoobstruction, neuronal, chronic idiopathic, X-linked",
+    "score": 4.936867840633114
+  },
+  "OMIM:300707": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "STAR syndrome",
+    "score": 4.936867840633114
+  },
+  "DECIPHER:81": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "15q26 overgrowth syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:616580": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Au-Kline syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:613177": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Cutis laxa, autosomal recessive, type IC",
+    "score": 4.936867840633114
+  },
+  "OMIM:619472": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "VISS syndrome",
+    "score": 16.936939498791222
+  },
+  "OMIM:619648": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Zaki syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:608779": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Congenital disorder of glycosylation, type IIe",
+    "score": 4.936867840633114
+  },
+  "OMIM:257920": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "3MC syndrome 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:615112": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Urofacial syndrome 2",
+    "score": 4.936867840633114
+  },
+  "OMIM:615926": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Webb-Dattani syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:136140": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Floating-Harbor syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:601776": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Ehlers-Danlos syndrome, musculocontractural type 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:610733": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Noonan syndrome 4",
+    "score": 4.936867840633114
+  },
+  "OMIM:243605": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Stromme syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:598500": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Wolfram syndrome, mitochondrial form",
+    "score": 4.936867840633114
+  },
+  "OMIM:620141": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Developmental delay, language impairment, and ocular abnormalities",
+    "score": 4.936867840633114
+  },
+  "OMIM:146510": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Pallister-Hall syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:142945": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Holoprosencephaly 3",
+    "score": 4.936867840633114
+  },
+  "OMIM:236700": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Mckusick-Kaufman syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:609465": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Al-Gazali syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:192350": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Vater associationvacterl association, included",
+    "score": 4.936867840633114
+  },
+  "OMIM:301068": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Hardikar syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:301040": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Alpha-Thalassemia/mental retardation syndrome, X-linked",
+    "score": 4.936867840633114
+  },
+  "OMIM:600383": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Mesomelia-Synostoses syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:614527": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Chromosome 17q12 deletion syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:607598": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Lethal congenital contracture syndrome 2",
+    "score": 4.936867840633114
+  },
+  "OMIM:614080": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Multiple congenital anomalies-hypotonia-seizures syndrome 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:258040": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "OEIS complex",
+    "score": 4.936867840633114
+  },
+  "OMIM:604292": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Ectrodactyly, ectodermal dysplasia, and cleft lip/palate syndrome 3",
+    "score": 4.936867840633114
+  },
+  "OMIM:620330": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Intellectual developmental disorder, autosomal dominant 71, with behavioral abnormalities",
+    "score": 4.936867840633114
+  },
+  "OMIM:180849": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Rubinstein-Taybi syndrome 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:300968": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Mental retardation, X-linked 99, syndromic, female-restricted",
+    "score": 4.936867840633114
+  },
+  "OMIM:214100": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Peroxisome biogenesis disorder 1A (Zellweger)",
+    "score": 4.936867840633114
+  },
+  "OMIM:618240": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Mitochondrial complex I deficiency, nuclear type 18",
+    "score": 4.936867840633114
+  },
+  "OMIM:264140": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Prune belly syndrome with pulmonic stenosis, mental retardation, anddeafness",
+    "score": 4.936867840633114
+  },
+  "OMIM:616737": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Takenouchi-Kosaki syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:619362": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Megacystis-microcolon-intestinal hypoperistalsis syndrome 3",
+    "score": 4.936867840633114
+  },
+  "OMIM:615996": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Bardet-Biedl syndrome 19",
+    "score": 4.936867840633114
+  },
+  "OMIM:620327": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Neurodegeneration with developmental delay, early respiratory failure, myoclonic seizures, and brain abnormalities",
+    "score": 4.936867840633114
+  },
+  "OMIM:618653": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Intellectual developmental disorder with impaired language and dysmorphic facies",
+    "score": 4.936867840633114
+  },
+  "OMIM:619217": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Endove syndrome, Limb-Only type",
+    "score": 4.936867840633114
+  },
+  "OMIM:305620": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Frontometaphyseal dysplasia",
+    "score": 4.936867840633114
+  },
+  "OMIM:222300": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Wolfram syndrome 1",
+    "score": 4.936867840633114
+  },
+  "OMIM:301056": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Multiple congenital anomalies-neurodevelopmental syndrome, X-linked",
+    "score": 4.936867840633114
+  },
+  "OMIM:309350": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Melnick-Needles syndrome",
+    "score": 16.936939498791222
+  },
+  "OMIM:280000": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "CHIME syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:259775": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Raine syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:115470": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Cat eye syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:235255": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Mullerian derivatives, persistence of, with lymphangiectasia and postaxial polydactyly",
+    "score": 4.936867840633114
+  },
+  "OMIM:617798": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Intellectual developmental disorder, autosomal dominant 53",
+    "score": 4.936867840633114
+  },
+  "OMIM:251260": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Nijmegen breakage syndrome",
+    "score": 16.936939498791222
+  },
+  "OMIM:619762": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Kury-Isidor syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:618454": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Developmental delay with or without dysmorphic facies and autism",
+    "score": 4.936867840633114
+  },
+  "OMIM:602418": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Weyers ulnar ray/oligodactyly syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:247990": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Macdermot-Winter syndrome",
+    "score": 16.936939498791222
+  },
+  "OMIM:612541": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Neutropenia, severe congenital, 4, autosomal recessive",
+    "score": 4.936867840633114
+  },
+  "OMIM:104350": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Amastia, bilateral, with ureteral triplication and dysmorphism",
+    "score": 4.936867840633114
+  },
+  "OMIM:101200": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Apert syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:618494": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Congenital hypotonia, epilepsy, developmental delay, and digital anomalies",
+    "score": 4.936867840633114
+  },
+  "OMIM:619991": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Liver disease, severe congenital",
+    "score": 4.936867840633114
+  },
+  "OMIM:311900": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "TARP syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:616268": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Arboleda-Tham syndrome",
+    "score": 4.936867840633114
+  },
+  "OMIM:613674": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Vesicoureteral reflux 3",
+    "score": 4.936867840633114
+  },
+  "ORPHA:79403": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Junctional epidermolysis bullosa with pyloric atresia",
+    "score": 4.936867840633114
+  },
+  "ORPHA:79404": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Severe generalized junctional epidermolysis bullosa",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2729": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Okamoto syndrome",
+    "score": 16.936939498791222
+  },
+  "ORPHA:438213": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "PURA-related severe neonatal hypotonia-seizures-encephalopathy syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2704": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Ochoa syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:90652": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Otopalatodigital syndrome type 2",
+    "score": 4.936867840633114
+  },
+  "ORPHA:373": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Simpson-Golabi-Behmel syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:444072": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Cerebellar-facial-dental syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:101000": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Autosomal recessive spastic paraplegia type 20",
+    "score": 4.936867840633114
+  },
+  "ORPHA:85285": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "X-linked intellectual disability, Schimke type",
+    "score": 4.936867840633114
+  },
+  "ORPHA:85201": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Genitopatellar syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:49": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Penile agenesis",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1450": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Ring chromosome 8 syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2785": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Osteopetrosis with renal tubular acidosis",
+    "score": 16.936939498791222
+  },
+  "ORPHA:2750": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Orofaciodigital syndrome type 1",
+    "score": 4.936867840633114
+  },
+  "ORPHA:210122": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Congenital alveolar capillary dysplasia",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2745": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Opitz GBBB syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:488613": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Global developmental delay-neuro-ophthalmological abnormalities-seizures-intellectual disability syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:96092": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "8p inverted duplication/deletion syndrome",
+    "score": 16.936939498791222
+  },
+  "ORPHA:363958": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "17q21.31 microdeletion syndrome",
+    "score": 16.936939498791222
+  },
+  "ORPHA:2838": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Renal caliceal diverticuli-deafness syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2839": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Pelvis-shoulder dysplasia",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1507": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Autosomal recessive Robinow syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:235": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Dubowitz syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:97360": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Robinow syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:254528": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Kagami-Ogata syndrome due to maternal 14q32.2 microdeletion",
+    "score": 4.936867840633114
+  },
+  "ORPHA:79500": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "DOORS syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:96061": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Mosaic trisomy 8",
+    "score": 16.936939498791222
+  },
+  "ORPHA:84085": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Hinman syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:3380": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Trisomy 18",
+    "score": 4.936867840633114
+  },
+  "ORPHA:158684": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Epidermolysis bullosa simplex with pyloric atresia",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2059": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Fryns syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2044": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Floating-Harbor syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:3378": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Trisomy 13",
+    "score": 4.936867840633114
+  },
+  "ORPHA:250989": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "1q21.1 microdeletion syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:3310": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Tetrasomy 9p",
+    "score": 4.936867840633114
+  },
+  "ORPHA:3305": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Tetraploidy",
+    "score": 4.936867840633114
+  },
+  "ORPHA:363965": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Koolen-De Vries syndrome due to a point mutation",
+    "score": 16.936939498791222
+  },
+  "ORPHA:2886": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "TARP syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:140": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Campomelic dysplasia",
+    "score": 4.936867840633114
+  },
+  "ORPHA:138": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "CHARGE syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:464738": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Basel-Vanagaite-Smirin-Yosef syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:105": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Atresia of urethra",
+    "score": 4.936867840633114
+  },
+  "ORPHA:107": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "BOR syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:96149": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Distal deletion 12q",
+    "score": 4.936867840633114
+  },
+  "ORPHA:541423": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Growth delay-intellectual disability-hepatopathy syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:96121": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "7q11.23 microduplication syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:96169": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Koolen-De Vries syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:247262": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Hyperphosphatasia-intellectual disability syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:261552": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Mowat-Wilson syndrome due to a ZEB2 point mutation",
+    "score": 4.936867840633114
+  },
+  "ORPHA:35173": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "X-linked dominant chondrodysplasia punctata",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1297": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Branchio-oculo-facial syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:261537": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Mowat-Wilson syndrome due to monosomy 2q22",
+    "score": 4.936867840633114
+  },
+  "ORPHA:83617": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Agammaglobulinemia-microcephaly-craniosynostosis-severe dermatitis syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:163979": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "X-linked intellectual disability-craniofacioskeletal syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1225": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Baller-Gerold syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:195": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Cat-eye syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2510": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Micro syndrome",
+    "score": 16.936939498791222
+  },
+  "ORPHA:49041": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "IgG4-related retroperitoneal fibrosis",
+    "score": 4.936867840633114
+  },
+  "ORPHA:531151": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "9q21.13 microdeletion syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:3079": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual disability, Buenos-Aires type",
+    "score": 16.936939498791222
+  },
+  "ORPHA:873": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Desmoid tumor",
+    "score": 4.936867840633114
+  },
+  "ORPHA:261494": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Kleefstra syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:887": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "VACTERL/VATER association",
+    "score": 4.936867840633114
+  },
+  "ORPHA:480880": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "X-linked female restricted facial dysmorphism-short stature-choanal atresia-intellectual disability",
+    "score": 4.936867840633114
+  },
+  "ORPHA:900": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Granulomatosis with polyangiitis",
+    "score": 4.936867840633114
+  },
+  "ORPHA:912": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Zellweger syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1358": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Carey-Fineman-Ziter syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1340": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Cardiofaciocutaneous syndrome",
+    "score": 16.936939498791222
+  },
+  "ORPHA:352665": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Neurodevelopmental disorder-craniofacial dysmorphism-cardiac defect-skeletal anomalies syndrome due to 9q21.3 microdeletion",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2669": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Nephrosis-deafness-urinary tract-digital malformations syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:93110": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Posterior urethral valve",
+    "score": 4.936867840633114
+  },
+  "ORPHA:93109": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Congenital megacalycosis",
+    "score": 4.936867840633114
+  },
+  "ORPHA:93108": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Renal dysplasia",
+    "score": 4.936867840633114
+  },
+  "ORPHA:93101": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Renal hypoplasia",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2636": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Microcephalic osteodysplastic primordial dwarfism types I and III",
+    "score": 4.936867840633114
+  },
+  "ORPHA:449395": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "IgG4-related kidney disease",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1834": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Axial mesodermal dysplasia spectrum",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1826": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Frontometaphyseal dysplasia",
+    "score": 4.936867840633114
+  },
+  "ORPHA:264450": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Trisomy 8p",
+    "score": 4.936867840633114
+  },
+  "ORPHA:798": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Schinzel-Giedion syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:573278": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Split cord malformation",
+    "score": 4.936867840633114
+  },
+  "ORPHA:261349": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "2p15p16.1 microdeletion syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:261344": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Trisomy 1q",
+    "score": 4.936867840633114
+  },
+  "ORPHA:821": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Sotos syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:93271": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Short rib-polydactyly syndrome, Verma-Naumoff type",
+    "score": 4.936867840633114
+  },
+  "ORPHA:818": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Smith-Lemli-Opitz syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:93260": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Pfeiffer syndrome type 3",
+    "score": 4.936867840633114
+  },
+  "ORPHA:847": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Alpha-thalassemia-X-linked intellectual disability syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:261318": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Trisomy 20p",
+    "score": 16.936939498791222
+  },
+  "ORPHA:2363": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Lacrimoauriculodentodigital syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2322": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Kabuki syndrome",
+    "score": 16.936939498791222
+  },
+  "ORPHA:48652": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Monosomy 22q13.3",
+    "score": 16.936939498791222
+  },
+  "ORPHA:2315": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Johanson-Blizzard syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2308": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Jacobsen syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:280633": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Multiple congenital anomalies-hypotonia-seizures syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1896": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "EEC syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:506358": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Gabriele-de Vries syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:90324": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Cockayne syndrome type 3",
+    "score": 16.936939498791222
+  },
+  "ORPHA:453504": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Neurodevelopmental disorder-craniofacial dysmorphism-cardiac defect-skeletal anomalies syndrome due to a point mutation",
+    "score": 4.936867840633114
+  },
+  "ORPHA:251076": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "8p23.1 duplication syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:251046": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "6p22 microdeletion syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:100078": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Ileal neuroendocrine tumor",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1926": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Diabetic embryopathy",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1920": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Toluene embryopathy",
+    "score": 4.936867840633114
+  },
+  "ORPHA:449400": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "IgG4-related aortitis",
+    "score": 4.936867840633114
+  },
+  "ORPHA:353281": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Rubinstein-Taybi syndrome due to 16p13.3 microdeletion",
+    "score": 4.936867840633114
+  },
+  "ORPHA:261290": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Trisomy 17p",
+    "score": 4.936867840633114
+  },
+  "ORPHA:353284": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Rubinstein-Taybi syndrome due to EP300 haploinsufficiency",
+    "score": 4.936867840633114
+  },
+  "ORPHA:617": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Congenital primary megaureter",
+    "score": 4.936867840633114
+  },
+  "ORPHA:353277": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Rubinstein-Taybi syndrome due to CREBBP mutations",
+    "score": 4.936867840633114
+  },
+  "ORPHA:634": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Netherton syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:709": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Peters plus syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2496": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Mesomelia-synostoses syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2484": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Melnick-Needles syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2473": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "McKusick-Kaufman syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2461": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Marden-Walker syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:314585": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "15q overgrowth syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2437": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Czeizel-Losonci syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:314588": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Distal triplication 15q",
+    "score": 4.936867840633114
+  },
+  "ORPHA:453499": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Neurodevelopmental disorder-craniofacial dysmorphism-cardiac defect-skeletal anomalies syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2973": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "46,XX difference of sex development-anorectal anomalies syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2953": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Musculocontractural Ehlers-Danlos syndrome",
+    "score": 16.936939498791222
+  },
+  "ORPHA:457193": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Autosomal dominant intellectual disability-craniofacial anomalies-cardiac defects syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1606": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "1p36 deletion syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:464311": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Intellectual disability syndrome due to a DYRK1A point mutation",
+    "score": 4.936867840633114
+  },
+  "ORPHA:464306": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "DYRK1A-related intellectual disability syndrome",
+    "score": 16.936939498791222
+  },
+  "ORPHA:568": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Microphthalmia, Lenz type",
+    "score": 4.936867840633114
+  },
+  "ORPHA:391641": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Feingold syndrome type 1",
+    "score": 4.936867840633114
+  },
+  "ORPHA:364028": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "X-linked intellectual disability due to GRIA3 mutations",
+    "score": 16.936939498791222
+  },
+  "ORPHA:2092": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Focal dermal hypoplasia",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2083": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Prominent glabella-microcephaly-hypogenitalism syndrome",
+    "score": 16.936939498791222
+  },
+  "ORPHA:7": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "3C syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2152": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Mowat-Wilson syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:3474": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "CHIME syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:3467": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Hereditary xanthinuria",
+    "score": 4.936867840633114
+  },
+  "ORPHA:3455": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Wiedemann-Rautenstrauch syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:487796": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Macrothrombocytopenia-lymphedema-developmental delay-facial dysmorphism-camptodactyly syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2995": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Baraitser-Winter cerebrofrontofacial syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1655": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "M\u00fcllerian derivatives-lymphangiectasia-polydactyly syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1745": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Distal duplication 6p",
+    "score": 4.936867840633114
+  },
+  "ORPHA:363700": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Neurofibromatosis type 1 due to NF1 mutation or intragenic deletion",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1727": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "22q11.2 duplication syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:79328": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "ALG9-CDG",
+    "score": 4.936867840633114
+  },
+  "ORPHA:99776": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Mosaic trisomy 9",
+    "score": 4.936867840633114
+  },
+  "ORPHA:85173": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "IMAGe syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:2273": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Ichthyosis follicularis-alopecia-photophobia syndrome",
+    "score": 16.936939498791222
+  },
+  "ORPHA:2237": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Hypoparathyroidism-sensorineural deafness-renal disease syndrome",
+    "score": 4.936867840633114
+  },
+  "ORPHA:35687": {
+    "phenotypes": [
+      "HP:0000126"
+    ],
+    "disease_name": "Erdheim-Chester disease",
+    "score": 4.936867840633114
+  },
+  "ORPHA:1780": {
+    "phenotypes": [
+      "HP:0000126",
+      "HP:0000400"
+    ],
+    "disease_name": "Thakker-Donnai syndrome",
+    "score": 16.936939498791222
+  },
+  "OMIM:107480": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Townes-Brocks syndrome 1",
+    "score": 12.00007165815811
+  },
+  "OMIM:309549": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, X-linked 9",
+    "score": 12.00007165815811
+  },
+  "OMIM:248500": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Alpha-mannosidosis",
+    "score": 12.00007165815811
+  },
+  "OMIM:618665": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual developmental disorder, autosomal recessive 72",
+    "score": 12.00007165815811
+  },
+  "OMIM:615433": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Chromosome 3q13.31 deletion syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:615802": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neurodevelopmental disorder with dysmorphic features, spasticity, and brain abnormalities",
+    "score": 12.00007165815811
+  },
+  "OMIM:616462": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Acrofacial dysostosis, Cincinnati type",
+    "score": 12.00007165815811
+  },
+  "OMIM:245150": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Keutel syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:208050": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Arterial tortuosity syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:181180": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Say syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:615009": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Schuurs-Hoeijmakers syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:300803": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, X-linked 97",
+    "score": 12.00007165815811
+  },
+  "OMIM:618505": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neurodevelopmental disorder with coarse facies and mild distal skeletal abnormalities",
+    "score": 12.00007165815811
+  },
+  "OMIM:300624": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Fragile X mental retardation syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:615419": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Hypotonia, infantile, with psychomotor retardation and characteristic facies 1",
+    "score": 12.00007165815811
+  },
+  "OMIM:302350": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Nance-Horan syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:608930": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Myasthenic syndrome, congenital, 1B, fast-channel",
+    "score": 12.00007165815811
+  },
+  "OMIM:617804": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neurodevelopmental disorder with severe motor impairment and absent language",
+    "score": 12.00007165815811
+  },
+  "OMIM:618504": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual developmental disorder, autosomal recessive 71",
+    "score": 12.00007165815811
+  },
+  "OMIM:146390": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Chromosome 18p deletion syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:609637": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Holoprosencephaly 5",
+    "score": 12.00007165815811
+  },
+  "OMIM:614104": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, autosomal dominant 7",
+    "score": 12.00007165815811
+  },
+  "OMIM:619420": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Martsolf syndrome 2",
+    "score": 12.00007165815811
+  },
+  "OMIM:609425": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Chromosome 3q29 deletion syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:300966": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, X-linked, syndromic 33",
+    "score": 12.00007165815811
+  },
+  "OMIM:272300": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "SULFOCYSTEINURIA",
+    "score": 12.00007165815811
+  },
+  "OMIM:251240": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Microcephaly with chemotactic defect and transient hypogammaglobulinemia",
+    "score": 12.00007165815811
+  },
+  "OMIM:600776": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Fryns microphthalmia syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:245552": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Lambotte syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:615145": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Microphthalmia, isolated, with coloboma 9",
+    "score": 12.00007165815811
+  },
+  "OMIM:619435": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Ritscher-Schinzel syndrome 4",
+    "score": 12.00007165815811
+  },
+  "OMIM:615541": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, autosomal recessive 39",
+    "score": 12.00007165815811
+  },
+  "OMIM:259780": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Otoonychoperoneal syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:616300": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Short-Rib thoracic dysplasia 13 with or without polydactyly",
+    "score": 12.00007165815811
+  },
+  "OMIM:250410": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Retinitis pigmentosa with or without skeletal anomalies",
+    "score": 12.00007165815811
+  },
+  "OMIM:618106": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual developmental disorder, autosomal dominant 58",
+    "score": 12.00007165815811
+  },
+  "OMIM:616789": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation and distinctive facial features with or without cardiac defects",
+    "score": 12.00007165815811
+  },
+  "OMIM:616212": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Lissencephaly 6, with microcephaly",
+    "score": 12.00007165815811
+  },
+  "OMIM:617695": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Pontocerebellar hypoplasia, type 11",
+    "score": 12.00007165815811
+  },
+  "OMIM:617050": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Hermansky-Pudlak syndrome 10",
+    "score": 12.00007165815811
+  },
+  "OMIM:277590": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Weaver syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:246200": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Donohue syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:614969": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Pontocerebellar hypoplasia, type 7",
+    "score": 12.00007165815811
+  },
+  "OMIM:614202": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Rafiq syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:117550": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Sotos syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:617864": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neurodevelopmental disorder with or without seizures and gait abnormalities",
+    "score": 12.00007165815811
+  },
+  "OMIM:618000": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Ehlers-Danlos syndrome, classic-like, 2",
+    "score": 12.00007165815811
+  },
+  "OMIM:300486": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, X-linked, with cerebellar hypoplasia and distinctive facial appearance",
+    "score": 12.00007165815811
+  },
+  "OMIM:619320": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual developmental disorder, autosomal dominant 65",
+    "score": 12.00007165815811
+  },
+  "OMIM:302905": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Charge-Like syndrome, X-linked",
+    "score": 12.00007165815811
+  },
+  "OMIM:235830": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Histidinuria due to A renal tubular defect",
+    "score": 12.00007165815811
+  },
+  "OMIM:619877": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Dentici-Novelli neurodevelopmental syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:300928": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, X-linked 101",
+    "score": 12.00007165815811
+  },
+  "OMIM:300055": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, X-linked, syndromic 13",
+    "score": 12.00007165815811
+  },
+  "OMIM:617090": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Microcephaly 17, primary, autosomal recessive",
+    "score": 12.00007165815811
+  },
+  "OMIM:619268": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Alzahrani-Kuwahara syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:300243": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, x-linked syndromic, Christianson type",
+    "score": 12.00007165815811
+  },
+  "OMIM:309500": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Renpenning syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:606407": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Hypotonia-cystinuria syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:601803": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Pallister-Killian syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:614407": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Microcephaly, cerebellar hypoplasia, and cardiac conduction defect syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:617481": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neurodevelopmental disorder with microcephaly, hypotonia, and variable brain anomalies",
+    "score": 12.00007165815811
+  },
+  "OMIM:234050": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Trichothiodystrophy 4, nonphotosensitive",
+    "score": 12.00007165815811
+  },
+  "OMIM:617452": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies",
+    "score": 12.00007165815811
+  },
+  "OMIM:150230": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Trichorhinophalangeal syndrome, type II",
+    "score": 12.00007165815811
+  },
+  "OMIM:613026": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Chromosome 19q13.11 deletion syndrome, distal",
+    "score": 12.00007165815811
+  },
+  "OMIM:617268": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neurodevelopmental disorder with hypotonia, seizures, and absent language",
+    "score": 12.00007165815811
+  },
+  "OMIM:300534": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual developmental disorder, X-linked syndromic, Claes-Jensen type",
+    "score": 12.00007165815811
+  },
+  "OMIM:614748": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Interstitial lung disease, nephrotic syndrome, and epidermolysis bullosa, congenital",
+    "score": 12.00007165815811
+  },
+  "OMIM:259050": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Primrose syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:618947": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Arthrogryposis multiplex congenita 5",
+    "score": 12.00007165815811
+  },
+  "OMIM:618004": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Epileptic encephalopathy, early infantile, 64",
+    "score": 12.00007165815811
+  },
+  "OMIM:619326": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual developmental disorder and hypogonadotropic hypogonadism",
+    "score": 12.00007165815811
+  },
+  "OMIM:301013": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, X-linked 107",
+    "score": 12.00007165815811
+  },
+  "OMIM:615656": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Chromosome 15q11.2 deletion syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:300912": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, X-linked 98",
+    "score": 12.00007165815811
+  },
+  "OMIM:148050": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "KBG syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:300523": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Allan-Herndon-Dudley syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:617281": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Epileptic encephalopathy, early infantile, 49",
+    "score": 12.00007165815811
+  },
+  "OMIM:620149": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Developmental and epileptic encephalopathy 110",
+    "score": 12.00007165815811
+  },
+  "OMIM:619694": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Developmental delay with variable neurologic and brain abnormalities",
+    "score": 12.00007165815811
+  },
+  "OMIM:600460": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cleft palate, cardiac defect, genital anomalies, and ectrodactyly",
+    "score": 12.00007165815811
+  },
+  "OMIM:300867": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Kabuki syndrome 2",
+    "score": 12.00007165815811
+  },
+  "OMIM:300498": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, X-linked 45",
+    "score": 12.00007165815811
+  },
+  "OMIM:300659": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, X-linked 93",
+    "score": 12.00007165815811
+  },
+  "OMIM:614222": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Warburg micro syndrome 3",
+    "score": 12.00007165815811
+  },
+  "OMIM:601808": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Chromosome 18q deletion syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:241200": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Bartter syndrome, type 2",
+    "score": 12.00007165815811
+  },
+  "OMIM:300260": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, x-linked syndromic, Lubs type",
+    "score": 12.00007165815811
+  },
+  "OMIM:190350": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Trichorhinophalangeal syndrome, type I",
+    "score": 12.00007165815811
+  },
+  "OMIM:613606": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Forsythe-Wakeling syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:619895": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Holoprosencephaly 14",
+    "score": 12.00007165815811
+  },
+  "OMIM:613406": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Witteveen-Kolk syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:300855": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Ogden syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:618156": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Squalene synthase deficiency",
+    "score": 12.00007165815811
+  },
+  "OMIM:618142": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Microcephaly, facial dysmorphism, renal agenesis, and ambiguous genitalia syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:619512": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neurodevelopmental disorder with hypotonia and brain abnormalities",
+    "score": 12.00007165815811
+  },
+  "OMIM:300934": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Congenital disorder of glycosylation, type Iy",
+    "score": 12.00007165815811
+  },
+  "OMIM:218000": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Agenesis of the corpus callosum with peripheral neuropathy",
+    "score": 12.00007165815811
+  },
+  "OMIM:608027": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Pontocerebellar hypoplasia, type 3",
+    "score": 12.00007165815811
+  },
+  "OMIM:617107": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Thauvin-Robinet-Faivre syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:608594": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Lipodystrophy, congenital generalized, type 1",
+    "score": 12.00007165815811
+  },
+  "OMIM:212065": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Congenital disorder of glycosylation, type Ia",
+    "score": 12.00007165815811
+  },
+  "OMIM:277400": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Methylmalonic aciduria and homocystinuria, Cblc type",
+    "score": 12.00007165815811
+  },
+  "OMIM:302060": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Barth syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:613563": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia",
+    "score": 12.00007165815811
+  },
+  "OMIM:607932": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Microphthalmia, syndromic 6",
+    "score": 12.00007165815811
+  },
+  "OMIM:616817": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Microcephaly, short stature, and impaired glucose metabolism 2",
+    "score": 12.00007165815811
+  },
+  "OMIM:601358": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Nicolaides-Baraitser syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:619503": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neurodevelopmental disorder with hypotonia and dysmorphic facies",
+    "score": 12.00007165815811
+  },
+  "OMIM:618392": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Spondyloepiphyseal dysplasia, Kondo-Fu type",
+    "score": 12.00007165815811
+  },
+  "OMIM:620194": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neurodevelopmental disorder with poor growth, large ears, and dysmorphic facies",
+    "score": 12.00007165815811
+  },
+  "OMIM:614225": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Warburg micro syndrome 2",
+    "score": 12.00007165815811
+  },
+  "OMIM:613576": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Ectodermal dysplasia-syndactyly syndrome 2",
+    "score": 12.00007165815811
+  },
+  "OMIM:300886": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, X-linked, syndromic 32",
+    "score": 12.00007165815811
+  },
+  "OMIM:619488": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "DEGCAGS syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:618027": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Coffin-Siris syndrome 7",
+    "score": 12.00007165815811
+  },
+  "OMIM:600118": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Warburg micro syndrome 1",
+    "score": 12.00007165815811
+  },
+  "OMIM:617302": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Optic atrophy 11",
+    "score": 12.00007165815811
+  },
+  "OMIM:212066": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Congenital disorder of glycosylation, type IIa",
+    "score": 12.00007165815811
+  },
+  "DECIPHER:45": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Xq28 (MECP2) duplication",
+    "score": 12.00007165815811
+  },
+  "OMIM:151050": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Lenz-Majewski hyperostotic dwarfism",
+    "score": 12.00007165815811
+  },
+  "OMIM:616154": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Peroxisomal fatty acyl-CoA reductase 1 disorder",
+    "score": 12.00007165815811
+  },
+  "OMIM:118450": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Alagille syndrome 1",
+    "score": 12.00007165815811
+  },
+  "OMIM:617061": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, autosomal dominant 44",
+    "score": 12.00007165815811
+  },
+  "OMIM:618971": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Tolchin-Le Caignec syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:606232": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Phelan-Mcdermid syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:620292": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neurodevelopmental disorder with language delay and behavioral abnormalities, with or without seizures",
+    "score": 12.00007165815811
+  },
+  "OMIM:300148": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mehmo syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:256520": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neu-Laxova syndrome 1",
+    "score": 12.00007165815811
+  },
+  "OMIM:300558": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual developmental disorder, X-linked 30",
+    "score": 12.00007165815811
+  },
+  "OMIM:619980": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Braddock-Carey syndrome 1",
+    "score": 12.00007165815811
+  },
+  "OMIM:617991": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Developmental delay, intellectual disability, obesity, and dysmorphic features",
+    "score": 12.00007165815811
+  },
+  "OMIM:620250": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neurodevelopmental disorder with seizures, spasticity, and complete or partial agenesis of the corpus callosum",
+    "score": 12.00007165815811
+  },
+  "OMIM:617403": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cutis laxa, autosomal recessive, type IID",
+    "score": 12.00007165815811
+  },
+  "OMIM:605013": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "MICROHYDRANENCEPHALY",
+    "score": 12.00007165815811
+  },
+  "OMIM:301900": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Borjeson-Forssman-Lehmann syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:616051": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Microcephaly 13, primary, autosomal recessive",
+    "score": 12.00007165815811
+  },
+  "OMIM:269880": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Short syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:617011": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Macrocephaly, dysmorphic facies, and psychomotor retardation",
+    "score": 12.00007165815811
+  },
+  "OMIM:617561": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cohen-Gibson syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:613458": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Chromosome 16p13.3 duplication syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:619603": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Galloway-Mowat syndrome 9",
+    "score": 12.00007165815811
+  },
+  "OMIM:610828": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Holoprosencephaly 7",
+    "score": 12.00007165815811
+  },
+  "OMIM:601110": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Congenital disorder of glycosylation, type Id",
+    "score": 12.00007165815811
+  },
+  "OMIM:617982": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Ververi-Brady syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:300238": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation, X-linked, syndromic 11",
+    "score": 12.00007165815811
+  },
+  "OMIM:609029": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Emanuel syndrome",
+    "score": 12.00007165815811
+  },
+  "OMIM:300749": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Mental retardation and microcephaly with pontine and cerebellar hypoplasia",
+    "score": 12.00007165815811
+  },
+  "OMIM:269700": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Lipodystrophy, congenital generalized, type 2",
+    "score": 12.00007165815811
+  },
+  "OMIM:610829": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Holoprosencephaly 9",
+    "score": 12.00007165815811
+  },
+  "OMIM:251300": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Galloway-mowat syndrome 1",
+    "score": 12.00007165815811
+  },
+  "OMIM:615574": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Asparagine synthetase deficiency",
+    "score": 12.00007165815811
+  },
+  "OMIM:219150": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cutis laxa, autosomal recessive, type IIIA",
+    "score": 12.00007165815811
+  },
+  "OMIM:616269": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual developmental disorder, autosomal recessive 48",
+    "score": 12.00007165815811
+  },
+  "OMIM:601675": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Trichothiodystrophy 1, photosensitive",
+    "score": 12.00007165815811
+  },
+  "OMIM:256040": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Proteasome-associated autoinflammatory syndrome 1 and digenic forms",
+    "score": 12.00007165815811
+  },
+  "OMIM:221790": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "DERMATOLEUKODYSTROPHY",
+    "score": 12.00007165815811
+  },
+  "ORPHA:199318": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "15q13.3 microdeletion syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1406": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Charlie M syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2714": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Oculo-palato-cerebral syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2715": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Severe oculo-renal-cerebellar syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2701": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Noonan syndrome-like disorder with loose anagen hair",
+    "score": 12.00007165815811
+  },
+  "ORPHA:354": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "GM1 gangliosidosis",
+    "score": 12.00007165815811
+  },
+  "ORPHA:457359": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Megalencephaly-severe kyphoscoliosis-overgrowth syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:370927": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "SSR4-CDG",
+    "score": 12.00007165815811
+  },
+  "ORPHA:85278": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Christianson syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:85286": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "X-linked intellectual disability, Shashi type",
+    "score": 12.00007165815811
+  },
+  "ORPHA:85276": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "X-linked intellectual disability, Armfield type",
+    "score": 12.00007165815811
+  },
+  "ORPHA:3253": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cleft lip/palate-ectodermal dysplasia syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:3242": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Renpenning syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:61": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Alpha-mannosidosis",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2792": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Otofaciocervical syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2793": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Otoonychoperoneal syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:438178": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Fatty acyl-CoA reductase 1 deficiency",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1448": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Ring chromosome 6 syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1446": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Ring chromosome 22 syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1422": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Chondrodysplasia-difference of sex development syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2850": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Alopecia-intellectual disability syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:96097": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Distal duplication 5q",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2836": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "PEHO syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:236": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Trisomy 9p",
+    "score": 12.00007165815811
+  },
+  "ORPHA:481152": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "PYCR2-related microcephaly-progressive leukoencephalopathy",
+    "score": 12.00007165815811
+  },
+  "ORPHA:300305": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "11p15.4 microduplication syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:85335": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Fried syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2013": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cleft palate-large ears-small head syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:3342": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Arterial tortuosity syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:85323": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "X-linked intellectual disability, Seemanova type",
+    "score": 12.00007165815811
+  },
+  "ORPHA:329224": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual disability-craniofacial dysmorphism-cryptorchidism syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:3304": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Fallot complex-intellectual disability-growth delay syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1598": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Monosomy 18p",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1580": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Distal deletion 10p",
+    "score": 12.00007165815811
+  },
+  "ORPHA:544254": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "SYNGAP1-related developmental and epileptic encephalopathy",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1555": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cutis gyrata-acanthosis nigricans-craniosynostosis syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:93950": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "X-linked intellectual disability, Sutherland-Haan type",
+    "score": 12.00007165815811
+  },
+  "ORPHA:93945": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "X-linked intellectual disability, Porteous type",
+    "score": 12.00007165815811
+  },
+  "ORPHA:175": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cartilage-hair hypoplasia",
+    "score": 12.00007165815811
+  },
+  "ORPHA:324410": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "X-linked intellectual disability-cardiomegaly-congestive heart failure syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:114": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Auriculoosteodysplasia",
+    "score": 12.00007165815811
+  },
+  "ORPHA:113": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Bazex-Dupr\u00e9-Christol syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:109": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Bannayan-Riley-Ruvalcaba syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:96170": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Emanuel syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:96176": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Ring chromosome 13 syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:163971": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "X-linked intellectual disability, Cilliers type",
+    "score": 12.00007165815811
+  },
+  "ORPHA:163937": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "X-linked intellectual disability, Najm type",
+    "score": 12.00007165815811
+  },
+  "ORPHA:163956": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "X-linked intellectual disability, Nascimento type",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2575": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cystic fibrosis-gastritis-megaloblastic anemia syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:199": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cornelia de Lange syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:3080": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual disability, Wolff type",
+    "score": 12.00007165815811
+  },
+  "ORPHA:3078": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Severe X-linked intellectual disability, Gustavson type",
+    "score": 12.00007165815811
+  },
+  "ORPHA:391307": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Severe intellectual disability-short stature-behavioral abnormalities-facial dysmorphism syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:3042": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual disability-cataracts-calcified pinnae-myopathy syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:3132": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Say-Barber-Miller syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:963": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Acromegaly",
+    "score": 12.00007165815811
+  },
+  "ORPHA:904": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Williams syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:929": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Achalasia-microcephaly syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:921": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Abruzzo-Erickson syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:276432": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Ogden syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:500095": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Tall stature-intellectual disability-renal anomalies syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:544488": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Global developmental delay-alopecia-macrocephaly-facial dysmorphism-structural brain anomalies syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2671": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Neu-Laxova syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2658": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Lenz-Majewski hyperostotic dwarfism",
+    "score": 12.00007165815811
+  },
+  "ORPHA:65286": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "3q29 microdeletion syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:77258": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Trichorhinophalangeal syndrome type 1",
+    "score": 12.00007165815811
+  },
+  "ORPHA:744": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Proteus syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:166035": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Brachydactyly-short stature-retinitis pigmentosa syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:391408": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Primary microcephaly-mild intellectual disability-young-onset diabetes syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:769": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Rabson-Mendenhall syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:261304": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Paternal 20q13.2q13.3 microdeletion syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:319332": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Autosomal recessive myogenic arthrogryposis multiplex congenita",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1005": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Alopecia-contractures-dwarfism-intellectual disability syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2332": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "KBG syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:449291": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Symptomatic form of fragile X syndrome in female carriers",
+    "score": 12.00007165815811
+  },
+  "ORPHA:90321": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cockayne syndrome type 1",
+    "score": 12.00007165815811
+  },
+  "ORPHA:90322": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cockayne syndrome type 2",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1968": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Flat face-microstomia-ear anomaly syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:66631": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "CEDNIK syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:66625": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Cerebrooculonasal syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:66629": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Goldberg-Shprintzen megacolon syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:496641": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Early-onset progressive diffuse brain atrophy-microcephaly-muscle weakness-optic atrophy syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:168577": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Hereditary cryohydrocytosis with reduced stomatin",
+    "score": 12.00007165815811
+  },
+  "ORPHA:647": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Nijmegen breakage syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:649": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Norrie disease",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1193": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Atkin-Flaitz syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:562528": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Congenital limbs-face contractures-hypotonia-developmental delay syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2487": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Lower limb malformation-hypospadias syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1154": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Arthrogryposis-oculomotor limitation-electroretinal anomalies syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2471": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "McDonough syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2463": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Marfanoid habitus-autosomal recessive intellectual disability syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:363528": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual disability-strabismus syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1110": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Aortic arch anomaly-facial dysmorphism-intellectual disability syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:314575": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Intellectual disability-hypotonia-brachycephaly-pyloric stenosis-cryptorchidism syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:420561": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Temple-Baraitser syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2976": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Pseudoleprechaunism syndrome, Patterson type",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1636": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Distal monosomy 7q36",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1600": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Monosomy 18q",
+    "score": 12.00007165815811
+  },
+  "ORPHA:99646": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Metaphyseal chondromatosis with D-2-hydroxyglutaric aciduria",
+    "score": 12.00007165815811
+  },
+  "ORPHA:521445": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Microcephaly-facial dysmorphism-ocular anomalies-multiple congenital anomalies syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:487825": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Pierpont syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:506": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Leigh syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:99688": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Dermotrichic syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:284339": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Pontocerebellar hypoplasia type 7",
+    "score": 12.00007165815811
+  },
+  "ORPHA:436245": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Retinitis pigmentosa-juvenile cataract-short stature-intellectual disability syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2065": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Galloway-Mowat syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2162": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Holoprosencephaly",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2167": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Holzgreve syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:2158": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Histidinuria-renal tubular defect syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:536532": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Classical-like Ehlers-Danlos syndrome type 2",
+    "score": 12.00007165815811
+  },
+  "ORPHA:3447": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Weaver syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:589905": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "PHIP-related behavioral problems-intellectual disability-obesity-dysmorphic features syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:3433": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Microcephaly-brachydactyly-kyphoscoliosis syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1672": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Diencephalic syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:397941": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "MAN1B1-CDG",
+    "score": 12.00007165815811
+  },
+  "ORPHA:314769": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Somatomammotropinoma",
+    "score": 12.00007165815811
+  },
+  "ORPHA:357001": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "19p13.13 microdeletion syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:397933": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Severe intellectual disability-progressive postnatal microcephaly-midline stereotypic hand movements syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:1738": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Trisomy 4p",
+    "score": 12.00007165815811
+  },
+  "ORPHA:459070": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "X-linked intellectual disability-cerebellar hypoplasia-spondylo-epiphyseal dysplasia syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:505237": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Early-onset seizures-distal limb anomalies-facial dysmorphism-global developmental delay syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:79318": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "PMM2-CDG",
+    "score": 12.00007165815811
+  },
+  "ORPHA:369891": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Developmental delay-facial dysmorphism syndrome due to MED13L deficiency",
+    "score": 12.00007165815811
+  },
+  "ORPHA:457240": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "X-linked intellectual disability-short stature-overweight syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:171929": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Trisomy 10p",
+    "score": 12.00007165815811
+  },
+  "ORPHA:457212": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "Progressive essential tremor-speech impairment-facial dysmorphism-intellectual disability-abnormal behavior syndrome",
+    "score": 12.00007165815811
+  },
+  "ORPHA:79255": {
+    "phenotypes": [
+      "HP:0000400"
+    ],
+    "disease_name": "GM1 gangliosidosis type 1",
+    "score": 12.00007165815811
+  }
+}

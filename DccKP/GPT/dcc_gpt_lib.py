@@ -179,9 +179,32 @@ def update_db_abstract_for_search_and_run(conn, id_abstract, id_search, id_run, 
     cursor.execute(SQL_UPDATE_ABSTRACT_FOR_TOP_LEVEL, (id_search, id_run, id_abstract))
     conn.commit()
 
-def get_list_abstracts(conn, id_search, id_run, num_level=0, num_abstracts=350, log=False):
+
+def get_pubmed_abstracts_for_gene(conn, gene, num_abstracts=350, to_shuffle=True, log=False):
+    '''
+    returns the most referenced downloaded pubmed abstracts for that gene
+    - returns map with pubmed id and abstract and title
+    '''
+    # initialize
+    # initialize
+    list_abstracts = []
+    cursor = conn.cursor()
+
+    # find the search id for the gene
+    id_search = get_db_search_by_gene(conn=conn, gene=gene)
+
+    # pick the sql based on level
+    if log:
+        print("searching for abstracts got input search: {}, doc_level: {}, limit: {}".format(id_search, num_level, num_abstracts))
+    list_abstracts = get_db_most_ref_abstracts_for_search(conn=conn, id_search=id_search, to_shuffle=to_shuffle, limit=num_abstracts)
+
+    # return
+    return list_abstracts
+    
+def get_list_abstracts(conn, id_search, id_run, num_level=0, num_abstracts=350, to_shuffle=True, log=False):
     '''
     get a list of abstract map objects
+    - num_level of 0 indicate pubmed downloaads; larger level number indicates generated
     '''
     # initialize
     list_abstracts = []
@@ -191,7 +214,7 @@ def get_list_abstracts(conn, id_search, id_run, num_level=0, num_abstracts=350, 
     if log:
         print("searching for abstracts got input search: {}, doc_level: {}, limit: {}".format(id_search, num_level, num_abstracts))
     if num_level == 0:
-        list_abstracts = get_db_most_ref_abstracts_for_search(conn=conn, id_search=id_search, to_shuffle=True, limit=num_abstracts)
+        list_abstracts = get_db_most_ref_abstracts_for_search(conn=conn, id_search=id_search, to_shuffle=to_shuffle, limit=num_abstracts)
     else:
         cursor.execute(SQL_SELECT_ABSTRACT_LIST_LEVEL_HIGHER, (num_level, id_search, id_run, id_search, id_run, num_abstracts))
 
