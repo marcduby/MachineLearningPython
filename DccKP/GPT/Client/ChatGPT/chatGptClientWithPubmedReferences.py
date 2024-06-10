@@ -18,7 +18,9 @@ if ENV_DIR_CODE:
     dir_code = ENV_DIR_CODE
 import sys
 sys.path.insert(0, dir_code + 'MachineLearningPython/DccKP/GPT/')
+print("using code dir: {}".format(dir_code))
 import dcc_gpt_lib
+
 
 # constants
 # KEY_CHATGPT = os.environ.get('CHAT_KEY')
@@ -104,7 +106,7 @@ if __name__ == "__main__":
     gene = 'SLC30A8'
 
     # get the connection
-    conn = dcc_gpt_lib.get_connection()
+    conn = dcc_gpt_lib.get_connection(schema=SCHEMA_GPT)
 
     # get the abstracts
     print("getting abstracts for gene: {}".format(gene))
