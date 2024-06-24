@@ -1,5 +1,169 @@
 
 
+20240612 - festival of genomics - genAI 
+astrazeneca, clinical gen omics 
+- paper - lareg scale foundation model on single cell transriptomics 
+- data levels 
+  - molecular level 
+  - cellular
+  - tissue- organ
+  - system -
+  - patient
+  - population 
+- won foundation model 
+  - called clini cal gtransformer
+  - predicts clinical outcomes from multi modal data 
+  - a=also has genAI component, can converdse with ot 
+  - helps to discover biomarker discovery 
+  - helps figure out what feature is most important in the context 
+- simu,lationn/digital twins 
+  - test out new drugs, see if can move patient state
+  - good way to explore patient population
+- ivestigative use genAI for early clonical development 
+
+elicidata - from models to dployed AI 
+- in biopharma, data is availabe but not ready for AI 
+  - making multi moda data interoperable 
+- large cosfr of not productionizing data 
+- raw data to derived data to algorithms to decision support to automated decision making 
+- product 
+  - harmonize data 
+    - vector storres, embeddings, DBs 
+  - 30+ ETL pipelines 
+  - also have LLM powered NER that recognizes 30+ entities 
+  - case studies 
+    - information retrieval (using gpt4 LLM)
+      - LLM conversation powered by papers, csv, slide decks, reports, multiomics, etc
+      - define sets of queries 
+        - easy, from unstrructured an structured data 
+        - medium, data from structured and olots 
+        - hard , data from 
+      - meaure 
+        - trustworthiness (avoid hallucinationz)
+        - groundedness (follow context)
+        - comprehensiveness  (are all spects fo the questions answered)
+    - building foundation model 
+      - help buld single cell foundation model 
+      - tech 
+        - langchain, mlflow 
+
+teva, using LLM in R%D 
+- target identification, drug e\repupuso=ing, patient segmentation 
+- genAI to produce 60 to 100 billion $ in pharma, mostly from R%D 
+- investment from pharm 2x last 2 yearxs to 62 deals licensing 
+- how used 
+  - clinical trial planning 
+  - target id 
+  - etc 
+- build knowledge graph using 
+  - disgenet, drugbank, biogrid, uniprot, chembl, drugbank gwas catalog, 
+  - learn numerical representations frok KG 
+    - use chars of nodeds and relationships of nodes 
+  - 484k edges 
+    - 8.5k protein/drug, 25 dis/prot, 6k drug/dis
+  - evaluate the model using timee machjne approach 
+    - use only data up to data, then see what predistions for after date 
+  - paper: s bonner at al, 2022 2-100036, atificial intelligence life Science 
+  - teva focused on anti body drugs 
+    - for growing antibodies, use regular pull of data to see how much to add nutrients 
+    - 75 features measured 
+  - pateitn classigifier
+    - use XGBClassifier, AUC=.72
+
+
+genome dome at 160 - use of LLMs 
+computation foundation models for computational pathology 
+- FM does (nature medicine in March) 
+  - vidual and text encoding 
+  - multi modal fusion decoder 
+  - 
+raphael brosula, broad 
+- AI can help worjk across data typess and generizable patient representations 
+- FM trained on EHR 
+- can extract insights from tge data 
+- features that are measurenments reflect better the accuracy of patient
+  - diagnosys not so 
+  - number features can better inform over time 
+mgh - genetics 
+- clinical sequencing realm 
+  - speeding litterature review in WGS interpretation 
+  - evaluate varint pathogenicity 
+  - issues: 
+    - drift over time; so LLMs drift over time 
+discussion 
+- black women have 40% worse risk for good diagnosis
+- models are trained on white women 
+- temporal trends in ehr data 
+- ehr changed during and after pandemic 
+- only 1k south asian genomes so far 
+  - trying ot grow it to 5k, will be largest in world 
+- cancer: used dna bert 
+
+
+genome dome at 1700 - AI in clinical practice 
+dr romero, mayo clinic
+- from data source to storage to data mining and preprocessing, feature engineering to model development to operational deployment 
+- difference between applied AI and research AI 
+  - research AI, focused on model development 
+    - skills: comsci, stats 
+  - applied AI, focused on clinical impact
+    - skills: DS, infor atics, systems engineering
+    - approach: 
+      - system redesign
+      - data quality
+      - model sleection 
+      - human compure su=ynergy 
+      - change management - get people to use the model in their work  
+      - measuring results 
+  - teaching course - executive education course at HSPH 
+
+hunlei xu, novartis 
+- use of AI in clinical trials 
+- genAI use 
+  - help integrate EHR data and historical data 
+  - compating studies 
+- genAI can be golden hammer, but not everything is a nail 
+Dr Tiwarei, wisco 
+- reaesrch and use of AI for it 
+disussion 
+- mayo i referral center 
+  - keeps patients that are complex enough 
+- mayo also used AI to predict how many beds would be need in a week, month 
+- mayo thinks model transparency is overrated 
+  - not as interested how model got there, but interested in what variables are important 
+    - also want accuracy 
+  - for tabular data, XGboost and random forest work just as well if not better 
+- want to train an dtst your model on data from different institutions 
+- q: what about using AI to creen patients to use in clinical trials ?
+  - and how to make sure to get peoolpe with differnt ethnic bacjgrounds 
+  - in braim tumors, men have more chance of getting worse cancers 
+    - so developed sex based models 
+  - in cliniucal trial, use cost in identifying trial candidates (around 40%)
+    - curent: people reading charts of patients to see which ones could be good candidates 
+      - even with very formal inclusion/exclusion criteria, some patients make it through
+    - genAI could drive cost of clinical trials 
+    - but coud also use data filtering tools 
+    
+
+
+todos 
+- look at dna bert 
+- papers above 
+- meta test prediction paper 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 0230427 - odsc daphne koller interview
 
 - insitro 

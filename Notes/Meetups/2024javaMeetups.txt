@@ -1,0 +1,13 @@
+
+
+20240312 - gradle DPE @ Toast 
+netflix - testing
+- predictive test selection 
+- meta 
+
+meta - dashboards 
+- have scatter plot; to best measure (not p90, p50, avg)
+  - take p90, then flatten the top 10% to the p90 value
+  - then average 
+  - keeps crazy points from throwing off your average 
+  - meta paper on productivity graph 
