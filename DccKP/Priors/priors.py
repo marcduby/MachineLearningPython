@@ -7309,6 +7309,9 @@ class GeneSetData(object):
         #this code is adapted from https://github.com/gwas-partitioning/bnmf-clustering
         def _bayes_nmf_l2(V0, n_iter=10000, a0=10, tol=1e-7, K=15, K0=15, phi=1.0):
 
+            # V original and compute tildas
+            # V0 is scaled down matrix
+
             # Bayesian NMF with half-normal priors for W and H
             # V0: input z-score matrix (variants x traits)
             # n_iter: Number of iterations for parameter optimization
@@ -11396,7 +11399,8 @@ class GeneSetData(object):
         else:
             fraction_non_missing = 1
         return fraction_non_missing
-    
+
+    # TODO returns mean shoft/scale factors    
     def _calc_X_shift_scale(self, X, y_corr_cholesky=None):
         if y_corr_cholesky is None:
             mean_shifts = X.sum(axis=0).A1 / X.shape[0]
