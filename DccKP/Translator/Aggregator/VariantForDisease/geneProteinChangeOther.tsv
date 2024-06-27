@@ -1,0 +1,265 @@
+protein_change	variant	gene	phenotype	p_value
+p.D563G	5:102338811:A:G	PAM	Waist-hip ratio adj BMI	5.495e-05
+p.D563G	5:102338811:A:G	PAM	Daytime napping	1.9e-05
+p.S539W	5:102338739:C:G	PAM	Insulin-like growth factor (IGF-1)	4.397e-06
+p.D563G	5:102338811:A:G	PAM	Insulin-like growth factor (IGF-1)	2.892e-06
+p.V534F	5:102326092:G:T	PAM	Right hand grip strength	0.0002808
+p.S539W	5:102338739:C:G	PAM	Right hand grip strength	2.292e-16
+p.D563G	5:102338811:A:G	PAM	Right hand grip strength	1.288e-07
+p.R276W	8:118184783:C:T	SLC30A8	Fasting glucose	3.79e-92
+p.R276Q	8:118184784:G:A	SLC30A8	Fasting glucose	2.31e-05
+p.I300F	8:118184855:A:T	SLC30A8	Fasting glucose	5.636e-17
+p.R276W	8:118184783:C:T	SLC30A8	Random glucose	6.68e-105
+p.R276W	8:118184783:C:T	SLC30A8	Random and fasting glucose	4.12e-95
+p.R276W	8:118184783:C:T	SLC30A8	Random glucose adj fasting time	1.1e-63
+p.R276W	8:118184783:C:T	SLC30A8	Smoking-fasting glucose interaction, main effect model	5.749e-08
+p.R276W	8:118184783:C:T	SLC30A8	Fasting proinsulin adj BMI	3.623e-38
+p.R276W	8:118184783:C:T	SLC30A8	Type 2 diabetes (additive model)	2.497e-38
+p.R276W	8:118184783:C:T	SLC30A8	Fasting proinsulin	3.087e-37
+p.I251L	18:58038832:T:G	MC4R	Weight	0.0002596
+p.V103I	18:58039276:C:T	MC4R	Weight	4.259e-56
+p.V103I	18:58039276:C:T	MC4R	Body mass index (BMI)	1.564e-64
+p.N72S	18:58039368:T:C	MC4R	Body mass index (BMI)	0.00029
+p.D37V	18:58039473:T:A	MC4R	Body mass index (BMI)	3e-11
+p.V103I	18:58039276:C:T	MC4R	Type 2 diabetes (T2D)	2.987e-24
+p.V103I	18:58039276:C:T	MC4R	Total body lean mass	3.758e-21
+p.V103I	18:58039276:C:T	MC4R	Triglycerides	6.431e-18
+p.V103I	18:58039276:C:T	MC4R	HDL cholesterol	3.278e-21
+p.V103I	18:58039276:C:T	MC4R	Serum ApoA	2.885e-14
+p.V103I	18:58039276:C:T	MC4R	BMI adj smoking status	3.067e-09
+p.V103I	18:58039276:C:T	MC4R	Cystatin C	5.67e-12
+p.V103I	18:58039276:C:T	MC4R	Body fat percentage	1.047e-11
+p.V103I	18:58039276:C:T	MC4R	Serum urate	3.695e-05
+p.V103I	18:58039276:C:T	MC4R	Plasma C-reactive protein	3.088e-09
+p.V103I	18:58039276:C:T	MC4R	Hip circumference	2.339e-08
+p.V103I	18:58039276:C:T	MC4R	HbA1c	5.674e-08
+p.I251L	18:58038832:T:G	MC4R	Sex hormone binding globulin (SHBG) levels	0.0004846
+p.V103I	18:58039276:C:T	MC4R	Sex hormone binding globulin (SHBG) levels	0.0003867
+p.V103I	18:58039276:C:T	MC4R	Highlight scatter reticulocyte count	1.121e-06
+p.V103I	18:58039276:C:T	MC4R	eGFRcys (serum cystatin C)	1.938e-06
+p.V103I	18:58039276:C:T	MC4R	Immature reticulocyte fraction	3.697e-05
+p.V103I	18:58039276:C:T	MC4R	Appendicular lean body mass	0.0001035
+p.V103I	18:58039276:C:T	MC4R	Insulin-like growth factor (IGF-1)	5.904e-06
+p.T31I	17:66449122:G:A	WIPI1	Red blood cell distribution width	4.145e-26
+p.T31I	17:66449122:G:A	WIPI1	Alkaline phosphatase (ALP)	3.359e-33
+p.T31I	17:66449122:G:A	WIPI1	Reticulocyte count	1.845e-20
+p.T31I	17:66449122:G:A	WIPI1	Reticulocyte percentage	2.571e-19
+p.T31I	17:66449122:G:A	WIPI1	Serum albumin	1.004e-08
+p.T31I	17:66449122:G:A	WIPI1	Highlight scatter reticulocyte count	1.735e-15
+p.T31I	17:66449122:G:A	WIPI1	Mean corpuscular hemoglobin concentration	2.703e-13
+p.T31I	17:66449122:G:A	WIPI1	Serum creatinine	8.785e-22
+p.T31I	17:66449122:G:A	WIPI1	Highlight scatter reticulocyte percentage	1.797e-14
+p.T31I	17:66449122:G:A	WIPI1	LDL cholesterol	8.749e-13
+p.T31I	17:66449122:G:A	WIPI1	Random glucose	6.34e-17
+p.T31I	17:66449122:G:A	WIPI1	Phosphate	7.07e-15
+p.T31I	17:66449122:G:A	WIPI1	Height	1.115e-13
+p.T31I	17:66449122:G:A	WIPI1	Total bilirubin	1.442e-09
+p.T31I	17:66449122:G:A	WIPI1	eGFRcreat (serum creatinine)	2.271e-16
+p.T31I	17:66449122:G:A	WIPI1	Alanine transaminase (ALT)	4.424e-09
+p.T31I	17:66449122:G:A	WIPI1	Aspartate aminotransferase (AST)	0.0003522
+p.T31I	17:66449122:G:A	WIPI1	Gamma-glutamyl transferase (GGT)	2.437e-09
+p.T31I	17:66449122:G:A	WIPI1	eGFRcreat in individuals without diabetes	1.1e-14
+p.R17W	12:93966722:C:T	SOCS2	Height	0.00014
+p.I27L	12:121416650:A:C	HNF1A	Gamma-glutamyl transferase (GGT)	5e-324
+p.N62S	12:121416756:A:G	HNF1A	Gamma-glutamyl transferase (GGT)	1.6e-07
+p.R68Q	12:121416774:G:A	HNF1A	Gamma-glutamyl transferase (GGT)	0.0002076
+p.L86H	12:121416828:T:A	HNF1A	Gamma-glutamyl transferase (GGT)	6e-10
+p.A98V	12:121416864:C:T	HNF1A	Gamma-glutamyl transferase (GGT)	1.026e-12
+p.I27L	12:121416650:A:C	HNF1A	Plasma C-reactive protein	5e-324
+p.R68Q	12:121416774:G:A	HNF1A	Plasma C-reactive protein	0.0002676
+p.A98V	12:121416864:C:T	HNF1A	Plasma C-reactive protein	3.326e-13
+p.I27L	12:121416650:A:C	HNF1A	Total cholesterol	1.02e-166
+p.I27L	12:121416650:A:C	HNF1A	LDL cholesterol	7.44e-165
+p.I27L	12:121416650:A:C	HNF1A	Alkaline phosphatase (ALP)	1.81e-202
+p.N62S	12:121416756:A:G	HNF1A	Alkaline phosphatase (ALP)	2.1e-06
+p.A98V	12:121416864:C:T	HNF1A	Alkaline phosphatase (ALP)	3.406e-09
+p.I27L	12:121416650:A:C	HNF1A	Non-HDL cholesterol	1.204e-85
+p.I27L	12:121416650:A:C	HNF1A	Sex hormone-binding globulin levels adj BMI	5.452e-38
+p.A98V	12:121416864:C:T	HNF1A	Sex hormone-binding globulin levels adj BMI	3e-27
+p.I27L	12:121416650:A:C	HNF1A	Insulin-like growth factor (IGF-1)	1.699e-16
+p.A98V	12:121416864:C:T	HNF1A	Insulin-like growth factor (IGF-1)	7.45e-145
+p.I27L	12:121416650:A:C	HNF1A	Cystatin C	1.284e-57
+p.I27L	12:121416650:A:C	HNF1A	Sex hormone binding globulin (SHBG) levels	1.196e-32
+p.A98V	12:121416864:C:T	HNF1A	Sex hormone binding globulin (SHBG) levels	2.417e-23
+p.I27L	12:121416650:A:C	HNF1A	Plateletcrit (PCT)	1.644e-34
+p.I27L	12:121416650:A:C	HNF1A	Serum ApoB	2.748e-44
+p.I27L	12:121416650:A:C	HNF1A	Platelet count	2.55e-31
+p.I27L	12:121416650:A:C	HNF1A	HDL cholesterol	7.919e-30
+p.I27L	12:121416650:A:C	HNF1A	Hemoglobin concentration	5.806e-22
+p.A98V	12:121416864:C:T	HNF1A	Hemoglobin concentration	0.000482
+p.I27L	12:121416650:A:C	HNF1A	Type 2 diabetes (T2D)	1.88e-26
+p.A98V	12:121416864:C:T	HNF1A	Type 2 diabetes (T2D)	8.63e-49
+p.I27L	12:121416650:A:C	HNF1A	Mean corpuscular hemoglobin	4.439e-14
+p.R68Q	12:121416774:G:A	HNF1A	Mean corpuscular hemoglobin	0.000126
+p.A98V	12:121416864:C:T	HNF1A	Mean corpuscular hemoglobin	0.00013
+p.I27L	12:121416650:A:C	HNF1A	Mean corpuscular volume	3.091e-09
+p.R68Q	12:121416774:G:A	HNF1A	Mean corpuscular volume	0.00014
+p.A98V	12:121416864:C:T	HNF1A	Mean corpuscular volume	2.73e-05
+p.I27L	12:121416650:A:C	HNF1A	Serum urate	1.032e-21
+p.A98V	12:121416864:C:T	HNF1A	Serum urate	1.779e-19
+p.I27L	12:121416650:A:C	HNF1A	Hematocrit	4.199e-17
+p.A98V	12:121416864:C:T	HNF1A	Hematocrit	7.25e-05
+p.P7L	6:39016636:C:T	GLP1R	HbA1c	2.152e-08
+p.R131Q	6:39033595:G:A	GLP1R	HbA1c	6.566e-11
+p.R310Q	6:39046777:G:A	GLP1R	HbA1c	0.0001
+p.A316T	6:39046794:G:A	GLP1R	HbA1c	7.578e-13
+p.P7L	6:39016636:C:T	GLP1R	Type 2 diabetes (T2D)	2.381e-10
+p.R131Q	6:39033595:G:A	GLP1R	Type 2 diabetes (T2D)	3.893e-25
+p.A316T	6:39046794:G:A	GLP1R	Type 2 diabetes (T2D)	4.627e-07
+p.R131Q	6:39033595:G:A	GLP1R	Fasting glucose	2.312e-19
+p.L260F	6:39041502:A:C	GLP1R	Fasting glucose	0.0001803
+p.R131Q	6:39033595:G:A	GLP1R	Fasting glucose adj BMI	3.629e-05
+p.G168S	6:39034072:G:A	GLP1R	Fasting glucose adj BMI	4.355e-08
+p.A316T	6:39046794:G:A	GLP1R	Fasting glucose adj BMI	1.006e-15
+p.A316T	6:39046794:G:A	GLP1R	Smoking-T2D interaction, joint 2-degree-of-freedom test	1.957e-25
+p.L260F	6:39041502:A:C	GLP1R	Body mass index (BMI)	6.609e-09
+p.P7L	6:39016636:C:T	GLP1R	Random glucose	0.0002122
+p.G168S	6:39034072:G:A	GLP1R	Random glucose	4.148e-06
+p.A316T	6:39046794:G:A	GLP1R	Random glucose	8.086e-17
+p.G168S	6:39034072:G:A	GLP1R	Weight	9.461e-05
+p.L260F	6:39041502:A:C	GLP1R	Weight	1.847e-06
+p.G168S	6:39034072:G:A	GLP1R	Height	5.554e-11
+p.A316T	6:39046794:G:A	GLP1R	Height	5.218e-06
+p.G168S	6:39034072:G:A	GLP1R	Random and fasting glucose	3.756e-07
+p.A316T	6:39046794:G:A	GLP1R	Random and fasting glucose	4.623e-27
+p.G168S	6:39034072:G:A	GLP1R	Total testosterone levels	6.23e-06
+p.G168S	6:39034072:G:A	GLP1R	Cystatin C	1.956e-05
+p.G168S	6:39034072:G:A	GLP1R	Bioavailable testosterone levels	9.409e-06
+p.L260F	6:39041502:A:C	GLP1R	Knee osteoarthritis	0.0004874
+p.L260F	6:39041502:A:C	GLP1R	Total body lean mass	0.0004781
+p.G168S	6:39034072:G:A	GLP1R	Appendicular lean body mass	0.0002762
+p.P7L	6:39016636:C:T	GLP1R	Random glucose adj fasting time	5e-05
+p.G168S	6:39034072:G:A	GLP1R	Random glucose adj fasting time	0.00015
+p.A316T	6:39046794:G:A	GLP1R	Random glucose adj fasting time	9.7e-20
+p.R84Q	12:112220993:G:A	ALDH2	Eosinophil count	4.205e-05
+p.D110H	12:112221070:G:C	ALDH2	Alkaline phosphatase (ALP)	5.5e-05
+p.S189T	19:13051130:G:C	CALR	Reticulocyte percentage	4.677e-05
+p.S189T	19:13051130:G:C	CALR	Highlight scatter reticulocyte percentage	1.389e-05
+p.S189T	19:13051130:G:C	CALR	Reticulocyte count	9.918e-05
+p.S189T	19:13051130:G:C	CALR	Highlight scatter reticulocyte count	2.474e-05
+p.R185H	11:102985957:G:A	DYNC2H1	Body mass index (BMI)	0.00014
+p.K1413R	11:103029516:A:G	DYNC2H1	Body mass index (BMI)	3.738e-05
+p.L2520V	11:103062843:C:G	DYNC2H1	Body mass index (BMI)	0.00012
+p.K1413R	11:103029516:A:G	DYNC2H1	Type 2 diabetes (T2D)	1.171e-10
+p.I1825V	11:103043949:A:G	DYNC2H1	Bipolar II disorder	0.0004645
+p.K1413R	11:103029516:A:G	DYNC2H1	Forced vital capacity (FVC)	0.000143
+p.K1413R	11:103029516:A:G	DYNC2H1	Triglycerides	4.268e-08
+p.K1413R	11:103029516:A:G	DYNC2H1	Intraocular pressure	1.993e-05
+p.K1413R	11:103029516:A:G	DYNC2H1	Triglyceride levels in individuals without type 2 diabetes	1.034e-05
+p.R2871Q	11:103082590:G:A	DYNC2H1	Triglyceride levels in individuals without type 2 diabetes	5.417e-06
+p.R2871Q	11:103082590:G:A	DYNC2H1	Red blood cell count	0.0002075
+p.K1413R	11:103029516:A:G	DYNC2H1	Hypertension	1.117e-06
+p.R2871Q	11:103082590:G:A	DYNC2H1	Hypertension	5.192e-06
+p.P216L	19:19378859:G:A	TM6SF2	Triglycerides	0.00035380000000000003
+p.L156P	19:19380513:A:G	TM6SF2	Triglycerides	2.45e-113
+p.F155S	19:19380516:A:G	TM6SF2	Triglycerides	3.793e-07
+p.P216L	19:19378859:G:A	TM6SF2	Total cholesterol	3.373e-05
+p.L156P	19:19380513:A:G	TM6SF2	Total cholesterol	1.51e-162
+p.F155S	19:19380516:A:G	TM6SF2	Total cholesterol	1.0539999999999999e-07
+p.L156P	19:19380513:A:G	TM6SF2	Non-HDL cholesterol	2.95e-152
+p.F155S	19:19380516:A:G	TM6SF2	Non-HDL cholesterol	2.253e-06
+p.M150V	19:19380532:T:C	TM6SF2	Non-HDL cholesterol	0.000255881
+p.L156P	19:19380513:A:G	TM6SF2	Plateletcrit (PCT)	7.54e-21
+p.P216L	19:19378859:G:A	TM6SF2	LDL cholesterol	8.504e-05
+p.L156P	19:19380513:A:G	TM6SF2	LDL cholesterol	5.47e-111
+p.F155S	19:19380516:A:G	TM6SF2	LDL cholesterol	1.712e-07
+p.L156P	19:19380513:A:G	TM6SF2	Triglyceride levels in individuals without type 2 diabetes	5.434e-46
+p.F155S	19:19380516:A:G	TM6SF2	Triglyceride levels in individuals without type 2 diabetes	1.306e-08
+p.L156P	19:19380513:A:G	TM6SF2	Alkaline phosphatase (ALP)	5.8e-33
+p.L156P	19:19380513:A:G	TM6SF2	Serum ApoB	7.951e-48
+p.L156P	19:19380513:A:G	TM6SF2	Alanine transaminase (ALT)	1.151e-25
+p.L156P	19:19380513:A:G	TM6SF2	Platelet count	2.43e-11
+p.L156P	19:19380513:A:G	TM6SF2	Aspartate aminotransferase (AST)	1.229e-18
+p.L156P	19:19380513:A:G	TM6SF2	NAFLD	7.065e-19
+p.L156P	19:19380513:A:G	TM6SF2	Liver fat content	4.2e-14
+p.L156P	19:19380513:A:G	TM6SF2	Liver proton density fat fraction	1.844e-19
+p.L156P	19:19380513:A:G	TM6SF2	AST-ALT ratio	5.361e-10
+p.L156P	19:19380513:A:G	TM6SF2	Direct bilirubin	5.383e-19
+p.V109G	12:12871099:T:G	CDKN1B	Height	4.016e-80
+p.V109G	12:12871099:T:G	CDKN1B	Appendicular lean body mass	8.755e-18
+p.V109G	12:12871099:T:G	CDKN1B	Mosaic chromosomal alteration of the Y chromosome	5.802e-05
+p.V109G	12:12871099:T:G	CDKN1B	Pulse pressure	0.0002555
+p.V109G	12:12871099:T:G	CDKN1B	Total body lean mass	4.887e-10
+p.V109G	12:12871099:T:G	CDKN1B	Fetal genetic effect on own birth weight	2.858e-05
+p.V109G	12:12871099:T:G	CDKN1B	Age at natural menopause (ANM)	1.251e-05
+p.V109G	12:12871099:T:G	CDKN1B	Monocyte count	4.965e-09
+p.T48M	6:35253974:C:T	ZNF76	Monocyte percentage	2.637e-14
+p.T10N	6:35248957:C:A	ZNF76	Height	6.762e-06
+p.T48M	6:35253974:C:T	ZNF76	Height	2.034e-06
+p.S377R	6:35260530:C:G	ZNF76	Height	0.0004398
+p.T48M	6:35253974:C:T	ZNF76	White blood cell count	0.0002694
+p.T48M	6:35253974:C:T	ZNF76	Lymphocyte count	1.65e-21
+p.R403Q	6:35260700:G:A	ZNF76	Lymphocyte count	4.81e-05
+p.T48M	6:35253974:C:T	ZNF76	Alkaline phosphatase (ALP)	4.572e-09
+p.T48M	6:35253974:C:T	ZNF76	Appendicular lean body mass	2.205e-08
+p.T10N	6:35248957:C:A	ZNF76	Weight	2.706e-08
+p.T48M	6:35253974:C:T	ZNF76	Weight	4.522e-16
+p.T10N	6:35248957:C:A	ZNF76	HDL cholesterol	0.0001516
+p.T48M	6:35253974:C:T	ZNF76	Platelet count	2.294e-12
+p.T48M	6:35253974:C:T	ZNF76	Total body lean mass	1.276e-13
+p.T48M	6:35253974:C:T	ZNF76	Mean platelet volume	5.93e-09
+p.T48M	6:35253974:C:T	ZNF76	Heel quantitative ultrasound estimated bone mineral density (eBMD)	3.3e-10
+p.T10N	6:35248957:C:A	ZNF76	Serum ApoA	7.233e-05
+p.A818T	3:47452118:G:A	PTPN23	Lymphocyte count	3.657e-48
+p.G1004S	3:47452676:G:A	PTPN23	Lymphocyte count	6.17e-05
+p.A818T	3:47452118:G:A	PTPN23	Platelet distribution width	1.306e-54
+p.A818T	3:47452118:G:A	PTPN23	White blood cell count	3.49e-38
+p.A818T	3:47452118:G:A	PTPN23	Sex hormone-binding globulin levels adj BMI	1.854e-21
+p.A818T	3:47452118:G:A	PTPN23	Mean platelet volume	2.83e-20
+p.A818T	3:47452118:G:A	PTPN23	Insulin-like growth factor (IGF-1)	1.257e-17
+p.P973S	3:47452583:C:T	PTPN23	Insulin-like growth factor (IGF-1)	0.000418
+p.A818T	3:47452118:G:A	PTPN23	Gamma-glutamyl transferase (GGT)	1.654e-27
+p.A818T	3:47452118:G:A	PTPN23	Sex hormone binding globulin (SHBG) levels	4.719e-16
+p.A818T	3:47452118:G:A	PTPN23	Highlight scatter reticulocyte percentage	2.736e-14
+p.A818T	3:47452118:G:A	PTPN23	Reticulocyte percentage	3.08e-14
+p.A818T	3:47452118:G:A	PTPN23	Neutrophil count	1.493e-15
+p.A818T	3:47452118:G:A	PTPN23	Highlight scatter reticulocyte count	3.273e-13
+p.A818T	3:47452118:G:A	PTPN23	Mosaic chromosomal alteration of the Y chromosome	3.249e-14
+p.A818T	3:47452118:G:A	PTPN23	Serum urate	6.677e-11
+p.A818T	3:47452118:G:A	PTPN23	Alkaline phosphatase (ALP)	6.3e-15
+p.A818T	3:47452118:G:A	PTPN23	Reticulocyte count	1.734e-12
+p.A818T	3:47452118:G:A	PTPN23	Monocyte percentage	3.2e-11
+p.A818T	3:47452118:G:A	PTPN23	Basophil count	1.998e-08
+p.A818T	3:47452118:G:A	PTPN23	Waist-hip ratio adj BMI	4.37e-08
+p.A818T	3:47452118:G:A	PTPN23	Lymphocyte percentage	5.382e-07
+p.L48M	16:1129010:C:A	SSTR5	Insulin-like growth factor (IGF-1)	2.74e-297
+p.A52V	16:1129023:C:T	SSTR5	Insulin-like growth factor (IGF-1)	2.081e-06
+p.P109S	16:1129193:C:T	SSTR5	Insulin-like growth factor (IGF-1)	4.923e-07
+p.P335L	16:1129872:C:T	SSTR5	Insulin-like growth factor (IGF-1)	7.354e-63
+p.L48M	16:1129010:C:A	SSTR5	Height	4.601e-10
+p.P335L	16:1129872:C:T	SSTR5	Height	6.099e-11
+p.L48M	16:1129010:C:A	SSTR5	Total body lean mass	0.0001523
+p.L48M	16:1129010:C:A	SSTR5	Weight	0.0003591
+p.L48M	16:1129010:C:A	SSTR5	Heel quantitative ultrasound estimated bone mineral density (eBMD)	2.108e-17
+p.P335L	16:1129872:C:T	SSTR5	Heel quantitative ultrasound estimated bone mineral density (eBMD)	5.859e-09
+p.L48M	16:1129010:C:A	SSTR5	Gamma-glutamyl transferase (GGT)	3.148e-06
+p.P335L	16:1129872:C:T	SSTR5	Gamma-glutamyl transferase (GGT)	2.816e-08
+p.L48M	16:1129010:C:A	SSTR5	Hematocrit	0.0001647
+p.P335L	16:1129872:C:T	SSTR5	Snoring	0.0001858
+p.P335L	16:1129872:C:T	SSTR5	Platelet distribution width	1.046e-05
+p.R234H	16:1129569:G:A	SSTR5	Diastolic blood pressure	0.0002431
+p.L48M	16:1129010:C:A	SSTR5	Highlight scatter reticulocyte percentage	5.983e-05
+p.L48M	16:1129010:C:A	SSTR5	Highlight scatter reticulocyte count	2.076e-05
+p.L48M	16:1129010:C:A	SSTR5	Daytime napping	8.5e-05
+p.L196P	16:1129455:T:C	SSTR5	Systolic blood pressure	0.0003523
+p.P916L	20:39813729:G:A	ZHX3	Total cholesterol	8.569e-14
+p.N310S	20:39832628:T:C	ZHX3	Total cholesterol	4.113e-12
+p.P916L	20:39813729:G:A	ZHX3	LDL cholesterol	5.144e-12
+p.N310S	20:39832628:T:C	ZHX3	LDL cholesterol	2.43e-12
+p.P916L	20:39813729:G:A	ZHX3	Non-HDL cholesterol	8.585e-06
+p.N310S	20:39832628:T:C	ZHX3	Non-HDL cholesterol	5.681e-05
+p.P916L	20:39813729:G:A	ZHX3	Serum ApoB	1.45e-13
+p.N310S	20:39832628:T:C	ZHX3	Serum ApoB	1.463e-10
+p.P916L	20:39813729:G:A	ZHX3	Gamma-glutamyl transferase (GGT)	2.811e-12
+p.N310S	20:39832628:T:C	ZHX3	Gamma-glutamyl transferase (GGT)	1.233e-10
+p.P916L	20:39813729:G:A	ZHX3	Total bilirubin	1.44e-16
+p.N310S	20:39832628:T:C	ZHX3	Total bilirubin	1.418e-23
+p.P916L	20:39813729:G:A	ZHX3	Heel quantitative ultrasound estimated bone mineral density (eBMD)	2.574e-34
+p.N310S	20:39832628:T:C	ZHX3	Heel quantitative ultrasound estimated bone mineral density (eBMD)	1.569e-40
+p.N310S	20:39832628:T:C	ZHX3	Plasma C-reactive protein	0.0001199
+p.N310S	20:39832628:T:C	ZHX3	Total testosterone levels	1.715e-05
+p.A52T	20:39833403:C:T	ZHX3	Total testosterone levels	3.328e-06
+p.P916L	20:39813729:G:A	ZHX3	Phosphate	1.216e-21
+p.N310S	20:39832628:T:C	ZHX3	Phosphate	4.761e-27
+p.P916L	20:39813729:G:A	ZHX3	Platelet count	2.394e-07
+p.N310S	20:39832628:T:C	ZHX3	Platelet count	6.192e-09

@@ -1,0 +1,61 @@
+protein_change	variant	gene	phenotype	p_value
+p.C271Y	18:58038771:C:T	MC4R	Body mass index (BMI)	1.6e-05
+p.E61K	18:58039402:C:T	MC4R	Body mass index (BMI)	1.1e-08
+p.T196A	12:121431382:A:G	HNF1A	Gamma-glutamyl transferase (GGT)	2.7e-07
+p.E504K	12:112241766:G:A	ALDH2	White blood cell count	0.0001002
+p.E504K	12:112241766:G:A	ALDH2	Platelet count	2.067e-16
+p.E504K	12:112241766:G:A	ALDH2	Red blood cell count	2.822e-07
+p.E504K	12:112241766:G:A	ALDH2	Mean corpuscular hemoglobin	6.645e-21
+p.E504K	12:112241766:G:A	ALDH2	Alanine transaminase (ALT)	3.92e-28
+p.H341Y	11:102991197:C:T	DYNC2H1	Waist-hip ratio adj BMI	1.099e-05
+p.T1288A	11:103027234:A:G	DYNC2H1	Waist-hip ratio adj BMI	1.606e-05
+p.H341Y	11:102991197:C:T	DYNC2H1	Type 2 diabetes (T2D)	0.0001682
+p.T1288A	11:103027234:A:G	DYNC2H1	Type 2 diabetes (T2D)	0.0002137
+p.H341Y	11:102991197:C:T	DYNC2H1	Triglycerides	8.535e-05
+p.T1288A	11:103027234:A:G	DYNC2H1	Triglycerides	2.242e-05
+p.E3117K	11:103093811:G:A	DYNC2H1	Triglyceride levels in individuals without type 2 diabetes	5.882e-05
+p.H341Y	11:102991197:C:T	DYNC2H1	Red blood cell count	9.224e-08
+p.T1288A	11:103027234:A:G	DYNC2H1	Red blood cell count	1.143e-06
+p.T1288A	11:103027234:A:G	DYNC2H1	Bipolar disorder without psychosis	0.0002586
+p.H341Y	11:102991197:C:T	DYNC2H1	Hematocrit percentage	2.726e-05
+p.T1288A	11:103027234:A:G	DYNC2H1	Hematocrit percentage	6.656e-05
+p.H341Y	11:102991197:C:T	DYNC2H1	Hypertension	8.748e-05
+p.T1288A	11:103027234:A:G	DYNC2H1	Hypertension	1.407e-05
+p.E167K	19:19379549:C:T	TM6SF2	Triglycerides	5e-324
+p.N139K	19:19380563:A:C	TM6SF2	Triglycerides	3.655e-10
+p.E167K	19:19379549:C:T	TM6SF2	Total cholesterol	7.43e-312
+p.N139K	19:19380563:A:C	TM6SF2	Total cholesterol	2.8310000000000004e-10
+p.E167K	19:19379549:C:T	TM6SF2	Non-HDL cholesterol	5e-324
+p.N139K	19:19380563:A:C	TM6SF2	Non-HDL cholesterol	6.624e-08
+p.E167K	19:19379549:C:T	TM6SF2	Plateletcrit (PCT)	4.657e-21
+p.E167K	19:19379549:C:T	TM6SF2	LDL cholesterol	2.73e-283
+p.N139K	19:19380563:A:C	TM6SF2	LDL cholesterol	1.662e-05
+p.E167K	19:19379549:C:T	TM6SF2	Triglyceride levels in individuals without type 2 diabetes	8.45e-159
+p.E167K	19:19379549:C:T	TM6SF2	Alkaline phosphatase (ALP)	5.76e-161
+p.E167K	19:19379549:C:T	TM6SF2	Serum ApoB	6.58e-208
+p.E167K	19:19379549:C:T	TM6SF2	Alanine transaminase (ALT)	3.7e-131
+p.E167K	19:19379549:C:T	TM6SF2	Red blood cell distribution width	1.214e-14
+p.E167K	19:19379549:C:T	TM6SF2	Platelet count	9.591e-08
+p.E167K	19:19379549:C:T	TM6SF2	Height	5.74e-21
+p.E167K	19:19379549:C:T	TM6SF2	Aspartate aminotransferase (AST)	5.84e-66
+p.E167K	19:19379549:C:T	TM6SF2	NAFLD	1.19e-114
+p.E167K	19:19379549:C:T	TM6SF2	Liver fat content	3.01e-115
+p.E167K	19:19379549:C:T	TM6SF2	Liver proton density fat fraction	4.45e-110
+p.E167K	19:19379549:C:T	TM6SF2	Platelet distribution width	2.824e-09
+p.E167K	19:19379549:C:T	TM6SF2	Monocyte count	1.988e-05
+p.E167K	19:19379549:C:T	TM6SF2	AST-ALT ratio	6.577e-60
+p.E167K	19:19379549:C:T	TM6SF2	Direct bilirubin	2.483e-78
+p.R272C	6:35259397:C:T	ZNF76	White blood cell count	0.000409
+p.R272C	6:35259397:C:T	ZNF76	Total cholesterol	2.071e-27
+p.R272C	6:35259397:C:T	ZNF76	Alkaline phosphatase (ALP)	3.166e-17
+p.R272C	6:35259397:C:T	ZNF76	Weight	5.968e-13
+p.R272C	6:35259397:C:T	ZNF76	Alanine transaminase (ALT)	1.788e-05
+p.R272C	6:35259397:C:T	ZNF76	HDL cholesterol	5.688e-13
+p.R272C	6:35259397:C:T	ZNF76	Platelet count	7.91e-17
+p.R272C	6:35259397:C:T	ZNF76	Total body lean mass	3.148e-06
+p.R272C	6:35259397:C:T	ZNF76	Non-HDL cholesterol	1.541e-12
+p.R272C	6:35259397:C:T	ZNF76	LDL cholesterol	3.931e-14
+p.R272C	6:35259397:C:T	ZNF76	Serum ApoA	1.379e-08
+p.E135K	3:47448214:G:A	PTPN23	Lymphocyte count	0.000404
+p.E135K	3:47448214:G:A	PTPN23	Lymphocyte percentage	5.844e-06
+p.R101C	X:153055212:G:A	IDH3G	HbA1c adj BMI	5.46e-63
