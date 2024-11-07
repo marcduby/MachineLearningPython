@@ -1,6 +1,87 @@
 
 
 
+20241107 - 1140 - how to make better summaries unsing LLMs
+- A+ - reference todo
+- chunking strategies
+  - fixed token 
+  - recursive - break doc on line breaks then joins them until limit 
+  - semantic - puts info together based on intent of senetence 
+  - html/makdown/code - availavle in langchain and llamaindex 
+
+- summarrization technoiches
+  - map reduce 
+    - create summary of each chunk
+    - then use 3 summariess and creat a final one 
+  - refine 
+    - sequencially create summary and refine with next chun
+    - generate first summary, then add next chiunk and create/refine new summary 
+
+- fine tuning 
+  - instructlab library oss
+    - enables fine tuning of an existing LLM 
+    - model agnostic 
+    - create synthetic dataset for training just a few examp,es 
+    - 
+
+- evaluation 
+  - overlap based 
+  - semantic based 
+  - LLM based 
+    - exx: use mistral 7B for summarization, then use better model (mistral 13B) for evluatiohn
+
+- question/answer generation (QAGs)
+  - look at figure 
+
+- G-eval 
+  - see paper
+  - steps 
+    - task introduction
+    - evaluation criteria 
+    - evaluation steps 
+
+- example of tech stacks 
+  - model - mistral ai or ibm granite 
+  - framework - langchain 
+  - chunking
+  - fine tuning - instruct lab 
+  - deployment - red hat openshift 
+
+- LLM life cycle and data floe 
+  - see figure 
+
+- takeways 
+   - choose right mkdel for your use case 
+   - account for text length *short or long)
+   - document struxtures helps inform the chunking approach 
+   - summarization tec hnique is based on requirement and doc structure 
+   - for specialized output, look to fine tuned model 
+
+
+
+20241107 - 1100 - explaing ML model using LLMs
+- C
+- SHAP 
+  - takes any black box model and can find the contribution of each featture 
+
+
+
+
+20241107 - 1000 - time series forecasting 
+- B+ - reference todo
+- github 
+  - 
+
+- sktime, skforecast - from scikit libs 
+- sktime functions 
+  - Detrender() -> removes trend of data so can see seasonality better 
+
+- skforecast 
+  - more limited furntionality compared to sktime 
+  - but faster
+  - expects data prep using pandas 
+
+
 20241107 - 0900 - keynote first day 
 - ai transformations
   - enrich employee work
@@ -12,6 +93,21 @@
   - deploy apps to azure using vs code or githubv actions 
 
 - demo 
-  - quartz provises async in flask 
-  
+  - quart provises async in flask 
+
+- azure 
+   'azd up' command to get service up
+   - uses bicep?
+
+
+
+20241106 - week training 
+
+- 20241107 - 0750 - 25 ss bike 
+  - 25/160
+- 20241106 - 1800 - 35 ss bike
+  - 35/135
+- 20241106 - 0700 - 100 ss bike and row
+  - 100/100
+
 
