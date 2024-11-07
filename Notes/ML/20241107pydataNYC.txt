@@ -1,5 +1,120 @@
 
 
+Next:
+
+
+20241107 - 1605 - tuning the LLM transformer - MB 
+- piano 
+  - 3 pedals, 88 keys
+  - music is a sequence of force, speed and length of key strike
+  - can model this into time sequence of events 
+    - MIDI format (Musical Instrument Digital Interface)
+    - can reporesent as dataframe of notes
+      - each note 4 values (pitch, velocity - how loud, start, end)
+
+- <BOS> input to llm here text <EOS>
+  - used for regular next token prediction/training
+
+- <MASK> is a great <MASK> today 
+  - mask token prediction replacement
+  - can use this to prpedict deleted parts of a musical sequence 
+
+- pianoroll.io 
+  - crowdsourcing for gathering enough piano data to train genAI model
+    - got4 trained on 20+ trillion tokens
+    - trying to get 31 10e6 notes, which would be 200 1-e6 tokens for LLM training  
+  - they use GPT2 models
+
+
+- do fine tuning of piano model to teach it better harmonics
+
+- huggigface.co/epr-labs 
+
+
+
+
+
+20241107 - 1520 - faster pyspark with apache arrow - MB 
+- regular python udf forces data serialization between jvm and python process
+  - regular udf serializes using general pkl (pikle) format
+  - arrow uses more efficient specialized format 
+
+
+
+
+20241107 - 1430 - knowledge graphs AI, neo4j - CPW
+- LLMs generate data, not knowledge 
+- glaive AI fine tune of llama
+- thursday ai pod, @ThursdAI_prod in twitter 
+- neo4j  - uses proprerty graph model 
+  - includdes graph data science 
+  - queries in pattern matching
+
+- graphRAG
+  - differen from vector RAG 
+  - adding knowledge graph relationships into the RAG 
+  - so 
+    - vector graphs
+    - search and pattern matching
+    - graph queriess
+
+- construct knowledge grpah from unstructured text 
+  - neo4j project to look at 
+  - https://github.com/neo4j-examples/sec-edgar-notebooks/blob/main/notebooks/kg-construction/1-mvg.ipynb
+  - 
+
+- graphacademy.neo4j.com
+
+
+
+20241107 - 1325 - trustworthy ai adoption in healthcare and LF 
+- more than 55% women in europe die of CVD 
+  - risk dramatically goes up after menopause
+  - need to filter data for this artifact 
+- ai has potential to amplify data bias 
+- PA is removing all race based data for the care algorithm 
+- mcinsey hel\alth institute study 
+  - closing the women's health gap 
+
+- ai equity 
+  - amgen, jnj, bayer, novartis 
+
+- eu has 5% of income penalty for misues/bad ai 
+- ethicara  responsible AI tool in pfizer 
+- sourcezs of ai bias
+  - data/social bias 
+  - algorithm bias 
+- NYS 
+  - any AI algoritthm that tpuches individual roghts (employment, etc) jhas to undergo bias testing 
+
+- AI in hrealthcare (see figure)
+  - radiology
+  - oncology 
+  - pathology 
+
+- emerging abilities of AI 
+  - see figures 
+
+AI in healthcare (see figure)
+  - scientific discovery 
+  - product development 
+  - manufacturing and supply chain
+  - market access and commercialization
+  - patient and HCP support 
+
+- genAI in healthcare (see figure)
+  - RND
+    - 
+  - clinical devlopment, manufacturing and supply chanin, commercial, enabling functions, enerprise knowledge management
+
+ - SaMD - sotfeare as medical device - apvales for NDA 
+
+
+
+
+
+
+
 
 20241107 - 1140 - how to make better summaries unsing LLMs
 - A+ - reference todo
