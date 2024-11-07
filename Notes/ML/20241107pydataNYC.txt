@@ -1,0 +1,17 @@
+
+
+
+20241107 - 0900 - keynote first day 
+- ai transformations
+  - enrich employee work
+  - reinvent customer
+  - reshape business processes
+  - product innovation
+
+- azure ai templtae library 
+  - deploy apps to azure using vs code or githubv actions 
+
+- demo 
+  - quartz provises async in flask 
+  
+
