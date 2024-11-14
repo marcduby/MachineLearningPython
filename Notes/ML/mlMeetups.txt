@@ -1,6 +1,114 @@
 
 
 
+
+
+20241114 - google devfest boston 2024 
+
+1140 - AI in hiring 
+- 5 traits gotten from video (gets personality profile)
+  - openess, conscientiousness, extraversion, aggreeable, neuroticism 
+
+- amazon 2014 
+  - wanted system to take i n 100 resumes, sit out 5 that wwe hire 
+  - it worked, but they found odd correlations (lacrosse good, women bad)
+- humantic -> company that cteates a big 5 personality profile score from social media 
+
+- benefits of AI in hiring 
+  - possibility of adding objectivity to hiring process 
+    - take bias out of human reviewing the resume 
+
+- biases in hiring 
+  - confirmation bias -> confirm how I feel
+  - affinity bias ->  like peole who are like us (hobbies, etc)
+  - anchroing effect 
+  - halo effect
+  - 
+  - 
+
+- openethics -> company to make AI fairer 
+- need to balance ai and humen judgment 
+- www.gordianknot.company 
+
+
+
+
+1100 - google APIs by cyber web consulting 
+- athn vs authz 
+  - authentication vs authorization 
+  - authz usually uses oauth2 for this purpose 
+    - for APIs, need permission scope 
+  
+- 9 stes to gcp apis 
+  - go to gogole cloud 
+  - login to acct 
+  - reate project (logical container for apps to use)
+  - enable APIs to use 
+  - enable billing 
+  - download client libs 
+  - create and download credentials 
+  - write code (import client libs, create api aboject, use client to maker call)
+  - run cod (may need to authorize)
+- console.developers.google.com 
+  - 3 main sections 
+    - dashboard 
+      - list of APIs turned on for the project 
+    - library of available APIs
+    - credentials tab 
+
+- client libs 
+  - 2 types of libs 
+    - platform level -> might have to do more work, but easy to integrate pultiple prodicts
+    - product level -> custom libs specific to one product 
+- 3 credentia types 
+  - simple -> api keys, tied to a project 
+  - authorized -> oauth client ids (access data owned by user)
+    - addtional security via OAuth2 
+  - authoriZed -> servivce accounts (daat owned by app/robot user)
+    - addtional security via OAuth2 
+
+
+- serverless 
+  - a lie: servers in the background but are completely abstracted away fromt he user 
+  - fasteest growing segment -> $1.9B in 2016 to $14.93B 2023
+  - good for autoscaling 
+  - if code not running, no billing 
+
+- slides 
+  - bit.ly/3YvfbEH
+
+
+
+
+
+
+1000 - kaggle ceo 
+- research based changes 
+
+- look into
+  - lmsys leaderboard
+    - chatbotarima 
+  - notebookLM
+
+
+- classic ml cycle
+  - data collection -> data prep -> model training -> model eval -> serving 
+- for genai cycle 
+  - vanilla model foundation -> manual prompt engineering -> automated prompt tuning 
+    -> context tools (RAG), reasoning loops -> model fine tuning -> train new foundation model 
+  - paradigm is exact opposite of classic ml cycle 
+
+- what models are good for 
+  - lots of investment so far 
+  - 
+- pace of innovation in AI is the fastest of any tech ever 
+- multi agent world most likely future 
+  - easier to understand group of smaller task models as opposed to one big model 
+
+
+
+
+
 20240910 - java for genAI - jacksonville
 - 
 

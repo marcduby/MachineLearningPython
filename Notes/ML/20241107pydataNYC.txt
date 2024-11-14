@@ -1,6 +1,141 @@
 
 
 Next:
+- 20241108 - 1520 - rasp pi ai - WG 
+
+
+
+
+20241108 - 1435 - AD graph neural nets - MB 
+- jackson labs, AZ research 
+- halmark of AD 
+  - neurofibrillary tangles (NFT)
+  - amyloid plaque deposition
+
+- omics 
+  - molecular modality 
+  - multiomics is several molecular modes 
+
+- AD is 70% of deementia 
+  - other dementia includes vascular 
+  - annual care costs of $350 billion 
+
+- technology
+  - rna sequencing -> meaures the expression of genes 
+  - atac seq -> na accessibility (chromatins)
+  - bs-seq -> dna methylation pattersn, 
+
+- transriptomics
+  - 
+- proteomics 
+  - 
+
+- study 
+  - for brain 
+    - 20k genes, 9k proteins 
+  - a few hundred samp,es 
+  - so do feature selection to reduce the 20k genes to a few hundred
+  - then place network structure on top of the feature space 
+  - then get graph neural network 
+    - convolution on graphs through message passing 
+      - graph convolution pulls informaTION FROM NEAREST NEIGHBORS OF NODES 
+      - simiar to regular conv that compares nodes in square 
+
+- integrating tracsriptomics and proteomics improce prerdictive perfformance over unimodal models 
+
+- genss
+  - iqgap3 
+  
+
+20241108 - 1325 - trends driving data analytics - CPW 
+- llama 3.1 405B model 
+  - 15 trillio n tokens, 30 million gpu hours 
+- what is density 
+  - hardware, softwaree, data 
+
+- compilers beget programming languages 
+- "the amont of data and the demand for instant access will continue to increase" 
+  - grace hopper 1982
+- connection machine / thinking machine 
+  - https://en.wikipedia.org/wiki/Connection_Machine
+
+- software to leverage specialized hardware 
+  - caching algo 
+  - tiling algo 
+  - numerical recipes
+  - 
+- eventually becomes numpy 
+
+- "all models are wrong, but some models are useful"
+
+- 1990 to 2000
+  - pc market explodes
+- 2004 to 2015 
+  - web data explodes 
+  - low cost commodity hardware 
+  - hadoop 
+  - moore's law is fading
+- today
+  - try to keep data on the gpu as much aas possible 
+- next 
+  - cudf.pandas 
+  - rapids 
+    -> use gpus from python; no cuda required 
+
+
+
+
+- look at 
+  - mamba 
+
+
+
+20241108 - 1140 - bayesian model blending - WG 
+- insurance industry 
+  - insurers use reinsurers to grow market andd reduce risk 
+  - speaker works for platform to match insurers with reinsurers
+- models
+  - statee space random walk 
+  - generalized chain ladder 
+  - mu;tivariate chain ladder 
+  - etc 
+
+- model stacking 
+  - have weights for each model and data point 
+  - ensemble would have just weights for model 
+
+- import bayesblend.HiearchicalBayesStacking as hbs 
+
+
+
+
+20241108 - 1050 - from pandas to polars - MB
+- book: python polars - the definitve guide
+  - polarsguide.com 
+- popularity 
+  - pandas > spark > polars > duckdb > dask > modin 
+- delvi project 
+  - to help with electrica; congestion
+  - issues with no new way t add new customers
+- cache intermitent stage 
+  - switch between DataFrame and LazyFrame (.lazy())
+
+- recommendations
+  - show, don't tell
+  - use benchmarks to see how speed is improving from pandas to polars 
+    - benchmark early
+  - use polars lazy API 
+  - "cache" to prevent double work 
+  - fewer surprises in behavior from polars 
+  - take baby steps
+   join the community (discord server)
+
+- results of converrsion
+  - 20% reduction in time
+  - 92% reduction in ram (40GB)
+  - costs from $140k to #3.5k -> 98% 
+
+- started for speed, but found API easier to work with than pandas 
 
 
 20241107 - 1605 - tuning the LLM transformer - MB 
