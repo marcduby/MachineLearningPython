@@ -4,6 +4,58 @@
 
 
 20241114 - google devfest boston 2024 
+1500 - agents ML 
+- ie: book me hotel and flights nearr goog cambridge, pet firnedly no smoking and add to my calendar
+  - llm call, prompmts, context, maps api agent, grounding rag for address
+  - agents: hotel book, flights, filters, calndar
+- what is an agent
+  - connected to your data 
+  - needs to interface to your apps
+  -grounded in proprietary info 
+  - ability to orchastrate 
+  - abilty to define, profile and instructions 
+
+- need reasoning with memory 
+- tyopes of agents 
+  - deterministic agents (prior to 2022)
+    - workflow that has predefined path and actions
+  - generative agents 
+    - ai powered agent driven by genai
+  - hybrid ageents 
+    - combination of determinism with genai capabilities
+- build an agent with gcp 
+  - conversational aents dialog flow code lab 
+  - vertex ai reasoning engine 
+  - gemini with function calling
+
+- libs 
+  - crewai, langchain, langgraph 
+
+- grounding is the first thing to learn with foundation models 
+- function calling is about developer control and flexibility 
+- stacks 
+  - model, tools, orchestration, runtime 
+
+- build the system agenty instruction (seperate from the prompt)
+  - give persona, role, goals
+  - can ground prompt with google search results that asre recent 
+    - to make sure model is using data past its date of traning 
+
+- vertex extensions 
+  - 
+- can also define an external API call in your agent 
+-  
+
+- difference between langchain and google function 
+  - with google function, the call is made from the server 
+  - with langchain, the call is made from tge client since lamgchain is orchestrating the steps 
+
+- https://github.com/cloudrace/genai-experiments
+
+
+
+
+
 
 1140 - AI in hiring 
 - 5 traits gotten from video (gets personality profile)
