@@ -1,0 +1,26 @@
+
+
+
+np.argsort(-factor_gene_set_scores) - get indices sorted descending
+The line np.argsort(-factor_gene_set_scores) in Python, where np is typically an alias for the NumPy library, performs the following operations:
+
+Negation: The -factor_gene_set_scores part negates each element in the factor_gene_set_scores array. This means that each value in the array is multiplied by -1.
+
+Argsort: The np.argsort() function returns the indices that would sort an array. By applying np.argsort() to the negated array, it effectively sorts the original array in descending order, since sorting the negated values in ascending order is equivalent to sorting the original values in descending order.
+
+
+
+
+import numpy as np
+
+# Example matrix
+matrix = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Check if all dimensions are greater than 0
+if all(dim > 0 for dim in matrix.shape):
+    print("All dimensions are greater than 0")
+else:
+    print("Not all dimensions are greater than 0")
+
+
+

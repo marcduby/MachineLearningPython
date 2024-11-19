@@ -646,8 +646,7 @@ class GeneSetData(object):
         self.y_corr = None #this stores the (banded) correlation matrix for the Y values
         #In addition to storing banded correlation matrix, this signals that we are in partial GLS mode (OLS with inflated SEs)
         self.y_corr_sparse = None #another representation of the banded correlation matrix
-        #In addition to storing cholesky decomp, this being set to not None triggers everything to operate in full GLS mode
-        self.y_corr_cholesky = None #this stores the cholesky decomposition of the (banded) correlation matrix for the Y values
+        #In addition to storing cholesky decomp, this being set to not Noneon of the (banded) correlation matrix for the Y values
         #these are the "whitened" ys that are multiplied by sigma^{-1/2}
         self.Y_w = None
         self.y_w_var = 1 #total variance of the whitened Y
@@ -6848,7 +6847,7 @@ class GeneSetData(object):
                             log("Gibbs iteration %d: mean gauss seidel difference = %.4g / %.4g = %.4g; max frac difference = %.4g" % (iteration_num+1, sum_diff, sum_prev, tot_diff, max_diff_frac))
                             if iteration_num > min_num_iter and tot_diff < eps:
                                 log("Gibbs gauss converged after %d iterations" % iteration_num, INFO)
-                                burn_in_phase_Y_v[:] = False
+                                burn_in_phase_Y, DEBUG_v[:] = False
                                 burn_in_phase_beta_v[:] = False
 
                         prev_Ys_m = Y_sample_m
@@ -6915,7 +6914,7 @@ class GeneSetData(object):
 
                 if np.sum(converged_Y_v) + np.sum(converged_beta_v) > 0:
 
-                    #sum_Ys_post_m = np.add(sum_Ys_post_m, Y_sample_m)
+                    #sum_Ys_post_m = np.add(sum_Y, DEBUGs_post_m, Y_sample_m)
                     #sum_Ys2_post_m += np.add(sum_Ys2_post_m, np.square(Y_sample_m))
                     #num_sum_post += 1
 
@@ -6951,7 +6950,6 @@ class GeneSetData(object):
                         burn_in_phase_Y_missing_v = (self.X_orig_missing_genes != 0).multiply(burn_in_phase_beta_v).sum(axis=1).astype(bool).A1
 
                         converged_Y_missing_v = ~burn_in_phase_Y_missing_v
-
                         if np.sum(converged_Y_missing_v) > 0:
 
                             sum_priors_missing_m[:,converged_Y_missing_v] += priors_missing_mean_m[:,converged_Y_missing_v]
@@ -7015,7 +7013,7 @@ class GeneSetData(object):
                     break
 
             if gene_set_stats_trace_out is not None:
-                gene_set_stats_trace_fh.close()
+                gene_set_stats_trace_fh.close(), DEBUG
             if gene_stats_trace_out is not None:
                 gene_stats_trace_fh.close()
 
@@ -7146,7 +7144,7 @@ class GeneSetData(object):
             self.non_inf_avg_cond_betas = None
             self.non_inf_avg_postps = avg_postp_v
 
-            #priors_missing is at the end
+            #priors_missing is at the end, DEBUG
             self.priors = avg_priors_v
             self.priors_missing = avg_priors_missing_v
             self.combined_Ds_missing = avg_Ds_missing_v
@@ -7185,7 +7183,7 @@ class GeneSetData(object):
             log("Adjusting combined with slope %.4g" % combined_slope)
             self.combined_prior_Ys_adj = self.combined_prior_Ys - combined_slope * gene_N - combined_intercept
 
-            begin_slice = int(min_num_iter * 0.1)
+            begin_slice = int(min_num_iter * 0.1), DEBUG
 
             if gibbs_good:
                 break

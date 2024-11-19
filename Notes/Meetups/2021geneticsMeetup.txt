@@ -1,5 +1,32 @@
 
 
+20241113 - broad soteng intro to life
+- dna ._ rna -> proteins
+- 3 doamins of life: archaia, bacteria, aukarya
+- eukraya 3000x bigger than bacteria- 
+- liver
+  - 2 blodd supplies (one from gut, other from hert)
+  - don't want blood from gut going straight to brain; alcohol gets broken down in lover, then goes to brain; if overloaded, get drunk
+- capillaries are width of one blood cell
+- muscles have ultiple nuclei, fused bodies 
+
+
+
+A **haploid genome** is a single set of chromosomes found in a cell, which contains one copy of each gene. In most organisms, cells can be either haploid or diploid:
+- **Haploid (n)** cells have just one complete set of chromosomes. 
+- **Diploid (2n)** cells contain two sets, one inherited from each parent.
+In humans, for example:
+- Gametes (sperm and egg cells) are haploid and contain 23 chromosomes.
+- Most other human cells are diploid, containing 46 chromosomes (two sets of 23).
+Haploid genomes are essential for sexual reproduction, as the fusion of two haploid gametes during fertilization restores the diploid number, ensuring genetic diversity across generations.
+
+The three domains of life are:
+1. **Archaea**: These are single-celled organisms that often live in extreme environments, like hot springs, salt lakes, and deep-sea hydrothermal vents. Archaea have unique membrane lipids and distinct genetic features that separate them from bacteria, even though they are also prokaryotic (lacking a nucleus).
+2. **Bacteria**: Bacteria are also single-celled prokaryotes but differ from archaea in cell structure, lipid composition, and other genetic factors. They are incredibly diverse and inhabit nearly every environment on Earth, from soil and water to the human body. Bacteria play essential roles in ecosystems, including decomposition, nitrogen fixation, and even aiding human digestion.
+3. **Eukarya**: This domain includes all organisms with complex cells containing a nucleus and membrane-bound organelles. Eukaryotes encompass a broad range of organisms, including animals, plants, fungi, and protists. Eukarya are distinct in their cellular organization and complex structures, allowing for specialized functions and multicellularity.
+These domains represent the highest level of classification, reflecting fundamental differences in cellular structure, biochemistry, and evolutionary history.
+
+
 20221117 - mpg, gocalo abecasis 
 - regeneron genome center 
   - commited to sequencing 7 million samples 

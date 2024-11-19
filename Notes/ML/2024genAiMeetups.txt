@@ -1,0 +1,23 @@
+
+
+
+20240717 - vertex AI google - holt skinner 
+- gemini large 1M context 
+  - can input 1 hr video 
+  - can do 100 shot context 
+    - better than fine tuning 
+  - can also cache context if reusing same video, docs, etc 
+    - reduces cost of reprocessing 
+
+
+20240610- genAI 
+- presentation on using genAI for banks 
+  - training bot for negotiating CD rates 
+- chat
+  - used to publish 4 articles a week, now publish 400
+  - rarely find a genAI enthusiast at the management level, usually someone down in the org 
+  - private equity firms get it though 
+  
+
+
+

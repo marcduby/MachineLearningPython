@@ -1,5 +1,13 @@
 
 
+- commands
+  - .schema mcq_phenotype 
+  - .quit
+  - .show
+  - .table
+  
+
+
 import sqlite3
 
 # Create a new SQLite database (or connect to an existing one)
@@ -29,4 +37,8 @@ for row in rows:
 
 # Close the connection
 conn.close()
+
+
+
+c.execute("INSERT INTO users (name, age) VALUES (:name, :age)", {'name': 'John', 'age': 25})
 

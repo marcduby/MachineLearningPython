@@ -8,10 +8,15 @@ tagging:
   - git push origin v0.92_generate
 
 
+cloning to branch:
+------------------
+  - git clone --branch <branch_name> <repository_url>
+
+
 merging changes from another branch:
 ------------------------------------
   - git checkout from_branch
-  - git pull`
+  - git pull
   - git checkout to_branch
   - git pull
   - git merge from_branch

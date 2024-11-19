@@ -45,6 +45,9 @@ json:
   - display json 
   print("build trapi payload: \n{}".format(json.dumps(payload, indent=2))
     
+  - data = {'name': 'John', 'age': 30}
+  with open('data.json', 'w') as f:
+      json.dump(data, f)
 
 csv:
 ----
@@ -125,7 +128,9 @@ dict:
   - for key in dict:
     -- get key 
 
-- sorted_people_desc = sorted(people, key=lambda person: person['age'], reverse=True)
+  # Sort the list of dictionaries by the 'age' attribute in descending order
+  sorted_data_desc = sorted(data, key=lambda x: x["age"], reverse=True)
+
     
 os:
 ---
@@ -157,6 +162,11 @@ files:
   with open(filename) as file:
     for line in file:
         print(line.rstrip())
+
+  - split file name
+  my_string = "  Hello,Python,Coding  "
+  substrings = my_string.strip().split(',')
+  print(substrings)
 
 jupyter:
 --------
@@ -196,6 +206,24 @@ databases:
   conn.commit() 
 
 
+    try:
+        # Create a cursor object using the cursor() method
+        with connection.cursor() as cursor:
+            # Execute the SQL query using execute() method
+            cursor.execute(query, params)
+
+            # Fetch all rows using fetchall() method
+            results = cursor.fetchall()
+
+            # Convert the results to a list of dictionaries
+            result_list = [dict(row) for row in results]
+
+            return result_list
+
+    finally:
+        # Close the connection
+        connection.close()
+        
 
 sqlalchemy:
 -----------
@@ -214,6 +242,7 @@ sqlalchemy:
         s3.create_record_directory(s3_record_id)
     return s3_record_id, res.lastrowid
 
+
 objects:
 --------
   - __init__(self)
@@ -223,6 +252,7 @@ objects:
   gene_association: GenePhenotypeAssociation
   for gene_association in list_gene_assoc:
 
+
 debug:
 ------
   - help(<object>)
@@ -230,12 +260,15 @@ debug:
   - type(cifar10).__mro__   # returns the class hierarchy
   - dir(package)            # get the listing of the functions in the package
 
+
 to test:
 --------
 - formatting json
   - print(json.dumps(json.loads(file.split('\n')[0]), indent=2))
 - python -m pytest -vv
   - adds curent directory to pytest 
+- pytest --log-cli-level=INFO tests/test_gene_nmf_adapter.py
+
 
 notes:
 ------
@@ -284,7 +317,4 @@ vs code:
 - interactive python
   - # %%
 
-For those who aren't invested in PyCharm, VSCode tries to autodetect available Python instances and lists them in a dropdown 
-right in the GUI interface for easy switching. If your install isn't auto detected, you can type Python:Select Interpreter in the 
-Command Palette to set the path and add a python installation it didn't find. And VSCode will remember your preferred Python instance 
-for each individual workspace. 
+  
