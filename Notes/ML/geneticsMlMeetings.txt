@@ -1,4 +1,5 @@
 
+<<<<<<< Updated upstream
 
 20240612 - festival of genomics - genAI 
 astrazeneca, clinical gen omics 
@@ -228,6 +229,8 @@ todos
 
 
 
+=======
+>>>>>>> Stashed changes
 
 20230405 - GNNs intro 
 - can 

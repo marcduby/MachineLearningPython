@@ -1,0 +1,54 @@
+protein_change	variant	gene	phenotype	p_value
+p.G292A	3:129324608:C:G	PLXND1	Waist-hip ratio adj BMI	2.669e-09
+p.G292A	3:129324608:C:G	PLXND1	Height	0.0002801
+p.G292A	3:129324608:C:G	PLXND1	Waist-hip ratio	1.502e-05
+p.R1169C	3:129289978:G:A	PLXND1	Total cholesterol	6.251e-07
+p.R1169C	3:129289978:G:A	PLXND1	LDL cholesterol	1.616e-07
+p.T463K	3:129308294:G:T	PLXND1	Lymphocyte count	0.000264
+p.R1169C	3:129289978:G:A	PLXND1	Serum ApoB	1.801e-05
+p.R1169C	3:129289978:G:A	PLXND1	Non-HDL cholesterol	2.413e-05
+p.P674A	3:129303237:G:C	PLXND1	Non-HDL cholesterol	9.24819e-05
+p.D5A	12:57146069:T:G	PRIM1	Mean platelet volume	1.772e-11
+p.D5A	12:57146069:T:G	PRIM1	Platelet count	2.086e-05
+p.D5A	12:57146069:T:G	PRIM1	Age at natural menopause (ANM)	3.704e-86
+p.D5A	12:57146069:T:G	PRIM1	Height	4.55e-134
+p.D5A	12:57146069:T:G	PRIM1	Aspartate aminotransferase (AST)	9.095e-06
+p.D5A	12:57146069:T:G	PRIM1	Alanine transaminase (ALT)	8.167e-05
+p.D5A	12:57146069:T:G	PRIM1	Snoring adj BMI	4.1e-08
+p.D5A	12:57146069:T:G	PRIM1	Snoring	1.773e-08
+p.D5A	12:57146069:T:G	PRIM1	Appendicular lean body mass	1.005e-30
+p.R186K	6:31593041:G:A	PRRC2A	Type 1 diabetes (T1D)	7.972e-05
+p.T544K	6:31595882:C:A	PRRC2A	Type 1 diabetes (T1D)	1.27e-320
+p.R627C	6:31597034:C:T	PRRC2A	Type 1 diabetes (T1D)	2.544e-11
+p.R804C	6:31598523:C:T	PRRC2A	Lymphocyte count	5.97e-56
+p.T544K	6:31595882:C:A	PRRC2A	White blood cell count	1.758e-12
+p.R804C	6:31598523:C:T	PRRC2A	White blood cell count	2.36e-22
+p.T544K	6:31595882:C:A	PRRC2A	Monocyte count	3.21e-20
+p.R804C	6:31598523:C:T	PRRC2A	Monocyte count	2.77e-06
+p.T544K	6:31595882:C:A	PRRC2A	Neutrophil count	4.15e-16
+p.R804C	6:31598523:C:T	PRRC2A	Neutrophil count	1.66e-05
+p.T544K	6:31595882:C:A	PRRC2A	Rheumatoid arthritis	1.737e-82
+p.S671C	6:31597380:C:G	PRRC2A	Rheumatoid arthritis	2.816e-15
+p.T544K	6:31595882:C:A	PRRC2A	Eosinophil count	7.793e-07
+p.S671C	6:31597380:C:G	PRRC2A	Eosinophil count	4.81e-14
+p.T544K	6:31595882:C:A	PRRC2A	Seropositive rheumatoid arthritis	4.371e-76
+p.R627C	6:31597034:C:T	PRRC2A	Seropositive rheumatoid arthritis	1.894e-08
+p.S671C	6:31597380:C:G	PRRC2A	Seropositive rheumatoid arthritis	1.843e-15
+p.T544K	6:31595882:C:A	PRRC2A	Appendicular lean body mass	6.613e-23
+p.T544K	6:31595882:C:A	PRRC2A	Mean sphered cell volume	5.124e-10
+p.S671C	6:31597380:C:G	PRRC2A	Age at natural menopause (ANM)	0.0001347
+p.R804C	6:31598523:C:T	PRRC2A	Age at natural menopause (ANM)	2.961e-05
+p.T544K	6:31595882:C:A	PRRC2A	Hemoglobin concentration	5.615e-44
+p.T544K	6:31595882:C:A	PRRC2A	Membranous nephropathy	4.516e-17
+p.T544K	6:31595882:C:A	PRRC2A	Red blood cell distribution width	7.41e-21
+p.T544K	6:31595882:C:A	PRRC2A	Total plasma protein	6.113e-05
+p.T544K	6:31595882:C:A	PRRC2A	Height	1.323e-09
+p.T544K	6:31595882:C:A	PRRC2A	Mean platelet volume	5.1e-45
+p.T544K	6:31595882:C:A	PRRC2A	Platelet count	1.193e-11
+p.E564A	11:64027666:A:C	PLCB3	Triglycerides	1.36e-06
+p.E564A	11:64027666:A:C	PLCB3	Platelet count	9.95e-08
+p.E564A	11:64027666:A:C	PLCB3	Triglyceride levels in individuals without type 2 diabetes	2.397e-05
+p.E564A	11:64027666:A:C	PLCB3	Red blood cell count	4.2e-10
+p.E564A	11:64027666:A:C	PLCB3	Mean platelet volume	2.85e-09
+p.E564A	11:64027666:A:C	PLCB3	Mean sphered cell volume	2.52e-10
+p.E564A	11:64027666:A:C	PLCB3	Serum ApoB	4.066e-08

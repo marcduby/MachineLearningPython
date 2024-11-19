@@ -1,0 +1,354 @@
+protein_change	variant	gene	phenotype	p_value
+p.T271M	11:68835056:C:T	TPCN2	Height	2.663e-05
+p.K376R	11:68840160:A:G	TPCN2	Height	4.382e-30
+p.L564P	11:68851414:T:C	TPCN2	Height	2.251e-10
+p.S681L	11:68854029:C:T	TPCN2	Height	0.00028
+p.G734E	11:68855363:G:A	TPCN2	Height	5.977e-66
+p.K376R	11:68840160:A:G	TPCN2	Heel quantitative ultrasound estimated bone mineral density (eBMD)	1.553e-20
+p.G387D	11:68840399:G:A	TPCN2	Heel quantitative ultrasound estimated bone mineral density (eBMD)	1.114e-05
+p.M484L	11:68846399:A:T	TPCN2	Heel quantitative ultrasound estimated bone mineral density (eBMD)	1.151e-05
+p.G734E	11:68855363:G:A	TPCN2	Heel quantitative ultrasound estimated bone mineral density (eBMD)	1.633e-58
+p.K376R	11:68840160:A:G	TPCN2	Sex hormone-binding globulin levels adj BMI	2.719e-18
+p.D505H	11:68846462:G:C	TPCN2	Sex hormone-binding globulin levels adj BMI	6.2e-05
+p.G734E	11:68855363:G:A	TPCN2	Sex hormone-binding globulin levels adj BMI	9.647e-11
+p.V219I	11:68831364:G:A	TPCN2	Serum creatinine	1.487e-18
+p.K376R	11:68840160:A:G	TPCN2	Serum creatinine	6.922e-10
+p.M484L	11:68846399:A:T	TPCN2	Serum creatinine	7.919e-11
+p.G734E	11:68855363:G:A	TPCN2	Serum creatinine	1.614e-10
+p.K376R	11:68840160:A:G	TPCN2	Sex hormone binding globulin (SHBG) levels	3.222e-15
+p.G734E	11:68855363:G:A	TPCN2	Sex hormone binding globulin (SHBG) levels	1.994e-08
+p.V219I	11:68831364:G:A	TPCN2	eGFRcreat (serum creatinine)	6.851e-08
+p.K376R	11:68840160:A:G	TPCN2	eGFRcreat (serum creatinine)	1.623e-13
+p.M484L	11:68846399:A:T	TPCN2	eGFRcreat (serum creatinine)	9.277e-08
+p.L564P	11:68851414:T:C	TPCN2	eGFRcreat (serum creatinine)	9.317e-06
+p.G734E	11:68855363:G:A	TPCN2	eGFRcreat (serum creatinine)	4.279e-12
+p.V219I	11:68831364:G:A	TPCN2	Type 2 diabetes (T2D)	1.608e-07
+p.M484L	11:68846399:A:T	TPCN2	Type 2 diabetes (T2D)	1.368e-06
+p.K376R	11:68840160:A:G	TPCN2	Serum urate	1.183e-10
+p.D505H	11:68846462:G:C	TPCN2	Serum urate	0.0002439
+p.G734E	11:68855363:G:A	TPCN2	Serum urate	1.488e-08
+p.V219I	11:68831364:G:A	TPCN2	Cystatin C	3.232e-08
+p.K376R	11:68840160:A:G	TPCN2	Cystatin C	8.853e-11
+p.G387D	11:68840399:G:A	TPCN2	Cystatin C	9.667e-07
+p.G734E	11:68855363:G:A	TPCN2	Cystatin C	3.964e-13
+p.V219I	11:68831364:G:A	TPCN2		7.005e-05
+p.K376R	11:68840160:A:G	TPCN2		3.485e-12
+p.M484L	11:68846399:A:T	TPCN2		0.0003179
+p.G734E	11:68855363:G:A	TPCN2	Weight	0.0002411
+p.V219I	11:68831364:G:A	TPCN2	eGFRcreat in individuals without diabetes	8.1e-17
+p.K376R	11:68840160:A:G	TPCN2	eGFRcreat in individuals without diabetes	4e-10
+p.M484L	11:68846399:A:T	TPCN2	eGFRcreat in individuals without diabetes	3.3e-10
+p.L564P	11:68851414:T:C	TPCN2	eGFRcreat in individuals without diabetes	2.4e-05
+p.G734E	11:68855363:G:A	TPCN2	eGFRcreat in individuals without diabetes	7.8e-07
+p.V219I	11:68831364:G:A	TPCN2	Waist-hip ratio adj BMI	0.0002522
+p.G734E	11:68855363:G:A	TPCN2	Waist-hip ratio adj BMI	2.806e-07
+p.V219I	11:68831364:G:A	TPCN2	White blood cell count	5.223e-05
+p.K376R	11:68840160:A:G	TPCN2	White blood cell count	5.352e-07
+p.S681L	11:68854029:C:T	TPCN2	White blood cell count	1.85e-05
+p.G734E	11:68855363:G:A	TPCN2	White blood cell count	3.389e-07
+p.K376R	11:68840160:A:G	TPCN2	Neutrophil count	1.801e-05
+p.S681L	11:68854029:C:T	TPCN2	Neutrophil count	6.09e-06
+p.G734E	11:68855363:G:A	TPCN2	Neutrophil count	3.249e-07
+p.G734E	11:68855363:G:A	TPCN2	Neutrophil percentage	1.032e-05
+p.G734E	11:68855363:G:A	TPCN2	Forearm fracture	3.277e-10
+p.K376R	11:68840160:A:G	TPCN2	Aspartate aminotransferase (AST)	6.653e-07
+p.G734E	11:68855363:G:A	TPCN2	Aspartate aminotransferase (AST)	1.907e-05
+p.K376R	11:68840160:A:G	TPCN2	Alanine transaminase (ALT)	3.387e-05
+p.G734E	11:68855363:G:A	TPCN2	Basophil count	1.975e-08
+p.R495Q	22:30189642:C:T	ASCC2	Lymphocyte count	6.02e-09
+p.R433Q	22:30198025:C:T	ASCC2	Lymphocyte count	4.56e-11
+p.R495Q	22:30189642:C:T	ASCC2	Mean corpuscular volume	4.72e-05
+p.P347S	22:30200713:G:A	ASCC2	Mean corpuscular volume	1.559e-48
+p.D331H	22:30200761:C:G	ASCC2	Mean corpuscular volume	5.567e-48
+p.V70I	22:30221120:C:T	ASCC2	Mean corpuscular volume	1.095e-47
+p.R495Q	22:30189642:C:T	ASCC2	Lymphocyte percentage	0.0001541
+p.R433Q	22:30198025:C:T	ASCC2	Lymphocyte percentage	4.009e-08
+p.R495Q	22:30189642:C:T	ASCC2	Mean corpuscular hemoglobin	6.62e-08
+p.P347S	22:30200713:G:A	ASCC2	Mean corpuscular hemoglobin	1.117e-45
+p.D331H	22:30200761:C:G	ASCC2	Mean corpuscular hemoglobin	5.716e-46
+p.V70I	22:30221120:C:T	ASCC2	Mean corpuscular hemoglobin	1.986e-45
+p.R495Q	22:30189642:C:T	ASCC2	Immature reticulocyte fraction	9.641e-06
+p.R433Q	22:30198025:C:T	ASCC2	Immature reticulocyte fraction	1.006e-13
+p.P347S	22:30200713:G:A	ASCC2	Immature reticulocyte fraction	8.947e-52
+p.D331H	22:30200761:C:G	ASCC2	Immature reticulocyte fraction	2.086e-52
+p.V70I	22:30221120:C:T	ASCC2	Immature reticulocyte fraction	1.663e-52
+p.R433Q	22:30198025:C:T	ASCC2	Neutrophil percentage	1.205e-06
+p.R495Q	22:30189642:C:T	ASCC2	HbA1c	3.713e-09
+p.R433Q	22:30198025:C:T	ASCC2	HbA1c	0.0001413
+p.P347S	22:30200713:G:A	ASCC2	HbA1c	7.906e-31
+p.D331H	22:30200761:C:G	ASCC2	HbA1c	5.385e-29
+p.V70I	22:30221120:C:T	ASCC2	HbA1c	4.22e-29
+p.R47H	22:30221188:C:T	ASCC2	HbA1c	3.5e-05
+p.P347S	22:30200713:G:A	ASCC2	Mean sphered cell volume	1.337e-10
+p.D331H	22:30200761:C:G	ASCC2	Mean sphered cell volume	1.757e-10
+p.V70I	22:30221120:C:T	ASCC2	Mean sphered cell volume	1.577e-10
+p.D331H	22:30200761:C:G	ASCC2	eGFRcreat (serum creatinine)	0.000358
+p.V70I	22:30221120:C:T	ASCC2	eGFRcreat (serum creatinine)	0.000382
+p.P347S	22:30200713:G:A	ASCC2	Height	2.014e-14
+p.D331H	22:30200761:C:G	ASCC2	Height	2.717e-09
+p.V70I	22:30221120:C:T	ASCC2	Height	5.917e-15
+p.P347S	22:30200713:G:A	ASCC2	Mean reticulocyte volume	5.55e-19
+p.D331H	22:30200761:C:G	ASCC2	Mean reticulocyte volume	1.308e-18
+p.V70I	22:30221120:C:T	ASCC2	Mean reticulocyte volume	1.631e-18
+p.R495Q	22:30189642:C:T	ASCC2	Platelet count	1.71e-06
+p.P347S	22:30200713:G:A	ASCC2	FEV1 to FVC ratio	5.541e-14
+p.D331H	22:30200761:C:G	ASCC2	FEV1 to FVC ratio	2.296e-15
+p.V70I	22:30221120:C:T	ASCC2	FEV1 to FVC ratio	2.515e-15
+p.R495Q	22:30189642:C:T	ASCC2	White blood cell count	0.000394
+p.R433Q	22:30198025:C:T	ASCC2	Highlight scatter reticulocyte count	2.899e-07
+p.P347S	22:30200713:G:A	ASCC2	Highlight scatter reticulocyte count	8.648e-19
+p.D331H	22:30200761:C:G	ASCC2	Highlight scatter reticulocyte count	4.39e-19
+p.V70I	22:30221120:C:T	ASCC2	Highlight scatter reticulocyte count	4.631e-19
+p.R495Q	22:30189642:C:T	ASCC2	Hemoglobin concentration	0.000282
+p.R433Q	22:30198025:C:T	ASCC2	Hemoglobin concentration	9.25e-05
+p.P347S	22:30200713:G:A	ASCC2	Hemoglobin concentration	4.843e-18
+p.D331H	22:30200761:C:G	ASCC2	Hemoglobin concentration	1.88e-17
+p.V70I	22:30221120:C:T	ASCC2	Hemoglobin concentration	3.97e-17
+p.R433Q	22:30198025:C:T	ASCC2	Highlight scatter reticulocyte percentage	3.119e-08
+p.P347S	22:30200713:G:A	ASCC2	Highlight scatter reticulocyte percentage	3.258e-18
+p.D331H	22:30200761:C:G	ASCC2	Highlight scatter reticulocyte percentage	2.101e-18
+p.V70I	22:30221120:C:T	ASCC2	Highlight scatter reticulocyte percentage	2.344e-18
+p.H329P	7:127251188:T:G	PAX4	Red blood cell distribution width	3.747e-09
+p.H329P	7:127251188:T:G	PAX4	Cystatin C	4.222e-06
+p.H329P	7:127251188:T:G	PAX4	Cognitive performance	6.39e-07
+p.H329P	7:127251188:T:G	PAX4	Fetal genetic effect on own birth weight	6.95e-07
+p.H329P	7:127251188:T:G	PAX4	Total plasma protein	6.604e-06
+p.H329P	7:127251188:T:G	PAX4	eGFRcreat in individuals without diabetes	6.2e-06
+p.H329P	7:127251188:T:G	PAX4	eGFRcreat (serum creatinine)	8.23e-05
+p.H329P	7:127251188:T:G	PAX4	Serum creatinine	4.329e-06
+p.H329P	7:127251188:T:G	PAX4	Type 2 diabetes (T2D)	9.057e-05
+p.R200H	7:127253550:C:T	PAX4	Type 2 diabetes (T2D)	2.25e-157
+p.R200S	7:127253551:G:T	PAX4	Type 2 diabetes (T2D)	2.181e-43
+p.H329P	7:127251188:T:G	PAX4	Intelligence	1.976e-06
+p.H329P	7:127251188:T:G	PAX4	Total brain subcortical volume	1.749e-05
+p.H329P	7:127251188:T:G	PAX4	Worry	8.727e-05
+p.H329P	7:127251188:T:G	PAX4	Calcium	3.497e-05
+p.H329P	7:127251188:T:G	PAX4	eGFRcys (serum cystatin C)	0.000377
+p.H329P	7:127251188:T:G	PAX4	Dementia in Parkinson's disease	5.515e-05
+p.H329P	7:127251188:T:G	PAX4	Fetal genetic effect on own birth weight adj maternal genotype	0.0002184
+p.L1412V	3:129284818:A:C	PLXND1	Waist-hip ratio adj BMI	8.745e-16
+p.M870V	3:129293256:T:C	PLXND1	Waist-hip ratio adj BMI	1.502e-09
+p.P617S	3:129304797:G:A	PLXND1	Waist-hip ratio adj BMI	4.165e-08
+p.G531S	3:129305460:C:T	PLXND1	Waist-hip ratio adj BMI	4.487e-07
+p.L1412V	3:129284818:A:C	PLXND1	Height	4.09e-58
+p.M870V	3:129293256:T:C	PLXND1	Height	1.931e-24
+p.L1412V	3:129284818:A:C	PLXND1	Waist-hip ratio	6.587e-11
+p.M870V	3:129293256:T:C	PLXND1	Waist-hip ratio	6.133e-07
+p.M870V	3:129293256:T:C	PLXND1	Total cholesterol	7.004e-06
+p.D526E	3:129305473:G:C	PLXND1	Total cholesterol	1.047e-06
+p.M870V	3:129293256:T:C	PLXND1	LDL cholesterol	0.0001417
+p.L1412V	3:129284818:A:C	PLXND1	Monocyte count	1.764e-06
+p.M870V	3:129293256:T:C	PLXND1	Monocyte count	1.549e-05
+p.L1412V	3:129284818:A:C	PLXND1	Lymphocyte count	2.193e-10
+p.M870V	3:129293256:T:C	PLXND1	Lymphocyte count	4.445e-09
+p.L1412V	3:129284818:A:C	PLXND1	White blood cell count	1.1e-08
+p.M870V	3:129293256:T:C	PLXND1	White blood cell count	7.57e-05
+p.L1412V	3:129284818:A:C	PLXND1	Hip circumference adj BMI	6.695e-06
+p.M870V	3:129293256:T:C	PLXND1	Hip circumference adj BMI	0.0002286
+p.L1412V	3:129284818:A:C	PLXND1	HDL cholesterol	2.399e-07
+p.M870V	3:129293256:T:C	PLXND1	HDL cholesterol	2.008e-08
+p.R831W	3:129294351:G:A	PLXND1	Monocyte percentage	4.065e-05
+p.L1412V	3:129284818:A:C	PLXND1	GFAT adjusted for BMI and height	3.6e-05
+p.G328S	3:129324501:C:T	PLXND1	Serum ApoB	0.0001687
+p.L1412V	3:129284818:A:C	PLXND1	Neutrophil count	0.0002603
+p.L1412V	3:129284818:A:C	PLXND1	Triglycerides	9.476e-09
+p.V1253I	3:129288794:C:T	PLXND1	Triglycerides	0.000223065
+p.M870V	3:129293256:T:C	PLXND1	Triglycerides	3.253e-05
+p.L1412V	3:129284818:A:C	PLXND1	Type 2 diabetes (T2D)	2.461e-07
+p.M870V	3:129293256:T:C	PLXND1	Type 2 diabetes (T2D)	3.653e-11
+p.S87N	11:55653164:G:A	TRIM51	Platelet distribution width	7.253e-06
+p.Q334P	11:55658750:A:C	TRIM51	Platelet distribution width	4.62e-11
+p.N20S	11:55652963:A:G	TRIM51	HDL cholesterol	3.993e-06
+p.N20S	11:55652963:A:G	TRIM51	Mean platelet volume	4.731e-09
+p.Q334P	11:55658750:A:C	TRIM51	Mean platelet volume	4.593e-05
+p.S87N	11:55653164:G:A	TRIM51	Systolic blood pressure	3.304e-08
+p.N20S	11:55652963:A:G	TRIM51	Mean corpuscular volume	0.0002984
+p.N20S	11:55652963:A:G	TRIM51	Lymphocyte count	5.563e-06
+p.N20S	11:55652963:A:G	TRIM51	Red blood cell distribution width	7.556e-06
+p.C810F	1:39763365:G:T	MACF1	Serum ApoA	3.242e-05
+p.I1599V	1:39797055:A:G	MACF1	Serum ApoA	2.233e-60
+p.K3185N	1:39801815:A:C	MACF1	Serum ApoA	2.401e-62
+p.M4352V	1:39835817:A:G	MACF1	Serum ApoA	4.335e-62
+p.A6409T	1:39908506:G:A	MACF1	Serum ApoA	1.526e-49
+p.S6729T	1:39914363:G:C	MACF1	Serum ApoA	2.999e-10
+p.I1599V	1:39797055:A:G	MACF1	Sex hormone binding globulin (SHBG) levels	4.922e-39
+p.K3185N	1:39801815:A:C	MACF1	Sex hormone binding globulin (SHBG) levels	1.657e-38
+p.M4352V	1:39835817:A:G	MACF1	Sex hormone binding globulin (SHBG) levels	1.543e-37
+p.A6409T	1:39908506:G:A	MACF1	Sex hormone binding globulin (SHBG) levels	3.481e-28
+p.S6729T	1:39914363:G:C	MACF1	Sex hormone binding globulin (SHBG) levels	1.131e-07
+p.I1599V	1:39797055:A:G	MACF1	Plasma C-reactive protein	3.73e-31
+p.I1599V	1:39797055:A:G	MACF1	Sex hormone-binding globulin levels adj BMI	1.064e-30
+p.K3185N	1:39801815:A:C	MACF1	Sex hormone-binding globulin levels adj BMI	1.459e-30
+p.M4352V	1:39835817:A:G	MACF1	Sex hormone-binding globulin levels adj BMI	8.668e-30
+p.A6409T	1:39908506:G:A	MACF1	Sex hormone-binding globulin levels adj BMI	6.097e-27
+p.S6729T	1:39914363:G:C	MACF1	Sex hormone-binding globulin levels adj BMI	1.085e-06
+p.I1599V	1:39797055:A:G	MACF1	Triglyceride-to-HDL ratio	2.915e-29
+p.K3185N	1:39801815:A:C	MACF1	Triglyceride-to-HDL ratio	7.881e-31
+p.I1599V	1:39797055:A:G	MACF1	Total plasma protein	3.265e-17
+p.K3185N	1:39801815:A:C	MACF1	Total plasma protein	1.012e-17
+p.M4352V	1:39835817:A:G	MACF1	Total plasma protein	2.279e-17
+p.A6409T	1:39908506:G:A	MACF1	Total plasma protein	4.748e-11
+p.S6729T	1:39914363:G:C	MACF1	Total plasma protein	2.412e-05
+p.I1599V	1:39797055:A:G	MACF1	Type 2 diabetes (additive model)	1.892e-13
+p.K3185N	1:39801815:A:C	MACF1	Type 2 diabetes (additive model)	2.623e-14
+p.M4352V	1:39835817:A:G	MACF1	Type 2 diabetes (additive model)	3.184e-14
+p.I1599V	1:39797055:A:G	MACF1	Total bilirubin	1.95e-14
+p.A341T	7:130025713:G:A	CPA1	Type 2 diabetes (T2D)	4.647e-10
+p.A341T	7:130025713:G:A	CPA1	Total cholesterol	4.873e-05
+p.P113S	5:74998606:G:A	POC5	LDL cholesterol	3.129e-09
+p.I85T	5:75001582:A:G	POC5	LDL cholesterol	3.552e-45
+p.H36R	5:75003678:T:C	POC5	LDL cholesterol	5.67e-302
+p.P113S	5:74998606:G:A	POC5	Total cholesterol	4.298e-08
+p.I85T	5:75001582:A:G	POC5	Total cholesterol	2.118e-37
+p.H36R	5:75003678:T:C	POC5	Total cholesterol	1.76e-207
+p.A429V	5:74981153:G:A	POC5	Non-HDL cholesterol	0.0003397
+p.P113S	5:74998606:G:A	POC5	Non-HDL cholesterol	9.105e-05
+p.I85T	5:75001582:A:G	POC5	Non-HDL cholesterol	1.146e-17
+p.H36R	5:75003678:T:C	POC5	Non-HDL cholesterol	9.49e-111
+p.I85T	5:75001582:A:G	POC5	Serum ApoB	3.274e-17
+p.H36R	5:75003678:T:C	POC5	Serum ApoB	1.42e-90
+p.I85T	5:75001582:A:G	POC5	Body mass index (BMI)	2.913e-72
+p.H36R	5:75003678:T:C	POC5	Body mass index (BMI)	2e-289
+p.I85T	5:75001582:A:G	POC5	Weight	1.512e-12
+p.H36R	5:75003678:T:C	POC5	Weight	5.184e-48
+p.I85T	5:75001582:A:G	POC5	HDL cholesterol	1.363e-07
+p.H36R	5:75003678:T:C	POC5	HDL cholesterol	1.221e-36
+p.I85T	5:75001582:A:G	POC5	Platelet count	8.615e-08
+p.H36R	5:75003678:T:C	POC5	Platelet count	1.931e-28
+p.I85T	5:75001582:A:G	POC5	Total body lean mass	2.581e-05
+p.H36R	5:75003678:T:C	POC5	Total body lean mass	2.873e-29
+p.H36R	5:75003678:T:C	POC5	Diastolic blood pressure	2.361e-24
+p.R250S	5:74988266:T:G	POC5	Mean platelet volume	0.000317
+p.H36R	5:75003678:T:C	POC5	Mean platelet volume	1.837e-15
+p.H36R	5:75003678:T:C	POC5	Type 2 diabetes (T2D)	1.438e-26
+p.H36R	5:75003678:T:C	POC5	Plateletcrit (PCT)	1.418e-13
+p.I85T	5:75001582:A:G	POC5	Cystatin C	6.801e-06
+p.H36R	5:75003678:T:C	POC5	Cystatin C	7.98e-17
+p.H36R	5:75003678:T:C	POC5	Waist-hip ratio	3.189e-07
+p.H36R	5:75003678:T:C	POC5	HbA1c	2.937e-07
+p.H36R	5:75003678:T:C	POC5	Snoring	2.864e-13
+p.H36R	5:75003678:T:C	POC5	Pulse rate	1.774e-13
+p.H36R	5:75003678:T:C	POC5	Sex hormone binding globulin (SHBG) levels	1.288e-09
+p.V376I	12:57132236:C:T	PRIM1	Age at natural menopause (ANM)	2.159e-05
+p.I350V	12:57133082:T:C	PRIM1	Hypertension	0.0001259
+p.V376I	12:57132236:C:T	PRIM1	Appendicular lean body mass	2.326e-05
+p.Q154L	4:48492769:A:T	ZAR1	Age at natural menopause (ANM)	8.082e-41
+p.S310N	4:48493237:G:A	ZAR1	Age at natural menopause (ANM)	2.46e-40
+p.Q154L	4:48492769:A:T	ZAR1	Height	2.636e-28
+p.S310N	4:48493237:G:A	ZAR1	Height	6.782e-32
+p.Q154L	4:48492769:A:T	ZAR1	Platelet count	4.561e-21
+p.S310N	4:48493237:G:A	ZAR1	Platelet count	3.098e-20
+p.Q154L	4:48492769:A:T	ZAR1	Mean platelet volume	8.191e-06
+p.S310N	4:48493237:G:A	ZAR1	Mean platelet volume	8.703e-06
+p.Q154L	4:48492769:A:T	ZAR1	Systolic blood pressure	2.294e-15
+p.S310N	4:48493237:G:A	ZAR1	Systolic blood pressure	2.627e-14
+p.Q154L	4:48492769:A:T	ZAR1	Telomere length	3.23e-11
+p.S310N	4:48493237:G:A	ZAR1	Telomere length	8.386e-11
+p.Q154L	4:48492769:A:T	ZAR1	Weight	2.292e-10
+p.S310N	4:48493237:G:A	ZAR1	Weight	3.641e-10
+p.Q154L	4:48492769:A:T	ZAR1	Leukocyte telomere length	1.8e-10
+p.S310N	4:48493237:G:A	ZAR1	Leukocyte telomere length	2.2e-10
+p.Q154L	4:48492769:A:T	ZAR1	Hemoglobin concentration	5.474e-14
+p.S310N	4:48493237:G:A	ZAR1	Hemoglobin concentration	2.719e-13
+p.Q154L	4:48492769:A:T	ZAR1	Pulse pressure	1.466e-11
+p.S310N	4:48493237:G:A	ZAR1	Pulse pressure	4.215e-14
+p.Q154L	4:48492769:A:T	ZAR1	Hematocrit	1.009e-12
+p.S310N	4:48493237:G:A	ZAR1	Hematocrit	5.334e-12
+p.Q154L	4:48492769:A:T	ZAR1	Seropositive rheumatoid arthritis	5.669e-07
+p.S310N	4:48493237:G:A	ZAR1	Seropositive rheumatoid arthritis	8.392e-07
+p.Q154L	4:48492769:A:T	ZAR1	Rheumatoid arthritis	5.305e-07
+p.S310N	4:48493237:G:A	ZAR1	Rheumatoid arthritis	4.444e-07
+p.Q154L	4:48492769:A:T	ZAR1	Mean corpuscular volume	5.699e-10
+p.S310N	4:48493237:G:A	ZAR1	Mean corpuscular volume	1.244e-10
+p.Q154L	4:48492769:A:T	ZAR1	Perceived age	3e-08
+p.S310N	4:48493237:G:A	ZAR1	Perceived age	1.6e-07
+p.Q154L	4:48492769:A:T	ZAR1	 Parental longevity (father's attained age)	2.4e-06
+p.S310N	4:48493237:G:A	ZAR1	 Parental longevity (father's attained age)	1.1e-06
+p.Q154L	4:48492769:A:T	ZAR1	Parental longevity (combined parental age at death)	2.633e-07
+p.S310N	4:48493237:G:A	ZAR1	Parental longevity (combined parental age at death)	3.905e-07
+p.Q154L	4:48492769:A:T	ZAR1	Hematocrit percentage	5.39e-07
+p.S310N	4:48493237:G:A	ZAR1	Hematocrit percentage	6.707e-07
+p.Q154L	4:48492769:A:T	ZAR1	Mean corpuscular hemoglobin	1.957e-09
+p.S310N	4:48493237:G:A	ZAR1	Mean corpuscular hemoglobin	5.159e-10
+p.Q154L	4:48492769:A:T	ZAR1	HbA1c	1.017e-06
+p.S310N	4:48493237:G:A	ZAR1	HbA1c	6.041e-07
+p.A208T	14:50655307:C:T	SOS2	Sex hormone-binding globulin levels adj BMI	7.2e-17
+p.P191R	14:50655357:G:C	SOS2	Sex hormone-binding globulin levels adj BMI	1.8e-25
+p.A208T	14:50655307:C:T	SOS2	Mean platelet volume	1.47e-13
+p.P191R	14:50655357:G:C	SOS2	Mean platelet volume	0.000156
+p.A208T	14:50655307:C:T	SOS2	Sex hormone binding globulin (SHBG) levels	2.979e-17
+p.P191R	14:50655357:G:C	SOS2	Sex hormone binding globulin (SHBG) levels	1.874e-28
+p.A208T	14:50655307:C:T	SOS2	Lymphocyte percentage	0.0003088
+p.A208T	14:50655307:C:T	SOS2	Serum creatinine	1.617e-10
+p.P191R	14:50655357:G:C	SOS2	Serum creatinine	1.768e-17
+p.A208T	14:50655307:C:T	SOS2	Fetal genetic effect on own birth weight	8.78e-08
+p.P191R	14:50655357:G:C	SOS2	Fetal genetic effect on own birth weight	3.57e-10
+p.A208T	14:50655307:C:T	SOS2	eGFRcreat (serum creatinine)	6.612e-15
+p.A208T	14:50655307:C:T	SOS2	Neutrophil percentage	0.0001125
+p.I145T	2:158406865:A:G	ACVR1C	Waist-hip ratio adj BMI	3.411e-12
+p.N100H	2:158412701:T:G	ACVR1C	Waist-hip ratio adj BMI	2.683e-20
+p.N100H	2:158412701:T:G	ACVR1C	Gamma-glutamyl transferase (GGT)	6.835e-05
+p.N100H	2:158412701:T:G	ACVR1C	Monocyte count	0.000214
+p.I145T	2:158406865:A:G	ACVR1C	Highlight scatter reticulocyte count	0.0001017
+p.N100H	2:158412701:T:G	ACVR1C	Highlight scatter reticulocyte count	5.656e-08
+p.I145T	2:158406865:A:G	ACVR1C	Waist-hip ratio	2.067e-07
+p.N100H	2:158412701:T:G	ACVR1C	Waist-hip ratio	5.658e-12
+p.I145T	2:158406865:A:G	ACVR1C	Highlight scatter reticulocyte percentage	0.0002492
+p.N100H	2:158412701:T:G	ACVR1C	Highlight scatter reticulocyte percentage	1.617e-07
+p.P106L	6:31592064:C:T	PRRC2A	Type 1 diabetes (T1D)	1.46e-95
+p.P559S	6:31595926:C:T	PRRC2A	Type 1 diabetes (T1D)	0.0001315
+p.A814P	6:31598553:G:C	PRRC2A	Lymphocyte count	1.04e-05
+p.A814P	6:31598553:G:C	PRRC2A	White blood cell count	7.64e-07
+p.P106L	6:31592064:C:T	PRRC2A	Monocyte count	2.648e-16
+p.P515L	6:31595795:C:T	PRRC2A	Monocyte count	2.28e-05
+p.P106L	6:31592064:C:T	PRRC2A	Rheumatoid arthritis	2.227e-10
+p.P515L	6:31595795:C:T	PRRC2A	Eosinophil count	3.34e-05
+p.P106L	6:31592064:C:T	PRRC2A	Seropositive rheumatoid arthritis	2.12e-10
+p.P106L	6:31592064:C:T	PRRC2A	Mean sphered cell volume	5.088e-10
+p.P106L	6:31592064:C:T	PRRC2A	Mean reticulocyte volume	1.079e-07
+p.P106L	6:31592064:C:T	PRRC2A	Membranous nephropathy	3.922e-06
+p.P106L	6:31592064:C:T	PRRC2A	Red blood cell distribution width	2.696e-06
+p.P106L	6:31592064:C:T	PRRC2A	Total plasma protein	5.018e-05
+p.P106L	6:31592064:C:T	PRRC2A	Height	1.766e-05
+p.P106L	6:31592064:C:T	PRRC2A	Mean platelet volume	5.574e-24
+p.P515L	6:31595795:C:T	PRRC2A	Mean platelet volume	0.000286
+p.P559S	6:31595926:C:T	PRRC2A	Platelet count	2.69e-06
+p.S76T	5:56207123:T:A	SETD9	Height	2.411e-51
+p.K209E	5:56209735:A:G	SETD9	Height	1.654e-22
+p.S76T	5:56207123:T:A	SETD9	Triglycerides	6.514e-09
+p.K209E	5:56209735:A:G	SETD9	Triglycerides	3.249e-08
+p.S76T	5:56207123:T:A	SETD9	Triglyceride levels in individuals without type 2 diabetes	7.312e-06
+p.K209E	5:56209735:A:G	SETD9	Triglyceride levels in individuals without type 2 diabetes	2.19e-06
+p.S76T	5:56207123:T:A	SETD9	Type 2 diabetes (T2D)	1.093e-14
+p.S76T	5:56207123:T:A	SETD9	Alanine transaminase (ALT)	6.346e-10
+p.S76T	5:56207123:T:A	SETD9	HDL cholesterol	4.26e-05
+p.K209E	5:56209735:A:G	SETD9	HDL cholesterol	0.000315
+p.K209E	5:56209735:A:G	SETD9	Serum urate	0.0001827
+p.S76T	5:56207123:T:A	SETD9	Red blood cell distribution width	3.814e-07
+p.K209E	5:56209735:A:G	SETD9	Red blood cell distribution width	3.535e-06
+p.K209E	5:56209735:A:G	SETD9	Triglyceride-to-HDL ratio	0.0004908
+p.S76T	5:56207123:T:A	SETD9	Gamma-glutamyl transferase (GGT)	1.287e-07
+p.S76T	5:56207123:T:A	SETD9	Platelet count	2.456e-05
+p.S76T	5:56207123:T:A	SETD9	Forced expired volume in 1 second (FEV1)	0.0002487
+p.S76T	5:56207123:T:A	SETD9	Serum ApoB	0.000224
+p.S76T	5:56207123:T:A	SETD9	Plasma C-reactive protein	1.161e-05
+p.R483H	11:64026639:G:A	PLCB3	Serum urate	1.228e-41
+p.R483H	11:64026639:G:A	PLCB3	Mean sphered cell volume	2.465e-09
+p.G195R	6:7211818:G:A	RREB1	Serum urate	5.115e-32
+p.G195R	6:7211818:G:A	RREB1	Monocyte count	0.0003685
+p.G195R	6:7211818:G:A	RREB1	Hemoglobin concentration	1.315e-25
+p.G195R	6:7211818:G:A	RREB1	Cystatin C	7.885e-14
+p.G195R	6:7211818:G:A	RREB1	Hematocrit	7.6e-19
+p.G195R	6:7211818:G:A	RREB1	Red blood cell count	3.145e-16
+p.G195R	6:7211818:G:A	RREB1	White blood cell count	9.806e-13
+p.G195R	6:7211818:G:A	RREB1	Hematocrit percentage	1.492e-17
+p.G195R	6:7211818:G:A	RREB1	Height	5.823e-35
+p.G195R	6:7211818:G:A	RREB1	HbA1c	8.075e-10
+p.G195R	6:7211818:G:A	RREB1	Heel quantitative ultrasound estimated bone mineral density (eBMD)	9.978e-22
+p.G195R	6:7211818:G:A	RREB1	Neutrophil count	5.492e-10
+p.G195R	6:7211818:G:A	RREB1	FEV1 to FVC ratio	3.205e-19
+p.G195R	6:7211818:G:A	RREB1	eGFRcreat (serum creatinine)	3.709e-20
+p.G195R	6:7211818:G:A	RREB1	Serum creatinine	1.86e-21
+p.G195R	6:7211818:G:A	RREB1	Lymphocyte count	4.117e-08
+p.G195R	6:7211818:G:A	RREB1	Gamma-glutamyl transferase (GGT)	3.704e-16
+p.G195R	6:7211818:G:A	RREB1	Highlight scatter reticulocyte percentage	1.142e-06

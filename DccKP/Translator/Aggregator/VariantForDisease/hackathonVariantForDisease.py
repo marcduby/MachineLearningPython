@@ -12,8 +12,8 @@ URL_VARIANTS_DISEASE_REGION = "https://bioindex-dev.hugeamp.org/api/bio/query/as
 URL_PHENOTYPES = "https://bioindex-dev.hugeamp.org/api/portal/phenotypes"
 GENE_REGIONS = []
 
-PATH_FILE_FILTER_RESULT = "geneProteinChangeACKY.tsv"
-PATH_FILE_NOFILTER_RESULT = "geneProteinChangeOther.tsv"
+PATH_FILE_FILTER_RESULT = "geneProteinChangeACKY03.tsv"
+PATH_FILE_NOFILTER_RESULT = "geneProteinChangeOther03.tsv"
 
 # methods
 def read_in_phenotypes(file_path='phenotypes.json', log=False):
@@ -227,6 +227,12 @@ if __name__ == "__main__":
 
     list_gene = ['PAM', 'SLC30A8', 'MC4R', 'WIPI1', 'SOCS2', 'HNF1A', 'LRRTM3', 'GLP1R', 'ALDH2', 'CALR', 'DYNC2H1', 'TM6SF2', 'CDKN1B', 'ZNF76', 'PTPN23', 'CFAP221', 'IDH3G', 'SEZ6L', 'SSTR5', 'ZHX3']
 
+    list3 = ['TPCN2', 'ASCC2', 'PAX4', 'PLXND1', 'TRIM51', 'MINDY1', 'ZFP91', 'MACF1', 'CPA1', 'POC5']
+    list4 = ['PRIM1', 'ZAR1', 'SOS2', 'ACVR1C', 'PRRC2A', 'SETD9', 'PLCB3', 'UNC5C', 'RREB1', 'RLF']
+    list5 = ['TP53', 'GCKR', 'OR4C46', 'PGM1', 'ZNF717', 'NYNRIN', 'APOE', 'ANGPTL4', 'KCNJ11', 'KIAA1755', 'GPNMB', 'PNPLA3', 'TSEN15', 'SPRED2', 'BDNF', 'CASR', 'CPNE4', 'MAFA', 'TSHZ3', 'TMEM175', 'RASGRP1', 'ZFHX3', 'HORMAD1', 'ABCB11', 'DHX58', 'DGAT1', 'LRFN2', 'TYRO3', 'FGFR1', 'NUCKS1', 'ING3', 'EP300', 'IGFBPL1', 'JARID2', 'SNX22', 'CNTD1', 'ABCB10', 'TH', 'JADE2', 'PTGFRN', 'DSTYK', 'INSR', 'IPO9', 'NEUROG3', 'FAIM2', 'ZNF641', 'LONRF1', 'EMILIN1', 'KDM5A', 'ZXDA', 'CREB3L2', 'KSR2', 'TFE3', 'YBX3', 'MFAP3', 'FAM13A', 'ENSG00000176349', 'LINC03012', 'PDE3A', 'TRIM37', 'TRIM40', 'TRPS1', 'ASCC1', 'BBS7', 'CCDC62']
+
+    list_gene = list3 + list4
+    list_gene = list5
 
     num = 20
     chrom = None
