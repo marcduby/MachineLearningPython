@@ -29,6 +29,11 @@ result = response.json()
 print(type(result)) # dict 
 print(result)
 
+type:
+-----
+  print(isinstance(x, bool))  # True
+  print(isinstance(y, bool))  # False
+
 
 json:
 -----
@@ -116,6 +121,9 @@ lists:
       sub = my_list[i:i+sub_size] 
       print(sub)
 
+  for index, value in enumerate(my_list):
+      print(f"Index: {index}, Value: {value}")
+
 dict:
 -----
   - dict.get('key')     # null safe way of getting element
@@ -127,6 +135,8 @@ dict:
   - del dict['key']
   - for key in dict:
     -- get key 
+  - dicts1.update(dict2)
+
 
   # Sort the list of dictionaries by the 'age' attribute in descending order
   sorted_data_desc = sorted(data, key=lambda x: x["age"], reverse=True)

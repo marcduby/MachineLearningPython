@@ -1,16 +1,26 @@
 
 
 import networkx as nx
-from langchain_community.graphs import NetworkxEntityGraph
+# from langchain_community.graphs import NetworkxEntityGraph
+from langchain_community.graphs.networkx_graph import NetworkxEntityGraph
 # from langchain.graphs import NetworkxEntityGraph
 from langchain.chains import GraphQAChain
 from langchain_community.llms import OpenAI
 # from langchain.llms import OpenAI
 import json
 
+
+import inspect
+from langchain_community.graphs.networkx_graph import NetworkxEntityGraph
+
+print(inspect.signature(NetworkxEntityGraph.__init__))
+
+
 def create_detailed_graph():
     """Create a more detailed knowledge graph to demonstrate NetworkxEntityGraph features"""
-    graph = nx.Graph()
+    # graph = nx.Graph()
+    # NOTE - need DiGraph for langchiain class used
+    graph = nx.DiGraph()
     
     # Add nodes with properties
     nodes = {
@@ -25,14 +35,23 @@ def create_detailed_graph():
         graph.add_node(node, **props)
     
     # Add edges with properties
+    # edges = [
+    #     ("Alice", "Bob", {"relationship": "reports_to", "duration": "2 years"}),
+    #     ("Alice", "Project X", {"relationship": "works_on", "role": "lead developer"}),
+    #     ("Bob", "TechCorp", {"relationship": "employed_by", "department": "Engineering"}),
+    #     ("Project X", "TechCorp", {"relationship": "owned_by", "budget": "1M"})
+    # ]
     edges = [
-        ("Alice", "Bob", {"relationship": "reports_to", "duration": "2 years"}),
-        ("Alice", "Project X", {"relationship": "works_on", "role": "lead developer"}),
-        ("Bob", "TechCorp", {"relationship": "employed_by", "department": "Engineering"}),
-        ("Project X", "TechCorp", {"relationship": "owned_by", "budget": "1M"})
-    ]
-    
-    graph.add_edges_from(edges)
+        # {"relationship": "reports_to", "source": "Alice", "target": "Bob", "properties": {"duration": "2 years"}},
+        {"relationship": "reports_to", "source": "Alice", "target": "Bob", "properties": {"duration": "2 years"}},
+        {"relationship": "works_on", "source": "Alice", "target": "Project X", "properties": {"role": "lead developer"}},
+        {"relationship": "employs", "source": "TechCorp", "target": "Bob", "properties": {"department": "Engineering"}},
+        {"relationship": "owns", "source": "TechCorp", "target": "Project X", "properties": {"budget": "1M"}}
+    ]    
+
+    # graph.add_edges_from(edges)
+    for edge in edges:
+        graph.add_edge(edge['source'], edge['target'], relation=edge['relationship'], properties=edge['properties'])
 
     # log
     print("got network graph: {}".format(json.dumps(nx.node_link_data(graph), indent=2)))
@@ -68,6 +87,7 @@ def demonstrate_entity_graph_features(G):
     queries = [
         "What is Alice's role in Project X?",
         "Who works at TechCorp and what are their roles?",
+        "What is the connection between Alice and Bob, including all data.",
         "Describe the relationship between Alice and Bob, including duration.",
         "What are all the properties of Project X?",
         "How is TechCorp connected to Project X?"
@@ -77,7 +97,10 @@ def demonstrate_entity_graph_features(G):
     print("=" * 50)
     for query in queries:
         print(f"\nQuery: {query}")
-        response = chain.run(query)
+
+        # DEPRECATED - 
+        # response = chain.run(query)
+        response = chain.invoke(query)
         print(f"Response: {response}")
         print("-" * 50)
     
@@ -110,18 +133,23 @@ def main():
     entity_graph, chain = demonstrate_entity_graph_features(G)
     
     # Explore structure
-    explore_graph_structure(entity_graph)
+    # BUG - error
+    # explore_graph_structure(entity_graph)
     
     # Example of a complex multi-hop query
     complex_query = """
-    Starting from Alice, find all entities connected within 2 hops 
+    Starting from Alice, find all entities connected within 1 hop
     and describe their relationships and properties.
     """
     print("\nComplex Multi-hop Query:")
     print("=" * 50)
     print(f"Query: {complex_query}")
-    response = chain.run(complex_query)
-    print(f"Response: {response}")
+    # response = chain.run(complex_query)
+    # print(f"Response: {response}")
+
+    response = chain.invoke(complex_query)
+    print(f"Response: {response.get('result')}")
+
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,18 @@
+
+
+
+
+
+graph RAG:
+----------
+
+
+
+graph algos:
+------------
+- pagerank (how central node is)
+  - how many random walks pass through node
+
+- betweeness centrality 
+  - how many shortest path pass through node? 
+  
