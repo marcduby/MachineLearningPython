@@ -1,0 +1,13 @@
+{
+    "subject": "UNII:8NY9L8837D",
+    "object": "PUBCHEM.COMPOUND:123995",
+    "predicate": "biolink:close_match",
+    "primary_knowledge_source": "infores:atc-codes-umls",
+    "kg2_ids": [
+        "ATC:A01AA03---UMLS:xref---None---None---None---UMLS:C0772032---umls_source:ATC"
+    ],
+    "domain_range_exclusion": false,
+    "knowledge_level": "knowledge_assertion",
+    "agent_type": "manual_agent",
+    "id": 1
+}

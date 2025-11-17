@@ -1,0 +1,445 @@
+
+
+20250508 - sequoia capital - training data
+Patrick Hsu, co-founder of Arc Institute, discusses the opportunities for AI in biology beyond just drug development, including its new Evo 2 biology foundation model.
+
+Patrick Hsu, co-founder of the Arc Institute and Berkeley professor of bioengineering, brings a unique perspective on the convergence of AI and biology, emphasizing that machine learning’s potential extends far beyond drug discovery to understanding and programming fundamental biological systems. His insights reflect both the immediate possibilities and long-term vision for how AI will transform our understanding of life itself.
+
+AI can model biological systems by learning from evolution’s natural experiments: The ability to predict the functional consequences of genetic mutations—from disease-causing variants to subtle physiological changes—represents a fundamental shift in how we can understand and manipulate biology.
+Biology needs better predictive models: AI models like Evo 2 can overcome the time-consuming “guess and check” paradigm that dominates current research. While wet lab validation remains essential, AI models that can accurately simulate biological systems could dramatically accelerate the scientific process by allowing parallel testing of thousands of hypotheses.
+The future of medicine will require integrating multiple data streams: Personalized health predictions and interventions will require learning from genetics as well as real-time biomarkers. Current fragmented approaches need to evolve into systems that can holistically model the interconnections between brain, body and behavior.
+Success in computational biology requires true bilingual expertise: Arc Institute looks for people who deeply understand both machine learning and biological systems. While specialists in either field are common, the ability to bridge these domains and identify meaningful connections is rare but essential for breakthrough innovations.
+Drug discovery is not the bottleneck: Despite the potential of AI in drug design, necessary regulatory trials and testing phases slow the drug development process. The development of AI models can improve efficiency in individual steps of drug discovery and development, such as target identification and data analysis, and may lead to more effective drug development pipelines.
+An app store for biology: Biological foundational models can lead to applications that are broadly useful across various scientific domains. This ecosystem of AI-driven tools could democratize access to advanced biological insights, providing a catalyst for new discoveries and innovations.
+Patrick Hsu: One of the things that we—you know, that the field of computational biology is often asking is, you know, if you have a genetic mutation in your genome, if I sequenced you, whether that’s via, you know, 23andMe or, you know, or some other genetic test, you’ll find mutations in your genome. How do we actually interpret those and understand, you know, what the functional consequences are? Sometimes you’ll get a rare genetic disease. Those are causal genetic mutations that are known to cause a devastating disorder—that might be muscular dystrophy or cystic fibrosis or breast cancer, right?
+
+But, you know, most of the mutations that you have, there’s sort of this, you know, we call them ‘variants of unknown significance,’ which is fancy kind of scientist speak. We don’t know what the hell is going on, right? And, you know, it turns out the model has an opinion about those mutations and what the hell is going on with them, and it turns out it’s sort of state of the art in doing that.
+
+Josephine Chen: Today we’re joined by Patrick Hsu, a pioneer in genome editing, CRISPR technologies, and the emerging field of generative biology. He’s the co-founder of the Arc Institute—where cutting-edge AI and biology converge to reimagine scientific discovery.
+
+Patrick and his collaborators created Evo 2, a revolutionary biological foundation model that can interpret and generate genomic sequences across all domains of life.
+
+By training on the fundamental information layer of life—DNA itself—Evo can identify patterns in genetic code at scale and predict effects of both coding and non-coding mutations that could mean the difference between health and disease.
+
+In this episode we’ll hear how Patrick’s vision goes beyond creating better drugs to building a comprehensive understanding of biology at all scales.
+
+Patrick, welcome to the show. Thank you for coming.
+
+Patrick Hsu: Thanks for having me on. Excited to spend some time with you today.
+
+Where are the drugs?
+Josephine Chen: I think maybe the most obvious thing to start with is, you know, people have heard about CS and bio for the longest time. Now it’s all about AI and bio. What are the results? Like, what should we actually be expecting to see, and …
+
+Pat Grady: Where are the drugs? [laughs]
+
+Josephine Chen: Why are we not seeing the drugs yet?
+
+Patrick Hsu: It takes time, right? Well, here’s the thing. Even if we had perfect drug design molecules, you know, coming out of these pipelines and fancy models, it was still—you know, you can design a trillion molecules, right? Ten trillion, right? But you still have to actually test them, right? Initially in animals and then in people, right? And so that’s the real bottleneck, and even if you packed off a funnel with all the things, it just takes years to actually go through the regulatory apparatus, right?
+
+And so I think there are a few intermediate checkpoints along the way in order to kind of realize this potential, but it might be worth taking a step back and just saying—you know, this is a bit of a soapbox of mine that ML for bio is not just drug design, right?
+
+Josephine Chen: Yeah.
+
+Patrick Hsu: This is actually ultimately, I think, a very important but narrow part of the potential of biology, and not just as a field of STEM and in the way that affects human lives, right?
+
+Josephine Chen: And do you mean basic, just, like, understand the human body, or where else do you think the applications are beyond drugs that treat all of us?
+
+Evolution is the unifying theory for biology
+Patrick Hsu: Yeah. One of the things that motivates me academically is the idea that we actually have a unifying theory for biology, right? So unlike the physicists who have been kind of scrimping and, you know, kind of poking for one for a century, right? We have this in biology, and it’s so obvious that we find it, you know, sort of just an obvious force, right? This is, of course, evolution, right? And then so it acts on biology across all of its different length scales from entire planets, right? Biology can, for example, terraform planets, right? All the way down to, you know, ecosystems and populations, to individuals, to our tissues, to individual cells, to individual molecules, right? And so that’s this unifying force that is actually very deep and rich and actually, you know, you can learn a lot from, right?
+
+Pat Grady: How do we activate that unifying theory? How do we put it to work?
+
+Patrick Hsu: So we’ve been thinking about this in lab, and recently have been training a series of models that we call Evo, inspired by these forces of evolution, that tries to connect biological sequences using this sort of modern sequence modeling paradigm directly to biological function, with the idea that evolution passes down its effects of natural selection throughout generations of life via DNA mutations.
+
+And so last year, of course, multiple Nobel prizes were awarded for AI and for AI in biology, in particular for protein design and for predicting the structure of proteins, to David Baker and to Demis Hassabis and John Jumper, right? And if you read those citations, they both explicitly state ‘for proteins,’ right?
+
+Josephine Chen: Yeah.
+
+Patrick Hsu: And, you know, we love proteins, right? These are, of course, some of the most important and fundamental molecular machines. But our realization, as for me as a genome biologist, if you will, the idea is that proteins are encoded in DNA along with RNA and with regulatory DNA and all of the things that you need to make life, right? And so we asked, could we train a model on genomes with a long context model so that it could reason over all the different bases and molecules that are embedded inside of genomes to learn about the molecular interactions and how they lead to biological function?
+
+Now that was very scientific or academic, right? But we can talk through specific examples of what we were able to actually do with this in a way that grandma can understand. You know, like predicting the effects of breast cancer-causing mutations, right? It actually is best in class at doing this, right? Or being able to design new CRISPR gene editing systems or, you know—I think, you know, in addition to its zero shot capabilities, I think people are building really an app store for biology on top of all of these kind of foundational layers.
+
+One of the kind of funny things in modeling today is how everyone’s model has to be more foundational than someone else’s model. There’s a bit of a pissing contest that’s happening, right? But maybe our model is more foundational than the other models.
+
+Josephine Chen: Because you’re DNA versus protein?
+
+Patrick Hsu: I mean, or, you know, and then below that there are these all-atom diffusion models, so maybe those are even more fundamental. I don’t really know. I think what matters are the capabilities, and doing something that actually fits feels useful. And I think those are some examples of what we thought was cool and useful from the model.
+
+What does Evo enable?
+Josephine Chen: Can you actually walk through a couple more of those use cases? Like, which are some of the most exciting ones? And why is it possible today with Evo, but wasn’t possible before?
+
+Pat Grady: And the model’s open source, and so where has it been picked up? Where are people running with it, with some of those use cases that Josephine mentioned?
+
+Patrick Hsu: Yeah, so the model—I can just maybe talk about what the model is, right? So it’s an autoregressive sort of multi-convolutional hybrid model, right? But you can think of it like, you know, just a really efficient, long context model that’s trained, at least in this version, autoregressively, right? And basically it does this next token or next base prediction, and it turns out, just like in natural language or in vision or in robotics and in embodied intelligence, this general machine learning paradigm is able to find higher order patterns, right?
+
+And so just like, you know, if you’re doing next word prediction, you can learn about grammar or color and world navigation, right? You seem to learn some rich set of representations about biology by predicting the next base or the next amino acid residue or the next gene, right? And the model learns something about the molecular logic that gives rise to a cell.
+
+And so one of the things that the field of computational biology is often asking is, you know, if you have a genetic mutation in your genome, if I sequenced you, whether that’s via 23andMe or some other genetic test, you’ll find mutations in your genome. How do we actually interpret those and understand what the functional consequences are? Sometimes you’ll get a rare genetic disease. Those are causal genetic mutations that are known to cause a devastating disorder—that might be muscular dystrophy or cystic fibrosis or breast cancer, right? But, you know, most of the mutations that you have, they’re sort of this, you know, we call them ‘variants of unknown significance,’ which is fancy kind of scientists speak. We don’t know what the hell is going on, right? And, you know, it turns out the model has an opinion about those mutations and what the hell is going on with them, and it turns out it’s sort of state of the art in doing that.
+
+Josephine Chen: Interesting. Wait, what’s an example of one of these mutations, and what did the model discover and how did you verify that what it discovered was accurate?
+
+Patrick Hsu: Yeah. So one example that we showcase in the paper is a gene called BRCA1. It’s sort of a famous gene that’s known to cause breast and ovarian cancer. And if you have the specific causal mutations in BRCA1, many women elect to get double mastectomies, right? And this is obviously a serious and major life decision and medical decision for you and for your family, right?
+
+And the question is, you know, if you don’t have one of the known to be benign mutations, so you’re fine, and you just go ahead and get an annual mammogram and just check and monitor, right? There’s this entire middle distribution of these VUS or variants of unknown significance, right? And, you know, there is this kind of gold standard database from, you know, the scientific literature. It’s known as ClinVar. And it basically has a list of all the different genes that are known to cause disease, and which of those mutations in those genes can cause disease state or not. And we can basically use this as a ground truth database to assess the predictions of the model for new mutations that you introduce into the gene and whether or not those would be pathogenic.
+
+And so when you develop a new type of model, you have to create a lot of the evals as well. And so that was actually something that we put tremendous effort into. And obviously you guys see this horizontally across AI in many different domains is, you know, folks will build things to the benchmarks. No one really, I think, likes building benchmarks. It’s really gory, it requires a lot of taste, it takes a lot of time. You have to continually update them as the models get better. And, you know, we dealt with a very similar sort of challenge here, which was making evals that would be similar to the AGI or intelligence evals, where it actually feels meaningful when you’re actually able to do it, like AIME or Putnam problems or, you know, things like that. What would be the equivalent of demonstrating true biological understanding that a cell biologist would feel emotion if you were actually able to solve that, right? You know, what would it look like to make all molecular biologists feel what the NLP people felt a few years ago? That’s sort of like the core of, you know, what we’re kind of noodling through.
+
+Following the data
+Josephine Chen: And I think you mentioned this briefly, but, you know, you guys are working on the DNA layer, and you guys didn’t actually do anything in the lab. You didn’t have a lab in the loop. Like, there was no RL. Talk us through the decision to do that, and then kind of the decision for people who are doing protein models or affinity models, a lot of them have a lot more lab in the loop. Talk us through the differences between some of those models, too.
+
+Patrick Hsu: Yeah, so we started with DNA because we think it’s the fundamental information layer of life, right?
+
+Josephine Chen: Yeah.
+
+Patrick Hsu: The second is it’s also just pragmatically where we have the most data, right?
+
+Pat Grady: Where does the data come from?
+
+Patrick Hsu: It comes from the entire scientific community. And so there are these kind of open source, government funded and maintained databases known as the Sequence Read Archive, right? Where basically when you publish a paper, you have to submit your data. And all of the sequencing data that’s been created over the last 25 plus years goes into these databases, and that has all of the genomes that the community has ever sequenced for bacteria, for bacteriophage, for viruses, for humans, monkeys, fish, flies, you know, the entire Noah’s Ark or menagerie, whatever, right?
+
+Pat Grady: [laughs]
+
+Patrick Hsu: We’ve got all those genomes and, you know, so the experiment that’s already been done, if you will, is the experiment of evolution, right? That, you know, there are different mutations that are what make us different from each other. That’s human genomic variation, but also the mutations that make us different from chimpanzees or from worms or from bacteria. And the model can just look across this trillions of tokens-large dataset and learn those patterns. And that was sort of the insights of this Evo series of models that we’ve been training at Arc is to kind of ask if you could predict that next base, then that might be the difference between being healthy or having a sickle cell anemia mutation, right? Or it could predict the next amino acid residue. And that could be the difference between having a catalytically active binding pocket for a key enzyme in your body physiology, or that being a null mutation where that thing doesn’t work anymore. Or it could also be sort of the next gene, right?
+
+So these are different levels of abstraction that completes some biosynthetic pathway, or it’s a different gene that’s been removed by some transposon or jumping gene, mobile genetic element that’s excised it. So some sort of viral interference, if you will. So they’re just—across large databases, you find new patterns, and it turns out those seem to be biologically meaningful.
+
+Josephine Chen: So if you’re going from DNA and you know the function, in many ways, you mentioned even the DNA model can actually predict binding affinities, do you even need the structure, the protein structure models at all as an intermediate step? Or can you just go straight from sequence to function?
+
+Patrick Hsu: So structure is another way to have an abstraction of function. So you have concepts of convergent evolution, for example, where something has similar function, but they have different sequences and slightly different structures that act out the activity or function of that protein, right? And so this sort of sequence to structure to function token or mapping of protein language modeling think is very beautiful, right? It takes advantage of, you know, the central dogma of molecular biology.
+
+Josephine Chen: AlphaFold series.
+
+Patrick Hsu: Right. Right. Well, it takes advantage of just our supervised textbook understanding of how biology works. And now the interesting oxymoron with these models for me is the way that we use them is, you know, just like you use ChatGPT, it’s text in, text out. You know, Evo is DNA in, DNA out.
+
+Pat Grady: Yeah.
+
+Patrick Hsu: And it turns out we don’t speak DNA very well. So sort of imagine if you were using a model like ChatGPT in Russian, right? But one percent of the words were in English. That’s kind of what it feels like. That’s the vibe of using Evo is actually you don’t really know what’s going on. And so you have to build lots of annotators and … 
+
+Josephine Chen: Interpretability.
+
+Patrick Hsu: Yeah. Like, techniques to try to interpret and read what’s happening. And so the way that we even use and prompt the models is really primitive, right? And so the way that we do fancy prompt engineering workflows to get more utility out of these models is something that we’re just in the very early innings of exploring how that works with these biological language models, because we speak DNA with an extremely heavy accent.
+
+Josephine Chen: Who do you think will do some of that work? Because the model is currently open source, do you envision a company formed around this? Will it be individuals who are at these pharma companies who learn how to prompt this? Like, how does that ecosystem evolve?
+
+Patrick Hsu: Yeah, I hope everybody, right? I think the tools become useful when they meaningfully lower the energy barrier of adoption. It’s a catalysis type of activity where everyone uses BLAST for sequence alignment, everyone uses AlphaFold to look at protein structure, everyone uses CRISPR to do gene editing, everyone does NGS to read DNA or RNA, right? So I think there will be a zoo of different models for not just modeling molecules or mapping sequence to function, but I think every step of the scientific method, right?
+
+And so I think, you know, if 2025 is the year of AI agents, I think, you know, there’s lots of interest in agents for science, and not just agents for interpreting molecules, but also for doing the meta aspect of how scientists work and operate.
+
+Josephine Chen: Yeah.
+
+Patrick Hsu: And we’re also very excited about that at Arc, and recently released some of our first AI agent work.
+
+Arc’s role in research capability breakthroughs
+Pat Grady: What is the most important role for Arc to play in all of this?
+
+Patrick Hsu: We started the institute to be able to have this mothership that is able to attack long-term research capability breakthroughs, and to be able to have the long-term thinking and the multidisciplinary expertise in order to actually execute on those goals, right? I think if you look in biology, one of the interesting things is that a lot of the biggest mechanistic or basic science breakthroughs do happen in a university context. And I would say that’s interestingly kind of in contrast to what happens in AI.
+
+Josephine Chen: Yeah. Or CS in general. Yeah. Why do you think that’s the case?
+
+Patrick Hsu: That might be a 10-hour podcast, right?
+
+Josephine Chen: Just the one-minute explanation.
+
+Patrick Hsu: I have a lot to say, but I think in short, it does happen in universities. I think, you know, 30 years ago, the questions that basic science was interested in and industry was interested in were quite different, actually. And I would say today they seem to heavily overlap, right?
+
+And there are some things that, you know, folks don’t typically do in a university lab. Like, you know, people don’t tend to study PK or Tox or CMC or hardcore drug manufacturing type things. But folks are interested in molecular glues, induced proximity and degraders and new drug concepts, right? Folks are also interested in new machine learning models, and new delivery mechanisms and inflammation and stress and all kinds of things like this. And so there’s much more heavy overlap, but I think the way that the type of product that selects what you do upstream is very different. They’re structurally different. You know, end of the day, you have to optimize for grant funding and first or co-first author papers and, you know, that type of stuff in the academic setting. Whereas, you know, you do have to make a drug and have, you know, dozens to hundreds of people lined behind a molecule or a program to reach the holy land, right? And I think that does lead to differences in strategy.
+
+And I don’t know, personally, by the way, I think people really kind of overemphasize, like, what’s academia and what’s industry? And the reality is these are, like, heavily overlapping distributions today in how people operate. And so I think the differences are a little overblown. But, you know, they do have fundamentally different incentives that drive different behaviors. And a lot of what we tried to do in blending our academic side of the house with our technical staff side of the house, which is built much more like you’d see in industry, it has been kind of part of what we hope will make Arc a model that others want to copy or replicate or propagate. Yeah.
+
+Josephine Chen: And you’ve had some fun people come through on the technical side of the house, including people like Greg Brockman.
+
+Patrick Hsu: Yeah. No, it was a joy. Yeah. So Greg joined us during his sabbatical from Open.AI. We’re really the kind of, you know, the first vacation that he had ever taken since starting Open.AI.
+
+Josephine Chen: Of course is to work more.
+
+Pat Grady: Yeah.
+
+Patrick Hsu: [laughs] So it’s—I actually have a funny story about this. Hopefully Greg will allow me to tell it. But when he first came by Arc and we were talking to him about, you know, biological language modeling, and how the sort of machine learning breakthroughs of, you know, all these other domains might just port over directly to understanding, you know, molecules, he was, you know, really kind of, you know, jazzed by this, and also by the idea that his very specific capability and expertise would be kind of really meaningful in actually making this happen.
+
+But, you know, initially he was, you know, he was, you know, saying, “You know, this is really the first vacation I’ve ever taken. I can’t promise too much. You know, I might not be able to spend so much time on this. You know, I need to take Anna on vacation.” And then Anna gets up and goes to the bathroom, you know, in the middle of this very long meeting, and then he’s like, “All right, here’s my email. Get me on the repo.”
+
+Josephine Chen: [laughs] Of course, of course.
+
+Pat Grady: Yeah, that’s funny.
+
+Patrick Hsu: So yeah, just built different. Yeah, it was such a joy to learn from him.
+
+The power of multidisciplinary teams
+Pat Grady: What have you found works well in getting the different disciplines to work together as one unified team?
+
+Patrick Hsu: Yeah. No, it’s an interesting question. And we’ve thought about this deeply at Arc as a convening center, you know, not just between the three flagship research universities here in the Bay Area, in Stanford and Berkeley and UCSF, but also between basic science and the biotech industry, but also biology and the technology sector. For example, our CTO, Dave Burke, just started a few months ago, and has really kind of been leading the computational modeling of virtual cells, where we’re trying to simulate human biology with these AI foundation models. And Dave used to—he actually has a PhD in biomedical engineering from many moons ago. Most recently ran engineering at Android and Pixel.
+
+And so, you know, I think we have also built an entire operational side of the house, from finance to legal to lab ops to facilities to university relations and academic affairs. And, you know, we run our own space around administration, our own ops. And we try to do, you know, much of that like a tech company, right? And, you know, we’ve also, I think, recruited in, on the ops side of the house, many people who maybe ordinarily wouldn’t work in a basic science or discovery setting, but are kind of motivated by the mission to be able to take fundamental breakthroughs and have a product sensibility where we can get these out into the real world.
+
+And we’re not optimizing at Arc for nature and science papers, right? If you give Berkeley or Stanford professors millions of dollars to do more science, that’s almost the default expectation and output, right?
+
+Josephine Chen: Yeah.
+
+Patrick Hsu: And what we really care about are things that could be tangible, right?
+
+Josephine Chen: And so what does success look like? Just more people using the products you create? Or yeah, what is success for your institute?
+
+Patrick Hsu: I think there are lots of ways that you can parse scientific productivity, right? You know, journal publications is, of course, a important and fundamental part of sharing work with the community, and peer reviewing it and all of that good stuff. But technical blogs, you know, code repos, protocols are just platforms that people can use, right? And I think we want to make technologies and platform capabilities that are broadly useful to be able to create new mechanistic insights, but also actually try to cure some diseases, right? And I think over time, if we can be an Edison shop that’s inventing or finding lots of cool things, there hopefully will be real world value in those things. And there are lots of partners who specialize in this.
+
+If you had a magic wand…
+Pat Grady: Speaking of curing diseases, earlier you were talking about, even if you had perfect drug design or infinitely accessible, infinitely intelligent drug design, there’s still a long process that has to happen after that before you can make an impact on humans. Can you talk a bit about where you see opportunities in that value chain? And if you had a magic wand and you could just accelerate progress by 10 years, which of those bottlenecks might be alleviated by things you see coming down the pipeline?
+
+Patrick Hsu: Yeah, so happy to talk about this in the pharma context, which are, you know, large, decentralized, sprawling bureaucracies, much like universities or, you know, Congress or the SF city government, right? And, you know, I think, you know, some parts are, you know, incredibly functional, and then I think everyone would agree in these different organizations, some parts are less efficient. And so I think the first thing that hopefully we can see is that we can have models that can improve efficiency in discrete individual steps, right? So can we have a more efficient process for target ID in particular, right? Can we have a more efficient process for data analysis, right? Can we have a more efficient process for, you know, like, information and literature review and summarization, right? For molecule design. Absolutely. Making a better binder, right? And then figuring out the drug properties of, you know, those different molecules. That could be selectivity, that could be, you know, pharmacokinetics, right? Half-life, expression, manufacturability, what have you, right? And, you know, there will be models or model-guided approaches for each of those steps, right?
+
+And then there’s—you know, I mean, I think if you look at how AI is actually kind of being used today in the pharma companies, a lot of them are actually just taking massive regulatory documents, summarizing them, and then using AI to help them write more … 
+
+Josephine Chen: Regulatory. [laughs]
+
+Patrick Hsu: So there’s this compression and decompression of information in a structured fashion that has actually been leading to enterprise adoption in this setting, right? And I don’t know, I think that says something about the process of where people find things useful. So, you know, one example is if you talk to some pharma execs, not the drug discovery organizational leaders, but the budget people, you know, who kind of hold the enterprise purse strings, right? They’ll say, “Well, you know, I don’t spend actually that much money on drug discovery. I actually spend most of my money on drug development. So tell me something about drug development, which is really where most of my dollars go. How can AI help me with that?” Right? And I think that is actually, like, a very deep comment, right? Because it says something about where money is spent and where value can be found. You know, the first thing to realize is, you know, our industry probability of success is, like, 10 percent.
+
+Josephine Chen: Whoa.
+
+Patrick Hsu: And so, you know, I think a lot of the things that people talk about or complain about or comment on in drug discovery and development falls out of that fundamental statistic.
+
+Pat Grady: Yeah.
+
+Patrick Hsu: Right? Like, why does the FDA heavily regulate? Why is it so focused on safety? Well, if 90 percent of the time it doesn’t work, they’re going to care a lot about safety, right? And I think the promise of AI is if we can go from 10 percent POS to 20 or 30 or 50, right?
+
+Pat Grady: Can we?
+
+Patrick Hsu: As you move through those steps …
+
+Pat Grady: Can we. Do you think we can?
+
+Patrick Hsu: Over time. I think here’s the thing that I find kind of interesting is we have done a lot of biology with what is not that far from guess and check, right? If you look at what happens in the wet lab, like the actual experiments that are happening, you’re just kind of in the arena trying.
+
+Josephine Chen: And trying out random hypotheses and seeing what happens.
+
+Patrick Hsu: Yeah. And this is like the missing reasoning trace in the scientific literature is you don’t know what didn’t work. Everything is narrativized and written in a story of, you know, inexorable logic and vision leading to scientific breakthrough, right? But everyone who makes the sausage knows that’s not what actually happens most of the time, right?
+
+And, you know, if you actually work with the, you know, research, you know, kind of folks at the bench, you know—and this is actually the case across all technical industries is that high fidelity reasoning trace of the true process is kind of not written down anywhere. And that would actually be very useful for these reasoning models and for closing the loop and doing multi-agent frameworks, blah, blah, blah, blah. But that’s kind of what we’ll need. But if you actually look at what happens, it’s guess and check, right?
+
+And so a model with even a modicum of predictive value would be transformative, one with even moderate predictive value—which by the way, we don’t have, right? Like, I think biology is a very pragmatic, salt-of-the-earth, experimental discipline, right? You see this in the culture of peer review. Show me the data. You can’t pontificate in your discussion section because you haven’t shown any of this stuff, right? If you read old papers, they were so clear and visionary and highfalutin in a way that I think papers today are—we have this culture that is very pragmatic and I think having models that have predictive power will, you know, I think, obviously be useful for accelerating the efficiency of science. It’ll also change the culture, which I think hopefully—well, hopefully it will change the culture, which I think will be really interesting.
+
+Josephine Chen: Why do you think it’ll change the culture of the models?
+
+Patrick Hsu: Because you’ll believe people’s predictions or pontifications depending on how …
+
+Josephine Chen: It’s just another kind of evidence point, basically.
+
+Patrick Hsu: Yeah. Just like how model hallucinations could be, you know, predictions, or they could be nonsense and garbage, right? And that depends on how much you trust the model, right?
+
+Josephine Chen: Got it. Why do you think it’s the case—and we’ve collected a lot of data too, to your point. There’s obviously—we basically see what works, and we oftentimes don’t see what doesn’t, although hopefully lab notebooks are recording that in some way, shape or form.
+
+Patrick Hsu: Maybe.
+
+The promise of predictive models
+Josephine Chen: Maybe. Hopefully. But somehow still very, very regularly, even when things work in cells, things work in mice, they fail in humans oftentimes. Like, why is that still the case? Is it we just don’t understand biology deeply enough? Like, why is there still that drop off, and that drop off hasn’t really changed over time?
+
+Patrick Hsu: Well, these are imperfect models, right? And, you know, we set up this set of filters in the drug discovery process where first show it works in cell lines, then show it works in primary cells or in an organoid, then it shows it works in a mouse, then shows it works in a monkey, then test it in people, right? And, you know, by the time you’ve gotten there, like, five years and $100 million has gone by, right? And I think that’s very challenging, right? And that’s where I think predictive models will really help, right? Because the reason why we do all of these steps in linear series is because we don’t have predictive power, and so we have to do things in the arena, and it just—you know, you have to do it in real life, right? And growing cells and growing animals takes months to years to actually do those experiments.
+
+And so the promise of having predictive model isn’t just predictive power, it’s that you could actually simulate things in a multi parallelized fashion, right? That’s the whole idea behind parts of “Machines of Loving Grace” that I thought Dario really did get right is the idea that if you had something that could be a trusted oracle, that you could just run, you know, 10,000 agents at the same time, right?
+
+Josephine Chen: Do we have enough data for that full closed loop to create a trusted oracle?
+
+Patrick Hsu: I think we will see more examples of this coming out over time, right? Today, folks building AI agents for things are doing—you’re basically trying to close the gap between …
+
+Josephine Chen: Small steps.
+
+Patrick Hsu: Yes. Step X and step X plus one.
+
+Josephine Chen: Yeah.
+
+Patrick Hsu: Right? Or X plus four or whatever, right? And the businesses are trying to find the most commercially valuable set of, you know, steps that is a set size that’s as small as possible in step number in order to, you know, make a company. And I think we will have agents or co-pilots at each step in the scientific method, from hypothesis generation to experimentation to data analysis, and the ability to close the loop and write the paper or make the discovery and then decide what to do next, I think. is quite far away. But I think something that’s very efficient at traversing the steps, I think, will really take off.
+
+So as a concrete example, one of the things that we recently released at Arc is our virtual cell atlas, right? Which is the world’s largest data set of single cells that we’re using for training these cellular foundation models, right? And the way that it happened was we created an agent that was essentially, it’s like a crawler, kind of like, you know, kind of a search crawler, but it’s able to crawl the kind of, you know, Sequence Read Archive, and then process all of the highly unstructured and messy metadata and, you know, kind of reanalyze and systematically reprocess all single cell data. And this is something that is just running on a cloud bucket instance, just cranking away in a tireless fashion, right?
+
+And it’s the kind of stuff that a talented computational biologist wouldn’t want to do because it’s so grindset, but actually the scale at which we’re able to reach is community wide. And that’s the leverage and efficiency that our team of, you know, just really two lead researchers could achieve with one agent, I think, was a huge mental unlock for me. And so we want to be at the frontier of actually deploying these and making breakthroughs. And I think the meta aspect that folks are going after right now will shake out over time. But I care about using these to actually make breakthroughs as opposed to chart the end-to-end closed loop path.
+
+What makes great scientists
+Pat Grady: You mentioned earlier the sort of the pragmatism that a lot of research papers have now, versus grandiosity or something a bit more visionary back in the day. I wonder if some of that is related to the specificity of the work that people are doing now. Meaning it feels like we’ve gotten more and more specialized over time. And I wonder if some of that is taking us away from breakthroughs, because in a lot of cases you need the knowledge from different domains or different disciplines to achieve those breakthroughs. And I guess maybe the question is, one of the nice things about LLMs is that they can incorporate an enormous amount of information, and they’re sort of inherently generalized, even when you apply them to a specific domain. How much of the efficacy that we might get out of some of these models is simply related to their ability to go across all these different specialties?
+
+Patrick Hsu: Yeah, if you look at—at least to me—the best scientists that I’ve had the pleasure to collaborate with or learn from, they really do two things. They’re able to come up with really creative ideas and they’re able to execute on them.
+
+Pat Grady: Yeah.
+
+Patrick Hsu: The reason why they’re able to come up with really creative ideas is because they’re able to make connections between things that other people wouldn’t make. And in fact, if you got a room of 10 really smart people together to chat science, like that’s, you know, a weekly lab meeting in any group, right? If you actually analyze the anthropology of what happens, there’s usually a small subset of people who are hearing all the things that are being discussed, and then actually saying, “This is the connection or the conceptual bridge between these things,” right?
+
+Pat Grady: Yes.
+
+Patrick Hsu: And so there’s—you know, that’s sort of like an auto-distribution generalization, right? It’s like this thing that I heard was really novel, and let’s recognize that, and then try to see what can generalize out of that observation, right? And that comes from people who tend to either read a lot or reason a lot, right? And so there’s some aspect of pre-training, right? You need to just read a lot of papers, read a lot of chemical biology papers, read a lot of molecular biology papers, read a lot of AI papers, read physics papers, and do so across domains so that you can traverse those boundaries, right? I think, you know, there’s this design problem of how do you build a multidisciplinary team, right? And the reality is for example, you want to work at the interface of bio and ML. There are way more ML people and way more bio people than truly bilingual ML and bio people, right? I have the extreme fortune of working with some of those at Arc, right? And you know, they’re just rare, right? But those translators can actually help you power the rest of the population.
+
+Pat Grady: Yeah. What do you look for in people at Arc?
+
+Patrick Hsu: It depends on the role, right? I think, you know, depending on how you’re trying to match specific project needs. But in a way, I could tell you all the ways that we try to intellectualize our recruiting process, but it actually comes down to very simple things, right? And it’s the same thing that I look for in a research technician or an executive, at least on the science side, right? It’s really like, are you thinking about science outside of the lab? And have you done something end to end before? And then the third is, you know, do you have the grit to actually kind of walk the path and get it done?
+
+Pat Grady: Yeah.
+
+Josephine Chen: What do you mean by the end-to-end part?
+
+Patrick Hsu: I think it’s very easy to go from step one to two or three to five or, you know, twelve to fifteen, but, you know, going from one through fifteen winnows down the population significantly. And so, you know, I often say, you know, the last 20 twenty percent of a project is actually 80 percent of the work.
+
+Josephine Chen: Yeah.
+
+Patrick Hsu: Right? And it’s because finishing something and then honing your killer instinct from finishing things multiple times really matters.
+
+Josephine Chen: What should we expect to be coming out of Arc Institute in the next six months and then over the next few years?
+
+Patrick Hsu: Well, I’m tremendously excited about lots of things, and I think the thing that maybe many people don’t know is the degree to which we have, you know, really been trying to build biology out at Arc. I think people have maybe heard about our gene editing work or our machine learning work, right? But a lot of what we’re actually trying to build is this general concept of applying high throughput scalable technologies in the context of multi-systems interactions. Really working at the neuro and immune interface. And so, you know, we hired two incredible scientists out of Penn last year who study the process of interoception, right? So proprioception is, you know, when you kind of close your eyes, where are your limbs, right? And interoception is the idea of, you know, “I feel the weather in my knee,” or “My tummy feels funny,” right? You know, kind of midwives tales type stuff that actually has really deep science. And, of course, it’s totally unknown. And how does your body talk to your brain and vice versa, right? And it turns out there’s a deep mechanistic basis for this. And as, you know, I think when people think about programming biology, they think about it in the drug paradigm of how do I get a binder that binds to this protein, or how do I get a CRISPR to edit this gene?
+
+But if you think about what happens with hormones or with Ozempic, right? You’re able to program the way that you think and feel and behave in really powerful ways that controls not just satiety, but energy, mood, you know, muscle synthesis, you know, focus, all kinds of things. And I think how do we actually program physiology is something that I’ve been spending a lot of time thinking about in our lab.
+
+Switching off runner’s high
+Josephine Chen: What’s one unexpected connection that you think people don’t think about?
+
+Patrick Hsu: One example is the—you know, so exercise, right? And so Christoph, one of our PIs, had a beautiful paper where he showed that there is a specific species of gut bacteria that produce a certain type of molecule that connects via your enteric nervous system, which is the nervous system that lines your gut, that goes to your brain in order to release dopamine. And it is this functional circuit that creates runner’s high or exercise reward. And when you delete this bacteria, you cut off this ENS-to-brain circuit, or you cut off the ability of the brain to release the dopamine. At each of these steps individually you can block the runner’s high, right?
+
+And so it really traces in an intact animal—well, this is a mouse study, this full body circuit, but that also goes in reverse. So when you have deep psychological stress, that can lead to signaling from the brain to astrocytes that innervate your gut, that releases pro-inflammatory cytokines, that leads to gut inflammation and then can give you ulcers, right? So stress causes ulcers. We’ve actually kind of known this.
+
+Josephine Chen: But this is the mechanism.
+
+Patrick Hsu: How can you treat it?
+
+Josephine Chen: Yeah.
+
+Patrick Hsu: Because there are folks who get recurring ulcers, right? And there’s a brain-to-body axis by which this signals, right? And I think this happens all the time, you know, some of which is conscious, most of which is unconscious, right? And you can actually start to figure out the dials and knobs. And that’s actually if in a way like a new paradigm for drugs.
+
+Josephine Chen: Yeah.
+
+Patrick Hsu: Or how to think about using drugs, right? It’s not just this highly reductive pharmaceutical, you know, kind of binder to biomarker type of thing. But, you know, that’s giving you more of the holistic kind of almost Eastern medicine flavor.
+
+Pat Grady: Yeah.
+
+Josephine Chen: Exactly.
+
+Patrick Hsu: Of just how do I feel healthier, that I think is in vogue in the longevity community today, right? Like, what is health span? How do I improve it? How do I improve my diet, my nutrition so that I just feel better, right? You know, those things also can have deep scientific grounding and needs to have that.
+
+The future of treatments
+Josephine Chen: Interesting. So how do you think it’ll—how do you think people will be treated in the future? You will have a full panel, you’ll know exactly what’s going on in your body, and then you’ll decide different inputs and influence the whole thing? Like, how do you tie in functional medicine, things that go on longevity with the drug industry as it is today? Like, where does that interplay?
+
+Patrick Hsu: Yeah. I mean, I think we’ll want AI doctors that are able to integrate information multimodally, right? And so just like you have your CGM that monitors your glucose with high temporal resolution, you have your Oura ring or your WHOOP that talks about your, you know, various biomarkers. Or you can go to Quest or, you know, Function Health or whatever and get blood tests that, you know, measure what’s going on with your liver function or your cholesterol or, you know, your testosterone or estrogen or, you know, other types of hormones, right?
+
+Right now, all you really know is that these things are going up or down and whether or not they’re in standard or reference range, right? That doesn’t tell you very much about what you’re supposed to do, right? And I think, you know, one thing that has been really missing in personalized genetics or, you know, consumer genetics is the ability to take information content from your genome sequence and meaningfully integrate it with your health biomarkers in a way that gives you the genotype and the environment that can be more predictive of phenotype, right? That GxE=P equation you learn in high school biology, right? But none of that is actually kind of accessible to mom and dad or to even us in the setting of how do I actually live my life? And I think we need to go from measuring people with, you know, higher content approaches to connecting that to, you know, genetic signatures and make more accurate predictions, right? So that’s sort of like been the theme of our conversation today.
+
+Pat Grady: What do you think that’ll look like? Do you think that’ll look like any of the existing longevity efforts, or do you think there’s some new beast entirely that’s going to be created to serve that purpose?
+
+Patrick Hsu: Yeah. I mean, so I think if you look at—you know, 23andMe, was—you know, recently, you know, filed chapter 11, right? And I think it’s an amazing pioneer and visionary kind of pioneering effort in, you know, how to take genetics and, you know, put it in the hands of millions of people, right? I think the thing that I think I would really love to see in the world is something that can take all of that information with all of your different kind of body measurements, and then actually connect that to diet and sleep and give you personalized recommendations about your health in a longitudinal way, right? We have very fragmented data sets for being able to do this today, and I think being able to collect this data at scale across populations and over time with temporal resolution will—I don’t want to be one of these unhinged big-data-will-solve-everything people.
+
+Josephine Chen: Yeah.
+
+Pat Grady: But it will.
+
+Patrick Hsu: But it will. [laughs]
+
+Josephine Chen: I do wonder if there’s more stuff on the cross-functional side. To your point, like, if you know you have a gambling addiction, I don’t think anybody’s thinking about maybe Manjaro or Ozempic could help with that. But it does help with some of these things, right? Like, I do think there’s something about the cross-functional nature.
+
+Patrick Hsu: And that is interoception.
+
+Josephine Chen: That’s fair. There needs to be some organization that actually makes that accessible, yeah.
+
+Patrick Hsu: Yeah. Yeah, I don’t think that obviously exists today.
+
+Josephine Chen: Yeah.
+
+Patrick Hsu: I think folks are building different hands on the elephant for this. But, you know, you guys should start this company.
+
+Pat Grady: We should.
+
+Josephine Chen: Honestly, it’s a pretty good idea.
+
+Predictions for 2025, 2030 and 2050
+Pat Grady: It is a good idea. All right, let’s ask—let’s get a couple of predictions on a couple different timescales. So we’ll start with 2025, and then maybe 2030, and then maybe 2050. What is the most interesting thing we’re going to see in the world of AI meets bio in 2025, by 2030 and by 2050?
+
+Patrick Hsu: My hope is by the end of the year—I mean, and this is already happening, right? We can design full IgG antibodies, right? Not single chain binders like nanobodies, but just the real antibody medicines that, you know, we kind of know and love today. That we can just design their CDR regions. They’re going to bind really well. You can one shot it, and you can kind of do point and click on that, you know, that surface of your enzyme. I can just bind it, right? You know, one shot. I think the thing that will mature over the next couple years is that we can actually design enzymes de novo. I think that will be really interesting and, you know, also lots of efforts.
+
+And again, this is all in the world of proteins, and I think one of the things that—most people who think about this stuff are very protein coded, and so a lot of our work is to sort of zoom out from proteins and think about cells, right? And so I think building the sort of the PDB of virtual cells is something that we’ve been focusing a lot on at Arc. That will take some years from today to mature. So PDB is a protein data bank, right? And it’s the sort of gold standard database of atomic resolutions solved, experimentally solved protein structures that was used by DeepMind to train AlphaFold, right? And so it’s the pre-training data that allows the model to reach some sort of capability like protein structure prediction at angstrom resolution, right? So, you know, what is that for virtual cells which we think would help us design better drug targets, increase therapeutic probability of success, right? And I think, you know, that’s sort of my 2030 sort of prediction is that we have accurate and useful virtual cell models that make a cell biologist feel emotion, right?
+
+The 2050 idea—and hopefully this happens much, much sooner than that. I think there’s lots of chat about scientific superintelligence or the end to end kind of recursion of the scientific method. I’d like to see that, right? With, you know, lab in the loop with a fully automated wet lab that’s vertically integrated.
+
+Pat Grady: Do you think it’s possible by 2050 we can simulate with 99.9 percent accuracy, you know, the impact that a particular drug is going to have on a particular target? You know, validate that in a wet lab in a fully automated way in a matter of hours, not months? Like, what do you think the dream scenario is for going from zero to impact in the future of drug discovery if you imagine 25 plus years of technological progress?
+
+Patrick Hsu: Yeah. I mean, I think we’ve laid out different aspects of the vision over the course of our conversation today. Where things are really slow, like toxicity, long term follow ups, right? These are the—you know, it depends a lot on the disease, right? If you’re doing some acute oncology thing, that’s very different from some really chronic autoimmune thing, right? And so I think the only way that I can imagine you speeding this up is if you have a model with strong predictive power, right? And, you know, so a lot of this hinges on our ability to make models that can actually do that.
+
+Pat Grady: Yeah.
+
+Patrick Hsu: And I think you’ll unlock different step sizes of capability based on how good they are.
+
+Pat Grady: Is there any reason we wouldn’t have that by 2050?
+
+Patrick Hsu: Yeah. Basically, if we make the wrong data, I would say is, like, one obvious one. You know, you can model the mouse in all of its glory to great perfection, and it still will not be the human. That’s one sort of, I think, trivial example that is something that we still do though, because that’s just what’s practical. And so I have this other soapbox about how we actually just need to be doing way more experiments in humans.
+
+Pat Grady: Hmm.
+
+Josephine Chen: And what do you think it will take for us to be able to do that? Is that just a regulatory thing?
+
+Patrick Hsu: I think there will be some aspect of creativity involved in addition to better regulatory innovation. So one example would be, you know, there are these kind of—you can take samples from brain dead patients, for example, and then now you can just get lungs that you can perfuse and keep alive for a week, and then just do experiments in that lung, right? And, you know, there was a paper recently published about this.
+
+Lightning round
+Pat Grady: Should we do the lightning round?
+
+Josephine Chen: Yeah. Let’s do it. My first one. Favorite new AI app that you’ve tried in the last three months?
+
+Patrick Hsu: So this is maybe cheating, but I’m a DAU of OpenAI Deep Research, right? I find it just by far the main AI app that I find useful enough to use in my day-to day-work, right? And so there are lots of other “fun” AI apps or things that I pay attention to because I’m interested in AI.
+
+Josephine Chen: Yeah.
+
+Patrick Hsu: But the thing that actually changed how I work is these Deep Research models. And they have, by the way, so much more room to improve and to run.
+
+Josephine Chen: Yeah.
+
+Patrick Hsu: And yeah, I think it was the first time I felt real emotion thinking, “Oh, wow. Okay, someday maybe I will be automated.”
+
+Josephine Chen: Oh, wow!
+
+Pat Grady: Yeah, I feel that every day.
+
+Patrick Hsu: [laughs]
+
+Pat Grady: Who would be on your Mount Rushmore of scientists?
+
+Patrick Hsu: This is maybe a bit smarmy, but it’s the folks I get to work with at Arc.
+
+Pat Grady: I like that!
+
+Patrick Hsu: I realize this is incredibly smarmy, but it’s really genuine. [laughs] I feel so lucky to go to lab every day and just be around, you know, just passionate, bright, kind and incredibly ambitious people. It levels up my game.
+
+Josephine Chen: What do you think is going to be the killer application that scientists will use by the end of this year?
+
+Patrick Hsu: Deep Research.
+
+Josephine Chen: Full out. All right. Nothing that you guys are going to create from Arc?
+
+Patrick Hsu: Well, I think these virtual cell models will be incredibly useful. I don’t think we or anyone will have working models in the sense that I think it’ll take some time for them to mature to the point where they’re actually fundamentally useful. But there are currently research problems that will ripen over some time, yeah. But we’d like to deliver those.
+
+Pat Grady: What’s the most important thing you’ve learned at Arc Institute?
+
+Patrick Hsu: So there’s a Scottish proverb that I’m going to butcher when I paraphrase, but it’s basically, you know, be happy when you’re alive, for you’re a long time dead.
+
+Josephine Chen: That’s real.
+
+Patrick Hsu: You know, I think that that really hit for me when I read it. And, you know, it was one of those, you know, you’re lying on the couch, the phone is six inches from your face.
+
+Pat Grady: [laughs]
+
+Patrick Hsu: Beaming lux into your eyeballs right before you’re supposed to fall asleep. And I don’t know, that just—it reminded me that despite all the complexity of, you know, trying to work really hard to do useful things, you’re supposed to have fun. And I think that should—I think we need more of that in life, not just in research labs where I think it can be so easy to be super critical, because that’s the training and how you make progress is to hate on everything and everything has a problem and figure out why this can go wrong. But being optimistic and happy is not a path to mediocrity and mistakes, but it’s actually how you have the emotional capacity for persistence over time to reach those long-term goals.
+
+Pat Grady: Love it. It feels like a good place to end it.
+
+Josephine Chen: Well, hopefully this podcast made you happy, too. Made us happy.
+
+Pat Grady: [laughs]
+
+Patrick Hsu: I’m always happy to see you both.
+
+Josephine Chen: Thank you again.
+
+Pat Grady: Thank you for doing this.
+
+Patrick Hsu: Thanks guys.
+
+Mentioned in this episode
+Mentioned in this episode:
+
+Sequence modeling and design from molecular to genome scale with Evo: Public pre-print of original Evo paper
+Genome modeling and design across all domains of life with Evo 2: Public pre-print of Evo 2 paper
+ClinVar: NIH database of the genes that are known to cause disease, and mutations in those genes causally associated with disease state
+Sequence Read Archive: Massive NIH database of gene sequencing data 
+Machines of Loving Grace: Daria Amodei essay that Patrick cites on how AI could transform the world for the better
+Arc Virtual Cell Atlas: Arc’s first step toward assembling, curating and generating large-scale cellular data from AI-driven biological discovery (among many other tools)
+Protein Data Bank (PDB): a global archive of 3D structural information of biomolecules used by DeepMind to train AlphaFold
+OpenAI Deep Research: The one AI app Patrick uses daily

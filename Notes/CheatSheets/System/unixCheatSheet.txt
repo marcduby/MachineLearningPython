@@ -1,4 +1,11 @@
 
+vi:
+---
+  - :%s/old_term/new_term/g
+  - to copy/paste
+    - v to select text
+    - y to copy (yank)
+    - p where you want to paste
 
 tar:
 ----
@@ -34,6 +41,10 @@ nginx gotchas:
 - tomcat context
   - need second block for the context so that css and js files get served properly
 
+
+file manipulation:
+------------------
+  - shuf Factor_FACTOR_GENE_SET_GeneSet_edges.csv | head -n 10000 > SmallTestData/Factor_FACTOR_GENE_SET_GeneSet_edges.csv
 
 space:
 ------

@@ -19,6 +19,7 @@ DB_SCHEMA = "tran_test_202303"
 DB_PASSWD = os.environ.get('DB_PASSWD')
 DIR_DATA = "/home/javaprog/Data/Broad/Translator/PloverDbTest/GeneticsTestData"
 FILE_NODES = "{}/geneticsNodes.jsonl".format(DIR_DATA)
+FILE_EDGES = "{}/geneticsEdges.jsonl".format(DIR_DATA)
 
 # sql statements
 SQL_SELECT_NODES = """
@@ -27,7 +28,15 @@ SQL_SELECT_NODES = """
     where no.node_type_id = type.type_id
     and type.type_id in (1, 2)
 """
-
+SQL_SELECT_EDGES = """
+    select ed.id,
+        so.ontology_id, ta.ontology_id, 
+        so.node_name, ta.node_name, ted.type_name
+    from {}.comb_edge_node ed, {}.comb_node_ontology so, {}.comb_node_ontology ta, {}.comb_lookup_type ted
+    where ed.edge_type_id = ted.type_id 
+    and ed.source_node_id = so.id and ed.target_node_id = ta.id
+    and so.node_type_id = 2 and ta.node_type_id = 1 and ed.study_id = 4
+"""
 
 def get_connection():
     ''' 
@@ -57,12 +66,33 @@ def get_node_list(conn, log=False):
     # return
     return result
 
-def write_to_file(list_nodes, file_name, log=False):
+
+def get_edge_list(conn, log=False):
+    ''' 
+    will return all the KB edges
+    '''
+    result = []
+    sql_string = SQL_SELECT_EDGES.format(DB_SCHEMA, DB_SCHEMA, DB_SCHEMA, DB_SCHEMA)
+
+    # query the db
+    cursor = conn.cursor()
+    cursor.execute(sql_string)
+    db_results = cursor.fetchall()
+
+    # get the data
+    if db_results:
+        result = [{'id': item[0], 'subject': item[1], 'object': item[2], 'predicate': item[5], 'kg2_ids': [], 'probability': 0.77, 'primary_knowledge_source': "infores:genetics-data-provider", 'knowledge_level': "knowledge_assertion", 'agent_type': "manual_agent"} for item in db_results]
+
+    # return
+    return result
+
+
+def write_to_file(list_data, file_name, log=False):
     '''
     will write out the data to a jsonl file
     '''
     # Convert list of dictionaries to JSONL string
-    jsonl_string = "\n".join(json.dumps(record) for record in list_nodes)
+    jsonl_string = "\n".join(json.dumps(record) for record in list_data)
 
     # Optionally, write to a file
     with open(file_name, 'w') as file:
@@ -73,6 +103,7 @@ def write_to_file(list_nodes, file_name, log=False):
         print("wrote out to file: {}".format(file_name))
 
 
+
 if __name__ == "__main__":
     # get the connection
     conn = get_connection()
@@ -81,5 +112,11 @@ if __name__ == "__main__":
     list_nodes = get_node_list(conn=conn)
 
     # write out the nodes
-    write_to_file(list_nodes=list_nodes, file_name=FILE_NODES, log=True)
+    write_to_file(list_data=list_nodes, file_name=FILE_NODES, log=True)
+
+    # get the edges
+    list_edges = get_edge_list(conn=conn)
+
+    # write out the edges
+    write_to_file(list_data=list_edges, file_name=FILE_EDGES, log=True)
 

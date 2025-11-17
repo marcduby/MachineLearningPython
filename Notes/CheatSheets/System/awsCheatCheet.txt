@@ -25,4 +25,13 @@ EC2:
     - sudo lsblk
 
 
+PEM:
+----
+
+Hey Marc, let's try this.  
+Check and see if you can connect to the servers you need by clicking on the instance id in the web console and then click connect 
+and use ec2 instance connect (I see that I can do that for translatorPod at least.) Then assuming you can instance connect to all 
+the servers you need, you can generate a new key pair and add your public key to ~/.ssh/authorized_keys on each server.  
+Hopefully that's not too much work.
+
     

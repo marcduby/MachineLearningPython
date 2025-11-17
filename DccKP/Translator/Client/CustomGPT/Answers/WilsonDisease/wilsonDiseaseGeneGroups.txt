@@ -1,0 +1,93 @@
+Got it — I’ll strip it down into pure Markdown that you can copy-paste into Slack (Slack supports a subset of Markdown / markup, so I’ll format it accordingly):
+
+---
+
+*Wilson’s Disease: Drugs, Gene Targets, and Functional Grouping*
+
+---
+
+*5 Drugs Managing Copper Levels*
+
+• **Penicillamine** — Copper chelation (binds free copper)
+Source: DrugBank (`infores:drugbank`), Aggregator: RTX-KG2
+
+• **Trientine** — Copper chelation (alternative to penicillamine)
+Source: DrugBank (`infores:drugbank`), Aggregator: RTX-KG2
+
+• **Zinc (zinc acetate & elemental zinc)** — Blocks intestinal copper absorption
+Source: DrugBank (`infores:drugbank`), Aggregator: MolePro, RTX-KG2
+
+• **Tetrathiomolybdate** — Binds copper and protein-bound copper
+Source: DrugBank (`infores:drugbank`), Aggregator: RTX-KG2
+
+• **Ammonium tetrathiomolybdate** — Similar to tetrathiomolybdate
+Source: DrugBank (`infores:drugbank`), Aggregator: RTX-KG2
+
+*Note: Tetrathiomolybdate and ammonium tetrathiomolybdate are often clinically grouped.*
+
+---
+
+*Gene Targets Identified*
+
+**Penicillamine**
+
+* No direct gene targets retrieved (chelates copper directly)
+
+**Trientine**
+
+* *CA14* (Carbonic anhydrase 14)
+  Source: `infores:dgidb` → `infores:rtx-kg2`
+
+**Zinc**
+
+* **Metal-binding proteins**: MT2A, S100A2, S100A7, S100A8, S100A9, S100A10
+* **Zinc-dependent enzymes**: CA1, CA2, CA3, CA14, HDAC1, HDAC4, HDAC8, PARP1, TP53, MMP9, SOD1
+* **Copper metabolism proteins**: CP, CCS
+* **Complement & coagulation**: C1QA, C1QB, C1QC, C4A, C4B, C4BPA, C4BPB, C5, C8A, C8B, C8G, FGA, F12, F13B, KNG1, KLKB1
+* **Lipid metabolism**: APOE, APOA1, APOA2
+* **Signal transduction**: MDM2, ESR1
+* **Neurotransmission**: GLRA1
+
+**Tetrathiomolybdate / Ammonium Tetrathiomolybdate**
+
+* No direct gene targets retrieved
+
+---
+
+*Functional Gene Grouping*
+
+* **Metal homeostasis / transport**: MT2A, SLC39A4, CP, CCS, S100A family
+* **Zinc-dependent enzymes**: CA1-CA3, CA14, HDAC1, HDAC4, HDAC8, PARP1
+* **Oxidative stress**: SOD1, TP53, PRDX1
+* **Extracellular matrix / proteases**: MMP9, FN1, APP
+* **Immune complement**: C1QA, C1QB, C1QC, C4A, C4B, C4BPA, C4BPB, C5, C8A, C8B, C8G
+* **Coagulation factors**: FGA, F12, F13B, KNG1, KLKB1
+* **Lipid metabolism**: APOE, APOA1, APOA2
+* **Signal transduction / regulation**: TP53, MDM2, ESR1, HDAC family
+* **Neurotransmission**: GLRA1
+
+---
+
+*Summary Takeaway*
+
+Wilson’s disease management primarily targets copper metabolism via:
+
+* Chelation: **penicillamine**, **trientine**
+* Reduced absorption: **zinc**
+
+The gene network reflects metal homeostasis, oxidative stress, and zinc/copper-dependent enzymes.
+
+*Sources: DrugBank, DGIDB, RTX-KG2, MolePro, PubMed (via Translator APIs)*
+
+---
+
+✅ Now you can directly copy/paste this into Slack — it will render cleanly as Slack's markdown-compatible formatting.
+
+---
+
+If you'd like, I can also prepare:
+
+* a **Slack-ready gene network image**
+* a **table version compatible with Slack code blocks**
+
+👉 Just say the word.

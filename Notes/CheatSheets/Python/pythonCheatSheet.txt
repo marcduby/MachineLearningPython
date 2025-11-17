@@ -7,6 +7,7 @@
   - pip install -r requirements.txt
   - pip install PackageName==1.4
 
+
 new ubuntu install:
 -------------------
 - sudo apt update
@@ -37,9 +38,9 @@ type:
 
 json:
 -----
-  - with open('strings.json') as json_data:
-      d = json.loads(json_data)
-      json_data.close()
+    with open("phenotypes.json", "r") as f:
+        json_data = f.read()  # read the file contents into a string
+        data = json.loads(json_data)
       pprint(d)
 
   - import json
@@ -53,6 +54,19 @@ json:
   - data = {'name': 'John', 'age': 30}
   with open('data.json', 'w') as f:
       json.dump(data, f)
+
+
+  - null safe maps getters
+    edges = map_trapi.get("message", {}).get("knowledge_graph", {}).get("edges", {})
+    
+    extracted_edges = []
+    for edge_id, edge_data in edges.items():
+        source = edge_data.get("subject")
+        predicate = edge_data.get("predicate")
+        target = edge_data.get("object")
+        extracted_edges.append({cutils.KEY_SUBJECT: source, cutils.KEY_OBJECT: target, cutils.KEY_RELATIONSHIP: predicate})
+    
+    return extracted_edges
 
 csv:
 ----
@@ -93,6 +107,15 @@ strings:
 timer:
 ------
 
+pyenv:
+------
+  - pyenv shell 3.11.0
+  - python3 --version
+
+  - pyenv install --list
+  - pyenv install 3.13.2
+
+
 
 pandas:
 -------
@@ -124,6 +147,7 @@ lists:
   for index, value in enumerate(my_list):
       print(f"Index: {index}, Value: {value}")
 
+
 dict:
 -----
   - dict.get('key')     # null safe way of getting element
@@ -141,6 +165,16 @@ dict:
   # Sort the list of dictionaries by the 'age' attribute in descending order
   sorted_data_desc = sorted(data, key=lambda x: x["age"], reverse=True)
 
+  import itertools
+  my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12}
+  # Print first 10 key-value pairs
+  for key, value in itertools.islice(my_dict.items(), 10):
+      print(f"{key}: {value}")
+
+  my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12}
+  # Convert to list and slice first 10
+  for key, value in list(my_dict.items())[:10]:
+      print(f"{key}: {value}")
     
 os:
 ---
@@ -158,6 +192,9 @@ os:
       # If entry is a file, store it
       if entry.is_file():
           files.append(entry.name) 
+
+  import time
+  time.sleep(2)
 
 
 files:
@@ -261,6 +298,11 @@ objects:
 
   gene_association: GenePhenotypeAssociation
   for gene_association in list_gene_assoc:
+
+
+logging:
+--------
+
 
 
 debug:

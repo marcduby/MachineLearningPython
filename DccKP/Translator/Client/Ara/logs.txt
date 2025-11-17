@@ -1,0 +1,24 @@
+
+
+
+for ara: aragorn, got counts: 
+{
+  "infores:aragorn": 24,
+  "infores:spoke": 1,
+  "infores:genetics-data-provider": 2,
+  "infores:pharos": 4,
+  "infores:automat-robokop": 6,
+  "infores:automat-pharos": 4,
+  "infores:automat-monarchinitiative": 2,
+  "infores:medgen": 2,
+  "infores:monarchinitiative": 4,
+  "infores:automat-ubergraph": 2,
+  "infores:biothings-agr": 6,
+  "infores:service-provider-trapi": 13,
+  "infores:myvariant-info": 2,
+  "infores:biothings-ebi-gene2phenotype": 1,
+  "infores:biothings-rare-source": 1
+}
+
+
+
