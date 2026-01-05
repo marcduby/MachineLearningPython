@@ -6,10 +6,11 @@ import json
 import requests
 
 # constants
+DIR_DATA = "/home/javaprog/Data/Broad/RareDisease"
 # phenotype data below from https://www.ncbi.nlm.nih.gov/clinvar/submitters/505999/
-FILE_DATA = "/home/javaprog/Data/Broad/RareDisease/clinvarRareDisease_result.txt"
+FILE_DATA = "{}/clinvarRareDisease_result.txt".format(DIR_DATA)
 URL_RARE_DISEASE = "https://translator.broadinstitute.org/genetics_provider/rare_disease_calc/gene_scores"
-FILE_OUT_RESULTS = "/home/javaprog/Data/Broad/RareDisease/rareDiseaseScores.json"
+FILE_OUT_RESULTS = "{}/rareDiseaseScores.json".format(DIR_DATA)
 
 
 # methods
@@ -231,7 +232,7 @@ if __name__ == "__main__":
     print("gene list if size: {}".format(len(map_multiple_phenotypes)))
 
     # get the subset of the genes
-    list_genes = get_map_keys_subset(map_input=map_multiple_phenotypes, count=30)
+    list_genes = get_map_keys_subset(map_input=map_multiple_phenotypes, count=3)
 
     # for each gene, query the rest service
     map_gene_scores = {}

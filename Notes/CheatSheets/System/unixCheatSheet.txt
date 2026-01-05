@@ -54,4 +54,12 @@ space:
 
 
 
+new jetson setup:
+-----------------
+
+sudo apt update
+sudo apt install chromium-browser
+
+
+.bashrc
 
