@@ -1,0 +1,303 @@
+
+
+mutation, seelction and drift 
+
+
+20251210 - 348'
+- 09am - 21' bike
+
+20251209 - 327'
+- 06pm - 52' bike
+- 05pm - 15' bike
+- 10am - 48' bike
+
+20251208 - 212'
+- 07am - 40' bike
+- 05pm - 47' bike
+
+20251207 - 125'
+- 10am - 125' xki
+
+
+
+20251210 - 1530 - SLM and agents
+- georgia tech -> small models future of agentic workflows 
+- slm 
+  - model of 10b or less 
+  - good for privacy, specific tasks, costs 
+  - but will hallucinate facts 
+  - benefits 
+    - lower inference cost, local, enables expirementation
+
+- llm 
+  - 100B or more 1 trillion parameter model 
+  - reasoning
+  - has all facts 
+
+- what is needed for agents 
+  - reasoning - break down tasks 
+  - tool calling 
+  - generate code to fill gaps 
+  - follow instructions
+
+- for demo 
+  - use salesforrce xlam-2 model,  quantized 
+    - might havwe used on mac 32b, quantized 4
+    - reduce temp to 0 to avoid hallucinations 
+  - 
+
+- for apple mac use 
+  - llama.cpp and ollama uses gpu of mac silicon 
+  -vllm only runs on cpu 
+
+- apache iceberg project 
+
+
+
+20251210 - 1615 - skip
+
+20251210 - 1530 - skip 
+
+
+
+20251210 - 1145 - one agent for better results 
+- evals 
+  - structured tests that measure the quality, reliability and effectiveness of agentic applications
+  - uses 
+    - model/model comparisons
+    - generating consistent results 
+    - tracking regression and errora
+    - testing and effectiveness
+    - judging agent responses (llm as judge)
+
+- langsmith as eval framework 
+- also langfuse 
+
+
+
+
+
+
+20251210 - 1100 - building prod RAG systedms for healthcare - nikunj doshi 
+- by 2026, 80% of enterpeises will have implemented RAG 
+- 
+
+
+20251210 - 0945 - 3 agents talk - ben batorsky 
+- langchain 
+  - langchain now abstraction on top of lanchaingraph 
+
+- pydantic.ai 
+  - nice library LogFire fpr observability 
+  - might better handle remote MCPs due o its async nature 
+
+- 
+
+
+20251209 - 1625 - litghtning talks
+- kostantine - contribute to open source witthout writing code 
+   - issue triage 
+  - answer questons 
+  - accessibility 
+  - transkation
+  - writing and speaking 
+
+- john pollock - go fish visualization lib
+  - split data wragling into 3 steps 
+    - build data buckaers, map 
+
+- kat riehl - cuda python tyle programming 
+  - more tensor based for NN programming 
+  - cupy to replace numpy 
+  - cuTile is pythonic CUDA 
+
+- rose putler - ABCs of career confidence 
+  - advocate for yourself 
+  - be curipus - others have same question
+  - cover letters matter - articulate why role is great fit for you 
+
+- gayathri ramanathan - mermaid
+  - problem wih flowcharts 
+  - LLMs are bad at flowcharts 
+  - ask for mermaid code for the flowchart from the LLM 
+  - then plug in miro (maybe also lucid chart or visio)
+
+- ariel - chatbot to help play fantasy soccer 
+  - 
+
+- redeem grimm - mini distributed system using python, raspberry pi and apache casandra
+  - 
+
+- ?? - do my docs work?
+  - maintain open spurce project docs 
+  - doctest-ai project (github name)
+
+- ted conway - python in excel
+  - works in inancial services 
+  - 
+
+- chuxin liu - building my personal firnwess coach 
+  - live/vibe coding example
+  - 
+
+
+
+20251209 - 1545 - loops powering genai applications
+- to avoid errors for large contaxt
+  - break system prompt to what the specific task is needed, then add only bits of context needed for task 
+
+- 2 prompts
+  - system prompt -> for the task type 
+  - context prompt -< data to interpret for that task 
+
+- skills 
+  - break down tasks in a context to skills sub tssks
+  - then load as needed when that task is ready to go 
+  -  akes for smaller more targeted contect 
+
+- sub agemnts 
+  - ie: break down searhc task across docs to multiple task on each doc. 
+
+- memory 
+  - memories are stored in db from past conversations 
+  - then can reference this as time goes on 
+    - past conversations used as input to context 
+
+- discussion
+  - if youre data for the task chamges a lot, do not put it in system prompt but in user prompt
+  - 
+
+
+
+
+20251209 - 1430 - bayes math roblem
+- pointcare problem
+  - daily loaf of bread measurement
+  - after seeing lower weight, tells baker 
+  - next year, after 365 days, the avg weight is spot on but thte curve not gaussian 
+    -> deduces baker was cherry picking which loaves to give pointcare 
+
+- sometimes the figure of the curve will leave a fingerprint of the selection bias 
+  - because curve should be gaussian
+
+- so why are women math sat scores less even though boys not good opt out of test 
+
+- Test
+  - 54 questions 
+    - 1 for right, 0 no answer, -1/4 for wrong 
+
+- data analysis
+  - truncation at 800 (roll up) since max
+    - both males and femals have this 
+  - location and scale of distribution are different for males/females 
+
+- need
+  - latent distribution of efficacy 
+  - self selection effect 
+  - 
+
+- process how I understand it 
+  - model both male and female curves using same curve model but different parameters 
+  - then compare parameters to see what the bias is 
+
+- confounders 
+  - participation in test from state to state different 
+    - some sates 100%
+    - some states low single digits 
+
+- tinyurl.com/dow25sat
+
+
+
+20251209 - 1115 - using genai for informed consent forms - vertex
+- important to analyze time savings to make sure worth while 
+  - then train and scale
+
+
+
+20251208 - 1530 - ollama use for local models
+from ollama import chat
+
+class ChatSession:
+    def __init__(self,
+                 model:str,
+                 system:str = 'You are a helpful chatbot'):
+        self.model    = model
+        self.system   = system
+        self.messages = []
+
+        self.messages.append(dict(role='system', content=system))
+
+    def prompt(self, msg) -> str:
+        self.messages.append(dict(role='user', content=msg))
+        response = chat(model=self.model, messages=self.messages).message.content
+        self.messages.append(dict(role='assistant', content=response))
+        return response
+
+- 3 roles 
+  - system -> to initialIZE the model
+  - user -> prompt 
+  - assistant -> result
+
+- watch andre kerpathy, software 3.0 40min talk 
+- good math models 
+  - mathstral:latest from mystral
+  - falcon3:1b - from emirates
+  - quen - from alibaba
+
+
+
+
+20251208 - 1330 - build llm agents Simple
+- https://github.com/ericmjl/llamabot/tree/main/tutorials/pydata-boston-2025
+- uses cloud script
+- deepseek doees not support ocr into pydantic data objects 
+  - openai 4.1 does do it 
+  - ocr model?
+  - best results with very good system prompt
+- src 
+  - AgentBot -> accepts python functions that have been decorated correctly 
+
+- TODO 
+  - reaearcvh how to do evals for LLMs 
+    - brought up when the LLM pulled the wrong total for the receipt (pulls in single item total)
+
+
+
+20251208 - 1100 - pubmed health research agent - lanchain
+- https://github.com/lferreiraMD/pydata2025/tree/main
+- for every billion parameter in model, expect to use 2GB of memory
+  - due to 16 bit numbers
+  - if quantize to 4bit, only need 500MB
+- openai ->oss-gpt-20b
+  - using MODEL_FILENAME = "hammer2.1-3b-q4_k_m.gguf"
+
+
+
+20251208 - 0900 - LLM based recommender systems at Etsy
+- steps 
+  - embed in vector the existing items
+  - user query
+  - retreiev top k results
+  - enrich results with features (item and user)
+  - use NN to rank enriched results
+- issues
+  - k neirest neighbors is slow 
+    - in background, run k-means on all data 
+    - index data store to their centroid index 
+    - when query 
+      - find closest centroid 
+      - then search similarity k means in reduced centroid group 
+  - not all data of movies have rankings (issue with all data)
+    - might add random non rated movies in the results to seed ratings 
+    - SEE VIDEO for better explanation
+
+
+
+
+
+
+
+
+
+

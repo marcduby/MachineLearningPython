@@ -5,6 +5,9 @@ import javax.xml.parsers.*;
 import java.io.File;
 import java.util.*;
 
+# constants
+# FILE = "/Users/mduby/Data/Broad/Hackathon25/Orpha/Orphanet_Nomenclature_Pack_EN/ORPHAlinearisation_en_2024.xml"
+
 public class DisorderXMLParser {
     
     public static class DisorderInfo {
