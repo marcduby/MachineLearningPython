@@ -16,6 +16,17 @@ new ubuntu install:
 - python3 -m venv VirtualEnv/pubmed
 
 
+pyenv:
+------
+  - curl https://pyenv.run | bash   -> pyenv install
+  - pyenv install --list      -> list the versions to install
+  - pyenv install 3.8.8
+  - pyenv versions
+  - pyenv local 3.8.8
+  - pyenv shell 3.8.8
+
+
+
 rest:
 -----
 import requests

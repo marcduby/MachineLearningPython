@@ -53,6 +53,9 @@ space:
 - df -Th 
 
 
+vi:
+---
+
 
 new jetson setup:
 -----------------
