@@ -1,5 +1,11 @@
 
 
+Ollama:
+-------
+
+- ollama pull gemma3:270m
+- ollama run gemma3:270m
+- 
 
 
 NN layers:

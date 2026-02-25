@@ -125,9 +125,9 @@ pyenv:
 
   - pyenv install --list
   - pyenv install 3.13.2
+  - pyenv versions
 
-
-
+  
 pandas:
 -------
   - df_results = pd.DataFrame.from_dict(list_gene_chemical)

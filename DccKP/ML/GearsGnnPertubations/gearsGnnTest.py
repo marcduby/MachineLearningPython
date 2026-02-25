@@ -1,7 +1,7 @@
 
 # imports
 import sys
-# sys.path.append('../')
+sys.path.append('/home/javaprog/Code/MlWorkspace/Dig-GearsGNN/')
 from gears import PertData
 
 
