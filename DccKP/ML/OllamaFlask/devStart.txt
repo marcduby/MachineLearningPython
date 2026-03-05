@@ -1,0 +1,7 @@
+
+
+export API_KEY='dudeman'
+export OLLAMA_BASE_URL='http://127.0.0.1:11434'
+export OLLAMA_MODEL='gemma2:2b'
+python3 ollamaFlask.py
+

@@ -1,31 +1,45 @@
-
-
-
 #!/usr/bin/env python3
 """
-Flask + Ollama Web API (GET /ask?prompt=...).
+Flask + Ollama Web API (POST /ask with JSON).
 
 Security features included:
-- API key required (X-API-Key header; query param fallback optional)
+- API key required (X-API-Key header; optional query param if ALLOW_QUERY_KEY=1)
 - Basic in-memory rate limiting (per IP)
 - Optional IP allowlist (ALLOWED_IPS env var, supports CIDR)
-- Input size/character checks + prompt length cap
+- JSON-only endpoint with strict content-type + size limits
+- Input validation + prompt/system length caps
 - Timeouts + sane error handling
 - Minimal logging (doesn't log prompt content)
 
-Ollama API:
-- Uses POST {OLLAMA_BASE_URL}/api/chat
+Request JSON:
+{
+  "prompt": "your user prompt (required)",
+  "system": "system prompt (optional; overrides default)",
+  "model": "gemma2:2b (optional)"
+}
+
+Response JSON:
+{
+  "model": "...",
+  "answer": "..."
+}
 """
 
 import os
 import re
 import time
-import json
 import ipaddress
 from collections import deque
+import logging
+import sys 
+import json
 
 import requests
 from flask import Flask, request, jsonify, abort
+
+# settings
+logging.basicConfig(level=logging.INFO, format=f'[%(asctime)s] - %(levelname)s - %(name)s %(threadName)s : %(message)s')
+handler = logging.StreamHandler(sys.stdout)
 
 app = Flask(__name__)
 
@@ -33,7 +47,7 @@ app = Flask(__name__)
 # Config (env overridable)
 # ---------------------------
 DEFAULT_MODEL = os.getenv("OLLAMA_MODEL", "gemma2:2b")
-SYSTEM_PROMPT = os.getenv(
+DEFAULT_SYSTEM_PROMPT = os.getenv(
     "SYSTEM_PROMPT",
     "You are a computational biologist. Be precise, cite assumptions, and keep answers concise."
 )
@@ -48,7 +62,9 @@ if not API_KEY:
 
 # Request limits
 MAX_PROMPT_CHARS = int(os.getenv("MAX_PROMPT_CHARS", "4000"))
+MAX_SYSTEM_CHARS = int(os.getenv("MAX_SYSTEM_CHARS", "2000"))
 MAX_MODEL_CHARS = int(os.getenv("MAX_MODEL_CHARS", "64"))
+MAX_JSON_BYTES = int(os.getenv("MAX_JSON_BYTES", "20000"))  # ~20KB default
 
 # Rate limiting: N requests per window seconds per IP
 RATE_LIMIT_N = int(os.getenv("RATE_LIMIT_N", "30"))
@@ -64,6 +80,18 @@ ALLOW_QUERY_KEY = os.getenv("ALLOW_QUERY_KEY", "0") == "1"
 # Very small in-memory limiter
 # ---------------------------
 _requests = {}  # ip -> deque[timestamps]
+
+# methods
+def get_logger(name=__name__): 
+    # get the logger
+    logger = logging.getLogger(name)
+    logger.addHandler(handler)
+
+    # return
+    return logger 
+
+
+logger = get_logger()
 
 
 def get_client_ip() -> str:
@@ -116,6 +144,17 @@ def require_api_key():
         abort(401, description="Unauthorized")
 
 
+def require_json_request():
+    # Strongly require JSON content-type
+    if not request.is_json:
+        abort(415, description="Content-Type must be application/json")
+
+    # Enforce a max body size (based on Content-Length when present)
+    cl = request.content_length
+    if cl is not None and cl > MAX_JSON_BYTES:
+        abort(413, description=f"Request too large (max {MAX_JSON_BYTES} bytes)")
+
+
 def sanitize_model(model: str) -> str:
     model = (model or "").strip()
     if not model:
@@ -128,35 +167,61 @@ def sanitize_model(model: str) -> str:
     return model
 
 
+def _reject_control_chars(text: str, field_name: str):
+    # Reject control chars (except \n, \t)
+    if re.search(r"[\x00-\x08\x0B\x0C\x0E-\x1F]", text):
+        abort(400, description=f"{field_name} contains illegal control characters")
+
+
 def sanitize_prompt(prompt: str) -> str:
     if prompt is None:
-        abort(400, description="Missing prompt")
+        abort(400, description="Missing 'prompt'")
+    if not isinstance(prompt, str):
+        abort(400, description="'prompt' must be a string")
     prompt = prompt.strip()
     if not prompt:
-        abort(400, description="Empty prompt")
+        abort(400, description="Empty 'prompt'")
     if len(prompt) > MAX_PROMPT_CHARS:
-        abort(413, description=f"Prompt too large (max {MAX_PROMPT_CHARS} chars)")
-    # Reject control chars (except \n, \t)
-    if re.search(r"[\x00-\x08\x0B\x0C\x0E-\x1F]", prompt):
-        abort(400, description="Prompt contains illegal control characters")
+        abort(413, description=f"'prompt' too large (max {MAX_PROMPT_CHARS} chars)")
+    _reject_control_chars(prompt, "prompt")
     return prompt
 
 
-def call_ollama_chat(prompt: str, model: str) -> dict:
+def sanitize_system(system: str | None) -> str:
+    if system is None:
+        return DEFAULT_SYSTEM_PROMPT
+    if not isinstance(system, str):
+        abort(400, description="'system' must be a string")
+    system = system.strip()
+    if not system:
+        return DEFAULT_SYSTEM_PROMPT
+    if len(system) > MAX_SYSTEM_CHARS:
+        abort(413, description=f"'system' too large (max {MAX_SYSTEM_CHARS} chars)")
+    _reject_control_chars(system, "system")
+    return system
+
+
+def call_ollama_chat(prompt: str, system: str, model: str, log: bool=True) -> str:
     """
     Calls Ollama's /api/chat with system+user messages.
     Uses non-streaming response for simplicity.
     """
     url = f"{OLLAMA_BASE_URL}/api/chat"
+
+    # log
+    if log:
+        logger.info("calling ollama url: {} with model: {}".format(url, model))
+        logger.info("system prompt: {}".format(system))
+        logger.info("query prompt: {}".format(prompt))
+
+
     payload = {
         "model": model,
         "stream": False,
         "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": system},
             {"role": "user", "content": prompt},
         ],
-        # Optional knobs you can expose later:
-        # "options": {"temperature": 0.2, "num_ctx": 4096},
     }
 
     try:
@@ -167,7 +232,6 @@ def call_ollama_chat(prompt: str, model: str) -> dict:
         abort(502, description=f"Error calling Ollama: {type(e).__name__}")
 
     if resp.status_code != 200:
-        # Keep error short; don't leak internals
         snippet = resp.text[:400]
         abort(502, description=f"Ollama HTTP {resp.status_code}: {snippet}")
 
@@ -176,13 +240,18 @@ def call_ollama_chat(prompt: str, model: str) -> dict:
     except ValueError:
         abort(502, description="Ollama returned non-JSON response")
 
-    # Expected shape: {"message": {"role":"assistant","content":"..."}, ...}
     msg = (data.get("message") or {})
     answer = msg.get("content", "")
     if not isinstance(answer, str):
         abort(502, description="Unexpected Ollama response format")
 
-    return {"text": answer, "raw": data}
+
+    # log
+    if log:
+        logger.info("got answer: {}".format(json.dumps(answer, indent=2)))
+
+    # return
+    return answer
 
 
 @app.before_request
@@ -200,20 +269,22 @@ def health():
     return jsonify({"ok": True})
 
 
-@app.get("/ask")
+@app.post("/ask")
 def ask():
-    # GET /ask?prompt=...&model=...
-    prompt = sanitize_prompt(request.args.get("prompt"))
-    model = sanitize_model(request.args.get("model"))
+    require_json_request()
 
-    result = call_ollama_chat(prompt=prompt, model=model)
+    # Parse JSON (force=False because we already require request.is_json)
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict):
+        abort(400, description="Invalid JSON body")
 
-    return jsonify(
-        {
-            "model": model,
-            "answer": result["text"],
-        }
-    )
+    prompt = sanitize_prompt(data.get("prompt"))
+    system = sanitize_system(data.get("system"))
+    model = sanitize_model(data.get("model"))
+
+    answer = call_ollama_chat(prompt=prompt, system=system, model=model)
+
+    return jsonify({"model": model, "answer": answer})
 
 
 if __name__ == "__main__":
@@ -221,5 +292,3 @@ if __name__ == "__main__":
     host = os.getenv("HOST", "127.0.0.1")
     port = int(os.getenv("PORT", "8082"))
     app.run(host=host, port=port, debug=False)
-
-
