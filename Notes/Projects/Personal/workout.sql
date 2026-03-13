@@ -18,6 +18,7 @@ group by year.name, year.year_id
 order by total_time;
 
 -- total xski workouts and time ordered by yearselect min(day.date), max(day.date), count(activity.x_ski) as count_workouts, 
+select min(day.date), max(day.date), count(activity.x_ski) as count_workouts, 
 	count(distinct day.date) as count_days, sum(activity.x_ski) as total_time, 
 	truncate(sum(activity.x_ski)/count(activity.x_ski), 2) as avg_per_workout, 
 	truncate(sum(activity.x_ski)/count(distinct day.date), 2) as avg_per_day, 
