@@ -18,6 +18,9 @@ screen:
 - screen -r <name>
 - screen -rD <attached_name>
 
+aws cli:
+--------
+- aws s3 cp /path/to/local/directory s3://YOUR-BUCKET-NAME/ --recursive
 
 http:
 -----
@@ -53,6 +56,15 @@ space:
 - df -Th 
 
 
+bash:
+-----
+- get unique 1sr column from file
+  awk '{print $1}' all.gene_set_stats.large.gt01.out | sort -u > list_gene_set_phenotypes.txt
+
+set -euo pipefail
+tail -n +2 all.gene_set_stats.large.gt01.out | cut -f5 | sort -u > list_gene_set_phenotypes.txt
+
+
 vi:
 ---
 
@@ -86,3 +98,13 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="$purple\u$green\$(__git_ps1)$yellow \W $ $reset"
 
 
+- coomand line tools
+  - unique values in tab delimited file
+  #!/usr/bin/env bash
+  set -euo pipefail
+
+  echo "Unique values in column 5 (Gene_set):"
+  tail -n +2 all.gene_set_stats.large.gt01.out | cut -f5 | sort -u
+
+- recursive scp 
+scp -r /local/source/dir user@host:/remote/destination/

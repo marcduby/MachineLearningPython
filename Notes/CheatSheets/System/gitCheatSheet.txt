@@ -8,6 +8,11 @@ tagging:
   - git push origin v0.92_generate
 
 
+checking out hash:
+------------------
+  - git checkout <hash>
+  - git switch -
+
 cloning to branch:
 ------------------
   - git clone --branch <branch_name> <repository_url>

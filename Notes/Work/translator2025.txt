@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+- 20260130 - for compression of response from ARS to UI
+Example Request
+---------------
+curl 'https://ars.ci.transltr.io/ars/api/messages/8259f066-8da8-45c8-adc4-81a9ce3cc2a9?compress=y'
+Important part is the query parameter 'compress=y'
+Example Headers in Response
+---------------
+HeadersList {
+  cookies: null,
+  [Symbol(headers map)]: Map(11) {
+    // ...
+    'x-content-compression' => { name: 'x-content-compression', value: 'zstd' }, // Important
+    // ...
+  },
+}
+
+

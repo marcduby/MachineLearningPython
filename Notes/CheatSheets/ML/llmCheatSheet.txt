@@ -1,5 +1,24 @@
 
 
+- codex
+  - codex resume --last 
+
+
+- codex screens:
+  - pro for codex
+  - sand for git commits 
+  - ocean for running code 
+
+
+Ollama:
+-------
+- ollama pull gemma3:270m
+- ollama run gemma3:270m
+- ollama show gemma4
+- ollama list | grep gemma
+- find ~/.ollama/models -type f -exec ls -lh {} \;
+
+
 - notes
   - openorca models -> tuned for instructions (vs conversation?)
 
@@ -35,3 +54,17 @@
 ... (include additional abstracts as needed)
 
 Please summarize the key commonalities among these studies and cite their PubMed IDs in your response."
+
+
+
+Tip for using AI with a jupyter notebook (especially in VS Code but anywhere really):
+
+# Agent Instructions
+
+## Notebook editing
+
+- **Never edit `.ipynb` files by writing JSON directly** (e.g., via terminal heredocs, `python -c "import json; ..."`, or `sed` on the raw file). VS Code keeps an in-memory buffer of open notebooks; disk-side JSON edits are silently overwritten when the buffer flushes, leaving cells with mangled/concatenated source lines and broken Python syntax.
+- Always use the dedicated notebook editing tool (`edit_notebook_file`) for `.ipynb` files. It writes through the editor and respects the open buffer.
+- This applies even when "just" inspecting or fixing a single cell — read with `read_file` / `copilot_getNotebookSummary`, edit with `edit_notebook_file`.
+
+
