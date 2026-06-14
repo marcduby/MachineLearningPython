@@ -35,3 +35,8 @@ the servers you need, you can generate a new key pair and add your public key to
 Hopefully that's not too much work.
 
     
+
+Good:
+-----
+aws s3 cp s3://dig-analysis-data/single_cell/FNIH_Pancreas_scRNA_v2/norm_counts.tsv.gz - | gzcat | head -n 1 | tr "\t" "\n" | wc -l 
+ 

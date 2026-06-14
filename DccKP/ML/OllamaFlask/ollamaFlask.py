@@ -245,7 +245,6 @@ def call_ollama_chat(prompt: str, system: str, model: str, log: bool=True) -> st
     if not isinstance(answer, str):
         abort(502, description="Unexpected Ollama response format")
 
-
     # log
     if log:
         logger.info("got answer: {}".format(json.dumps(answer, indent=2)))

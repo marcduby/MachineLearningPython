@@ -1,11 +1,17 @@
 
 
+
+
 - commands
   - .schema mcq_phenotype 
   - .quit
   - .show
   - .table
   
+
+- formatting
+  .headers on
+  .mode column
 
 
 import sqlite3

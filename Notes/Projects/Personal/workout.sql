@@ -76,4 +76,12 @@ where year.year_id = period.year_id
 group by year.name;
 
 
+-- workouts by rollerski description
+select wk.workout_id, da.day_id, da.date, wk.description 
+from wkt_workout wk, wkt_day da 
+where wk.day_id = da.day_id and lower(wk.description) like '%roller%' and lower(wk.description) like '%ski%'
+order by da.date;
+
+
+
 

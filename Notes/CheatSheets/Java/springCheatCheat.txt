@@ -6,4 +6,7 @@ start app:
   - java -jar build/libs/genomeserviceskb-0.0.1-SNAPSHOT.jar
   - java -jar build/libs/genomeserviceskb-0.0.1-SNAPSHOT.jar
 
+  - mysql -h lipid-investigation.cxrzznxifeib.us-east-1.rds.amazonaws.com -u diguser digkb -p 
+
+
   

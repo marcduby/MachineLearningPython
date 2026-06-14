@@ -10,6 +10,15 @@ vi:
 tar:
 ----
 - tar -cvf - /source/directory | tar -xvf - -C /destination/drive
+- better 
+  - tar -C /source -cvf - directory | tar -xvf - -C /destination/drive
+
+
+
+explore:
+--------
+- count files in directory
+  - find /path/to/directory -type f | wc -l
 
 screen:
 -------
@@ -98,7 +107,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="$purple\u$green\$(__git_ps1)$yellow \W $ $reset"
 
 
-- coomand line tools
+- command line tools
   - unique values in tab delimited file
   #!/usr/bin/env bash
   set -euo pipefail
@@ -108,3 +117,29 @@ export PS1="$purple\u$green\$(__git_ps1)$yellow \W $ $reset"
 
 - recursive scp 
 scp -r /local/source/dir user@host:/remote/destination/
+
+robots.tx5t for crawlers:
+-------------------------
+User-agent: Applebot
+Crawl-delay: 10
+
+User-agent: Googlebot
+Crawl-delay: 5
+
+User-agent: bingbot
+Crawl-delay: 5
+
+# Block low-value crawlers outright
+User-agent: Sogouwebspider
+Disallow: /
+
+User-agent: newsai
+Disallow: /
+
+User-agent: iaudit
+Disallow: /
+
+# Default for everything else
+User-agent: *
+Crawl-delay: 10
+

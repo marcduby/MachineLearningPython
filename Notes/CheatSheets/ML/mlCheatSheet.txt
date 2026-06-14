@@ -7,6 +7,9 @@ Ollama:
 - ollama run gemma3:270m
 - 
 
+Nvidia watch GPU:
+-----------------
+  - watch -n 1 nvidia-smi
 
 NN layers:
 ----------
