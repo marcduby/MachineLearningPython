@@ -30,6 +30,9 @@ screen:
 aws cli:
 --------
 - aws s3 cp /path/to/local/directory s3://YOUR-BUCKET-NAME/ --recursive
+- aws s3 ls <bucket>
+
+
 
 http:
 -----
