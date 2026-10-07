@@ -39,4 +39,24 @@ Hopefully that's not too much work.
 Good:
 -----
 aws s3 cp s3://dig-analysis-data/single_cell/FNIH_Pancreas_scRNA_v2/norm_counts.tsv.gz - | gzcat | head -n 1 | tr "\t" "\n" | wc -l 
- 
+
+
+S3:
+---
+- search for substring in s3
+
+BUCKET="dig-gene-set-data"
+PREFIX="MoTrPAC/"
+SUBSTRING="MoTrPAC__all_tissues__MoTrPAC_T30-Blood-RNA_Female_1W_dn"
+
+aws s3 ls "s3://$BUCKET/$PREFIX" --recursive \
+  | awk '{print $4}' \
+  | grep '\.gmt$' \
+  | while read -r key; do
+      if aws s3 cp "s3://$BUCKET/$key" - 2>/dev/null | grep -q "$SUBSTRING"; then
+        echo "MATCH: s3://$BUCKET/$key"
+      fi
+    done
+
+
+
