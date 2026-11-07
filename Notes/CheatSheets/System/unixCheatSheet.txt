@@ -79,6 +79,29 @@ tail -n +2 all.gene_set_stats.large.gt01.out | cut -f5 | sort -u > list_gene_set
 
 vi:
 ---
+- copy block of text
+  shift-v to enter visual block mode
+  Select a rectangular block using arrow keys
+  Yank with y
+  Move and paste with p or P
+
+
+logs:
+-----
+#!/bin/bash
+# Count rows per day from a log file piped via stdin.
+# Expects each line to start with a date like: 2026-07-09 21:57:03,053 ...
+#
+# Usage:
+#   cat logfile.log | ./count_rows_per_day.sh
+#   ./count_rows_per_day.sh < logfile.log
+
+awk '{print $1}' | sort | uniq -c | awk '{printf "%s: %s\n", $2, $1}'
+
+  - count lines per day
+  2026-07-09 22:10:06,776 INFO mcp_server.app mcp_request_received request_uuid=876e2709-9869-458a-8567-563a6ee96150 method=tools/list tool_name=None
+  grep -oE '^[0-9]{4}-[0-9]{2}-[0-9]{2}' mcpGeneSetExtractor.log | sort | uniq -c
+
 
 
 new jetson setup:

@@ -1,0 +1,38 @@
+
+
+
+
+
+
+20270719 - generate milestones and goals for tasks
+I need to generate gene sets from data sources other than the CFDE project data one. 
+Identify 10 options
+
+Project_Name
+Generate gene sets for other NIH resources
+Project_ID
+portfolio_reveal_dataset_workstream_scale_up_to_capture_other_gene_sets
+Project_Description
+Pick at least 5-10 other resources and generate gene sets for them
+Status
+Primary_Product_ID
+CFDE Incubator
+Primary_Promise_ID
+CFDE ID3.3
+Secondary_Product_IDs
+CFDE Fall Release , CFDE REVEAL , Portal FAIRness and AI-readiness
+Project_Lead_ID
+Marc
+Other_Contributor_IDs
+Jason , Lucas , Trang
+Overall_SMART_Goal
+Landing pages for gene sets from 5-10 non-CFDE resources
+Next_SMART_Goal
+Noel/Julie/Jason discuss next steps
+Next_Deadline
+7/2/2026
+Next_Evidence_Expected
+Meeting notes with plan for next steps, Broad team deployed to work on them
+Support_Folder
+Generate gene sets for other NIH resources
+

@@ -1,0 +1,52 @@
+
+
+# copy code to pico
+- pip3 install mpremote
+- mpremote connect auto
+- to install permanent
+  - mpremote fs cp main.py :main.py
+  - mpremote reset
+- to dev run
+  - mpremote run main.py
+
+
+
+# plasma color hues
+0	Red
+10	Red-orange
+20	Orange-red
+30	Orange
+40	Golden orange
+50	Yellow-orange
+60	Yellow
+70	Yellow-green
+80	Lime-yellow
+90	Lime
+100	Lime green
+110	Yellowish green
+120	Green
+130	Green
+140	Green
+150	Green-cyan
+160	Turquoise green
+170	Aqua green
+180	Cyan
+190	Cyan-blue
+200	Sky blue
+210	Light blue
+220	Blue
+230	Deep blue
+240	Pure blue
+250	Blue-violet
+260	Violet-blue
+270	Violet
+280	Purple
+290	Purple-magenta
+300	Magenta
+310	Pink-magenta
+320	Hot pink
+330	Pink-red
+340	Rose
+350	Red-pink
+360	Red
+

@@ -1,0 +1,8 @@
+
+
+
+-- openai prompt
+I just had a great call with the OpenAI rep who is going to be attending the incubator
+He offered to do a Codex 101 breakout, and I asked whether we might extend that to a hacking session whereby people could actually play around with our gene set / provenance graphs
+But more to the point, he said that all we’d need would be a Codex Plugin (basically MCP + AGENTS.md) for accessing the gene sets and provenance graphs
+I’m thinking the semantic search + provenance retrieval is really all we need?

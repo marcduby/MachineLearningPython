@@ -18,11 +18,17 @@ AWS CLI:
   - wildcard 'metadata' files
     - aws s3 cp s3://bucketname/variants/ . --recursive --exclude "*" --include "*/metadata"
 
+aws s3 cp . s3://dig-gene-set-gmt --recursive --exclude "*" --include "*.gmt"
+
+  - bucket size 
+  aws s3 ls s3://YOUR-BUCKET --recursive --summarize --human-readable
+
 
 EC2:
 ----
   - aws fdisk:
     - sudo lsblk
+
 
 
 PEM:

@@ -8,6 +8,11 @@ tagging:
   - git push origin v0.92_generate
 
 
+info:
+-----
+  - git remote -v
+  
+
 checking out hash:
 ------------------
   - git checkout <hash>
