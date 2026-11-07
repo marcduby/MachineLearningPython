@@ -16,6 +16,15 @@
   .mode column
 
 
+
+- create tables 
+
+ALTER TABLE your_table_name 
+ADD COLUMN new_column_name TEXT NOT NULL DEFAULT '';
+  
+
+
+
 import sqlite3
 
 # Create a new SQLite database (or connect to an existing one)

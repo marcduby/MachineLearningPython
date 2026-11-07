@@ -14,7 +14,10 @@ Mounts:
 AWS CLI:
 --------
   - aws s3 cp ~/this_directory s3://bucketname/this_directory --recursive
+
+  copy from 
   - aws s3 cp --recursive s3://bucketname/this_directory . 
+  
   - wildcard 'metadata' files
     - aws s3 cp s3://bucketname/variants/ . --recursive --exclude "*" --include "*/metadata"
 
@@ -22,6 +25,26 @@ aws s3 cp . s3://dig-gene-set-gmt --recursive --exclude "*" --include "*.gmt"
 
   - bucket size 
   aws s3 ls s3://YOUR-BUCKET --recursive --summarize --human-readable
+
+- count 
+  aws s3 ls s3://dig-provenance/ --recursive | wc -l
+
+- copy only 1 type file 
+  aws s3 cp . s3://dig-provenance/bottom-line/ --recursive \
+      --exclude "*" --include "*.yaml"
+
+- macos
+  BUCKET="dig-analysis-data/out/pigean/gene_stats"
+  CUTOFF=$(date -v-3m +%Y-%m-%d)
+
+  aws s3 ls "s3://$BUCKET/" --recursive | \
+  awk -v cutoff="$CUTOFF" '$1 >= cutoff {print "s3://'"$BUCKET"'/" $4}'
+
+- unix
+  # CUTOFF=$(date -d '3 months ago' +%Y-%m-%d)
+  aws s3 ls "s3://$BUCKET/" --recursive | \
+  awk -v cutoff="$CUTOFF" '$1 >= cutoff {print "s3://'"$BUCKET"'/" $4}'
+
 
 
 EC2:
